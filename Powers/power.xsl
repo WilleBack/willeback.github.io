@@ -66,8 +66,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:choose>
 				<xsl:when test="part[1]/frequency = 'At-Will'">
 					<div id ="header" style="background-color:#407040; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10em);"><xsl:value-of select="title"/></div>
-						<div id="classcat" style="width: 12em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
+						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"><xsl:value-of select="title"/></div>
+						<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
 							<xsl:if test="level">
 								<xsl:text> </xsl:text><xsl:value-of select="level"/>
 							</xsl:if>
@@ -76,8 +76,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:when>
 				<xsl:when test="part[1]/frequency = 'Encounter'">
 					<div id ="header" style="background-color:FireBrick; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10em);"><xsl:value-of select="title"/></div>
-						<div id="classcat" style="width: 12em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
+						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"><xsl:value-of select="title"/></div>
+						<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
 							<xsl:if test="level">
 								<xsl:text> </xsl:text><xsl:value-of select="level"/>
 							</xsl:if>
@@ -86,8 +86,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:when>
 				<xsl:otherwise>
 					<div id ="header" style="background-color:DarkSlateGray; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10em);"><xsl:value-of select="title"/></div>
-						<div id="classcat" style="width: 12em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
+						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"><xsl:value-of select="title"/></div>
+						<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
 							<xsl:if test="level">
 								<xsl:text> </xsl:text><xsl:value-of select="level"/>
 							</xsl:if>
