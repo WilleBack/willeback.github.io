@@ -319,7 +319,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<div class="list">
 		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Equipment</div>
-		<xsl:for-each select="catalog/feat[group='Equipment]">
+		<xsl:for-each select="catalog/feat[group='Equipment']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
