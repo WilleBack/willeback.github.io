@@ -882,6 +882,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
+		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Triggered</div>
+		<xsl:for-each select="catalog/feat[group='Triggered']">
+			<xsl:choose>
+				<xsl:when test="position() mod 2 = 1">
+					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
+						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+					</div>
+				</xsl:when>
+				<xsl:otherwise>
+					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
+						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+					</div>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+		</div>
+		<div class="list">
 		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Vistani Heritage</div>
 		<xsl:for-each select="catalog/feat[group='Vistani Heritage']">
 			<xsl:choose>
@@ -923,6 +944,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:choose>
 		</xsl:for-each>
 		</div>
+		
 	</div>
 	<div class="container">
 	<xsl:for-each select="catalog/feat">
@@ -936,7 +958,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</div>	
 				</xsl:when>
 				<xsl:when test="tier = 'Paragon'">
-					<div id ="header" style="background-color:Blue; box-sizing:border-box; width:100%; float:left; color:white; ">
+					<div id ="header" style="background-color:MediumBlue; box-sizing:border-box; width:100%; float:left; color:white; ">
 						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:60%;"><xsl:value-of select="title"/></div>
 						<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/>
 						</div>
