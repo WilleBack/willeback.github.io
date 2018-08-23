@@ -51,7 +51,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.groups{ 
-				width:calc(100% - 29em); 
+				width:calc(100% - 30em); 
 				float:left;
 			}
 			
