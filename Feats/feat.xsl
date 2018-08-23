@@ -41,17 +41,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.title {
-				width:16em; 
+				width:15em; 
 				float:left;
 			}
 			
 			.category {
-				width: 7em; 
+				width: 8em; 
 				float:left;
 			}
 			
 			.groups{ 
-				width:calc(97% - 30em); 
+				width:calc(97% - 25em); 
 				float:left;
 			}
 			
