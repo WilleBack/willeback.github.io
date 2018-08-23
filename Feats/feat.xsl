@@ -28,7 +28,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.list {
-				margin:0.4cm;
+				margin:0.4em;
 				width:97%;
 				float:left;
 				page-break-inside: avoid;
@@ -41,12 +41,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.title {
-				width:18em; 
+				width:16em; 
 				float:left;
 			}
 			
 			.category {
-				width: 8em; 
+				width: 7em; 
 				float:left;
 			}
 			
