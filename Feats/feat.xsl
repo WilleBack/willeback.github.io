@@ -34,6 +34,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside: avoid;
 			}
 			
+			.groupname {
+				width:100%; 
+				font-size:1.2em;
+				font-weight:bold;
+			}
+			
+			.title {
+				width:20em; 
+				float:left;
+			}
+			
+			.category {
+				width: 8em; 
+				float:left;
+			}
+			
+			.groups{ 
+				width:calc(100% - 29em); 
+				float:left;
+			}
+			
 			@media only screen and (min-width:600px) {
 				.container { 
 					column-count: 2; 
@@ -81,104 +102,104 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	<div class="listcontainer">
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Attack Enhancement</div>
+		<div class="groupname">Attack Enhancement</div>
 		<xsl:for-each select="catalog/feat[group='Attack Enhancement']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Attack Hindrance</div>
+		<div class="groupname">Attack Hindrance</div>
 		<xsl:for-each select="catalog/feat[group='Attack Hindrance']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Acid Specialization</div>
+		<div class="groupname">Acid Specialization</div>
 		<xsl:for-each select="catalog/feat[group='Acid Specialization']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Action Point</div>
+		<div class="groupname">Action Point</div>
 		<xsl:for-each select="catalog/feat[group='Action Point']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
-						<div id="groups" style="width:60%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Background</div>
+		<div class="groupname">Background</div>
 		<xsl:for-each select="catalog/feat[group='Background']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i>&#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i>&#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i>&#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i>&#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -186,20 +207,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Bloodline</div>
+		<div class="groupname">Bloodline</div>
 		<xsl:for-each select="catalog/feat[category='Bloodline']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i>&#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i>&#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 
 					</div>
@@ -208,20 +229,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Combat Advantage</div>
+		<div class="groupname">Combat Advantage</div>
 		<xsl:for-each select="catalog/feat[group='Combat Advantage']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 
 					</div>
@@ -230,20 +251,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Condition Negation</div>
+		<div class="groupname">Condition Negation</div>
 		<xsl:for-each select="catalog/feat[group='Condition Negation']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -251,20 +272,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Critical</div>
+		<div class="groupname">Critical</div>
 		<xsl:for-each select="catalog/feat[group='Critical']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -272,20 +293,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Damage Enhancement</div>
+		<div class="groupname">Damage Enhancement</div>
 		<xsl:for-each select="catalog/feat[group='Damage Enhancement']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -293,20 +314,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Defense</div>
+		<div class="groupname">Defense</div>
 		<xsl:for-each select="catalog/feat[group='Defense']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -314,20 +335,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Dragonmark</div>
+		<div class="groupname">Dragonmark</div>
 		<xsl:for-each select="catalog/feat[category='Dragonmark']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -335,20 +356,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Equipment</div>
+		<div class="groupname">Equipment</div>
 		<xsl:for-each select="catalog/feat[group='Equipment']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -356,20 +377,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Familiar</div>
+		<div class="groupname">Familiar</div>
 		<xsl:for-each select="catalog/feat[group='Familiar']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 
 					</div>
@@ -378,20 +399,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Fear</div>
+		<div class="groupname">Fear</div>
 		<xsl:for-each select="catalog/feat[group='Fear']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -399,20 +420,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Forced Movement</div>
+		<div class="groupname">Forced Movement</div>
 		<xsl:for-each select="catalog/feat[group='Forced Movement']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -420,20 +441,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Foulborn Heritage</div>
+		<div class="groupname">Foulborn Heritage</div>
 		<xsl:for-each select="catalog/feat[group='Foulborn Heritage']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -441,20 +462,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Initiative</div>
+		<div class="groupname">Initiative</div>
 		<xsl:for-each select="catalog/feat[group='Initiative']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -462,20 +483,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Kill Effect</div>
+		<div class="groupname">Kill Effect</div>
 		<xsl:for-each select="catalog/feat[group='Kill Effect']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -483,20 +504,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Luck</div>
+		<div class="groupname">Luck</div>
 		<xsl:for-each select="catalog/feat[group='Luck']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -504,20 +525,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Mark Punishment</div>
+		<div class="groupname">Mark Punishment</div>
 		<xsl:for-each select="catalog/feat[group='Mark Punishment']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -525,20 +546,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Misfortune Bloodline</div>
+		<div class="groupname">Misfortune Bloodline</div>
 		<xsl:for-each select="catalog/feat[group='Misfortune Bloodline']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -546,20 +567,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Mobility</div>
+		<div class="groupname">Mobility</div>
 		<xsl:for-each select="catalog/feat[group='Mobility']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -567,20 +588,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Necrotic Specialization</div>
+		<div class="groupname">Necrotic Specialization</div>
 		<xsl:for-each select="catalog/feat[group='Necrotic Specialization']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -588,20 +609,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Opportunity Attacks</div>
+		<div class="groupname">Opportunity Attacks</div>
 		<xsl:for-each select="catalog/feat[group='Opportunity Attacks']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -609,20 +630,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Physical Change</div>
+		<div class="groupname">Physical Change</div>
 		<xsl:for-each select="catalog/feat[group='Physical Change']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -630,20 +651,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Power Enhancement</div>
+		<div class="groupname">Power Enhancement</div>
 		<xsl:for-each select="catalog/feat[group='Power Enhancement']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -651,20 +672,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Power Repertoire</div>
+		<div class="groupname">Power Repertoire</div>
 		<xsl:for-each select="catalog/feat[group='Power Repertoire']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -672,20 +693,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Psionics</div>
+		<div class="groupname">Psionics</div>
 		<xsl:for-each select="catalog/feat[group='Psionics']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -693,20 +714,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Psychic Specialization</div>
+		<div class="groupname">Psychic Specialization</div>
 		<xsl:for-each select="catalog/feat[group='Psychic Specialization']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-					<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+					<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -714,13 +735,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Shapechange</div>
+		<div class="groupname">Shapechange</div>
 		<xsl:for-each select="catalog/feat[group='Shapechange']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
@@ -735,20 +756,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Size-based</div>
+		<div class="groupname">Size-based</div>
 		<xsl:for-each select="catalog/feat[group='Size-based']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -756,20 +777,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Skill Enhancement</div>
+		<div class="groupname">Skill Enhancement</div>
 		<xsl:for-each select="catalog/feat[group='Skill Enhancement']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -777,20 +798,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Summoning</div>
+		<div class="groupname">Summoning</div>
 		<xsl:for-each select="catalog/feat[group='Summoning']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -798,20 +819,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Support</div>
+		<div class="groupname">Support</div>
 		<xsl:for-each select="catalog/feat[group='Support']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -819,20 +840,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Teamwork</div>
+		<div class="groupname">Teamwork</div>
 		<xsl:for-each select="catalog/feat[group='Teamwork']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -840,20 +861,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Teleportation</div>
+		<div class="groupname">Teleportation</div>
 		<xsl:for-each select="catalog/feat[group='Teleportation']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -861,20 +882,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Temporary Hit Points</div>
+		<div class="groupname">Temporary Hit Points</div>
 		<xsl:for-each select="catalog/feat[group='Temporary Hit Points']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -882,20 +903,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Triggered</div>
+		<div class="groupname">Triggered</div>
 		<xsl:for-each select="catalog/feat[group='Triggered']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -903,20 +924,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Vistani Heritage</div>
+		<div class="groupname">Vistani Heritage</div>
 		<xsl:for-each select="catalog/feat[group='Vistani Heritage']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
@@ -924,20 +945,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname" style="width:100%; font-size:1.2em;font-weight:bold;">Worship</div>
+		<div class="groupname">Worship</div>
 		<xsl:for-each select="catalog/feat[group='Worship']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<div id="title" style="width:25%; float:left;"><xsl:value-of select="title"/></div>
-						<div id="category" style="width: 10%; float:left;"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div id="groups" style="width:63%; float:left;"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
 				</xsl:otherwise>
