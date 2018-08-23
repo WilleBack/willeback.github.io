@@ -41,7 +41,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.title {
-				width:20em; 
+				width:18em; 
 				float:left;
 			}
 			
