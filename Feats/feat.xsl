@@ -588,7 +588,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div>
 		<div class="list">
-		<div class="groupname">Lnaguages</div>
+		<div class="groupname">Languages</div>
 		<xsl:for-each select="catalog/feat[group='Languages']">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
@@ -874,6 +874,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:otherwise>
 					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
 					<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+					</div>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+		</div>
+		<div class="list">
+		<div class="groupname">Saving Throws</div>
+		<xsl:for-each select="catalog/feat[group='Saving Throws']">
+			<xsl:choose>
+				<xsl:when test="position() mod 2 = 1">
+					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+					</div>
+				</xsl:when>
+				<xsl:otherwise>
+					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+						<div class="title"><xsl:value-of select="title"/></div>
 						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
 						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 					</div>
@@ -1197,6 +1218,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:when> 
+								<xsl:when test="type='skill'">
+									<xsl:text>trained in </xsl:text> <xsl:value-of select="name"/>
+									<xsl:if test="position()!=last()">
+										<xsl:text>, </xsl:text>
+									</xsl:if>
+								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
 									<xsl:if test="position()!=last()">
