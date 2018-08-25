@@ -588,7 +588,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:choose>
 		</xsl:for-each>
 		</div>
-		<div class="list">
+		<!-- <div class="list">
 		<div class="groupname">Implement</div>
 		<xsl:for-each select="catalog/feat[group='Implement']">
 			<xsl:choose>
@@ -608,7 +608,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:for-each>
-		</div>
+		</div> -->
 		<div class="list">
 		<div class="groupname">Initiative</div>
 		<xsl:for-each select="catalog/feat[group='Initiative']">
