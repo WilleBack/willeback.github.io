@@ -1428,7 +1428,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									</xsl:choose>
 								</xsl:when>
 								<xsl:when test="type='class'">
-									<xsl:value-of select="name"/>
+									<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
 									<xsl:choose>
 										<xsl:when test="combine">
 											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
