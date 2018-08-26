@@ -610,6 +610,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		</div> -->
 		<div class="list">
+		<div class="groupname">Illumination</div>
+		<xsl:for-each select="catalog/feat[group='Illumination']">
+			<xsl:choose>
+				<xsl:when test="position() mod 2 = 1">
+					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+					</div>
+				</xsl:when>
+				<xsl:otherwise>
+					<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+						<div class="title"><xsl:value-of select="title"/></div>
+						<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+						<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+					</div>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+		</div>
+		<div class="list">
 		<div class="groupname">Initiative</div>
 		<xsl:for-each select="catalog/feat[group='Initiative']">
 			<xsl:choose>
@@ -1462,6 +1483,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</xsl:when> 
 								<xsl:when test="type='skill'">
 									<xsl:text>trained in </xsl:text> <xsl:value-of select="name"/>
+									<xsl:choose>
+										<xsl:when test="combine">
+											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
+										</xsl:when>
+										<xsl:when test="position()!=last()">
+											<xsl:text>, </xsl:text>
+										</xsl:when>
+										<xsl:otherwise/>
+									</xsl:choose>
+								</xsl:when>
+								<xsl:when test="type='deity'">
+									<xsl:text>must worship </xsl:text> <xsl:value-of select="name"/>
 									<xsl:choose>
 										<xsl:when test="combine">
 											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
