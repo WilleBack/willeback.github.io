@@ -1419,7 +1419,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<i><xsl:value-of select="name"/></i> <xsl:text> </xsl:text> <xsl:value-of select="qualifier"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
 									<xsl:choose>
 										<xsl:when test="combine">
-											<xsl:text> </xsl:text> <xsl:value-of select="combine"> <xsl:text> </xsl:text>
+											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
 										</xsl:when>
 										<xsl:when test="position()!=last()">
 											<xsl:text>, </xsl:text>
@@ -1431,7 +1431,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:value-of select="name"/>
 									<xsl:choose>
 										<xsl:when test="combine">
-											<xsl:text> </xsl:text> <xsl:value-of select="combine"> <xsl:text> </xsl:text>
+											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
 										</xsl:when>
 										<xsl:when test="position()!=last()">
 											<xsl:text>, </xsl:text>
@@ -1443,7 +1443,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:text>trained in </xsl:text> <xsl:value-of select="name"/>
 									<xsl:choose>
 										<xsl:when test="combine">
-											<xsl:text> </xsl:text> <xsl:value-of select="combine"> <xsl:text> </xsl:text>
+											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
 										</xsl:when>
 										<xsl:when test="position()!=last()">
 											<xsl:text>, </xsl:text>
@@ -1455,7 +1455,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
 									<xsl:choose>
 										<xsl:when test="combine">
-											<xsl:text> </xsl:text> <xsl:value-of select="combine"> <xsl:text> </xsl:text>
+											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
 										</xsl:when>
 										<xsl:when test="position()!=last()">
 											<xsl:text>, </xsl:text>
