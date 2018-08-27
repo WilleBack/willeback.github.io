@@ -102,7 +102,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	<div class="listcontainer">
 		<xsl:call-template name="createlist">
-			<xsl:with-param name="selectedgroup" select="Initiative" />
+			<xsl:with-param name="selectedgroup">Initiative</xsl:with-param>
 		</xsl:call-template>
 		<div class="list">
 		<div class="groupname">Armor</div>
