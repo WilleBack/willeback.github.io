@@ -103,7 +103,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="listcontainer">
 		<xsl:for-each select="catalog/list">
 			<xsl:param name="grouptitle">
-				<xsl:value-of select="@selection" />
+				<xsl:value-of select="../@selection" />
 			</xsl:param>
 				
 			<div class="list">
