@@ -103,7 +103,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="listcontainer">
 		<xsl:for-each select="list"> 
 			<div class="list">
-				<div class="groupname"> <xsl:value-of select="@group"> </div>
+				<div class="groupname"> <xsl:value-of select="@group" /> </div>
 				<xsl:for-each select="catalog/feat[group='@group']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
