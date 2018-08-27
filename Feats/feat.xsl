@@ -104,19 +104,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:for-each select="catalog/list"> 
 			<xsl:choose>
 				<xsl:when test="@selection">
-					<xsl:param name="groupname">
+					<xsl:param name="grouptitle">
 						<xsl:value-of select="@selection" />
 					</xsl:param>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:param name="groupname">
+					<xsl:param name="grouptitle">
 						<xsl:value-of select="@category" />
 					</xsl:param>
 				</xsl:otherwise>
 			</xsl:choose>
 			<div class="list">
-					<div class="groupname"> <xsl:value-of select="@groupname" /> </div>
-					<xsl:for-each select="//catalog/feat[(group=current()/@groupname) or (category=current()/@groupname)]">
+					<div class="groupname"> <xsl:value-of select="@grouptitle" /> </div>
+					<xsl:for-each select="//catalog/feat[(group=current()/@grouptitle) or (category=current()/@grouptitle)]">
 						<xsl:choose>
 							<xsl:when test="position() mod 2 = 1">
 								<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
