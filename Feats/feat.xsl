@@ -126,6 +126,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<!-- <xsl:call-template name="createlist">
 			<xsl:with-param name="selectedgroup">Initiative</xsl:with-param>
 		</xsl:call-template> -->
+		</xsl:for-each>
 		<div class="list">
 		<div class="groupname">Armor</div>
 		<xsl:for-each select="catalog/feat[group='Armor']">
