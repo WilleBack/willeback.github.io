@@ -101,7 +101,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	<div class="listcontainer">
-		<xsl:apply-templates select="list" />
+		<xsl:apply-templates select="catalog/list" />
 		
 		<div class="list">
 		<div class="groupname">Bloodline</div>
@@ -353,7 +353,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</html>
 </xsl:template>
 
-<xsl:template match="list">
+<xsl:template match="catalog/list">
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
 		<xsl:for-each select="//catalog/feat[group=current()/@selection]">
