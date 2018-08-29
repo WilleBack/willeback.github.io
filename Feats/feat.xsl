@@ -109,14 +109,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
 								<div class="title"><xsl:value-of select="title"/></div>
-								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> </div>
 								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 							</div>
 						</xsl:when>
 						<xsl:otherwise>
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
 								<div class="title"><xsl:value-of select="title"/></div>
-								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> </div>
 								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 							</div>
 						</xsl:otherwise>
