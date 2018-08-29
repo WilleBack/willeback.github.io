@@ -41,6 +41,7 @@
 	<list selection="Luck" />
 	
 	<list selection="Mark Punishment" />
+	<list selection="Miss Mitigation" />
 	<list selection="Mobility" />
 	<list selection="Movement Hindrance" />
 	
@@ -1910,7 +1911,7 @@
 		<group>Grapple</group>
 		<group>Shield</group>
 		<benefit>You've learned to use your armor and shield to injure any opponent foolish enough to grab you.</benefit>
-		<benefit>When wearing plate armor you are proficient with or wielding a shield you are proficient with, a creature takes damage equal to 2 + one-half your level when you escape that creature's grab or when or when that creature escapes your grab. A creature can take damage from this only once per turn.</benefit>
+		<benefit>When wearing plate armor you are proficient with or wielding a shield you are proficient with, a creature takes damage equal to 2 + one-half your level when you escape that creature's grab or when that creature escapes your grab. A creature can take damage from this only once per turn.</benefit>
 		<benefit>A creature that swallows you or uses a similar ability takes this damage at the end of its turn as long as you remain swallowed or similarly held.</benefit>
 	</feat>
 	<feat>
@@ -2198,5 +2199,71 @@
 		<benefit>You gain proficiency in holy symbol implements.</benefit>
 		<benefit>In addition, whenever a creature takes damage from your divine sanction, that creature takes 1 extra damage for each of your shrouds on it.</benefit>
 		<benefit>This extra damage increases to 2 per shroud at 11th level, and to 3 per shroud at 21st level.</benefit>
+	</feat>
+	<feat>
+		<title>Assassin's Cloak</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Assassin</name>
+		</prereq>
+		<group>Class</group>
+		<group>Stealth</group>
+		<benefit>Whenever you become invisible, you can make Stealth check to hide as a free reaction.</benefit>
+	</feat>
+	<feat>
+		<title>Assassin's Escape</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Assassin</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>shade form</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Damage Resistance</group>
+		<group>Triggered</group>
+		<benefit>You can use your <![CDATA[<i>shade form</i>]]> power as an immediate interrupt triggered by you taking damage.</benefit>
+	</feat>
+	<feat>
+		<title>Assured Healing</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Cleric</name>
+		</prereq>
+		<group>Class</group>
+		<group>Healing</group>
+		<group>Miss Mitigation</group>
+		<benefit>When you miss with a divine attack power with the Healing keyword, and that power does nothing on a miss, you or one ally within 5 squares of you regains regains hit points equal to your Charisma modifier.</benefit>
+		<benefit>The hit points regained increase to 5 + your Charisma modifier at 21st level.</benefit>
+	</feat>
+	<feat>
+		<title>Astral Elixir</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Deva</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Artificer</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>artificer infusion: shielding elixir</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Damage Resistance</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<group>Radiant Specialization</group>
+		<group>Saving Throws</group>
+		<benefit>When you use <![CDATA[<i>shielding elixir</i>]]>, the target gains radiant resistance in addition to the resistance the power normally grants. The radiant resistance is equal to the resistance normally granted and has the same duration.</benefit>
+		<benefit>Also, when making a saving throw, the target can end the shielding elixir effect as a free interrupt to add 1d6 to the saving throw result instead of gaining the normal benefit for ending the effect.</benefit>
 	</feat>
 </catalog>
