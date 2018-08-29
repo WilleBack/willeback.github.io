@@ -52,7 +52,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			.groups{ 
 				width:calc(97% - 25em); 
-				float:left;
+				min-width: 8em;
+				float:right;
 			}
 			
 			@media only screen and (min-width:600px) {
