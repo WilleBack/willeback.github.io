@@ -276,7 +276,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="value"/>
 									<xsl:choose>
 										<xsl:when test="combine">
-											<xsl:text> </xsl:text> <xsl:value-of select="combine"/> <xsl:text> </xsl:text>
+											<xsl:if test="combine!=';'">
+												<xsl:text> </xsl:text> 
+											</xsl:if>
+											<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
 										</xsl:when>
 										<xsl:when test="position()!=last()">
 											<xsl:text>, </xsl:text>
