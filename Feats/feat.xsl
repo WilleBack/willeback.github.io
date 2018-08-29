@@ -52,7 +52,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			.groups{ 
 				width:calc(97% - 25em); 
-				min-width: 10em;
+				min-width: 16.5em;
 				float:right;
 			}
 			
