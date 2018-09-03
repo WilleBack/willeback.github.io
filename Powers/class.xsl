@@ -171,7 +171,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 					</xsl:otherwise>
 				</xsl:choose>
-			</div> <!-- categroup 
+			</div> categroup 
 			<div id="content">
 				<xsl:if test="prereq">
 					<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
@@ -291,10 +291,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 					</xsl:for-each>
 				</xsl:if>
-			</div> <!-- content 
-		</div> <!-- power 
+			</div>  content 
+		</div> power 
 	</xsl:for-each>
-	</div> <!-- container -->
+	</div>  container -->
 	</body>
 	</html>
 </xsl:template>
