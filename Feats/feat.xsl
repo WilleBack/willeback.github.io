@@ -102,6 +102,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	<div class="listcontainer">
+		<div id="bygroup">
 		<h1>Feat Groups</h1>
 		<xsl:for-each select="catalog/list"> 
 			<div class="list">
@@ -127,6 +128,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:for-each>
 		
+		<div id="bycategory">
 		<h1>Special Feat Categories</h1>
 		<xsl:for-each select="catalog/category"> 
 			<div class="list">
@@ -151,7 +153,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each>
 			</div>
 		</xsl:for-each>
+		</div>
+		</div>
 		
+		<div id="byrace">
 		<h1>Racial Feats</h1>
 		<div class="list">
 			<div class="groupname">Deva</div>
@@ -547,6 +552,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
+		</div>
 		</div>
 		
 	</div>
