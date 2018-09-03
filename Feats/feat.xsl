@@ -27,6 +27,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				
 			}
 			
+			.grouptitle {
+				width:100%; 
+				font-size:1.4em;
+				font-weight:bold;
+			}
+			
 			.list {
 				margin:0.4em;
 				width:97%;
@@ -102,8 +108,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	<div class="listcontainer">
-		<div id="bygroup">
-		<h1>Feat Groups</h1>
+		<div class="grouptitle">Feat Groups</div>
 		<xsl:for-each select="catalog/list"> 
 			<div class="list">
 				<div class="groupname"> <xsl:value-of select="@selection" /> </div>
@@ -128,8 +133,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:for-each>
 		
-		<div id="bycategory">
-		<h1>Special Feat Categories</h1>
+		<div class="grouptitle">Special Feat Categories</div>
 		<xsl:for-each select="catalog/category"> 
 			<div class="list">
 				<div class="groupname"> <xsl:value-of select="@selection" /> </div>
@@ -153,11 +157,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each>
 			</div>
 		</xsl:for-each>
-		</div>
-		</div>
 		
-		<div id="byrace">
-		<h1>Racial Feats</h1>
+		<div class="grouptitle">Racial Feats</div>
 		<div class="list">
 			<div class="groupname">Deva</div>
 			<xsl:for-each select="catalog/feat[prereq/name='Deva']">
@@ -553,9 +554,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:choose>
 			</xsl:for-each>
 		</div>
-		</div>
 		
-	</div>
+	</div> <!-- list container -->
+	
 	<div class="container">
 	<xsl:for-each select="catalog/feat">
 		<div class="feat">
