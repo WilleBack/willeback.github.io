@@ -158,6 +158,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:for-each>
 		
+		<div>
 		<div class="grouptitle">Racial Feats</div>
 		<div class="list">
 			<div class="groupname">Deva</div>
@@ -553,6 +554,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
+		</div>
 		</div>
 		
 	</div> <!-- list container -->
