@@ -150,6 +150,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:choose>
 				</xsl:for-each>
 			</div>
+		</xsl:for-each>
 		
 		<h1>Racial Feats</h1>
 		<div class="list">
