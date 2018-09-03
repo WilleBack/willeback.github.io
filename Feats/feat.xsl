@@ -27,6 +27,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				
 			}
 			
+			.groupholder {
+				width:100%;
+				float:left;
+			}
+			
 			.grouptitle {
 				width:100%; 
 				font-size:1.4em;
