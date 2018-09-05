@@ -232,122 +232,55 @@
 		</part>
 	</power>
 	<power>
-		<title>Personal Repulsor</title>
+		<title>Repulsor Push</title>
 		<class>Artificer</class><category>Attack</category><level>1</level>
-		<fluff>You trace the sigils you have inscribed on your gear to unleash the stored energy, pushing enemies away or an ally forward</fluff>
+		<fluff>You trace the sigils you have inscribed on your gear to unleash the stored energy, pushing an enemy away or an ally forward</fluff>
 		<part>
-		<frequency>At-Will</frequency>
-		<keyword>Arcane, Force</keyword>
-		<action>Standard</action><subaction>Action</subaction>
-		</part>
-		<part>
-		<part-name>Primary Mode</part-name>
-		<hide-freqkey>true</hide-freqkey>
-		<hide-actrange>true</hide-actrange>
-		<element>
-			<name-style>bold</name-style>
-			<name>Close</name>
-			<text>burst 1</text>
-		</element>
-		<element>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>Each creature in the burst</text>
-		</element>
-		<element>
-			<name-style>bold</name-style>
-			<name>Attack:</name>
-			<text>Intelligence +2 vs. Fortitude</text>
-		</element>
-		<element>
-			<indent>1</indent>
-			<name-style>italic</name-style>
-			<name>Level 11:</name>
-			<text>Intelligence +4</text>
-		</element>
-		<element>
-			<indent>1</indent>
-			<name-style>italic</name-style>
-			<name>Level 21:</name>
-			<text>Intelligence +6</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<name-style>bold</name-style>
-			<name>Hit:</name>
-			<text>You push the target 2 squares.</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<indent>1</indent>
-			<name-style>bold</name-style>
-			<name>Critical:</name>
-			<text>The target grants combat advantage for the first attack against it before the end of your next turn.</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<indent>1</indent>
-			<name-style>italic</name-style>
-			<name>Level 11:</name>
-			<text>Push 3 squares.</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<indent>1</indent>
-			<name-style>italic</name-style>
-			<name>Level 21:</name>
-			<text>Push 4 squares.</text>
-		</element>
-		<element>
-			<name-style>bold</name-style>
-			<name>Miss:</name>
-			<text>You push the target 1 square.</text>
-		</element>
-		<element>
-			<indent>1</indent>
-			<name-style>italic</name-style>
-			<name>Level 21:</name>
-			<text>Push 2 squares.</text>
-		</element>
-		</part>
-		<part>
-		<part-name>Secondary Mode</part-name>
-		<hide-freqkey>true</hide-freqkey>
-		<hide-actrange>true</hide-actrange>
-		<element>
-			<name-style>bold</name-style>
-			<name>Melee</name>
-			<text>touch</text>
-		</element>
-		<element>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>One ally</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<name-style>bold</name-style>
-			<name>Effect:</name>
-			<text>You push (flight) the target up to 4 squares. If he or she ends the push next to an enemy, he or she can make an <![CDATA[<i>melee basic attack</i>]]> against that enemy.</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<text>If the target did not not end the movement on a surface it can stand on, it falls.</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<indent>1</indent>
-			<name-style>italic</name-style>
-			<name>Level 11:</name>
-			<text>Push (flight) up to 5 squares.</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<indent>1</indent>
-			<name-style>italic</name-style>
-			<name>Level 21:</name>
-			<text>Push (flight) up to 6 squares.</text>
-		</element>
+			<frequency>At-Will</frequency>
+			<keyword>Arcane, Force</keyword>
+			<action>Standard</action><subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<element>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</element>
+			<element>
+				<shade>true</shade> 
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You push the target up to 4 squares. </text>
+			</element>
+			<element>
+				<shade>true</shade> <indent>1</indent>
+				<name>Ally target:</name> <name-style>bold</name-style>
+				<text>An ally can fly during the push, and if he or she ends the push next to an enemy, he or she can make a <![CDATA[<i>melee basic attack</i>]]> against that enemy as a free reaction.</text>
+			</element>
+			<element>
+				<shade>true</shade> <indent>1</indent>
+				<text>If the ally did not not end the push on a surface he or she can stand on, he or she falls.</text>
+			</element>
+			<element>
+				<shade>true</shade> <indent>1</indent>
+				<name>Enemy target:</name> <name-style>bold</name-style>
+				<text>If you cannot push an enemy further because of blocking terrain, the enemy takes force damage equal to your Intelligence modifier.</text>
+			</element>
+			<element>
+				<shade>true</shade> <indent>1</indent>
+				<text>For each square of push beyond the first you were prevented from forcing on the target, increase the force damage by +1.</text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<indent>1</indent>
+				<name-style>italic</name-style>
+				<name>Level 11:</name>
+				<text>Push up to 5 squares, and 2 + Intelligence modifier force damage.</text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<indent>1</indent>
+				<name-style>italic</name-style>
+				<name>Level 21:</name>
+				<text>Push up to 6 squares, 3 + Intelligence modifier force damage, and increase force damage by +2 per square.</text>
+			</element>
 		</part>
 	</power>
 	<power>
