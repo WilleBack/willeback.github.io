@@ -26,7 +26,7 @@
 			<element>
 				<shade>true</shade>
 				<name>Hit:</name> <name-style>bold</name-style>
-				<text>1[W] + Strength modifier damage, and you slide the target 1 square to a square adjacent to you.</text>
+				<text>2[W] damage, and you slide the target 1 square to a square adjacent to you.</text>
 			</element>
 			<element>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -156,6 +156,48 @@
 			</element>
 		</part>
 	</power>
+	<power>
+		<title>Funneling Flurry</title>
+		<class>Fighter</class> <category>Attack</category> <level>1</level>
+		<fluff>With snake-like strikes, you force two of your enemies to move where you want them</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<action>Standard</action> <action>Action</action>
+			<type>Melee</type> <range>weapon</range>
+			<element>
+				<shade>true</shade>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must be wielding two melee weapons</text>
+			</element>
+			<element>
+				<name>Primary Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</element>
+			<element>
+				<name>Primary Attack:</name> <name-style>bold</name-style>
+				<text>Strength vs. AC (main weapon></text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1[W] (main) + Strength modifier damage, and you slide the target 1 square.</text>
+			</element>
+			<element>
+				<name>Secondary Target:</name> <name-style>bold</name-style>
+				<text>One creature other than the primary target</text>
+			</element>
+			<element>
+				<name>Secondary Attack:</name> <name-style>bold</name-style>
+				<text>Strength vs. AC (off-hand weapon)</text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1[W] (off-hand) + Strength modifier damage, and you slide the target 1 square.</text>
+			</element>
+		</part>
+	</power>
 	<power> <!-- Goading Maneuver -->
 		<title>Goading Maneuver</title>
 		<class>Fighter</class>
@@ -206,48 +248,47 @@
 		<level>1</level>
 		<fluff>You hack an enemy with one stroke and then slash at another with your next swing</fluff>
 		<part>
-		<frequency>Encounter</frequency>
-		<keyword>Invigorating, Martial, Weapon</keyword>
-		<action>Standard</action>
-			<subaction>Action</subaction>
-		<type>Melee</type>
-		<range>weapon</range>
-		<element>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Primary Target:</name>
-			<text>One creature </text>
-		</element>
-		<element>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Primary Attack:</name>
-			<text>Strength vs. AC </text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<name-style>bold</name-style>
-			<name>Hit:</name>
-			<text>1[W] + Strength modifier damage</text>
-		</element>
-		<element>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Secondary Target:</name>
-			<text>One creature other than the primary target </text>
-		</element>
-		<element>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Secondary Attack:</name>
-			<text>Strength vs. AC</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<name-style>bold</name-style>
-			<name>Hit:</name>
-			<text>1[W] + Strength modifier damage.</text>
-		</element>
+			<frequency>Encounter</frequency>
+			<keyword>Invigorating, Martial, Weapon</keyword>
+			<action>Standard</action>
+				<subaction>Action</subaction>
+			<type>Melee</type> <range>weapon</range>
+			<element>
+				<name>Primary Target:</name> <name-style>bold</name-style>
+				<text>One creature </text>
+			</element>
+			<element>
+				<name>Primary Attack:</name> <name-style>bold</name-style>
+				<text>Strength vs. AC </text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1[W] + Strength modifier damage</text>
+			</element>
+			<element>
+				<shade>true</shade> <indent>1</indent>
+				<name>Weapon:</name> <name-style>bold</name-style>
+				<text>If you are wielding an axe, the attack deals extra damage equal to your Constitution modifier.</text>
+			</element>
+			<element>
+				<name>Secondary Target:</name> <name-style>bold</name-style>
+				<text>One creature other than the primary target </text>
+			</element>
+			<element>
+				<name>Secondary Attack:</name> <name-style>bold</name-style>
+				<text>Strength vs. AC</text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1[W] + Strength modifier damage.</text>
+			</element>
+			<element>
+				<shade>true</shade> <indent>1</indent>
+				<name>Weapon:</name> <name-style>bold</name-style>
+				<text>If you are wielding a heavy blade, the attack deals extra damage equal to your Dexterity modifier.</text>
+			</element>
 		</part>
 	</power>
 	<power> <!-- Lunging Strike -->
@@ -257,29 +298,34 @@
 		<level>1</level>
 		<fluff>You lunge at a foe that thought it was beyond your reach</fluff>
 		<part>
-		<frequency>Encounter</frequency>
-		<keyword>Martial, Weapon</keyword>
-		<action>Standard</action>
-			<subaction>Action</subaction>
-		<type>Melee</type>
-		<range>weapon, +1 reach</range>
-		<element>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>One creature</text>
-		</element>
-		<element>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Attack:</name>
-			<text>Strength vs. AC</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<name-style>bold</name-style>
-			<name>Hit:</name>
-			<text>2[W] + Strength modifier damage.</text>
-		</element>
+			<frequency>Encounter</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<action>Standard</action>
+				<subaction>Action</subaction>
+			<type>Melee</type>
+			<range>weapon, +1 reach</range>
+			<element>
+				<name-style>bold</name-style>
+				<name>Target:</name>
+				<text>One creature</text>
+			</element>
+			<element>
+				<shade> </shade>
+				<name-style>bold</name-style>
+				<name>Attack:</name>
+				<text>Strength vs. AC</text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<name-style>bold</name-style>
+				<name>Hit:</name>
+				<text>2[W] + Strength modifier damage.</text>
+			</element>
+			<element>
+				<shade>true</shade> <indent>1</indent>
+				<name>Weapon:</name> <name-style>bold</name-style>
+				<text>If you are wielding a polearm, the attack deals additional damage equal to your Wisdom modifier.</text>
+			</element>
 		</part>
 	</power>
 	<power> <!-- Passing Attack -->
@@ -289,49 +335,54 @@
 		<level>1</level>
 		<fluff>You strike at one foe, allowing your momentum to carry you forward into a second strike at another enemy</fluff>
 		<part>
-		<frequency>Encounter</frequency>
-		<keyword>Martial, Weapon</keyword>
-		<action>Standard</action>
-			<subaction>Action</subaction>
-		<type>Melee</type>
-		<range>weapon</range>
-		<element>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Primary Target:</name>
-			<text>One creature </text>
-		</element>
-		<element>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Primary Attack:</name>
-			<text>Strength vs. AC </text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<name-style>bold</name-style>
-			<name>Hit:</name>
-			<text>1[W] + Strength modifier damage, and you can shift 1 square. Make the secondary attack. </text>
-		</element>
-		<element>
-			<indent>1</indent>
-			<name-style>bold</name-style>
-			<name>Secondary Target:</name>
-			<text>One creature other than the primary target </text>
-		</element>
-		<element>
-			<indent>1</indent>
-			<name-style>bold</name-style>
-			<name>Secondary Attack:</name>
-			<text>Strength +2 vs. AC</text>
-		</element>
-		<element>
-			<shade>true</shade>
-			<indent>1</indent>
-			<name-style>bold</name-style>
-			<name>Hit:</name>
-			<text>1[W] + Strength modifier damage.</text>
-		</element>
+			<frequency>Encounter</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<action>Standard</action>
+				<subaction>Action</subaction>
+			<type>Melee</type>
+			<range>weapon</range>
+			<element>
+				<shade> </shade>
+				<name-style>bold</name-style>
+				<name>Primary Target:</name>
+				<text>One creature </text>
+			</element>
+			<element>
+				<shade> </shade>
+				<name-style>bold</name-style>
+				<name>Primary Attack:</name>
+				<text>Strength vs. AC </text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<name-style>bold</name-style>
+				<name>Hit:</name>
+				<text>1[W] + Strength modifier damage, and you can shift 1 square. Make the secondary attack. </text>
+			</element>
+		</part>
+		<part>
+			<part-name>Secondary Attack</part-name>
+			<frequency>Automatic</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<element>
+				<indent>1</indent>
+				<name-style>bold</name-style>
+				<name>Secondary Target:</name>
+				<text>One creature other than the primary target </text>
+			</element>
+			<element>
+				<indent>1</indent>
+				<name-style>bold</name-style>
+				<name>Secondary Attack:</name>
+				<text>Strength +4 vs. AC</text>
+			</element>
+			<element>
+				<shade>true</shade>
+				<indent>1</indent>
+				<name-style>bold</name-style>
+				<name>Hit:</name>
+				<text>1[W] + Strength modifier damage.</text>
+			</element>
 		</part>
 	</power>
 	<power> <!-- Punishing Charge -->
@@ -417,14 +468,17 @@
 			<shade>true</shade>
 			<name-style>bold</name-style>
 			<name>Hit:</name>
-			<text>1[W] + Strength modifier damage, and until the end of your next turn, the target takes a penalty to attack rolls equal to your Dexterity modifier. </text>
+			<text>2[W] damage, and until the end of your next turn, the target takes a penalty to attack rolls equal to your Dexterity modifier. </text>
 		</element>
 		<element>
-			<shade>true</shade>
-			<indent>1</indent>
-			<name-style>bold</name-style>
-			<name>Weapon:</name>
+			<shade>true</shade> <indent>1</indent>
+			<name>Weapon:</name> <name-style>bold</name-style>
 			<text>If you are wielding a flail, you grab the target without needing a free hand. The grab ends automatically at the end of your next turn. </text>
+		</element>
+		<element>
+			<shade>true</shade> <indent>1</indent>
+			<name>Weapon:</name> <name-style>bold</name-style>
+			<text>If you are wielding a light blade, the attack deals additional damage equal to your Dexterity modifier.</text>
 		</element>
 		</part>
 	</power>
@@ -481,7 +535,7 @@
 			<name-style>bold</name-style>
 			<name>Special:</name>
 			<text>When charging, you can use this power in place of a <![CDATA[<i>melee basic attack</i>.<br/>]]>
-			If you are a dwarf, this power can count as an <![CDATA[<i>opportunity attack</i>]]>, used as an opportunity interrupt</text>
+			If you are a dwarf, you can use this power in place of a <![CDATA[<i>melee basic attack</i>]]> when making an <![CDATA[<i>opportunity attack</i>]]>.</text>
 		</element>
 		</part>
 	</power>
@@ -655,7 +709,7 @@
 			<shade>true</shade>
 			<name-style>bold</name-style>
 			<name>Hit:</name>
-			<text>Strength modifier + your weapon's enhancement bonus damage, and the target grants you combat advantage until the end of your next turn. Make a secondary attack. </text>
+			<text>Strength modifier + your weapon's enhancement bonus damage, and the target grants you combat advantage until the end of this turn. Make a secondary attack. </text>
 		</element>
 		<element>
 			<indent>1</indent>
