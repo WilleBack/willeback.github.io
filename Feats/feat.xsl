@@ -457,7 +457,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Human</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Human' or prereq/name='Eladrin']">
+				<xsl:for-each select="catalog/feat[prereq/name='Human']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
