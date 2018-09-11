@@ -80,7 +80,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;">Constant Benefit</div>
 						<xsl:for-each select="benefit" >
 							<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:2.3em; float:left;">
-								<xsl:value-of select="benefit" disable-output-escaping="yes"/>
+								<xsl:value-of select="." disable-output-escaping="yes"/>
 							</div>
 						</xsl:for-each>
 						<!-- <div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;background:linear-gradient(to right, GhostWhite, Ghostwhite,White);">
