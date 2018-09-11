@@ -98,8 +98,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:text>)</xsl:text>
 						</div>
 						<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:2.3em; float:left;">
-							<b><xsl:value-of select="manifestation/action" /></b> <xsl:text> </xsl:text><xsl:value-of select="manifestation/subaction" /><xsl:text> with </xsl:text><i><xsl:text>Trigger: </xsl:text></i><xsl:value-of select="manifestation/trigger" /> 
+							<b><xsl:value-of select="manifestation/action" /></b> <xsl:text> </xsl:text><xsl:value-of select="manifestation/subaction" /><xsl:text>; </xsl:text><b><xsl:text>Trigger: </xsl:text></b><xsl:value-of select="manifestation/trigger" /> 
 						</div> 
+						<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:2.3em; float:left;">
+							<b>Effect: </b><xsl:value-of select="manifestation/effect[1]" />
+						</div>
 					</div> 
 								
 				</div>  
