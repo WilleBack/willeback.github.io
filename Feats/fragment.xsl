@@ -67,13 +67,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 		<div class="container">
 			<xsl:for-each select="catalog/fragment">
-				<xsl:value-of select="title" /> <br />
-				<!-- <div class="fragment">
+				<div class="fragment">
 					<div id ="header" style="background-color:DarkKhaki; box-sizing:border-box; width:100%; float:left; color:white; ">
 						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:60%;"><xsl:value-of select="title"/></div>
 						<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/> </div>
 					</div>
-					
+					<!-- 
 					<div id="fluff" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 						<i><xsl:value-of select="fluff" /> </i>
 					</div> 
