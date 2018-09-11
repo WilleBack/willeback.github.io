@@ -83,7 +83,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:value-of select="." disable-output-escaping="yes"/>
 							</div>
 						</xsl:for-each>
-						<!-- <div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;background:linear-gradient(to right, GhostWhite, Ghostwhite,White);">
+						<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;background:linear-gradient(to right, GhostWhite, Ghostwhite,White);">
 							<xsl:text>Divine Manifestation (</xsl:text> <xsl:value-of select="manifestation/frequency" />
 							<xsl:if test="keyword" > 
 								<xsl:text> </xsl:text>&#x25C6; <xsl:text> </xsl:text>
@@ -95,7 +95,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								</xsl:for-each>
 							</xsl:if>
 							<xsl:text>)</xsl:text>
-						</div>
+						</div><!-- 
 						<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:2.3em; float:left;background:linear-gradient(to right, GhostWhite, Ghostwhite,White);">
 							<b><xsl:value-of select="manifestation/action" /></b> <xsl:text> </xsl:text><xsl:value-of select="manifestation/subaction" /> <xsl:text>. <i>Trigger: </i></xsl:text><xsl:value-of select="manifestation/trigger" />
 						</div> -->
