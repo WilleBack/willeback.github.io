@@ -21,10 +21,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside:avoid;
 			}
 			
-			.title {
-				width:16.5em; 
-				float:left;
-			}
 			
 			@media only screen and (min-width:600px) {
 				.container { 
@@ -76,10 +72,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:60%;"><xsl:value-of select="title"/></div>
 						<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/> </div>
 					</div> <!-- header -->
+					
 					<div id="fluff" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 						<i><xsl:value-of select="fluff" /> </i>
 					</div> <!-- fluff -->
-					<div id="content">
+					<div id="content" style="width:100%;">
 						<div style="width:100%; box-sizing:border-box; padding:0.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
 							<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;">Constant Benefit</div>
 							<xsl:for-each select="benefit" >
@@ -105,7 +102,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 								
 					</div> <!-- content -->
-				</div> <!-- power -->
+				</div> <!-- fragment -->
 			</xsl:for-each>
 		</div> <!-- container -->
 	</body>
