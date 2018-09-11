@@ -85,8 +85,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:for-each>
 					</div>
 					<div style="width:100%; box-sizing:border-box; background:linear-gradient(to right, GhostWhite, Ghostwhite,White);float:left;">
-						<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;">Divine Manifestation (</xsl:text> <xsl:value-of select="manifestation/frequency" />
-							<xsl:if test="keyword" > 
+						<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;">Divine Manifestation (<xsl:value-of select="manifestation/frequency" />
+							<xsl:if test="manifestation/keyword" > 
 								<xsl:text> </xsl:text>&#x25C6; <xsl:text> </xsl:text>
 								<xsl:for-each select="manifestation/keyword">
 									<xsl:value-of select="."/>
