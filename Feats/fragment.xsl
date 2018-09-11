@@ -109,6 +109,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</div>
 						</xsl:for-each>
 					</div> 
+					<div style="width:100%; box-sizing:border-box; padding:0.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+						<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;">Quirks</div>
+						<div style="width:100%; box-sizing:border-box; padding:0.2em; text-indent:-1em; padding-left:2.3em; float:left;">
+							<xsl:for-each select="quirk" >
+								<i><xsl:value-of select="." disable-output-escaping="yes"/></i>
+								<xsl:if test="position()!=last()">
+									<xsl:text>, </xsl:text>
+								</xsl:if>
+							</xsl:for-each>
+						</div>
+					</div>
 								
 				</div>  
 			</xsl:for-each>
