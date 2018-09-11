@@ -101,8 +101,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<b><xsl:value-of select="manifestation/action" /></b> <xsl:text> </xsl:text><xsl:value-of select="manifestation/subaction" /><xsl:text>; </xsl:text><b><xsl:text>Trigger: </xsl:text></b><xsl:value-of select="manifestation/trigger" /> 
 						</div> 
 						<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:2.3em; float:left;">
-							<b>Effect: </b><xsl:value-of select="manifestation/effect[1]" />
+							<b>Effect: </b><xsl:value-of select="manifestation/effect[1]" disable-output-escaping="yes" />
 						</div>
+						<xsl:for-each select="manifestation/effect[position()>1]">
+							<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:2.3em; float:left;">
+								<xsl:value-of select="." disable-output-escaping="yes"/>
+							</div>
+						</xsl:for-each>
 					</div> 
 								
 				</div>  
