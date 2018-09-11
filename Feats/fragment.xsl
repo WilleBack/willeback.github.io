@@ -99,9 +99,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:2.3em; float:left;background:linear-gradient(to right, GhostWhite, Ghostwhite,White);">
 							<b><xsl:value-of select="manifestation/action" /></b> <xsl:text> </xsl:text><xsl:value-of select="manifestation/subaction" /> <xsl:text>. <i>Trigger: </i></xsl:text><xsl:value-of select="manifestation/trigger" />
 						</div>
-					</div>
+					</div> -->
 								
-				</div>  -->
+				</div>  
 			</xsl:for-each>
 		</div> <!-- container -->
 	</body>
