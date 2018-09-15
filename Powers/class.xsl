@@ -32,6 +32,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside:avoid;
 			}
 			
+			.text {
+				width:100%; 
+				box-sizing:border-box; 
+				padding:0.3em; 
+				text-indent:-1em; 
+				padding-left:1.3em; 
+				float:left;
+			}
+			
 			.listcontainer {
 				box-sizing:border-box;
 				float:left;
@@ -188,11 +197,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 		</div> <!-- block -->
 		
+		<div id="startfeatures" style="width:100%; float:left;">
+			<div id="header" style="width:100%; float:left; font-size:1.2em; padding:1em; font-weight:bold; font-variant:small-caps;">
+				<xsl:text>Class Features</xsl:text>
+			</div>
+			<div class="text">
+				<xsl:text>The following are class features of the </xsl:text><xsl:value-of select="class/name" /> <xsl:text> class:</xsl:text>
+			</div>
+		
 		<xsl:for-each select="class/feature">
 			<div class="feature">
 				<div id="featurename" style="width:100%; float:left; font-size:1.1em; padding:1em; font-weight:bold; font-variant:small-caps;">
 					<xsl:value-of select="name" />
 				</div>
+				<xsl:for-each select="benefit">
+					<div class="text">
+						<xsl:value-of select="." />
+					</div>
+				</xsl:for-each>
 			</div>
 		</xsl:for-each>
 			
