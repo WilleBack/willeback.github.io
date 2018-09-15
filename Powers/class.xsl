@@ -121,10 +121,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div> 
 	</div> <!-- class header -->
 		
-	<!-- <div class="container">
-	<xsl:for-each select="catalog/feat">
-		<div class="feat">
-			<xsl:choose>
+	<div class="container">
+		<xsl:for-each select="class/fluff">
+			<div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+				<xsl:value-of select="." />
+			</div>
+		</xsl:for-each>
+			
+		
+			<!-- <xsl:choose>
 				<xsl:when test="tier = 'Heroic'">
 					<div id ="header" style="background-color:RoyalBlue; box-sizing:border-box; width:100%; float:left; color:white; ">
 						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:70%;"><xsl:value-of select="title"/></div>
@@ -293,8 +298,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 			</div>  content 
 		</div> power 
-	</xsl:for-each>
-	</div>  container -->
+	</xsl:for-each> -->
+	</div>  container 
 	</body>
 	</html>
 </xsl:template>
