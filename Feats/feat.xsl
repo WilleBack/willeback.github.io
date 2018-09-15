@@ -738,7 +738,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 					</xsl:for-each>
 				</xsl:if>
-				<xsl:if test="associated">
+				<!-- <xsl:if test="associated">
 					<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
 						<b>Associated Powers: </b>
 						<xsl:for-each select="associated">
@@ -748,7 +748,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</xsl:when>
 						</xsl:for-each>
 					</div>
-				</xsl:if>
+				</xsl:if> -->
 			</div> <!-- content -->
 		</div> <!-- power -->
 	</xsl:for-each>
