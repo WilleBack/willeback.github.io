@@ -10,6 +10,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<style>
 			.container {
 				
+				padding-top:1em;
 				box-sizing:border-box;
 				float:left;
 			}
@@ -299,7 +300,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>  content 
 		</div> power 
 	</xsl:for-each> -->
-	</div>  container 
+	</div>  <!-- container --> 
 	</body>
 	</html>
 </xsl:template>
