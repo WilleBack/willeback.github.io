@@ -165,7 +165,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="blockdiv">
 				<b>Defenses: </b>
-				<xsl:for-each select="class/Defense">
+				<xsl:for-each select="class/defense">
 					<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="value" />
 					<xsl:if test="position()!=last()">
 						<xsl:text>, </xsl:text>
