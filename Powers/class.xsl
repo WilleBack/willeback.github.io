@@ -180,6 +180,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<br /><b>Healing Surges: </b><xsl:value-of select="class/surgebase"/> <xsl:text> + Constitution modifier</xsl:text>
 			</div> <!-- blockdiv -->
 			
+			<div class="blockdiv">
+				<b>Skills</b>
+					<br /><b>Automatically trained in: </b><xsl:value-of select="class/skills/trained"/>
+					<br /><b>Additional Trained skills: </b><xsl:value-of select="class/skills/number"/> 
+			</div> <!-- blockdiv -->
+			
 		</div> <!-- block -->
 			
 		
