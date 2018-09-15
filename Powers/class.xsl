@@ -114,9 +114,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	
 	<div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
-		<div id="classtitle" style="background-color:MediumBlue; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1.2em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" > <xsl:value-of select="class/name" /> </div>
-		<div id="classinfo" style="background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro); width:100%; float:left;" >
-			<b><xsl:text>Role: </xsl:text></b> <!-- <xsl:value-of select="class/role" /> <xsl:text>; <b>Power Source:</b> </xsl:text> <xsl:value-of select="class/source" /> <br />
+		<div id="classtitle" style="background-color:MediumBlue; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" > <xsl:value-of select="class/name" /> </div>
+		<div id="classinfo" style="background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro); width:100%; padding:1em; float:left;" >
+			<b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="class/role" /> <!--<xsl:text>; <b>Power Source:</b> </xsl:text> <xsl:value-of select="class/source" /> <br />
 			<xsl:value-of select="class/shortfluff" /> -->
 		</div> 
 	</div> <!-- class header -->
