@@ -141,8 +141,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
 			<div class="blockdiv">
-				<b>Key Abilities: </b> <xsl:value-of select="keyability[1]" /> <xsl:text>; </xsl:text>
-				<xsl:for-each select="keyability[position()>1]">
+				<b>Key Abilities: </b> <xsl:value-of select="class/keyability[1]" /> <xsl:text>; </xsl:text>
+				<xsl:for-each select="class/keyability[position()>1]">
 					<i><xsl:value-of select="."/></i>
 					<xsl:if test="position()!=last()">
 						<xsl:text>, </xsl:text>
