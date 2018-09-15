@@ -204,6 +204,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="text">
 				<xsl:text>The following are class features of the </xsl:text><xsl:value-of select="class/name" /> <xsl:text> class:</xsl:text>
 			</div>
+		</div>
 		
 		<xsl:for-each select="class/feature">
 			<div class="feature">
