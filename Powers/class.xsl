@@ -15,6 +15,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 			}
 			
+			.blockdiv {
+			
+				width:100%; 
+				box-sizing:border-box; 
+				padding:0.3em; 
+				text-indent:-1em; 
+				padding-left:1.3em; 
+				float:left;"
+			}
+			
 			.feature {
 				margin:0.2cm; 
 				width:98%;
@@ -128,6 +138,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:value-of select="." />
 			</div>
 		</xsl:for-each>
+		
+		<div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
+			<div class="blockdiv">
+				<b>Key Abilities: </b> <xsl:value-of select="keyability[1]" /> <xsl:text>; </xsl:text>
+				<xsl:for-each select="keyability[position()>1]">
+					<i><xsl:value-of select="."/></i>
+					<xsl:if test="position()!=last()">
+						<xsl:text>, </xsl:text>
+					</xsl:if>
+				</xsl:for-each>
+			</div> <!-- blockdiv -->
+			
+		</div> <!-- block -->
 			
 		
 			<!-- <xsl:choose>
