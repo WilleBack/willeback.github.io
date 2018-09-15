@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../class.xsl"?>
 
-<class>
+<class xmlns:xlink="http://www.w3.org/1999/xlink">
 	<name>Fighter</name>
 	<subname>Weaponmaster</subname>
 	<role>Defender</role>
@@ -56,24 +56,25 @@
 		<name>Approach to Opportunities</name>
 		<benefit>A weaponmaster is always ready to take advantage of any opportunities their enemies give. Depending on your style, you can choose to focus on either personal mobility or on stopping your enemies in their tracks.</benefit>
 		<benefit>You gain your choice of either <![CDATA[<i>combat agility</i>]]> or <![CDATA[<i>combat superiority</i>]]>.</benefit>
-		<include>
-			<type>power</type>
-			<file>FighterFeatures.xml</file>
-			<title>Combat Agility</title>
+		<include
+			xlink:type="simple"
+			xlink:href="FighterFeatures.xml#xpointer(title('Combat Agility'))"
+			xlink:show="embed">
+			Combat Agility
 		</include>
-		<include>
+		<!-- <include>
 			<type>power</type>
 			<file>FighterFeatures.xml</file>
 			<title>Combat Superiority</title>
-		</include>
+		</include> -->
 	</feature>
 	
 	<feature>
 		<name>Combat Challenge</name>
 		<benefit>In combat, it is dangerous to ignore a fighter. Every time you attack an enemy, whether the attack hits or misses, you can choose to mark that target until the end of your next turn.</benefit>
-		<benefit>While the target is marked it takes a -2 penalty to attack rolls of attacks that do not include you as a target. A creature can be subject to only one mark at a time, with a new mark superseding a mark that was already in place.</benefit>
+		<benefit>While the target is marked, it takes a -2 penalty to attack rolls of attacks that do not include you as a target. A creature can be subject to only one mark at a time, with a new mark superseding a mark that was already in place.</benefit>
 		<benefit>In addition, you gain the <![CDATA[<i>enforce challenge</i>]]> power. If you are an eladrin, you can choose to gain the <![CDATA[<i>feywild enforcement</i>]]> power instead.</benefit>
-		<include>
+		<!-- <include>
 			<type>power</type>
 			<file>FighterFeatures.xml</file>
 			<title>Enforce Challenge</title>
@@ -82,7 +83,7 @@
 			<type>power</type>
 			<file>FighterFeatures.xml</file>
 			<title>Feywild Enforcement</title>
-		</include>
+		</include> -->
 	</feature>
 	
 </class>

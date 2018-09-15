@@ -208,7 +208,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<xsl:for-each select="class/feature">
 			<div class="feature">
-				<div id="featurename" style="width:100%; float:left; font-size:1.1em; padding:1em; font-weight:bold; font-variant:small-caps;">
+				<div id="featurename" style="width:100%; float:left; font-size:1.1em; padding:0.6em; font-weight:bold; font-variant:small-caps;">
 					<xsl:value-of select="name" />
 				</div>
 				<xsl:for-each select="benefit">
