@@ -212,7 +212,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 				<xsl:for-each select="benefit">
 					<div class="text">
-						<xsl:value-of select="." />
+						<xsl:value-of select="." disable-output-escaping="yes" />
 					</div>
 				</xsl:for-each>
 			</div>
