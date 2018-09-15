@@ -738,11 +738,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 					</xsl:for-each>
 				</xsl:if>
-				<!-- <xsl:if test="associated">
-					<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<b>Associated Powers: </b>
+				<xsl:if test="associated">
+					<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">						<b>Associated Powers: </b>
 						<xsl:for-each select="associated">
-							<i><xsl:value-of select="." /></i>
+							<i><xsl:value-of select="."/></i>
 							<xsl:when test="position()!=last()">
 								<xsl:text>, </xsl:text>
 							</xsl:when>
