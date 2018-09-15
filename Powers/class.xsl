@@ -173,6 +173,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each>
 			</div> <!-- blockdiv -->
 			
+			<div class="blockdiv">
+				<b>Health</b>
+					<br /><b>Hit Points at 1st level: </b><xsl:value-of select="class/hpbase"/> <xsl:text> + Constitution score</xsl:text>
+					<br /><b>Hit Points gained each level: </b><xsl:value-of select="class/hpgain"/> 
+					<br /><b>Healing Surges: </b><xsl:value-of select="class/surgebase"/> <xsl:text> + Constitution modifier</xsl:text>
+			</div> <!-- blockdiv -->
+			
 		</div> <!-- block -->
 			
 		
