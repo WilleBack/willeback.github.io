@@ -141,12 +141,25 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
 			<div class="blockdiv">
-				<b>Key Abilities: </b> <xsl:value-of select="class/keyability[1]" /> <xsl:text>; </xsl:text>
+				<b>Key Abilities: </b> <i><xsl:value-of select="class/keyability[1]" /></i> <xsl:text>; </xsl:text>
 				<xsl:for-each select="class/keyability[position()>1]">
-					<i><xsl:value-of select="."/></i>
+					<xsl:value-of select="."/>
 					<xsl:if test="position()!=last()">
 						<xsl:text>, </xsl:text>
 					</xsl:if>
+				</xsl:for-each>
+			</div> <!-- blockdiv -->
+			
+			<div class="blockdiv">
+				<b>Proficiencies</b>
+				<xsl:for-each select="class/proficiency">
+					<br /><b><xsl:value-of select="type"/> <xsl:text>: </xsl:text></b>
+					<xsl:for-each select="name">
+						<xsl:value-of select="." />
+						<xsl:if test="position()!=last()">
+							<xsl:text>, </xsl:text>
+						</xsl:if>
+					</xsl:for-each>
 				</xsl:for-each>
 			</div> <!-- blockdiv -->
 			
