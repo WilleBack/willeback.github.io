@@ -264,7 +264,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template> 
 
-<xsl:template match="element">Testiteksti
+<xsl:template match="powerelement">Testiteksti
 	<!--<xml:param name="shade" />
 	
 	<xml:if test="shade='true'">
