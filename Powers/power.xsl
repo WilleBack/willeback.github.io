@@ -283,7 +283,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xml:otherwise>
 	</xml:choose> -->
 	
-	<div style="width:100%; {$shade} box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
+	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
 		<xsl:choose>
 			<xsl:when test="name-style = 'bold'"> 
 				<b><xsl:value-of select="name"/>&#160;</b>
@@ -296,7 +296,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:value-of select="text" disable-output-escaping="yes" />
-	</div> -->
+	</div>
 	
 </xsl:template>
 	
