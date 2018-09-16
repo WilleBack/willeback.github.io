@@ -64,7 +64,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 			<xsl:for-each select="power">
 				<xsl:sort select="title" /> 
-			</xsl:for-eac>
+			</xsl:for-each>
 			
 			<xsl:apply-templates match="power" />
 		</div> <!-- container -->
