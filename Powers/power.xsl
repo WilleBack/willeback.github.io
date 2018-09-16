@@ -264,11 +264,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template> 
 
-<xsl:template match="section">Testiteksti
+<xsl:template match="section">
 	<!--<xml:param name="shade" />
 	
 	<xml:if test="shade='true'">
-		<xml:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xml:param> 
+		--><xsl:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xsl:param> <!--
 	</xml:if>
 	
 	<xml:choose>
@@ -279,11 +279,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xml:param name="indent">3.8em</xml:param>
 		</xml:when>
 		<xml:otherwise>
-			--><xml:param name="indent">1.2em</xml:param> <!--
+			--><xsl:param name="indent">1.2em</xsl:param> <!--
 		</xml:otherwise>
 	</xml:choose> -->
 	
-	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
+	<div style="width:100%; {$shade} box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
 		<xsl:choose>
 			<xsl:when test="name-style = 'bold'"> 
 				<b><xsl:value-of select="name"/>&#160;</b>
