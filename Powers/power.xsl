@@ -268,7 +268,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<!--<xml:param name="shade" />
 	
 	<xml:if test="shade='true'">
-		--> <xml:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xml:param> <!--
+		<xml:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xml:param> 
 	</xml:if>
 	
 	<xml:choose>
