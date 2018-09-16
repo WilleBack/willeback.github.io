@@ -3,7 +3,7 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:template match="/">
+<xsl:template match="/catalog">
 	<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -61,171 +61,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	<div class="container">
-	<xsl:for-each select="catalog/power">
-		<xsl:sort select="title" />
-		<div class="power">
-			<xsl:choose>
-				<xsl:when test="part[1]/frequency = 'At-Will'">
-					<div id ="header" style="background-color:#407040; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"><xsl:value-of select="title"/></div>
-						<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
-							<xsl:if test="level">
-								<xsl:text> </xsl:text><xsl:value-of select="level"/>
-							</xsl:if>
-						</div>
-					</div>	
-				</xsl:when>
-				<xsl:when test="part[1]/frequency = 'Encounter'">
-					<div id ="header" style="background-color:FireBrick; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"><xsl:value-of select="title"/></div>
-						<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
-							<xsl:if test="level">
-								<xsl:text> </xsl:text><xsl:value-of select="level"/>
-							</xsl:if>
-						</div>
-					</div>
-				</xsl:when>
-				<xsl:otherwise>
-					<div id ="header" style="background-color:DarkSlateGray; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"><xsl:value-of select="title"/></div>
-						<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="class"/><br /><xsl:value-of select="category"/>
-							<xsl:if test="level">
-								<xsl:text> </xsl:text><xsl:value-of select="level"/>
-							</xsl:if>
-						</div>
-					</div>
-				</xsl:otherwise> 
-			</xsl:choose> 
-			<div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> <i><xsl:value-of select="fluff"/></i></div>
-			<xsl:for-each select="part">
-					<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-					<xsl:if test="part-name != ''">
-						<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> <b><xsl:value-of select="part-name"/></b></div>
-					</xsl:if>
-					<xsl:if test="not(hide-freqkey = 'true')">
-						<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> <b><div id="frequency" style="width:5.9em; float:left;"><xsl:value-of select="frequency"/></div> <div id="blob" style="width: 1.2em; float: left; text-align:center;">&#x25C6;</div><div id="keywords" style="width:calc(100% - 7.1em); float:left;"><xsl:value-of select="keyword"/></div></b></div>
-					</xsl:if>
-					<xsl:if test="not(hide-actrange = 'true')">
-						<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> 
-							<div id="action" style="width:12.2em; float:left; ">
-								<b><xsl:value-of select="action"/></b>&#160;<xsl:value-of select="subaction"/>
-							</div> 
-							<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;"> 
-								<b><xsl:value-of select="type"/>&#160;</b> <xsl:value-of select="range"/>
-								<xsl:if test="type2">
-									 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;"> <b><xsl:value-of select="type2"/></b>&#160;<xsl:value-of select="range2"/></p>
-								</xsl:if>
-							</div>
-						</div>
-					</xsl:if>
-					<xsl:for-each select="element">
-						<xsl:choose>
-							<xsl:when test="shade = 'true'">
-								<xsl:choose>
-									<xsl:when test="indent ='1'">
-										<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:2.5em; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); float:left;">
-											<xsl:choose>
-												<xsl:when test="name-style = 'bold'"> 
-													<b><xsl:value-of select="name"/>&#160;</b>
-												</xsl:when>
-												<xsl:when test="name-style = 'italic'">
-													<i><xsl:value-of select="name"/>&#160;</i>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="name"/>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:value-of select="text" disable-output-escaping="yes" />
-										</div>
-									</xsl:when>
-									<xsl:when test="indent ='2'">
-										<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:3.8em; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); float:left;">
-											<xsl:choose>
-												<xsl:when test="name-style = 'bold'"> 
-													<b><xsl:value-of select="name"/>&#160;</b>
-												</xsl:when>
-												<xsl:when test="name-style = 'italic'">
-													<i><xsl:value-of select="name"/>&#160;</i>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="name"/>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:value-of select="text" disable-output-escaping="yes" />
-										</div>
-									</xsl:when>
-									<xsl:otherwise>
-										<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); float:left;">
-											<xsl:choose>
-												<xsl:when test="name-style = 'bold'"> 
-													<b><xsl:value-of select="name"/>&#160;</b>
-												</xsl:when>
-												<xsl:when test="name-style = 'italic'">
-													<i><xsl:value-of select="name"/>&#160;</i>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="name"/>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:value-of select="text" disable-output-escaping="yes" />
-										</div>
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:when>
-							<xsl:otherwise> 
-								<xsl:choose>
-									<xsl:when test="indent ='1'">
-										<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:2.5em; float:left;">
-											<xsl:choose>
-												<xsl:when test="name-style = 'bold'"> 
-													<b><xsl:value-of select="name"/>&#160;</b>
-												</xsl:when>
-												<xsl:when test="name-style = 'italic'">
-													<i><xsl:value-of select="name"/>&#160;</i>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="name"/>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:value-of select="text" disable-output-escaping="yes" />
-										</div>
-									</xsl:when>
-									<xsl:when test="indent ='2'">
-										<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:3.8em; float:left;">
-											<xsl:choose>
-												<xsl:when test="name-style = 'bold'"> 
-													<b><xsl:value-of select="name"/>&#160;</b>
-												</xsl:when>
-												<xsl:when test="name-style = 'italic'">
-													<i><xsl:value-of select="name"/>&#160;</i>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="name"/>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:value-of select="text" disable-output-escaping="yes" />
-										</div>
-									</xsl:when>
-									<xsl:otherwise>
-										<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; float:left;">
-											<xsl:choose>
-												<xsl:when test="name-style = 'bold'"> 
-													<b><xsl:value-of select="name"/>&#160;</b>
-												</xsl:when>
-												<xsl:when test="name-style = 'italic'">
-													<i><xsl:value-of select="name"/>&#160;</i>
-												</xsl:when>
-												<xsl:otherwise>
-													<xsl:value-of select="name"/>
-												</xsl:otherwise>
-											</xsl:choose>
-											<xsl:value-of select="text" disable-output-escaping="yes" />
-										</div>
-									</xsl:otherwise>
-								</xsl:choose>
-							</xsl:otherwise>
-						</xsl:choose>
-					</xsl:for-each> 
+	<xsl:apply-templates match="power" />
+	
+		
+		
+			
+					
+					 
 				</div>
 			</xsl:for-each>
 		</div> <!-- power -->
@@ -234,4 +76,208 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</body>
 	</html>
 </xsl:template>
+
+<xsl:template match="power">
+	<xsl:sort select="title" />
+	
+	<div class="power">
+		<xsl:call-template name="createheader">
+			<xsl:choose>
+				<xsl:when test="part[1]/frequency = 'At-Will'">
+					<xsl:with-param name="bgcolor">
+						#407040
+					</xsl:with-param>
+				</xsl:when>
+				<xsl:when test="part[1]/frequency = 'Encounter'">
+					<xsl:with-param name="bgcolor">
+						FireBrick
+					</xsl:with-param>
+				</xsl:when>
+				<xsl:when test="part[1]/frequency = 'Daily'">
+					<xsl:with-param name="bgcolor">
+						DarkSlateGray
+					</xsl:with-param>
+				</xsl:when>
+			</xsl:choose>
+		</xsl:call-template>
+		
+		<div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+			<i><xsl:value-of select="fluff"/></i>
+		</div>
+		
+		<xsl:apply-templates select="part" />
+
+</xsl:template>
+
+<xsl:template name="createheader">
+	<xsl:param name="bgcolor">
+		Purple
+	</xsl:param>
+	
+	<div id="header" style="background-color:'$bgcolor'; width:100%; float:left; color:white; ">
+		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
+			<xsl:value-of select="title"/>
+		</div>
+		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
+			<xsl:value-of select="class"/><br />
+			<xsl:value-of select="category"/>
+			<xsl:if test="level">
+				<xsl:text> </xsl:text><xsl:value-of select="level"/>
+			</xsl:if>
+		</div>
+	</div>
+	
+</xsl:template>
+
+<xsl:template match="part">
+	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
+		<xsl:if test="part-name != ''">
+			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
+				<b><xsl:value-of select="part-name"/></b>
+			</div>
+		</xsl:if>
+		<xsl:if test="not(hide-freqkey = 'true')">
+			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
+				<div id="frequency" style="width:5.9em; float:left;">
+					<xsl:value-of select="frequency"/>
+				</div> 
+				<div id="blob" style="width: 1.2em; float: left; text-align:center;">
+					&#x25C6;
+				</div>
+				<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
+					<xsl:value-of select="keyword"/>
+				</div>
+			</div>
+		</xsl:if>
+		<xsl:if test="not(hide-actrange = 'true')">
+			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> 
+				<div id="action" style="width:12.2em; float:left; ">
+					<b><xsl:value-of select="action"/></b>&#160;
+					<xsl:value-of select="subaction"/>
+				</div> 
+				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;"> 
+					<b><xsl:value-of select="type"/>&#160;</b> 
+					<xsl:value-of select="range"/>
+					<xsl:if test="type2">
+						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;"> 
+								<b><xsl:value-of select="type2"/></b>&#160;
+								<xsl:value-of select="range2"/>
+							</p>
+					</xsl:if>
+				</div>
+			</div>
+		</xsl:if>
+		
+		<xsl:for-each select="element">
+			<xsl:choose>
+				<xsl:when test="shade = 'true'">
+					<xsl:choose>
+						<xsl:when test="indent ='1'">
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:2.5em; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); float:left;">
+								<xsl:choose>
+									<xsl:when test="name-style = 'bold'"> 
+										<b><xsl:value-of select="name"/>&#160;</b>
+									</xsl:when>
+									<xsl:when test="name-style = 'italic'">
+										<i><xsl:value-of select="name"/>&#160;</i>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="name"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								<xsl:value-of select="text" disable-output-escaping="yes" />
+							</div>
+						</xsl:when>
+						<xsl:when test="indent ='2'">
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:3.8em; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); float:left;">
+								<xsl:choose>
+									<xsl:when test="name-style = 'bold'"> 
+										<b><xsl:value-of select="name"/>&#160;</b>
+									</xsl:when>
+									<xsl:when test="name-style = 'italic'">
+										<i><xsl:value-of select="name"/>&#160;</i>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="name"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								<xsl:value-of select="text" disable-output-escaping="yes" />
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); float:left;">
+								<xsl:choose>
+									<xsl:when test="name-style = 'bold'"> 
+										<b><xsl:value-of select="name"/>&#160;</b>
+									</xsl:when>
+									<xsl:when test="name-style = 'italic'">
+										<i><xsl:value-of select="name"/>&#160;</i>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="name"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								<xsl:value-of select="text" disable-output-escaping="yes" />
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:when>
+				<xsl:otherwise> 
+					<xsl:choose>
+						<xsl:when test="indent ='1'">
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:2.5em; float:left;">
+								<xsl:choose>
+									<xsl:when test="name-style = 'bold'"> 
+										<b><xsl:value-of select="name"/>&#160;</b>
+									</xsl:when>
+									<xsl:when test="name-style = 'italic'">
+										<i><xsl:value-of select="name"/>&#160;</i>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="name"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								<xsl:value-of select="text" disable-output-escaping="yes" />
+							</div>
+						</xsl:when>
+						<xsl:when test="indent ='2'">
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:3.8em; float:left;">
+								<xsl:choose>
+									<xsl:when test="name-style = 'bold'"> 
+										<b><xsl:value-of select="name"/>&#160;</b>
+									</xsl:when>
+									<xsl:when test="name-style = 'italic'">
+										<i><xsl:value-of select="name"/>&#160;</i>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="name"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								<xsl:value-of select="text" disable-output-escaping="yes" />
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; float:left;">
+								<xsl:choose>
+									<xsl:when test="name-style = 'bold'"> 
+										<b><xsl:value-of select="name"/>&#160;</b>
+									</xsl:when>
+									<xsl:when test="name-style = 'italic'">
+										<i><xsl:value-of select="name"/>&#160;</i>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="name"/>
+									</xsl:otherwise>
+								</xsl:choose>
+								<xsl:value-of select="text" disable-output-escaping="yes" />
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+	</div>
+	
+</xsl:template>
+
 </xsl:stylesheet>
