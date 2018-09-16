@@ -162,6 +162,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</div>
 		</xsl:if>
+		
+		<xsl:apply-templates match="element" />
 		<!--
 		<xsl:for-each select="element">
 			<xsl:choose>
@@ -200,7 +202,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</div>
 						</xsl:when>
 						<xsl:otherwise>
-							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); float:left;">
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em;  float:left;">
 								<xsl:choose>
 									<xsl:when test="name-style = 'bold'"> 
 										<b><xsl:value-of select="name"/>&#160;</b>
@@ -220,7 +222,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:otherwise> 
 					<xsl:choose>
 						<xsl:when test="indent ='1'">
-							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:2.5em; float:left;">
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:; float:left;">
 								<xsl:choose>
 									<xsl:when test="name-style = 'bold'"> 
 										<b><xsl:value-of select="name"/>&#160;</b>
@@ -236,7 +238,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</div>
 						</xsl:when>
 						<xsl:when test="indent ='2'">
-							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:3.8em; float:left;">
+							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:; float:left;">
 								<xsl:choose>
 									<xsl:when test="name-style = 'bold'"> 
 										<b><xsl:value-of select="name"/>&#160;</b>
@@ -252,20 +254,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</div>
 						</xsl:when>
 						<xsl:otherwise>
-							<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; float:left;">
-								<xsl:choose>
-									<xsl:when test="name-style = 'bold'"> 
-										<b><xsl:value-of select="name"/>&#160;</b>
-									</xsl:when>
-									<xsl:when test="name-style = 'italic'">
-										<i><xsl:value-of select="name"/>&#160;</i>
-									</xsl:when>
-									<xsl:otherwise>
-										<xsl:value-of select="name"/>
-									</xsl:otherwise>
-								</xsl:choose>
-								<xsl:value-of select="text" disable-output-escaping="yes" />
-							</div>
+							
 						</xsl:otherwise>
 					</xsl:choose>
 				</xsl:otherwise>
@@ -275,4 +264,38 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template> 
 
+<xsl:template match="element">
+	<xml:param name="shade" />
+	
+	<xml:if test="shade='true'">
+		<xml:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xml:param>
+	</xml:if>
+	
+	<xml:choose>
+		<xml:when test="indent='1'">
+			<xml:param name="indent">2.5em</xml:param>
+		</xml:when>
+		<xml:when test="indent='2'">
+			<xml:param name="indent">3.8em</xml:param>
+		</xml:when>
+		<xml:otherwise>
+			<xml:param name="indent">1.2em</xml:param>
+		</xml:otherwise>
+	</xml:choose>
+	
+	<div style="width:100%; {$shade} box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
+		<xsl:choose>
+			<xsl:when test="name-style = 'bold'"> 
+				<b><xsl:value-of select="name"/>&#160;</b>
+			</xsl:when>
+			<xsl:when test="name-style = 'italic'">
+				<i><xsl:value-of select="name"/>&#160;</i>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="name"/>
+			</xsl:otherwise>
+		</xsl:choose>
+		<xsl:value-of select="text" disable-output-escaping="yes" />
+	</div>
+	
 </xsl:stylesheet>
