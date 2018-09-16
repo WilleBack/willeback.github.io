@@ -101,7 +101,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div> -->
 
 </xsl:template>
-
+<!--
 <xsl:template name="createheader">
 	<xsl:param name="bgcolor">
 		Purple
@@ -271,6 +271,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 	</div>
 	
-</xsl:template>
+</xsl:template> -->
 
 </xsl:stylesheet>
