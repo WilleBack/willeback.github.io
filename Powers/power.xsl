@@ -96,6 +96,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		
 		<xsl:apply-templates select="part" />
+	
+	</div>
 
 </xsl:template>
 
