@@ -125,16 +125,89 @@
 		<benefit>In combat, it is dangerous to ignore a fighter. Every time you attack an enemy, whether the attack hits or misses, you can choose to mark that target until the end of your next turn.</benefit>
 		<benefit>While the target is marked, it takes a -2 penalty to attack rolls of attacks that do not include you as a target. A creature can be subject to only one mark at a time, with a new mark superseding a mark that was already in place.</benefit>
 		<benefit>In addition, you gain the <![CDATA[<i>enforce challenge</i>]]> power. If you are an eladrin, you can choose to gain the <![CDATA[<i>feywild enforcement</i>]]> power instead.</benefit>
-		<!-- <include>
-			<type>power</type>
-			<file>FighterFeatures.xml</file>
-			<title>Enforce Challenge</title>
-		</include>
-		<include>
-			<type>power</type>
-			<file>FighterFeatures.xml</file>
-			<title>Feywild Enforcement</title>
-		</include> -->
+			<power>
+				<title>Enforce Challenge</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>It is dangerous to ignore your challenge</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy marked by you and within your reach either shifts or makes an attack that doesn't target you </text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Target:</name>
+					<text>The triggering enemy</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>You make a <![CDATA[<i>melee basic attack</i>]]> against the target.</text>
+				</section>
+				</part>
+			</power>
+			<power>
+				<title>Feywild Enforcement</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>You teleport from one place to the next to punish an enemy that ignores you</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane, Martial, Teleportation, Weapon</keyword>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Prerequisite:</name>
+					<text>You must be eladrin, and have the <![CDATA[<i>fey step</i>]]> power</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy marked by you and within your reach either shifts or makes an attack that doesn't target you</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Target:</name>
+					<text>The triggering enemy</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>You teleport up to 2 squares to an unoccupied square adjacent to the triggering enemy.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Attack:</name>
+					<text>Intelligence vs. AC</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Hit:</name>
+					<text>1[W] + Intelligence modifier damage.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<indent>1</indent>
+					<name-style>italic</name-style>
+					<name>Level 21:</name>
+					<text>2[W] + Intelligence modifier damage.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Special:</name>
+					<text>This power counts as <![CDATA[<i>enforce challenge</i>]]> for feats and abilities that require it or modify it.</text>
+				</section>
+				</part>
+			</power>
 	</feature>
 	
 </class>
