@@ -273,17 +273,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<xsl:choose>
 		<xsl:when test="indent='1'">
-			<xsl:param name="indent">2.5em</xsl:param>
+			<xsl:param name="leftindent">2.5em</xsl:param>
 		</xsl:when>
 		<xsl:when test="indent='2'">
-			<xsl:param name="indent">3.8em</xsl:param>
+			<xsl:param name="leftindent">3.8em</xsl:param>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:param name="indent">1.2em</xsl:param> 
+			<xsl:param name="leftindent">1.2em</xsl:param> 
 		</xsl:otherwise>
 	</xsl:choose>
 	
-	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
+	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
 		<xsl:choose>
 			<xsl:when test="name-style = 'bold'"> 
 				<b><xsl:value-of select="name"/>&#160;</b>
