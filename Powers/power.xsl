@@ -123,12 +123,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template> 
 
 <xsl:template match="part">
-	<div id="part" style="width:100%; box-sizing:border-box; float:left;"> testiteksti
+	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
 		<xsl:if test="part-name != ''">
 			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
 				<b><xsl:value-of select="part-name"/></b>
 			</div>
-		</xsl:if><!--
+		</xsl:if>
+		
 		<xsl:if test="not(hide-freqkey = 'true')">
 			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
 				<div id="frequency" style="width:5.9em; float:left;">
@@ -142,6 +143,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</div>
 		</xsl:if>
+		
 		<xsl:if test="not(hide-actrange = 'true')">
 			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> 
 				<div id="action" style="width:12.2em; float:left; ">
@@ -160,7 +162,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</div>
 		</xsl:if>
-		
+		<!--
 		<xsl:for-each select="element">
 			<xsl:choose>
 				<xsl:when test="shade = 'true'">
