@@ -52,21 +52,72 @@
 	<fluff>Specialized combat maneuvers, or exploits, combined with a dedicated focus on a fighting style set weaponmasters apart from other fighters. A weaponmaster can slam his or her weapon through one enemy to crunch into another or carve a bloody path through enemies in a whirlwind of destruction. Weapons are crucial too, since weaponmasters know how to coax every advantage they can from their tools, and those who use axes fight differently from those who favor heavy blades.</fluff>
 	<fluff>Weaponmasters develop their combat prowess in many different ways. Most have some elementary training to expose them to different weapons and armor. These trainees are often squires, militia, students, and soldiers. Once they're cut free, they grow their ability through practice and observation. Each battle proves instructive, giving the weaponmaster new insights that might develop into full-blown techniques.</fluff>
 	
-	<feature xmlns:xlink="http://www.w3.org/1999/xlink">
+	<feature>
 		<name>Approach to Opportunities</name>
 		<benefit>A weaponmaster is always ready to take advantage of any opportunities their enemies give. Depending on your style, you can choose to focus on either personal mobility or on stopping your enemies in their tracks.</benefit>
 		<benefit>You gain your choice of either <![CDATA[<i>combat agility</i>]]> or <![CDATA[<i>combat superiority</i>]]>.</benefit>
-		<include
-			xlink:type="simple"
-			xlink:href="/FighterFeatures.xml#xpointer(title('Combat Agility'))"
-			xlink:show="embed">
-			Combat Agility
-		</include>
-		<!-- <include>
-			<type>power</type>
-			<file>FighterFeatures.xml</file>
-			<title>Combat Superiority</title>
-		</include> -->
+			<power>
+				<title>Combat Agility</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>Your foe might think it has escaped you, but in its moment of triumph you chase it down and make it pay</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Opportunity</action> <subaction>Reaction</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy adjacent to you provokes an <![CDATA[<i>opportunity attack</i>]]></text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>You shift a number of squares equal to your Dexterity modifier. You must end the shift closer to the target than you were when you began the shift.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If the triggering enemy is within your reach, make a <![CDATA[<i>melee basic attack</i>]]> against it. You also knock the target prone on a hit.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Special:</name>
+					<text>This power counts as an <![CDATA[<i>opportunity attack</i>]]>.</text>
+				</section>
+				</part>
+			</power>
+			<power>
+				<title>Combat Superiority</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>Your eye for openings is such that enemies find it almost impossible to disengage from you</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Opportunity</action> <subaction>Interrupt</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy adjacent to you provokes an <![CDATA[<i>opportunity attack</i>]]></text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>Make a <![CDATA[<i>melee basic attack</i>]]> against the target, with a bonus to the attack roll equal to your Wisdom modifier.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If a move triggered the attack, the target stops moving. If it has further actions remaining, it can use them to resume moving.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Special:</name>
+					<text>This power counts as an <![CDATA[<i>opportunity attack</i>]]>.</text>
+				</section>
+				</part>
+			</power>
 	</feature>
 	
 	<feature>
