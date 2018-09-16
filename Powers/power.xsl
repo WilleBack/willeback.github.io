@@ -283,7 +283,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:otherwise>
 	</xsl:choose>-->
 	
-	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2; float:left;">
+	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; float:left;">
 		<xsl:choose>
 			<xsl:when test="name-style = 'bold'"> 
 				<b><xsl:value-of select="name"/>&#160;</b>
