@@ -157,7 +157,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
 			<div class="blockdiv">
-				<b>Key Abilities: </b> <i><xsl:value-of select="class/keyability[1]" /></i> <xsl:text>; </xsl:text>
+				<b>Key Abilities </b> 
+				<br /><b>Primary: </b> <xsl:value-of select="class/keyability[1]" /></i>
+				<br /><b>Secondaries: </b> 
 				<xsl:for-each select="class/keyability[position()>1]">
 					<xsl:value-of select="."/>
 					<xsl:if test="position()!=last()">
@@ -180,9 +182,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div> <!-- blockdiv -->
 			
 			<div class="blockdiv">
-				<b>Defenses: </b>
+				<b>Defenses </b>
 				<xsl:for-each select="class/defense">
-					<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="value" />
+					<br /><b><xsl:value-of select="name"/> :</b> <xsl:value-of select="value" />
 					<xsl:if test="position()!=last()">
 						<xsl:text>, </xsl:text>
 					</xsl:if>
@@ -231,176 +233,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 			
 		
-			<!-- <xsl:choose>
-				<xsl:when test="tier = 'Heroic'">
-					<div id ="header" style="background-color:RoyalBlue; box-sizing:border-box; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:70%;"><xsl:value-of select="title"/></div>
-						<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/>
-						</div>
-					</div>	
-				</xsl:when>
-				<xsl:when test="tier = 'Paragon'">
-					<div id ="header" style="background-color:MediumBlue; box-sizing:border-box; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:60%;"><xsl:value-of select="title"/></div>
-						<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/>
-						</div>
-					</div>
-				</xsl:when>
-				<xsl:otherwise>
-					<div id ="header" style="background-color:Navy; box-sizing:border-box; width:100%; float:left; color:white; ">
-						<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:60%;"><xsl:value-of select="title"/></div>
-						<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/>
-						</div>
-					</div>
-				</xsl:otherwise> 
-			</xsl:choose> 
-			<div id="categroup" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
-				<xsl:choose>
-					<xsl:when test="category">
-						<b><div id="category" style="width:8.5em; float:left;"><xsl:value-of select="category"/></div> <div id="blob" style="width: 1.3em; float: left; text-align:center;">&#x25C6;</div></b>
-						<div id="group" style="width:calc(100% - 9.8em); float:left;">
-							<xsl:for-each select="group">
-								<xsl:value-of select="."/>
-								<xsl:if test="position()!=last()">
-									<xsl:text>, </xsl:text>
-								</xsl:if> 
-							</xsl:for-each>
-						</div>
-					</xsl:when>
-					<xsl:otherwise>
-						<div id="group" style="width:100%; float:left;">
-							<xsl:for-each select="group">
-								<xsl:value-of select="."/>
-								<xsl:if test="position()!=last()">
-									<xsl:text>, </xsl:text>
-								</xsl:if> 
-							</xsl:for-each>
-						</div>
-					</xsl:otherwise>
-				</xsl:choose>
-			</div> categroup 
-			<div id="content">
-				<xsl:if test="prereq">
-					<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<b>Prerequisites: </b> 
-						<xsl:for-each select="prereq">
-							<xsl:choose>
-								<xsl:when test="type='ability'">
-									<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="value"/>
-									<xsl:choose>
-										<xsl:when test="combine">
-											<xsl:if test="combine!=';'">
-												<xsl:text> </xsl:text> 
-											</xsl:if>
-											<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
-										</xsl:when>
-										<xsl:when test="position()!=last()">
-											<xsl:text>, </xsl:text>
-										</xsl:when>
-										<xsl:otherwise/>
-									</xsl:choose>
-								</xsl:when>
-								<xsl:when test="type='power'">
-									<i><xsl:value-of select="name"/></i> <xsl:text> </xsl:text> <xsl:value-of select="qualifier"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
-									<xsl:choose>
-										<xsl:when test="combine">
-											<xsl:if test="combine!=';'">
-												<xsl:text> </xsl:text> 
-											</xsl:if>
-											<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
-										</xsl:when>
-										<xsl:when test="position()!=last()">
-											<xsl:text>, </xsl:text>
-										</xsl:when>
-										<xsl:otherwise/>
-									</xsl:choose>
-								</xsl:when>
-								<xsl:when test="type='class'">
-									<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
-									<xsl:choose>
-										<xsl:when test="combine">
-											<xsl:if test="combine!=';'">
-												<xsl:text> </xsl:text> 
-											</xsl:if>
-											<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
-										</xsl:when>
-										<xsl:when test="position()!=last()">
-											<xsl:text>, </xsl:text>
-										</xsl:when>
-										<xsl:otherwise/>
-									</xsl:choose>
-								</xsl:when> 
-								<xsl:when test="type='skill'">
-									<xsl:text>trained in </xsl:text> <xsl:value-of select="name"/>
-									<xsl:choose>
-										<xsl:when test="combine">
-											<xsl:if test="combine!=';'">
-												<xsl:text> </xsl:text> 
-											</xsl:if>
-											<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
-										</xsl:when>
-										<xsl:when test="position()!=last()">
-											<xsl:text>, </xsl:text>
-										</xsl:when>
-										<xsl:otherwise/>
-									</xsl:choose>
-								</xsl:when>
-								<xsl:when test="type='deity'">
-									<xsl:text>must worship </xsl:text> <xsl:value-of select="name"/>
-									<xsl:choose>
-										<xsl:when test="combine">
-											<xsl:if test="combine!=';'">
-												<xsl:text> </xsl:text> 
-											</xsl:if>
-											<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
-										</xsl:when>
-										<xsl:when test="position()!=last()">
-											<xsl:text>, </xsl:text>
-										</xsl:when>
-										<xsl:otherwise/>
-									</xsl:choose>
-								</xsl:when>
-								<xsl:otherwise>
-									<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
-									<xsl:choose>
-										<xsl:when test="combine">
-											<xsl:if test="combine!=';'">
-												<xsl:text> </xsl:text> 
-											</xsl:if>
-											<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
-										</xsl:when>
-										<xsl:when test="position()!=last()">
-											<xsl:text>, </xsl:text>
-										</xsl:when>
-										<xsl:otherwise/>
-									</xsl:choose>
-								</xsl:otherwise>
-							</xsl:choose>
-							
-						</xsl:for-each>
-					</div>
-				</xsl:if>
-				<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-					<b>Benefit: </b><xsl:value-of select="benefit[1]" disable-output-escaping="yes"/>
-				</div>
-				<xsl:for-each select="benefit[position()>1]">
-					<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<xsl:value-of select="." disable-output-escaping="yes"/>
-					</div>
-				</xsl:for-each>
-				<xsl:if test="special">
-						<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-						<b>Special: </b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
-					</div>
-					<xsl:for-each select="special[position()>1]">
-						<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
-							<xsl:value-of select="." disable-output-escaping="yes"/>
-						</div>
-					</xsl:for-each>
-				</xsl:if>
-			</div>  content 
-		</div> power 
-	</xsl:for-each> -->
 	</div>  <!-- container --> 
 	</body>
 	</html>
