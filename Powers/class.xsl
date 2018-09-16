@@ -144,7 +144,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="classtitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em 0.3em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" > 
 			<xsl:value-of select="class/name" /> 
 		</div>
-		<div
 		<div id="subclasstitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.3em; padding:0.3em 1em 1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;">
 			<xsl:value-of select="class/subname" />
 		</div>
