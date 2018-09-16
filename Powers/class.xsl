@@ -230,6 +230,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="power">
 				<xsl:apply-templates select="power" />
 			</xsl:if>
+			
+			<xsl:if test="subfeature">
+				<xsl:for-each select="subfeature">
+					<div id="subfeature" style="width:100%; float:left; page-break-inside:avoid;">
+						<div id="subfeaturename" style="width:100%; float:left; font-size:1.1em; padding:0.3em 0.2em; font-weight:bold; font-variant:small-caps;">
+							<xsl:value-of select="name" />
+						</div>
+						<xsl:for-each select="benefit">
+							<div class="text">
+								<xsl:value-of select="." disable-output-escaping="yes" />
+							</div>
+						</xsl:for-each>
+						
+						<xsl:if test="power">
+							<xsl:apply-templates select="power" />
+						</xsl:if>
+					</div>
+				</xsl:for-each>
+			</xsl:if>
+			
 		</xsl:for-each>
 			
 		
