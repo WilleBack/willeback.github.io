@@ -163,7 +163,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:if>
 		
-		<xsl:apply-templates match="powerelement" />
+		<xsl:apply-templates match="section" />
 		<!--
 		<xsl:for-each select="element">
 			<xsl:choose>
@@ -264,7 +264,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template> 
 
-<xsl:template match="powerelement">Testiteksti
+<xsl:template match="section">Testiteksti
 	<!--<xml:param name="shade" />
 	
 	<xml:if test="shade='true'">
