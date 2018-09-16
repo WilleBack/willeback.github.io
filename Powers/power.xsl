@@ -163,17 +163,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:if>
 		
-		<xsl:choose>
-			<xsl:when test="shade='true' and indent='1'">
-				<xsl:apply-templates select="section">
-					<xsl:with-param name="shade" select="background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);" />
-					<xsl:with-param name="leftindent" select="2.5em" />
-				</xsl:apply-templates>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:apply-templates select="section" />
-			</xsl:otherwise>
-		</xsl:choose>
+		<xsl:apply-templates select="section" />
 		<!--
 		<xsl:for-each select="element">
 			<xsl:choose>
@@ -275,23 +265,56 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template> 
 
 <xsl:template match="section">
-	<xsl:param name="shade"> </xsl:param>
+
+	<xsl:choose>
+		<xsl:when test="shade='true'">
+			<xsl:choose>
+				<xsl:when test="indent='1'">
+					<xsl:call-template select="shadesection">
+						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:call-template select="shadesection" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:call-template select="clearsection">
+		</xsl:otherwise>
+	</xsl:choose>
+	
+</xsl:template>
+
+<xsl:template name="shadesection">
 	 <xsl:param name="leftindent">1.2em</xsl:param> 
 	
-	<div style="width:100%; {$shade} box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:choose>
-			<xsl:when test="name-style = 'bold'"> 
-				<b><xsl:value-of select="name"/>&#160;</b>
-			</xsl:when>
-			<xsl:when test="name-style = 'italic'">
-				<i><xsl:value-of select="name"/>&#160;</i>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:value-of select="name"/>
-			</xsl:otherwise>
-		</xsl:choose>
-		<xsl:value-of select="text" disable-output-escaping="yes" />
+	<div style="width:100%; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
+		<xsl:call-template select="sectioncontent" />
 	</div>
+</xsl:template>
+
+<xsl:template name="clearsection">
+	 <xsl:param name="leftindent">1.2em</xsl:param> 
+	
+	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
+		<xsl:call-template select="sectioncontent" />
+	</div>
+</xsl:template>
+
+<xsl:template name="sectioncontent">
+	<xsl:choose>
+		<xsl:when test="name-style = 'bold'"> 
+			<b><xsl:value-of select="name"/>&#160;</b>
+		</xsl:when>
+		<xsl:when test="name-style = 'italic'">
+			<i><xsl:value-of select="name"/>&#160;</i>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="name"/>
+		</xsl:otherwise>
+	</xsl:choose>
+	<xsl:value-of select="text" disable-output-escaping="yes" />
 	
 </xsl:template>
 	
