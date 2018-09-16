@@ -108,14 +108,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="createheader">
-	testiteksti<!--<xsl:param name="bgcolor">
+	testiteksti<xsl:param name="bgcolor">
 		Purple
 	</xsl:param>
 	
 	<div id="header" style="background-color:Purple; width:100%; float:left; color:white; ">
 		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
 			<xsl:value-of select="title"/>
-		</div>
+		</div><!--
 		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
 			<xsl:value-of select="class"/><br />
 			<xsl:value-of select="category"/>
