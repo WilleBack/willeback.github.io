@@ -144,8 +144,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="classtitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em 0.3em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" > 
 			<xsl:value-of select="class/name" /> 
 		</div>
-		<div id="subclasstitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.3em; padding:0.3em 1em 1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;">
-			<xsl:value-of select="class/subname" />
+		<div id="subclasstitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.2em; padding:0em 1em 1em; font-variant:small-caps; letter-spacing:1px;">
+			<xsl:text>- </xsl:text><xsl:value-of select="class/subname" />
 		</div>
 		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); width:100%; padding:1em; float:left;" >
 			<b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="class/role" /> <xsl:text>; </xsl:text> <b><xsl:text>Power Source: </xsl:text></b> <xsl:value-of select="class/source" /> <br />
