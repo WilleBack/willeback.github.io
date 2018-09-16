@@ -269,19 +269,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<xml:if test="shade='true'">
 		--><xsl:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xsl:param> <!--
-	</xml:if>
+	</xml:if>-->
 	
-	<xml:choose>
-		<xml:when test="indent='1'">
-			<xml:param name="indent">2.5em</xml:param>
-		</xml:when>
-		<xml:when test="indent='2'">
-			<xml:param name="indent">3.8em</xml:param>
-		</xml:when>
-		<xml:otherwise>
-			--><xsl:param name="indent">1.2em</xsl:param> <!--
-		</xml:otherwise>
-	</xml:choose> -->
+	<xsl:choose>
+		<xsl:when test="indent='1'">
+			<xsl:param name="indent">2.5em</xsl:param>
+		</xsl:when>
+		<xsl:when test="indent='2'">
+			<xsl:param name="indent">3.8em</xsl:param>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:param name="indent">1.2em</xsl:param> 
+		</xsl:otherwise>
+	</xsl:choose>
 	
 	<div style="width:100%; {$shade} box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
 		<xsl:choose>
