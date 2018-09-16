@@ -273,10 +273,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<xsl:choose>
 		<xsl:when test="indent='1'">
-			<xsl:param name="leftindent">2.5em</xsl:param>
+			--><xsl:param name="leftindent">2.5em</xsl:param><!--
 		</xsl:when>
 		<xsl:when test="indent='2'">
-			--><xsl:param name="leftindent">3.8em</xsl:param><!--
+			<xsl:param name="leftindent">3.8em</xsl:param>
 		</xsl:when>
 		<xsl:otherwise>
 			 <xsl:param name="leftindent">1.2em</xsl:param> 
