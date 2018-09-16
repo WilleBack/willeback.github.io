@@ -231,11 +231,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</div>
 				</xsl:for-each>
 			
-			
-			<xsl:if test="power">
-				<xsl:apply-templates select="power" />
-			</xsl:if>
-			
 			<xsl:if test="subfeature">
 				<xsl:for-each select="subfeature">
 					<div id="subfeature" style="width:98%; float:left; ">
@@ -256,7 +251,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 			
 			</div>
-			
+			<xsl:if test="power">
+				<xsl:apply-templates select="power" />
+			</xsl:if>
 		</xsl:for-each>
 			
 		
