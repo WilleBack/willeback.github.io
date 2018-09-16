@@ -96,9 +96,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
-		</div><!-- 
+		</div>
 		
-		<xsl:apply-templates select="part" /> -->
+		<xsl:apply-templates select="part" />
 	
 	</div> 
 
@@ -120,11 +120,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 	</div> 
 	
-</xsl:template> <!--
+</xsl:template> 
 
 <xsl:template match="part">
-	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-		<xsl:if test="part-name != ''">
+	<div id="part" style="width:100%; box-sizing:border-box; float:left;"> testiteksti
+		<!--<xsl:if test="part-name != ''">
 			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
 				<b><xsl:value-of select="part-name"/></b>
 			</div>
@@ -268,9 +268,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:choose>
 				</xsl:otherwise>
 			</xsl:choose>
-		</xsl:for-each>
+		</xsl:for-each>-->
 	</div>
 	
-</xsl:template> -->
+</xsl:template> 
 
 </xsl:stylesheet>
