@@ -32,6 +32,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside:avoid;
 			}
 			
+			.power {
+				margin:0.2cm; 
+				width:97%;
+				float:left;
+				page-break-inside:avoid;
+			}
+			
 			.text {
 				width:100%; 
 				box-sizing:border-box; 
@@ -143,7 +150,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 	<div class="container">
 		<xsl:for-each select="class/fluff">
-			<div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+			<div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left; page-break-inside:avoid;">
 				<xsl:value-of select="." />
 			</div>
 		</xsl:for-each>
