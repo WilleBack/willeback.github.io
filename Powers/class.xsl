@@ -216,7 +216,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text>Class Features</xsl:text>
 			</div>
 			<div class="text">
-				<xsl:text>The following are class features of the </xsl:text><xsl:value-of select="class/subname" /> <xsl:text>version of the </xsl:text> <xsl:value-of select="class/name" /> <xsl:text> class:</xsl:text>
+				<xsl:text>The following are class features of the </xsl:text><xsl:value-of select="class/subname" /> <xsl:text> version of the </xsl:text> <xsl:value-of select="class/name" /> <xsl:text> class:</xsl:text>
 			</div>
 		</div>
 		
