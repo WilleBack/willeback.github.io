@@ -122,8 +122,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="level">
 				<xsl:text> </xsl:text><xsl:value-of select="level"/>
 			</xsl:if>
-		</div>
-	</div> -->
+		</div>-->
+	</div> 
 	
 </xsl:template> <!--
 
