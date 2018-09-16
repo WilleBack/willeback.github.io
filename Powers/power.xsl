@@ -268,7 +268,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<!--<xml:param name="shade" />
 	
 	<xml:if test="shade='true'">
-		<xml:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xml:param>
+		--> <xml:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xml:param> <!--
 	</xml:if>
 	
 	<xml:choose>
@@ -279,9 +279,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xml:param name="indent">3.8em</xml:param>
 		</xml:when>
 		<xml:otherwise>
-			<xml:param name="indent">1.2em</xml:param>
+			--><xml:param name="indent">1.2em</xml:param> <!--
 		</xml:otherwise>
-	</xml:choose>
+	</xml:choose> -->
 	
 	<div style="width:100%; {$shade} box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$indent}; float:left;">
 		<xsl:choose>
