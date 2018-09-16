@@ -241,7 +241,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:for-each select="subfeature">
 					<div id="subfeature" style="width:98%; float:left; page-break-inside:avoid; margin: 0 0.2cm;">
 						<div id="subfeaturename" style="width:100%; float:left; font-size:1.1em; padding:0.3em 0.2em; font-weight:bold; font-variant:small-caps;">
-							<xsl:value-of select="name" />
+							<i><xsl:value-of select="name" /></i>
 						</div>
 						<xsl:for-each select="benefit">
 							<div class="text">
