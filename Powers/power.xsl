@@ -74,8 +74,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="power">
 	
-	
-	
 	<div class="power">
 		<xsl:choose>
 			<xsl:when test="part[1]/frequency = 'At-Will'">
@@ -96,9 +94,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:choose> 
 		
 		
-		<!-- <div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+		<div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
-		</div>
+		</div><!-- 
 		
 		<xsl:apply-templates select="part" /> -->
 	
