@@ -62,7 +62,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="container">
 		
-			<xsl:for-each select="power">
+			<xsl:for-each select="catalog/power">
 				<xsl:sort select="title" /> 
 			</xsl:for-each>
 			
@@ -77,8 +77,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	
 	<div class="power">
-		testiteksti<!-- <xsl:call-template name="createheader">
-			<xsl:choose>
+		<xsl:call-template name="createheader">
+			<!-- <xsl:choose>
 				<xsl:when test="part[1]/frequency = 'At-Will'">
 					<xsl:with-param name="bgcolor">
 						#407040
@@ -94,10 +94,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						DarkSlateGray
 					</xsl:with-param>
 				</xsl:when>
-			</xsl:choose>
+			</xsl:choose> -->
 		</xsl:call-template>
 		
-		<div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+		<!-- <div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 		
@@ -106,9 +106,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div> 
 
 </xsl:template>
-<!--
+
 <xsl:template name="createheader">
-	<xsl:param name="bgcolor">
+	testiteksti<!--<xsl:param name="bgcolor">
 		Purple
 	</xsl:param>
 	
@@ -123,9 +123,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text> </xsl:text><xsl:value-of select="level"/>
 			</xsl:if>
 		</div>
-	</div>
+	</div> -->
 	
-</xsl:template>
+</xsl:template> <!--
 
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
