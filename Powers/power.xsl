@@ -68,7 +68,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template match="power">
-	<xsl:sort select="title" />
+	testiteksti
+	<!-- <xsl:sort select="title" />
 	
 	<div class="power">
 		<xsl:call-template name="createheader">
@@ -97,7 +98,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<xsl:apply-templates select="part" />
 	
-	</div>
+	</div> -->
 
 </xsl:template>
 
