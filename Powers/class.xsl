@@ -206,7 +206,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 		</div> <!-- block -->
 		
-		<div id="startfeatures" style="width:100%; float:left; page-break-inside:avoid;">
+		<div class="feature">
 			<div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps;">
 				<xsl:text>Class Features</xsl:text>
 			</div>
