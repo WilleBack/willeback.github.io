@@ -163,7 +163,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:if>
 		
-		<xsl:apply-templates match="section" />
+		<xsl:apply-templates select="section" />
 		<!--
 		<xsl:for-each select="element">
 			<xsl:choose>
