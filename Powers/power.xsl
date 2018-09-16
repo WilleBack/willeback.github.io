@@ -270,17 +270,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="shade='true'">
 			<xsl:choose>
 				<xsl:when test="indent='1'">
-					<xsl:call-template select="shadesection">
+					<xsl:call-template name="shadesection">
 						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:call-template select="shadesection" />
+					<xsl:call-template name="shadesection" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:call-template select="clearsection" />
+			<xsl:call-template name="clearsection" />
 		</xsl:otherwise>
 	</xsl:choose>
 	
@@ -290,7 +290,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	 <xsl:param name="leftindent">1.2em</xsl:param> 
 	
 	<div style="width:100%; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:call-template select="sectioncontent" />
+		<xsl:call-template name="sectioncontent" />
 	</div>
 </xsl:template>
 
@@ -298,7 +298,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	 <xsl:param name="leftindent">1.2em</xsl:param> 
 	
 	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:call-template select="sectioncontent" />
+		<xsl:call-template name="sectioncontent" />
 	</div>
 </xsl:template>
 
