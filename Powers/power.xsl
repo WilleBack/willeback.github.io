@@ -77,25 +77,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	
 	<div class="power">
-		<xsl:call-template name="createheader">
-			<xsl:choose>
-				<xsl:when test="part[1]/frequency = 'At-Will'">
-					<xsl:with-param name="bgcolor">
-						#407040
-					</xsl:with-param>
-				</xsl:when>
-				<xsl:when test="part[1]/frequency = 'Encounter'">
-					<xsl:with-param name="bgcolor">
-						FireBrick
-					</xsl:with-param>
-				</xsl:when>
-				<xsl:when test="part[1]/frequency = 'Daily'">
-					<xsl:with-param name="bgcolor">
-						DarkSlateGray
-					</xsl:with-param>
-				</xsl:when>
-			</xsl:choose> 
-		</xsl:call-template>
+		<xsl:choose>
+			<xsl:when test="part[1]/frequency = 'At-Will'">
+				<xsl:call-template name="createheader">
+					<xsl:with-param name="bgcolor">#407040</xsl:with-param>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:when test="part[1]/frequency = 'Encounter'">
+				<xsl:with-param name="bgcolor">
+					FireBrick
+				</xsl:with-param>
+			</xsl:when>
+			<xsl:when test="part[1]/frequency = 'Daily'">
+				<xsl:with-param name="bgcolor">
+					DarkSlateGray
+				</xsl:with-param>
+			</xsl:when>
+		</xsl:choose> 
+		
 		
 		<!-- <div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
@@ -108,21 +107,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="createheader">
-	<xsl:param name="bgcolor">
-		Purple
-	</xsl:param>
+	<xsl:param name="bgcolor">Purple</xsl:param>
 	
 	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
 		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
 			<xsl:value-of select="title"/>
 		</div>
-		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
+		<!-- <div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
 			<xsl:value-of select="class"/><br />
 			<xsl:value-of select="category"/>
 			<xsl:if test="level">
 				<xsl:text> </xsl:text><xsl:value-of select="level"/>
 			</xsl:if>
-		</div>
+		</div> -->
 	</div> 
 	
 </xsl:template> <!--
