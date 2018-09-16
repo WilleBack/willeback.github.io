@@ -143,7 +143,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
 		<div id="classtitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" > 
 			<xsl:value-of select="class/name" /> 
-			<p style="font-size=1.4em"><xsl:value-of select="class/subname" /></p>
+			<p style="font-size=1.4em; padding:0.2em;"><xsl:value-of select="class/subname" /></p>
 		</div>
 		
 		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); width:100%; padding:1em; float:left;" >
