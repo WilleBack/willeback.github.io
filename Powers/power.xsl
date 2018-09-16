@@ -264,8 +264,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template> 
 
-<xsl:template match="element">
-	<xml:param name="shade" />
+<xsl:template match="element">Testiteksti
+	<!--<xml:param name="shade" />
 	
 	<xml:if test="shade='true'">
 		<xml:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xml:param>
@@ -296,7 +296,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:otherwise>
 		</xsl:choose>
 		<xsl:value-of select="text" disable-output-escaping="yes" />
-	</div>
+	</div> -->
 	
 </xsl:template>
 	
