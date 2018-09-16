@@ -124,11 +124,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;"> testiteksti
-		<!--<xsl:if test="part-name != ''">
+		<xsl:if test="part-name != ''">
 			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
 				<b><xsl:value-of select="part-name"/></b>
 			</div>
-		</xsl:if>
+		</xsl:if><!--
 		<xsl:if test="not(hide-freqkey = 'true')">
 			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
 				<div id="frequency" style="width:5.9em; float:left;">
