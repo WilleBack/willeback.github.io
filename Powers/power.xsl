@@ -274,13 +274,32 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
+				<xsl:when test="indent='2'">
+					<xsl:call-template name="shadesection">
+						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
 				<xsl:otherwise>
 					<xsl:call-template name="shadesection" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:call-template name="clearsection" />
+			<xsl:choose>
+				<xsl:when test="indent='1'">
+					<xsl:call-template name="clearsection">
+						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="indent='2'">
+					<xsl:call-template name="clearsection">
+						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:call-template name="clearsection" />
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:otherwise>
 	</xsl:choose>
 	
