@@ -61,6 +61,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="container">
+		
+			<xsl:for-each select="power">
+				<xsl:sort select="title" /> 
+			</xsl:for-eac>
+			
 			<xsl:apply-templates match="power" />
 		</div> <!-- container -->
 	</body>
@@ -69,7 +74,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="power">
 	
-	<!-- <xsl:sort select="title" /> -->
+	
 	
 	<div class="power">
 		testiteksti<!-- <xsl:call-template name="createheader">
