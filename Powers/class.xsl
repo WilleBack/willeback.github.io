@@ -158,7 +158,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
 			<div class="blockdiv">
 				<b>Key Abilities </b> 
-				<br /><b>Primary: </b> <xsl:value-of select="class/keyability[1]" /></i>
+				<br /><b>Primary: </b> <xsl:value-of select="class/keyability[1]" />
 				<br /><b>Secondaries: </b> 
 				<xsl:for-each select="class/keyability[position()>1]">
 					<xsl:value-of select="."/>
