@@ -239,7 +239,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="subfeature">
 				<xsl:for-each select="subfeature">
 					<div class="feature">
-						<div id="subfeaturename" style="width:100%; float:left; font-size:1.1em; padding:0.3em 0.2em; font-weight:bold; font-variant:small-caps;">
+						<div id="subfeaturename" style="width:100%; float:left; font-size:1em; padding:0.3em 0.2em; font-weight:bold; font-variant:small-caps;">
 							<xsl:value-of select="name" />
 						</div>
 						<xsl:for-each select="benefit">
