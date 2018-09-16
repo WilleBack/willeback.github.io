@@ -280,7 +280,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:call-template select="clearsection">
+			<xsl:call-template select="clearsection" />
 		</xsl:otherwise>
 	</xsl:choose>
 	
