@@ -190,9 +190,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<b>Defenses </b>
 				<xsl:for-each select="class/defense">
 					<br /><b><xsl:value-of select="name"/> :</b> <xsl:value-of select="value" />
-					<xsl:if test="position()!=last()">
-						<xsl:text>, </xsl:text>
-					</xsl:if>
 				</xsl:for-each>
 			</div> <!-- blockdiv -->
 			
@@ -212,7 +209,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div> <!-- block -->
 		
 		<div class="feature">
-			<div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps;">
+			<div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#632003;">
 				<xsl:text>Class Features</xsl:text>
 			</div>
 			<div class="text">
@@ -222,7 +219,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<xsl:for-each select="class/feature">
 			<div class="feature">
-				<div id="featurename" style="width:100%; float:left; font-size:1.2em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps;">
+				<div id="featurename" style="width:100%; float:left; font-size:1.2em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#632003;">
 					<xsl:value-of select="name" />
 				</div>
 				<xsl:for-each select="benefit">
@@ -240,7 +237,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="subfeature">
 				<xsl:for-each select="subfeature">
 					<div id="subfeature" style="width:98%; float:left; page-break-inside:avoid; margin: 0 0.2cm;">
-						<div id="subfeaturename" style="width:100%; float:left; font-size:1.1em; padding:0.3em 0.2em; font-weight:bold; font-variant:small-caps;">
+						<div id="subfeaturename" style="width:100%; float:left; font-size:1.1em; padding:0.3em 0.2em; font-weight:bold; font-variant:small-caps; color:#952f04;">
 							<i><xsl:value-of select="name" /></i>
 						</div>
 						<xsl:for-each select="benefit">
