@@ -163,7 +163,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:if>
 		
-		<xsl:apply-templates match="element" />
+		<xsl:apply-templates match="powerelement" />
 		<!--
 		<xsl:for-each select="element">
 			<xsl:choose>
