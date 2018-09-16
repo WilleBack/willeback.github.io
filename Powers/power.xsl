@@ -163,7 +163,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:if>
 		
-		<xsl:apply-templates select="section" />
+		<xsl:choose>
+			<xsl:when test="shade='true' and indent='1'">
+				<xsl:apply-templates select="section">
+					<xsl:with-param name="shade" select="background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);" />
+					<xsl:with-param name="leftindent" select="2.5em" />
+				</xsl:apply-templates>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:apply-templates select="section" />
+			</xsl:otherwise>
+		</xsl:choose>
 		<!--
 		<xsl:for-each select="element">
 			<xsl:choose>
@@ -265,25 +275,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template> 
 
 <xsl:template match="section">
-	<!--<xml:param name="shade" />
+	<xsl:param name="shade"> </xsl:param>
+	 <xsl:param name="leftindent">1.2em</xsl:param> 
 	
-	<xml:if test="shade='true'">
-		<xsl:param name="shade">background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip);</xsl:param>
-	</xml:if>-->
-	
-	<xsl:choose>
-		<xsl:when test="indent='1'">
-			<xsl:param name="leftindent">2.5em</xsl:param>
-		</xsl:when>
-		<xsl:when test="indent='2'">
-			<xsl:param name="leftindent">3.8em</xsl:param>
-		</xsl:when>
-		<xsl:otherwise>
-			 <xsl:param name="leftindent">1.2em</xsl:param> 
-		</xsl:otherwise>
-	</xsl:choose>
-	
-	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
+	<div style="width:100%; {$shade} box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
 		<xsl:choose>
 			<xsl:when test="name-style = 'bold'"> 
 				<b><xsl:value-of select="name"/>&#160;</b>
