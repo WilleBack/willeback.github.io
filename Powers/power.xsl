@@ -68,11 +68,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template match="power">
-	testiteksti
-	<!-- <xsl:sort select="title" />
+	
+	<xsl:sort select="title" />
 	
 	<div class="power">
-		<xsl:call-template name="createheader">
+		testiteksti<!-- <xsl:call-template name="createheader">
 			<xsl:choose>
 				<xsl:when test="part[1]/frequency = 'At-Will'">
 					<xsl:with-param name="bgcolor">
@@ -96,9 +96,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 		
-		<xsl:apply-templates select="part" />
+		<xsl:apply-templates select="part" /> -->
 	
-	</div> -->
+	</div> 
 
 </xsl:template>
 <!--
