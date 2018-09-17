@@ -216,42 +216,150 @@
 		<title>Myrmidon Formation</title>
 		<class>Warlord</class> <category>Attack</category> <level>1</level>
 		<fluff>Knowing that regrouping increases morale, you call your allies to gather together</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Until the end of your next turn, your <![CDATA[<i>warlord's aura</i>]]> gains the following benefits:</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<text>&#9658; When adjacent to you or an ally, you and allies in the aura gain a +2 power bonus to AC. This increases to +3 when adjacent to you and another ally or two allies.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<text>&#9658; You and allies in the aura gain a +1 bonus to attack rolls when attacking an enemy threatened by an ally.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<text>&#9658; The fist melee damage roll against an enemy that has been hit by you or an ally's ranged attack deals additional damage equal to one-half your Intelligence modifier or one-half your Wisdom modifier.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Inspiring Presence:</name> <name-style>bold</name-style>
+				<text>The power bonus to AC also applies to Will</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
+				<text>You an allies also gain a bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]> while adjacent to you or another ally.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Tactical Presence:</name> <name-style>bold</name-style>
+				<text>The attack bonus equals one-half your Intelligence modifier.</text>
+			</section>
+		</part>
+	</power>
+		
+		<power>
+			<title>Overwheling Trap</title>
+			<class>Warlord</class> <category>Attack</category> <level>1</level>
+			<fluff>You keep the order to spring the trap ready, allowing your ally to spring into action on a moment's notice</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Martial</keyword>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+				<type>Close</type> <range>burst 5</range>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>An ally in the burst makes a <![CDATA[<i>melee basic attack</i>]]></text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>The triggering ally</text>
+				</section>
+				<section>
+					<shade>true</shade> 
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The target uses one of his or her melee at-will attack powers in place of the <![CDATA[<i>melee basic attack</i>]]>.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If the attack hits, the target of that attack is also dazed until the end of the triggering ally's next turn.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Warlord's Favour</title>
+			<class>Warlord</class> <category>Attack</category> <level>1</level>
+			<fluff>With a precise offense, you leave an enemy open for a comrade's blow</fluff>
 			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Martial</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Personal</type>
+				<type>Close</type> <range>burst 5</range>
+				<section>
+					<shade>true</shade>
+					<name>Requirement:</name> <name-style>bold</name-style>
+					<text>You must have made an attack this turn</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
-					<text>Until the end of your next turn, your <![CDATA[<i>warlord's aura</i>]]> gains the following benefits:</text>
+					<text>The target gains a +2 bonus to attack rolls against one enemy of your choice that you have attack during this turn. This lasts until the end of your next turn</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; When adjacent to you or an ally, you and allies in the aura gain a +2 power bonus to AC. This increases to +3 when adjacent to you and another ally or two allies.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; You and allies in the aura gain a +1 bonus to attack rolls when attacking an enemy threatened by an ally.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; The fist melee damage roll against an enemy that has been hit by you or an ally's ranged attack deals additional damage equal to one-half your Intelligence modifier or one-half your Wisdom modifier.</text>
+					<shade>true</shade>
+					<text>The first time the target hits the chosen enemy before the end of your next turn, it deals an extra +1[W] damage (or +1d8 if the attack is not a Weapon attack).</text>
 				</section>
 				<section>
 					<shade>true</shade> <indent>1</indent>
 					<name>Inspiring Presence:</name> <name-style>bold</name-style>
-					<text>The power bonus to AC also applies to Will</text>
+					<text>The target also gains temporary hit points equal to your Charisma modifier, or regains that many hit points instead if he or she is bloodied.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Resourceful Presence:</name> <name-style>bold</name-style>
+					<text>The target also gain a bonus to all defenses against the chosen enemy. The bonus equals one-half your Wisdom modifier and lasts until the end of your next turn.</text>
 				</section>
 				<section>
 					<shade>true</shade> <indent>1</indent>
 					<name>Skirmishing Presence:</name> <name-style>bold</name-style>
-					<text>You an allies also gain a bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]> while adjacent to you or another ally.</text>
+					<text>Until the end of your next turn, the target can shift a number of squares equal to your Intelligence modifier as a move action.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
+					<shade>true</shade> <indent>
 					<name>Tactical Presence:</name> <name-style>bold</name-style>
-					<text>The attack bonus equals one-half your Intelligence modifier.</text>
+					<text>The bonus to attack equals your Intelligence modifier.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Diabolic Stratagem</title>
+			<class>Warlord</class> <category>Attack</category> <level>1</level>
+			<fluff>A feint draws an opponent's attention and seemingly leaves you defenseless, but it is just a cunning ploy</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One creature</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You mark the target until the end of your next turn.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>While it remains marked, it gains combat advantage on attacks that only target you, but its attacks against you trigger <![CDATA[<i>opportunity attack</i>]]> from your allies.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>The target is not aware that its attacks trigger <![CDATA[<i>opportunity attacks</i>]]> before at least one has been made against it.</text>
 				</section>
 			</part>
 		</power>
