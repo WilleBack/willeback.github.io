@@ -339,7 +339,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:if test="not(hide-actrange = 'true')">
 			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> 
 				<div id="action" style="width:12.2em; float:left; ">
-					<b><xsl:value-of select="action"/></b>&#160;
+					<b><xsl:value-of select="action"/></b><xsl:text> </xsl:text>
 					<xsl:value-of select="subaction"/>
 				</div> 
 				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;"> 
