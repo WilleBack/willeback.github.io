@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../class.xsl"?>
+
+<class>
+	<name>Barbarian</name>
+	<subname>Savage</subname>
+	<role>Striker</role>
+	<source>Primal</source>
+	<shortfluff>Your physical power and daunting presence can cause foes to cower before, and you can temporarily increase your abilities great bursts of terrifying rage.</shortfluff>
+	<keyability>Strength</keyability>
+	<keyability>Constitution</keyability>
+	<keyability>Dexterity</keyability>
+	<keyability>Charisma</keyability>
+	
+	<proficiency>
+		<type>Armor</type>
+		<name>Cloth</name>
+		<name>Leather</name>
+		<name>Hide</name>
+	</proficiency>
+	<proficiency>
+		<type>Weapon</type>
+		<name>Simple melee</name>
+		<name>Military melee</name>
+	</proficiency>
+	
+	<defense>
+		<name>Fortitude</name>
+		<value>+2</value>
+	</defense>
+	
+	<hpbase>15</hpbase>
+	<hpgain>6</hpgain>
+	<surgebase>9</surgebase>
+	
+	<skills>
+		<trained>Endurance, Intimidate or Nature</trained>
+		<number>3</number>
+	</skills>
+	
+	<fluff>Savage barbarians charge from foe to foe and seldom feel the pain of an enemy's strike. For their foes, the moments of greatest terror come when savages call upon primal forces to lend power to their raging spirits. </fluff>
+	<fluff>Their rages, although temporary, give a barbarian incredible powers, a combination of skill, willpower, and a legacy of ancient tribal rituals. As the barbarian becomes more experienced, the rages transcend mortal limitations, manifesting directly as waves of elemental power of gifting supernatural recuperative powers. </fluff>
+	
+	<feature>
+		<name>Feral Might</name>
+		<benefit>Savages connect with the natural world in a variety of ways, ranging from becoming hardened from physical punishment to imposing their sheer willpower to shape their fate.</benefit>
+		<benefit>Choose Rageblood Vigor, Thaneborn Triumph, Thunderborn Wrath or Whirling Frenzy to represent your connection to the primal energies.</benefit>
+		
+		<subfeature>
+			<name>Rageblood Vigor</name>
+			<benefit>Rageblood barbarians can withstand a great deal of punishment, especially when in the throes of rage.</benefit>
+			<benefit>While you are not wearing heavy armor, you can use Constitution instead of Dexterity or Intelligence to determine your AC.</benefit>
+			<benefit>Whenever your attack reduces an enemy to 0 hit points or less, you gain resist against all damage equal to your Constitution modifier until the end of your next turn. This increases to 4 + your Constitution modifier at 11th level, and to 8 + your Constitution modifier at 21st level. You gain an additional 5 points of resist if you are raging.</benefit>
+			<benefit>You gain the <![CDATA[<i>swift charge</i>]]> power.</benefit>
+			
+			<power>
+				<title>Swift Charge</title>
+				<class>Barbarian</class> <category>Attack</category>
+				<fluff>As your foe falls, you rush toward your next victim</fluff>
+				<part>
+					<frequency>Encounter</frequency>
+					<keyword>Primal</keyword>
+					<action>Free</action> <subaction>Reaction</subaction>
+					<type>Personal</type>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>Your attack reduces an enemy to 0 hit points or less</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You charge an enemy.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+	
+	<feature>
+		<name>Savage Rage</name>
+		<benefit>When the savages' unbridled rage overtakes them, they become beacons of the spirit world, and their rage sounds like a gong calling to the primal spirits that a drawn to strong emotion. The spirits are able to inhabit the savage during his or her rage, lending energy and enabling incredible, even supernatural, feats.</benefit>
+		<benefit>When you use a Barbarian power with the Rage keyword, you enter a Rage and gain the benefits listed below before resolving the power. The Rage lasts until the end of the encounter, or until you are knocked unconscious.</benefit>
+		<benefit>You can also enter the Rage by spending a minor action while you are bloodied.</benefit>
+		<benefit>&#9658; You take a -2 penalty to all defenses.</benefit>
+		<benefit>&#9658; When you make an attack that uses Strength for the attack roll and has the Weapon keyword, you deal +1[W] damage.</benefit>
+		<benefit>&#9658; Your Barbarian at-will attacks and some of your other powers have additional or increases effects while you are raging.</benefit>
+		<benefit>&#9658; You gain the benefits of the Rage power you used to enter the Rage, if any.</benefit>
+		<benefit>&#9658; If you are already raging and use a Rage power, you either change your Rage before resolving the power or gain a different benefit, as defined in the power.</benefit>
+			
+	</feature>
+	
+</class>
