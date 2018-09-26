@@ -1457,7 +1457,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</xsl:if> 
 		</div> <!-- content -->
-	</div>
+	</div> <!-- feat -->
 		
 </xsl:template>
 
@@ -1466,8 +1466,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<div id ="header" style="background-color:{$bgcolor}; box-sizing:border-box; width:100%; float:left; color:white; ">
 		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:60%;"><xsl:value-of select="title"/></div>
-		<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/>
-		</div>
+		<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/></div>
 	</div>
 	
 </xsl:template>
