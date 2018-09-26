@@ -3227,6 +3227,25 @@
 	</feat>
 	
 	<feat>
+		<title>Battle Healer</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Cleric</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>healing word</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Healing</group>
+		<group>Triggered</group>
+		<benefit>When you use your <![CDATA[<i>healing word</i>]]> power, you regain hit points equal to your Strength modifier.</benefit>
+		<benefit>This increases to 3 + Strength modifier at 11th level, and to 6 + Strength modifier at 21st level.</benefit>
+	</feat>
+	
+	<feat>
 		<title>Battle Instructor</title>
 		<tier>Paragon</tier>
 		<category>Multiclass</category>
@@ -3271,6 +3290,87 @@
 		<group>Psychic Specialization</group>
 		<benefit>You gain a +3 feat bonus to damage rolls with Psion powers that have the Force or Psychic keyword. This bonus increases to +4 while you have no power points remaining.</benefit>
 		<benefit>These bonuses increase to +4 and +6 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Battle Song Expertise</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Bard</name>
+		</prereq>
+		<group>Attack Enhancement</group>
+		<group>Class</group>
+		<group>Forced Movement</group>
+		<benefit>When using a weapon you are proficient with or a bard implement, you gain the following benefits with Bard powers:</benefit>
+		<benefit>&#9658; +1 bonus to attack rolls with powers that deal no damage.</benefit>
+		<benefit>&#9658; +1 to the number of squares that you can pull, push, or slide creatures.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Battle Trample</title>
+			<tier>Heroic</tier>
+			<group>Mounted Combat</group>
+			<group>Power Repertoire</group>
+			<benefit>You gain the <![CDATA[<i>battle trample</i>]]> power.</benefit>
+			
+			<power>
+			<title>Battle Trample</title>
+			<class>Feat</class> <category>Utility</category>
+			<fluff>You incite your mount to stamp, read, and kick unpredictably, with any foe that remains too close taking damage and being driven back</fluff>
+			<part>
+			<frequency>Encounter</frequency>
+			<keyword>Mounted</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>1</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>A mount you are riding and that has a trample power</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Until the start of your next turn, any enemy that ends its turn adjacent to the target takes 3 damage, and is pushed 1 square from the target. The effect ends if you are no longer riding the target.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Mount Level 11:</name> <name-style>italic</name-style>
+				<text>6 damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Mount Level 21:</name> <name-style>italic</name-style>
+				<text>9 damage, and pushed 2 squares.</text>
+			</section>
+			</part>
+		</power>
+		
+	</feat>
+	
+	<feat>
+		<title>Battle-Scarred Veteran</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>ability</type>
+			<name>Constitution</name>
+			<value>13</value>
+		</prereq>
+		<prereq>
+			<type>ability</type>
+			<name>Wisdom</name>
+			<value>13</value>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>any martial</name>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Class</group>
+		<group>Power Enhancement</group>
+		<benefit>While you are bloodied, you gain the following benefits with Martial at-will attacks:</benefit>
+		<benefit>&#9658; If the attack grants temporary hit points and you currently have none, you gain a +1 bonus to the attack roll.</benefit>
+		<benefit>&#9658; If the attack allows you to move, you gain resist all equal to your Constitution modifier against any <![CDATA[<i>opportunity attacks</i>]]> triggered.</benefit>
+		<benefit>&#9658; If you hit, the target gains vulnerable all equal to your Wisdom modifier against the first <![CDATA[<i>opportunity attack</i>]]> that hits it before the start of your next turn.</benefit>
 	</feat>
 	
 </catalog>
