@@ -1327,7 +1327,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:otherwise>
 			</xsl:choose>
 		</div> <!-- categroup -->
-		<div id="content">
+		<div id="featcontent">
 			<xsl:if test="prereq">
 				<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
 					<b>Prerequisites: </b> 
