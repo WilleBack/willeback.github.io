@@ -21,6 +21,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside:avoid;
 			}
 			
+			.power {
+				margin:0.2cm; 
+				width:98%;
+				float:left;
+				page-break-inside:avoid;
+			}
+			
 			.listcontainer {
 				box-sizing:border-box;
 				float:left;
@@ -1261,10 +1268,184 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if> 
 			</div> <!-- content -->
 		</div> <!-- power -->
+		
+		<xsl:if test="power">
+			<xsl:apply-templates select="power" />
+		</xsl:if>
 	</xsl:for-each>
 	</div> <!-- container -->
 	</body>
 	</html>
+</xsl:template>
+
+<xsl:template match="power">
+	
+	<div class="power">
+		<xsl:choose>
+			<xsl:when test="part[1]/frequency = 'At-Will'">
+				<xsl:call-template name="createheader">
+					<xsl:with-param name="bgcolor">#407040</xsl:with-param>
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:when test="part[1]/frequency = 'Encounter'">
+				<xsl:call-template name="createheader">
+					<xsl:with-param name="bgcolor">FireBrick</xsl:with-param> 
+				</xsl:call-template>
+			</xsl:when>
+			<xsl:when test="part[1]/frequency = 'Daily'">
+				<xsl:call-template name="createheader">
+					<xsl:with-param name="bgcolor">DarkSlateGray</xsl:with-param>
+				</xsl:call-template>
+			</xsl:when>
+		</xsl:choose> 
+		
+		
+		<div id="fluff" style="background:linear-gradient(to right,PeachPuff, PeachPuff,PapayaWhip); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+			<i><xsl:value-of select="fluff"/></i>
+		</div>
+		
+		<xsl:apply-templates select="part" />
+	
+	</div> 
+
+</xsl:template>
+
+<xsl:template name="createheader">
+	<xsl:param name="bgcolor">Purple</xsl:param>
+	
+	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
+		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
+			<xsl:value-of select="title"/>
+		</div>
+		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
+			<xsl:value-of select="class"/><br />
+			<xsl:value-of select="category"/>
+			<xsl:if test="level">
+				<xsl:text> </xsl:text><xsl:value-of select="level"/>
+			</xsl:if>
+		</div>
+	</div> 
+	
+</xsl:template> 
+
+<xsl:template match="part">
+	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
+		<xsl:if test="part-name != ''">
+			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
+				<b><xsl:value-of select="part-name"/></b>
+			</div>
+		</xsl:if>
+		
+		<xsl:if test="not(hide-freqkey = 'true')">
+			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
+				<div id="frequency" style="width:5.9em; float:left;">
+					<xsl:value-of select="frequency"/>
+				</div> 
+				<div id="blob" style="width: 1.2em; float: left; text-align:center;">
+					&#x25C6;
+				</div>
+				<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
+					<xsl:value-of select="keyword"/>
+				</div>
+			</div>
+		</xsl:if>
+		
+		<xsl:if test="not(hide-actrange = 'true')">
+			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> 
+				<div id="action" style="width:12.2em; float:left; ">
+					<b><xsl:value-of select="action"/></b> <xsl:text> </xsl:text>
+					<xsl:value-of select="subaction"/>
+				</div> 
+				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;"> 
+					<b><xsl:value-of select="type"/>&#160;</b> 
+					<xsl:value-of select="range"/>
+					<xsl:if test="type2">
+						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;"> 
+								<b><xsl:value-of select="type2"/></b>&#160;
+								<xsl:value-of select="range2"/>
+							</p>
+					</xsl:if>
+				</div>
+			</div>
+		</xsl:if>
+		
+		<xsl:apply-templates select="section" />
+	
+	</div>
+	
+</xsl:template> 
+
+<xsl:template match="section">
+
+	<xsl:choose>
+		<xsl:when test="shade='true'">
+			<xsl:choose>
+				<xsl:when test="indent='1'">
+					<xsl:call-template name="shadesection">
+						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="indent='2'">
+					<xsl:call-template name="shadesection">
+						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:call-template name="shadesection" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:choose>
+				<xsl:when test="indent='1'">
+					<xsl:call-template name="clearsection">
+						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="indent='2'">
+					<xsl:call-template name="clearsection">
+						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:call-template name="clearsection" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:otherwise>
+	</xsl:choose>
+	
+</xsl:template>
+
+<xsl:template name="shadesection">
+	 <xsl:param name="leftindent">1.2em</xsl:param> 
+	
+	<div style="width:100%; background:linear-gradient(to right, Moccasin,Moccasin,PapayaWhip); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
+		<xsl:call-template name="sectioncontent" />
+	</div>
+</xsl:template>
+
+<xsl:template name="clearsection">
+	 <xsl:param name="leftindent">1.2em</xsl:param> 
+	
+	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
+		<xsl:call-template name="sectioncontent" />
+	</div>
+</xsl:template>
+
+<xsl:template name="sectioncontent">
+	<xsl:choose>
+		<xsl:when test="name-style = 'bold'"> 
+			<b><xsl:value-of select="name"/>&#160;</b>
+		</xsl:when>
+		<xsl:when test="name-style = 'italic'">
+			<i><xsl:value-of select="name"/>&#160;</i>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="name"/>
+		</xsl:otherwise>
+	</xsl:choose>
+	<xsl:value-of select="text" disable-output-escaping="yes" />
+	
 </xsl:template>
 	
 </xsl:stylesheet>
