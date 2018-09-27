@@ -147,7 +147,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="subclasstitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.2em; padding:0em 1.2em 1em; font-variant:small-caps; letter-spacing:1px;">
 			<xsl:text>- </xsl:text><xsl:value-of select="class/subname" />
 		</div>
-		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); width:100%; padding:1em; float:left;" >
+		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
 			<b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="class/role" /> <xsl:text>; </xsl:text> <b><xsl:text>Power Source: </xsl:text></b> <xsl:value-of select="class/source" /> <br />
 			<i><xsl:value-of select="class/shortfluff" /></i>
 		</div> 
