@@ -173,9 +173,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="name = 'casting'">
 			<b><xsl:text>Casting </xsl:text></b>
 			<xsl:for-each select="action">
-				<xsl:text>test</xsl:text>
 				<xsl:call-template name="actionicon" />
 				<xsl:value-of select="type" />
+				<xsl:if test="position()!=last()">
+					<xsl:text>, </xsl:text>
+				</xsl:if> 
 			</xsl:for-each>
 		</xsl:when>
 		<xsl:when test="name = 'spelltarget'">
@@ -215,7 +217,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="cost = '2'">
 			<i><xsl:text>[[AA]] </xsl:text></i>
 		</xsl:when>
-		<xsl:when test="cost = 'free'">
+		<xsl:when test="cost = '1'">
 			<i><xsl:text>[[A]] </xsl:text></i>
 		</xsl:when>
 		<xsl:otherwise>
