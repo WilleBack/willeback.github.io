@@ -148,6 +148,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="type" style="width: 8em; float:right; color:{$bgcolor}; text-align:right; font-size: 0.8em; margin:0.5em;">
 			<xsl:value-of select="type"/>
 			<xsl:if test="level">
+				&#160;
 				<div id="levelbox" style="width:1.5em; color:white; background-color:{$bgcolor}; margin: 0em 0,2em; padding: 0.2em; float:right; box-sizing:border-box; text-align:center;">
 					<xsl:text> </xsl:text><xsl:value-of select="level"/>
 				</div>
@@ -194,7 +195,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 		</xsl:when>
 		<xsl:when test="name">
-			<b><xsl:value-of select="name" /> </b> <xsl:value-of select="text" />
+			<b><xsl:value-of select="name" /> &#160;</b> <xsl:value-of select="text" />
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="text" />
