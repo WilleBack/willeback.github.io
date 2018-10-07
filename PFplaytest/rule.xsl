@@ -181,7 +181,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 		</xsl:when>
 		<xsl:when test="name = 'checkresult'">
-			&#160; &#160; &#160; <xsl:value-of select="result" /> <xsl:value-of select="text" />
+			&#160; &#160; &#160; <xsl:value-of select="result" /> <xsl:value-of select="text" disable-output-escaping="yes"/>
 		</xsl:when>
 		<xsl:when test="name = 'spelltarget'">
 			<xsl:if test="range">
@@ -195,10 +195,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 		</xsl:when>
 		<xsl:when test="name">
-			<b><xsl:value-of select="name" /> &#160;</b> <xsl:value-of select="text" />
+			<b><xsl:value-of select="name" /> &#160;</b> <xsl:value-of select="text" disable-output-escaping="yes"/>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:value-of select="text" />
+			<xsl:value-of select="text" disable-output-escaping="yes"/>
 		</xsl:otherwise>
 	</xsl:choose>
 	
