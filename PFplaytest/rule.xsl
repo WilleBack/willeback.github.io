@@ -24,8 +24,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				width:95%;
 				float: left;
 				display: block;
-				margin-top: 0.5em;
-				margin-bottom: 0.5em;
+				margin-top: 0.2em;
+				margin-bottom: 0.2em;
 				margin-left: auto;
 				margin-right: auto;
 				border-style: inset;
@@ -119,7 +119,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:when>
 		</xsl:choose> 
 		
-		<div id="traits" style="width: 10em; background-color: Gainsboro; float: left; font-weight:bold; text-align: center; ">
+		<div id="traits" style="width: 10em; background-color: Gainsboro; float: left; font-weight:bold; text-align: center; box-sizing:border-box;">
 			<xsl:for-each select="trait">
 				<xsl:value-of select="." />
 				<xsl:if test="position()!=last()">
@@ -169,7 +169,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="section">
 
-	<p style="padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em;">
+	<p style="padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; margin:0.1em;>
 	
 	<xsl:choose>
 		<xsl:when test="name = 'casting'">
