@@ -348,6 +348,130 @@
 			
 		</rule>
 		
+		<rule>
+			<title>Phantom Pain</title>
+			<rarity>Common</rarity>
+			<type>Spell</type>
+			<level>1</level>
+			
+			<trait>Illusion</trait>
+			<trait>Mental</trait>
+			<trait>Nonlethal</trait>
+			<trait>Occult</trait>
+			
+			<part>
+				<section>
+					<name>casting</name>
+					<action>
+						<cost>1</cost>
+						<type>Somatic</type>
+					</action>
+				</section>
+				<section>
+					<name>spelltarget</name>
+					<range>30 feet</range>
+					<targets>one creature</targets>
+				</section>
+				<section>
+					<name>Duration</name>
+					<text>1 minute</text>
+				</section>
+			</part>
+			
+			<part>
+				<section>
+					<text>Pain wracks the target, dealing 1d4 mental damage and 1d4 persistent mental damage. The target must make a Will saving throw.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Success</result>
+					<text>Full damage, but no persistent damage and the spell ends immediately.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Critical Success</result>
+					<text>The target is unaffected.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Failure</result>
+					<text>Full damage, and the target is sick 1. If the target recovers from being sick, its persistent mental damage ends as well and the spell ends.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Critical Failure</result>
+					<text>Per failure, but the target is sick 2.</text>
+				</section>
+				<section>
+					<name>Heightened (+1)</name>
+					<text>The damage increases by 2d4 and the persistent damage by 1.</text>
+				</section>
+			</part>
+			
+		</rule>
+		
+		<rule>
+			<title>Ray of Enfeeblement</title>
+			<rarity>Common</rarity>
+			<type>Spell</type>
+			<level>1</level>
+			
+			<trait>Attack</trait>
+			<trait>Necromancy</trait>
+			<trait>Occult</trait>
+			
+			<part>
+				<section>
+					<name>casting</name>
+					<action>
+						<cost>1</cost>
+						<type>Somatic</type>
+					</action>
+					<action>
+						<cost>1</cost>
+						<type>Verbal</type>
+					</action>
+				</section>
+				<section>
+					<name>spelltarget</name>
+					<range>30 feet</range>
+					<targets>one creature</targets>
+				</section>
+				<section>
+					<name>Duration</name>
+					<text>1 minute</text>
+				</section>
+			</part>
+			
+			<part>
+				<section>
+					<text>Attempt a ranged touch attack against the target. If you succeed, that creature attempts a Fortitude sav in order to determine the spell's effect. If you critically succeed at your attack roll, the target treats the result of its Fortitude save as one degree worse.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Success</result>
+					<text>The target gains enfeebled 1.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Critical Success</result>
+					<text>The target is unaffected.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Failure</result>
+					<text>The target gains enfeebled 2.</text>
+				</section>
+				<section>
+					<name>checkresult</name>
+					<result>Critical Failure</result>
+					<text>The target gains enfeebled 3.</text>
+				</section>
+				
+			</part>
+			
+		</rule>
+		
 	</category>
 	
 </catalog>
