@@ -143,7 +143,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 			<xsl:value-of select="title"/>
 		</div>
-		<div id="type" style="width: 8em; float:right; color:{$bgcolor]; text-align:right; font-size: 0.8em; margin:0.5em;">
+		<div id="type" style="width: 8em; float:right; color:{$bgcolor}; text-align:right; font-size: 0.8em; margin:0.5em;">
 			<xsl:value-of select="type"/>
 			<xsl:if test="level">
 				<div id="levelbox" style="width:1.5em; color:white; background-color:{$bgcolor}; margin:0.5em;">
