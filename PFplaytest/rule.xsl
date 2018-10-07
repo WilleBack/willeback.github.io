@@ -167,7 +167,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="section">
 
-	<p style="padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; ">
+	<p style="padding:0.2em 0.3em; text-indent:-1em; padding-left:1.2em; margin:0; ">
 	
 	<xsl:choose>
 		<xsl:when test="name = 'casting'">
