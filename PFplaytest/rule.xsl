@@ -139,7 +139,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:param name="bgcolor">Purple</xsl:param>
 	
 	<div id="header" style="width:100%; float:left; font-size:1.2em; font-variant: small-caps; ">
-		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-weight:bold; letter-spacing:1px; width:calc(100% - 8.5em);"> 
+		<div id="title" style="float:left; margin:0.2em; vertical-align:middle; font-weight:bold; letter-spacing:1px; width:calc(100% - 8.5em);"> 
 			<xsl:if test="action">
 				<xsl:call-template name="actionicon" />
 			</xsl:if>
@@ -148,7 +148,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="type" style="width: 8em; float:right; color:{$bgcolor}; text-align:right; font-size: 0.8em; margin:0.5em;">
 			<xsl:value-of select="type"/>
 			<xsl:if test="level">
-				<div id="levelbox" style="width:1.5em; color:white; background-color:{$bgcolor}; margin:0em; padding: 0.2em; float:right; box-sizing:border-box; text-align:center;">
+				<div id="levelbox" style="width:1.5em; color:white; background-color:{$bgcolor}; margin: 0em 0,2em; padding: 0.2em; float:right; box-sizing:border-box; text-align:center;">
 					<xsl:text> </xsl:text><xsl:value-of select="level"/>
 				</div>
 			</xsl:if>
