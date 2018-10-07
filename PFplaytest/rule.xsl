@@ -117,7 +117,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:when>
 		</xsl:choose> 
 		
-		<div id="traits" style="width: 9em; margin-right: 1.5em; background-color: Gainsboro; float: left; font-weight:bold; text-align: center; box-sizing:border-box;">
+		<div id="traits" style="width: 9em; margin-right: 1.5em; padding: 0.1em; background-color: Gainsboro; float: left; font-weight:bold; text-align: center; box-sizing:border-box;">
 			<xsl:for-each select="trait">
 				<xsl:value-of select="." />
 				<xsl:if test="position()!=last()">
