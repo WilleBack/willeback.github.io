@@ -97,7 +97,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:choose>
 			<xsl:when test="rarity = 'Common'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">#407040</xsl:with-param>
+					<xsl:with-param name="bgcolor">Black</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="rarity = 'Uncommon'">
@@ -107,12 +107,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:when>
 			<xsl:when test="rarity = 'Rare'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">DarkSlateGray</xsl:with-param>
+					<xsl:with-param name="bgcolor">Orange</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="rarity = 'Unique'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">DarkSlateGray</xsl:with-param>
+					<xsl:with-param name="bgcolor">MediumBlue</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 		</xsl:choose> 
@@ -173,6 +173,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="name = 'casting'">
 			<b><xsl:text>Casting </xsl:text></b>
 			<xsl:for-each select="action">
+				<xsl:text>test</xsl:text>
 				<xsl:call-template name="actionicon" />
 				<xsl:value-of select="type" />
 			</xsl:for-each>
@@ -221,30 +222,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<i><xsl:text>[[error]] </xsl:text></i>
 		</xsl:otherwise>
 	</xsl:choose>
-	
-</xsl:template>
-
-<xsl:template name="clearsection">
-	 <xsl:param name="leftindent">1.2em</xsl:param> 
-	
-	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:call-template name="sectioncontent" />
-	</div>
-</xsl:template>
-
-<xsl:template name="sectioncontent">
-	<xsl:choose>
-		<xsl:when test="name-style = 'bold'"> 
-			<b><xsl:value-of select="name"/>&#160;</b>
-		</xsl:when>
-		<xsl:when test="name-style = 'italic'">
-			<i><xsl:value-of select="name"/>&#160;</i>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:value-of select="name"/>
-		</xsl:otherwise>
-	</xsl:choose>
-	<xsl:value-of select="text" disable-output-escaping="yes" />
 	
 </xsl:template>
 	
