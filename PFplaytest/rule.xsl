@@ -24,8 +24,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				display: block;
 				margin-top: 0.2em;
 				margin-bottom: 0.2em;
-				margin-left: auto;
-				margin-right: auto;
+				margin-left: 0;
+				margin-right: 0;
 				border-style: inset;
 				border-width: 1px;
 			}
@@ -153,16 +153,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 		</div>
 		
-		<hr />
 	</div> 
 	
 </xsl:template> 
 
 <xsl:template match="part">
 		
-	<xsl:apply-templates select="section" />
-	
 	<hr />
+	
+	<xsl:apply-templates select="section" />
 	
 </xsl:template> 
 
