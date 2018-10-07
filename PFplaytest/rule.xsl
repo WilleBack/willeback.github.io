@@ -72,7 +72,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="container">
 				 
-				<xsl:apply-templates match="category" />
+				<xsl:apply-templates select="category" />
 			
 		</div> <!-- container -->
 	</body>
@@ -85,7 +85,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:value-of select="catename" />	
 	</div>
 	
-	<xsl:apply-templates match="rule">
+	<xsl:apply-templates select="rule">
 		<xsl:sort select="title" />
 	</xsl:apply-templates>
 	
