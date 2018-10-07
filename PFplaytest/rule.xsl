@@ -145,7 +145,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 			<xsl:value-of select="title"/>
 		</div>
-		<div id="type" style="width: 8em; float:right; color:{$bgcolor}; text-align:right; font-size: 0.8em; margin:0.5em;">
+		<div id="type" style="width: 8em; float:right; color:{$bgcolor}; text-align:right; font-size: 0.8em; margin:0.2em;">
 			<xsl:value-of select="type"/>
 			<xsl:if test="level">
 				&#160;
