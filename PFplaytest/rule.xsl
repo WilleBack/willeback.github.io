@@ -21,6 +21,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			hr { 
+				width:95%;
 				float: left;
 				display: block;
 				margin-top: 0.5em;
