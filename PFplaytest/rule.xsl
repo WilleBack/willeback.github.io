@@ -180,6 +180,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if> 
 			</xsl:for-each>
 		</xsl:when>
+		<xsl:when test="name = 'checkresult'">
+			&#160; &#160; &#160; <xsl:value-of select="result" /> <xsl:value-of select="text" />
+		</xsl:when>
 		<xsl:when test="name = 'spelltarget'">
 			<xsl:if test="range">
 				<b><xsl:text>Range </xsl:text></b> <xsl:value-of select="range" /> <xsl:text> </xsl:text>
