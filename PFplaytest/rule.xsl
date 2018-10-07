@@ -24,7 +24,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				display: block;
 				margin-top: 0.2em;
 				margin-bottom: 0.2em;
-				margin-left: 0;
+				margin-left: -1em;
 				margin-right: 0;
 				border-style: inset;
 				border-width: 1px;
