@@ -17,6 +17,7 @@
 	<list selection="Class Combination" />
 	<list selection="Cold Specialization" />
 	<list selection="Combat Advantage" />
+	<list selection="Condition Infliction" />
 	<list selection="Condition Negation" />
 	<list selection="Critical" />
 	
@@ -55,6 +56,7 @@
 	
 	<list selection="Necrotic Specialization" />
 	
+	<list selection="Ongoing Damage" />
 	<list selection="Opportunity Attacks" />
 	
 	<list selection="Perception" />
@@ -3739,8 +3741,10 @@
 			<type>feature</type>
 			<name>Savage Rage</name>
 		</prereq>
+		<group>Bloodied</group>
 		<group>Class</group>
 		<group>Temporary Hit Points</group>
+		<group>Triggered</group>
 		<benefit>When you enter Rage, you gain temporary hit points equal to one-half your healing surge value.</benefit>
 		<benefit>If you are bloodied when you enter Rage, you gain temporary hit points equal to your full healing surge value.</benefit>
 	</feat>
@@ -3775,6 +3779,7 @@
 			<name>Infernal Pact</name>
 		</prereq>
 		<group>Class</group>
+		<group>Condition Infliction</group>
 		<group>Temporary Hit Points</group>
 		<group>Triggered</group>
 		<benefit>Each time an enemy fails a saving throw against an effect you imposed, you gain 5 temporary hit points.</benefit>
@@ -3823,6 +3828,38 @@
 		<benefit>When you and your beast companion are adjacent to each other, you can either increase or decrease the distance of any forced movement movement against either you or your companion (but not both at once) by 2 squares.</benefit>
 		<benefit>Also, while adjacenet to your companion, you can stand from prone as a minor action.</benefit>
 		<benefit>Finally, when your beast companion is adjacent to you and would be knocked prone, you can attempt a saving throw to keep it standing.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Betrayal of Body</title>
+		<tier>Heroic</tier>
+		<group>Condition Infliction</group>
+		<group>Ongoing Damage</group>
+		<group>Teamwork</group>
+		<group>While you are suffering ongoing damage that lacks a type, you can transfer the ongoing damage to one ally adjacent to you as a free action. You can do this only once per round.</benefit>
+		<benefit>When you transfer the ongoing damage, its damage increases by 5.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Betrayal of Zerthimon</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Githzerai</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Assassin</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>assassin's shroud</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Combat Advantage</group>
+		<group>Initiative</group>
+		<benefit>When you target an enemy with your <![CDATA[<i>assassin's shroud</i>]]> power and that enemy has not yet acted in the encounter, the enemy grants combat advantage until the start of your next turn.</benefit>
 	</feat>
 
 </catalog>
