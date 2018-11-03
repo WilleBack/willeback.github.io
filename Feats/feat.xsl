@@ -689,7 +689,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Assassin</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Assassin' or prereq/name='any shadow']">
+				<xsl:for-each select="catalog/feat[prereq/name='Assassin']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -711,7 +711,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Avenger</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Avenger' or prereq/name='any divine']">
+				<xsl:for-each select="catalog/feat[prereq/name='Avenger']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -733,7 +733,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Battlemind</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Battlemind' or prereq/name='any psionic']">
+				<xsl:for-each select="catalog/feat[prereq/name='Battlemind']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -755,7 +755,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Barbarian</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Barbarian' or prereq/name='any primal']">
+				<xsl:for-each select="catalog/feat[prereq/name='Barbarian']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -777,7 +777,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Bard</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Bard' or prereq/name='any arcane']">
+				<xsl:for-each select="catalog/feat[prereq/name='Bard']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -799,7 +799,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Cleric</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Cleric' or prereq/name='any divine']">
+				<xsl:for-each select="catalog/feat[prereq/name='Cleric']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -821,7 +821,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Druid</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Druid' or prereq/name='any primal']">
+				<xsl:for-each select="catalog/feat[prereq/name='Druid']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -843,7 +843,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Fighter</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Fighter' or prereq/name='any martial']">
+				<xsl:for-each select="catalog/feat[prereq/name='Fighter']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -865,7 +865,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Invoker</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Invoker' or prereq/name='any divine']">
+				<xsl:for-each select="catalog/feat[prereq/name='Invoker']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -887,7 +887,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Paladin</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Paladin' or prereq/name='any divine']">
+				<xsl:for-each select="catalog/feat[prereq/name='Paladin']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -909,7 +909,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Psion</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Psion' or prereq/name='any psionic']">
+				<xsl:for-each select="catalog/feat[prereq/name='Psion']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -931,7 +931,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Ranger</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Ranger' or prereq/name='any martial']">
+				<xsl:for-each select="catalog/feat[prereq/name='Ranger']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -953,7 +953,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Rogue</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Rogue' or prereq/name='any martial']">
+				<xsl:for-each select="catalog/feat[prereq/name='Rogue']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -975,7 +975,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Shaman</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Shaman' or prereq/name='any primal']">
+				<xsl:for-each select="catalog/feat[prereq/name='Shaman']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -997,7 +997,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Sorcerer</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Sorcerer' or prereq/name='any arcane']">
+				<xsl:for-each select="catalog/feat[prereq/name='Sorcerer']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -1019,7 +1019,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Swordmage</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Swordmage' or prereq/name='any arcane']">
+				<xsl:for-each select="catalog/feat[prereq/name='Swordmage']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -1041,7 +1041,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Vampire</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Vampire' or prereq/name='any shadow']">
+				<xsl:for-each select="catalog/feat[prereq/name='Vampire']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -1063,7 +1063,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Warden</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Warden' or prereq/name='any primal']">
+				<xsl:for-each select="catalog/feat[prereq/name='Warden']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -1085,7 +1085,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Warlock</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Warlock' or prereq/name='any arcane']">
+				<xsl:for-each select="catalog/feat[prereq/name='Warlock']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -1107,7 +1107,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Warlord</div>
-				<xsl:for-each select="catalog/feat[prereq/name='Warlord' or prereq/name='any martial']">
+				<xsl:for-each select="catalog/feat[prereq/name='Warlord']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
@@ -1130,6 +1130,138 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="list">
 				<div class="groupname">Wizard</div>
 				<xsl:for-each select="catalog/feat[prereq/name='Wizard' or prereq/name='any arcane']">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</div>
+			
+			<div class="list">
+				<div class="groupname">Arcane classes</div>
+				<xsl:for-each select="catalog/feat[prereq/name='any arcane']">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</div>
+			
+			<div class="list">
+				<div class="groupname">Divine classes</div>
+				<xsl:for-each select="catalog/feat[prereq/name='any divine']">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</div>
+			
+			<div class="list">
+				<div class="groupname">Martial classes</div>
+				<xsl:for-each select="catalog/feat[prereq/name='any martial']">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</div>
+			
+			<div class="list">
+				<div class="groupname">Primal classes</div>
+				<xsl:for-each select="catalog/feat[prereq/name='any primal']">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</div>
+			
+			<div class="list">
+				<div class="groupname">Psionic classes</div>
+				<xsl:for-each select="catalog/feat[prereq/name='any psionic']">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:when>
+						<xsl:otherwise>
+							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+								<div class="title"><xsl:value-of select="title"/></div>
+								<div class="category"> <i><xsl:value-of select="category"/></i> &#160;</div>
+								<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</div>
+			
+			<div class="list">
+				<div class="groupname">Shadow classes</div>
+				<xsl:for-each select="catalog/feat[prereq/name='any shadow']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
 							<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
