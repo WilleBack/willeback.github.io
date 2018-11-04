@@ -130,7 +130,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:when test="position() mod 2 = 1">
 								<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
 									<div class="title"><xsl:value-of select="title"/></div>
-									<div class="category"> <i><xsl:value-of select="category"/>&#160;</i> </div>
+									<div class="category"> 
+										<i><xsl:for-each select="group">
+											<xsl:value-of select="."/>
+											<xsl:if test="position()!=last()">
+												<xsl:text>, </xsl:text>
+											</xsl:if> 
+										</xsl:for-each>
+										&#160;</i> 
+									</div>
 									<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
 								</div>
 							</xsl:when>
@@ -1509,7 +1517,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="categroup" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<xsl:choose>
 				<xsl:when test="category">
-					<b><div id="category" style="width:8.5em; float:left;"><xsl:value-of select="category"/></div> <div id="blob" style="width: 1.3em; float: left; text-align:center;">&#x25C6;</div></b>
+					<b>
+						<div id="category" style="width:8.5em; float:left;">
+							<xsl:for-each select="group">
+								<xsl:value-of select="."/>
+								<xsl:if test="position()!=last()">
+									<xsl:text>, </xsl:text>
+								</xsl:if> 
+							</xsl:for-each>
+						</div> 
+						<div id="blob" style="width: 1.3em; float: left; text-align:center;">
+							&#x25C6;
+						</div>
+					</b>
 					<div id="group" style="width:calc(100% - 9.8em); float:left;">
 						<xsl:for-each select="group">
 							<xsl:value-of select="."/>
