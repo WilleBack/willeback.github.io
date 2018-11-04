@@ -72,6 +72,7 @@
 	<list selection="Rituals" />
 	
 	<list selection="Saving Throws" />
+	<list selection="Saving Throw Penalty" />
 	<list selection="Second Wind" />
 	<list selection="Shapechange" />
 	<list selection="Shield" />
@@ -4219,6 +4220,68 @@
 		<group>Vistani Heritage</group>
 		<benefit>Your <![CDATA[<i>evil eye of the Vistani</i>]]> can originate from your active cat familiar.</benefit>
 		<benefit>Using <![CDATA[<i>evil eye of the Vistani</i>]]> in this way does not provoke <![CDATA[<i>opportunity attacks</i>]]>.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Blade Channeling Mastery</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Sorcerer</name>
+		</prereq>
+		<prereq>
+			<type>feat</type>
+			<name>Sorcerous Blade Channeling</name>
+		</prereq>
+		<group>Class</group>
+		<group>Saving Throw Penalty</group>
+		<group>Weapon Specialization</group>
+		<benefit>When you use Sorcerous Blade Channeling to make a ranged Sorcerer attack as a melee attack, the target takes a -3 penalty to its first saving throw against the power.</benefit>
+		<benefit>This feat has no effect if the attack does not have a component that a save can end.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Blade Initiate</title>
+		<tier>Heroic</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>ability</type>
+			<name>Intelligence</name>
+			<value>13</value>
+		</prereq>
+		<group>Defense</group>
+		<group>Multiclass Swordmage</group>
+		<group>Power Repertoire</group>
+		<group>Proficiency Gain</group>
+		<group>Skill Training</group>
+		<benefit>You gain training in the Arcana skill.</benefit>
+		<benefit>You also gain the <![CDATA[<i>initiate's warding</i>]]> power. This power counts as the Swordmage Warding class feature for the purposes of qualifying for feats, etc.</benefit>
+		<benefit>In addition, you gain proficiency in swordmage implements.</benefit>
+		
+		<power>
+			<title>Initiate's Warding</title>
+			<class>Feat</class> <category>Utility</category>
+			<fluff>You have studied the warding techniques of swordmages, but cannot reach the reliability expected of them</fluff>
+			<part>
+			<frequency>Daily</frequency>
+			<keyword>Arcane</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must be wielding a light blade or a heavy blade</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Until the end of the encounter, you gain a +1 bonus to AC, or a +3 bonus to AC if one hand is free.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>You lose the bonus if you are no longer wielding a light blade or heavy blade, and regain it when you again wield one. The effect immediately ends if you fall unconscious.</text>
+			</section>
+			</part>
+		</power>
 	</feat>
 
 </catalog>
