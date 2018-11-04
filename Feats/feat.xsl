@@ -1626,7 +1626,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
-				<xsl:call-template name="linecontent">
+				<xsl:call-template name="linecontent" />
 			</div>
 		</xsl:otherwise>
 	</xsl:choose>
