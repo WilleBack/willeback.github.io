@@ -1580,18 +1580,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
 		<xsl:for-each select="//catalog/feat[group=current()/@selection]">
-			<xsl:choose>
-				<xsl:when test="position() mod 2 = 1">
-					<xsl:call-template name="line">
-						<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="line">
-						<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
-					</xsl:call-template>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:call-template name="line" />
 		</xsl:for-each>
 	</div>
 
@@ -1602,18 +1591,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
 		<xsl:for-each select="//catalog/feat[category=current()/@selection]">
-			<xsl:choose>
-				<xsl:when test="position() mod 2 = 1">
-					<xsl:call-template name="line">
-						<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="line">
-						<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
-					</xsl:call-template>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:call-template name="line" />
 		</xsl:for-each>
 	</div>
 
@@ -1626,34 +1604,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:choose>
 			<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling'">
 				<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection or prereq/name='Small or smaller']">
-					<xsl:choose>
-						<xsl:when test="position() mod 2 = 1">
-							<xsl:call-template name="line">
-								<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
-							</xsl:call-template>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:call-template name="line">
-								<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
-							</xsl:call-template>
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:call-template name="line" />
 				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection]">
-					<xsl:choose>
-						<xsl:when test="position() mod 2 = 1">
-							<xsl:call-template name="line">
-								<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
-							</xsl:call-template>
-						</xsl:when>
-						<xsl:otherwise>
-							<xsl:call-template name="line">
-								<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
-							</xsl:call-template>
-						</xsl:otherwise>
-					</xsl:choose>
+					<xsl:call-template name="line" />
 				</xsl:for-each>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -1662,9 +1618,23 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="line">
-	<xsl:param name="background-color">to left, Green, Red</xsl:param>
+	<xsl:choose>
+		<xsl:when test="position() mod 2 = 1">
+			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
+				<xsl:call-template name="linecontent" />
+			</div>
+		</xsl:when>
+		<xsl:otherwise>
+			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
+				<xsl:call-template name="linecontent">
+			</div>
+		</xsl:otherwise>
+	</xsl:choose>
 	
-	<div id="line" style="width:100%; float:left; background:linear-gradient({$background-color});">
+</xsl:template>
+
+<xsl:template name="linecontent">
+	
 		<div class="title"><xsl:value-of select="title"/></div>
 		<div class="category"> 
 			<i><xsl:for-each select="category">
@@ -1675,7 +1645,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 			&#160;</i> 
 		</div>
-		<div class="groups"><xsl:for-each select="group"><xsl:value-of select="."/><xsl:if test="position()!=last()"><xsl:text>, </xsl:text></xsl:if> </xsl:for-each></div>
+		<div class="groups">
+			<xsl:for-each select="group">
+				<xsl:value-of select="."/>
+				<xsl:if test="position()!=last()">
+					<xsl:text>, </xsl:text>
+				</xsl:if> 
+			</xsl:for-each>
+		</div>
 	</div>
 	
 </xsl:template>
