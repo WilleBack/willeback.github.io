@@ -1285,7 +1285,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 	</div> <!-- list container -->
 	
-	<div id="headstuff" style="width:100%; float:left; margin-left:1pt;">
+	<div id="headstuff" style="width:100%; float:left; padding-left:1pt;">
 		<div class="grouptitle">Feat descriptions</div>
 		<xsl:text>Total number of feats: </xsl:text> <xsl:value-of select="count(catalog/feat)" /> <xsl:text> (</xsl:text><xsl:value-of select="count(catalog/feat[tier='Heroic'])" /> <xsl:text> heroic, </xsl:text> <xsl:value-of select="count(catalog/feat[tier='Paragon'])" /> <xsl:text> paragon, </xsl:text> <xsl:value-of select="count(catalog/feat[tier='Epic'])" /> <xsl:text> epic)</xsl:text>
 	</div>
