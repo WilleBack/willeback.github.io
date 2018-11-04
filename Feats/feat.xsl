@@ -123,16 +123,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="groupholder">
 			<div class="grouptitle">Feat Groups</div>
 			<xsl:for-each select="catalog/list"> 
-				<xsl:call-template name="list" />
+				<xsl:call-template name="listgroup" />
 			</xsl:for-each>
 		</div>
 		
 		<div class="groupholder">
 			<div class="grouptitle">Special Feat Categories</div>
 			<xsl:for-each select="catalog/category"> 
-				<xsl:call-template name="list">
-					<!-- <xsl:with-param name="search">category</xsl:with-param> -->
-				</xsl:call-template>
+				<xsl:call-template name="listcategory" />
 			</xsl:for-each>
 		</div>
 		
@@ -1573,12 +1571,55 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template>
 
-<xsl:template name="list">
-	<xsl:param name="search" select="group" />
+<xsl:template name="listgroup">
 	
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
-		<xsl:for-each select="//catalog/feat[{$search}=current()/@selection]">
+		<xsl:for-each select="//catalog/feat[group=current()/@selection]">
+			<xsl:choose>
+				<xsl:when test="position() mod 2 = 1">
+					<xsl:call-template name="line">
+						<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:call-template name="line">
+						<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
+					</xsl:call-template>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+	</div>
+
+</xsl:template>
+
+<xsl:template name="listcategory">
+	
+	<div class="list">
+		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
+		<xsl:for-each select="//catalog/feat[category=current()/@selection]">
+			<xsl:choose>
+				<xsl:when test="position() mod 2 = 1">
+					<xsl:call-template name="line">
+						<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:call-template name="line">
+						<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
+					</xsl:call-template>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:for-each>
+	</div>
+
+</xsl:template>
+
+<xsl:template name="listprereq">
+	
+	<div class="list">
+		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
+		<xsl:for-each select="//catalog/feat[prereq=current()/@selection]">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<xsl:call-template name="line">
