@@ -131,7 +131,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="grouptitle">Special Feat Categories</div>
 			<xsl:for-each select="catalog/category"> 
 				<xsl:call-template name="list">
-					<xsl:with-param name="search">category</xsl:with-param>
+					<!-- <xsl:with-param name="search">category</xsl:with-param> -->
 				</xsl:call-template>
 			</xsl:for-each>
 		</div>
@@ -1578,7 +1578,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
-		<xsl:for-each select="//catalog/feat[$search=current()/@selection]">
+		<xsl:for-each select="//catalog/feat[{$search}=current()/@selection]">
 			<xsl:choose>
 				<xsl:when test="position() mod 2 = 1">
 					<xsl:call-template name="line">
