@@ -1574,7 +1574,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="list">
-	<xsl:param name="search">group</xsl:param>
+	<xsl:param name="search" select="group" />
 	
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
