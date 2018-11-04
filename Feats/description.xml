@@ -87,6 +87,7 @@
 	<list selection="Temporary Hit Points" />
 	<list selection="Traps" />
 	<list selection="Triggered" />
+	<list selection="Two-weapon Fighting" />
 	
 	<list selection="Undead-hunting" />
 	
@@ -3937,6 +3938,7 @@
 		<group>Class</group>
 		<group>Condition Infliction</group>
 		<group>Forced Movement</group>
+		<group>Two-weapon Fighting</group>
 		<group>Weapon Specialization</group>
 		<benefit>While you are wielding both a flait and a spear, you gain the following benefits with martial at-will attacks:</benefit>
 		<benefit>&#9658; If you hit a different creature with each weapon, you immobilize the one you hit with your flail. This lasts until the end of your next turn, or until you no longer threaten the creature with your flail, which ever comes first.</benefit>
@@ -4040,23 +4042,18 @@
 			<type>feat</type>
 			<name>Black Hood Style</name>
 		</prereq>
+		<group>Accuracy Enhancement</group>
 		<group>Class</group>
 		<group>Critical</group>
-		<group>Opportunity Attacks</group>
 		<group>Weapon Specialization</group>
-		<benefit>When you attack with a two-handed axe that you have proficiency with, you gain the following two benefits:</benefit>
+		<benefit>When you make a Weapon attack with a two-handed axe that you have proficiency with, you gain the following two benefits:</benefit>
 		<benefit>&#9658; If you score a critical hit, each enemy adjacent to you takes damage equal to your Strength modifier + your weapon's enhancement bonus.</benefit>
 		<benefit>This damage increases to 2 + your Strength modifier + your weapon's enhancement bonus at 11th level, and to 4 + your Strength modifier + your weapon's enhancement bonus at 21st level.</benefit>
-		<benefit>&#9658; You can use a power associated with this feat in place of a <![CDATA[<i>melee basic</i>]]> as part of <![CDATA[<i>enforce challenge</i>]]>.</benefit>
-		<associated>adamantine strike</associated>
-		<associated>crippling smash</associated>
-		<associated>crushing blow</associated>
-		<associated>exacting strike</associated>
-		<associated>griffon's wrath</associated>
+		<benefit>&#9658; If the attack is against Reflex, you can choose to make it against Fortitude instead. You must make this decision before making the attack roll. </benefit>
 	</feat>
 	
 	<feat>
-		<title>Black Hood Exacutioner</title>
+		<title>Black Hood Executioner</title>
 		<tier>Heroic</tier>
 		<prereq>
 			<type>class</type>
@@ -4070,10 +4067,66 @@
 		<group>Critical</group>
 		<group>Kill Effect</group>
 		<group>Weapon Specialization</group>
-		<benefit>When you attack with a two-handed axe that you have proficiency with, you gain the following two benefits:</benefit>
+		<benefit>When you make a Weapon attack with a two-handed axe that you have proficiency with, you gain the following two benefits:</benefit>
 		<benefit>&#9658; If you score a critical hit, each enemy adjacent to you takes damage equal to your Strength modifier + your weapon's enhancement bonus.</benefit>
 		<benefit>This damage increases to 2 + your Strength modifier + your weapon's enhancement bonus at 11th level, and to 4 + your Strength modifier + your weapon's enhancement bonus at 21st level.</benefit>
-		<benefit>&#9658; If your attack kills an enemy, you can use <![CDATA[<i>tactician's command</i>]]> once as a minor action until the end of your next turn.</benefit>
+		<benefit>&#9658; If your attack kills an enemy, you can use <![CDATA[<i>tactician's command</i>]]> once as a minor action before the end of your next turn.</benefit>
 	</feat>
+	
+	<feat>
+		<title>Black Hood Slayer</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Ranger</name>
+		</prereq>
+		<prereq>
+			<type>feat</type>
+			<name>Black Hood Student</name>
+		</prereq>
+		<group>Bloodied Enemy</group>
+		<group>Class</group>
+		<group>Critical</group>
+		<group>Mobility</group>
+		<group>Weapon Specialization</group>
+		<benefit>When you make a Weapon attack with a two-handed axe that you have proficiency with, you gain the following two benefits:</benefit>
+		<benefit>&#9658; If you score a critical hit, each enemy adjacent to you takes damage equal to your Strength modifier + your weapon's enhancement bonus.</benefit>
+		<benefit>This damage increases to 2 + your Strength modifier + your weapon's enhancement bonus at 11th level, and to 4 + your Strength modifier + your weapon's enhancement bonus at 21st level.</benefit>
+		<benefit>&#9658; You gain a +1 bonus to any move or shift from the attack, but must end the move adjacent to a bloodied enemy.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Black Hood Student</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Fighter</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Ranger</name>
+			<combine>or</combine>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Warlord</name>
+			<combine>;</combine>
+		</prereq>
+		<prereq>
+			<type>proficiency</type>
+			<name>any two-handed axe</name>
+		</prereq>
+		<group>Class</group>
+		<group>Damage Enhancement</group>
+		<group>Skill Enhancement</group>
+		<group>Weapon Specialization</group>
+		<benefit>You gain a +2 feat bonus to Intimidate checks.</benefit>
+		<benefit>When you make a <![CDATA[<i>coup de grace</i>]]> with a two-handed axe that you have proficiency with, you deal an additional +1[W] damage.</benefit>
+		<benefit>This additional damage increases to +2[W] at 21st level.</benefit>
+		<benefit>In addition, when you make an at-will Weapon attack with a two-handed axe that you have proficiency with, you gain a +1 bonus to damage if the target is slowed or prone, or a +2 bonus to damage if the target is helpless or immobilized.</benefit>
+		<benefit>The bonus against a slowed or prone target increases to +2 at 21st level. The bonus against an helpless or immobilized target increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+	</feat>
+	
+	
 
 </catalog>
