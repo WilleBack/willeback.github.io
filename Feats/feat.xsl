@@ -137,6 +137,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="groupholder">
 			<div class="grouptitle">Racial Feats</div>
 			
+			<xsl:for-each select="catalog/race">
+				<xsl:call-template name="listprereq" />
+			</xsl:for-each>
 			<div class="list">
 				<div class="groupname">Changeling</div>
 				<xsl:for-each select="catalog/feat[prereq/name='Changeling']">
@@ -1619,20 +1622,40 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
-		<xsl:for-each select="//catalog/feat[prereq=current()/@selection]">
-			<xsl:choose>
-				<xsl:when test="position() mod 2 = 1">
-					<xsl:call-template name="line">
-						<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="line">
-						<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
-					</xsl:call-template>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="@selection='goblin' or @selection='gnome' or @selection='halfling'">
+				<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection or prereq/name='Small or smaller']">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<xsl:call-template name="line">
+								<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:call-template name="line">
+								<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
+							</xsl:call-template>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection]">
+					<xsl:choose>
+						<xsl:when test="position() mod 2 = 1">
+							<xsl:call-template name="line">
+								<xsl:with-param name="background-color">to right, LightGrey, LightGrey, Gainsboro</xsl:with-param>
+							</xsl:call-template>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:call-template name="line">
+								<xsl:with-param name="background-color">to right,WhiteSmoke, WhiteSmoke,Snow</xsl:with-param>
+							</xsl:call-template>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 	</div>
 
 </xsl:template>
