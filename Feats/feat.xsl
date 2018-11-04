@@ -1842,7 +1842,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="line">
 	<xsl:param name="background-color">to left, Green, Red</xsl:param>
 	
-	<div id="line" style="width:100%; float:left; background:linear-gradient({$background-color);">
+	<div id="line" style="width:100%; float:left; background:linear-gradient({$background-color});">
 		<div class="title"><xsl:value-of select="title"/></div>
 		<div class="category"> 
 			<i><xsl:for-each select="category">
