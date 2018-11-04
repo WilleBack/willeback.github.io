@@ -131,7 +131,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<div id="line" style="width:100%; float:left;background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro);">
 									<div class="title"><xsl:value-of select="title"/></div>
 									<div class="category"> 
-										<i><xsl:for-each select="group">
+										<i><xsl:for-each select="category">
 											<xsl:value-of select="."/>
 											<xsl:if test="position()!=last()">
 												<xsl:text>, </xsl:text>
@@ -1519,7 +1519,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:when test="category">
 					<b>
 						<div id="category" style="width:8.5em; float:left;">
-							<xsl:for-each select="group">
+							<xsl:for-each select="category">
 								<xsl:value-of select="."/>
 								<xsl:if test="position()!=last()">
 									<xsl:text>, </xsl:text>
