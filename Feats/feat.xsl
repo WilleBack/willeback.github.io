@@ -140,6 +140,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:for-each select="catalog/race">
 				<xsl:call-template name="listprereq" />
 			</xsl:for-each>
+			
 			<div class="list">
 				<div class="groupname">Changeling</div>
 				<xsl:for-each select="catalog/feat[prereq/name='Changeling']">
@@ -1623,7 +1624,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
 		<xsl:choose>
-			<xsl:when test="@selection='goblin' or @selection='gnome' or @selection='halfling'">
+			<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling'">
 				<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection or prereq/name='Small or smaller']">
 					<xsl:choose>
 						<xsl:when test="position() mod 2 = 1">
