@@ -28,6 +28,7 @@
 	<list selection="Dragon-hunting" />
 	
 	<list selection="Equipment" />
+	<list selection="Extra Attack" />
 	
 	<list selection="Fear" />
 	<list selection="Fire Specialization" />
@@ -897,6 +898,7 @@
 	<feat>
 		<title>Agile Opportunist</title>
 		<tier>Paragon</tier>
+		<group>Extra Attack</group>
 		<group>Forced Movement</group>
 		<group>Triggered</group>
 		<benefit>When you end a pull, push, or slide in a square where an enemy is within your reach, you can use an immediate reaction to make a <![CDATA[<i>melee basic attack</i>]]> against that enemy.</benefit>
@@ -1097,6 +1099,7 @@
 			<name>Combat Challenge</name>
 		</prereq>
 		<group>Class</group>
+		<group>Extra Attack</group>
 		<group>Mark Punishment</group>
 		<group>Teamwork</group>
 		<group>Triggered</group>
@@ -1185,6 +1188,7 @@
 			<name>Divine Covenant</name>
 		</prereq>
 		<group>Class</group>
+		<group>Extra Attack</group>
 		<group>Fire Specialization</group>
 		<group>Racial</group>
 		<benefit>When you use a divine encounter or daily attack power on your turn, instead of your normal covenant manifestation, you can allow one target of the power to make a <![CDATA[<i>basic attack</i>]]> as a free reaction.</benefit>
@@ -3214,6 +3218,7 @@
 			<name>Wisdom</name>
 			<value>13</value>
 		</prereq>
+		<group>Extra Attack</group>
 		<group>Multiclass Fighter</group>
 		<group>Skill Training</group>
 		<group>Triggered</group>
@@ -3873,6 +3878,7 @@
 		<group>Attack Enhancement</group>
 		<group>Bloodied</group>
 		<group>Class</group>
+		<group>Extra Attack</group>
 		<group>Triggered</group>
 		<benefit>Your beast companion gains a +1 bonus to attack rolls while bloodied.</benefit>
 		<benefit>In addition, if your beast companion is reduced to 0 hit points or less, it can make a <![CDATA[<i>melee basic attack</i>]]> as a free interrupt.</benefit>
@@ -4907,6 +4913,153 @@
 		<group>Bloodied</group>
 		<group>Psionics</group>
 		<benefit>While you are bloodied, you gain a +1 bonus to attack rolls with augmented at-will psionic attack powers.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloodied Elusion</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Seeker</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Bloodbond</name>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Class</group>
+		<group>Mobility</group>
+		<group>Triggered</group>
+		<benefit>When you are bloodied by an attack, you can shift 1 square as a free reaction.</benefit>
+		<benefit>This increases to 2 squares at 11th level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloodied Enmity</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Ardent</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Mantle of Impulsiveness</name>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Class</group>
+		<group>Damage Enhancement</group>
+		<group>Triggered</group>
+		<benefit>The first time you are bloodied during an encounter, your melee attacks deal 1d4 extra damage until the end of your next turn.</benefit>
+		<benefit>This extra damage increases to 2d4 at 11th level, and to 3d4 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloodied Ferocity</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Minotaur</name>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Combat Advantage</group>
+		<group>Extra Attack</group>
+		<group>Racial</group>
+		<group>Triggered</group>
+		<benefit>The first time you are bloodied during an encounter, you can make a <![CDATA[<i>melee basic attack</i>]]> as a free reaction.</benefit>
+		<benefit>If your attack hits, you gain combat advantage until the end of your next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloodied Fleetness</title>
+		<tier>Heroic</tier>
+		<group>Bloodied</group>
+		<group>Mobility</group>
+		<benefit>While you are bloodied, you gain a +1 bonus to speed.</benefit>
+		<benefit>Beginning at 11th level, while you are bloodied, you also gain a +1 bonus to any movement from a power that does not count your speed.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloodied Horror</title>
+		<tier>Epic</tier>
+		<category>Bloodline</category>
+		<prereq>
+			<type>feat</type>
+			<name>Foulborn Heritage</name>
+		</prereq>
+		<group>Attack Enhancement</group>
+		<group>Attack Hindrance</group>
+		<group>Bloodied</group>
+		<group>Bloodied Enemy</group>
+		<group>Fear</group>
+		<group>Foulborn Heritage</group>
+		<benefit>You gain a +1 bonus to attack rolls with Fear powers.</benefit>
+		<benefit>This increases to +2 while you are bloodied.</benefit>
+		<benefit>In addition, bloodied enemies adjacent to you take a -2 penalty to all attack rolls.</benefit>
+		<benefit>This increases to -4 while both you and the enemy are bloodied.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloodied Invigoration</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>ability</type>
+			<name>Constitution</name>
+			<value>13</value>
+		</prereq>
+		<prereq>
+			<type>race</type>
+			<name>Dragonborn</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Fighter</name>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Class</group>
+		<group>Racial</group>
+		<group>Temporary Hit Points</group>
+		<benefit>While you are bloodied, when you hit with a martial power that grants you temporary hit points, you gain an additional 3 temporary hit points.</benefit>
+		<benefit>These additional temporary hit points increase to 6 at 11th level, and to 10 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloodied Regeneration</title>
+		<tier>Paragon</tier>
+		<category>Bloodline</category>
+		<prereq>
+			<type>feat</type>
+			<name>Vampiric Heritage</name>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Healing</group>
+		<group>Power Repertoire</group>
+		<group>Vampiric Heritage</group>
+		<benefit>You can swap one 10th-level or higher utility power you know for <![CDATA[<i>bloodied regeneration</i>]]>.</benefit>
+		
+		<power>
+			<title>Bloodied Regeneration</title>
+			<class>Feat</class> <category>Utility</category>
+			<fluff>Your wounds call to your immortal blood, which surges to repair your body</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<keyword>Healing, Shadow</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Requirement:</name> <name-style>bold</name-style>
+					<text>You must be bloodied </text>
+				</section>
+				<section>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>Until the end of the encounter, you gain regeneration 5 while you are bloodied.</text>
+				</section>
+				<section>
+					<text>Your regeneration is suppressed for 1 round if you take radiant damage, take damage from a silver weapon, or are in direct sunlight.</text>
+				</section>
+			</part>
+		</power>
+		
 	</feat>
 	
 </catalog>
