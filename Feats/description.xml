@@ -5290,13 +5290,174 @@
 		<prereq>
 			<type>power</type>
 			<name>warlord's aura</name>
-			<qualifier>
+			<qualifier>class</qualifier>
+		</prereq>
 		<group>Bloodied</group>
 		<group>Class</group>
 		<group>Temporary Hit Points</group>
 		<group>Triggered</group>
 		<group>Support</group>
-		<benefit>If an ally uses the Draw Inspiration action from your <![CDATA[<i>warlord's aura</i>]]> while you are bloodied, a second ally within the aura gains temporary hit points equal to your Constitution modifier + your Charisma modifier.</benefit>
+		<benefit>If an ally uses the Draw Inspiration action from your <![CDATA[<i>warlord's aura</i>]]> while you are bloodied, a second ally within the aura can use a free reaction to gain temporary hit points equal to your Constitution modifier + your Charisma modifier.</benefit>
+		<benefit>The temporary hit points increase to 5 + your Constitution modifier + your Charisma modifier at 21st level.</benefit>
 	</feat>
+	
+	<feat>
+		<title>Bloody Tenacity</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>race</type>
+			<name>Human</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>any martial</name>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Class</group>
+		<group>Defense</group>
+		<group>Racial</group>
+		<group>Triggered</group>
+		<benefit>The first time you are bloodied in an encounter, you gain a +2 bonus to all defenses until the end of your next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bloody Triumph</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Barbarian</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Thaneborn Triumph</name>
+		</prereq>
+		<group>Bloodied Enemy</group>
+		<group>Class</group>
+		<group>Damage Enhancement</group>
+		<group>Support</group>
+		<benefit>Whenever you bloody an enemy, the first attack by you and the first attack by an ally gains the bonus damage from your Thaneborn Triumph feature instead of the first attack by you or an ally.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Blowgun Training</title>
+		<tier>Heroic</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>ability</type>
+			<name>Dexterity</name>
+			<value>13</value>
+		</prereq>
+		<group>Multiclass Blowgun</group>
+		<group>Power Repertoire</group>
+		<group>Proficiency Gain</group>
+		<group>Weapon Specialization</group>
+		<benefit>You gain proficiency with the blowgun.</benefit>
+		<benefit>Also, you can reload a blowgun as a free action, increase its range to 10/20, and treat it as having the High Crit property.</benefit>
+		<benefit>If you are a Rogue, you can use a blowgun with the Sneak Attack class feature and any Rogue powers that normally requires you to wield a crossbow or sling.</benefit>
+		<benefit>In addition, if you miss an attack with a blowgun and are hidden from each target, you can remain hidden despite making an attack.</benefit>
+		<benefit>Finally, you can learn the following powers as multiclass powers of the indicated level:</benefit>
+		
+		<power>
+			<title>Stinging Shot</title>
+			<class>Feat</class> <category>Attack</category> <level>3</level>
+			<fluff>The needle lodges in a sensitive area, jolting your prey with pain</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Standard</action> <subaction>action</subaction>
+				<type>Ranged</type> <range>weapon</range>
+				<section>
+					<shade>true</shade> 
+					<name>Requirement:</name> <name-style>bold</name-style>
+					<text>You must be wielding a blowgun</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One creature</text>
+				</section>
+				<section>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<text>Dexterity vs. Reflex</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>2[W] + Dexterity modifier damage, and the target is dazed until the end of your next turn.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 17:</name> <name-style>italic</name-style>
+					<text>If you know this power as an encounter power of level 17 or higher, the damage increases to 4[W] + Dexterity modifier.</text>
+				</section>
+				<section>
+					<name>Miss:</name> <name-style>bold</name-style>
+					<text>The target grants combat advantage until the end of your next turn.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Uncanny Blowgun Aim</title>
+			<class>Feat</class> <category>Utility</category> <level>6</level>
+			<fluff>You breathe precisely, taking in your target and carefully lining up the needle's trajectory</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Martial</keyword>
+				<action>Move</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>Your next attack with a blowgun gain a +2 bonus to the attack roll. If the attack imparts an effect that a save can end, the target takes a -3 penalty to its first saving throw against it.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Crippling Needle</title>
+			<class>Feat</class> <category>Attack</category> <level>9</level>
+			<fluff>Your needle lodges in a key pressure point, causing your target to stiffen and momentarily fail to act</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>weapon</range>
+				<section>
+					<shade>true</shade>
+					<name>Requirement:</name> <name-style>bold</name>
+					<text>You must be wielding a blowgun</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name>
+					<text>One creature</text>
+				</section>
+				<section>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<text>Dexterity vs. AC</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>3[W] + Dexterity modifier damage, and the target is stunned until the end of its next turn.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Aftereffect:</name> <name-style>italic</name-style>
+					<text>The target is dazed (save ends).</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 25:</name> <name-style>italic</name-style>
+					<text>If you know this power as a daily attack power of 25th level or higher, the damage increases to 5[W] + Dexterity modifier.</text>
+				</section>
+				<section>
+					<name>Miss:</name> <name-style>bold</name-style>
+					<text>Half damage, and the target is dazed (save ends).</text>
+				</section>
+			</part>
+		</power>
+		
+	</feat>
+		
 	
 </catalog>
