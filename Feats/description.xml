@@ -5359,7 +5359,7 @@
 		
 		<power>
 			<title>Stinging Shot</title>
-			<class>Feat</class> <category>Attack</category> <level>3</level>
+			<class>Blowgun</class> <category>Attack</category> <level>3</level>
 			<fluff>The needle lodges in a sensitive area, jolting your prey with pain</fluff>
 			<part>
 				<frequency>Encounter</frequency>
@@ -5398,7 +5398,7 @@
 		
 		<power>
 			<title>Uncanny Blowgun Aim</title>
-			<class>Feat</class> <category>Utility</category> <level>6</level>
+			<class>Blowgun</class> <category>Utility</category> <level>6</level>
 			<fluff>You breathe precisely, taking in your target and carefully lining up the needle's trajectory</fluff>
 			<part>
 				<frequency>Encounter</frequency>
@@ -5415,7 +5415,7 @@
 		
 		<power>
 			<title>Crippling Needle</title>
-			<class>Feat</class> <category>Attack</category> <level>9</level>
+			<class>Blowgun</class> <category>Attack</category> <level>9</level>
 			<fluff>Your needle lodges in a key pressure point, causing your target to stiffen and momentarily fail to act</fluff>
 			<part>
 				<frequency>Daily</frequency>
@@ -5688,6 +5688,132 @@
 					<shade>true</shade> <indent>1</indent>
 					<name>Level 21:</name> <name-style>italic</name-style>
 					<text>2[W] poison damage.</text>
+				</section>
+			</part>
+		</power>
+		
+	</feat>
+	
+	<feat>
+		<title>Bola Training</title>
+		<tier>Heroic</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>ability</type>
+			<name>Dexterity</name>
+			<value>13</value>
+		</prereq>
+		<group>Mobility Hindrance</group>
+		<group>Multiclass Bola</group>
+		<group>Proficiency Gain</group>
+		<group>Weapon Specialization</group>
+		<benefit>You gain proficiency with the bola.</benefit>
+		<benefit>When you make a Weapon attack with your bola and hit, you can forgo dealing damage to the target to immobilize it until the end of your next turn. On a critical hit, the target is also knocked prone.</benefit>
+		<benefit>In addition, you can learn the following powers as multiclass powers of the indicated level:</benefit>
+		
+		<power>
+			<title>Binding Bola</title>
+			<class>Bola</class> <category>Attack</category> <level>3</level>
+			<fluff>The weights entwine the cords around your target, wrapping it so tightly that it cannot maintain its momentum</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>weapon</range>
+				<section>
+					<shade>true</shade>
+					<name>Requirement:</name> <name-style>bold</name-style>
+					<text>You must be wielding a bola</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One creature</text>
+				</section>
+				<section>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<text>Dexterity vs. Reflex</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>2[W] + Dexterity modifier damage, and the target is immobilized until the end of your next turn.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Critical:</name> <name-style>bold</name-style>
+					<text>The target is also knocked prone.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 17:</name> <name-style>italic</name-style>
+					<text>If you know this power as an encounter attack power of 17th level or higher, the damage increases to 4[W] + Dexterity.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Bola Recovery</title>
+			<class>Bola</class> <category>Utility</category> <level>6</level>
+			<fluff>With the bola back in hand, you ready it for another precise throw</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Martial</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Prerequisite:</name> <name-style>bold</name-style>
+					<text>You must know the <![CDATA[<i>binding bola</i>]]> power</text>
+				</section>
+				<section>
+					<name>Requirement:</name> <name-style>bold</name-style>
+					<text>You must be wielding a bola</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You regain the use of your <![CDATA[<i>binding bola</i>]]> power.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Felling Bola</title>
+			<class>Bola</class> <category>Attack</category> <level>9</level>
+			<fluff>Such is the force of your throw, that your foe is knocked down it finds too painful stand back up again</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>weapon</range>
+				<section>
+					<shade>true</shade>
+					<name>Requirement:</name> <name-style>bold</name-style>
+					<text>You must be wielding a bola</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One creature</text>
+				</section>
+				<section>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<text>Dexterity vs. Reflex</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>2[W] + Dexterity modifier + Strength modifier damage and the target is knocked prone.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>The target cannot stand up from prone (save ends).</text>
+				</section>
+				<section>
+					<name>Miss:</name> <name-style>bold</name-style>
+					<text>Half damage, and the target is knocked prone.</text>
+				</section>
+				<section>
+					<text>The target cannot stand from prone until the end of its next turn.</text>
 				</section>
 			</part>
 		</power>
