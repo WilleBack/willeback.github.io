@@ -6122,6 +6122,7 @@
 		<tier>Heroic</tier>
 		<group>Background</group>
 		<group>Saving Throws</group>
+		<group>Skill Enhancement</group>
 		<group>Stealth</group>
 		<benefit>Your origin changes to shadow.</benefit>
 		<benefit>Also, you gain a +2 feat bonus to Stealth</benefit>
@@ -6269,6 +6270,49 @@
 		<benefit>When you use your <![CDATA[<i>dragon breath</i>]]> racial power, you gain the following benefits until the end of your next turn:</benefit>
 		<benefit>&#9658; You gain a +1 bonus to attack rolls with melee powers that grant temporary hit points to you.</benefit>
 		<benefit>&#9658; You count as having spent an additional healing surge for powers with varying benefits based on how many you have spent.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Bravo</title>
+		<tier>Heroic</tier>
+		<group>Attack Enhancement</group>
+		<group>Fear</group>
+		<group>Skill Training</group>
+		<benefit>You gain training in Intimidate.</benefit>
+		<benefit>Once per encounter, you can designate one creature you can see as your prey until the end of the encounter. If your prey is a solo creature, this is (save ends).</benefit>
+		<benefit>You gain a +1 bonus to attack rolls and Intimidate checks against your prey. </benefit>
+		<benefit>This bonus increases to +2 when your prey is under a Fear effect from you.</benefit>
+		<benefit>In addition, you can learn the following powers as multiclass powers of the indicated level:</benefit>
+		
+		<power>
+			<title>Death's Messenger</title>
+			<class>Bola</class> <category>Attack</category> <level>3</level>
+			<fluff>Your prey has an appointment with death, and your attack reminds it of the fact</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Fear</keyword>
+				<action>Nonaction</action> <subaction>Interrupt</subaction>
+				<type>Special</type>
+				<section>
+					<shade>true</shade>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You target your prey with an at-will melee or ranged attack</text>
+				</section>
+				<section>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The triggering attack deals +1[W] additional damage, or +1d8 additional damage if the attack is not a Weapon attack.</text>
+				</section>
+				<section>
+					<text>On a hit, the target also takes a -2 penalty to attack rolls against you until the end of your next turn.</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 17:</name> <name-style>italic</name-style>
+					<text>If you know this power as an encounter attack power of 17th level or higher, the additional damage increases to +2[W], or +2d8 if the attack is not a Weapon attack.</text>
+				</section>
+			</part>
+		</power>
+		
 	</feat>
 	
 </catalog>
