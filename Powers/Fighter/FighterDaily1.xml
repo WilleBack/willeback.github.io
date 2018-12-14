@@ -247,4 +247,123 @@
 		</part>
 	</power>
 	
+	<power>
+		<title>Knee Breaker</title>
+		<class>Fighter</class> <category>Attack</category> <level>1</level>
+		<fluff>By smashing into your opponent's legs, you make even the thought of moving painful for him</fluff>
+		<part>
+			<frequency>Daily</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>Weapon</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Strength vs. AC</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>2[W] + Strength modifier damage, and the target is slowed (save ends).</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>If the target is already slowed, it is instead immobilized (save ends).</text>
+			</section>
+			<section>
+				<name>Miss:</name> <name-style>bold</name-style>
+				<text>Half damage, and the target is slowed until the end of its next turn.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Lasting Threat</title>
+		<class>Fighter</class> <category>Attack</category> <level>1</level>
+		<fluff>Following up your challenge with a solid attack, you force your enemy to engage you</fluff>
+		<part>
+			<frequency>Daily</frequency>
+			<keyword>Martial, Reliable, Weapon</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>weapon</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Strength vs. AC</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>You gain a +2 bonus to the attack roll if the target is marked by you</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>3[W] + Strength modifier damage, and the target is marked until the end of the encounter or until you are knocked unconscious, whichever comes first.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>No mark can supersede this mark. If an effect would allow the target to remove a mark on it, it must succeed on a saving throw to remove this mark.</text>
+			</section>
+			<section>
+				<name>Miss:</name> <name-style>bold</name-style>
+				<text>You mark the target until the end of your next turn.</text>
+			</section>
+			<section>
+				<text>You regain the use of this power at the start of your next turn.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>While the target remains marked by this power, you deal +1[W] damage with <![CDATA[<i>enforce challenge</i>]]> against it.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Master's Edge</title>
+		<class>Fighter</class> <category>Attack</category> <level>1</level>
+		<fluff>Your extensive experience helps you pick out the flaws in your opponent's technique, letting you move to meet the enemy's attacks</fluff>
+		<part>
+			<frequency>Daily</frequency> 
+			<keyword>Martial</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<type>Ranged</type> <range>5</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One enemy</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You focus on the target until the end of the encounter.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>Until the end of the encounter, you can use the Master Movement action, below:</text>
+			</section>
+		</part>
+		<part>
+			<part-name>Master Movement</part-name>
+			<frequency>At-Will</frequency>
+			<keyword>Martial</keyword>
+			<action>Opportunity</action> <subaction>Interrupt</subaction>
+			<type>Personal</type>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>The target you are focusing on willingly enters a square adjacent to an ally of yours</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You make a <![CDATA[<i>melee basic attack</i>]]> against the target, or charge the target.</text>
+			</section>
+		</part>
+	</power>
+	
 </catalog>
