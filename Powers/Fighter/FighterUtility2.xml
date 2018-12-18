@@ -75,7 +75,7 @@
 	</power>
 	
 	<power>
-		<title>Boundless Endurance</title>
+		<title>Boundless Endurance Stance</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You shake off the worst of your wounds</fluff>
 		<part>
@@ -140,7 +140,7 @@
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>You mark the target, and trigger an <![CDATA[<i>opportunity attack</i>]]> from it. You have a +2 bonus to defenses against this attack.</text>
+				<text>You mark the target, and provoke an <![CDATA[<i>opportunity attack</i>]]> from it. You have a +2 bonus to defenses against this attack.</text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -153,6 +153,207 @@
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<text>&#9658; If the attack was a miss, the ally can move his or her speed as a free reaction.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Crowd Fighting</title>
+		<class>Fighter</class> <category>Utility</category> <level>2</level>
+		<fluff>You roll with your foe's feeble attack, causing it to lash out at another nearby enemy</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Immediate</action> <subaction>Reaction</subaction>
+			<type>Melee</type> <range>1</range>
+			<section>
+				<shade>true</shade>
+				<name>Prerequisite:</name> <name-style>bold</name-style>
+				<text>You must have training in Streetwise</text>
+			</section>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>An enemy misses you with a melee attack</text>
+			</section>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature other than the triggering enemy</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The target takes damage equal to your Dexterity modifier, or 4 + your Dexterity modifier if it is within the triggering enemy's reach.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 11:</name> <name-style>italic</name-style>
+				<text>3 + your Dexterity modifier damage, or 8 + your Dexterity modifier damage if within reach.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>6 + your Dexterity modifier damage, or 12 + your Dexterity modifier damage if within reach.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Defensive Stance</title>
+		<class>Fighter</class> <category>Utility</category> <level>2</level>
+		<fluff>Dropping into a cautious stance, you maneuver around your opponent's attacks to get into position</fluff>
+		<part>
+			<frequency>Daily</frequency>
+			<keyword>Martial, Stance</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You enter the Defensive stance.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>While you remain in the stance, you are slowed and gain a +2 power bonus to AC.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>In addition, whenever an enemy misses you with a melee attack, you can shift 1 square as an opportunity reaction.</text>
+			</section>
+			<section>
+				<name>Special:</name> <name-style>bold</name-style>
+				<text>You can end this stance as a free action during your turn, but not on the same turn that you activated it.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Eldritch Tactics</title>
+		<class>Fighter</class> <category> <level>2</level>
+		<fluff>Using your talent for teleportation, you take an ally's place</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Arcane, Martial, Teleportation</keyword>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Close</type> <range>burst 3</range>
+			<section>
+				<indent>2</indent>
+				<name>Fey Step:</name> <name-style>bold</name-style>
+				<text>If you know the <![CDATA[<i>fey step</i>]]> racial power and it is not expended, this power is <![CDATA[<b>Close</b]]> burst 5 instead</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Prerequisite:</name> <name-style>bold</name-style>
+				<text>You must be eladrin</text>
+			</section>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>You and one ally in the burst</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Each target teleports, swapping positions.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>If one target has a larger space than the other, the smaller target teleports into a position of your choice within the larger target's original space, and the larger target teleports into a position of your choice that fully covers the smaller target's original space.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Forceful Drag</title>
+		<class>Fighter</class> <category>Utility</category> <level>2</level>
+		<fluff>You dig your fingers into a foe and drag the struggling opponent across the battlefield</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<shade>true</shade>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must have a creature grabbed</text>
+			</section>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature grabbed by you</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You move up to your speed. For each square you move, you slide the target 1 square to a square adjacent to you.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>The target remains grabbed, and you do not provoke an <![CDATA[<i>opportunity attack</i>]]> from it for this movement.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>At the end of the move, you can end the grab to knock the target prone and slide it 1 square.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Full Extension</title>
+		<class>Fighter</class> <category>Utility</category> <level>2</level>
+		<fluff>You lunge forward, hitting a spot well beyond where your foes thought you could reach</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The reach of the next melee Weapon attack you make before the end of your current turn increases by 1.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Get Out of There</title>
+		<class>Fighter</class> <category>Utility</category> <level>2</level>
+		<fluff>You pull one of your allies into a more advantageous position</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>1</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One ally</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You slide the target up to 2 squares to a square adjacent to you. You can slide the target through your own space.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Glowering Threat</title>
+		<class>Fighter</class> <category>Utility</category> <level>2</level>
+		<fluff>Your intimidating glare distracts your enemies as they attempt to attack your allies</fluff>
+		<part>
+			<frequency>Encounter</frequency> 
+			<keyword>Martial</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<type>Close</type> <range>blast 3</range>
+			<section>
+				<shade>true</shade>
+				<name>Prerequisite:</name> <name-style>bold</name-style>
+				<text>You must have training in Intimidate</text>
+			</section>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>Each enemy in the blast</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Each target takes a -5 penalty to attack rolls against any creature other than you. This penalty lasts until the end of your next turn.</text>
 			</section>
 		</part>
 	</power>
