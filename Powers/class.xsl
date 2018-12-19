@@ -34,7 +34,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			.power {
 				margin:0.2cm; 
-				width:98%;
+				width:95%;
 				float:left;
 				page-break-inside:avoid;
 			}
@@ -270,7 +270,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:choose>
 			<xsl:when test="part[1]/frequency = 'At-Will'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">#407040</xsl:with-param>
+					<xsl:with-param name="bgcolor">#598d60</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="part[1]/frequency = 'Encounter'">
