@@ -126,7 +126,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
 		<xsl:if test="part-name != ''">
 			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
-				<b><xsl:value-of select="part-name"/></b>
+				<i><b><xsl:value-of select="part-name"/></b></i>
 			</div>
 		</xsl:if>
 		
