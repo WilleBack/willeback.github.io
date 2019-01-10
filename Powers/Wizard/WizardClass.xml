@@ -655,6 +655,90 @@
 			<benefit>You gain the following benefits:</benefit>
 			<benefit>&#9658; You can use a standard action to sustain an arcane Conjuration or Zone you have created, even if the power could normally not be sustained. The Conjuration or Zone persists until the end of your next turn.</benefit>
 			<benefit>&#9658; You gain the <![CDATA[<i>conjurer's barrier</i>]]> power.</benefit>
+			
+			<power>
+				<title>Conjurer's Barrier</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You bring forth a barrier to impede your enemies' movement</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Conjuration, Implement, Zone</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Area</type> <range>wall 2 within 10 squares</range>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>Choose either physical barrier or damaging barrier:</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<name>Physical barrier:</name> <name-style>bold</name-style>
+						<text>You bring forth physical impediments. Until the end of the encounter, the area is difficult terrain. Enemies that end their turn in the area must succeed on a saving throw or be knocked prone.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<name>Damaging barrier:</name> <name-style>bold</name-style>
+						<text>You bring forth a damaging barrier. Until the end of the encounter, when a creature enters the area or ends its turn there, it takes damage equal to your Constitution modifier + your implement's enhancement bonus. A creature can take this damage only once per turn.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>2</indent>
+						<name>Level 11:</name> <name-style>italic</name-style>
+						<text>2 + Constitution modifier + your implement's enhancement bonus damage.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>2</indent>
+						<name>Level 21:</name> <name-style>italic</name-style>
+						<text>5 + Constitution modifier + your implement's enhancement bonus damage.</text>
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>When you first gain this power, you can choose for the damaging barrier to deal acid, cold, fire, lightning or thunder damage instead. If you do, the power gains the corresponding keyword when used to bring forth the damaging barrier.</text>
+					</section>
+					<section>
+						<text>You can only have one <![CDATA[<i>conjurer's barrier</i>]]> in existence at once. If you use this power again while the previous barrier still exists, the previous one immediately ends.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Enchantment</name>
+			<benefit>Arcanists specializing in Enchantment twist the minds of the weak of will. Different Enchantment spells can scorch the mind of an enemy, numb its reactions or even make it to the Arcanist's puppet.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you pull, push or slide a creature with an Enchantment power, you increase the forced movement by 2 squares.</benefit>
+			<benefit>&#9658; When you use an Enchantment power to force a creature to make an attack, it gains a bonus to the attack roll equal to one-half your Charisma modifier, or your Charisma modifier if you used a daily power.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>enchanter's mind trick</i>]]> power.</benefit>
+			
+			<power>
+				<title>Enchanter's Mind Trick</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You cloud an enemy's thinking, making an ally seem more imposing in its mind</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Charm, Enchantment</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Ranged</type> <range>10</range>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>You or one ally, and one enemy who can see you or the chosen ally</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>The target enemy takes a -2 penalty to attack rolls against the target ally until the end of the encounter.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>If the target ally scores a critical hit or bloodies the target enemy, the penalty increases to -4 until the end of the ally's next turn.</text>
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>You can only have one <![CDATA[<i>enchanter's mind trick</i>]]> in effect at once. The previous effect immediately ends if you use this power again.</text>
+					</section>
+				</part>
+			</power>
+		
 		</subfeature>
 		
 	</feature>
