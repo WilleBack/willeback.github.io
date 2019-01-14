@@ -647,7 +647,7 @@
 	<feature>
 		<name>School Specialization</name>
 		<benefit>While they have access to the full gamut of wizardly spells, each Arcanist tends to focus on a subset of those spells. Over generations, these different focuses have been codified into groups, traditions, and others. Collectively they are called the schools of wizardry. </benefit>
-		<benefit>Choose Conjuration, Enchantment, Ethermancy, Evocation, Illusion, Necromancy, or Transmutation as your Arcanist's specialized school.</benefit>
+		<benefit>Choose Conjuration, Enchantment, Evocation, Illusion, Necromancy, Nethermancy, or Transmutation as your Arcanist's specialized school.</benefit>
 		
 		<subfeature>
 			<name>Conjuration</name>
@@ -708,6 +708,7 @@
 			<benefit>You gain the following benefits:</benefit>
 			<benefit>&#9658; When you pull, push or slide a creature with an Enchantment power, you increase the forced movement by 2 squares.</benefit>
 			<benefit>&#9658; When you use an Enchantment power to force a creature to make an attack, it gains a bonus to the attack roll equal to one-half your Charisma modifier, or your Charisma modifier if you used a daily power.</benefit>
+			<benefit>&#9658; When you use an Enchantment power that does not deal damage and ends on a save, the target a penalty to the first saving throw equal to your Charisma modifier.</benefit>
 			<benefit>&#9658; You gain the <![CDATA[<i>enchanter's mind trick</i>]]> power.</benefit>
 			
 			<power>
@@ -740,6 +741,45 @@
 			</power>
 		
 		</subfeature>
+		
+		<subfeature>
+			<name>Evocation</name>
+			<benefit>Evokers take a more direct approach to affecting the world with their spells. The Evocation spells an Arcanist wields rain fire and ice, thunder and lightning to the battlefield.</benefit>
+			<benefit>When you finish an extended rest, choose a number of allies equal to your Constitution modifier. Your arcane Evocation powers have a -5 to hit the chosen allies, and cannot critically hit them.</benefit>
+			<benefit>When you roll damage for an arcane Evocation power, you can reroll one of the dice, or two dice for a daily power. This increases to two dice for an encounter power and three dice for a daily power at 11th level, and to two dice for an at-will power, three dice for an encounter power, and four dice for a daily power at 21st level.</benefit>
+			<benefit>You gain the <![CDATA[<i>evoker's encompassing explosion</i>]]> power.</benefit>
+			
+			<power>
+				<title>Evoker's Encompassing Explosion</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You know how to manipulate your spell to catch an enemy that seemed beyond its effects</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Evocation</keyword>
+					<action>Free</action> <subaction>Interrupt</subaction>
+					<type>Special</type>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>You use an area burst, close blast or close burst power that targets either all creatures or all enemies in the area</text>
+					</section>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>One creature adjacent to the triggering power's area</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>The target is considered to be inside the triggering power's area when resolving the power.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>This does not increase the power's actual area to include the target's space.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+			
 		
 	</feature>
 	
