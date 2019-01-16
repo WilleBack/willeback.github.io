@@ -654,6 +654,7 @@
 			<benefit>The art of conjuration is all about filling the field. An Arcanist specializing in this school brings forth new terrain, summons creatures to aid him or her, and and creates arcane entities for specialized purposes.</benefit>
 			<benefit>You gain the following benefits:</benefit>
 			<benefit>&#9658; You can use a standard action to sustain an arcane Conjuration or Zone you have created, even if the power could normally not be sustained. The Conjuration or Zone persists until the end of your next turn.</benefit>
+			<benefit>&#9658; If you have more than one summoned creature in existence, you can give each the same general command as a single action. You can also have each make a <![CDATA[<i>basic attack</i>]]> as a standard action command.</benefit>
 			<benefit>&#9658; You gain the <![CDATA[<i>conjurer's barrier</i>]]> power.</benefit>
 			
 			<power>
@@ -745,12 +746,14 @@
 		<subfeature>
 			<name>Evocation</name>
 			<benefit>Evokers take a more direct approach to affecting the world with their spells. The Evocation spells an Arcanist wields rain fire and ice, thunder and lightning to the battlefield.</benefit>
-			<benefit>When you finish an extended rest, choose a number of allies equal to your Constitution modifier. Your arcane Evocation powers have a -5 to hit the chosen allies, and cannot critically hit them.</benefit>
-			<benefit>When you roll damage for an arcane Evocation power, you can reroll one of the dice, or two dice for a daily power. This increases to two dice for an encounter power and three dice for a daily power at 11th level, and to two dice for an at-will power, three dice for an encounter power, and four dice for a daily power at 21st level.</benefit>
-			<benefit>You gain the <![CDATA[<i>evoker's encompassing explosion</i>]]> power.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you finish an extended rest, choose a number of allies equal to your Constitution modifier. Your arcane Evocation powers have a -5 to hit the chosen allies, and cannot critically hit them.</benefit>
+			<benefit>&#9658; When you roll damage for an arcane Evocation power, you can reroll one of the dice, or two dice for a daily power. This increases to two dice for an encounter power and three dice for a daily power at 11th level, and to two dice for an at-will power, three dice for an encounter power, and four dice for a daily power at 21st level. You always keep the second result. </benefit>
+			<benefit>&#9658; If you score a critical hit with an arcane Evocation power, you can reroll any or all of the additional damage dice from your implement once, keeping the second result.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>evoker's aim</i>]]> power.</benefit>
 			
 			<power>
-				<title>Evoker's Encompassing Explosion</title>
+				<title>Evoker's Aim</title>
 				<class>Wizard</class> <category>Utility</category>
 				<fluff>You know how to manipulate your spell to catch an enemy that seemed beyond its effects</fluff>
 				<part>
@@ -779,7 +782,57 @@
 			</power>
 			
 		</subfeature>
+		
+		<subfeature>
+			<name>Illusion</name>
+			<benefit>The school of Illusion focuses on misdirection and concealment. Illusion spells can fool the target into thinking they are someplace else and create imaginary assailants to distract or even hurt it.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you hit a target with an arcane Illusion spell, the target takes a penalty equal to one-half your Charisma modifier on the next attack roll it makes, or all attack rolls for the next attack it makes if you used a daily power.</benefit>
+			<benefit>&#9658; You gain a +4 bonus to attack rolls with Illusion powers that deal no damage.</benefit>
+			<benefit>&#9658; As a move action, you can move a zone you have created with an Illusion power a number of squares equal to your Charisma modifier.</benefit>
+			<benefit>You gain the <![CDATA[<i>illusionist's ally</i>]]> power.</benefit>
 			
+			<power>
+				<title>Illusionist's Ally</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You create a simple illusory warrior to distract your foes</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Illusion</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Ranged</type> <range>10</range>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You create an illusion of a warrior in a square within range. The illusion lasts until the end of the encounter.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>The illusion counts as an ally for you and your allies for the purposes of flanking, but not for other purposes.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>The illusion does not occupy its space, but an enemy must succeed at a saving throw to voluntarily enter the illusion's space.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>You and your allies have concealment against ranged attacks that pass through the illusion's space.</text>
+					</section>
+					<section>
+						<text>The illusion can be attacked, and uses your defenses, not counting any temporary modifiers affecting you. An attack against the illusion's Will automatically hits it.</text> 
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>When an attack hits it, the illusion immediately ends. This does not count as a creature being killed or hit by the attack.</text> 
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>You can only have one <![CDATA[<i>illusionist's ally</i>]]> in existence at once. If you use this power again while the previous ally still exists, the previous one immediately ends.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
 		
 	</feature>
 	
