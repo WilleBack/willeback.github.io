@@ -535,14 +535,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div>
 	
 	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</div>
+		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
 		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
 			<xsl:call-template name="line" />
 		</xsl:for-each>
 	</div>
 	
 	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</div>
+		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
 		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
 			<xsl:call-template name="line" />
 		</xsl:for-each>
