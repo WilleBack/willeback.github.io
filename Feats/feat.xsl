@@ -527,12 +527,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="listgroup">
 	
-	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
-		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Heroic']">
-			<xsl:call-template name="line" />
-		</xsl:for-each>
-	</div>
+	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Heroic'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
+			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Heroic']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
 	
 	<div class="list">
 		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
