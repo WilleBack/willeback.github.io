@@ -536,50 +536,112 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 	</xsl:if>
 	
-	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
-		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
-			<xsl:call-template name="line" />
-		</xsl:for-each>
-	</div>
+	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
+			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
 	
-	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
-		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
-			<xsl:call-template name="line" />
-		</xsl:for-each>
-	</div>
+	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Epic'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
+			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
 
 </xsl:template>
 
 <xsl:template name="listcategory">
 	
-	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
-		<xsl:for-each select="//catalog/feat[category=current()/@selection]">
-			<xsl:call-template name="line" />
-		</xsl:for-each>
-	</div>
+	<xsl:if test="count(//catalog/feat[category=current()/@selection and tier='Heroic'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
+			<xsl:for-each select="//catalog/feat[category=current()/@selection and tier='Heroic']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
+	
+	<xsl:if test="count(//catalog/feat[category=current()/@selection and tier='Paragon'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text> </div>
+			<xsl:for-each select="//catalog/feat[category=current()/@selection and tier='Paragon']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
+	
+	<xsl:if test="count(//catalog/feat[category=current()/@selection and tier='Epic'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text> </div>
+			<xsl:for-each select="//catalog/feat[category=current()/@selection and tier='Epic']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
 
 </xsl:template>
 
 <xsl:template name="listprereq">
 	
-	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
-		<xsl:choose>
-			<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling'">
-				<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection or prereq/name='Small or smaller']">
-					<xsl:call-template name="line" />
-				</xsl:for-each>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection]">
-					<xsl:call-template name="line" />
-				</xsl:for-each>
-			</xsl:otherwise>
-		</xsl:choose>
-	</div>
+	<xsl:if test="count(//catalog/feat[prereq/name=current()/@selection and tier='Heroic'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
+			<xsl:choose>
+				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling'">
+					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Heroic']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection and tier='Heroic']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
+		</div>
+	</xsl:if>
+	
+	<xsl:if test="count(//catalog/feat[prereq/name=current()/@selection and tier='Paragon'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
+			<xsl:choose>
+				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling'">
+					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Paragon']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection and tier='Paragon']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
+		</div>
+	</xsl:if>
+	
+	<xsl:if test="count(//catalog/feat[prereq/name=current()/@selection and tier='Epic'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
+			<xsl:choose>
+				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling'">
+					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Epic']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="//catalog/feat[prereq/name=current()/@selection and tier='Epic']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
+		</div>
+	</xsl:if>
 
 </xsl:template>
 
