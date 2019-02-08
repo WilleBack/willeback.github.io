@@ -151,9 +151,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="list">
 				<div class="groupname">Arcane classes</div>
-				<xsl:for-each select="catalog/feat[prereq/name='any arcane']">
-					<xsl:call-template name="line" />
-				</xsl:for-each>
+				<xsl:if test="count(//catalog/feat[prereq/name='any arcane' and tier='Heroic'])>0"> 
+					<div class="groupname">Heroic</div>
+					<xsl:for-each select="catalog/feat[prereq/name='any arcane' and tier='heroic']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:if>
+				
+				<xsl:if test="count(//catalog/feat[prereq/name='any arcane' and tier='Paragon'])>0"> 
+					<div class="groupname">Paragon</div>
+					<xsl:for-each select="catalog/feat[prereq/name='any arcane' and tier='Paragon']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:if>
+				
+				<xsl:if test="count(//catalog/feat[prereq/name='any arcane' and tier='Epic'])>0"> 
+					<div class="groupname">Heroic</div>
+					<xsl:for-each select="catalog/feat[prereq/name='any arcane' and tier='Epic']">
+						<xsl:call-template name="line" />
+					</xsl:for-each>
+				</xsl:if>
 			</div>
 			
 			<div class="list">
