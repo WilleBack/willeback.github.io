@@ -528,8 +528,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="listgroup">
 	
 	<div class="list">
-		<div class="groupname"> <xsl:value-of select="@selection" /> </div>
-		<xsl:for-each select="//catalog/feat[group=current()/@selection AND tier=Heroic]">
+		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
+		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Heroic']">
+			<xsl:call-template name="line" />
+		</xsl:for-each>
+	</div>
+	
+	<div class="list">
+		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</div>
+		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
+			<xsl:call-template name="line" />
+		</xsl:for-each>
+	</div>
+	
+	<div class="list">
+		<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</div>
+		<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
 			<xsl:call-template name="line" />
 		</xsl:for-each>
 	</div>
