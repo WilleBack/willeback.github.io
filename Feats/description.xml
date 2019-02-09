@@ -1433,11 +1433,11 @@
 		<category>Multiclass</category>
 		<prereq>
 			<type>feat</type>
-			<name>Any Fighter multiclass</name>
+			<name>Any Swordmage multiclass</name>
 		</prereq>
 		<prereq>
 			<type>multiclass</type>
-			<name>Fighter paragon</name>
+			<name>Swordmage paragon</name>
 		</prereq>
 		<group>Multiclass Swordmage</group>
 		<group>Power Repertoire</group>
@@ -1723,7 +1723,7 @@
 			<type>class</type>
 			<name>any arcane</name>
 		</prereq>
-		<group>Class</group>
+		<group>Class Combination</group>
 		<group>Damage Bonus</group>
 		<benefit>Once per encounter, when you hit at least one enemy with an arcane encounter attack, you gain a healing surge.</benefit>
 		<benefit>As a nonaction interrupt before rolling damage for an arcane encounter attack power, you can lose a healing surge to gain a bonus to the triggering power's damage roll equal to your Charisma modifier.</benefit>
@@ -6149,6 +6149,7 @@
 			<type>skill</type>
 			<name>Arcana</name>
 		</prereq>
+		<group>Background</group>
 		<group>Languages</group>
 		<group>Skill Enhancement</group>
 		<benefit>You gain a +2 feat bonus to Endurance and Intimidate checks.</benefit>
@@ -7610,6 +7611,272 @@
 		<group>Class</group>
 		<group>Triggered</group>
 		<benefit>After you use a Channel Divinity power, you gain a +1 power bonus to the next melee attack roll you make before the end of your next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Channel of Faith</title>
+		<tier>Paragon</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>feat</type>
+			<name>any Cleric multiclass</name>
+		</prereq>
+		<prereq>
+			<type>multiclass</type>
+			<name>Cleric paragon</name>
+		</prereq>
+		<group>Channel Divinity</group>
+		<group>Multiclass Cleric</group>
+		<group>Power Repertoire</group>
+		<benefit>You gain the Cleric Channel Divinity power <![CDATA[<i>divine fortune</i>]]> and a Channel Divinity power from one of your domains.</benefit>
+		<benefit>If you don't have the Channel Divinity feature, you gain it. You can now use a single Channel Divinity power each encounter.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Channel of Invocation</title>
+		<tier>Paragon</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>feat</type>
+			<name>any Invoker multiclass</name>
+		</prereq>
+		<prereq>
+			<type>multiclass</type>
+			<name>Invoker paragon</name>
+		</prereq>
+		<group>Channel Divinity</group>
+		<group>Multiclass Invoker</group>
+		<group>Power Repertoire</group>
+		<benefit>You gain an Invoker Channel Divinity power corresponding to one of the Divine Covenants, and a Channel Divinity power corresponding to your deity.</benefit>
+		<benefit>If you don't have the Channel Divinity feature, you gain it. You can now use a single Channel Divinity power each encounter.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Channel of Valor</title>
+		<tier>Paragon</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>feat</type>
+			<name>any Paladin multiclass</name>
+		</prereq>
+		<prereq>
+			<type>multiclass</type>
+			<name>Paladin paragon</name>
+		</prereq>
+		<group>Channel Divinity</group>
+		<group>Multiclass Paladin</group>
+		<group>Power Repertoire</group>
+		<benefit>You gain the Paladin Channel Divinity powers <![CDATA[<i>divine mettle</i> and <i>divine strength]]>.</benefit>
+		<benefit>If you don't have the Channel Divinity feature, you gain it. You can now use a single Channel Divinity power each encounter.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Channel of Vengeance</title>
+		<tier>Paragon</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>feat</type>
+			<name>any Avenger multiclass</name>
+		</prereq>
+		<prereq>
+			<type>multiclass</type>
+			<name>Avenger paragon</name>
+		</prereq>
+		<group>Channel Divinity</group>
+		<group>Multiclass Avenger</group>
+		<group>Power Repertoire</group>
+		<benefit>You gain the Avenger Channel Divinity power <![CDATA[<i>divine guidance</i>]]> and a Channel Divinity power corresponding to your deity.</benefit>
+		<benefit>If you don't have the Channel Divinity feature, you gain it. You can now use a single Channel Divinity power each encounter.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Channeled Battlerage</title>
+		<tier>Epic</tier>
+		<prereq>
+			<type>ability</type>
+			<name>Constitution</name>
+			<value>19</value>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Fighter</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Battlerager Training</name>
+		</prereq>
+		<group>Class</group>
+		<group>Damage Bonus</group>
+		<benefit>When you hit with a melee attack, you can choose to lose all temporary hit points to reroll the damage and gain a bonus to the damage roll equal to the number of healing surges you have expended.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Charging Admixture</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Minotaur</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Artificer</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>curative admixture</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Charge</group>
+		<group>Class</group>
+		<group>Damage Bonus</group>
+		<group>Power Enhancement</group>
+		<group>Support</group>
+		<benefit>When you use your <![CDATA[<i>curative admixture</i>]]> power, the target gains a +2 bonus to damage rolls on charge attacks until the end of your next turn.</benefit>
+		<benefit>The damage bonus increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Charging Aegis</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Swordmage</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Swordmage Aegis</name>
+		</prereq>
+		<group>Charge</group>
+		<group>Class</group>
+		<group>Marking</group>
+		<benefit>When you use a charge attack and hit the enemy, you can use your aegis on it as a nonaction reaction before you turn ends.</benefit>
+		<benefit>If you do so, the penalty to attack rolls imposed by your mark is -3 instead of -2.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Charging Rampage</title>
+		<tier>Epic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Barbarian</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Savege Rage</name>
+		</prereq>
+		<prereq>
+			<type>feat</type>
+			<name>Savage Rampage</name>
+		</prereq>
+		<group>Charge</group>
+		<group>Class</group>
+		<group>Critical</group>
+		<benefit>When your Savage Rampage feat triggers, you can choose to <![CDATA[<i>charge</i> instead of making a <i>melee basic attack</i>]]>.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Cheetah's Speed</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Druid</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>wild shape</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Class</group>
+		<group>Mobility</group>
+		<group>Shapechange</group>
+		<benefit>While you are in beast form, you gain a +1 bonus to speed, or a +2 bonus when you run or charge.</benefit>
+		<benefit>While you are bloodied, these bonuses increase to +2 and +4, respectively.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Child of Fire</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>feat</type>
+			<name>Born of the Elements</name>
+		</prereq>
+		<group>Background</group>
+		<group>Bloodied</group>
+		<group>Fire Specialization</group>
+		<group>Triggered</group>
+		<benefit>Whenever an attack bloodies you or knocks you unconscious, one enemy of your choice within 2 squares of you takes fire damage equal to your Constitution modifier.</benefit>
+		<benefit>The fire damage increases to 3 + your Constitution modifier at 11th, and to 6 + your Constitution modifier at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Child of Stone</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>feat</typer>
+			<name>Born of the Elements</name>
+		</prereq>
+		<group>Background</group>
+		<group>Damage Resistance</group>
+		<group>Second Wind</group>
+		<benefit>When you use your <![CDATA[<i>second wind</i>]]> while on an earthen or stone surface, you also gain resist 5 to all damage until the end of your next turn.</benefit>
+		<benefit>This resistance increases to 10 at 11th level, and to 15 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Child of the Maelstorm</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>feat</type>
+			<name>Born of the Elements</name>
+		</prereq>
+		<group>Background</group>
+		<group>Saving Throws</group>
+		<group>Triggered</group>
+		<benefit>Whenever you take acid, cold, fire, lightning, or thunder damage, you gain a +2 bonus to your next saving throw during this encounter.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Child of the Sea</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>feat</type>
+			<name>Born of the Elements</name>
+		</prereq>
+		<group>Background</group>
+		<group>Mobility</group>
+		<benefit>You gain a swim speed equal to your speed.</benefit>
+		<benefit>In addition, you gain Aquatic keyword. In aquatic combat, you gain a +2 bonus to attack rolls against nonaquatic creatures.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Child of Wind</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>feat</type>
+			<name>Born of the Elements</name>
+		</prereq>
+		<group>Background</group>
+		<group>Mobiity</group>
+		<benefit>Whenever you run or charge and are not wearing heavy armor, you ignore difficult terrain.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Savage Rampage</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Barbarian</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Savage Rage</name>
+		</prereq>
+		<group>Class</group>
+		<group>Critical</group>
+		<group>Extra Attack</group>
+		<benefit>Once per round when you are raging and score a critical hit with a Barbarian attack power, you can make a <![CDATA[<i>melee basic</i>]]> as a free reaction.</benefit>
+		<benefit>If you are wielding more than one weapon, you must make the attack with the same weapon.</benefit>
 	</feat>
 	
 </catalog>
