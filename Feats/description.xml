@@ -25,6 +25,7 @@
 	<list selection="Damage Resistance" />
 	<list selection="Defense" />
 	<list selection="Defense Penalty" />
+	<list selection="Demon-hunting" />
 	<list selection="Dragon-hunting" />
 	
 	<list selection="Equipment" />
@@ -32,6 +33,7 @@
 	
 	<list selection="Fear" />
 	<list selection="Fire Specialization" />
+	<list selection="Flanking" />
 	<list selection="Forced Movement" />
 	<list selection="Force Specialization" />
 	
@@ -39,6 +41,7 @@
 	
 	<list selection="Healing" />
 	<list selection="Healing Surge" />
+	<list selection="Hit Points" />
 	
 	<list selection="Illumination" />
 	<list selection="Implement Specialization" />
@@ -6399,6 +6402,7 @@
 		<group>Support</group>
 		<benefit>When an ally who can see and hear you spends an action point to make an attack, that ally can choose to make the attack with bravado.</benefit>
 		<benefit>If the ally does, he or she deals +4 additional damage with the attack, but grants combat advantage to any target of the attack until the end of his or her next turn.</benefit>
+		<benefit>The additional damage increases to +6 at 11th level, and to +8 at 21st level.</benefit>
 	</feat>
 	
 	<feat>
@@ -7766,7 +7770,7 @@
 		</prereq>
 		<prereq>
 			<type>feature</type>
-			<name>Savege Rage</name>
+			<name>Savage Rage</name>
 		</prereq>
 		<prereq>
 			<type>feat</type>
@@ -8267,6 +8271,124 @@
 		<group>Mobility</group>
 		<group>Triggered</group>
 		<benefit>When you hit your oath target with a ranged attack, you can shift a number of squares equal to your Dexterity modifier as a free reaction. You must end this shift closer to the target than you started it.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Combat Commander</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>ability</type>
+			<name>Intelligence</name>
+			<value>15</value>
+		</prereq>
+		<prereq>
+			<type>ability</type>
+			<name>Wisdom</name>
+			<value>15</value>
+			<combine>or</combine>
+		</prereq>
+		<prereq>
+			<type>ability</type>
+			<name>Charisma</name>
+			<value>15</value>
+			<combine>;</combine>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Warlord</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Combat Leader</name>
+		</prereq>
+		<group>Class</group>
+		<group>Initiative</group>
+		<group>Support</group>
+		<benefit>The bonus to initiative granted by your Combat Leader feature increases by one-half your Intelligence modifier, one-half your Wisdom modifier, or one-half your Charisma modifier, whichever is highest.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Commander's Memory</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>race</type>
+			<name>Deva</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Warlord</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>memory of a thousand lifetimes</name>
+			<qualifier>racial</qualifier>
+		</prereq>
+		<group>Attack Bonus</group>
+		<group>Class</group>
+		<group>Power Enhancement</group>
+		<group>Saving Throws</group>
+		<group>Skill Enhancement</group>
+		<group>Support</group>
+		<group>Triggered</group>
+		<benefit>Whenever an ally within 10 squares of you makes an attack roll, saving throw, or skill check, you can expend your <![CDATA[<i>memory of a thousand lifetimes</i>]]> racial power as a free interrupt to add the power's bonus to the roll.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Corellon's Wrath Style</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>ability</type>
+			<name>Intelligence</name>
+			<value>15</value>
+		</prereq>
+		<prereq>
+			<type>race</type>
+			<name>Eladrin</name>
+		</prereq>
+		<prereq>
+			<type>race</type>
+			<name>Elf</name>
+			<combine>;</combine>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>any martial</name>
+		</prereq>
+		<group>Class</group>
+		<group>Damage Bonus</group>
+		<group>Demon-hunting</group>
+		<group>Drow-hunting</group>
+		<group>Flanking</group>
+		<group>Orc-hunting</group>
+		<group>Spider-hunting</group>
+		<group>Support</group>
+		<benefit>You gain the following benefits with at-will melee Weapon attacks against demons, drow, orcs and spiders:</benefit>
+		<benefit>&#9658; You deal an additional +2 damage.</benefit>
+		<benefit>&#9658; You add one-half your Intelligence modifier (minimum +1) on attack rolls when flanking.</benefit>
+		<benefit>Also, you add your Intelligence modifier (minimum +2) as a bonus to to AC against <![CDATA[<i>opportunity attacks</i>]]> by demons, drow, orcs and spiders.</benefit>
+		<benefit>In addition, if you grant an ally a melee attack against a demon, drow, orc, or spider, he or she deals +2 additional damage.</benefit>
+		<benefit>Both additional damages increase to +3 at 11th level, and to +4 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Daredevil Inspiration</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Warlord</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>warlord's aura</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Damage Bonus</group>
+		<group>Support</group>
+		<group>Triggered</group>
+		<benefit>When an ally use the Draw Inspiration action of your <![CDATA[<i>warlord's aura</i>]]>, he or she can choose take advantage of this feat.</benefit>
+		<benefit>If the ally does, he or she deals +4 additional damage with the next attack he or she makes before the end of his or her current turn, but grants combat advantage to all attackers until the start of his or her next turn.</benefit>
+		<benefit>The additional damage increases to +6 at 11th level, and to +8 at 21st level.</benefit>
 	</feat>
 	
 	<feat>
