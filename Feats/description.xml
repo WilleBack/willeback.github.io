@@ -51,6 +51,7 @@
 	<list selection="Kill Effect" />
 	
 	<list selection="Languages" />
+	<list selection="Lightning Specialization" />
 	<list selection="Luck" />
 	
 	<list selection="Marking" />
@@ -93,6 +94,7 @@
 	<list selection="Teamwork" />
 	<list selection="Teleportation" />
 	<list selection="Temporary Hit Points" />
+	<list selection="Thunder Specialization" />
 	<list selection="Traps" />
 	<list selection="Triggered" />
 	<list selection="Two-weapon Fighting" />
@@ -8541,6 +8543,7 @@
 		<group>Class</group>
 		<group>Power Repertoire</group>
 		<group>Undead-hunting</group>
+		<group>Worship</group>
 		<benefit>You gain the <![CDATA[<i>command undead</i>]]> Channel Divinity power.</benefit>
 		
 		<power>
@@ -8722,6 +8725,124 @@
 	</feat>
 	
 	<feat>
+		<title>Concussive Breath</title>
+		<tier>Epic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Dragonborn</name>
+		</prereq>
+		<prereq>
+			<type>feat</type>
+			<name>Thundering Breath</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>dragon breath</name>
+			<qualifier>racial</qualifier>
+			<combine>that deals lightning damage</combine>
+		</prereq>
+		<group>Condition Infliction</group>
+		<group>Lightning Specialization</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<group>Thunder Specialization</group>
+		<benefit>When you use your Thundering Breath feat, you also daze each target that you hit with your <![CDATA[<i>dragon breath</i>]]> racial power.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Conflagration Breath</title>
+		<tier>Epic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Dragonborn</name>
+		</prereq>
+		<prereq>
+			<type>feat></type>
+			<name>Burning Breath</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>dragon breath</name>
+			<qualifier>racial</qualifier>
+			<combine>that deals fire damage</combine>
+		</prereq>
+		<group>Fire Specialization</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<benefit>When you use your <![CDATA[<i>dragon breath</i>]]> that deals fire damage, you can choose to give it the Zone keyword and make its area a zone of flames that lasts until the end of your next turn.</benefit>
+		<benefit>Each creature that starts its turn in or enters the zone takes fire damage equal to 10 + your Constitution modifier. A creature a can only take this damage once per turn.</benefit>
+		<benefit>If your <![CDATA[<i>dragon breath</i>]]> racial power's attack only targets enemies, this zone also only affects enemies.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Confounding Luck</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Halfling</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>second chance</name>
+			<qualifier>racial</qualifier>
+		</prereq>
+		<prereq>
+			<type>deity</type>
+			<name>Avandra</name>
+		</prereq>
+		<group>Attack Penalty</group>
+		<group>Luck</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<benefit>When you use your <![CDATA[<i>second chance</i>]]> racial power and the triggering attack misses, that enemy takes a -2 penalty to attack rolls until the end of its next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Confounding Technique</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Monk</name>
+		</prereq>
+		<group>Class</group>
+		<group>Mobility</group>
+		<group>Teamwork</group>
+		<benefit>You can use a move action to switch places with an adjacent ally. This counts as a shift for both of you.</benefit>
+		<benefit>If one of you has a larger space than the other, he or she can choose how to position as long as as long as he or she covers all of the other's previous space. The one with the smaller space can position himself or herself anywhere inside the larger one's previous space.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Confusing Distraction</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Psion</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>distract</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Condition Infliction</group>
+		<group>Power Enhancement</group>
+		<group>Support</group>
+		<benefit>When you use your <![CDATA[<i>distract</i>]]> class power, you don't trigger an <![CDATA[<i>opportunity attack</i>]]> from the target, and the target also cannot take opportunity actions while it is affected by the power.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Connected</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>skill</type>
+			<name>Streetwise</name>
+		</prereq>
+		<group>Background</group>
+		<group>Skill Enhancement</group>
+		<benefit>When you make a Streetwise check, you can roll twice and take the higher result.</benefit>
+	</feat>
+	
+	<feat>
 		<title>Corellon's Wrath Style</title>
 		<tier>Heroic</tier>
 		<prereq>
@@ -8825,6 +8946,28 @@
 		<group>Perception</group>
 		<benefit>You know when you're within 5 squares of something touched by the Spellplague, such as an area affected by it, a plaguetouched creature, or a creature with a spellscar. You can sense the presence of the source, but not the direction or distance.</benefit>
 		<benefit>You also gain a +2 feat bonus to Nature checks.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Thundering Breath</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>race</type>
+			<name>Dragonborn</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>dragon breath</name>
+			<qualifier>racial</qualifier>
+			<combine>that deals lightning damage</combine>
+		</prereq>
+		<group>Forced Movement</group>
+		<group>Lightning Specialization</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<group>Thunder Specialization</group>
+		<benefit>When you you use your <![CDATA[<i>dragon breath</i>]]> racial power, you can choose for it to deal lightning and thunder damage and have the Lightning and Thunder keywords.</benefit>
+		<benefit>When you do, you can push each target you hit a number of squares equal to your Constitution.</benefit>
 	</feat>
 	
 	<feat>
