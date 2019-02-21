@@ -137,6 +137,7 @@
 	<race selection="Revenant" />
 	<race selection="Shadar-kai" />
 	<race selection="Shardmind" />
+	<race selection="Svirfneblin" />
 	<race selection="Tiefling" />
 	<race selection="Warforged" />
 	<race selection="Wilden" />
@@ -9421,25 +9422,134 @@
 	</feat>
 	
 	<feat>
-		<title>Deception Mastery</title>
+		<title>Crew Savvy</title>
 		<tier>Heroic</tier>
 		<prereq>
-			<type>feat</type>
-			<name>Ritual Caster</name>
+			<type>race</type>
+			<name>Svirfnebling</name>
 		</prereq>
 		<prereq>
-			<type>ritual</type>
-			<name>change self</name>
+			<type>skill</type>
+			<name>Athletics</name>
 		</prereq>
-		<prereq>
-			<type>deception ritual</type>
-			<name>one other</name>
-		</prereq>
-		<group>Rituals</group>
+		<group>Racial</group>
 		<group>Skill Enhancement</group>
-		<benefit>You gain a +2 feat bonus to Bluff checks.</benefit>
-		<benefit>Also, when you would normally make a skill check or use a skill check modifier as part of a deception ritual, you can use Bluff instead of the indicated skill.</benefit>
-		<benefit>In addition, once per day, you can ignore the component cost of a deception ritual of your level or lower that you have mastered.</benefit>
+		<group>Support</group>
+		<benefit>You gain a +3 feat bonus to Athletics check to climb.</benefit>
+		<benefit>Also, whenever you make a Dungeoneering check, or an Athletics check to climb, one ally adjacent to you gains a +2 bonus the next time he or she makes the same kind of check before the end of your next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Crimson Eye Action</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Human</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Assassin</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>assassin's shroud</name>
+		</prereq>
+		<group>Action Point</group>
+		<group>Class</group>
+		<group>Damage Bonus</group>
+		<group>Racial</group>
+		<benefit>When you spend an action point, you subject your <![CDATA[<i>assassin's shroud</i>]]> target to an additional shroud.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Crimson Fire</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Paladin</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Warlock</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>warlock's curse</name>
+		</prereq>
+		<group>Class Combination</group>
+		<group>Damage Bonus</group>
+		<benefit>Against a creature under your <![CDATA[<i>divine challenge</i>]]> or Divine Sanction, you use d10s for your curse damage.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Crimson Legionnaire</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Paladin</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Warlock</name>
+		</prereq>
+		<group>Class Combination</group>
+		<group>Damage Bonus</group>
+		<benefit>You gain a +2 bonus to damage rolls with Paladin powers against creatures under your curse.</benefit>
+		<benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Crippling Crush</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Warden</name>
+		</prereq>
+		<group>Class</group>
+		<group>Condition Infliction</group>
+		<group>Damage Bonus</group>
+		<group>Mobility Hindrance</group>
+		<benefit>When you immobilize or slow an enemy with a Weapon attack using a hammer or mace, that enemy takes +2 extra damage.</benefit>
+		<benefit>This extra damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Critical Ambush</title>
+		<tier>Epic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Rogue</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Sneak Attack</name>
+		</prereq>
+		<group>Class</group>
+		<group>Critical</group>
+		<group>Damage Bonus</group>
+		<benefit>If you score a critical hit with a weapon that you can Sneak Attack with, you can apply your Sneak Attack dice as critical dice. You can do this even if you do not have combat advantage or have already used your Sneak Attack this turn.</benefit>
+		<benefit>This does not allow you to deal Sneak Attack twice on the same attack.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Critical Breath</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>race</type>
+			<name>Dragonborn</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>dragon breath</name>
+			<qualifier>racial</qualifier>
+		</prereq>
+		<group>Critical</group>
+		<group>Ongoing Damage</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<benefit>When you score a critical hit with your <![CDATA[<i>dragon breath</i>]]> racial power, the target takes ongoing 5 damage (save ends). </benefit>
+		<benefit>The ongoing damage is the same type (or types) as the damage from your breath.</benefit>
+		<benefit>The ongoing damage increases to 10 at 21st level.</benefit>
 	</feat>
 	
 	<feat>
@@ -9461,6 +9571,28 @@
 		<benefit>When an ally use the Draw Inspiration action of your <![CDATA[<i>warlord's aura</i>]]>, he or she can choose take advantage of this feat.</benefit>
 		<benefit>If the ally does, he or she deals +4 additional damage with the next attack he or she makes before the end of his or her current turn, but grants combat advantage to all attackers until the start of his or her next turn.</benefit>
 		<benefit>The additional damage increases to +6 at 11th level, and to +8 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Deception Mastery</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>feat</type>
+			<name>Ritual Caster</name>
+		</prereq>
+		<prereq>
+			<type>ritual</type>
+			<name>change self</name>
+		</prereq>
+		<prereq>
+			<type>deception ritual</type>
+			<name>one other</name>
+		</prereq>
+		<group>Rituals</group>
+		<group>Skill Enhancement</group>
+		<benefit>You gain a +2 feat bonus to Bluff checks.</benefit>
+		<benefit>Also, when you would normally make a skill check or use a skill check modifier as part of a deception ritual, you can use Bluff instead of the indicated skill.</benefit>
+		<benefit>In addition, once per day, you can ignore the component cost of a deception ritual of your level or lower that you have mastered.</benefit>
 	</feat>
 	
 	<feat>
