@@ -135,14 +135,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		
 		<div class="groupholder">
-			<div class="grouptitle">Racial Feats</div>
-			
-			<xsl:for-each select="catalog/race">
-				<xsl:call-template name="listprereq" />
-			</xsl:for-each>
-		</div>
-		
-		<div class="groupholder">
 			<div class="grouptitle">Class Feats</div>
 			
 			<xsl:for-each select="catalog/class">
@@ -293,6 +285,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 			</div>
 			
+		</div>
+		
+		<div class="groupholder">
+			<div class="grouptitle">Racial Feats</div>
+			
+			<xsl:for-each select="catalog/race">
+				<xsl:call-template name="listprereq" />
+			</xsl:for-each>
 		</div>
 		
 	</div> <!-- list container -->
