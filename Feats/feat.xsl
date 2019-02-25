@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -206,7 +206,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				
 			<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Paragon'])>0">
 				<div class="list">
-					<div class="groupname">Any martial class - Heroic</div>
+					<div class="groupname">Any martial class - Paragon</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any martial' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
