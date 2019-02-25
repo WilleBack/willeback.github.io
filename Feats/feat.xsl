@@ -168,101 +168,113 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</xsl:if>
 			
-			<div class="list">
-				<div class="groupname">Divine classes</div>
-				<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Heroic'])>0"> 
-					<div class="groupname">Heroic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Heroic'])>0">
+				<div class="list">
+					<div class="groupname">Any divine class - Heroic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any divine' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Paragon'])>0"> 
-					<div class="groupname">Paragon</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Paragon'])>0">
+				<div class="list">
+					<div class="groupname">Any divine class - Paragon</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any divine' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Epic'])>0"> 
-					<div class="groupname">Epic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Epic'])>0">
+				<div class="list">
+					<div class="groupname">Any divine class - Epic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any divine' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
-			</div>
+				</div>
+			</xsl:if>
 			
-			<div class="list">
-				<div class="groupname">Martial classes</div>
-				<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Heroic'])>0"> 
-					<div class="groupname">Heroic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Heroic'])>0">
+				<div class="list">
+					<div class="groupname">Any martial class - Heroic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any martial' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Paragon'])>0"> 
-					<div class="groupname">Paragon</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Paragon'])>0">
+				<div class="list">
+					<div class="groupname">Any martial class - Heroic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any martial' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Epic'])>0"> 
-					<div class="groupname">Epic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Epic'])>0">
+				<div class="list">
+					<div class="groupname">Any martial class - Epic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any martial' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
-			</div>
+				</div>
+			</xsl:if>
 			
-			<div class="list">
-				<div class="groupname">Primal classes</div>
-				<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Heroic'])>0"> 
-					<div class="groupname">Heroic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Heroic'])>0">
+				<div class="list">
+					<div class="groupname">Any primal class - Heroic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any primal' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Paragon'])>0"> 
-					<div class="groupname">Paragon</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Paragon'])>0">
+				<div class="list">
+					<div class="groupname">Any primal class - Paragon</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any primal' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Epic'])>0"> 
-					<div class="groupname">Epic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Epic'])>0">
+				<div class="list">
+					<div class="groupname">Any primal class - Epic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any primal' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
-			</div>
+				</div>
+			</xsl:if>
 			
-			<div class="list">
-				<div class="groupname">Psionic classes</div>
-				<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Heroic'])>0"> 
-					<div class="groupname">Heroic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Heroic'])>0">
+				<div class="list">
+					<div class="groupname">Any psionic class - Heroic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any psionic' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Paragon'])>0"> 
-					<div class="groupname">Paragon</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Paragon'])>0">
+				<div class="list">
+					<div class="groupname">Any psionic class - Paragon</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any psionic' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
+				</div>
+			</xsl:if>
 				
-				<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Epic'])>0"> 
-					<div class="groupname">Epic</div>
+			<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Epic'])>0">
+				<div class="list">
+					<div class="groupname">Any psionic class - Epic</div>
 					<xsl:for-each select="catalog/feat[prereq/name='any psionic' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
-				</xsl:if>
-			</div>
+				</div>
+			</xsl:if>
 			
 			<xsl:if test="count(//catalog/feat[prereq/name='any shadow' and tier='Heroic'])>0">
 				<div class="list">
