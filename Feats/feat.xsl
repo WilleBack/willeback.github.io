@@ -693,7 +693,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<xsl:if test="count(//catalog/feat[prereq/name=current()/@selection and tier='Heroic'])>0">
 		<div class="list">
-			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:if test="@selection='Defender' or @selection='Controller' or @selection='Striker' or @selection='Leader'"> xsl:text> role</xsl:text> </xsl:if> <xsl:text> - Heroic</xsl:text></div>
 			<xsl:choose>
 				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling'">
 					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Heroic']">
