@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="feat.xsl"?>
 <catalog>
+	<list selection="Aberration-hunting" />
 	<list selection="Acid Specialization" />
 	<list selection="Action Point" />
 	<list selection="Animal Companion" />
@@ -28,6 +29,7 @@
 	<list selection="Defense Penalty" />
 	<list selection="Demon-hunting" />
 	<list selection="Dragon-hunting" />
+	<list selection="Dying" />
 	
 	<list selection="Equipment" />
 	<list selection="Extra Attack" />
@@ -9429,7 +9431,7 @@
 		<tier>Heroic</tier>
 		<prereq>
 			<type>race</type>
-			<name>Svirfnebling</name>
+			<name>Svirfneblin</name>
 		</prereq>
 		<prereq>
 			<type>skill</type>
@@ -11375,6 +11377,186 @@
 		<group>Miss Mitigation</group>
 		<group>Weapon Specialization</group>
 		<benefit>Whenever you miss an enemy with a melee attack using a staff, that enemy grants combat advantage to you until the end of your next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Deep Durability</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Svirfneblin</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Warden</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>stone camouflage</name>
+			<qualifier>racial</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Mark Punishment</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<group>Temporary Hit Points</group>
+		<benefit>When you use your <![CDATA[<i>stone camouflage</i>]]> racial power, you gain 3 additional temporary hit points for each enemy marked by you.</benefit>
+		<benefit>These additional temporary hit points per enemy increase to 5 at 11th level, and to 7 at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Deep Gash</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>ability</type>
+			<name>Constitution</name>
+			<value>15</value>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Fighter</name>
+		</prereq>
+		<group>Class</group>
+		<group>Ongoing Damage</group>
+		<group>Saving Throw Penalty</group>
+		<group>Weapon Specialization</group>
+		<benefit>When you make a Weapon attack using an axe or pick you are proficient with and the attack deals ongoing damage that has no damage type, the target takes a -2 penalty to saving throws against the ongoing damage.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Deep Sage</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>skill</type>
+			<name>Dungeoneering</name>
+		</prereq>
+		<group>Aberration-hunting</group>
+		<group>Languages</group>
+		<group>Skill Enhancement</group>
+		<benefit>You gain a +5 feat bonus to Dungeoneering knowledge checks to identify aberrant creatures.</benefit>
+		<benefit>Also, you can now speak, read, and write Deep Speech fluently.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Deepstone Blessing</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Svirfneblin</name>
+		</prereq>
+		<prereq>
+			<type>class</type>
+			<name>Cleric</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>healing word</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Class</group>
+		<group>Power Enhancement</group>
+		<group>Racial</group>
+		<group>Temporary Hit Points</group>
+		<benefit>When you use your <![CDATA[<i>healing word</i>]]> class power, the target also gains temporary hit points equal to your Constitution modifier.</benefit>
+		<benefit>These temporary hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defender of the Wild</title>
+		<tier>Heroic</tier>
+		<category>Multiclass</category>
+		<prereq>
+			<type>ability</type>
+			<name>Strength</name>
+			<value>13</value>
+		</prereq>
+		<group>Marking</group>
+		<group>Multiclass Warden</group>
+		<group>Skill Training</group>
+		<benefit>You gain training in one skill from the Warden's class skill list.</benefit>
+		<benefit>Once per encounter as a free action on your turn, you can mark each enemy adjacent to you until the end of your next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defending Dabbler</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Half-elf</name>
+		</prereq>
+		<prereq>
+			<type>trait</type>
+			<name>Dilettante</name>
+		</prereq>
+		<group>Marking</group>
+		<group>Racial</group>
+		<benefit>When you hit with the power gained from your Dilettante racial trait, you can mark the target until the end of your next turn.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defense of the Inspired</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Warlord</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Inspiring Presence</name>
+		</prereq>
+		<group>Class</group>
+		<group>Defense</group>
+		<group>Support</group>
+		<group>Triggered</group>
+		<benefit>Whenever an ally who can see you or hear you takes the <![CDATA[<i>total defense</i>]]> action, the bonus to his or her defenses equals your Charisma modifier instead of +2.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defensive Advantage</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>ability</type>
+			<name>Dexterity</name>
+			<value>17</value>
+		</prereq>
+		<group>Combat Advantage</group>
+		<group>Defense</group>
+		<benefit>When you have combat advantage against an enemy, you gain a +2 bonus to AC against that enemy's attacks.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defensive Bluff</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Halfling</name>
+		</prereq>
+		<group>Combat Advantage</group>
+		<group>Racial</group>
+		<group>Second Wind</group>
+		<group>Skill Enhancement</group>
+		<group>Stealth</group>
+		<benefit>When you use your <![CDATA[<i>second wind</i>]]>, in addition to the other effects, you can make a Bluff check to either gain combat advantage or to create a diversion to hide.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defensive Challenge</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Fighter</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Combat Challenge</name>
+		</prereq>
+		<group>Class</group>
+		<group>Defense</group>
+		<group>Mark Punishment</group>
+		<group>Shield</group>
+		<group>Support</group>
+		<benefit>When you use your <![CDATA[<i>enforce challenge</i>]]> class power and are wielding a shield, you can also choose one ally adjacent to you.</benefit>
+		<benefit>The chosen ally has a +2 bonus to all defenses against the triggering enemy's attacks until the start of the triggering enemy's next turn, as long as the enemy is threatened by you.</benefit>
 	</feat>
 	
 	<feat>
