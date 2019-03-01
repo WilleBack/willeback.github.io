@@ -481,17 +481,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:choose>
 			<xsl:when test="part[1]/frequency = 'At-Will'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">#598d60</xsl:with-param>
+					<xsl:with-param name="bgcolor"#619869</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="part[1]/frequency = 'Encounter'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">FireBrick</xsl:with-param> 
+					<xsl:with-param name="bgcolor">#961334</xsl:with-param> 
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="part[1]/frequency = 'Daily'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">DarkSlateGray</xsl:with-param>
+					<xsl:with-param name="bgcolor">#4d4d4f</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 		</xsl:choose> 
