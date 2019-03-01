@@ -869,7 +869,7 @@
 			<name>Necromancy</name>
 			<benefit>The macabre art of Necromancy is all about harnessing necrotic energies. A necromancer Arcanist can wither enemies' bodies, inflict them with different ailments, and also create undead servitors to fight alongside him or her.</benefit>
 			<benefit>You gain the following benefits:</benefit>
-			<benefit>&#9658; Bloodied enemies take a penalty to the first saving throw they make against an effect from your Necromancy powers. The penalty equals one-half your Wisdom modifier. If a creature becomes bloodied while under an effect, it takes this penalty to its next saving throw. </benefit>
+			<benefit>&#9658; Bloodied enemies take a penalty to the first saving throw they make against an effect from your Necromancy powers. The penalty equals one-half your Wisdom modifier, or your Wisdom modifier if you used a daily power. If a creature becomes bloodied while under an effect, it takes this penalty to its next saving throw. </benefit>
 			<benefit>&#9658; Your Necrotic powers deal +1d6 damage on a critical against bloodied targets. This increases to +2d6 damage at 11th level, and to +3d6 damage at 21st level.</benefit>
 			<benefit>&#9658; You have a +2 bonus to attack rolls against undead with arcane Necromancy powers.</benefit>
 			<benefit>&#9658; When you use a Necromancy Summoning power, summoned non-minion creatures gain temporary hit points equal to your Wisdom modifier. This increases to 4 + your Wisdom modifier at 11th level, and to 8 + your Wisdom modifier at 21st level.</benefit>
@@ -886,7 +886,7 @@
 					<type>Ranged</type> <range>10</range>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
-						<text>A living creature or an undead summoned by you dies within range</text>
+						<text>An undead summoned by you or a living creature dies within range</text>
 					</section>
 					<section>
 						<text>If a single attack kills more than one creature, you can only trigger this power on one of them</text>
@@ -904,6 +904,55 @@
 						<shade>true</shade>
 						<name>Special:</name> <name-style>bold</name-style>
 						<text>You can have more than one conduit active at once. You can sustain as many conduits as a single action as you wish, though you cannot resume sustaining one that has already expired.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Nethermancy</name>
+			<benefit>Practicioners of Nethermancy control the darkness, both literally and that found in the hearts of creatures. Nerhermancy allows the Arcanist to bring forth dark energies from the Shadowfell, and to rend the spirits and minds of creatures.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you hit an enemy with an encounter or daily Nethermancy power, it treats all its enemies more than 2 squares away as having concealment.</benefit>
+			<benefit>&#9658; You gain combat advantage with melee and ranged Nethermancy powers against targets you have concealment against.</benefit>
+			<benefit>&#9658; You gain a +2 bonus to attack rolls against shadow creatures with arcane Nethermancy powers.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>nethermancer's seal</i>]]> power.</benefit>
+			
+			<power>
+				<title>Nethermancer's Seal</title>
+				<class>Wizard</class> <category>Utility</class>
+				<fluff>You place a dark seal on your enemy's spirit, making it less aggressive</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Nethermancy</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Close</type> <range>burst 10</range>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>One creature in the burst</text>
+					</section>
+					<section>
+						<shade>true</shade> <name-style>bold</name-style>
+						<text>The target takes a -2 penalty to triggered attack rolls, or a -3 penalty if it has the shadow origin.</text>
+					</section>
+					<section>
+						<shade>true</shade> 
+						<text>If you hit the target with an arcane Nethermancy power, the penalty increases to your Wisdom modifier (minimum -2), or 1 + your Wisdom modifier (minimum -3) until the start of your next turn.</text>
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>You can only have one <![CDATA[<i>nethermancer's seal</i>]]> in existence at once. If you use this power again while the previous ally still exists, the previous one immediately ends.</text>
+					</section>
+					<section>
+						<indent>1</indent>
+						<name>Level 11:</name> <name-style>italic</name-style>
+						<text>You can have two seals. When you use this power, you choose which previous effect ends if the use would exceed your limit.</text>
+					</section>
+					<section>
+						<indent>1</indent>
+						<name>Level 21:</name> <name-style>italic</name-style>
+						<text>You can have three seals. When you use this power, you choose which previous effect ends if the use would exceed your limit.</text>
 					</section>
 				</part>
 			</power>
