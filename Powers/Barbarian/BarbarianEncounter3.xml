@@ -332,8 +332,8 @@
       <action>Standard</action> <subaction>Action</subaction>
       <type>Close</type> <range>blast 3</range>
       <section>
-        <name>Target:</name> <name-style>bold</name-style>
-        <text>Each enemy that can see or hear you in the blast</text>
+        <name>Roar Target:</name> <name-style>bold</name-style>
+        <text>Each enemy in the blast that can see or hear you</text>
       </section>
       <section>
         <shade>true</shade>
@@ -348,11 +348,11 @@
       <action>Nonaction</action>
       <type>Melee</type> <range>weapon</range>
       <section>
-        <name>Target:</name> <name-style>bold</name-style>
+        <name>Strike Target:</name> <name-style>bold</name-style>
         <text>One creature</text>
       </section>
       <section>
-        <name>Attack:</name> <name-style>bold</name-style>
+        <name>Strike Attack:</name> <name-style>bold</name-style>
         <text>Strength vs. AC</text>
       </section>
       <section>
@@ -403,6 +403,68 @@
         <shade>true</shade> <indent>1</indent>
         <name>Whirling Frenzy:</name> <name-style>bold</name-style>
         <text>If the target moves before the start of your next turn, your next attack before the end of your next turn has combat advantage.</text>
+      </section>
+    </part>
+  </power>
+  
+  <power>
+    <title>Thundering Howl</title>
+    <class>Barbarian</class> <category>Attack</category> <level>1</level>
+    <fluff>You strike, then let out a thunderous battle cry that sends each enemy back</fluff>
+    <part>
+      <frequency>Encounter</frequency>
+      <keyword>Primal, Weapon</keyword>
+      <action>Standard</action> <subaction>Action</subaction>
+      <type>Melee</type> <range>weapon</range>
+      <section>
+        <name>Primary Target:</name> <name-style>bold</name-style>
+        <text>One creature</text>
+      </section>
+      <section>
+        <name>Primary Attack:</name> <name-style>bold</name-style>
+        <text>Strength vs. AC</text>
+      </section>
+      <section>
+        <shade>true</shade>
+        <name>Hit:</name> <name-style>bold</name-style>
+        <text>2[W] + Strength modifier damage.</text>
+      </section>
+      <section>
+        <shade>true</shade> <indent>1</indent>
+        <name>Critical:</name> <name-style>bold</name-style>
+        <text>If your attack was a critical, the howl attack knocks the primary target prone.</text>
+      </section>
+      <section>
+        <name>Effect:</name> <name-style>bold</name-style>
+        <text>You make the howl attack.</text>
+      </section>
+      <section>
+        <text>You must include the primary target in the howl attack's area.</text>
+      </section>
+    </part>
+    <part>
+      <part-name>Howl Attack</part-name>
+      <frequency>Automatic</frequency>
+      <keyword>Primal, Thunder</keyword>
+      <action>Nonaction</action>
+      <type>Close</type> <range>blast 3</range>
+      <section>
+        <name>Howl Target:</name> <name-style>bold</name-style>
+        <text>Each enemy in the blast</text>
+      </section>
+      <section>
+        <shade>true</shade>
+        <name>Effect:</name> <name-style>bold</name-style>
+        <text>Each target takes 1d6 thunder damage, and you push it 1 square.</text>
+      </section>
+      <section>
+        <shade>true</shade>
+        <text>If the primary attack hit, the thunder damage increases to 2d6.</text>
+      </section>
+      <section>
+        <shade>true</shade> <indent>1</indent>
+        <name>Thunderborn Wrath:</name> <name-style>bold</name-style>
+        <text>You push each target a number of squares equal to your Constitution modifier instead.</text>
       </section>
     </part>
   </power>
