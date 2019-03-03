@@ -322,4 +322,89 @@
     </part>
   </power>
   
+  <power>
+    <title>Roaring Challenge</title>
+    <class>Barbarian</class> <category>Attack</category> <level>3</level>
+    <fluff>You let out a roar of challenge that you follow up with a mighty strike</fluff>
+    <part>
+      <frequency>Encounter</frequency>
+      <keyword>Fear, Primal</keyword>
+      <action>Standard</action> <subactio>Action</subaction>
+      <type>Close</type> <range>blast 3</type>
+      <section>
+        <name>Target:</name> <name-style>bold</name-style>
+        <text>Each enemy that can see or hear you in the blast</text>
+      </section>
+      <section>
+        <shade>true</shade>
+        <name>Effect:</name> <name-style>bold</name-style>
+        <text>You mark each target until the end of your next turn. You then make the Challenger Strike.</text>
+      </section>
+    </part>
+    <part>
+      <part-name>Challenger Strike</part-name>
+      <frequency>Automatic</frequency>
+      <keyword>Primal, Weapon</keyword>
+      <action>Nonaction</action>
+      <type>Melee</type> <range>weapon</range>
+      <section>
+        <name>Target:</name> <name-style>bold</name-style>
+        <text>One creature</text>
+      </section>
+      <section>
+        <name>Attack:</name> <name-style>bold</name-style>
+        <text>Strength vs. AC</text>
+      </section>
+      <section>
+        <indent>1</indent>
+        <text>If the target is marked by you, you gain a +2 bonus to the attack roll</text>
+      </section>
+      <section>
+        <shade>true</shade>
+        <name>Hit:</name> <name-style>bold</name-style>
+        <text>2[W] + Strength modifier damage.</text>
+      </section>
+    </part>
+  </power>
+  
+  <power>
+    <title>Shatterbone Strike</title>
+    <class>Barbarian</class> <category>Attack</category> <level>1</level>
+    <fluff>The fury of your assault leaves your foe off balance, leaving a hole in its defense</fluff>
+    <part>
+      <frequency>Encounter</frequency>
+      <keyword>Primal, Weapon</keyword>
+      <action>Standard</action> <subaction>Action</subaction>
+      <type>Melee</type> <range>weapon</range>
+      <section>
+        <name>Target:</name> <name-style>bold</name-style>
+        <text>One creature</text>
+      </section>
+      <section>
+        <name>Attack:</name> <name-style>bold</name-style>
+        <text>Strength vs. AC</text>
+      </section>
+      <section>
+        <shade>true</shade>
+        <name>Hit:</name> <name-style>bold</name-style>
+        <text>2[W] + Strength modifier damage, and the target takes a -2 penalty to AC until the end of your next turn.</text>
+      </section>
+      <section>
+        <shade>true</shade> <indent>1</indent>
+        <name>Rageblood Vigor:</name> <name-style>bold</name-style>
+        <text>If you are bloodied, the penalty equals your Constitution modifier (minimum 2).</text>
+      </section>
+      <section>
+        <shade>true</shade> <indent>1</indent>
+        <name>Thaneborn Triumph:</name> <name-style>bold</name-style>
+        <text>The first attack against the target before the end of your next turn gains a bonus to the attack roll equal to your Charisma modifier.</text>
+      </section>
+      <section>
+        <shade>true</shade> <indent>1</indent>
+        <name>Whirling Frenzy:</name> <name-style>bold</name-style>
+        <text>If the target moves before the start of your next turn, your next attack before the end of your next turn has combat advantage.</text>
+      </section>
+    </part>
+  </power>
+  
 </catalog>
