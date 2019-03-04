@@ -107,6 +107,7 @@
 	<list selection="Weapon Specialization" />
 	<list selection="Worship" />
 	
+	<category selection="Arcane Defiling" />
 	<category selection="Bloodline" />
 	<category selection="Dragonmark" />
 	<category selection="Familiar" />
@@ -159,6 +160,7 @@
 	<class selection="Psion" />
 	<class selection="Ranger" />
 	<class selection="Rogue" />
+	<class selection="Runepriest" />
 	<class selection="Seeker" />
 	<class selection="Shaman" />
 	<class selection="Sorcerer" />
@@ -11057,7 +11059,21 @@
 	</feat>
 	
 	<feat>
-		<title>Death Shroud</title>
+		<title>Death Sight</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>Assassin</name>
+		</prereq>
+		<group>Bloodied Enemy</group>
+		<group>Class</group>
+		<group>Perception</group>
+		<benefit>Bloodied enemies do not gain the benefit of concealment against your attacks.</benefit>
+		<benefit>Starting at 11th level, bloodied enemies also do not gain the benefit of cover against your attacks.</benefit>
+	</feat
+		
+	<feat>
+		<title>Death Veil</title>
 		<tier>Paragon</tier>
 		<prereq>
 			<type>race</type>
@@ -11078,20 +11094,6 @@
 		<group>Stealth</group>
 		<group>Undead-hunting</group>
 		<benefit>When you use your <![CDATA[<i>shade form</i>]]> class power, you become invisible to undead and shadow creatures for as long as the power lasts.</benefit>
-	</feat>
-	
-	<feat>
-		<title>Death Sight</title>
-		<tier>Heroic</tier>
-		<prereq>
-			<type>class</type>
-			<name>Assassin</name>
-		</prereq>
-		<group>Bloodied Enemy</group>
-		<group>Class</group>
-		<group>Perception</group>
-		<benefit>Bloodied enemies do not gain the benefit of concealment against your attacks.</benefit>
-		<benefit>Starting at 11th level, bloodied enemies also do not gain the benefit of cover against your attacks.</benefit>
 	</feat>
 	
 	<feat>
@@ -11711,6 +11713,55 @@
 		<group>Support</group>
 		<group>Triggered</group>
 		<benefit>Your <![CDATA[<i>armor of wrath</i>]]> Channel Divinity power also triggers when an enemy within 5 squares of you hits one of your allies with an attack.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defiant Light</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Runepriest</name>
+		</prereq>
+		<prereq>
+			<type>feature</type>
+			<name>Defiant Word</name>
+		</prereq>
+		<group>Attack Bonus</group>
+		<group>Class</group>
+		<group>Damage Resistance</group>
+		<benefit>You gain resist 5 necrotic and resist 5 radiant.</benefit>
+		<benefit>These resistances increase to resist 10 at 21st level.</benefit>
+		<benefit>Also, you gain a +1 bonus to attack rolls with Runepriest powers against targets that are vulnerable to radiant damage or have some other weakness to radiant damage.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defiant Resilience</title>
+		<tier>Paragon</tier>
+		<prereq>
+			<type>class</type>
+			<name>Battlemind</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>battle resilience</name>
+			<qualifier>class</qualifier>
+		</prereq>
+		<group>Bloodied</group>
+		<group>Class</group>
+		<group>Damage Resistance</group>
+		<group>Power Recovery</group>
+		<group>Triggered</group>
+		<benefit>The first time that you are bloodied in an encounter, you regain the use of your <![CDATA[<i>battle resilience</i>]]> class power with the following trigger:</benefit>
+		<benefit><![CDATA[<b>Trigger:</b>]]> An attack hits or misses you for the first time after you have regained the use of this power.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Defiler Trooper</title>
+		<tier>Paragon</tier>
+		<group>Arcane Defiling</group>
+		<group>Temporary Hit Points</group>
+		<group>Triggered</group>
+		<benefit>Whenever you take damage from an ally's <![CDATA[<i>arcane defiling</i>]]> ability, after the power has been resolved, you gain temporary hit points equal to one-half the damage you took.</benefit>
 	</feat>
 	
 	<feat>
