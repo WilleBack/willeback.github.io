@@ -94,6 +94,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="fluff" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
+		<div class="pricetable">
+			<xsl:for-each select="level">
+				<div class="priceline">
+					<div id="lvl" style="width: 8em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
+					<div id="enh" style="width: 8em; float:left;"><xsl:value-of select="enhancement" /></div>
+					<div id="price" style="width:calc(100%-17em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+				</div>
+			</xsl:for-each>
+		</div>
 		
 		<xsl:apply-templates select="part" />
 	
@@ -114,15 +123,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(level)>1">
 				<xsl:text>+</xsl:text>
 			</xsl:if>
-		</div>
-		<div class="pricetable">
-			<xsl:for-each select="level">
-				<div class="priceline">
-					<div id="lvl" style="width: 8em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
-					<div id="enh" style="width: 8em; float:left;"><xsl:value-of select="enhancement" /></div>
-					<div id="price" style="width:calc(100%-17em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
-				</div>
-			</xsl:for-each>
 		</div>
 	</div> 
 	
