@@ -26,6 +26,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				column-gap:.2em;
 			}
 			
+			.priceline {
+				float:left;
+				page-break-inside:avoid;
+			}
+			
 			@media only screen and (min-width:600px) {
 				.container { 
 					column-count: 2; 
