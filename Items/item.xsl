@@ -25,7 +25,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				box-sizing:border-box;
 				width: 100%;
 				column-count: 2;
-				column-gap:.4em;
+				column-gap:.3em;
 			}
 			
 			.priceline {
@@ -33,7 +33,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				box-sizing:border-box;
 				float:left;
 				page-break-inside:avoid;
-				margin:0.3em;
+				margin:0.2em;
 			}
 			
 			.line {
@@ -105,27 +105,46 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="fluff" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
-		<div class="pricetable">
-			<xsl:for-each select="level">
-				<div class="priceline">
-					<div id="lvl" style="width: 4em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
-					<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="enhancement" /></div>
-					<div id="price" style="width:calc(100% - 8em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+		<xsl:choose>
+			<xsl:when test="count(level>1) or type=('Weapon' or 'Implement' or 'Armor' or 'Neck')">
+				<div class="pricetable">
+					<xsl:for-each select="level">
+						<div class="priceline">
+							<div id="lvl" style="width: 4em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
+							<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="enhancement" /></div>
+							<div id="price" style="width:calc(100% - 8em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+						</div>
+					</xsl:for-each>
 				</div>
-			</xsl:for-each>
-		</div>
-		<div class="line">
-			<b><xsl:value-of select="type" /></b>
-			<xsl:if test="subtype">
-				<b><xsl:text>: </xsl:text></b>
-				<xsl:for-each select="subtype">
-					<xsl:value-of select="."/>
-					<xsl:if test="position()!=last()">
-						<xsl:text>, </xsl:text>
-					</xsl:if> 
-				</xsl:for-each>
-			</xsl:if>
-		</div>
+				<div class="line">
+					<b><xsl:value-of select="type" /></b>
+					<xsl:if test="subtype">
+						<b><xsl:text>: </xsl:text></b>
+						<xsl:for-each select="subtype">
+							<xsl:value-of select="."/>
+							<xsl:if test="position()!=last()">
+								<xsl:text>, </xsl:text>
+							</xsl:if> 
+						</xsl:for-each>
+					</xsl:if>
+				</div>
+			</xsl:when>
+			<xsl:otherwise>
+				<div class="line">
+				     <b><xsl:value-of select="type" /></b>
+					<xsl:if test="subtype">
+						<b><xsl:text>: </xsl:text></b>
+						<xsl:for-each select="subtype">
+							<xsl:value-of select="."/>
+							<xsl:if test="position()!=last()">
+								<xsl:text>, </xsl:text>
+							</xsl:if> 
+						</xsl:for-each>
+					</xsl:if>
+					<xsl:text> </xsl:text> <xsl:value-of select="level/price" />
+				</div>
+			</xsl:otherwise>
+		</xsl:choose>
 		
 		<xsl:apply-templates select="part" />
 	
@@ -142,7 +161,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
 			<xsl:value-of select="category"/><br />
-			<xsl:text>Level </xsl:text><xsl:value-of select="level[0]/value"/>
+			<xsl:text>Level </xsl:text><xsl:value-of select="level[1]/value"/>
 			<xsl:if test="count(level)>1">
 				<xsl:text>+</xsl:text>
 			</xsl:if>
