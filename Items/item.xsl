@@ -105,8 +105,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="fluff" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
-		<xsl:choose>
-			<xsl:when test="count(level>1)">
+		<!-- <xsl:choose>
+			<xsl:when test="count(level>1)"> -->
 				<div class="pricetable">
 					<xsl:for-each select="level">
 						<div class="priceline">
@@ -128,7 +128,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:for-each>
 					</xsl:if>
 				</div>
-			</xsl:when>
+			<!-- </xsl:when>
 			<xsl:otherwise>
 				<div class="line">
 				     <b><xsl:value-of select="type" /></b>
@@ -144,7 +144,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:text> </xsl:text> <xsl:value-of select="level/price" /><xsl:text>gp</xsl:text>
 				</div>
 			</xsl:otherwise>
-		</xsl:choose>
+		</xsl:choose> -->
 	
 	</div> 
 
