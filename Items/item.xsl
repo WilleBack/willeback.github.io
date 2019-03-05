@@ -22,6 +22,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.pricetable {
+				box-sizing:border-box;
 				background:linear-gradient(to right, #f8e9d5, #fcf4eb)
 				width: 100%;
 				column-count: 2;
@@ -101,7 +102,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div class="priceline">
 					<div id="lvl" style="width: 6em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
 					<div id="enh" style="width: 6em; float:left;"><xsl:value-of select="enhancement" /></div>
-					<div id="price" style="width:calc(100%-13em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+					<div id="price" style="width:calc(100%-14em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
 				</div>
 			</xsl:for-each>
 		</div>
