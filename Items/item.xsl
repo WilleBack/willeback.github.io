@@ -80,7 +80,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:call-template>
 		
 		
-		<div id="fluff" style="background:linear-gradient(to right, #EFD09F, f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+		<div id="fluff" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 		
