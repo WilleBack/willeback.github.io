@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -19,6 +19,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				width:97%;
 				float:left;
 				page-break-inside:avoid;
+			}
+			
+			.pricetable {
+				column-count: 2;
+				column-gap:.2em;
 			}
 			
 			@media only screen and (min-width:600px) {
@@ -104,6 +109,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(level)>1">
 				<xsl:text>+</xsl:text>
 			</xsl:if>
+		</div>
+		<div class="pricetable">
+			<xsl:for-each select="level">
+				<div class="priceline">
+					<div id="lvl" style="width: 8em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
+					<div id="enh" style="width: 8em; float:left;"><xsl:value-of select="enhancement" /></div>
+					<div id="price" style="width:calc(100%-17em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+				</div>
+			</xsl:for-each>
 		</div>
 	</div> 
 	
