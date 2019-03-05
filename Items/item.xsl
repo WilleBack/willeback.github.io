@@ -106,7 +106,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 		<xsl:choose>
-			<xsl:when test="count(level>1) or type=('Weapon' or 'Implement' or 'Armor' or 'Neck')">
+			<xsl:when test="count(level>1)">
 				<div class="pricetable">
 					<xsl:for-each select="level">
 						<div class="priceline">
