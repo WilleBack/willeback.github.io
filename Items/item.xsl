@@ -14,7 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.item {
-				background:linear-gradient(to right, #f8e9d5, #fcf4eb)
+				
 				margin:0.2cm; 
 				width:97%;
 				float:left;
@@ -22,6 +22,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.pricetable {
+				background:linear-gradient(to right, #f8e9d5, #fcf4eb)
 				width: 100%;
 				column-count: 2;
 				column-gap:.2em;
@@ -98,9 +99,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="pricetable">
 			<xsl:for-each select="level">
 				<div class="priceline">
-					<div id="lvl" style="width: 8em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
-					<div id="enh" style="width: 8em; float:left;"><xsl:value-of select="enhancement" /></div>
-					<div id="price" style="width:calc(100%-17em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+					<div id="lvl" style="width: 6em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
+					<div id="enh" style="width: 6em; float:left;"><xsl:value-of select="enhancement" /></div>
+					<div id="price" style="width:calc(100%-13em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
 				</div>
 			</xsl:for-each>
 		</div>
