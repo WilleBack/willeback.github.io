@@ -145,6 +145,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</xsl:otherwise>
 		</xsl:choose>
+		
+		<xsl:for-each select="block">
+			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
+				<b><xsl:value-of select="name" /> </b>
+				<xsl:if test="action">
+					<div id="blob" style="width: 1.2em; float: left; text-align:center;">
+						&#x25C6;
+					</div>
+					<b><xsl:value-of select="frequency" /></b> <xsl:text>(</xsl:text><b><xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" /><xsl:text>)</xsl:text>
+				</xsl:if>
+			</div>
+		</xsl:for-each>
 	
 	</div> 
 
