@@ -14,6 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.item {
+				background:linear-gradient(to right, #f8e9d5, #fcf4eb)
 				margin:0.2cm; 
 				width:97%;
 				float:left;
@@ -110,11 +111,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-		<xsl:if test="part-name != ''">
-			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
-				<i><b><xsl:value-of select="part-name"/></b></i>
-			</div>
-		</xsl:if>
+		<xsl:value-of select="level\value"> 
 		
 		<xsl:if test="not(hide-freqkey = 'true')">
 			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
