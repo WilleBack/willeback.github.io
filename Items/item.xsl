@@ -141,12 +141,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							</xsl:if> 
 						</xsl:for-each>
 					</xsl:if>
-					<xsl:text> </xsl:text> <xsl:value-of select="level/price" />
+					<xsl:text> </xsl:text> <xsl:value-of select="level/price" /><xsl:text>gp</xsl:text>
 				</div>
 			</xsl:otherwise>
 		</xsl:choose>
-		
-		<xsl:apply-templates select="part" />
 	
 	</div> 
 
@@ -169,7 +167,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div> 
 	
 </xsl:template> 
-
+<!--
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
 		<xsl:value-of select="level/value" /> 
@@ -284,6 +282,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:choose>
 	<xsl:value-of select="text" disable-output-escaping="yes" />
 	
-</xsl:template>
+</xsl:template> -->
 	
 </xsl:stylesheet>
