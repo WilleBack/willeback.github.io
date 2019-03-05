@@ -29,7 +29,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.priceline {
-				width:100%
+				width:100%;
 				float:left;
 				page-break-inside:avoid;
 				margin:0.3em;
