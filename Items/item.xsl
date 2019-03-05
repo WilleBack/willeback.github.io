@@ -111,7 +111,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-		<xsl:value-of select="level\value"> 
+		<xsl:value-of select="level/value"> 
 		
 		<xsl:if test="not(hide-freqkey = 'true')">
 			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
