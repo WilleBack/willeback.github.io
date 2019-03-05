@@ -22,6 +22,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.pricetable {
+				width: 100%;
 				column-count: 2;
 				column-gap:.2em;
 			}
