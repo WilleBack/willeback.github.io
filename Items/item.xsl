@@ -36,6 +36,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				margin:0.3em;
 			}
 			
+			.line {
+				width:100%
+				box-sizing:border-box;
+				margin:0.2em;
+			}
+			
 			@media only screen and (min-width:600px) {
 				.container { 
 					column-count: 2; 
@@ -104,9 +110,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div class="priceline">
 					<div id="lvl" style="width: 4em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
 					<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="enhancement" /></div>
-					<div id="price" style="width:calc(100% - 7em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+					<div id="price" style="width:calc(100% - 8em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
 				</div>
 			</xsl:for-each>
+		</div>
+		<div class="line">
+			<b><xsl:value-of select="type" /></b>
+			<xsl:if test="subtype">
+				<b><xsl:text>: </xsl:text></b>
+				<xsl:for-each select="subtype">
+					<xsl:value-of select="."/>
+					<xsl:if test="position()!=last()">
+						<xsl:text>, </xsl:text>
+					</xsl:if> 
+				</xsl:for-each>
+			</xsl:if>
 		</div>
 		
 		<xsl:apply-templates select="part" />
@@ -124,7 +142,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
 			<xsl:value-of select="category"/><br />
-			<xsl:text>Level </xsl:text><xsl:value-of select="level"/>
+			<xsl:text>Level </xsl:text><xsl:value-of select="level[0]/value"/>
 			<xsl:if test="count(level)>1">
 				<xsl:text>+</xsl:text>
 			</xsl:if>
