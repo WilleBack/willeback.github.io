@@ -14,7 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.item {
-				
+				background:linear-gradient(to right, #f8e9d5, #fcf4eb);
 				margin:0.2cm; 
 				width:97%;
 				float:left;
@@ -23,7 +23,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			.pricetable {
 				box-sizing:border-box;
-				background:linear-gradient(to right, #f8e9d5, #fcf4eb)
 				width: 100%;
 				column-count: 2;
 				column-gap:.2em;
