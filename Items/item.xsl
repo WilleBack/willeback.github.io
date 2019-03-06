@@ -168,7 +168,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div id="blob" style="width: 1.2em; float: left; text-align:center;">
 						&#x25C6;
 					</div>
-					<div style="float:left; max-width:10em;"><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
+					<div style="float:left; max-width:20em;"><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
 				</xsl:if>
 			</div>
 			<xsl:for-each select="line">
