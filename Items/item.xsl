@@ -149,6 +149,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:otherwise>
 		</xsl:choose>
 		
+		<xsl:for-each select="headline">
+			<div class="line">
+				<b><xsl:value-of select="name" /> <xsl:text>: </xsl:text></b>
+				<xsl:value-of select="text" disable-output-escaping="yes" />
+			</div>
+		</xsl:for-each>
+		
 		<xsl:for-each select="block">
 			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
 				<div style="float:left; max-width:calc(100% - 12em);">
