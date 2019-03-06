@@ -37,9 +37,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.line {
-				width:100%
-				box-sizing:border-box;
-				margin:0.2em;
+				width:100%; 
+				box-sizing:border-box; 
+				padding:0.3em; 
+				text-indent:-1em; 
+				padding-left:1.3em; 
+				float:left;
 			}
 			
 			@media only screen and (min-width:600px) {
@@ -121,7 +124,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:if test="subtype">
 						<b><xsl:text>: </xsl:text></b>
 						<xsl:for-each select="subtype">
-							<xsl:value-of select="."/>
+							<xsl:value-of select="." disable-output-escaping="yes"/>
 							<xsl:if test="position()!=last()">
 								<xsl:text>, </xsl:text>
 							</xsl:if> 
@@ -135,7 +138,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:if test="subtype">
 						<b><xsl:text>: </xsl:text></b>
 						<xsl:for-each select="subtype">
-							<xsl:value-of select="."/>
+							<xsl:value-of select="." disable-output-escaping="yes"/>
 							<xsl:if test="position()!=last()">
 								<xsl:text>, </xsl:text>
 							</xsl:if> 
@@ -169,7 +172,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 			<xsl:for-each select="line">
 				<div class="line">
-					<xsl:value-of select="." />
+					<xsl:value-of select="." disable-output-escaping="yes"/>
 				</div>
 			</xsl:for-each>
 		</xsl:for-each>
