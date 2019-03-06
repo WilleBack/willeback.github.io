@@ -39,7 +39,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.line {
 				width:100%; 
 				box-sizing:border-box; 
-				padding:0.3em; 
+				padding:0.2em 0.3em; 
 				text-indent:-1em; 
 				padding-left:1.3em; 
 				float:left;
@@ -113,7 +113,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div class="pricetable">
 					<xsl:for-each select="level">
 						<div class="priceline">
-							<div id="lvl" style="width: 4em; float: left;"><xsl:text>lvl </xsl:text><xsl:value-of select="value" /></div>
+							<div id="lvl" style="width: 4em; float: left;"><xsl:text>Lvl </xsl:text><xsl:value-of select="value" /></div>
 							<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="enhancement" /></div>
 							<div id="price" style="width:calc(100% - 8em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
 						</div>
@@ -161,13 +161,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:text>, </xsl:text>
 							</xsl:if> 
 						</xsl:for-each>
+						<xsl:text>)</xsl:text>
 					</xsl:if>
 				</div>
 				<xsl:if test="action">
 					<div id="blob" style="width: 1.2em; float: left; text-align:center;">
 						&#x25C6;
 					</div>
-					<div style="float:left; max-width:45%;"><b><xsl:value-of select="frequency" /></b> <xsl:text>(</xsl:text><b><xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
+					<div style="float:left; max-width:45%;"><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
 				</xsl:if>
 			</div>
 			<xsl:for-each select="line">
