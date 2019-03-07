@@ -158,7 +158,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<xsl:for-each select="block">
 			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; display: flex; justify-content: flex-start;">
-				<div style="float:left; flex: inherit;">
+				<div style="float:left; flex: none;">
 					<b><xsl:value-of select="name" /> </b>
 					<xsl:if test="keyword">
 						<xsl:text> (</xsl:text>
