@@ -173,9 +173,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 				<xsl:if test="action">
 					<div id="blob" style="width: 1.2em; float: left; text-align:center; flex:none;">
-						&#x25C6;
+						<xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
 					</div>
-					<div style="float:left; max-width:21em; flex: 1 2 auto;"><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&nbsp;<xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
+					<div style="float:left; max-width:21em; flex: 1 2 auto;"><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;<xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
 				</xsl:if>
 			</div>
 			<xsl:for-each select="line">
