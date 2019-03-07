@@ -157,8 +157,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		
 		<xsl:for-each select="block">
-			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; display: flex; justify-content: flex-start;">
-				<div style="float:left; flex: 2 0 auto; max-width: calc(100% - 14em);">
+			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
+				<div style="float:left; width: max-content; max-width: calc(100% - 14em);">
 					<b><xsl:value-of select="name" /> </b>
 					<xsl:if test="keyword">
 						<xsl:text> (</xsl:text>
@@ -172,10 +172,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:if>
 				</div>
 				<xsl:if test="action">
-					<div id="blob" style="width: 1.2em; float: left; text-align:center; flex:none;">
+					<div id="blob" style="width: 1.2em; float: left; text-align:center; ">
 						<xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
 					</div>
-					<div style="float:left; max-width:21em; flex: 0 1 auto;"><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;<xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
+					<div style="float:left; max-width:21em; "><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;<xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
 				</xsl:if>
 			</div>
 			<xsl:for-each select="line">
