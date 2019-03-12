@@ -11,6 +11,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.container {
 				
 				box-sizing:border-box;
+				float:left;
 			}
 			
 			.item {
@@ -319,9 +320,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 			&#160;</i> 
 		</div>
-		<!-- <div class="price">
-			<xsl:value-of select="level[value=$counter]/price"/>
-		</div> -->
+		<div class="price">
+			<xsl:value-of select="level[value=current()/$counter]/price"/>
+		</div>
 	
 </xsl:template>
 	
