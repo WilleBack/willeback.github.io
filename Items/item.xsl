@@ -257,7 +257,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 <xsl:template name="listgroup">
 	
-	<xsl:if test="count(//catalog/item[level/value=current()/@counter and category='Common'])>0">
+	<xsl:if test="count(//catalog/item[level/value=current()/@counter])>0">
 		<div class="list">
 			<div class="groupname"> <xsl:text>Level </xsl:text> <xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
 			<xsl:for-each select="//catalog/item[level/value=current()/@counter and category='Common']">
