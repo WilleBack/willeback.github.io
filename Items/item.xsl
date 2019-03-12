@@ -263,7 +263,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="list">
 				<div class="groupname"> <xsl:text>Level </xsl:text> <xsl:value-of select="$counter" /> <xsl:text> - Common</xsl:text></div>
 				<xsl:for-each select="//catalog/item[level/value=$counter and category='Common']">
-					<xsl:call-template name="line" />
+					<xsl:call-template name="line">
+						<xsl:with-param name="counter">$counter</xsl:with-param>
+					</xsl:call-template>
 				</xsl:for-each>
 			</div>
 		</xsl:if>
@@ -293,15 +295,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 	
 <xsl:template name="line">
+	<xsl:param name="counter" />
+	
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
-				<xsl:call-template name="linecontent" />
+				<xsl:call-template name="linecontent">
+					<xsl:with-param>$counter</xsl:with-param>
+				</xsl:call-template>
+					
 			</div>
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
-				<xsl:call-template name="linecontent" />
+				<xsl:call-template name="linecontent">
+					<xsl:with-param>$counter</xsl:with-param>
+				</xsl:call-template>
 			</div>
 		</xsl:otherwise>
 	</xsl:choose>
@@ -309,6 +318,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="linecontent">
+	<xsl:param name="counter" />
 	
 	<div class="title"><xsl:value-of select="title"/></div>
 		<div class="subtype"> 
@@ -321,7 +331,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			&#160;</i> 
 		</div>
 		<div class="price">
-			<xsl:value-of select="level[value=current()/$counter]/price"/>
+			<xsl:value-of select="level[value=$counter]/price"/>
 		</div>
 	
 </xsl:template>
