@@ -283,11 +283,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:call-template name="line" />
 				</xsl:for-each>
 			</div>
-		</xsl:if> -->
+		</xsl:if> 
 	
 	<xsl:call-template name="recursive">
 		<xsl:with-param name="counter">$counter+1</xsl:with-param>
-	</xsl:call-template>
+	</xsl:call-template> -->
 	
 </xsl:template>
 	
