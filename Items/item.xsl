@@ -112,7 +112,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="listcontainer">
 			<div class="groupholder">
-				<div class="grouptitle">List by level</div>
+				<div class="grouptitle">Listed by level</div>
 				<xsl:for-each select="catalog/level"> 
 					<xsl:call-template name="listgroup" />
 				</xsl:for-each>
