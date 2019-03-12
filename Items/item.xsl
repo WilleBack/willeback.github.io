@@ -45,6 +45,30 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 			}
 			
+			.listcontainer {
+				box-sizing:border-box;
+				float:left;
+				
+			}
+			
+			.groupholder {
+				width:100%;
+				float:left;
+			}
+			
+			.grouptitle {
+				width:100%; 
+				font-size:1.4em;
+				font-weight:bold;
+			}
+			
+			.list {
+				margin:0.4em;
+				width:97%;
+				float:left;
+				page-break-inside: avoid;
+			}
+			
 			@media only screen and (min-width:600px) {
 				.container { 
 					column-count: 2; 
@@ -85,6 +109,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</style>
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
+		<div class="listcontainer">
+			<div class="groupholder">
+				<div class="grouptitle"><xsl:value-of select="item[1]/type" /> <xsl:text> list by level and rarity</xsl:text></div>
+				
+				<xsl:call-template name="recursive">
+					<xsl:with-param name="counter">1</xsl:with-param>
+				</xsl:call-template>
+			</div>
+		</div>
+			
 		<div class="container">
 				 
 				<xsl:apply-templates match="item">
@@ -223,9 +257,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 <xsl:template name="recursive">
 	<xsl:param name="counter">1</xsl:param>
-	
-	<div class="groupholder">
-		<div class="grouptitle"><xsl:value-of select="item[1]/type" /> <xsl:text> list by level and rarity</xsl:text></div>
 		
 		<xsl:if test="count(//catalog/item[level/value=$counter and category='Common'])>0">
 			<div class="list">
@@ -253,7 +284,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each>
 			</div>
 		</xsl:if>
-	</div>
 	
 	<xsl:call-template name="recursive">
 		<xsl:with-param name="counter">$counter+1</xsl:with-param>
