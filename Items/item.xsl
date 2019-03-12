@@ -267,7 +267,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:if>
 	
-		<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
+		<!-- <xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
 			<div class="list">
 				<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
 				<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
@@ -283,7 +283,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:call-template name="line" />
 				</xsl:for-each>
 			</div>
-		</xsl:if>
+		</xsl:if> -->
 	
 	<xsl:call-template name="recursive">
 		<xsl:with-param name="counter">$counter+1</xsl:with-param>
