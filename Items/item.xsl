@@ -112,11 +112,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="listcontainer">
 			<div class="groupholder">
-				<div class="grouptitle"><xsl:value-of select="item[1]/type" /> <xsl:text> list by level and rarity</xsl:text></div>
-				
-				<xsl:call-template name="recursive">
-					<xsl:with-param name="counter">1</xsl:with-param>
-				</xsl:call-template>
+				<div class="grouptitle">Feat Groups</div>
+				<xsl:for-each select="catalog/level"> 
+					<xsl:call-template name="listgroup" />
+				</xsl:for-each>
 			</div>
 		</div>
 			
@@ -256,61 +255,48 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template>
 	
-<xsl:template name="recursive">
-	<xsl:param name="counter">1</xsl:param>
-		
-		<xsl:if test="count(//catalog/item[level/value=$counter and category='Common'])>0">
-			<div class="list">
-				<div class="groupname"> <xsl:text>Level </xsl:text> <xsl:value-of select="$counter" /> <xsl:text> - Common</xsl:text></div>
-				<xsl:for-each select="//catalog/item[level/value=$counter and category='Common']">
-					<xsl:call-template name="line">
-						<xsl:with-param name="counter">$counter</xsl:with-param>
-					</xsl:call-template>
-				</xsl:for-each>
-			</div>
-		</xsl:if>
+<xsl:template name="listgroup">
 	
-		<!-- <xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
-			<div class="list">
-				<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
-				<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
-					<xsl:call-template name="line" />
-				</xsl:for-each>
-			</div>
-		</xsl:if>
+	<xsl:if test="count(//catalog/item[level/value=current()/@counter and category='Common'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:text>Level </xsl:text> <xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
+			<xsl:for-each select="//catalog/item[level/value=current()/@counter and category='Common']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
 	
-		<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Epic'])>0">
-			<div class="list">
-				<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
-				<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
-					<xsl:call-template name="line" />
-				</xsl:for-each>
-			</div>
-		</xsl:if> 
+	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
+			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
 	
-	<xsl:call-template name="recursive">
-		<xsl:with-param name="counter">$counter+1</xsl:with-param>
-	</xsl:call-template> -->
-	
+	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Epic'])>0">
+		<div class="list">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
+			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
+
 </xsl:template>
 	
 <xsl:template name="line">
-	<xsl:param name="counter" />
 	
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
-				<xsl:call-template name="linecontent">
-					<xsl:with-param>$counter</xsl:with-param>
-				</xsl:call-template>
-					
+				<xsl:call-template name="linecontent" />
 			</div>
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
-				<xsl:call-template name="linecontent">
-					<xsl:with-param>$counter</xsl:with-param>
-				</xsl:call-template>
+				<xsl:call-template name="linecontent" />
 			</div>
 		</xsl:otherwise>
 	</xsl:choose>
@@ -318,7 +304,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="linecontent">
-	<xsl:param name="counter" />
 	
 	<div class="title"><xsl:value-of select="title"/></div>
 		<div class="subtype"> 
@@ -331,7 +316,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			&#160;</i> 
 		</div>
 		<div class="price">
-			<xsl:value-of select="level[value=$counter]/price"/>
+			<xsl:value-of select="level[value=current()/@counter]/price"/>
 		</div>
 	
 </xsl:template>
