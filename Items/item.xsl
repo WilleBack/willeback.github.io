@@ -219,122 +219,80 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 	</div> 
 	
-</xsl:template> 
-<!--
-<xsl:template match="part">
-	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-		<xsl:value-of select="level/value" /> 
-		
-		<xsl:if test="not(hide-freqkey = 'true')">
-			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
-				<div id="frequency" style="width:5.9em; float:left;">
-					<xsl:value-of select="frequency"/>
-				</div> 
-				<div id="blob" style="width: 1.2em; float: left; text-align:center;">
-					&#x25C6;
-				</div>
-				<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
-					<xsl:value-of select="keyword"/>
-				</div>
-			</div>
-		</xsl:if>
-		
-		<xsl:if test="not(hide-actrange = 'true')">
-			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> 
-				<div id="action" style="width:12.2em; float:left; ">
-					<b><xsl:value-of select="action"/></b> <xsl:text> </xsl:text>
-					<xsl:value-of select="subaction"/>
-				</div> 
-				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;"> 
-					<b><xsl:value-of select="type"/>&#160;</b> 
-					<xsl:value-of select="range"/>
-					<xsl:if test="type2">
-						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;"> 
-								<b><xsl:value-of select="type2"/></b>&#160;
-								<xsl:value-of select="range2"/>
-							</p>
-					</xsl:if>
-				</div>
-			</div>
-		</xsl:if>
-		
-		<xsl:apply-templates select="section" />
+</xsl:template>
 	
+<xsl:template name="recursive">
+	<xsl:param name="counter">1</xsl:param>
+	
+	<div class="groupholder">
+		<div class="grouptitle"><xsl:value-of select="item[1]/type" /> <xsl:text> list by level and rarity</xsl:text></div>
+		
+		<xsl:if test="count(//catalog/item[level/value=$counter and category='Common'])>0">
+			<div class="list">
+				<div class="groupname"> <xsl:text>Level </xsl:text> <xsl:value-of select="$counter" /> <xsl:text> - Common</xsl:text></div>
+				<xsl:for-each select="//catalog/item[level/value=$counter and category='Common']">
+					<xsl:call-template name="line" />
+				</xsl:for-each>
+			</div>
+		</xsl:if>
+	
+		<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
+			<div class="list">
+				<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
+				<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
+					<xsl:call-template name="line" />
+				</xsl:for-each>
+			</div>
+		</xsl:if>
+	
+		<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Epic'])>0">
+			<div class="list">
+				<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
+				<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
+					<xsl:call-template name="line" />
+				</xsl:for-each>
+			</div>
+		</xsl:if>
 	</div>
 	
-</xsl:template> 
-
-<xsl:template match="section">
-
+	<xsl:call-template name="recursive">
+		<xsl:with-param name="counter">$counter+1</xsl:with-param>
+	</xsl:call-template>
+	
+</xsl:template>
+	
+<xsl:template name="line">
 	<xsl:choose>
-		<xsl:when test="shade='true'">
-			<xsl:choose>
-				<xsl:when test="indent='1'">
-					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='2'">
-					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="shadesection" />
-				</xsl:otherwise>
-			</xsl:choose>
+		<xsl:when test="position() mod 2 = 1">
+			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
+				<xsl:call-template name="linecontent" />
+			</div>
 		</xsl:when>
 		<xsl:otherwise>
-			<xsl:choose>
-				<xsl:when test="indent='1'">
-					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='2'">
-					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="clearsection" />
-				</xsl:otherwise>
-			</xsl:choose>
+			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
+				<xsl:call-template name="linecontent" />
+			</div>
 		</xsl:otherwise>
 	</xsl:choose>
 	
 </xsl:template>
 
-<xsl:template name="shadesection">
-	 <xsl:param name="leftindent">1.2em</xsl:param> 
+<xsl:template name="linecontent">
 	
-	<div style="width:100%; background:linear-gradient(to right, #D6D6C2, #ebebe0); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:call-template name="sectioncontent" />
-	</div>
+	<div class="title"><xsl:value-of select="title"/></div>
+		<div class="subtype"> 
+			<i><xsl:for-each select="subtype">
+				<xsl:value-of select="."/>
+				<xsl:if test="position()!=last()">
+					<xsl:text>, </xsl:text>
+				</xsl:if> 
+			</xsl:for-each>
+			&#160;</i> 
+		</div>
+		<div class="price">
+			<xsl:value-of select="level[value=$counter]/price"/>
+		</div>
+	
 </xsl:template>
-
-<xsl:template name="clearsection">
-	 <xsl:param name="leftindent">1.2em</xsl:param> 
-	
-	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:call-template name="sectioncontent" />
-	</div>
-</xsl:template>
-
-<xsl:template name="sectioncontent">
-	<xsl:choose>
-		<xsl:when test="name-style = 'bold'"> 
-			<b><xsl:value-of select="name"/>&#160;</b>
-		</xsl:when>
-		<xsl:when test="name-style = 'italic'">
-			<i><xsl:value-of select="name"/>&#160;</i>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:value-of select="name"/>
-		</xsl:otherwise>
-	</xsl:choose>
-	<xsl:value-of select="text" disable-output-escaping="yes" />
-	
-</xsl:template> -->
 	
 </xsl:stylesheet>
