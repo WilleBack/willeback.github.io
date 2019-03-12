@@ -114,6 +114,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="groupholder">
 				<div class="grouptitle">Listed by level</div>
 				<xsl:for-each select="catalog/level"> 
+					<xsl:text>AAA</xsl:text>
 					<xsl:call-template name="listgroup" />
 				</xsl:for-each>
 			</div>
