@@ -114,7 +114,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		   <div class="groupholder">
 		      <div class="grouptitle">Lists by level</div>
 		         <xsl:for-each select="list"> 
-				 <div id="test">Test text</div>
 		            <xsl:call-template name="listgroup" />
 		         </xsl:for-each>
 		   </div> <!-- groupholder -->
@@ -258,12 +257,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 <xsl:template name="listgroup">
 	
-	<div><xsl:text>AA</xsl:text></div>
-	
-	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Heroic'])>0">
+	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Common'])>0">
 		<div class="list">
-			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
-			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Heroic']">
+			<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
+			<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
 		</div>
@@ -319,7 +316,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			&#160;</i> 
 		</div>
 		<div class="price">
-			<xsl:value-of select="level[value=current()/@counter]/price"/>
+			<xsl:value-of select="level[value=current()/@selection]/price"/>
 		</div>
 	
 </xsl:template>
