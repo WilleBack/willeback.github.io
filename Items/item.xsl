@@ -256,11 +256,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 	
 <xsl:template name="listgroup">
+	<xsl:variable name="levelvalue" selection="@selection" />
 	
 	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Common'])>0">
 		<div class="list">
 			<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
-			<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
+			<xsl:for-each select="//catalog/item[level/value=$levelvalue and category='Common']">
 				<xsl:choose>
 					<xsl:when test="position() mod 2 = 1">
 						<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
