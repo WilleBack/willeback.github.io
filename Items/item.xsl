@@ -281,9 +281,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:when>
 					<xsl:otherwise>
 						<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
-							<xsl:call-template name="linecontent">
-								<xsl:with-param name="levelvalue"><xsl:value-of select="$levelvalue" /></xsl:with-param>
-							</xsl:call-template>
+							<xsl:call-template name="linecontent" />
 						</div>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -312,7 +310,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 	
 <xsl:template name="line">
-	<xsl:param name="levelvalue" />
+	<xsl:param name="levelvalue" select="1"/>
 	
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
