@@ -108,6 +108,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					column-gap:0.6em; 
 					margin:0cm;
 				}
+			
+				.listcontainer { 
+					column-count: 2; 
+					column-gap:0.6em; 
+					margin:0cm;
+				}
 				
 			}
 			
