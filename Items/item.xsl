@@ -305,7 +305,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					&#160;</i> 
 				</div>
 				<div class="price">
-					<xsl:value-of select="level[value={@levelvalue}]/price"/>
+					<xsl:value-of select="level[value=@levelvalue]/price"/>
 				</div>
 			</div>
 		</xsl:when>
