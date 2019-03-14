@@ -261,14 +261,36 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="list">
 			<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
 			
-			<xsl:apply-templates select="//catalog/item[level/value=current()/@selection]" mode="line">
-				<xsl:with-param name="levelvalue">current()/@selection</xsl:with-param>
-			</xsl:apply-templates>
-			<!-- <xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-				<xsl:call-template name="line">
-					<xsl:with-param name="levelvalue"></xsl:with-param>
-				</xsl:call-template>
-			</xsl:for-each> -->
+			<xsl:choose>
+				<xsl:when test="@selection='1'">
+					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
+						<xsl:call-template name="line">
+							<xsl:with-param name="levelvalue">1</xsl:with-param>
+						</xsl:call-template>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:when test="@selection='2'">
+					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
+						<xsl:call-template name="line">
+							<xsl:with-param name="levelvalue">2</xsl:with-param>
+						</xsl:call-template>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:when test="@selection='3'">
+					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
+						<xsl:call-template name="line">
+							<xsl:with-param name="levelvalue">3</xsl:with-param>
+						</xsl:call-template>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:when test="@selection='4'">
+					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
+						<xsl:call-template name="line">
+							<xsl:with-param name="levelvalue">4</xsl:with-param>
+						</xsl:call-template>
+					</xsl:for-each>
+				</xsl:when>
+			</xsl:choose>
 		</div>
 	</xsl:if>
 	
