@@ -1021,8 +1021,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
-				<div class="title"><xsl:value-of select="title"/></div>
-				<div class="subtype"> 
+				<div class="title" style="width:calc(50% - 6em); float:left;"><xsl:value-of select="title"/></div>
+				<div class="subtype" style="width:calc(40% - 6em); float:left;"> 
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
 						<xsl:if test="position()!=last()">
@@ -1031,15 +1031,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 					&#160;</i> 
 				</div>
-				<div class="price">
+				<div class="price" style="width:11em; float:left;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/>
 				</div>
 			</div>
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
-				<div class="title"><xsl:value-of select="title"/></div>
-				<div class="subtype"> 
+				<div class="title" style="width:calc(50% - 6em); float:left;"><xsl:value-of select="title"/></div>
+				<div class="subtype" style="width:calc(40% - 6em); float:left;"> 
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
 						<xsl:if test="position()!=last()">
@@ -1048,7 +1048,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 					&#160;</i> 
 				</div>
-				<div class="price">
+				<div class="price" style="width:11em; float:left;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/>
 				</div>
 			</div>
