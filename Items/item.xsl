@@ -290,6 +290,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:call-template>
 					</xsl:for-each>
 				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
+						<xsl:call-template name="line">
+							<xsl:with-param name="levelvalue">30</xsl:with-param>
+						</xsl:call-template>
+					</xsl:for-each>
+				</xsl:otherwise>
 			</xsl:choose>
 		</div>
 	</xsl:if>
@@ -315,48 +322,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 	
 <xsl:template name="line">
-	<xsl:param name="levelvalue" select="1"/>
-	
-	<xsl:choose>
-		<xsl:when test="position() mod 2 = 1">
-			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
-				<div class="title"><xsl:value-of select="title"/></div>
-				<div class="subtype"> 
-					<i><xsl:for-each select="subtype">
-						<xsl:value-of select="."/>
-						<xsl:if test="position()!=last()">
-							<xsl:text>, </xsl:text>
-						</xsl:if> 
-					</xsl:for-each>
-					&#160;</i> 
-				</div>
-				<div class="price">
-					<xsl:value-of select="level[value=$levelvalue]/price"/>
-				</div>
-			</div>
-		</xsl:when>
-		<xsl:otherwise>
-			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
-				<div class="title"><xsl:value-of select="title"/></div>
-				<div class="subtype"> 
-					<i><xsl:for-each select="subtype">
-						<xsl:value-of select="."/>
-						<xsl:if test="position()!=last()">
-							<xsl:text>, </xsl:text>
-						</xsl:if> 
-					</xsl:for-each>
-					&#160;</i> 
-				</div>
-				<div class="price">
-					<xsl:value-of select="level[value=1]/price"/>
-				</div>
-			</div>
-		</xsl:otherwise>
-	</xsl:choose>
-	
-</xsl:template>
-	
-<xsl:template match="item" mode="line">
 	<xsl:param name="levelvalue" select="1"/>
 	
 	<xsl:choose>
