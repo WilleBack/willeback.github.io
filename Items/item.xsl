@@ -262,7 +262,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
 			
 			<xsl:apply-templates select="//catalog/item[level/value=current()/@selection]" mode="line">
-				<xsl:with-param name="levelvalue">@selection</xsl:with-param>
+				<xsl:with-param name="levelvalue">current()/@selection</xsl:with-param>
 			</xsl:apply-templates>
 			<!-- <xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
 				<xsl:call-template name="line">
