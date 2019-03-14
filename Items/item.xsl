@@ -311,7 +311,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="linecontent">
-	<xsl:param name="levelvalue" />
+	<xsl:param name="levelvalue">1</xsl:param>
 	
 	<div class="title"><xsl:value-of select="title"/></div>
 		<div class="subtype"> 
