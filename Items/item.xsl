@@ -261,9 +261,32 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="list">
 			<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
 			<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-				<xsl:call-template name="line">
-					<xsl:with-param name="levelvalue"><xsl:value-of select="current()/@selection" /></xsl:with-param>
-				</xsl:call-template>
+				<xsl:choose>
+					<xsl:when test="position() mod 2 = 1">
+						<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
+							<div class="title"><xsl:value-of select="title"/></div>
+							<div class="subtype"> 
+								<i><xsl:for-each select="subtype">
+									<xsl:value-of select="."/>
+									<xsl:if test="position()!=last()">
+										<xsl:text>, </xsl:text>
+									</xsl:if> 
+									</xsl:for-each>
+								&#160;</i> 
+							</div>
+							<div class="price">
+								<xsl:value-of select="level[value=current()/@selection]/price"/>
+							</div>
+						</div>
+					</xsl:when>
+					<xsl:otherwise>
+						<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
+							<xsl:call-template name="linecontent">
+								<xsl:with-param name="levelvalue"><xsl:value-of select="$levelvalue" /></xsl:with-param>
+							</xsl:call-template>
+						</div>
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:for-each>
 		</div>
 	</xsl:if>
