@@ -111,13 +111,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="listcontainer">
-			<div class="groupholder">
-				<div class="grouptitle">Listed by level</div>
-				<xsl:for-each select="catalog/level"> 
-					<xsl:text>AAA</xsl:text>
-					<xsl:call-template name="listgroup" />
-				</xsl:for-each>
-			</div>
+		   <div class="groupholder">
+		      <div class="grouptitle">Lists by level</div>
+		         <xsl:for-each select="catalog/list"> 
+		            <xsl:call-template name="listgroup" />
+		         </xsl:for-each>
+		      </div>
+		   </div>
 		</div>
 			
 		<div class="container">
@@ -258,14 +258,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 <xsl:template name="listgroup">
 	
-	<!-- <xsl:if test="count(//catalog/item[level/value=current()/@counter])>0"> -->
+	<div><xsl:text>AA</xsl:text></div>
+	
+	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Heroic'])>0">
 		<div class="list">
-			<div class="groupname"> <xsl:text>Level </xsl:text> <xsl:value-of select="@selection" /> <xsl:text> - Common</xsl:text></div>
-			<xsl:for-each select="//catalog/item[level/value=current()/@counter and category='Common']">
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
+			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Heroic']">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
 		</div>
-	<!-- </xsl:if> -->
+	</xsl:if>
 	
 	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
 		<div class="list">
