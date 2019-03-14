@@ -83,6 +83,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					column-count: 3; 
 					column-gap:0.5em; 
 				}
+			
+				.listcontainer {
+					column-count: 2;
+					column-gap:0.5em;
+				}
 			}
 			
 			@media only screen and (min-width:1300px) {
@@ -1055,8 +1060,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="linecontent">
 	<xsl:param name="levelvalue">1</xsl:param>
 	
-	<div class="title"><xsl:value-of select="title"/></div>
-		<div class="subtype"> 
+	<div class="title" style="width:calc(50% - 6em); float:left;"><xsl:value-of select="title"/></div>
+		<div class="subtype" style="width:calc(40% - 6em); float:left;"> 
 			<i><xsl:for-each select="subtype">
 				<xsl:value-of select="."/>
 				<xsl:if test="position()!=last()">
@@ -1065,7 +1070,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 			&#160;</i> 
 		</div>
-		<div class="price">
+		<div class="price" style="width:11em; float:left;">
 			<xsl:value-of select="level[value='$levelvalue']/price"/>
 		</div>
 	
