@@ -1032,7 +1032,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					&#160;</i> 
 				</div>
 				<div class="price" style="width:11em; float:left; text-align:right;">
-					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp<xsl:text>
+					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
 				</div>
 			</div>
 		</xsl:when>
