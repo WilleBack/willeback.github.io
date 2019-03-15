@@ -1034,10 +1034,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:if test="position()!=last()">
 							<xsl:text>, </xsl:text>
 						</xsl:if> 
-					</xsl:for-each>
-					&#160;</i> 
+					</xsl:for-each></i> 
 				</div>
-				<div class="price" style="width:9em; float:left; text-align:right;">
+				<div class="price" style="width:9em; float:right; text-align:right;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
 				</div>
 			</div>
@@ -1051,10 +1050,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:if test="position()!=last()">
 							<xsl:text>, </xsl:text>
 						</xsl:if> 
-					</xsl:for-each>
-					&#160;</i> 
+					</xsl:for-each></i> 
 				</div>
-				<div class="price" style="width:9em; float:left; text-align:right;">
+				<div class="price" style="width:9em; float:right; text-align:right;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
 				</div>
 			</div>
