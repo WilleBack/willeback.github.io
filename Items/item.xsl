@@ -1036,7 +1036,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:if> 
 					</xsl:for-each></i> 
 				</div>
-				<div class="price" style="width:9em; float:right; text-align:right;">
+				<div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
 				</div>
 			</div>
@@ -1052,7 +1052,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:if> 
 					</xsl:for-each></i> 
 				</div>
-				<div class="price" style="width:9em; float:right; text-align:right;">
+				<div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
 				</div>
 			</div>
