@@ -1027,8 +1027,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro); box-sizing:border-box; padding:0.2em;">
-				<div class="title" style="width:calc(55% - 6em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/enhancement" /></div>
-				<div class="subtype" style="width:calc(45% - 6em); float:left; padding:0.1em;"> 
+				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/enhancement" /></div>
+				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;"> 
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
 						<xsl:if test="position()!=last()">
@@ -1037,15 +1037,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 					&#160;</i> 
 				</div>
-				<div class="price" style="width:11em; float:left; text-align:right;">
+				<div class="price" style="width:9em; float:left; text-align:right;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
 				</div>
 			</div>
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow); box-sizing:border-box; padding:0.2em;">
-				<div class="title" style="width:calc(55% - 6em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/enhancement" /></div>
-				<div class="subtype" style="width:calc(45% - 6em); float:left; padding:0.1em;"> 
+				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/enhancement" /></div>
+				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;"> 
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
 						<xsl:if test="position()!=last()">
@@ -1054,7 +1054,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 					&#160;</i> 
 				</div>
-				<div class="price" style="width:11em; float:left; text-align:right;">
+				<div class="price" style="width:9em; float:left; text-align:right;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
 				</div>
 			</div>
