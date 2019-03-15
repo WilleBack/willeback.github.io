@@ -1044,7 +1044,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow); box-sizing:border-box; padding:0.2em;">
-				<div class="title" style="width:calc(55% - 6em); float:left; padding:0.1em;"><xsl:value-of select="title"/></div>
+				<div class="title" style="width:calc(55% - 6em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/enhancement" /></div>
 				<div class="subtype" style="width:calc(45% - 6em); float:left; padding:0.1em;"> 
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
