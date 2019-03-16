@@ -159,7 +159,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:for-each select="level">
 						<div class="priceline">
 							<div id="lvl" style="width: 4em; float: left;"><xsl:text>Lvl </xsl:text><xsl:value-of select="value" /></div>
-							<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="enhancement" /></div>
+							<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="bonus" /></div>
 							<div id="price" style="width:calc(100% - 8em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
 						</div>
 					</xsl:for-each>
@@ -1027,7 +1027,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro); box-sizing:border-box; padding:0.2em;">
-				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/enhancement" /></div>
+				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
 				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;"> 
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
@@ -1043,7 +1043,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:when>
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow); box-sizing:border-box; padding:0.2em;">
-				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/enhancement" /></div>
+				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
 				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;"> 
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
