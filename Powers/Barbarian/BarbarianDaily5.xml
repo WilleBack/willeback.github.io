@@ -40,14 +40,68 @@
       </part>
       <part>
          <part-name>Ambusher's Rage</part-name>
-         <hide-freqkey /> <hide-actrange />
+         <hide-freqkey>true</hide-freqkey> <hide-actrange>true</hide-actrange>
          <section>
-            <shade>true</shade>
+            <shade>true</shade> <indent>1</indent>
             <text>Until the rage ends, as a minor action you can shift 2 squares to a space adjacent to a bloodied enemy.</text>
          </section>
          <section>
-            <shade>true</shade>
+            <shade>true</shade> <indent>1</indent>
             <text>Also, you count an enemy as being flanked if it is bloodied and at least one ally is adjacent to it. If you hit a bloodied enemy with a melee attack, all allies consider the enemy flanked as long as you are adjacent to it.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Ancient Berserkers Rage</title>
+      <class>Barbarian</class> <category>Attack</category> <level>5</level>
+      <fluff>You lash out and the spirits of ancestral berserkers roar their approval, anxious to fight beside a member of the clan</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Primal, Rage, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <shade>true</shade>
+            <name>Rage:</name> <name-style>bold</name-style>
+            <text>You enter Ancient Berserkers Rage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If you are already raging when you use this power, you can choose to either change your rage to Ancient Berserkers Rage or to deal additional damage to the target equal to your Charisma modifier.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>If the target was adjacent to you at the start of your current turn, you gain a +2 bonus to the attack roll</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>3[W] + Strength modifier damage.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Ancient Berserkers Rage</part-name>
+         <hide-freqkey>true</hide-freqkey> <hide-actrange>true</hide-actrange>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <text>Until the rage ends, at the start of each of your turns, each enemy adjacent to you becomes engaged by ancestral berserkers until the start of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <text>While an enemy is engaged, you gain combat advantage against it and gain a power bonus to damage rolls against it equal to your Charisma modifier.</text>
          </section>
       </part>
    </power>
