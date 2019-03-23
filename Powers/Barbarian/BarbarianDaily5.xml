@@ -519,4 +519,148 @@
       </part>
    </power>
    
+   <power>
+      <title>Silver Phoenix Rage</title>
+      <class>Barbarian</class> <category>Attack</category> <level>5</level>
+      <fluff>Your mighty blow erupts in silver fire as the spirit of the phoenix enters you, granting vitality that surges through you and wards you from death</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Fire, Healing, Primal, Rage, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <shade>true</shade>
+            <name>Rage:</name> <name-style>bold</name-style>
+            <text>You enter Silver Phoenix Rage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Alternative:</name> <name-style>italic</name-style>
+            <text>You regain hit points equal to one-half your healing surge value.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2[W] + Strength modifier fire damage, and ongoing 10 fire damage (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage, and ongoing 5 fire damage.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Silver Phoenix Rage</part-name>
+         <hide-freqkey>true</hide-freqkey> <hide-actrange>true</hide-actrange>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <text>Until the rage ends, you gain regeneration 3. As long as you have at least 1 hit point, you regain 3 hit points at the start of your turn.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <text>Once during the rage, you can use the Silver Phoenix Recovery action.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Silver Phoenix Recovery</part-name>
+         <frequency>Encounter</frequency>
+         <keyword>Healing, Primal</keyword>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <type>Personal</type>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>You would drop to 0 hit points or less</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You spend a healing surge and regain hit points equal to your healing surge value.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If you have no healing surges remaining, you regain hit points equal to one-half your healing surge value and the rage ends.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Thunder Hawk Rage</title>
+      <class>Barbarian</class> <category>Attack</category> <level>5</level>
+      <fluff>Your thunderous attack dazes your foe as you channel the great spirit hawk whose wings rumble across the sky</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Primal, Rage, Thunder, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <shade>true</shade>
+            <name>Rage:</name> <name-style>bold</name-style>
+            <text>You enter Thunder Hawk Rage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Alternative:</name> <name-style>italic</name-style>
+            <text>After the power has been resolved, you knock each creature adjacent to you prone.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2[W] + Strength modifier thunder damage, and the target is dazed (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage, and until the end of its next turn, the target grants combat advantage and cannot take opportunity or immediate actions.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Thunder Hawk Rage</part-name>
+         <hide-freqkey>true</hide-freqkey> <hide-actrange>true</hide-actrange>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <text>Until the rage ends, you can use the Thunder Hawk's Screech attack once during each of your turns.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Thunder Hawk's Screech</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Primal, Thunder</keyword>
+         <action>Free</action> <subaction>Action</subaction>
+         <type>Close</type> <range>burst 1</range>
+         <type2>Close</type2> <range2>blast 2</range2>
+         <section>
+            <name>Screech Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst or blast</text>
+         </section>
+         <section>
+            <name>Screech Attack:</name> <name-style>bold</name-style>
+            <text>Constitution +3 vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>You knock the target prone.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Critical:</name> <name-style>bold</name-style>
+            <text>The target takes thunder damage equal to 5 + your Constitution modifier.</text>
+         </section>
+      </part>
+   </power>
+   
 </catalog>
