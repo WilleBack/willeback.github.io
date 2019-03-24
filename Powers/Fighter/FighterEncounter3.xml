@@ -342,5 +342,129 @@
       </part>
    </power>
    
+   <power>
+      <title>Parry and Riposte</title>
+      <class>Fighter</class> <category>Attack</category> <level>3</level>
+      <fluff>You parry an attack and quickly counter with your own, throwing your foe off balance</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Martial, Weapon</keyword>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>An enemy within your reach misses you or an ally with a melee attack</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The triggering enemy</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Strength modifier damage, and the target grants combat advantage until the start of its next turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+		<title>Power Strike</title>
+		<class>Fighter</class> <category>Attack</category> <level>3</level>
+		<fluff>By pushing yourself beyond your limits, you unleash your full wrath against a foe</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<action>Nonaction</action> <subaction>Interrupt</subaction>
+			<type>Special</type>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>You hit an enemy with a <![CDATA[<i>melee basic attack</i>]]> or a Fighter at-will attack</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The triggering attack deals +1[W] damage.</text>
+			</section>
+			<section>
+				<name>Special:</name> <name-style>bold</name-style>
+				<text><![CDATA[<i>Power strike</i>]]> can be chosen at all levels where you gain an encounter attack, allowing you to use it more than once per encounter. You cannot use more than one <![CDATA[<i>power strike</i>]]> on a given attack, and you should keep track separately of different levels of the power that deal increased damage.</text>
+			</section>
+		</part>
+	</power>
+   
+   <power>
+      <title>Precise Strike</title>
+      <class>Fighter</class> <category>Attack</category> <level>3</level>
+      <fluff>You make sure you land an attack on your opponent</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Martial, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength +4 vs. AC</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>Roll the attack twice and use either result</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>Half of 2[W] + Strength modifier damage.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half of the minimum damage for the attack.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Probing Attack</title>
+      <class>Fighter</class> <category>Attack</category> <level>3</level>
+      <fluff>With a careful strike, you find a weak spot in your enemy's defenses</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Martial, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Strength modifier damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>You gain a +4 power bonus to all attack rolls against the target until the end of your next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You gain a +2 power bonus to all attack rolls against the target until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Special:</name> <name-style>bold</name-style>
+            <text>You can use this power in place of a <![CDATA[<i>melee basic attack</i>]]> when you make an <![CDATA[<i>opportunity attack</i> or use your <i>enforce challenge</i>]]>.</text>
+         </section>
+      </part>
+   </power>
+   
 </catalog>
-         
