@@ -189,7 +189,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="blockdiv">
 				<b>Defenses </b>
 				<xsl:for-each select="class/defense">
-					<br /><b><xsl:value-of select="name"/> :</b> <xsl:value-of select="value" />
+					<br /><b><xsl:value-of select="name"/>:</b> <xsl:value-of select="value" />
 				</xsl:for-each>
 			</div> <!-- blockdiv -->
 			
