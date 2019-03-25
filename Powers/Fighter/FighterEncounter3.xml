@@ -150,7 +150,7 @@
             <text>You push the target 1 square, then shift the same distance to a square adjacent to it.</text>
          </section>
          <section>
-            <text>Make the secondary attack against the target.</text>
+            <text>If you used this power on a charge, make the secondary attack against the target.</text>
          </section>
          <section>
             <name>Secondary Attack:</name> <name-style>bold</name-style>
@@ -527,6 +527,95 @@
             <shade>true</shade> <indent>1</indent>
             <name>Weapon:</name> <name-style>bold</name-style>
             <text>If you're wielding a light blade or a spear, the attack deals additional damage equal to your Dexterity modifier.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Restoring Strike</title>
+      <class>Fighter</class> <category>Attack</category> <level>3</level>
+      <fluff>Your weapon impacts with a satisfying crunch, filling you with new confidence</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Martial, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <shade>true</shade>
+            <name>Requirement:</name> <name-style>bold</name-style>
+            <text>You must have training in Endurance.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength -4 vs. AC</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>You gain a +2 bonus to the attack roll if you are bloodied</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>You gain a bonus to the attack roll equal to one-third the number of healing surges you have expended</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Strength modifier + Constitution modifier damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If you use your <![CDATA[<i>second wind</i>]]> before the end of your next turn, you regain additional hit points equal to your Wisdom modifier.</text>
+         </section>
+         <section>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>Until the end of your next turn, you can use your <![CDATA[<i>second wind</i>]]> as a minor action.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Rhino Strike</title>
+      <class>Fighter</class> <category>Attack</category> <level>3</level>
+      <fluff>Rushing into the thick of battle, you smash your foe with your eager attack</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Martial, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You charge and use this attack in place of a melee basic attack. If an effect allows you to charge, you can use this power.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Shield:</name> <name-style>bold</name-style>
+            <text>If you are using a shield, your movement during the charge does not provoke <![CDATA[<i>opportunity attacks</i>]]>.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2[W] + Strength modifier damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The attack deals +1 additional damage for each square beyond 2 you move during the charge.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>If you moved more than 2 squares during the charge, you deal your Strength modifier + your weapon's enhancement bonus damage.</text>
          </section>
       </part>
    </power>
