@@ -164,7 +164,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:for-each>
             </xsl:if>
          </div>
-         <!--<div id="move" class="line" style="width: calc(100% - 9em); float: left;">
+         <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
             <b>Speed </b> <xsl:value-of select="speed" />
             <xsl:if text="fly">
                <xsl:text>, </xsl:text> <i>fly </i> <xsl:value-of select="fly" />
@@ -183,7 +183,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:if> 
                </xsl:for-each>
             </xsl:if>
-         </div> -->
+         </div>
       </div> 
       <!-- 
       <xsl:for-each select="category">
