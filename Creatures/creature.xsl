@@ -296,14 +296,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div> 
       
       <xsl:for-each select="category">
-         <div id="catname" style="background-color:#4e5c2e; color: white; width:100%; padding:0.2em; padding-left: 0.7em; box-sizing: border-box; font-variant:small-caps; font-size:1.1em; float:left;">
+         <div id="catname" style="background-color:#4e5c2e; color: white; width:100%; padding:0.2em; padding-left: 0.7em; box-sizing: border-box; font-variant:small-caps; font-size:1.1em; font-weight: bold; float:left;">
             <xsl:value-of select="category-name" />
          </div>
-         <!-- <xsl:for-each select="block">
+         <xsl:for-each select="block">
             <div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                <div style="float:left; width: max-content; max-width: calc(100% - 14em);">
                   <b><xsl:value-of select="name" /> </b>
-                  <xsl:if test="keyword">
+                  <!-- <xsl:if test="keyword">
                      <xsl:text> (</xsl:text>
                      <xsl:for-each select="keyword">
                         <xsl:value-of select="."/>
@@ -312,9 +312,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:if> 
                      </xsl:for-each>
                      <xsl:text>)</xsl:text>
-                  </xsl:if>
+                  </xsl:if> --> 
                </div>
-               <xsl:if test="frequency">
+               <!-- <xsl:if test="frequency">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
@@ -325,8 +325,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
                   <div style="float:left; max-width:21em; "><b>Recharge </b><xsl:value-of select="recharge" /></div>
-               </xsl:if>
-            </div>
+               </xsl:if> -->
+            </div> <!--
             <xsl:for-each select="line">
                <xsl:choose>
                   <xsl:when test="@indent='1'">
@@ -345,8 +345,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      </div>
                   </xsl:otherwise>
                </xsl:choose>
-            </xsl:for-each> 
-         </xsl:for-each> -->
+            </xsl:for-each> -->
+         </xsl:for-each> 
       </xsl:for-each> 
    </div> 
 
