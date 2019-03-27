@@ -120,7 +120,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </head>
       <body style="font-family:Verdana; font-size:8pt;margin:0cm; ">	
          <div class="container">
+		 <xsl:text>ABC</xsl:text>
             <xsl:apply-templates match="creature">
+		    <xsl:text>111</xsl:text>
                <xsl:sort select="title" />
             </xsl:apply-templates>	
          </div> <!-- container -->
@@ -130,7 +132,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="creature">
    <div class="creature">
-      <xsl:call-template name="createheader">
+	   222
+      <!-- <xsl:call-template name="createheader">
          <xsl:with-param name="bgcolor">##4e5c2e</xsl:with-param>
       </xsl:call-template>
       
@@ -184,7 +187,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:for-each>
             </xsl:if>
          </div>
-      </div> <!-- topbox -->
+      </div> 
       
       <xsl:for-each select="category">
          <div id="catname" style="background-color:#4e5c2e; width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;">
@@ -237,9 +240,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      </div>
                   </xsl:otherwise>
                </xsl:choose>
-            </xsl:for-each> <!-- line -->
-         </xsl:for-each> <!-- block -->
-      </xsl:for-each> <!-- category -->
+            </xsl:for-each> 
+         </xsl:for-each> 
+      </xsl:for-each> -->
       
    </div> 
 
@@ -247,7 +250,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="createheader">
    <xsl:param name="bgcolor">Purple</xsl:param>
-   
+   <!-- 
    <div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
       <div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
          <xsl:value-of select="title"/>
@@ -280,7 +283,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:text>XP </xsl:text> <xsl:value-of select="xp" />
          </div>
       </div>
-   </div> 
+   </div> -->
 	
 </xsl:template>
 	
