@@ -262,7 +262,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </xsl:if>
       </div>
       <div id="typexp" style="width: 100%; float: left;">
-         <div id="type" style="float:left; margin: 0.2em; font-variant: small-caps; width:calc(100% - 8em);">
+         <div id="type" style="float:left; margin: 0.2em; margin-top: 0.1em; font-variant: small-caps; width:calc(100% - 8em);">
 		 <xsl:value-of select="size" /><xsl:text> </xsl:text> <xsl:value-of select="origin" /><xsl:text> </xsl:text> <xsl:value-of select="type" />
                <xsl:if test="subtype">
                   <xsl:text> (</xsl:text>
@@ -275,7 +275,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:text>)</xsl:text>
                </xsl:if>
          </div>
-         <div id="xp" style="width: 7.5em; float:right; text-align: right;">
+         <div id="xp" style="margin: 0.2em; margin-top: 0.1em; width: 7.5em; float:right; text-align: right;">
             <xsl:text>XP </xsl:text> <xsl:value-of select="xp" />
          </div>
       </div>
