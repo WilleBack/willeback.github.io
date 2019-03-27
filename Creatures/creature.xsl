@@ -133,12 +133,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:call-template name="createheader">
          <xsl:with-param name="bgcolor">#4e5c2e</xsl:with-param>
       </xsl:call-template>
-      <!--
+      
       <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
          <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
             <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
          </div>
-         <div id="init" class="line" style="width: 8.5em; float: right; text-align: right;">
+         <!--<div id="init" class="line" style="width: 8.5em; float: right; text-align: right;">
             <b>Initiative </b> <xsl:value-of selet="init" />
          </div>
          <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
@@ -183,9 +183,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:if> 
                </xsl:for-each>
             </xsl:if>
-         </div>
+         </div> -->
       </div> 
-      
+      <!-- 
       <xsl:for-each select="category">
          <div id="catname" style="background-color:#4e5c2e; width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;">
             <xsl:value-of select="category-name" />
@@ -262,7 +262,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </xsl:if>
       </div>
       <div id="typexp" style="width: 100%; float: left;">
-         <div id="type" style="float:left; margin: 0.2em; margin-top: 0.1em; font-variant: small-caps; width:calc(100% - 8em);">
+         <div id="type" style="float:left; margin: 0.2em; margin-top: 0.1em; margin-left: 0.5em; font-variant: small-caps; width:calc(100% - 8.5em);">
 		 <xsl:value-of select="size" /><xsl:text> </xsl:text> <xsl:value-of select="origin" /><xsl:text> </xsl:text> <xsl:value-of select="type" />
                <xsl:if test="subtype">
                   <xsl:text> (</xsl:text>
@@ -275,7 +275,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:text>)</xsl:text>
                </xsl:if>
          </div>
-         <div id="xp" style="margin: 0.2em; margin-top: 0.1em; width: 7.5em; float:right; text-align: right;">
+         <div id="xp" style="margin: 0.3em; margin-top: 0.1em; width: 7em; float:right; text-align: right;">
             <xsl:text>XP </xsl:text> <xsl:value-of select="xp" />
          </div>
       </div>
