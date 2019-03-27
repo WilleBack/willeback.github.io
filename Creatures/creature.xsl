@@ -315,7 +315,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <div style="font-family: 'game_icons';font-size: 0.8em;width: 2em;float: left; text-align: center;">
                      <xsl:choose>
                         <xsl:when test="type='aura'">
-                           <img src="../font/aura.png">
+                           <img src="../font/aura.png" />
                         </xsl:when>
                         <xsl:when test="type='melee'">
                            <xsl:text>M</xsl:text>
