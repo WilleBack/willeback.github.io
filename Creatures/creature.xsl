@@ -198,7 +198,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      <xsl:text>; </xsl:text>
                      <b>Resist </b>
                      <xsl:for-each select="resist">
-                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select"./type" />
+                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
                         </xsl:if> 
@@ -206,7 +206,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      <xsl:text>; </xsl:text>
                      <b>Vulnerable </b>
                      <xsl:for-each select="vulnerable">
-                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select"./type" />
+                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
                         </xsl:if> 
