@@ -294,12 +294,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </div>
          </xsl:if>
       </div> 
-      <!-- 
+      
       <xsl:for-each select="category">
          <div id="catname" style="background-color:#4e5c2e; width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;">
             <xsl:value-of select="category-name" />
          </div>
-         <xsl:for-each select="block">
+         <!-- <xsl:for-each select="block">
             <div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                <div style="float:left; width: max-content; max-width: calc(100% - 14em);">
                   <b><xsl:value-of select="name" /> </b>
