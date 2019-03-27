@@ -122,9 +122,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div class="container">
 		 <xsl:text>ABC</xsl:text>
             <xsl:apply-templates match="creature">
-		    <xsl:text>111</xsl:text>
                <xsl:sort select="title" />
-            </xsl:apply-templates> -->
+            </xsl:apply-templates> 
          </div> <!-- container -->
       </body>
    </html>
@@ -133,10 +132,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="creature">
    <div class="creature">
 	   222
-      <!-- <xsl:call-template name="createheader">
+      <xsl:call-template name="createheader">
          <xsl:with-param name="bgcolor">##4e5c2e</xsl:with-param>
       </xsl:call-template>
-      
+      <!--
       <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
          <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
             <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
@@ -250,6 +249,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="createheader">
    <xsl:param name="bgcolor">Purple</xsl:param>
+	365
    <!-- 
    <div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
       <div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
