@@ -166,13 +166,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
          <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
             <b>Speed </b> <xsl:value-of select="speed" />
-            <xsl:if text="fly">
+            <xsl:if test="fly">
                <xsl:text>, </xsl:text> <i>fly </i> <xsl:value-of select="fly" />
             </xsl:if>
-            <xsl:if text="climb">
+            <xsl:if test="climb">
                <xsl:text>, </xsl:text> <i>climb </i> <xsl:value-of select="climb" />
             </xsl:if>
-            <xsl:if text="swim">
+            <xsl:if test="swim">
                <xsl:text>, </xsl:text> <i>swim </i> <xsl:value-of select="swim" />
             </xsl:if>
             <xsl:if test="speedmod">
