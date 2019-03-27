@@ -312,10 +312,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <xsl:for-each select="block">
             <div id="blockhead" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                <div style="float:left; width: max-content; max-width: calc(100% - 14em);">
-                  <div style="font-family: 'game_icons';font-size: 0.8em;width: 2em;float: left;">
+                  <div style="font-family: 'game_icons';font-size: 0.8em;width: 2em;float: left; text-align: center;">
                      <xsl:choose>
                         <xsl:when test="type='aura'">
-                           &#9881;
+                           <img src="../font/aura.png">
                         </xsl:when>
                         <xsl:when test="type='melee'">
                            <xsl:text>M</xsl:text>
