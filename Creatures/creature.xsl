@@ -132,7 +132,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    <div class="creature">
 	   222
       <xsl:call-template name="createheader">
-         <xsl:with-param name="bgcolor">##4e5c2e</xsl:with-param>
+         <xsl:with-param name="bgcolor">#4e5c2e</xsl:with-param>
       </xsl:call-template>
       <!--
       <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
