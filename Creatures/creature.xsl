@@ -303,7 +303,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <div id="blockhead" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                <div style="float:left; width: max-content; max-width: calc(100% - 14em);">
                   <b><xsl:value-of select="name" /> </b>
-                  <!-- <xsl:if test="keyword">
+                  <xsl:if test="keyword">
                      <xsl:text> (</xsl:text>
                      <xsl:for-each select="keyword">
                         <xsl:value-of select="."/>
@@ -312,7 +312,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:if> 
                      </xsl:for-each>
                      <xsl:text>)</xsl:text>
-                  </xsl:if> --> 
+                  </xsl:if>
                </div>
                <!-- <xsl:if test="frequency">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
