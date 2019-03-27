@@ -121,7 +121,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <body style="font-family:Verdana; font-size:8pt;margin:0cm; ">	
          <div class="container">
 		 <xsl:text>ABC</xsl:text>
-            <!-- <xsl:apply-templates match="creature">
+            <xsl:apply-templates match="creature">
 		    <xsl:text>111</xsl:text>
                <xsl:sort select="title" />
             </xsl:apply-templates> -->
