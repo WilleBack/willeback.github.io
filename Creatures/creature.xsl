@@ -251,7 +251,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
          <xsl:value-of select="title"/>
       </div>
-      <!-- <div id="rolelevel" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
+      <div id="rolelevel" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
          <xsl:value-of select="level"/>
          <xsl:if test="rolestrength">
             <xsl:text> </xsl:text><xsl:value-of select="rolestrength" />
@@ -261,7 +261,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:text> (</xsl:text> <xsl:value-of select="subrole" /> <xsl:text>)</xsl:text>
          </xsl:if>
       </div>
-      <div id="typexp" style="width: 100%; float: left;">
+      <!-- <div id="typexp" style="width: 100%; float: left;">
          <div id="type" style="float:left; margin: 0.2em; font-variant: small-caps; width:calc(100% - 8em);">
             <xsl:value-of select="size" /> <xsl:value-of select="origin" /> <xsl:value-of select="type" />
                <xsl:if test="subtype">
