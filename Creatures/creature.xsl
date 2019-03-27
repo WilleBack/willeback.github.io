@@ -312,7 +312,35 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <xsl:for-each select="block">
             <div id="blockhead" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                <div style="float:left; width: max-content; max-width: calc(100% - 14em);">
-                  <div style="font-family: 'game_icons';font-size: 0.8em;width: 2em;float: left;"><xs:value-of select="icon" /></div><b> <xsl:value-of select="name" /> </b>
+                  <div style="font-family: 'game_icons';font-size: 0.8em;width: 2em;float: left;">
+                     <xsl:choose>
+                        <xsl:when test="type='aura'">
+                           &#9881;
+                        </xsl:when>
+                        <xsl:when test="type='melee'">
+                           <xsl:text>M</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="type='mbasic'">
+                           <xsl:text>m</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="type='ranged'">
+                           <xsl:text>R</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="type='rbasic'">
+                           <xsl:text>r</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="type='close'">
+                           <xsl:text>C</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="type='area'">
+                           <xsl:text>A</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                           &#160;
+                        </xsl:otherwise>
+                     </xsl:choose>
+                  </div>
+                  <b> <xsl:value-of select="name" /> </b>
                   <xsl:if test="keyword">
                      <xsl:text> (</xsl:text>
                      <xsl:for-each select="keyword">
