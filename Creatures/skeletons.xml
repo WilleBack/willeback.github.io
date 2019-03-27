@@ -2,6 +2,80 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Skeleton, Blazing</title>
+      <level>5</level> <role>Artillery</role> <xp>200</xp>
+      <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
+      
+      <hp>53</hp> <bloodied>26</bloodied>
+      <init>+6</init> <perception>+4</perception> <insight>+4</insight> <sense>darkvision</sense>
+      <ac>19</ac> <fort>15</fort> <ref>18</ref> <will>16</will>
+      <speed>6</speed>
+      
+      <immune>disease</immune> <immune>poison</immune>
+      <resist>
+         <type>fire</type> <value>10</value>
+      </resist>
+      <resist>
+         <type>necrotic</type> <value>10</value>
+      </resist>
+      <vulnerable>
+         <type>radiant</type> <value>5</value>
+      </vulnerable>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Fiery Aura</name>
+            <keyword>Fire</keyword>
+            <frequency>Aura</frequency> <note>1</note>
+            <line>Any creature that ends its turn in the aura takes 5 fire damage.</line>
+         </block>
+      </category>
+      <category>
+         <category-name>Standard Actions</category-names>
+         
+         <block>
+            <name>Blazing Claw</name>
+            <keyword>Fire</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +10 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 1 damage, and ongoing 5 fire damage (save ends).</line>
+         </block>
+         <block>
+            <name>Flame Orb</name>
+            <keyword>Fire</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 5/10 (one creature); +10 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 fire damage, and ongoing 5 fire damage (save ends).</line>
+         </block>
+      </category>
+      
+      <str>
+         <value>13</value> <mod>+3 / +1</mod>
+      </str>
+      <con>
+         <value>17</value> <mod>+5 / +3</mod>
+      </con>
+      <dex>
+         <value>18</value> <mod>+6 / +4</mod>
+      </dex>
+      <int>
+         <value>4</value> <mod>-1 / -3</mod>
+      </int>
+      <wis>
+         <value>15</value> <mod>+4 / +2</mod>
+      </wis>
+      <cha>
+         <value>6</value> <mod>+0 / -2</mod>
+      </cha>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+   </creature>
+   
+   <creature>
       <title>Skeleton, Bonecrusher</title>
       <level>6</level> <role>Soldier</role> <xp>250</xp>
       <size>Large</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
