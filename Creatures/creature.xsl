@@ -212,6 +212,84 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:if> 
                      </xsl:for-each>
                   </xsl:when>
+                  <xsl:when test="immune and resist">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Resist&#160;</b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="immune and vulnerable">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Vulnerable&#160;</b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="resist and vulnerable">
+                     <b>Resist&#160;</b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Vulnerable&#160;</b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="immune">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="resist">
+                     <b>Resist&#160;</b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="vulnerable">
+                     <b>Vulnerable&#160;</b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
                </xsl:choose> 
             </div>
          </xsl:if>
