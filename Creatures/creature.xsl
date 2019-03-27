@@ -263,7 +263,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div>
       <div id="typexp" style="width: 100%; float: left;">
          <div id="type" style="float:left; margin: 0.2em; font-variant: small-caps; width:calc(100% - 8em);">
-            <xsl:value-of select="size" /> <xsl:value-of select="origin" /> <xsl:value-of select="type" />
+		 <xsl:value-of select="size" /><xsl:text> </xsl:text> <xsl:value-of select="origin" /><xsl:text> </xsl:text> <xsl:value-of select="type" />
                <xsl:if test="subtype">
                   <xsl:text> (</xsl:text>
                   <xsl:for-each select="subtype">
