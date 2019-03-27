@@ -167,13 +167,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
             <b>Speed </b> <xsl:value-of select="speed" />
             <xsl:if test="fly">
-               <xsl:text>, </xsl:text> <i>fly </i> <xsl:value-of select="fly" />
+               <xsl:text>, </xsl:text> <i>fly&#160;</i> <xsl:value-of select="fly" />
             </xsl:if>
             <xsl:if test="climb">
-               <xsl:text>, </xsl:text> <i>climb </i> <xsl:value-of select="climb" />
+               <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" />
             </xsl:if>
             <xsl:if test="swim">
-               <xsl:text>, </xsl:text> <i>swim </i> <xsl:value-of select="swim" />
+               <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
             </xsl:if>
             <xsl:if test="speedmod">
                <xsl:for-each select="speedmod">
@@ -196,17 +196,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:if> 
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
-                     <b>Resist </b>
+                     <b>Resist&#160;</b>
                      <xsl:for-each select="resist">
-                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select="./type" />
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
                         </xsl:if> 
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
-                     <b>Vulnerable </b>
+                     <b>Vulnerable&#160;</b>
                      <xsl:for-each select="vulnerable">
-                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select="./type" />
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
                         </xsl:if> 
