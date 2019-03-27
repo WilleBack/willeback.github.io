@@ -210,7 +210,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
-                  <div style="float:left; max-width:21em; "><b><xsl:value-of select="frequency" /></b></div>
+                  <div style="float:left; max-width:21em; "><b><xsl:value-of select="frequency" /> </b><xsl:value-of select="note" /></div>
                </xsl:if>
                <xsl:if test="recharge">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
@@ -265,9 +265,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <div id="typexp" style="width: 100%; float: left;">
          <div id="type" style="float:left; margin: 0.2em; font-variant: small-caps; width:calc(100% - 8em);">
             <xsl:value-of select="size" /> <xsl:value-of select="origin" /> <xsl:value-of select="type" />
-               <xsl:if test="keyword">
+               <xsl:if test="subtype">
                   <xsl:text> (</xsl:text>
-                  <xsl:for-each select="keyword">
+                  <xsl:for-each select="subtype">
                      <xsl:value-of select="."/>
                      <xsl:if test="position()!=last()">
                         <xsl:text>, </xsl:text>
