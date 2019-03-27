@@ -296,7 +296,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div> 
       
       <xsl:for-each select="category">
-         <div id="catname" style="background-color:#4e5c2e; color: white; width:100%; margin:0.2em; box-sising: border-box; font-variant:small-caps; font-size:1.1em; float:left;">
+         <div id="catname" style="background-color:#4e5c2e; color: white; width:100%; padding:0.2em; padding-left: 0.7em; box-sizing: border-box; font-variant:small-caps; font-size:1.1em; float:left;">
             <xsl:value-of select="category-name" />
          </div>
          <!-- <xsl:for-each select="block">
