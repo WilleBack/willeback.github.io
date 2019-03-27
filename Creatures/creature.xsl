@@ -184,13 +184,43 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:for-each>
             </xsl:if>
          </div>
+         <xsl:if test="immune or resist or vulnerable">
+            <div id="resist" class="line" style="width: calc(100% - 9em); float:left;">
+               <xsl:choose>
+                  <xsl:when test="immune and resist and vulnerable">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Resist </b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select"./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Vulnerable </b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text> </xsl:text><xsl:value-of select"./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+               </xsl:choose> 
+            </div>
+         </xsl:if>
       </div> 
       <!-- 
       <xsl:for-each select="category">
          <div id="catname" style="background-color:#4e5c2e; width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;">
             <xsl:value-of select="category-name" />
          </div>
-         
          <xsl:for-each select="block">
             <div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                <div style="float:left; width: max-content; max-width: calc(100% - 14em);">
@@ -240,7 +270,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </xsl:for-each> 
          </xsl:for-each> 
       </xsl:for-each> -->
-      
    </div> 
 
 </xsl:template>
@@ -280,7 +309,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
       </div>
    </div>
-	
+
 </xsl:template>
-	
+
 </xsl:stylesheet>
