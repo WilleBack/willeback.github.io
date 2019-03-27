@@ -125,7 +125,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		         <xsl:for-each select="list"> 
 		            <xsl:call-template name="listgroup" />
 		         </xsl:for-each>
-		   </div> <!-- groupholder -->
+		   </div> 
 		</div> -->
 			
 		<div class="container">
