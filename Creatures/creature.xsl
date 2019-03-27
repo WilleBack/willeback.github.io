@@ -256,7 +256,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <div id="rolelevel" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
          <xsl:value-of select="level"/>
          <xsl:if test="rolestrength">
-            <xsl:text> </xsl:text><xsl:value-of select="rolestrength"
+            <xsl:text> </xsl:text><xsl:value-of select="rolestrength" />
          </xsl:if>
          <xsl:text> </xsl:text> <xsl:value-of select="role" />
          <xsl:if test="subrole">
