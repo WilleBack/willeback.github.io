@@ -314,7 +314,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      <xsl:text>)</xsl:text>
                   </xsl:if>
                </div>
-               <!-- <xsl:if test="frequency">
+               <xsl:if test="frequency">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
@@ -325,8 +325,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
                   <div style="float:left; max-width:21em; "><b>Recharge </b><xsl:value-of select="recharge" /></div>
-               </xsl:if> -->
-            </div> <!--
+               </xsl:if>
+            </div>
             <xsl:for-each select="line">
                <xsl:choose>
                   <xsl:when test="@indent='1'">
@@ -345,7 +345,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      </div>
                   </xsl:otherwise>
                </xsl:choose>
-            </xsl:for-each> -->
+            </xsl:for-each>
          </xsl:for-each> 
       </xsl:for-each> 
    </div> 
