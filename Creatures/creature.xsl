@@ -155,18 +155,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
          <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
             <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
-            <xsl:for-each select="defmod">
-               <div class="line" style="padding-left:2.3em; width:calc(100% - 9em);">
-                  <xsl:value-of select="." />
-               </div>
-            </xsl:for-each>
+            <xsl:if test="defmod">
+               <xsl:for-each select="defmod">
+                  <br /> <xsl:value-of select="."/>
+                  <xsl:if test="position()!=last()">
+                     <xsl:text>, </xsl:text>
+                  </xsl:if> 
+               </xsl:for-each>
+            </xsl:if>
          </div>
          <div id="senses" class="line" style="width: 8.5em; float: right; text-align: right;">
             <b>Perception </b> <xsl:value-of select="perception" /> <br />
             <b>Insight </b> <xsl:value-of select="insight" />
-            <xsl:for-each select="sense">
-               <br /> <xsl:value-of select="." />
-            </xsl:for-each>
+            <xsl:if test="sense">
+               <xsl:for-each select="sense">
+                  <br /> <xsl:value-of select="."/>
+                  <xsl:if test="position()!=last()">
+                     <xsl:text>, </xsl:text>
+                  </xsl:if> 
+               </xsl:for-each>
+            </xsl:if>
          </div>
          <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
             <b>Speed </b> <xsl:value-of select="speed" />
@@ -179,11 +187,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:if text="swim">
                <xsl:text>, </xsl:text> <i>swim </i> <xsl:value-of select="swim" />
             </xsl:if>
-            <xsl:for-each select="speedmod">
-               <div class="line" style="padding-left:2.3em; width:calc(100% - 9em);">
-                  <xsl:value-of select="." />
-               </div>
-            </xsl:for-each>
+            <xsl:if test="speedmod">
+               <xsl:for-each select="speedmod">
+                  <br /> <xsl:value-of select="."/>
+                  <xsl:if test="position()!=last()">
+                     <xsl:text>, </xsl:text>
+                  </xsl:if> 
+               </xsl:for-each>
+            </xsl:if>
          </div>
       </div> <!-- topbox -->
       
