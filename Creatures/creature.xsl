@@ -13,7 +13,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                float:left;
             }
             
-            .item {
+            .creature {
                background:linear-gradient(to right, #cddbb7, #dfe8d1);
                margin:0.2cm; 
                width:97%;
