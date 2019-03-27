@@ -138,10 +138,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
             <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
          </div>
-         <!--<div id="init" class="line" style="width: 8.5em; float: right; text-align: right;">
+         <div id="init" class="line" style="width: 8.5em; float: right; text-align: right;">
             <b>Initiative </b> <xsl:value-of selet="init" />
          </div>
-         <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
+         <!--<div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
             <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
             <xsl:if test="defmod">
                <xsl:for-each select="defmod">
