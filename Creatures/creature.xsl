@@ -368,17 +368,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:for-each select="line">
                <xsl:choose>
                   <xsl:when test="@indent='1'">
-                     <div class="line" style="padding-left:2.3em;">
-                        <xsl:value-of select="." disable-output-escaping="yes"/>
-                     </div>
-                  </xsl:when>
-                  <xsl:when test="@indent='2'">
                      <div class="line" style="padding-left:3.3em;">
                         <xsl:value-of select="." disable-output-escaping="yes"/>
                      </div>
                   </xsl:when>
+                  <xsl:when test="@indent='2'">
+                     <div class="line" style="padding-left:4.3em;">
+                        <xsl:value-of select="." disable-output-escaping="yes"/>
+                     </div>
+                  </xsl:when>
                   <xsl:otherwise>
-                     <div class="line">
+                     <div class="line" style="padding-left:2.3em;">
                         <xsl:value-of select="." disable-output-escaping="yes"/>
                      </div>
                   </xsl:otherwise>
