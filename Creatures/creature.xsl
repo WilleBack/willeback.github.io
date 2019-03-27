@@ -152,7 +152,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:for-each>
             </xsl:if>
          </div>
-         <!--<div id="senses" class="line" style="width: 8.5em; float: right; text-align: right;">
+         <div id="senses" class="line" style="width: 8.5em; float: right; text-align: right;">
             <b>Perception </b> <xsl:value-of select="perception" /> <br />
             <b>Insight </b> <xsl:value-of select="insight" />
             <xsl:if test="sense">
@@ -164,7 +164,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:for-each>
             </xsl:if>
          </div>
-         <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
+         <!--<div id="move" class="line" style="width: calc(100% - 9em); float: left;">
             <b>Speed </b> <xsl:value-of select="speed" />
             <xsl:if text="fly">
                <xsl:text>, </xsl:text> <i>fly </i> <xsl:value-of select="fly" />
