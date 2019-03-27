@@ -14,7 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             }
             
             .creature {
-               background:linear-gradient(to right, #cddbb7, #dfe8d1);
+               background:linear-gradient(to right, #d6d6c2, #ebebe1);
                margin:0.2cm; 
                width:97%;
                float:left;
@@ -300,7 +300,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:value-of select="category-name" />
          </div>
          <xsl:for-each select="block">
-            <div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
+            <div id="blockhead" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                <div style="float:left; width: max-content; max-width: calc(100% - 14em);">
                   <b><xsl:value-of select="name" /> </b>
                   <!-- <xsl:if test="keyword">
