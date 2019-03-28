@@ -412,7 +412,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </div>
          </div>
       </div>
-      <div id="alignlang" style="width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
+      <div id="bottombox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
          <div id="alignment" class="line" style="width: 13em;">
             <b>Alignment </b><xsl:value-of select="alignment" />
          </div>
@@ -425,8 +425,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:if> 
             </xsl:for-each>
          </div>
-      </div>
-      <div id="alignlang" style="width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
          <xsl:if test="equipment">
             <div id="equipment" class="line">
                <b>Equipment </b>
