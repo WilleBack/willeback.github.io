@@ -69,6 +69,83 @@
    </creature>
    
    <creature>
+      <title>Skeleton Mob</title>
+      <level>9</level> <role>soldier</role> <xp>400</xp>
+      <size>Large (medium)</size> <origin>natural</origin> <type>animate</type> <subtype>swarm</subtype> <subtype>undead</subtype>
+      
+      <init>+11</init>
+      <perception>+6</perception> <insight>+6</insight>
+      <sense>darkvision</sense>
+      
+      <hp>93</hp> <bloodied>46</bloodied>
+      <ac>25</ac> <fort>21</fort> <ref>22</ref> <will>20</will>
+      <speed>6</speed>
+      
+      <immune>disease</immune> <immune>poison</immune>
+      <resist>
+         <type>necrotic</type> <value>10</value>
+      </resist>
+      <resist>
+         <type>from melee and ranged attacks</type> <value>half damage</value>
+      </resist>
+      <vulnerable>
+         <type>radiant</type> <value>5</value>
+      </vulnerable>
+      <vulnerable>
+         <type>to close and area attacks</typ> <value>5</value>
+      </vulnerable>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Grasping Claws</name> <type>aura</type>
+            <frequency>Aura</frequency> <note>1</note>
+            <line>Any enemy that starts its turn in the aura is grabbed by the mob (escape DC 17).</line>
+            <line>Until the grab ends, the enemy grants combat advantage.</line>
+         </block>
+         <block>
+            <name>Swarm</name>
+            <line>A swarm can occupy the same space as another creature, and an enemy can enter its space, which is difficult terrain.</line>
+            <line>The swarm cannot be pushed, pulled, or slid by melee or ranged attacks.</line>
+            <line>It can squeeze through any opening that is large enough for at least one of the creatures it comprises.</line>
+         </block>
+      </category>
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Claws</name> <type>mbasic</type>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +14 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + 8 damage.</line>
+         </block>
+      </category>
+      
+      <str>
+         <value>17</value> <mod>+7 / +3</mod>
+      </str>
+      <con>
+         <value>13</value> <mod>+5 / +1</mod>
+      </con>
+      <dex>
+         <value>19</value> <mod>+8 / +4</mod>
+      </dex>
+      <int>
+         <value>3</value> <mod>+0 / -4</mod>
+      </int>
+      <wis>
+         <value>14</value> <mod>+6 / +2</mod>
+      </wis>
+      <cha>
+         <value>3</value> <mod>+0 / -4</mod>
+      </cha>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+   </creature>
+      
+   
+   <creature>
       <title>Skeleton, Blazing</title>
       <level>5</level> <role>Artillery</role> <xp>200</xp>
       <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
