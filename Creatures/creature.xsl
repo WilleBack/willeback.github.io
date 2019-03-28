@@ -354,7 +354,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:when>
                   <xsl:when test="saves">
                      <b>Saving Throws</b>
-                        <xsl:value-of select=".saves"/>
+                        <xsl:value-of select="saves"/>
                   </xsl:when>
                   <xsl:when test="savemod">
                      <b>Saving Throws </b>
