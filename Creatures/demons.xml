@@ -3,6 +3,127 @@
 <catalog>
    <creature>
       <title>Balor</title>
+      <level>27</level> <rolestrength>Elite</rolestrength> <role>Brute</role> <xp>22 000</xp>
+      <size>Huge</size> <origin>elemental</origin> <type>humanoid</type> <subtype>demon</subtype>
+      
+      <init>+20</init>
+      <perception>+27</perception> <insight>+27</insight>
+      <sense>blindsight 6</sense> <sense>darkvision</sense>
+      
+      <hp>622</hp> <bloodied>311</bloodied</bloodied>
+      <ac>40</ac> <fort>39</fort> <ref>36</ref> <will>38</will>
+      <speed>8</speed> <fly>12 (clumsy)</fly>
+      
+      <resist>
+         <type>fire</type> <value>20</value>
+      </resist>
+      <resist>
+         <type>variable resistance</type> <value>see</value>
+      </resist>
+      
+      <saves>+2</saves> <ap>1</ap>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Flaming Body</name> <type>aura</type>
+            <keyword>Fire</keyword>
+            <frequency>Aura</frequency> <note>2, or 3 while the balor is bloodied</note>
+            <line>Any enemy that starts its turn in the aura takes 10 fire damage, or 20 fire damage while the balor is bloodied.</line>
+         </block>
+      </category>
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Lightning Sword</name> <type>mbasic</type>
+            <keyword>Lightning</keyword> <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 3 (one creature); +32 vs. AC</line>
+            <line indent="1">The attack can score a critical hit on a roll of 19 or 20</line>
+            <line><![CDATA[<i>Hit:</i>]]> 6d10 + 11 (crit 3d10 + 71) lightning damage.</line>
+         </block>
+         <block>
+            <name>Flaming Whip</name> <type>melee</type>
+            <keyword>Fire</keyword> <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 5 (one creature); +30 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d10 + 10 fire damage, and ongoing 15 damage (save ends). The balor pulls the target up to 5 squares to a square adjacent to it.</line>
+            <line><![CDATA[<i>Miss:</i>]]> The balor pulls the target up to 2 squares.</line>
+         </block>
+         <block>
+            <name>Fire and Lightning</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The balor uses Flaming Whip once, and Lightning Sword once.</line>
+         </block>
+         <block>
+            <name>Beheading Blade</name> <type>close</type>
+            <keyword>Lightning</keyword> <keyword>Weapon</keyword>
+            <recharge>when first bloodied</recharge>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (enemies in the blast); +32 vs. AC</line>
+            <line indent="1">The attack can score a critical hit on a roll of 15 to 20</line>
+            <line><![CDATA[<i>Hit:</i>]]> 6d10 + 11 (crit 5d10 + 71) lightning damage.</line>
+         </block>
+      </category>
+      <category>
+         <category-name>Triggered Actions</category-name>
+         
+         <block>
+            <name>Death Burst</name> <type>close</type>
+            <keyword>Elemental</keyword> <keyword>Fire</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger (nonaction):</i>]]> The balor drops to 0 hit points or less</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close burst 10 (creatures in the burst); +30 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 6d10 fire damage.</line>
+            <line><![CDATA[<i>Miss:</i>]]> Half damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The balor and its equipment discorporates.</line>
+         </block>
+         <block>
+            <name>Variable Resistance</name>
+            <frequency>3 / Encounter</frequency>
+            <line><![CDATA[<i>Trigger (free interrupt):</i>]]> The balor takes acid, cold, lightning, or thunder damage</line>
+            <line><![CDATA[<i>Effect:</i>]]> The balor gains resist 20 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Bluff</name> <value>+20</value>
+      </skill>
+      <skill>
+         <name>Insight</name> <value>+27</value>
+      </skill>
+      <skill>
+         <name>Intimidate</name> <value>+20</value>
+      </skill>
+      <skill>
+         <name>Perception</name> <value>+27</value>
+      </skill>
+      
+      <str>
+         <value>30</value> <mod>+23 / +10</mod>
+      </str>
+      <con>
+         <value>30</value> <mod>+23 / +10</mod>
+      </con>
+      <dex>
+         <value>22</value> <mod>+19 / +6</mod>
+      </dex>
+      <int>
+         <value>12</value> <mod>+14 / +1</mod>
+      </int>
+      <wis>
+         <value>27</value> <mod>+21 / +8</mod>
+      </wis>
+      <cha>
+         <value>14</value> <mod>+15 / +2</mod>
+      </cha>
+      
+      <alignment>chaotic evil</alignment>
+      <language>Abyssal</language> <language>Common</language>
+      
+      <equipment>lightning sword</equipment>
+      <equipment>flaming whip</equipment>
    </creature>
    
 </catalog>
