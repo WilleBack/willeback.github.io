@@ -426,18 +426,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </xsl:for-each>
          </div>
       </div>
-      <xsl:if test="equipment">
-         <div id="equipment" class="line">
-            <b>Equipment </b>
-            <xsl:for-each select="equipment">
-               <xsl:value-of select="."/>
-               <xsl:if test="position()!=last()">
-                  <xsl:text>, </xsl:text>
-               </xsl:if> 
-            </xsl:for-each>
-         </div>
-      </xsl:if>
-   </div> 
+      <div id="alignlang" style="width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
+         <xsl:if test="equipment">
+            <div id="equipment" class="line">
+               <b>Equipment </b>
+               <xsl:for-each select="equipment">
+                  <xsl:value-of select="."/>
+                  <xsl:if test="position()!=last()">
+                     <xsl:text>, </xsl:text>
+                  </xsl:if> 
+               </xsl:for-each>
+            </div>
+         </xsl:if>
+      </div>
+   </div>
 
 </xsl:template>
 
