@@ -149,28 +149,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <br /> <xsl:value-of select="hpnote" />
             </xsl:if>
          </div>
-         <div id="init" class="line" style="width: 8.5em; float: right; text-align: right;">
+         <div id="init" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
             <b>Initiative </b> <xsl:value-of select="init" />
          </div>
-         <div id="senses" class="line" style="width: 8.5em; float: right; text-align: right;">
+         <div id="senses" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
             <b>Perception </b> <xsl:value-of select="perception" /> <br />
             <b>Insight </b> <xsl:value-of select="insight" />
             <xsl:if test="sense">
                <xsl:for-each select="sense">
                   <br /> <xsl:value-of select="."/>
-                  <xsl:if test="position()!=last()">
-                     <xsl:text>, </xsl:text>
-                  </xsl:if> 
                </xsl:for-each>
             </xsl:if>
          </div>
          <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
             <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
             <xsl:if test="defmod">
+               <br />
                <xsl:for-each select="defmod">
-                  <br /> <xsl:value-of select="."/>
+                  <xsl:value-of select="."/>
                   <xsl:if test="position()!=last()">
-                     <xsl:text>, </xsl:text>
+                     <xsl:text>; </xsl:text>
                   </xsl:if> 
                </xsl:for-each>
             </xsl:if>
@@ -187,10 +185,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
             </xsl:if>
             <xsl:if test="speedmod">
+               <br />
                <xsl:for-each select="speedmod">
-                  <br /> <xsl:value-of select="."/>
+                  <xsl:value-of select="."/>
                   <xsl:if test="position()!=last()">
-                     <xsl:text>, </xsl:text>
+                     <xsl:text>; </xsl:text>
                   </xsl:if> 
                </xsl:for-each>
             </xsl:if>
@@ -302,6 +301,71 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      </xsl:for-each>
                   </xsl:when>
                </xsl:choose> 
+            </div>
+         </xsl:if>
+         <xsl:if test="saves or ap or savemod">
+            <div id="extra" class="line" style="width: calc(100% - 9em); float:left;">
+               <xsl:choose>
+                  <xsl:when test="saves and ap and savemod">
+                     <b>Saving Throws </b>
+                     <xsl:value-of select="saves"/>
+                     <xsl:text>; </xsl:text>
+                     <b>Action Points </b>
+                        <xsl:value-of select="ap"/>
+                     <br />
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="saves and savemod">
+                     <b>Saving Throws </b>
+                     <xsl:value-of select="saves"/>
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="ap and savemod">
+                     <b>Action Points </b>
+                        <xsl:value-of select="ap"/>
+                     <br /><b>Saving Throws </b>
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="saves and ap">
+                     <b>Saving Throws </b>
+                     <xsl:value-of select="saves"/>
+                     <xsl:text>; </xsl:text>
+                     <b>Action Points </b>
+                        <xsl:value-of select="ap"/>
+                  </xsl:when>
+                  <xsl:when test="ap">
+                     <b>Actions Points </b>
+                        <xsl:value-of select="ap"/>
+                  </xsl:when>
+                  <xsl:when test="saves">
+                     <b>Saving Throws</b>
+                        <xsl:value-of select=".saves"/>
+                  </xsl:when>
+                  <xsl:when test="savemod">
+                     <b>Saving Throws </b>
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+               </xsl:choose>
             </div>
          </xsl:if>
       </div> 
