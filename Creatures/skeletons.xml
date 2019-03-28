@@ -109,14 +109,14 @@
             <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack: </i>]]>Melee 2 (one creature); +11 vs. AC</line>
-            <line><![CDATA[<i>Hit: </i>]]>1d12 + 5 damage.</line>
+            <line><![CDATA[<i>Hit: </i>]]>2d6 + 5 damage.</line>
          </block>
          <block>
             <name>Wide Sweep</name> <type>melee</type>
             <keyword>Weapon</keyword>
             <recharge>6</recharge>
             <line><![CDATA[<i>Attack: </i>]]>Melee 2 (two adjacent creatures); +10 vs. AC</line>
-            <line><![CDATA[<i>Hit: </i>]]>1d12 + 5 damage, and pushed 2 squares and knocked prone.</line>
+            <line><![CDATA[<i>Hit: </i>]]>2d6 + 5 damage, and pushed 2 squares and knocked prone.</line>
          </block>
       </category>
       
@@ -145,6 +145,76 @@
       
       <alignment>unaligned</alignment>
       <language>-</language>
+      
+      <equipment>large greatclub</equipment>
+   </creature>
+   
+   <creature>
+      <title>Skeleton, Decrepit</title>
+      <level>1</level> <rolestrength>Minion</rolestrength> <role>Skirmisher</role> <xp>25</xp>
+      <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
+      
+      <init>+5</init> <perception>+2</perception> <insight>+2</insight>
+      <sense>darkvision</sense>
+      
+      <hp>3</hp> <bloodied>any damage bloodies a minion</bloodied> <hpnote>any damage kills a bloodied minion</hpnote>
+      <ac>16</ac> <fort>13</fort> <ref>14</ref> <will>13</will>
+      <speed>6</speed>
+      
+      <immune>disease</immune> <immune>disease</immune>
+      <resist>
+         <type>necrotic</type> <value>10</value>
+      </resist>
+      <vulnerable>
+         <type>radiant</type> <value>5</value>
+      </vulnerable>
+      
+      <category>
+         <category-name>Standard Actions</category>
+         
+         <block>
+            <name>Longsword</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The skeleton can shift 1 square.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage.</line>
+         </block>
+         <block>
+            <name>Shortbow</name> <type>rbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The skeleton can shift 1 square.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 15/30 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 3 damage.</line>
+         </block>
+      </category>
+      
+      <str>
+         <value>15</value> <mod>+2</mod>
+      </str>
+      <con>
+         <value>13</value> <mod>+1</mod>
+      </con>
+      <dex>
+         <value>17</value> <mod>+3</mod>
+      </dex>
+      <int>
+         <value>3</value> <mod>-4</mod>
+      </int>
+      <wis>
+         <value>14</value> <mod>+2</mod>
+      </wis>
+      <cha>
+         <value>3</value> <mod>-4</mod>
+      </cha>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <equipment>longsword</equipment>
+      <equipment>shortbow</equipment>
+      <equipment>arrow x 2d10</equipment>
    </creature>
    
 </catalog>
