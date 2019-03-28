@@ -2,6 +2,73 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Skeleton</title>
+      <level>3</level> <role>Soldier</role> <xp>150</xp>
+      <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
+      
+      <init>+6</init> <perception>+3</perception> <insight>+3</insight>
+      <sense>darkvision</sense>
+      
+      <hp>45</hp> <bloodied>22</bloodied>
+      <ac>19</ac> <fort>14</fort> <ref>16</ref> <will>15</will>
+      <speed>6</speed>
+      
+      <immune>disease</immune> <immune>poison</immune>
+      <resist>
+         <type>necrotic</type> <value>10</value>
+      </resist>
+      <vulnerable>
+         <type>radiant</type> <value>5</value>
+      </vulnerable>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Speed of the Dead</name>
+            <line>The skeleton gains a +2 bonus to attack rolls and deals +1d6 damage on <![CDATA[<i>opportunity attacks</i>]]>.</line>
+         </block>
+      </category>
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Longsword</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 5 damage, and the target is marked until the end of the skeleton's next turn.</line>
+         </block>
+      </category>
+      
+      <str>
+         <value>15</value> <mod>+3 / +2</mod>
+      </str>
+      <con>
+         <value>13</value> <mod>+2 / +1</mod>
+      </con>
+      <dex>
+         <value>17</value> <mod>+4 / +3</mod>
+      </dex>
+      <int>
+         <value>3</value> <mod>-3 / -4</mod>
+      </int>
+      <wis>
+         <value>14</value> <mod>+3 / +2</mod>
+      </wis>
+      <cha>
+         <value>3</value> <mod>-3 / -4</mod>
+      </cha>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <equipment>longsword</equipment>
+      <equipment>small wooden shield</equipment>
+      
+   </creature>
+   
+   <creature>
       <title>Skeleton, Blazing</title>
       <level>5</level> <role>Artillery</role> <xp>200</xp>
       <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
