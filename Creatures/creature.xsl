@@ -413,7 +413,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <b>Cha </b><xsl:value-of select="cha/value" /><xsl:text> (</xsl:text><xsl:value-of select="cha/mod" /><xsl:text>)</xsl:text>
             </div>
          </div>
-      </div>   
+      </div>
+      <div id="alignlang" style="width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
+         <div id="alignment" class="line" style="width: 10em;">
+            <b>Alignment: </b><xsl:value-of select="alignment" />
+         </div>
+         <div id="languages" class="line" style="width: calc(100% - 11em;">
+            <b>Languages: </b>
+            <xsl:for-each select="language">
+               <xsl:value-of select="."/>
+               <xsl:if test="position()!=last()">
+                  <xsl:text>, </xsl:text>
+               </xsl:if> 
+            </xsl:for-each>
+         </div>
+      </div>
    </div> 
 
 </xsl:template>
