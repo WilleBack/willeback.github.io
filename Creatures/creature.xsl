@@ -145,6 +145,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
          <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
             <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
+            <xsl:if test="hpnote">
+               <br /> <xsl:value-of select="hpnote" />
+            </xsl:if>
          </div>
          <div id="init" class="line" style="width: 8.5em; float: right; text-align: right;">
             <b>Initiative </b> <xsl:value-of select="init" />
