@@ -349,7 +349,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
-                  <div style="float:left; max-width:21em; "><b><xsl:value-of select="frequency" /> </b><xsl:value-of select="note" /></div>
+                  <div style="float:left; max-width:21em; "><b><xsl:value-of select="frequency" />&#160;</b><xsl:value-of select="note" disable-output-escaping="yes"/></div>
                </xsl:if>
                <xsl:if test="recharge">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
@@ -414,10 +414,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div>
       <div id="alignlang" style="width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
          <div id="alignment" class="line" style="width: 13em;">
-            <b>Alignment: </b><xsl:value-of select="alignment" />
+            <b>Alignment </b><xsl:value-of select="alignment" />
          </div>
          <div id="languages" class="line" style="width: calc(100% - 14em);">
-            <b>Languages: </b>
+            <b>Languages </b>
             <xsl:for-each select="language">
                <xsl:value-of select="."/>
                <xsl:if test="position()!=last()">
@@ -426,6 +426,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </xsl:for-each>
          </div>
       </div>
+      <xsl:if test="equipment">
+         <div id="equipment" class="line">
+            <b>Equipment </b>
+            <xsl:for-each select="equipment">
+               <xsl:value-of select="."/>
+               <xsl:if test="position()!=last()">
+                  <xsl:text>, </xsl:text>
+               </xsl:if> 
+            </xsl:for-each>
+         </div>
+      </xsl:if>
    </div> 
 
 </xsl:template>
