@@ -61,11 +61,90 @@
       <name>Eldritch Pact</name>
       <benefit>All Warlocks gain access to their power by entering into a pact with some force or entity in which that power rests. In return for their continuing loyalty and service to the source of their power, Warlocks become more adept at their craft.</benefit>
       <benefit>The pact you choose gives you following benefits and class feature:</benefit>
-      <benefit>&#9658; <![CDATA[<i>At-Will Attack:</i>]]> Your pact determines one of the at-will attacks you gain from your class.</benefit>
+      <benefit>&#9658; <![CDATA[<i>At-Will Attack:</i>]]> Your pact determines one of the at-will attack powers you gain from your class.</benefit>
       <benefit>&#9658; <![CDATA[<i>Pact Boon:</i>]]> Each pact has a specific Pact Boon feature that triggers when the Scourge reduces a target under their curse to 0 hit points or less.</benefit>
       <benefit>&#9658; Some of your Warlock attack powers have additional or enhanced effects based on your pact.</benefit>
       <benefit>Choose either Dark Pact, Elemental Pact, Fey Pact, Infernal Pact, Sorcerer-King Pact, Star Pact, or Vestige Pact to determine the type of entity you forged a pact with.</benefit>
       
+      <subfeature>
+         <name>Dark Pact</name>
+         <benefit>A Dark Pact is forged with the dark beings that lurk in the shadows and in the hearts of people. Spells of darkness, poison, madness, and spite fill the Scourge's mind. He or she might might turn the power to noble ends, but will always face the temptation to enhance the spells by hurting his or her friends - just a little.</benefit>
+         <benefit><![CDATA[<i>At-Will Attack:</i>]]> You must choose either <![CDATA[<i>mind shadows</i> or <i>spiteful glamor</i>]]> as one of the at-will attacks you gain from your class.</benefit>
+         <benefit><![CDATA[<i>Pact Boon feature:</i>]]> You gain the <![CDATA[<i>darkspiral</i>]]> class power.</benefit>
+            
+         <power>
+            <title>Darkspiral</title>
+            <class>Warlock</class> <category>Utility</category>
+            <fluff>As your cursed enemies fall in battle, your darkspiral grows in power until you unleash it on an enemy</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Arcane</keyword>
+               <action>Free</action> <subaction>Reaction</subaction>
+               <type>Personal</type>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>An enemy under your your curse is reduced to 0 hit points or less</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The strength of your darkspiral increases by 1.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>Your darkspiral resets to 0 when you take a short rest or an extended rest, or 5 minutes after you have last increased its strength, whichever comes first.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>While the strength of your darkspire is at least 1, you can use the Darkspire Retaliation attack.</text>
+               </section>
+            </part>
+            <part>
+               <part-name>Darkspire Retaliation</part-name>
+               <frequency>At-Will</frequency>
+               <keyword>Arcane, Necrotic, Psychic</keyword>
+               <action>Immediate</action> <subaction>Interrupt</subaction>
+               <type>Close</type> <range>burst 10</range>
+               <section>
+                  <indent>2</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>burst 15</text>
+               </section>
+               <section>
+                  <indent>2</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>burst 20</text>
+               </section>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>An enemy targets you with a melee or ranged attack</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>The triggering enemy</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target takes 1d6 necrotic and psychic damage times the strength of your darkspiral.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>If this deals less than 12 damage, the strength of your darkspire becomes 1.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>If this deals 12 damage or more, you can choose to make the target weakened until the end of its current turn. If you do, the strength of your darkspire becomes 0. If you do not, the strength of your darkspire is halved.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>bold</name-style>
+                  <text>
+                  </text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
    </feature>
    
 </class>
