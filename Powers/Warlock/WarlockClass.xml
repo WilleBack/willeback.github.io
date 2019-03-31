@@ -62,7 +62,7 @@
       <benefit>All Warlocks gain access to their power by entering into a pact with some force or entity in which that power rests. In return for their continuing loyalty and service to the source of their power, Warlocks become more adept at their craft.</benefit>
       <benefit>The pact you choose gives you following benefits and class feature:</benefit>
       <benefit>&#9658; <![CDATA[<i>At-Will Attack:</i>]]> Your pact determines one of the at-will attack powers you gain from your class.</benefit>
-      <benefit>&#9658; <![CDATA[<i>Pact Boon:</i>]]> Each pact has a specific Pact Boon feature that triggers when the Scourge reduces a target under their curse to 0 hit points or less.</benefit>
+      <benefit>&#9658; <![CDATA[<i>Pact Boon:</i>]]> Each pact has a specific Pact Boon feature that triggers when the Scourge reduces a target under their curse to 0 hit points or less. The boon does not trigger if the enemy was reduced to 0 hit points with a nonlethal attack.</benefit>
       <benefit>&#9658; Some of your Warlock attack powers have additional or enhanced effects based on your pact.</benefit>
       <benefit>Choose either Dark Pact, Elemental Pact, Fey Pact, Infernal Pact, Sorcerer-King Pact, Star Pact, or Vestige Pact to determine the type of entity you forged a pact with.</benefit>
       
@@ -221,6 +221,35 @@
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>You teleport up to 3 squares.</text>
+               </section>
+            </part>
+         </power>
+         
+      </subfeature>
+      
+      <subfeature>
+         <name>Infernal Pact</name>
+         <benefit>Long ago a forgotten group of devils created a secret path to power and taught it to tieflings of Bael Turath to weaken their fealty to Asmodeus. In his wrath, Asmodeus destroyed the scheming devils and struck their very names from the memory of all beings - but some Scourges dare to study their perilous secret ways anyway.</benefit>
+         <benefit><![CDATA[<i>At-Will Attack:</i> You must choose either <i>hellish rebuke</i> or <i>gift of avernus</i>]]> as one of the at-will attack powers you gain from your class.</benefit>
+         <benefit><![CDATA[<i>Pact Boon feature:</i> You gain the <i>Dark One's blessing</i>]]> class power.</benefit>
+         
+         <power>
+            <title>Dark One's Blessing</title>
+            <class>Warlock</class> <category>Utility</category>
+            <fluff>You instantly gain vitality as a cursed enemy falls</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Arcane</keyword>
+               <action>Free</action> <subaction>Reaction</subaction>
+               <type>Personal</type>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>An enemy under your curse is reduced to 0 hit points or less</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You gain temporary hit points equal to one-half your level + your Constitution modifier.</text>
                </section>
             </part>
          </power>
