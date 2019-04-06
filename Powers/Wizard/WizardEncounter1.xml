@@ -329,4 +329,51 @@
 		</part>
 	</power>
 	
+	<power>
+		<title>Force Orb</title>
+		<class>Wizard</class> <category>Attack</category> <level>1</level>
+		<fluff>You hurl an orb of magical force and when it bursts against the target, it throws off razor-sharp shards of force that cut nearby enemies</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Arcane, Evocation, Force, Implement</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Area</type> <range>burst 1 within 10 squares</range>
+			<section>
+				<name>Primary Target:</name> <name-style>bold</name-style>
+				<text>One creature or object in the center square</text>
+			</section>
+			<section>
+				<name>Primary Attack:</name> <name-style>bold</name-style>
+				<text>Intelligence vs. Fortitude</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>2d6 + Intelligence modifier force damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Critical:</name> <name-style>bold</name-style>
+				<text>You knock the primary target prone.</text>
+			</section>
+			<section>
+				<name>Secondary Target:</name> <name-style>bold</name-style>
+				<text>Each enemy in the burst other than the primary target</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>If the primary attack was a miss, the primary target is also a secondary target</text>
+			</section>
+			<section>
+				<name>Secondary Attack:</name> <name-style>bold</name-style>
+				<text>Intelligence vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d8 + Intelligence modifier force damage.</text>
+			</section>
+		</part>
+	</power>
+	
 </catalog>
