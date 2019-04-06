@@ -421,7 +421,7 @@
 			<type>Area</type> <range>burst 1 within 10 squares</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>>Each creature in the burst</text>
+				<text>Each creature in the burst</text>
 			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
@@ -441,6 +441,50 @@
 			</section>
 			<section>
 				<text>An enemy that ends its turn in the zone takes psychic damage equal to your Charisma modifier + your implement's enhancement bonus, and is slowed until the end of its next turn.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Icy Terrain</title>
+		<class>Wizard</class> <category>Attack</category> <level>1</level>
+		<fluff>You coat the ground with treacherous ice that freezes and hampers your foes</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Arcane, Cold, Transmutation, Implement, Zone</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Area</type> <range>burst 2 within 10 squares</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>Each enemy in the burst</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Intelligence vs. Fortitude</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>You gain a +2 bonus to the attack roll if the target is prone</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>Intelligence modifier + your implement's enhancement bonus cold damage, and the target grants combat advantage for the first attack against it.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Critical:</name> <name-style>bold</name-style>
+				<text>You knock the target prone after the zone has been created.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The burst creates a zone of icy ground until the end of your next turn.</text>
+			</section>
+			<section>
+				<text>The zone is difficult terrain for creatures that do not have at least resist 10 cold or icewalk.</text>
+			</section>
+			<section>
+				<text>If a creature falls prone in the zone, it takes cold damage equal to your Constitution modifier + your implement's enhancement bonus.</text>
 			</section>
 		</part>
 	</power>
