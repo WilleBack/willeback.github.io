@@ -102,7 +102,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<div class="container">
 		<xsl:for-each select="task">
-			<div id="task" style="width:100%; height: 6cm; box-sizing:border-box; margin: 0.5cm; float:left; page-break-inside:avoid;">
+			<div id="task" style="width:100%; height: 4cm; box-sizing:border-box; margin: 0.5cm; float:left; page-break-inside:avoid; vertical-align:middle; text-align:center;">
 				<xsl:value-of select="finnish" /> <br />
         <xsl:value-of select="english" />
 			</div>
