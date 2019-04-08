@@ -37,6 +37,44 @@
 	</power>
 	
 	<power>
+		<title>Blinding Vapors</title>
+		<class>Wizard</class> <category>Attack</category> <level>1</level>
+		<fluff>You point your implement at the ground, and acid boils up to envelop your target in a caustic haze</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Acid, Arcane, Evocation, Implement</fluff>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Area</type> <range>1 square within 10 squares</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature occupying the square</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Intelligence vs. Fortitude</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>You have combat advantage against the target if it is prone</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d12 + Intelligence modifier acid damage, and creatures more than 3 squares away from the target have concealment against it.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Critical:</name> <name-style>bold</name-style>
+				<text>Creatures more than 1 square away from the target.</text>
+			</section>
+			<section>
+				<name>Miss:</name> <name-style>bold</name-style>
+				<text>Half damage, and creatures more than 5 squares away from the target have concealment against it.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
 		<title>Burning Hands</title>
 		<class>Wizard</class> <category>Attack</category> <level>1</level>
 		<fluff>A gout of flame erupts from your hands and scorches nearby foes, some of whom try to evade the flames by dropping down</fluff>
@@ -679,6 +717,42 @@
 				<text>Intelligence modifier + your implement's enhancement bonus damage.</text>
 			</section>
 		</part>
-	</power>		
+	</power>
+	
+	<power>
+		<title>Twilight Falls</title>
+		<class>Wizard</class> <category>Attack</category> <level>1</level>
+		<fluff>You weave draining shadow energy into an oppressive gloom that dims your enemies' senses</fluff>
+		<part>
+			<frequency>Encounter</frequency>
+			<keyword>Arcane, Implement, Nethermancy, Psychic, Zone</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Area</type> <range>burst 1 within 10 squares</type>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>Each enemy in the burst</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Intelligence vs. Will</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d6 + Intelligence modifier psychic damage.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>If the target is in the center square, it is also dazed until the end of your next turn.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The burst creates a zone of draining shadows until the end of your next turn.</text>
+			</section>
+			<section>
+				<text>When an enemy is in the zone, all other creatures have concealment against it.</text>
+			</section>
+		</part>
+	</power>
 	
 </catalog>
