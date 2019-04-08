@@ -98,11 +98,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 		</style>
 	</head>
-	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
+	<body style="font-family:Verdana; font-size:12pt;margin:0cm; ">
 
 	<div class="container">
 		<xsl:for-each select="task">
-			<div id="task" style="width:100%; height: 4cm; box-sizing:border-box; margin: 0.5cm; float:left; page-break-inside:avoid; vertical-align:middle; text-align:center;">
+			<div id="task" style="width:100%; height: 3cm; box-sizing:border-box; margin: 0.5cm; float:left; page-break-inside:avoid; vertical-align:middle; text-align:center;">
 				<xsl:value-of select="finnish" /> <br />
         <xsl:value-of select="english" />
 			</div>
