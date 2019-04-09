@@ -22,12 +22,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float: left;
 				page-break-inside: avoid;
 				text-align: center;
-				margin: 0.5cm;
+				padding: 0.9cm 0.5cm;
 			}
 			
 		</style>
 	</head>
-	<body style="font-family:Verdana; font-size:12pt;margin:0cm; ">
+	<body style="font-family:Verdana; font-size:9pt;margin:0cm; ">
 
 	<div class="container">
 		<xsl:for-each select="task">
