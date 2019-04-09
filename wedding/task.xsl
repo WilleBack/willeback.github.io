@@ -18,16 +18,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.task {
 				box-sizing: border-box;
 				width: 100%; 
-				height: 3cm;
+				height: 2.95cm;
 				float: left;
 				page-break-inside: avoid;
 				text-align: center;
-				padding: 0.9cm 0.5cm;
+				padding: 0.9cm 0.6cm;
 			}
 			
 		</style>
 	</head>
-	<body style="font-family:Verdana; font-size:9pt;margin:0cm; ">
+	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 
 	<div class="container">
 		<xsl:for-each select="task">
