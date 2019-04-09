@@ -32,7 +32,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="container">
 		<xsl:for-each select="task">
 			<div class="task">
-				<xsl:value-of select="finnish" /> <br />
+				<xsl:value-of select="finnish" /> <xsl:text> / </xsl:text>
         <xsl:value-of select="english" />
 			</div>
 		</xsl:for-each>
