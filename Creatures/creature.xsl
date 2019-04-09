@@ -148,13 +148,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <div id="hp" class="line">
                   <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
                   <xsl:if test="hpnote">
-                     <br /> <xsl:value-of select="hpnote" />
+                     <br /> <xsl:value-of select="hpnote" disable-output-escaping="yes" />
                   </xsl:if>
                </div>
                <div id="defense" class="line">
                   <xsl:choose>
                      <xsl:when test="defenses">
-                        <b>Defenses </b> <xsl:value-of select="defenses" />
+                        <b>Defenses </b> <xsl:value-of select="defenses" disable-output-escaping="yes" />
                      </xsl:when>
                      <xsl:otherwise>
                         <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
@@ -163,7 +163,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:if test="defmod">
                      <br />
                      <xsl:for-each select="defmod">
-                        <xsl:value-of select="."/>
+                        <xsl:value-of select="." disable-output-escaping="yes" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
                         </xsl:if> 
@@ -184,7 +184,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:if test="speedmod">
                <br />
                <xsl:for-each select="speedmod">
-                  <xsl:value-of select="."/>
+                  <xsl:value-of select="." disable-output-escaping="yes" />
                   <xsl:if test="position()!=last()">
                      <xsl:text>; </xsl:text>
                   </xsl:if> 
@@ -370,7 +370,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
             <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
             <xsl:if test="hpnote">
-               <br /> <xsl:value-of select="hpnote" />
+               <br /> <xsl:value-of select="hpnote" disable-output-escaping="yes"/>
             </xsl:if>
          </div>
          <div id="init" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
@@ -388,7 +388,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
             <xsl:choose>
                <xsl:when test="defenses">
-                  <b>Defenses </b> <xsl:value-of select="defenses" />
+                  <b>Defenses </b> <xsl:value-of select="defenses" disable-output-escaping="yes" />
                </xsl:when>
                <xsl:otherwise>
                   <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
@@ -397,7 +397,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:if test="defmod">
                <br />
                <xsl:for-each select="defmod">
-                  <xsl:value-of select="."/>
+                  <xsl:value-of select="." disable-output-escaping="yes" />
                   <xsl:if test="position()!=last()">
                      <xsl:text>; </xsl:text>
                   </xsl:if> 
@@ -418,7 +418,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:if test="speedmod">
                <br />
                <xsl:for-each select="speedmod">
-                  <xsl:value-of select="."/>
+                  <xsl:value-of select="." disable-output-escaping="yes"/>
                   <xsl:if test="position()!=last()">
                      <xsl:text>; </xsl:text>
                   </xsl:if> 
