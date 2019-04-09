@@ -142,7 +142,231 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <xsl:with-param name="bgcolor">#4e5c2e</xsl:with-param>
       </xsl:call-template>
       
-      <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+      <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;">
+         <xsl:choose>
+            <xsl:when test="role='Summoned creature'">
+               <div id="hp" class="line">
+                  <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
+                  <xsl:if test="hpnote">
+                     <br /> <xsl:value-of select="hpnote" />
+                  </xsl:if>
+               </div>
+               <div id="defense" class="line">
+                  <xsl:choose>
+                     <xsl:when test="defenses">
+                        <b>Defenses </b> <xsl:value-of select="defenses" />
+                     </xsl:when>
+                     <xsl:otherwise>
+                        <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
+                     </xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:if test="defmod">
+                     <br />
+                     <xsl:for-each select="defmod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:if>
+               </div>
+         <div id="move" class="line">
+            <b>Speed </b> <xsl:value-of select="speed" />
+            <xsl:if test="fly">
+               <xsl:text>, </xsl:text> <i>fly&#160;</i> <xsl:value-of select="fly" />
+            </xsl:if>
+            <xsl:if test="climb">
+               <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" />
+            </xsl:if>
+            <xsl:if test="swim">
+               <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
+            </xsl:if>
+            <xsl:if test="speedmod">
+               <br />
+               <xsl:for-each select="speedmod">
+                  <xsl:value-of select="."/>
+                  <xsl:if test="position()!=last()">
+                     <xsl:text>; </xsl:text>
+                  </xsl:if> 
+               </xsl:for-each>
+            </xsl:if>
+         </div>
+         <xsl:if test="immune or resist or vulnerable">
+            <div id="resist" class="line">
+               <xsl:choose>
+                  <xsl:when test="immune and resist and vulnerable">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Resist&#160;</b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Vulnerable&#160;</b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="immune and resist">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Resist&#160;</b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="immune and vulnerable">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Vulnerable&#160;</b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="resist and vulnerable">
+                     <b>Resist&#160;</b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                     <xsl:text>; </xsl:text>
+                     <b>Vulnerable&#160;</b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="immune">
+                     <b>Immune </b>
+                     <xsl:for-each select="immune">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="resist">
+                     <b>Resist&#160;</b>
+                     <xsl:for-each select="resist">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="vulnerable">
+                     <b>Vulnerable&#160;</b>
+                     <xsl:for-each select="vulnerable">
+                        <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+               </xsl:choose> 
+            </div>
+         </xsl:if>
+         <xsl:if test="saves or ap or savemod">
+            <div id="extra" class="line">
+               <xsl:choose>
+                  <xsl:when test="saves and ap and savemod">
+                     <b>Saving Throws </b>
+                     <xsl:value-of select="saves"/>
+                     <xsl:text>; </xsl:text>
+                     <b>Action Points </b>
+                        <xsl:value-of select="ap"/>
+                     <br />
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="saves and savemod">
+                     <b>Saving Throws </b>
+                     <xsl:value-of select="saves"/>
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="ap and savemod">
+                     <b>Action Points </b>
+                        <xsl:value-of select="ap"/>
+                     <br /><b>Saving Throws </b>
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+                  <xsl:when test="saves and ap">
+                     <b>Saving Throws </b>
+                     <xsl:value-of select="saves"/>
+                     <xsl:text>; </xsl:text>
+                     <b>Action Points </b>
+                        <xsl:value-of select="ap"/>
+                  </xsl:when>
+                  <xsl:when test="ap">
+                     <b>Actions Points </b>
+                        <xsl:value-of select="ap"/>
+                  </xsl:when>
+                  <xsl:when test="saves">
+                     <b>Saving Throws</b>
+                        <xsl:value-of select="saves"/>
+                  </xsl:when>
+                  <xsl:when test="savemod">
+                     <b>Saving Throws </b>
+                     <xsl:for-each select="savemod">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if> 
+                     </xsl:for-each>
+                  </xsl:when>
+               </xsl:choose>
+            </div>
+         </xsl:if>
+		      </xsl:when>
+		      <xsl:otherwise>
          <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
             <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
             <xsl:if test="hpnote">
@@ -375,6 +599,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:choose>
             </div>
          </xsl:if>
+			      </xsl:when>
+		      </xsl:otherwise>
       </div> 
       
       <xsl:for-each select="category">
