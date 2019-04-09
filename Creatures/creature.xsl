@@ -599,8 +599,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:choose>
             </div>
          </xsl:if>
-			      </xsl:when>
-		      </xsl:otherwise>
+		 </xsl:otherwise>
+	      </xsl:choose>
       </div> 
       
       <xsl:for-each select="category">
