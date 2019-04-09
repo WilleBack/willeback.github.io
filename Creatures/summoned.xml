@@ -2,16 +2,75 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Dretch</title>
+      <role>Summoned Creature</role>
+      <size>Small</size> <origin>elemental</origin> <type>humanoid</type>
+      
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>5</speed>
+      
+      <category>
+         <category-name>Action</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one or two creatures); Intelligence +2 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d4 + Intelligence modifier damage.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+         
+         <block>
+            <name>Nonaction Interrupt</name> <type>close</type>
+            <keyword>Poison</keyword> <keyword>Zone</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> The dretch is reduced to 0 hit points or less</line>
+            <line><![CDATA[<i>Effect:</i>]]> Close burst 1; The burst creates a zone of vile miasma until the start of the next turn of the creature that reduced the dretch's hit points.</line>
+            <line>A nondemon that ends its turn in the zone or enters it takes 5 poison damage. A creature can only take this damage once per turn.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the dretch any commands by the end of your turn, it attacks or charges the nearest creature, using the above attack in place of a melee basic attack.</line>
+            <line>If the dretch cannot attack or charge a creature, it moves its speed towards the closest creature and you have vulnerable 5 to all damage for the first time you take damage before the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain combat advantage against any creature that the dretch has attacked until the end of your next turn.</line>
+         </block>
+      </category>
+      
+      <alignment>chaotic evil</alignment>
+      <language>Abyssal</language>
+      <source>Summon Dretch (Wizard Daily Attack 1)</source>
+   </creature>
+   
+   <creature>
       <title>Fire Warrior</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
       
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <hpnote>Uses your healing surge value.</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <defmod><![CDATA[+2 <i>AC</i> and <i>Fort</i>]]></defmod>
       <speed>6</speed> <fly>6 (hover)</fly>
+      
+      <resist>
+         <type>fire</type> <value>10</value>
+      </resist>
       
       <category>
          <category-name>Actions</category-name>
@@ -36,6 +95,21 @@
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Trigger:</i>]]> A creature adjacent to the fire warrior provokes an <![CDATA[<i>opportunity attack</i>]]></line>
             <line><![CDATA[<i>Effect:</i>]]> The fire warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as an <i>opportunity attack</i>]]>.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the fire warrior any commands by the end of your turn, it attacks an adjacent creature. If it can't do that, it moves its speed toward the nearest creature.</line>
+            <line>If the fire warrior cannot attack or move adjacent to an enemy, you gain vulnerable 5 fire.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +1 bonus to attack rolls against enemies adjacent to the fire warrior.</line>
          </block>
       </category>
       
