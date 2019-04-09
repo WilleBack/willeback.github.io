@@ -14,6 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.task {
+				box-sizing: border-box;
 				width: 100%; 
 				height: 3cm;
 				float: left;
