@@ -162,7 +162,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </xsl:if>
          </div>
          <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
-            <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
+            <xsl:choose>
+               <xsl:when test="defenses">
+                  <b>Defenses </b> <xsl:value-of select="defenses" />
+               </xsl:when>
+               <xsl:otherwise>
+                  <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
+               </xsl:otherwise>
+            </xsl:choose>
             <xsl:if test="defmod">
                <br />
                <xsl:for-each select="defmod">
@@ -446,39 +453,43 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </xsl:for-each>
          </xsl:for-each> 
       </xsl:for-each>
-      <div id="checkbonus" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
-         <xsl:if test="skill">
-            <div id="skills" class="line">
-               <b>Skills:&#160;</b>
-               <xsl:for-each select="skill">
-                  <xsl:value-of select="./name"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./value" />
-                  <xsl:if test="position()!=last()">
-                     <xsl:text>, </xsl:text>
-                  </xsl:if> 
-               </xsl:for-each>
-            </div>
-         </xsl:if>
-         <div id="abilities" style="float:left;">
-            <div id="str" class="line" style="width: 32%;">
-               <b>Str </b><xsl:value-of select="str/value" /><xsl:text> (</xsl:text><xsl:value-of select="str/mod" /><xsl:text>)</xsl:text>
-            </div>
-            <div id="dex" class="line" style="width: 32%;">
-               <b>Dex </b><xsl:value-of select="dex/value" /><xsl:text> (</xsl:text><xsl:value-of select="dex/mod" /><xsl:text>)</xsl:text>
-            </div>
-            <div id="wis" class="line" style="width: 32%;">
-               <b>Wis </b><xsl:value-of select="wis/value" /><xsl:text> (</xsl:text><xsl:value-of select="wis/mod" /><xsl:text>)</xsl:text>
-            </div>
-            <div id="con" class="line" style="width: 32%;">
-               <b>Con </b><xsl:value-of select="con/value" /><xsl:text> (</xsl:text><xsl:value-of select="con/mod" /><xsl:text>)</xsl:text>
-            </div>
-            <div id="int" class="line" style="width: 32%;">
-               <b>Int </b><xsl:value-of select="int/value" /><xsl:text> (</xsl:text><xsl:value-of select="int/mod" /><xsl:text>)</xsl:text>
-            </div>
-            <div id="cha" class="line" style="width: 32%;">
-               <b>Cha </b><xsl:value-of select="cha/value" /><xsl:text> (</xsl:text><xsl:value-of select="cha/mod" /><xsl:text>)</xsl:text>
-            </div>
+      <xsl:if test="skill or str">
+         <div id="checkbonus" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
+            <xsl:if test="skill">
+               <div id="skills" class="line">
+                  <b>Skills:&#160;</b>
+                  <xsl:for-each select="skill">
+                     <xsl:value-of select="./name"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./value" />
+                     <xsl:if test="position()!=last()">
+                        <xsl:text>, </xsl:text>
+                     </xsl:if> 
+                  </xsl:for-each>
+               </div>
+            </xsl:if>
+            <xsl:if test="str">
+               <div id="abilities" style="float:left;">
+                  <div id="str" class="line" style="width: 32%;">
+                     <b>Str </b><xsl:value-of select="str/value" /><xsl:text> (</xsl:text><xsl:value-of select="str/mod" /><xsl:text>)</xsl:text>
+                  </div>
+                  <div id="dex" class="line" style="width: 32%;">
+                     <b>Dex </b><xsl:value-of select="dex/value" /><xsl:text> (</xsl:text><xsl:value-of select="dex/mod" /><xsl:text>)</xsl:text>
+                  </div>
+                  <div id="wis" class="line" style="width: 32%;">
+                     <b>Wis </b><xsl:value-of select="wis/value" /><xsl:text> (</xsl:text><xsl:value-of select="wis/mod" /><xsl:text>)</xsl:text>
+                  </div>
+                  <div id="con" class="line" style="width: 32%;">
+                     <b>Con </b><xsl:value-of select="con/value" /><xsl:text> (</xsl:text><xsl:value-of select="con/mod" /><xsl:text>)</xsl:text>
+                  </div>
+                  <div id="int" class="line" style="width: 32%;">
+                     <b>Int </b><xsl:value-of select="int/value" /><xsl:text> (</xsl:text><xsl:value-of select="int/mod" /><xsl:text>)</xsl:text>
+                  </div>
+                  <div id="cha" class="line" style="width: 32%;">
+                     <b>Cha </b><xsl:value-of select="cha/value" /><xsl:text> (</xsl:text><xsl:value-of select="cha/mod" /><xsl:text>)</xsl:text>
+                  </div>
+               </div>
+            </xsl:if>
          </div>
-      </div>
+      </xsl:if>
       <div id="bottombox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
          <div id="alignment" class="line" style="width: 13em;">
             <b>Alignment </b><xsl:value-of select="alignment" />
@@ -503,6 +514,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:for-each>
             </div>
          </xsl:if>
+         <xsl:if test="source">
+            <div id="equipment" class="line">
+               <i>Source Power: </i> <xsl:value-of select="source" />
+            </div>
+         </xsl:if>
       </div>
    </div>
 
@@ -515,7 +531,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <xsl:value-of select="title"/>
       </div>
       <div id="rolelevel" style="width: 13.3em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
-         <xsl:text>Lvl </xsl:text><xsl:value-of select="level"/>
+         <xsl:if test="level"><xsl:text>Lvl </xsl:text><xsl:value-of select="level"/> </xsl:if>
          <xsl:if test="rolestrength">
             <xsl:text> </xsl:text><xsl:value-of select="rolestrength" />
          </xsl:if>
@@ -538,9 +554,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:text>)</xsl:text>
                </xsl:if>
          </div>
-         <div id="xp" style="margin: 0.3em; margin-top: 0.1em; width: 7em; float:right; text-align: right;">
-            <xsl:text>XP </xsl:text> <xsl:value-of select="xp" />
-         </div>
+         <xsl:if test="xp">
+            <div id="xp" style="margin: 0.3em; margin-top: 0.1em; width: 7em; float:right; text-align: right;">
+               <xsl:text>XP </xsl:text> <xsl:value-of select="xp" />
+            </div>
+         </xsl:if>
       </div>
    </div>
 
