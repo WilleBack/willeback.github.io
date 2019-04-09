@@ -2,28 +2,44 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
-      <title> </title>
+      <title>Fire Warrior</title>
       <rolestrength>Summoned</rolestrength> <role>creature</role>
-      <size> </size> <origin> </origin> <type> </type>
-      
-      <init>Acts on your initiative</init>
-      <perception>Your modifier</perception> <insight>Your Modifier</insight>
-      <sense> </sense>
+      <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
       
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that would require the summoned creature to expend one</hpnote>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <hpnote>Uses your healing surge value.</hpnote>
-      <defenses>Your defenses, not counting temporary bonus</defenses>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod><![CDATA[+2 <i>AC</i> and <i>Fort</i>]]></defmod>
       
       <category>
          <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +2 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d10 + Intelligence modifier fire damage.</line>
+         </block>
          
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
+         
+         <block>
+            <name>Opportunity Interrupt</name>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> A creature adjacent to the fire warrior provokes an <![CDATA[<i>opportunity attack</i>]]></line>
+            <line><![CDATA[<i>Effect:</i>]]> The fire warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as an <i>opportunity attack</i>]]>.</line>
+         </block>
       </category>
+      
+      <alignment>unaligned</alignment> <language>Primordial</language>
+      <source>Summon Fire Warrior (Wizard Daily Attack 1)</source>
    </creature>
    
 </catalog>
