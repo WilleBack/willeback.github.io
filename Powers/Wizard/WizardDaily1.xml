@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../power.xsl"?>
+<catalog>
+   <power>
+      <title>Acid Arrow</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>You call out an arcane word and fire an arrow of green, glowing liquid that burst against your foe and sends out a spray of sizzling acid</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Acid, Arcane, Evocation, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10/20</range>
+         <section>
+            <name>Primary Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d8 + Intelligence modifier acid damage, and the target is seared by acid (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While it is seared, the target takes ongoing 5 acid damage and has a penalty to attack rolls equal to one-half your Constitution modifier (minimum -1 penalty).</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Aftereffect:</name> <name-style>italic</name-style>
+            <text>The target takes a penalty to attack rolls equal to one-half your Constitution modifier until the end of its next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage, and the target takes ongoing 5 acid damage (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You make the secondary attack.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Secondary Attack</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Acid, Arcane, Evocation, Implement</keyword>
+         <action>Nonaction</action>
+         <type>Area</type> <range>burst 1 centered on the primary target</range>
+         <section>
+            <name>Secondary Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst other than the primary target</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d8 + Intelligence modifier acid damage, and ongoing 5 acid damage (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
+         </section>
+      </part>
+   </power>
+   
+</catalog>
