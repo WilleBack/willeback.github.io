@@ -154,4 +154,58 @@
       </part>
    </power>
    
+   <power>
+      <title>Flaming Sphere</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>You conjure a rolling ball of fire and control where it goes</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Conjuration, Evocation, Fire, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You conjure a Medium flaming sphere in an unoccupied square within range. The sphere occupies its square, and it lasts until the end of your next turn. When the sphere appears, you immediately make the Scorch Attack without spending an action.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>Any creature that starts its turn adjacent to the sphere takes fire damage equal to 4 + your Intelligence modifier + your implement's enhancement bonus. While the sphere remains, you can use the Scorch Attack and the following action at-will:</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Move Action:</name> <name-style>bold</name-style>
+            <text>You move the sphere up to 6 squares.</text>
+         </section>
+         <section>
+            <name>Sustain Minor:</name> <name-style>bold</name-style>
+            <text>The sphere persist until the end of your next turn.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Scorch Attack</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Arcane, Conjuration, Evocation, Fire, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Close</type> <range>blast 1 from the sphere's square</type>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature adjacent to the sphere</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d6 + Intelligence modifier fire damage.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
+         </section>
+      </part>
+   </power>
+
 </catalog>
