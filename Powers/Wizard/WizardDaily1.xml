@@ -293,5 +293,61 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Grease</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>Slippery oil floods the ground under your foes, sending them tumbling to the ground or sliding around</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Evocation, Zone</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 2 within 10 squares</range>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The burst creates a zone of slick grease on all surfaces until the end of the encounter.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>Affected surfaces are difficult terrain.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While the zone remains, you can use the Grease Attack action, using any square in the zone as the origin square.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Grease Attack</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Arcane, Implement</keyword>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <type>Close</type> <range>burst 1</range>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>A creature enters the zone</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The triggering creature in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>You knock the target prone.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You slide the target 2 squares.</text>
+         </section>
+         <section>
+            <text>Sliding the target out of the zone and back into it does not trigger this attack again.</text>
+         </section>
+      </part>
+   </power>
 
 </catalog>
