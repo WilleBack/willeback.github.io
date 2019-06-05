@@ -533,5 +533,49 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Sleep</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>You exert your will against your foes, seeking to overwhelm them with a tide of magical weariness</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Charm, Enchantment, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 2 within 15 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>The target is slowed (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Critical:</name> <name-style>bold</name-style>
+            <text>The target also grants combat advantage while it remains slowed.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>First Failed Saving Throw:</name> <name-style>italic</name-style>
+            <text>The target is unconscious instead (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>2</indent>
+            <name>Aftereffect:</name> <name-style>italic</name-style>
+            <text>The target is dazed until the end of its next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>The target is slowed (save ends).</text>
+         </section>
+      </part>
+   </power>
 
 </catalog>
