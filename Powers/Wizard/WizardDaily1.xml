@@ -624,5 +624,51 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Spirit Rend</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>You weave a dire spell that tears at your enemies' spirit and holds the undead at bay</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Implement, Necrotic, Nethermancy</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Non-undead:</name> <name-style>bold</name-style>
+            <text>3d6 + Intelligence modifier necrotic damage, and the target is immobilized (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Undead:</name> <name-style>bold</name-style>
+            <text>The target takes a free reaction to move its speed to a square as far away from you as it can, and is dazed (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+         </section>
+         <section>
+            <indent>1</indent>
+            <name>Non-undead:</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
+         </section>
+         <section>
+            <name>Undead:</name> <name-style>bold</name-style>
+            <text>The target grants combat advantage and cannot take triggered actions until the end of its next turn.</text>
+         </section>
+      </part>
+   </power>
 
 </catalog>
