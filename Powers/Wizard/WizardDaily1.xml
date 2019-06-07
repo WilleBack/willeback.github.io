@@ -734,5 +734,125 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Watery Sphere</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>A single water droplet expands to overtake your enemies, trapping them inside an enormous watery sphere</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Implement, Transmutation, Zone</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>The target becomes trapped by the water (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While trapped, the target is immobilized, and grants combat advantage.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You must slide the target up to 3 squares to a space adjacent to the burst.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The burst creates a zone of water that lasts until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The zone is difficult terrain, and it grants partial cover to creatures on opposite sides of it.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Move Action:</name> <name-style>bold</name-style>
+            <text>You move the zone up to 3 squares.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <text>Any creatures trapped by the water move with the zone. You slide each creature 1 square for each square you move the zone, ending the slide inside the zone's new location.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Immediate Interrupt:</name> <name-style>bold</name-style>
+            <text><![CDATA[<i>Trigger:</i>]]> A creature enters the zone or starts its turn there; You make this power's attack against the triggering creature.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Sustain Minor:</name> <name-style>bold</name-style>
+            <text>The zone persists until the end of your next turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Wind Blade</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>The moaning wind becomes a shrill whistle as you turn it into a blade perfect for slashing through your foes</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Conjuration, Force, Implement, Transmutation</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>5</range>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You conjure a blade of solid wind in an unoccupied square within range. The blade occupies its square, and lasts until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>Enemies adjacent to the blade grant combat advantage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>When the blade appears, you make the Wind Slash attack without spending an action. While the blade remains, you can use the Wind Slash attack at-will.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Sustain Minor:</name> <name-style>bold</name-style>
+            <text>The blade persists until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Sustain Move:</name> <name-style>bold</name-style>
+            <text>You move the blade to a square within 5 squares of you. The blade persists until the end of your next turn.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Wind Slash</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Arcane, Conjuration, Force, Implement, Transmutation</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>1 from the blade's square</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d6 + Intelligence modifier force damage, and you can slide the target up to 2 squares.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You can slide the target up to 1 square.</text>
+         </section>
+      </part>
+   </power>
 
 </catalog>
