@@ -58,6 +58,74 @@
    </creature>
    
    <creature>
+      <title>Dust Devil</title>
+      <role>Summoned creature</role>
+      <size>Small</size> <origin>Elemental</origin> <type>magical beast</type>
+      
+      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod><![CDATA[+2 <i>Reflex</i>]]></defmod>
+      <defmod>+2 to all defenses against attacks triggered by movement when not slowed</defmod>
+      <defmod>-2 to all defenses while slowed or immobilized</defmod>
+      <speed>8</speed>
+      
+      <immune>disease</immune> <immune>poison</immune>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + Intelligence modifier damage, and the dust devil slides the target 2 squares.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The dust devil shifts 1 square, or 2 squares if it scored a critical hit.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name> <type>close</type>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Close burst 3 (enemies in the burst); Intelligence vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + Intelligence modifier damage, and the target is blinded until the end of the dust devil's next turn.</line>
+            <line><![CDATA[<i>Miss:</i>]]> Half damage.</line>
+         </block>
+         
+         <block>
+            <name>Move Action</name>
+            <recharge>when the dust devil is critically hit</recharge>
+            <line><![CDATA[<i>Effect:</i>]]> The dust devil shifts up to 5 squares. The first time it moves adjacent to an enemy during the move, it makes the following attack against that enemy:</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> The target falls prone</i>]]>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the dust devil any commands by the end of your turn, it attacks an adjacent creature. If it can't do that, it moves its speed adjacent to the creatures furthest away from it that it can reach.</line>
+            <line>If the fire warrior cannot attack or move adjacent to an enemy, you fall prone.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +2 power bonus to speed, and a +2 bonus to all defenses against attacks triggered by your movement.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment> <language>Primordial</language>
+      <source>Summon Dust Devil (Wizard Daily Attack 1)</source>
+   </creature>
+   
+   <creature>
       <title>Fire Warrior</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
