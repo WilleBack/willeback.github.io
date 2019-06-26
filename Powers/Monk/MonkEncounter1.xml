@@ -320,4 +320,99 @@
 		</part>
 	</power>
 	
+	<power>
+		<title>Light the Fire</title>
+		<class>Monk</class> <category>Attack</category> <level>1</level>
+		<fluff>Bright flames dance across your body, scorching enemies you strike and swirling around you to immolate foes in your reach</fluff>
+		<part>
+			<part-name>Attack Technique</part-name>
+			<frequency>Encounter</frequency>
+			<keyword>Aura, Fire, Full Discipline, Implement, Psionic</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Dexterity vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>2d8 + Dexterity modifier fire damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You activate an Aura 1 (Fire, Implement, Psionic) that lasts until the start of your next turn.</text>
+			</section>
+			<section>
+				<text>Any enemy that starts its turn in the aura takes fire damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
+			</section>
+		</part>
+		<part>
+			<part-name>Movement Technique</part-name>
+			<frequency>Encounter</frequency>
+			<keyword>Full Discipline, Psionic</keyword>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You shift up to 3 squares.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Open the Gate of Battle</title>
+		<class>Monk</class> <category>Attack</category> <level>1</level>
+		<fluff>Your sudden movement catches your foe unprepared, and you launch into an attack</fluff>
+		<part>
+			<part-name>Attack Technique</part-name>
+			<frequency>Encounter</frequency>
+			<keyword>Full Discipline, Implement, Psionic</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Dexterity vs. Reflex</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>If the target has not yet acted in this encounter, you gain combat advantage for this attack</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>2d10 + Dexterity modifier damage.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>The target takes 1d10 extra damage if it was at full hit points when you hit with this attack.</text>
+			</section>
+		</part>
+		<part>
+			<part-name>Movement Technique</part-name>
+			<frequency>Encounter</frequency>
+			<keyword>Full Discipline, Psionic</keyword>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You move your speed + 2. You do not trigger attacks based on your movement from creatures that have not yet acted during this encounter.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>If you use this Movement Technique before using the Attack Technique, your movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> from one creature adjacent to you when you start the movement.</text>
+			</section>
+		</part>
+	</power>
+	
 </catalog>
