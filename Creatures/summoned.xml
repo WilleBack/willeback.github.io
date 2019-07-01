@@ -172,7 +172,7 @@
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the fire warrior any commands by the end of your turn, it attacks an adjacent creature. If it can't do that, it moves its speed toward the nearest creature.</line>
-            <line>If the fire warrior cannot attack or move adjacent to an enemy, you gain vulnerable 5 fire.</line>
+            <line>If the fire warrior cannot attack or move adjacent to an enemy, you gain vulnerable 5 fire until the start of your next turn.</line>
          </block>
          
          <block>
@@ -183,6 +183,61 @@
       
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Fire Warrior (Wizard Daily Attack 1)</source>
+   </creature>
+   
+   <creature>
+      <title>Shadow Serpent</title>
+      <role>Summoned creature</role>
+      <size>Small</size> <origin>shadow</origin> <type>beast</type>
+      
+      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Stealthy</name>
+            <line>The serpent gains a +5 bonus to Stealth checks you make for it, and it takes no penalty to the checks for moving more than 2 squares.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, you can see through the serpent's eyes. The serpent has darkvision, which you also gain.</line>
+            <line>You cannot gain line of sight or line of effect for your powers from the serpent's space, but you can make Perception checks from it.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the shadow serpent any commands by the end of your turn, it moves up to its speed to a square where it can hide.</line>
+            <line>If the shadow serpent does not end this move in a space that is either not lit or only dimly lit, you take a -2 penalty to Perception checks until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +1 bonus to attack rolls against enemies adjacent to the fire warrior.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment> <language>-</language>
+      <source>Summon Shadow Serpent (Wizard Utility 2)</source>
    </creature>
    
 </catalog>
