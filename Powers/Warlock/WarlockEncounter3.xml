@@ -15,6 +15,173 @@
             <name>Target:</name> <name-style>bold</name-style>
             <text>One creature</text>
          </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Charisma vs. Fortitude</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>If the target is bloodied, you gain a +2 bonus to the attack rolls</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d8 + Charisma modifier acid damage, and the target grants combat advantage until the end of your next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>The target grants combat advantage for the first attack made against it before the end of your next turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Delban's Deadly Attention</title>
+      <class>Warlock</class> <category>Attack</category> <level>2</level>
+      <fluff>A bolt of frigid starlight shines down and bathes your foe, causing the creature to suffer a spasm of agony just as it attacks you</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Implement, Necrotic</keyword>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <type>Close</type> <range>burst 4</range>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>An enemy in hits you with a melee attack</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The triggering enemy in the burst</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The target takes necrotic damage equal to 2 + your Charisma modifier + your implement's enhancement bonus. If the target is cursed by you, you can add your curse damage.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Star Pact:</name> <name-style>bold</name-style>
+            <text>You add your Intelligence modifier to the necrotic damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The target chooses either to deal half damage with the triggering attack, or to increase the necrotic damage by 1d8.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Eldritch Claws</title>
+      <class>Warlock</class> <category>Attack</category> <level>3</level>
+      <fluff>At your command, clawed hands crafted from eldritch energies wrap around your foe</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Implement; Varies</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <shade>true</shade>
+            <name>Prerequisite:</name> <name-style>bold</name-style>
+            <text>You must have the Eldritch Pact class feature.</text>
+         </section>
+         <section>
+            <name>Primary Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <text>Charisma vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d6 + Charisma modifier damage, and the primary target is slowed until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The attack's damage type and keyword changes depending on your Eldritch Pact:</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Dark Pact, Sorcerer-King Pact:</name> <name-style>bold</name-style>
+            <text>Necrotic damage, and the Necrotic keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Elemental Pact, Fey Pact, Vestige Pact:</name> <name-style>bold</name-style>
+            <text>Psychic damage, and the Psychic keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Infernal Pact:</name> <name-style>bold</name-style>
+            <text>Fire damage, and the Fire keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Star Pact:</name> <name-style>bold</name-style>
+            <text>Radiant damage, and the Radiant keyword.</text>
+         </section>
+         <section>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>Until the end of your current turn, you can use the Eldritch Rake attack. If this attack was a critical hit, you can use it until the end of your next turn instead.</text>
+         </section>
+         <section>
+            <text>If this attack was a hit, you use the primary target as the origin square. If it was a miss, you use the space the target occupied when you made the attack.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Eldritch Rake</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Arcane, Implement; Varies</keyword>
+         <action>Minor</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>1 from the origin square</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature other than the primary target</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>You cannot target the same creature more than once per turn</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You deal damage depending on your Eldritch Pact.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Dark Pact:</name> <name-style>bold</name-style>
+            <text>Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus, and the Necrotic keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Elemental Pact:</name> <name-style>bold</name-style>
+            <text>Damage equal to your Constitution modifier + your implement's enhancement bonus of the type and keyword matching your elemental affinity.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Fey Pact:</name> <name-style>bold</name-style>
+            <text>Psychic damage equal to your Dexterity modifier + your implement's enhancement bonus, and the Psychic keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Infernal Pact:</name> <name-style>bold</name-style>
+            <text>Fire damage equal to your Constitution modifier + your implement's enhancement bonus, and the Fire keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Sorcerer-King Pact:</name> <name-style>bold</name-style>
+            <text>Necrotic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the Necrotic keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Star Pact:</name> <name-style>bold</name-style>
+            <text>Radiant damage equal to your Intelligence modifier + your implement's enhancement bonus, and the Radiant keyword.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Vestige Pact:</name> <name-style>bold</name-style>
+            <text>Psychic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the Psychic keyword.</text>
+         </section>
       </part>
    </power>
    
