@@ -341,6 +341,98 @@
 	</power>
 	
 	<power>
+		<title>Coup de Grace</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>Sometimes there is no option to be chivalrous, only viciously effective</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Special</type>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One helpless creature adjacent to you</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You use one of your attacks against the target. If the attack normally targets more than one creature or covers an area, it now only affects the target.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>If the attack hits, it automatically scores a critical hit against the target. If the critical hit deals damage greater than or equal to the target's bloodied value, the target dies.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Crawl</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>Sometimes you just don't have the time to stand up</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Move</actio> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must be prone.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You move up to half your land speed.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Special:</name> <name-style>bold</name-style>
+				<text>If you are prone when an effect allows you to move a specific distance, you can crawl half that distance.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Drag</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>You forcibly move a creature you have a hold on</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature grabbed by you, or one helpless ally</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Strength vs. Fortitude</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>The attack automatically hits against a helpless ally</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 6:</name> <name-style>italic</name-style>
+				<text>Strength +2</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 16:</name> <name-style>italic</name-style>
+				<text>Strength +4</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 26:</name> <name-style>italic</name-style>
+				<text>Strength +6</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>You move up to half your speed and pull the target with you. This movement doesn't provoke <![CDATA[<i>opportunity attacks</i> from the target, but otherwise provokes <i>opportunity attacks</i>]]> as normal.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
 		<title>Escape</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You muscle or wriggle out of a grab</fluff>
@@ -436,6 +528,26 @@
 		</part>
 	</power>
 	
+	<power>
+		<title>Run</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>You lower your guard to cover ground quickly</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Until the start of your next turn, you take a -5 penalty to attack rolls and grant combat advantage.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>You move your speed + 2. Despite the name of this action, you don't always literally run. The action can include other movement modes such as climbing, flying, and swimming.</text>
+			</section>
+		</part>
+	</power>
+	
 	<power> 
 		<title>Second Wind</title>
 		<class>Character</class><category>Utility</category>
@@ -455,6 +567,61 @@
 			<shade>true</shade>
 			<text>You gain a +2 bonus to all defenses until the start of your next turn.</text>
 		</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Squeeze</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>You move through a tight corridor, stand on a narrow ledge, or fit into a constrained space</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>If you are Large, Huge, or Gargantuan, your size effectively decreases by one until the squeeze ends. For instance, if you are Large, you are effectively Medium during the squeeze. As your size decreases, you are leaving squares and can trigger actions such as <![CDATA[<i>opportunity attacks</i>]]>. You cannot reduce your size if you cannot move.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>If you are Medium or smaller, the DM decides how narrow a space you can occupy.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>Until the squeeze ends, you grant combat advantage and take a -5 penalty to attack rolls.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>You move up to half your speed. While squeezing, the only movement that you can take is squeezing and teleportation.</text>
+			</section>
+		</part>
+		<part>
+			<part-name>End a Squeeze</part-name>
+			<frequency>At-Will</frequency>
+			<action>Free</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You expand to your original size. When you do so, your new space must contain the smaller space that you just occupied. You are not leaving squares when you return to your original size, so you do not trigger <![CDATA[<i>opportunity actions</i>]]>.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Step</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>You move carefully to avoid giving a foe a chance to strike</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Move</action> <subaction>Action</subaction>
+			<type>Personal</type>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You shift 1 square.</text>
+			</section>
 		</part>
 	</power>
 	
