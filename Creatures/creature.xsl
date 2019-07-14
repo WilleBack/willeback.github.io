@@ -612,7 +612,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <div style="float:left; width: max-content; max-width: calc(100% - 6em);">
                      <xsl:choose>
                         <xsl:when test="type='aura'">
-                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><img src="../font/auraicon.svg" width="15px" height="15px" /></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><img src="../font/auraicon.svg" width="14px" height="14px" /></div>
                         </xsl:when>
                         <xsl:when test="type='melee'">
                            <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>M</xsl:text></div>
