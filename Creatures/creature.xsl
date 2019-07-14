@@ -612,25 +612,25 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <div style="float:left; width: max-content; max-width: calc(100% - 6em);">
                      <xsl:choose>
                         <xsl:when test="type='aura'">
-                           <div style="font-family: 'game_icons';font-size: 0.8em; width:2em; float: left; text-align: center;"><img src="../font/auraicon.svg" width="15px" height="15px" /></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><img src="../font/auraicon.svg" width="15px" height="15px" /></div>
                         </xsl:when>
                         <xsl:when test="type='melee'">
-                           <div style="font-family: 'game_icons';font-size: 0.8em; width:2em; float: left; text-align: center;"><xsl:text>M</xsl:text></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>M</xsl:text></div>
                         </xsl:when>
                         <xsl:when test="type='mbasic'">
-                           <div style="font-family: 'game_icons';font-size: 0.8em; width:2em; float: left; text-align: center;"><xsl:text>m</xsl:text></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>m</xsl:text></div>
                         </xsl:when>
                         <xsl:when test="type='ranged'">
-                           <div style="font-family: 'game_icons';font-size: 0.8em; width:2em; float: left; text-align: center;"><xsl:text>R</xsl:text></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>R</xsl:text></div>
                         </xsl:when>
                         <xsl:when test="type='rbasic'">
-                           <div style="font-family: 'game_icons';font-size: 0.8em; width:2em; float: left; text-align: center;"><xsl:text>r</xsl:text></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>r</xsl:text></div>
                         </xsl:when>
                         <xsl:when test="type='close'">
-                           <div style="font-family: 'game_icons';font-size: 0.8em; width:2em; float: left; text-align: center;"><xsl:text>C</xsl:text></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>C</xsl:text></div>
                         </xsl:when>
                         <xsl:when test="type='area'">
-                           <div style="font-family: 'game_icons';font-size: 0.8em; width:2em; float: left; text-align: center;"><xsl:text>A</xsl:text></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>A</xsl:text></div>
                         </xsl:when>
                      </xsl:choose>
                   <b> <xsl:value-of select="name" /> </b>
