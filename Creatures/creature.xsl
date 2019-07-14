@@ -111,7 +111,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             
             @media print {
                .container { 
-                  column-count: 3; 
+                  column-count: 2; 
                   column-gap:0.5em; 
                   margin:0cm;
                }
