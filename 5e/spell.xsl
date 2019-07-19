@@ -98,7 +98,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:with-param name="bgcolor">Black</xsl:with-param>
 		</xsl:call-template>
 		
-		<xsl:apply-templates select="section" />
+		<div id="description" style="float:left; margin:0.2em;">
+		
+			<xsl:apply-templates select="section" />
+			
+		</div>
 	
 	</div> 
 
