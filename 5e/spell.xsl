@@ -60,7 +60,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			@media print {
 				.container { 
 					column-count: 2; 
-					column-gap:0.6em; 
+					column-gap:0.8em; 
 					margin:0cm;
 				}
 				
