@@ -112,7 +112,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:param name="bgcolor">Purple</xsl:param>
 	
 	<div id="header" style="width:100%; float:left; font-size:1.2em; font-variant: small-caps; ">
-		<div id="title" style="float:left; margin:0.2em; vertical-align:middle; font-weight:bold; letter-spacing:1px; width:calc(100% - 1.5em);"> 
+		<div id="title" style="float:left; margin:0.2em; vertical-align:middle; font-weight:bold; letter-spacing:1px; width:calc(100% - 1.5em); text-decoration:underline;"> 
 			<xsl:value-of select="title"/>
 		</div>
 		
