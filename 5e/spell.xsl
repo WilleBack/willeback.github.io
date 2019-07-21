@@ -134,11 +134,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 	</div>
   <div id="info" style="width:100%; float:left; padding: 0.0em 0.6em;">
-    <div style="float:left; padding-left:1em; text-indent:-1em;"><i><xsl:value-of select="level" /><xsl:text>-level </xsl:text> <xsl:value-of select="school" /></i></div>
-    <div style="float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Casting Time: </xsl:text></b> <xsl:value-of select="casting" /></div>
-    <div style="float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Range: </xsl:text></b> <xsl:value-of select="range" /></div>
-    <div style="float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Components: </xsl:text></b> <xsl:value-of select="components" /></div>
-    <div style="float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Duration: </xsl:text></b> <xsl:value-of select="duration" /></div>
+    <div style="width:calc(100% - 1.3em); float:left; padding-left:1em; text-indent:-1em;"><i><xsl:value-of select="level" /><xsl:text>-level </xsl:text> <xsl:value-of select="school" /></i></div>
+    <div style="width:calc(100% - 1.3em); float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Casting Time: </xsl:text></b> <xsl:value-of select="casting" /></div>
+    <div style="width:calc(100% - 1.3em); float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Range: </xsl:text></b> <xsl:value-of select="range" /></div>
+    <div style="width:calc(100% - 1.3em); float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Components: </xsl:text></b> <xsl:value-of select="components" /></div>
+    <div style="width:calc(100% - 1.3em); float:left; padding-left:1em; text-indent:-1em;"><b><xsl:text>Duration: </xsl:text></b> <xsl:value-of select="duration" /></div>
     
    </div>
 	
