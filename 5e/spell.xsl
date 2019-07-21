@@ -105,8 +105,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 			<xsl:for-each select="section[position()>1]">
 				<p style="padding:0.2em 0.3em; text-indent:1em; margin:0;">
-					test
-					<!-- <xsl:value-of select="." disable-output-escaping="yes"/> -->
+					<xsl:value-of select="." disable-output-escaping="yes"/>
 				</p>
 			</xsl:for-each>
 			
