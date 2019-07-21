@@ -106,7 +106,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:for-each select="section[position()>1]">
 				<xsl:choose>
 					<xsl:when test="@style='bullet'">
-						<p style="padding:0.2em 0.3em; padding-left:1.3em; text-indent:-1.1em; margin:0;">
+						<p style="padding:0.2em 0.2em; padding-left:1.35em; text-indent:-1.2em; margin:0;">
 							<xsl:text>&#8226; </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
 						</p>
 					</xsl:when>
