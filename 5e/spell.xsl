@@ -100,7 +100,23 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		
 		<div id="description" style="float:left; margin:0.2em;">
 		
-			<xsl:apply-templates select="section" />
+			<xsl:for-each select="section">
+				<xsl:choose>
+					<xsl:when test="position()=first()">
+			
+						<p style="padding:0.2em 0.3em; margin:0; ">
+	  						<xsl:value-of select="." disable-output-escaping="yes"/>
+						</p>
+					</xsl:when>
+		
+					<xsl:otherwise>
+			
+						<p style="padding:0.2em 0.3em; text-indent:1em; margin:0; ">
+							<xsl:value-of select="." disable-output-escaping="yes"/>
+						</p>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each>
 			
 		</div>
 	
@@ -127,25 +143,5 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    </div>
 	
 </xsl:template> 
-
-<xsl:template match="section">
-	
-	<xsl:choose>
-		<xsl:when test="position()=first()">
-			
-			<p style="padding:0.2em 0.3em; margin:0; ">
-	  			<xsl:value-of select="." disable-output-escaping="yes"/>
-			</p>
-		</xsl:when>
-		
-		<xsl:otherwise>
-			
-			<p style="padding:0.2em 0.3em; text-indent:1em; margin:0; ">
-				<xsl:value-of select="." disable-output-escaping="yes"/>
-			</p>
-		</xsl:otherwise>
-	</xsl:choose>
-	
-</xsl:template>
 	
 </xsl:stylesheet>
