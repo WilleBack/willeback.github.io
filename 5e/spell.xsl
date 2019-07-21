@@ -104,9 +104,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</p>
 		
 			<xsl:for-each select="section[position()>1]">
-				<p style="padding:0.2em 0.3em; text-indent:1em; margin:0;">
-					<xsl:value-of select="." disable-output-escaping="yes"/>
-				</p>
+				<xsl:choose>
+					<xsl:when test="@style='bullet'">
+						<p style="padding:0.2em 0.3em; padding-left:1.3em; text-indent:-1.1em; margin:0;">
+							<xsl:text>&#8226; </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+						</p>
+					</xsl:when>
+					<xsl:otherwise>
+						<p style="padding:0.2em 0.3em; text-indent:1em; margin:0;">
+							<xsl:value-of select="." disable-output-escaping="yes"/>
+						</p>
+					</xsl:otherwise>
+				</xsl:choose>
 			</xsl:for-each>
 			
 		</div>
