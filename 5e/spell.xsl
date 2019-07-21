@@ -133,7 +133,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		
 	</div>
-  <div id="info" style="width:100%; float:left; ">
+  <div id="info" style="width:100%; float:left; padding: 0.3em 0.2em;">
     <i><xsl:value-of select="level" /><xsl:text>-level </xsl:text> <xsl:value-of select="school" /></i><br />
     <b><xsl:text>Casting Time: </xsl:text></b> <xsl:value-of select="casting" /><br />
     <b><xsl:text>Range: </xsl:text></b> <xsl:value-of select="range" /><br />
