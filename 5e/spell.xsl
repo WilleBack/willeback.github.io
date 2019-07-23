@@ -94,11 +94,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="spell">
 	
 	<div class="rule">
+		
 		<xsl:call-template name="createheader">
 			<xsl:with-param name="bgcolor">Black</xsl:with-param>
 		</xsl:call-template>
 		
 		<div id="description" style="float:left; margin:0.1em;">
+			
 			<p style="padding:0.2em 0.3em; margin:0; ">
 	  			<xsl:value-of select="section[1]" disable-output-escaping="yes"/>
 			</p>
