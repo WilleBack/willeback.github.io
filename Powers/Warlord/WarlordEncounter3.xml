@@ -330,10 +330,29 @@
    <power>
       <title>Interrupting Combo</title>
       <class>Warlord</class> <category>Attack</category> <level>3</level>
-      <fluff>Your weapon strikes a foe, drawing its attention lest an ally gets a chance for a strike of his or her own</fluff>
+      <fluff>Your weapon strikes a foe, forcing it to focus on you lest an ally gets a chance for a strike of his or her own</fluff>
       <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <type>Special</type>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>On your turn, you hit an enemy with a melee or ranged attack</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The triggering attack deals additional damage equal to your Intelligence modifier or your Wisdom modifier, and you mark the target of that attack until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While it remains marked, the first time the enemy makes an attack that does not include you as a target, one ally in your <![CDATA[<i>warlord's aura</i>]]> can take an immediate interrupt to make a <![CDATA[<i>basic attack</i>]]> against the marked enemy. If the ally's attack hits, the marked enemy takes a -2 penalty to attack rolls on the triggering attack.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If you have the <![CDATA[<i>tactician's commmand</i>]]> class power, the ally gains the same benefits from your at-will attack as if he or she was the target ally of your command.</text>
+         </section>
       </part>
    </power>
    
