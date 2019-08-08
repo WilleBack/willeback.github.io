@@ -128,7 +128,7 @@
    <power>
       <title>Cinderfall</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
-      <fluff>A thousand motes of fire momentarily linger in the air before streaking toward a single foe</fluff>
+      <fluff>A thousand motes of fire momentarily linger in the air before streaking toward a single foe that has managed to avoid them</fluff>
       <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Fire, Implement</keyword>
@@ -149,7 +149,36 @@
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>One target in the burst takes fire damage equal to your Consitution modifier + your implement's enhancement bonus. For each target you missed, you deal an additional +1 fire damage.</text>
+            <text>One target you missed in the burst takes fire damage equal to your Consitution modifier + your implement's enhancement bonus. For each additional target you missed, you deal an additional +1 fire damage.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Color Spray</title>
+      <class>Wizard</class> <category>Attack</category> <level>3</level>
+      <fluff>A brilliant blast of flashing colors springs from your outstretched fingers, knocking nearby enemies senseless</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Evocation, Implement, Radiant</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Close</type> <range>blast 3</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the blast</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d6 + Intelligence modifier radiant damage, and the target is dazed until the end of your next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Radiant damage equal to your Intelligence modifier + your implement's enhancement bonus.</text>
          </section>
       </part>
    </power>
