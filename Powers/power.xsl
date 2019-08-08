@@ -155,7 +155,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:value-of select="range"/>
 					<xsl:if test="type2">
 						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;"> 
-								<b><xsl:value-of select="type2"/></b>&#160;
+								<b><xsl:value-of select="type2"/>&#160;</b>
 								<xsl:value-of select="range2"/>
 							</p>
 					</xsl:if>
