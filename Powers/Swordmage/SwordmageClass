@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../class.xsl"?>
+
+<class>
+	<name>Swordmage</name>
+	<subname>Spellblade</subname>
+	<role>Defender</role>
+	<source>Arcane</source>
+	<shortfluff>You apply the arcane arts to melee combat, using your magic to enhance your combat skills so that your blade bites not only with steel, but also with fire, lightning and other arcane forces</shortfluff>
+	<keyability>Intelligence</keyability>
+	<keyability>Strength</keyability>
+	<keyability>Constitution</keyability>
+	
+	<proficiency>
+		<type>Armor</type>
+		<name>Cloth</name>
+        <name>Leather</name>
+	</proficiency>
+	<proficiency>
+		<type>Weapon</type>
+		<name>Simple melee</name>
+		<name>Simple ranged</name>
+        <name>Military light blade</name>
+        <name>Military heavy blade</name>
+	</proficiency>
+	<proficiency>
+		<type>Implement</type>
+		<name>Light blade</name>
+		<name>Heavy blade</name>
+	</proficiency>
+	
+	<defense>
+		<name>Will</name>
+		<value>+2</value>
+	</defense>
+	
+	<hpbase>15</hpbase>
+	<hpgain>6</hpgain>
+	<surgebase>8</surgebase>
+	
+	<skills>
+		<trained>Arcana</trained>
+		<number>3</number>
+	</skills>
+	
+	<fluff>An Arcanist is spellcaster who focuses on the tenets of a particular school of magic. This specialization makes each Arcanist distinctive. After all, a wizard who casts evocation presents a very different picture to the world from one who has mastered the art of illusion or enchantment.</fluff>
+	<fluff>While they are scholarly, don't expect to find Arcanists just hidden away in dusty towers. They hit the ground running, ready to explore every dungeon and ancient ruin in search of lore and knowledge that will increase their understanding on everything arcane - and thereby increase their personal power.</fluff>
+	<fluff>The ancient traditions of the schools of wizardry have been handed down since the first began to dabble in arcane magic. What started as techniques and methods of training between masters and apprentices eventually become more institutionalized, and eventually actual academies of arcane study sprang up in the world and even among the eladrin of the Feywild.</fluff>
+	<fluff>Today, where and how arcane magic is taught depends on where you happen to be. On the borderlands, in places such as Fallcrest, solitary mages pass on their knowledge to one or two apprenctives at a time. In larger settlements, such as the city of Nera, academies are dedicated to the training of wizards in all the schools of magic.</fluff>
+	
+	<feature>
+		<name>Arcane Implement Mastery</name>
+		<benefit>While able to wield different types of implements, all Arcanists will grow to favour one over the others.</benefit>
+		<benefit>You gain your choice of either Orb of Deception, Orb of Imposition, Staff of Defense, Tome of Binding, Tome of Readiness, or Wand of Accuracy.</benefit>
+			
+		<subfeature>
+			<name>Orb of Deception</name>
+			<benefit>In your hands, the orb gives a degree of reliability to illusions and enchantments.</benefit>
+			<benefit>You gain the <![CDATA[<i>orb of deception</i>]]> power.</benefit>
+			
+			<power>
+				<title>Orb of Deception</title>
+				<class>Wizard</class> <category>Implement Utility</category>
+				<fluff>You see a flaw in the reflection of your spell in your implement, and move to counter it</fluff>
+				<part>
+					<frequency>Encounter</frequency>
+					<keyword>Arcane, Implement</keyword>
+					<action>Free</action> <subaction>Interrupt</subaction>
+					<type>Special</type>
+					<section>
+						<shade>true</shade>
+						<name>Requirement:</name> <name-style>bold</name-style>
+						<text>You must be wielding an orb implement</text>
+					</section>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>You miss an enemy with a Wizard Illusion or Enchantment power</text>
+					</section>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>One creature within 3 squares of the missed target that is not a target of the triggering attack</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You repeat the triggering attack against the target, with a bonus to the attack roll equal to your Charisma modifier.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Orb of Imposition</name>
+			<benefit>Your focus on your orb allows you to extend the effects of some of your spells.</benefit>
+			<benefit>You gain the <![CDATA[<i>orb of imposition</i>]]> power.</benefit>
+			
+			<power>
+				<title>Orb of Imposition</title>
+				<class>Wizard</class> <category>Implement Utility</category>
+				<fluff>You tether your spell to your implement, forcing it to last longer</fluff>
+				<part>
+					<frequency>Encounter</frequency>
+					<keyword>Arcane, Implement</keyword>
+					<action>Free</action> <subaction>Action</subaction>
+					<type>Special</type>
+					<section>
+						<shade>true</shade>
+						<name>Requirement:</name> <name-style>bold</name-style>
+						<text>You must be wielding an orb implement</text>
+					</section>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>One of your active effects</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You can apply one of the following effects to the target:</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<text>&#9658; If the target lasts until a successful saving throw, the next saving throw against it takes a penalty equal to your Wisdom modifier.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<text>&#9658; If the target is from a 1st-level at-will attack and would end at the end of your current turn, it instead ends at the end of your next turn.</text>
+					</section>
+				</part>
+			</power>
+		
+		</subfeature>
+		
+		<subfeature>
+			<name>Staff of Defense</name>
+			<benefit>You have weaved protective magic into your staff.</benefit>
+			<benefit>You gain a +1 bonus to AC, and gain the <![CDATA[<i>staff of defense</i>]]> power.</benefit>
+			
+			<power>
+				<title>Staff of Defense</title>
+				<class>Wizard</class> <category>Implement Utility</category>
+				<fluff>You release the abjurative power of your staff just as an attack is about to hit you</fluff>
+				<part>
+					<frequency>Encounter</frequency>
+					<keyword>Arcane, Implement</keyword>
+					<action>Immediate</action> <subaction>Interrupt</subaction>
+					<type>Personal</type>
+					<section>
+						<shade>true</shade>
+						<name>Requirement:</name> <name-style>bold</name-style>
+						<text>You must be wielding a staff implement</text>
+					</section>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>An attack hits you</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You gain a bonus to all defenses against the triggering attack equal to your Constitution modifier.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Tome of Binding</name>
+			<benefit>Your tome contains extensive lore on summoning creatures, allowing you to empower them.</benefit>
+			<benefit>You gain the <![CDATA[<i>tome of binding</i>]]> power.</benefit>
+			
+			<power>
+				<title>Tome of Binding</title>
+				<class>Wizard</class> <category>Implement Utility</category>
+				<fluff>Flipping through your tome, you locate the information needed for a more deadly summon</fluff>
+				<part>
+					<frequency>Encounter</frequency>
+					<keyword>Arcane, Implement</keyword>
+					<action>Free</action> <subaction>Interrupt</subaction>
+					<type>Special</type>
+					<section>
+						<shade>true</shade>
+						<name>Requirement:</name> <name-style>bold</name-style>
+						<text>You must be wielding a tome implement</text>
+					</section>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>You use an arcane Summoning power</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>All creatures summoned by the triggering power gain a bonus to damage rolls equal to your Constitution modifier.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Tome of Readiness</name>
+			<benefit>You have a page of your tome bookmarked, to give you flexibility in casting spells.</benefit>
+			<benefit>When you prepare your Wizard powers from your spellbook, choose one encounter attack power of your level or lower as your tome spell.</benefit>
+			<benefit>You gain the <![CDATA[<i>tome of readiness</i>]]> power.</benefit>
+			
+			<power>
+				<title>Tome of Readiness</title>
+				<class>Wizard</class> <category>Implement Utility</category>
+				<fluff>You quickly open your tome to the right page to take advantage of a specialized spell</fluff>
+				<part>
+					<frequency>Encounter</frequency>
+					<keyword>Arcane, Implement</keyword>
+					<action>Free</action> <subaction>Action</subaction>
+					<type>Personal</type>
+					<section>
+						<shade>true</shade>
+						<name>Requirement:</name> <name-style>bold</name-style>
+						<text>You must be wielding a tome implement</text>
+					</section>
+					<section>
+						<name>Requirement:</name> <name-style>bold</name-style>
+						<text>You must have at least one unexpended wizard encounter attack of your tome spell's level or higher</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You expend one wizard encounter attack of your tome spell's level or higher, and gain the use of your tome spell.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>If you have not used your tome spell before the end of the encounter, it is automatically expended.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Wand of Accuracy</name>
+			<benefit>You have chosen to master the wand for its elegance and precision.</benefit>
+			<benefit>You gain the <![CDATA[<i>wand of accuracy</i>]]> power.</benefit>
+			
+			<power>
+				<title>Wand of Accuracy</title>
+				<class>Wizard</class> <category>Implement utility</category>
+				<fluff>You use your wand to gain pinpoint accuracy with a spell</fluff>
+				<part>
+					<frequency>Encounter</frequency>
+					<keyword>Arcane, Implement</keyword>
+					<action>Free</action> <subaction>Interrupt</subaction>
+					<type>Special</type>
+					<section>
+						<shade>true</shade>
+						<name>Requirement:</name> <name-style>bold</name-style>
+						<text>You must be wielding a wand implement</text>
+					</section>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>You make an attack roll with an Arcane attack</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You gain a bonus to the triggering attack roll equal to your Dexterity modifier.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+	</feature>
+	
+	<feature>
+		<name>Arcane Spellbook</name>
+		<benefit>Where most arcane casters master a handful of spells, Arcanists collect spells in their spellbook to choose the right spell for each day.</benefit>
+		<benefit>At first level, you add two 1st-level Wizard encounter attacks and two 1st-level Wizard daily attacks to your spellbook. When you finish an extended rest, you can prepare one Wizard encounter attack and one Wizard daily attack from your spellbook to use.</benefit>
+		<benefit>You use the prepared powers normally until you prepare different spells. If you do not choose new powers at the end of an extended rest, such as if you don't have access to your spellbook, you retain the powers you previously prepared.</benefit>
+		<benefit>At 2nd level, you add two 2nd-level Wizard utility powers to your spellbook, and can prepare one Wizard utility power when you finish an extended rest.</benefit>
+		<benefit>At 3rd level, you add two 3rd-level Wizard encounter attacks to your spellbook, and can prepare two Wizard encounter attacks when you finish an extended rest, though only one of a given level.</benefit>
+		<benefit>At 5th level, you add two 5th-level Wizard daily attacks to your spellbook, and can prepare two Wizard daily attacks when you finish an extended rest, though only one of a given level.</benefit>
+		<benefit>At 7th level, you add two 7th-level Wizard encounter attacks to your spellbook and can prepare three Wizard encounter attacks when you finish an extended rest, though only one of a given level.</benefit>
+		<benefit>At 9th level, you add two 9th-level Wizard daily attacks to your spellbook, and can prepare three Wizard daily attacks when you finish an extended rest, though only one of a given level.</benefit>
+		<benefit>At 13th, 17th, 23rd and 27th level you add two Wizard encounter attacks of the given level to your spellbook without having to replace powers, though the number of Wizard encounter attacks you can prepare remains at three.</benefit>
+		<benefit>At 15th, 19th, 25th, and 29th level you add two Wizard daily attacks of the given level to your spellbook without having to replace powers, though the number of Wizard daily attacks you can prepare remains at three.</benefit>
+		<benefit>If you would normally replace a known power, such as from multiclassing, you can prepare one less Wizard power of the same kind and cannot prepare powers of the replaced level.</benefit>
+		<benefit>An exception to the above is if you choose a Familiar feat that would require you to replace a power. Instead, you just add that power to your spellbook and can choose to prepare it in place of a Wizard power.</benefit>
+	</feature>
+	
+	<feature>
+		<name>Basic Combat Spell</name>
+		<benefit>The world is a dangerous place, and each Arcanist is taught a rudimentary attack spell he or she can always fall back on, even under duress.</benefit>
+		<benefit>Choose either <![CDATA[<i>force projectile</i> or <i>magic missile</i>]]>. You gain the chosen power as a 1st-level at-will attack power in addition to those you normally gain.</benefit>
+	</feature>
+	
+	<feature>
+		<name>Cantrips</name>
+		<benefit>Besides the more powerful spells at his or her command, an Arcanist also learns a collection of lesser applications of the arcane energies. These cantrips help the Arcanist in their daily activities.</benefit>
+		<benefit>You gain your choice of four of the following powers.</benefit>
+		
+		<power>
+			<title>Chameleon's Mask</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You pull strands of shadown, blending your colors and sounds with your surroundings to help you hide from your enemy's sight and hearing</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Arcane, Illusion</keyword>
+				<action>Free</action> <subaction>Interrupt</subaction>
+				<type>Personal</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You make a Stealth check</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You are considered trained in Stealth for the triggering check. If you are already trained in Stealth, you can instead roll twice and take the higher result.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Disrupt Undead</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>A simple gesture causes the darkness powering and protecting an undead creature to briefly unravel</fluff>
+			<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane, Necromancy</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>5</range>
+				<section>
+					<indent>2</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text><![CDATA[<b>Ranged</b>]]> 7</text>
+				</section>
+				<section>
+					<indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<b>Ranged</b>]]> 10</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One undead creature</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The target's necrotic resistance, if any, is reduced by 5 until the end of your current turn.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>Reduced by 10.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>Reduced by 15.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Ghost Sound</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>With a wink, you create an illusory sound that emanates from a distant location</fluff>
+			<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane, Illusion</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>10</range>
+				<section>
+					<indent>2</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text><![CDATA[<b>Ranged</b>]]> 15</text>
+				</section>
+				<section>
+					<indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<b>Ranged</b>]]> 20</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One object or unoccupied square</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You cause a sound as quiet as a whisper or as loud as a yelling or fighting creature to emanate from the target.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>You can produce nonvocal sounds such as the ringing of a sword blow, jingling armor, or scraping stone. If you produce a whisper, you can make it quiet enough that only creatures adjacent to the target can hear the words.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Light</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>With a wave of your hand, you cause a bright light to appear on the tip of your staff, upon some other object, or in a nearby space</fluff>
+			<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>5</range>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>One object or unoccupied space</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The target sheds light until the end of the encounter or until you use this power again.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>The light lasts for 1 hour.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>The light lasts for 8 hours.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>The light fills the target's space and all squares within 4 squares of it with bright light, and dim light for further 2 squares. You can put out the light as a free action. </text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Mage Hand</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You gesture toward an object nearby, and a spectral floating hand lifts the object into the air and moves it where you wish</fluff>
+			<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane, Conjuration</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>5</range>
+				<section>
+					<indent>2</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text><![CDATA[<b>Ranged</b>]]> 7</text>
+				</section>
+				<section>
+					<indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<b>Ranged</b>]]> 10</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You conjure a spectral, floating hand in an unoccupied square within range. The hand lasts until the end of your next turn or until you use this power again.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If you conjure the hand into a square adjacent to yourself and are holding an object when you use this power, the hand can move the object into a pack, a pouch, a sheath, or a similar container and simultaneously move any one object carried or worn anywhere on your body into your hand.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>While the hand persists, you can take the following actions:</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Minor Action:</name> <name-style>bold</name-style>
+					<text>The hand picks up or manipulates an object weighing 20 pounds or less. It can hold only one object at a time.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>30 pounds or less.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>40 pounds or less.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Move Action:</name> <name-style>bold</name-style>
+					<text>The hand moves up to 5 squares in any direction, carrying the object it holds.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Free Action:</name> <name-style>bold</name-style>
+					<text>The hand drops the object it is holding.</text>
+				</section>
+				<section>
+					<name>Sustain Minor:</name> <name-style>bold</name-style>
+					<text>The hand persists until the end of your next turn.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Prestidigitation</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You perform an amusing magical trick, such as creating a dancing wisp of light, freshening a wilting flower, making a coin invisible, or warming a cold drink</fluff>
+			<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>2</range>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You accomplish one of the following effects in range:</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Change the color of all items in 1 cubic foot until the stroke of midnight.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Create a brief, harmless sensory effect, such as a shower of sparks, a puff of wind, faint music, or a strong odor.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Clean or soil all items in 1 cubic foot.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Instantly light (or snuff out) a candle, torch, or a small campfire.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Chill, warm, or flavor up to 1 pound of nonliving material for up to 1 hour.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Make a small mark or symbol appear on a surface for up to 1 hour.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>Up to 4 hours.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>Up to 8 hours.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Produce out of nothingness a small item or image that exists until the end of your next turn.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Make a small, handheld item invisible until the end of your next turn.</text>
+				</section>
+				<section>
+					<name>Special:</name> <name-style>bold</name-style>
+					<text>Nothing you create with this cantrip can deal damage, serve as a weapon or tool, or hinder another creature's actions. This cantrip cannot duplicate the effect of any other power.</text>
+				</section>
+				<section>
+					<text>You can have up to two <![CDATA[<i>prestidigitation</i>]]> effects active at one time. When you use this power, you choose which previous effect ends if the use would exceed your limit.</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>Up to three effects.</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>Up to four effects.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Spook</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You gather shadows to yourself, so that when you speak, your words drip with menace</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Arcane, Nethermancy</keyword>
+				<action>Free</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You are considered trained in the next Intimidate check you make. If you are already trained in Intimidate, you can instead roll twice and take the higher result.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>You must either make the check or start the action for making the check on this turn.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Spring Step</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You enhance the target's musculature, giving it greater leaping power</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Arcane, Transmutation</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Ranged</type> <range>5</range>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>You or one ally</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The target is considered trained in the next Athletics check to jump or he or she makes before the start of your next turn. If the target is already trained in Athletics, he or she can roll twice and take the higher result.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Suggestion</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You weave arcane power through your words, infusing each phrase with persuasive magic</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Arcane, Enchantment</keyword>
+				<action>Free</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You are considered trained in the next Diplomacy check you make. If you are already trained in Diplomacy, you can instead roll twice and take the higher result.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>You must either make the check or start the action for making the check on this turn.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Water Stride</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You stride across a liquid surface as if it were solid ground</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Arcane</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>Until the end of your next turn, you can treat liquid surfaces as if they were solid ground but difficult terrain.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Whispering Wind</title>
+			<class>Wizard</class> <category>Utility</category>
+			<fluff>You speak a message to the wind and let it carry your words to an audience you choose</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Arcane</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You cause a breeze to carry a message of up to 25 words or a sound up to 6 seconds long to a place you choose. The destination must be within a number of miles equal to your Intelligence modifier and must be familiar to you, and it must be a location that the wind can reach.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>Once you complete the message or sound, the wind travels at speed 5 (2 ½ miles per hour) until it reaches the destination, where it conveys the message or the sound, regardless of whether anyone hears it.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>Within a number of miles equal to 2 + your Intelligence modifier, and speed 7 (3 ½ miles per hour).</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>Within a number of miles equal to 5 + your Intelligence modifier, and speed 10 (5 miles per hour).</text>
+				</section>
+				<section>
+					<name>Special:</name> <name-style>bold</name-style>
+					<text>You cannot regain the use of this power before the message has been delivered.</text>
+				</section>
+			</part>
+		</power>
+		
+	</feature>
+	
+	<feature>
+		<name>School Specialization</name>
+		<benefit>While they have access to the full gamut of wizardly spells, each Arcanist tends to focus on a subset of those spells. Over generations, these different focuses have been codified into groups, traditions, and others. Collectively they are called the schools of wizardry. </benefit>
+		<benefit>Choose Conjuration, Enchantment, Evocation, Illusion, Necromancy, or Nethermancy as your Arcanist's specialized school.</benefit>
+		
+		<subfeature>
+			<name>Conjuration</name>
+			<benefit>The art of conjuration is all about filling the field. An Arcanist specializing in this school brings forth new terrain, summons creatures to aid him or her, and and creates arcane entities for specialized purposes.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; You can use a standard action to sustain an arcane Conjuration or Zone you have created, even if the power could normally not be sustained. The Conjuration or Zone persists until the end of your next turn.</benefit>
+			<benefit>&#9658; If you have more than one summoned creature in existence, you can give each the same general command as a single action. You can also have each make a <![CDATA[<i>basic attack</i>]]> as a standard action command.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>conjurer's barrier</i>]]> power.</benefit>
+			
+			<power>
+				<title>Conjurer's Barrier</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You bring forth a barrier to impede your enemies' movement</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Conjuration, Implement, Zone</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Area</type> <range>wall 2 within 10 squares</range>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>Choose either physical barrier or damaging barrier:</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<name>Physical barrier:</name> <name-style>bold</name-style>
+						<text>You bring forth physical impediments. Until the end of the encounter, the area is difficult terrain. Enemies that end their turn in the area must succeed on a saving throw or be knocked prone.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<name>Damaging barrier:</name> <name-style>bold</name-style>
+						<text>You bring forth a damaging barrier. Until the end of the encounter, when a creature enters the area or ends its turn there, it takes damage equal to your Constitution modifier + your implement's enhancement bonus. A creature can take this damage only once per turn.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>2</indent>
+						<name>Level 11:</name> <name-style>italic</name-style>
+						<text>2 + Constitution modifier + your implement's enhancement bonus damage.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>2</indent>
+						<name>Level 21:</name> <name-style>italic</name-style>
+						<text>5 + Constitution modifier + your implement's enhancement bonus damage.</text>
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>When you first gain this power, you can choose for the damaging barrier to deal acid, cold, fire, lightning or thunder damage instead. If you do, the power gains the corresponding keyword when used to bring forth the damaging barrier.</text>
+					</section>
+					<section>
+						<text>You can only have one <![CDATA[<i>conjurer's barrier</i>]]> in existence at once. If you use this power again while the previous barrier still exists, the previous one immediately ends.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Enchantment</name>
+			<benefit>Arcanists specializing in Enchantment twist the minds of the weak of will. Different Enchantment spells can scorch the mind of an enemy, numb its reactions or even make it to the Arcanist's puppet.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you pull, push or slide a creature with an Enchantment power, you increase the forced movement by 2 squares.</benefit>
+			<benefit>&#9658; When you use an Enchantment power to force a creature to make an attack, it gains a bonus to the attack roll equal to one-half your Charisma modifier, or your Charisma modifier if you used a daily power.</benefit>
+			<benefit>&#9658; When you use an Enchantment power that does not deal damage and ends on a save, the target takes a penalty to the first saving throw equal to your Charisma modifier.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>enchanter's mind trick</i>]]> power.</benefit>
+			
+			<power>
+				<title>Enchanter's Mind Trick</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You cloud an enemy's thinking, making an ally seem more imposing in its mind</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Charm, Enchantment</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Ranged</type> <range>10</range>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>You or one ally, and one enemy who can see you or the chosen ally</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>The target enemy takes a -2 penalty to attack rolls against the target ally until the end of the encounter.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>If the target ally scores a critical hit or bloodies the target enemy, the penalty increases to -4 until the end of the ally's next turn.</text>
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>You can only have one <![CDATA[<i>enchanter's mind trick</i>]]> in effect at once. The previous effect immediately ends if you use this power again.</text>
+					</section>
+				</part>
+			</power>
+		
+		</subfeature>
+		
+		<subfeature>
+			<name>Evocation</name>
+			<benefit>Evokers take a more direct approach to affecting the world with their spells. The Evocation spells an Arcanist wields rain fire and ice, thunder and lightning to the battlefield.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you finish an extended rest, choose a number of allies equal to your Constitution modifier. Your arcane Evocation powers have a -5 to hit the chosen allies, and cannot critically hit them.</benefit>
+			<benefit>&#9658; When you roll damage for an arcane Evocation power, you can reroll one of the dice, or two dice for a daily power. This increases to two dice for an encounter power and three dice for a daily power at 11th level, and to two dice for an at-will power, three dice for an encounter power, and four dice for a daily power at 21st level. You always keep the second result. </benefit>
+			<benefit>&#9658; If you score a critical hit with an arcane Evocation power, you can reroll any or all of the additional damage dice from your implement once, keeping the second result.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>evoker's aim</i>]]> power.</benefit>
+			
+			<power>
+				<title>Evoker's Aim</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You know how to manipulate your spell to catch an enemy that seemed beyond its effects</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Evocation</keyword>
+					<action>Free</action> <subaction>Interrupt</subaction>
+					<type>Special</type>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>You use an area burst, close blast or close burst power that targets either all creatures or all enemies in the area</text>
+					</section>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>One creature adjacent to the triggering power's area</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>The target is considered to be inside the triggering power's area when resolving the power.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>This does not increase the power's actual area to include the target's space.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Illusion</name>
+			<benefit>The school of Illusion focuses on misdirection and concealment. Illusion spells can fool the target into thinking they are someplace else and create imaginary assailants to distract or even hurt it.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you hit a target with an arcane Illusion spell, the target takes a penalty equal to one-half your Charisma modifier on the next attack roll it makes, or all attack rolls for the next attack it makes if you used a daily power.</benefit>
+			<benefit>&#9658; You gain a +4 bonus to attack rolls with Illusion powers that deal no damage.</benefit>
+			<benefit>&#9658; As a move action, you can move a zone you have created with an Illusion power a number of squares equal to your Charisma modifier.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>illusionist's ally</i>]]> power.</benefit>
+			
+			<power>
+				<title>Illusionist's Ally</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You create a simple illusory warrior to distract your foes</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Illusion</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Ranged</type> <range>10</range>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You create an illusion of a warrior in a square within range. The illusion lasts until the end of the encounter. It has the following effects: </text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<text>&#9658; The illusion counts as an ally for you and your allies for the purposes of flanking, but not for other purposes.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<text>&#9658; The illusion does not occupy its space, but an enemy must succeed at a saving throw to voluntarily enter the illusion's space.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<text>&#9658; You and your allies have concealment against ranged attacks that pass through the illusion's space.</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<text>&#9658; The illusion can be attacked, and uses your defenses, not counting any temporary modifiers affecting you. An attack against the illusion's Will automatically hits it.</text> 
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<text>&#9658; When an attack hits it, the illusion immediately ends. This does not count as a creature being killed or hit by the attack.</text> 
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>While the illusion lasts and is within range, you can use the following action:</text>
+					</section>
+					<section>
+						<shade>true</shade> <indent>1</indent>
+						<name>Minor action:</name> <name-style>bold</name-style>
+						<text>You move the illusion a number of squares equal to your Charisma modifier. The illusion can be moved beyond the range of this power.</text>
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>You can only have one <![CDATA[<i>illusionist's ally</i>]]> in existence at once. If you use this power again while the previous ally still exists, the previous one immediately ends.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Necromancy</name>
+			<benefit>The macabre art of Necromancy is all about harnessing necrotic energies. A necromancer Arcanist can wither enemies' bodies, inflict them with different ailments, and also create undead servitors to fight alongside him or her.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; Bloodied enemies take a penalty to the first saving throw they make against an effect from your Necromancy powers. The penalty equals one-half your Wisdom modifier, or your Wisdom modifier if you used a daily power. If a creature becomes bloodied while under an effect, it takes this penalty to its next saving throw. </benefit>
+			<benefit>&#9658; Your Necrotic powers deal +1d6 damage on a critical against bloodied targets. This increases to +2d6 damage at 11th level, and to +3d6 damage at 21st level.</benefit>
+			<benefit>&#9658; You have a +2 bonus to attack rolls against undead with arcane Necromancy powers.</benefit>
+			<benefit>&#9658; When you use a Necromancy Summoning power, summoned non-minion creatures gain temporary hit points equal to your Wisdom modifier. This increases to 4 + your Wisdom modifier at 11th level, and to 8 + your Wisdom modifier at 21st level.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>necromancer's conduit</i>]]> power.</benefit>
+			
+			<power>
+				<title>Necromancer's Conduit</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You use a dying creature's last breath as a conduit for your necromantic spells</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Necromancy</keyword>
+					<action>Free</action> <subaction>Reaction</subaction>
+					<type>Ranged</type> <range>10</range>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>An undead summoned by you or a living creature dies within range</text>
+					</section>
+					<section>
+						<text>If a single attack kills more than one creature, you can only trigger this power on one of them</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>Until the end of your next turn, you can use the space that the triggering creature occupied as the origin for your ranged, area and close Necromancy powers. Close bursts used this way also affect the origin space.</text>
+					</section>
+					<section>
+						<name>Sustain Minor:</name> <name-style>bold</name-style>
+						<text>The effect persists until the end of your next turn.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>You can have more than one conduit active at once. You can sustain as many conduits as a single action as you wish, though you cannot resume sustaining one that has already expired.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Nethermancy</name>
+			<benefit>Practicioners of Nethermancy control the darkness, both literally and that found in the hearts of creatures. Nerhermancy allows the Arcanist to bring forth dark energies from the Shadowfell, and to rend the spirits and minds of creatures.</benefit>
+			<benefit>You gain the following benefits:</benefit>
+			<benefit>&#9658; When you hit an enemy with an encounter or daily Nethermancy power, it treats all its enemies more than 2 squares away as having concealment.</benefit>
+			<benefit>&#9658; You gain combat advantage with melee and ranged Nethermancy powers against targets you have concealment against.</benefit>
+			<benefit>&#9658; You gain a +2 bonus to attack rolls against shadow creatures with arcane Nethermancy powers.</benefit>
+			<benefit>&#9658; You gain the <![CDATA[<i>nethermancer's seal</i>]]> power.</benefit>
+			
+			<power>
+				<title>Nethermancer's Seal</title>
+				<class>Wizard</class> <category>Utility</category>
+				<fluff>You place a dark seal on your enemy's spirit, making it less aggressive</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Nethermancy</keyword>
+					<action>Minor</action> <subaction>Action</subaction>
+					<type>Close</type> <range>burst 10</range>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>One creature in the burst</text>
+					</section>
+					<section>
+						<shade>true</shade> <name-style>bold</name-style>
+						<text>The target takes a -2 penalty to triggered attack rolls, or a -3 penalty if it has the shadow origin.</text>
+					</section>
+					<section>
+						<shade>true</shade> 
+						<text>If you hit the target with an arcane Nethermancy power, the penalty increases to your Wisdom modifier (minimum -2), or 1 + your Wisdom modifier (minimum -3) until the start of your next turn.</text>
+					</section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>You can only have one <![CDATA[<i>nethermancer's seal</i>]]> in existence at once. If you use this power again while the previous ally still exists, the previous one immediately ends.</text>
+					</section>
+					<section>
+						<indent>1</indent>
+						<name>Level 11:</name> <name-style>italic</name-style>
+						<text>You can have two seals. When you use this power, you choose which previous effect ends if the use would exceed your limit.</text>
+					</section>
+					<section>
+						<indent>1</indent>
+						<name>Level 21:</name> <name-style>italic</name-style>
+						<text>You can have three seals. When you use this power, you choose which previous effect ends if the use would exceed your limit.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+	</feature>
+	
+	<feature>
+		<name>Vast Knowledge</name>
+		<benefit>Arcanists collect esoteric lore over their career, giving them mastery over one advanced discipline.</benefit>
+		<benefit>Select either Alchemist or Ritualist as your area of knowledge.</benefit>
+		
+		<subfeature>
+			<name>Alchemist</name>
+			<benefit>You have aptitude towards combining arcane materials to prepare alchemical creations.</benefit>
+			<benefit>You gain the Alchemist feat.</benefit>
+			<benefit>In addition, you learn two 1st-level alchemical formulas.</benefit>
+			<benefit>At 5th level and every five levels thereafter, you learn two additional formulas of your level or lower.</benefit>
+		</subfeature>
+		
+		<subfeature>
+			<name>Ritualist</name>
+			<benefit>You have learned to perform rituals that allow you to produce a variety of effects.</benefit>
+			<benefit>You gain the Ritual Caster feat.</benefit>
+			<benefit>In addition, you learn two 1st-level rituals.</benefit>
+			<benefit>At 5th level and every five levers thereafter, you learn two additional rituals of your level or lower.</benefit>
+		</subfeature>
+	</feature>
+	
+</class>
