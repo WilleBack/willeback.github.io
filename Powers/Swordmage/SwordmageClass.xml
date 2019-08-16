@@ -93,7 +93,7 @@
 		<subfeature>
 			<name>Aegis of Assault</name>
 			<benefit>This aggressive method of combat is favoured by Spellblades that fling their opponents across the battlefield or move from foe to foe.</benefit>
-			<benefit>When a Swordmage power allows you to teleport, you increase the distance by 1 square.</benefit>
+			<benefit>When a Swordmage power allows you to teleport, you can increase the distance by 1 square.</benefit>
 			<benefit>Also, when you use an arcane power to push an enemy, you increase the forced movement by 1 square.</benefit>
 			<benefit>In addition, you gain the <![CDATA[<i>aegis of assault</i>]]> power.</benefit>
 			
@@ -118,6 +118,44 @@
 					<section>
 						<shade>true</shade>
 						<text>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Aegis of Ensnarement</name>
+			<benefit>Spellblades favouring the Aegis of Ensnarement are sly hunters who close in on prey, hounding it until it is vanguished.</benefit>
+			<benefit>When you have combat advantage against the enemy marked by your <![CDATA[<i>arcane aegis</i>]]>, you gain a +1 bonus to attack rolls against it.</benefit>
+			<benefit>Also, when you use an arcane power to teleport an enemy to hazardous terrain and the enemy succeeds in its saving throw to negate that teleport, you instead teleport it to the space that is closest to the original destination and is safe for the enemy.</benefit>
+			<benefit>In addition, you gain the <![CDATA[<i>aegis of ensnarement</i>]]> power.</benefit>
+			
+			<power>
+				<title>Aegis of Ensnarement</title>
+				<class>Swordmage</class> <category>Attack</category>
+				<fluff>Your aegis allows you to draw to draw the enemy back to you</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane, Teleportation</keyword>
+					<action>Immediate</action> <subaction>Reaction</subaction>
+					<type>Close</type> <range>burst 10</range>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include as a target and is within 10 squares of you</text>
+					</section>
+					<section>
+						<name>Target:</name> <name-style>bold</name-style>
+						<text>The triggering enemy</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You teleport the target to a space adjacent to you. If no unnoccupied space exists adjacent to you, you can't use this power.</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<text>The target grants combat advantage to all creatures until the start of its next turn.</text>
 					</section>
 				</part>
 			</power>
