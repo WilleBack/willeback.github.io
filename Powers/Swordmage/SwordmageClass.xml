@@ -92,7 +92,7 @@
 			
 		<subfeature>
 			<name>Aegis of Assault</name>
-			<benefit>This aggressive method of combat is favoured by Spellblades that fling their opponents across the battlefield or move from foe to foe.</benefit>
+			<benefit>The Aegis of Assault embodies an aggressive method of combat and is favoured by Spellblades that fling their opponents across the battlefield or move from foe to foe.</benefit>
 			<benefit>When a Swordmage power allows you to teleport, you can increase the distance by 1 square.</benefit>
 			<benefit>Also, when you use an arcane power to push an enemy, you increase the forced movement by 1 square.</benefit>
 			<benefit>In addition, you gain the <![CDATA[<i>aegis of assault</i>]]> power.</benefit>
@@ -108,7 +108,7 @@
 					<type>Personal</type>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
-						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include as a target and is within 10 squares of you</text>
+						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include you as a target and is within 10 squares of you</text>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -117,7 +117,7 @@
 					</section>
 					<section>
 						<shade>true</shade>
-						<text>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</text>
+						<text>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy. If you make the attack using your bonded weapon, the attack deals additional damage equal to your Strength modifier.</text>
 					</section>
 				</part>
 			</power>
@@ -142,7 +142,7 @@
 					<type>Close</type> <range>burst 10</range>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
-						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include as a target and is within 10 squares of you</text>
+						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include you as a target and is within 10 squares of you</text>
 					</section>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
@@ -156,6 +156,36 @@
 					<section>
 						<shade>true</shade>
 						<text>The target grants combat advantage to all creatures until the start of its next turn.</text>
+					</section>
+				</part>
+			</power>
+			
+		</subfeature>
+		
+		<subfeature>
+			<name>Aegis of Shielding</name>
+			<benefit>Specializing in Aegis of Shielding allows a Spellblade to protect his or her allies with magical shields of force, and to keep enemies away from said allies.</benefit>
+			<benefit>When you use a Swordmage power that grants resistance, increase that resistance by 2. Starting at 11th level, you instead increase the resistance by 3, and at 21st level you increase the resistance by 5.</benefit>
+			<benefit>Also, when you use an arcane power to teleport an ally, you can increase the distance of that teleport by 1 square and can target the ally from 1 square further.</benefit>
+			<benefit>In addition, you gain the <![CDATA[<i>aegis of shielding</i>]]> power.</benefit>
+			
+			<power>
+				<title>Aegis of Shielding</title>
+				<class>Swordmage</class> <category>Utility</category>
+				<fluff>Your aegis allows you blunt the foe's attacks against your allies</fluff>
+				<part>
+					<frequency>At-Will</frequency>
+					<keyword>Arcane</keyword>
+					<action>Immediate</action> <subaction>Interrupt</subaction>
+					<type>Special</type>
+					<section>
+						<name>Trigger:</name> <name-style>bold</name-style>
+						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include you as a target and is within 10 squares of you</text>
+					</section>
+					<section>
+						<shade>true</shade>
+						<name>Effect:</name> <name-style>bold</name-style>
+						<text>You reduce the damage dealt by the triggering attack against any one target of the attack. The reduction equals one-half your level + your Constitution modifier.</text>
 					</section>
 				</part>
 			</power>
