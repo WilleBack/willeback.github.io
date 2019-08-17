@@ -5,7 +5,7 @@
    <power>
       <title>Blazing Pursuit</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
-      <fluff>You envelop your blade in fire and then strike, the flames creating a lingering path that you can travel along to catch your escaping foe</fluff>
+      <fluff>You envelop your weapon in fire and then strike, the flames creating a lingering path that you can travel along to catch your escaping foe</fluff>
       <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Teleportation, Weapon</keyword>
@@ -31,6 +31,44 @@
          <section>
             <name>Hit (Will):</name> <name-style>bold</name-style>
             <text>If the target is within 5 squares of you at the end of its next turn, you can use a free reaction to teleport to a space that is adjacent to the target. You do not need line of sight to the target or the space you teleport into.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Chilling Blow</title>
+      <class>Swordmage</class> <category>Attack</category> <level>1</level>
+      <fluff>Your weapon rips into your foe and cold pulses from the wound, enveloping your enemy's body in a crust of frost</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Cold, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. AC and Fortitude</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>Make one attack roll and compare it to both</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit (AC):</name> <name-style>bold</name-style>
+            <text>1[W] + Intelligence modifier cold damage.</text>
+         </section>
+         <section>
+            <name>Hit (Fortitude):</name> <name-style>bold</name-style>
+            <text>Until the start of your next turn, the target takes cold damage each time it makes an attack. The cold damage equals your Constitution modifier + your weapon's enhancement bonus.</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <name>Critical:</name> <name-style>bold</name-style>
+            <text>The target also takes the damage the first time it falls prone or willingly moves before the start of your next turn.</text>
          </section>
       </part>
    </power>
