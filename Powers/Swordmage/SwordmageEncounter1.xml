@@ -218,7 +218,7 @@
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d6 + Intelligence modifier fire damage, or 2d6 + Intelligence modifier fire damage against a creature marked by you.</text>
+            <text>1d8 + Intelligence modifier fire damage, or 2d8 + Intelligence modifier fire damage against a creature marked by you.</text>
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
@@ -306,7 +306,69 @@
             <text>You and the target teleport, swapping positions.</text>
          </section>
          <section>
+            <indent>1</indent>
+            <name>Critical:</name> <name-style>bold</name-style>
+            <text>The target grants combat advantage until the start of your next turn.</text>
+         </section>
+         <section>
             <text>If either has a larger space than the other, you choose where inside the larger space the smaller teleports and which part of the larger space covers the smaller space.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Lightning Clash</title>
+      <class>Swordmage</class> <category>Attack</category> <level>1</level>
+      <fluff>As your blade strikes home, a sizzling bolt of lightning leaps from your reeling foe towards its nearby ally</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Lightning, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Primary Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. AC and Reflex</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>Make one attack roll and compare it to both</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit (AC):</name> <name-style>bold</name-style>
+            <text>1[W] + Intelligence modifier lightning damage.</text>
+         </section>
+         <section>
+            <name>Hit (Reflex):</name> <name-style>bold</name-style>
+            <text>You make the Leaping Lightning attack, using the target's space as the origin. This attack does not trigger an <![CDATA[<i>opportunity attack</i>]]> for making a ranged attack.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Leaping Lightning</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Arcane, Implement, Lightning</keyword>
+         <action>Nonaction</action>
+         <type>Ranged</type> <range>5/10</range>
+         <section>
+            <name>Lightning Target:</name> <name-style>bold</name-style>
+            <text>One creature other than the primary target</text>
+         </section>
+         <section>
+            <name>Lightning Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d8 + Intelligence modifier lightning damage.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>If the primary attack was a critical hit, you deal half damage.</text>
          </section>
       </part>
    </power>
