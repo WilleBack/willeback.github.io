@@ -76,7 +76,34 @@
    <power>
       <title>Crackling Burst</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
-      <fluff>Your swing your weapon in a sprawling arc of lightning that catches nearby creatures, making movement agonizing for them</fluff>
+      <fluff>Your weapon sends out sprawling arcs of lightning that catch nearby enemies, making movement agonizing for them</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Implement, Lightning</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Close</type> <range>burst 2</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d6 + Intelligence modifier lightning damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If the target willingly moves before the start of your next turn, it takes lightning damage equal to your Intelligence modifier + your implement's enhancement bonus. This effect ends if you are no longer within 2 squares of the target.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>If you targeted at least 2 enemies and miss all targets, the first target that willingly moves is subject to the lightning damage.</text>
+         </section>
+      </part>
    </power>
    
 </catalog>
