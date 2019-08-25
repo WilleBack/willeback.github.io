@@ -32,6 +32,11 @@
             <name>Hit (Will):</name> <name-style>bold</name-style>
             <text>If the target is within 5 squares of you at the end of its next turn, you can use a free reaction to teleport to a space that is adjacent to the target. You do not need line of sight to the target or the space you teleport into.</text>
          </section>
+         <section>
+            <indent>1</indent>
+            <name>Aegis of Assault:</name> <name-style>bold</name-style>
+            <text>You can teleport if the target is within a number of squares equal to 3 + your Strength modifier (minimum 5 squares) instead.</text>
+         </section>
       </part>
    </power>
    
@@ -101,7 +106,7 @@
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
-            <text>If you targeted at least 2 enemies and miss all targets, the first target that willingly moves is subject to the lightning damage.</text>
+            <text>If you targeted at least 2 enemies and miss all targets, the first target that willingly moves before the start of your next turn is subject to the lightning damage.</text>
          </section>
       </part>
    </power>
@@ -131,6 +136,59 @@
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Intelligence modifier damage.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Aegis of Ensnarement:</name> <name-style>bold</name-style>
+            <text>If the target willingly teleported, the attack deals additional damage equal to your Constitution modifier.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Falcon's Mark</title>
+      <class>Swordmage</class> <category>Attack</category> <level>1</level>
+      <fluff>You send your weapon flying to seek out an enemy beyond your normal reach, using your magic to mark it as your foe</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Force, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>5</range>
+         <type2>Ranged</type2> <range2>weapon +2/+5 if your weapon can be thrown</range2>
+         <section>
+            <shade>true</shade>
+            <name>Requirement:</name> <name-style>bold</name-style>
+            <text>You must throw your bonded weapon as part of making this attack.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. AC and Will</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>Make one attack roll and compare it to both</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit (AC):</name> <name-style>bold</name-style>
+            <text>1[W] + Intelligence modifier force damage, or 2[W] + Intelligence modifier force damage if your bonded weapon can normally be thrown.</text>
+         </section>
+         <section>
+            <name>Hit (Will):</name> <name-style>bold</name-style>
+            <text>The target is marked by you until the end of your next turn.</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <name>Arcane Aegis:</name> <name-style>bold</name-style>
+            <text>The target is marked by your <![CDATA[<i>arcane aegis</i>]]>.</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>If you already have another creature marked by you <![CDATA[<i>arcane aegis</i>]]>, both remain marked until the end of your next turn, at which point you decide which remains marked by your aegis.</text>
          </section>
       </part>
    </power>
