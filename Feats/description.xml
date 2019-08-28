@@ -12360,6 +12360,131 @@
 	</feat>
 	
 	<feat>
+		<title>Devout Protector Expertise</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>class</type>
+			<name>any divine</name>
+		</prereq>
+		<prereq>
+			<type>proficiency</type>
+			<name>holy symbols</name>
+			<combine>;</combine>
+		</prereq>
+		<prereq>
+			<type>role</type>
+			<name>Defender</name>
+			<combine>or</combine>
+		</prereq>
+		<prereq>
+			<type>role</type>
+			<name>Leader</name>
+		</prereq>
+		<group>Class</group>
+		<group>Defense</group>
+		<group>Implement Specialization</group>
+		<group>Support</group>
+		<benefit>When you use a divine power with a holy symbol you are proficient with, until the end of your next turn allies gain a +1 bonus to AC while within 5 squares of you.</benefit>
+	</feat>
+	
+	<feat>
+		<title>Diabolic Soul</title>
+		<tier>Heroic</tier>
+		<prereq>
+			<type>race</type>
+			<name>Tiefling</name>
+		</prereq>
+		<prereq>
+			<type>power</type>
+			<name>infernal wrath</name>
+			<qualifier>racial</qualifier>
+		</prereq>
+		<group>Attack Bonus</group>
+		<group>Power Repertoire</group>
+		<group>Shapechange</group>
+		<group>Triggered</group>
+		<benefit>Whenever a creature scores a critical hit against you, you gain a +2 bonus to attack rolls against that creature until the end of the encounter.</benefit>
+		<benefit>Also, you replace your <![CDATA[<i>infernal wrath</i> racial power with the <i>diabolic transformation</i>]]> racial power.</benefit>
+		
+		<power>
+			<title>Diabolic Transformation</title>
+			<class>Racial</class> <category>Utility</category>
+			<fluff>You roar with infernal fury as the hellish blood that flows through your veins reveals its true power in the blink of an eye, transforming you into a brutish fiend</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<keyword>Divine, Polymorph</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You transform into a diabolic brute until the end of the encounter.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>While you are in this form, you gain the following benefits:</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; Your fire resistance increases by 5.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; The bonus to attack rolls from your Bloodhunt racial trait increases to +2.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; You gain a +2 power bonus to damage rolls.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>+3 power bonus.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>+4 power bonus.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; You gain regeneration 2, or regeneration 3 if you were bloodied when you used this power.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>Regeneration 4 or regeneration 6.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>Regneration 6 or regeneration 10.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>While you are in this form, you can use the Black Wrath of Hell attack once.</text>
+				</section>
+			</part>
+			<part>
+				<part-name>Black Wrath of Hell</part-name>
+				<frequency>Encounter</frequency>
+				<keyword>Divine, Fear</keyword>
+				<action>Free</action> <subaction>Interrupt</subaction>
+				<type>Special</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You hit an enemy with an attack</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The triggering enemy takes an additional +1d10 damage from the triggering attack, and also takes a penalty to all attack rolls against you (save ends). The penalty equals your Intelligence modifier or your Charisma modifier.</text>
+				</section>
+			</part>
+		</power>
+	</feat>
+	
+	<feat>
 		<title>Eager Mind</title>
 		<tier>Heroic</tier>
 		<prereq>
