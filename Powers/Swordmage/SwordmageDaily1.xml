@@ -210,4 +210,61 @@
       </part>
    </power>
    
+   <power>
+      <title>Dragon's Teeth Strike</title>
+      <class>Swordmage</class> <category>Attack</category> <level>1</level>
+      <fluff>When you strike, shards of force explode from your weapon and dig into your foes' flesh, goading them to move in your direction</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Force, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Primary Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Intelligence modifier force damage.</text>
+         </section>
+         <section>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You make the Force Teeth attack. You must include the primary target in the blast.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Force Teeth</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Arcane, Force, Implement</keyword>
+         <action>Nonaction</action>
+         <type>Close</type> <range>blast 5</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the blast</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d8 + Intelligence modifier force damage, and force shards are embedded in it (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While the shards are embedded, if the target is not adjacent to you at the end of its turn, it takes force damage equal to your Strength modifier + your implement's enhancement bonus.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage, and force shards are embedded in it until the end of its next turn.</text>
+         </section>
+      </part>
+   </power>
+   
 </catalog>
