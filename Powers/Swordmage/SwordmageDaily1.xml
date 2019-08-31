@@ -244,11 +244,11 @@
          <action>Nonaction</action>
          <type>Close</type> <range>blast 5</range>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
+            <name>Force Target:</name> <name-style>bold</name-style>
             <text>Each enemy in the blast</text>
          </section>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Force Attack:</name> <name-style>bold</name-style>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -411,6 +411,44 @@
          <section>
             <shade>true</shade>
             <text>Until the end of the encounter, whenever you hit an enemy with a melee attack, you can teleport up 3 squares as a free reaction. If your attack is a critical hit, you can also turn invisible until the start of your next turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Warding Flourish</title>
+      <class>Swordmage</class> <category>Attack</category> <level>1</level>
+      <fluff>Fancy bladework creates a magical buffer around your enemy that keeps it away from your friends</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Force, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One or two creatures</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. AC and Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit (AC):</name> <name-style>bold</name-style>
+            <text>1[W] + Intelligence modifier force damage, and you slide the target 2 squares.</text>
+         </section>
+         <section>
+            <name>Miss (AC):</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit (Fortitude):</name> <name-style>bold</name-style>
+            <text>Until the end of your next turn, when an ally adjacent to the target hits it with an attack, he or she can push the target 1 square.</text>
+         </section>
+         <section>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>Until the end of your next turn, the target cannot enter a square that is adjacent to any of your allies. This does not prevent it from staying in such a square if it is already in one or if an ally moves adjacent to it.</text>
          </section>
       </part>
    </power>
