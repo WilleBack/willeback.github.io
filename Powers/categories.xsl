@@ -77,7 +77,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <xsl:value-of select="name" />
       </div>
       
-      <xsl:apply-templates match="power" />
+      <xsl:apply-templates select="power" />
       
    </div>
    
