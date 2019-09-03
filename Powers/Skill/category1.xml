@@ -493,7 +493,158 @@
    </category>
    
    <category>
+      <name>Endurance</name>
+      
+      <power>
+         <title>Healer's Gift</title>
+         <class>Heal</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You tend to a fallen comrade and stave off death's touch</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Healing, Skill</keyword>
+            <action>Standard</action>
+            <subaction>Action</subaction>
+            <type>Melee</type>
+            <range>1</range>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>One dying creature adjacent to you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the target has no healing surges remaining, he or she regains hit points equal to one-half his or her healing surge value, and is dazed until the end of his or her next turn instead.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the target failed one or more death saving throws while it was dying, it counts as having failed one less.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Inspiring Fortitude</title>
+         <class>Endurance</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Inspired by your resilience, your allies find the will to overcome challenges</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Standard</action>
+            <subaction>Action</subaction>
+            <type>Close</type>
+            <range>burst 5</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>Your must have your <![CDATA[<i>second wind</i>]]> available.</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>You, and each ally in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You use your <![CDATA[<i>second wind</i>]]>.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>Each target ally gains temporary hit points equal to 4 + your Constitution modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <indent>1</indent>
+               <name>Level 11:</name>
+               <name-style>italic</name-style>
+               <text>Equal to 8 + your Constitution modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <indent>1</indent>
+               <name>Level 21:</name>
+               <name-style>italic</name-style>
+               <text>Equal to 12 + your Constitution modifier.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Heal</name>
+      
+      <power>
+         <title>Iron Resurgence</title>
+         <class>Heal</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Though your hands do little to comfort the wounded, you ensure that an injury will not keep an ally out of the battle</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Healing, Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Melee</type>
+            <range>1</range>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>You or one ally adjacent to you; The target must be bloodied and have at least two healing surges available</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target spends two healing surges to regain hit points equal to his or her healing surge value. The target can then choose to spend a healing surge to regain hit points equal to his or her healing surge value.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>The target gains temporary hit points equal to one-half the amount of hit points he or she regained.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>History</name>
+      
+      <power>
+         <title>Legend Lore</title>
+         <class>History</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Legends are your specialty, and you can always find a use for these stories</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You make a knowledge check using a skill other than History</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You use your History check modifier for the triggering check instead of the original check modifier.</text>
+            </section>
+         </part>
+      </power>
       
       <power>
          <title>Perfect Recall</title>
@@ -931,6 +1082,27 @@
       <name>Thievery</name>
       
       <power>
+         <title>Lock Tap</title>
+         <class>Thievery</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>A practiced tap is sometimes all it takes to pop open a lock</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You make a Thievery check to open an adjacent lock.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Quick Palm</title>
          <class>Thievery</class>
          <category>Utility</category>
@@ -1274,165 +1446,11 @@
             </section>
          </part>
       </power>
-      <power>
-         <title>Healer's Gift</title>
-         <class>Heal</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You tend to a fallen comrade and stave off death's touch</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Healing, Skill</keyword>
-            <action>Standard</action>
-            <subaction>Action</subaction>
-            <type>Melee</type>
-            <range>1</range>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>One dying creature adjacent to you</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>If the target has no healing surges remaining, he or she regains hit points equal to one-half his or her healing surge value, and is dazed until the end of his or her next turn instead.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>If the target failed one or more death saving throws while it was dying, it counts as having failed one less.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Inspiring Fortitude</title>
-         <class>Endurance</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Inspired by your resilience, your allies find the will to overcome challenges</fluff>
-         <part>
-            <frequency>Daily</frequency>
-            <keyword>Skill</keyword>
-            <action>Standard</action>
-            <subaction>Action</subaction>
-            <type>Close</type>
-            <range>burst 5</range>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>Your must have your <![CDATA[<i>second wind</i>]]> available.</text>
-            </section>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>You, and each ally in the burst</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You use your <![CDATA[<i>second wind</i>]]>.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>Each target ally gains temporary hit points equal to 4 + your Constitution modifier.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <indent>1</indent>
-               <name>Level 11:</name>
-               <name-style>italic</name-style>
-               <text>Equal to 8 + your Constitution modifier.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <indent>1</indent>
-               <name>Level 21:</name>
-               <name-style>italic</name-style>
-               <text>Equal to 12 + your Constitution modifier.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Iron Resurgence</title>
-         <class>Heal</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Though your hands do little to comfort the wounded, you ensure that an injury will not keep an ally out of the battle</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Healing, Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Melee</type>
-            <range>1</range>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>You or one ally adjacent to you; The target must be bloodied and have at least two healing surges available</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>The target spends two healing surges to regain hit points equal to his or her healing surge value. The target can then choose to spend a healing surge to regain hit points equal to his or her healing surge value.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>The target gains temporary hit points equal to one-half the amount of hit points he or she regained.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Legend Lore</title>
-         <class>History</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Legends are your specialty, and you can always find a use for these stories</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Interrupt</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You make a knowledge check using a skill other than History</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You use your History check modifier for the triggering check instead of the original check modifier.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Lock Tap</title>
-         <class>Thievery</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>A practiced tap is sometimes all it takes to pop open a lock</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You make a Thievery check to open an adjacent lock.</text>
-            </section>
-         </part>
-      </power>
+      
+      
+      
+      
+      
       
    </category>
 </catalog>
