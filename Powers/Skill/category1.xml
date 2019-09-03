@@ -139,6 +139,44 @@
       </power>
       
       <power>
+         <title>Mounted Coordination</title>
+         <class>Athletics or Nature</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You synchronize your attack with your mount's movements to maximize your damage</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must be mounted on a willing creature</text>
+            </section>
+            <section>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You gain a +2 bonus to the first damage roll you make before the start of your next turn. You lose this bonus if you are no longer mounted.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 11:</name>
+               <name-style>italic</name-style>
+               <text>+4 bonus.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name>
+               <name-style>italic</name-style>
+               <text>+6 bonus.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Scrambling Climb</title>
          <class>Athletics</class>
          <category>Utility</category>
@@ -264,6 +302,36 @@
    
    <category>
       <name>Diplomacy</name>
+      
+      <power>
+         <title>Master Diplomat</title>
+         <class>Diplomacy</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Catching a possible faux pas in what you were about to say, you quickly adjust your soothing words and flattery to work more magic than the most powerful spell</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You make a Diplomacy check and dislike the result</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <text>You decide whether to use this power before the DM announces the result of your roll</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You reroll the triggering check, and use whichever result you prefer.</text>
+            </section>
+         </part>
+      </power>
       
       <power>
          <title>Soothing Words</title>
@@ -573,6 +641,32 @@
             </section>
          </part>
       </power>
+      
+      <power>
+         <title>Nose for Trouble</title>
+         <class>Insight or Streetwise</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You have learned to keep a close eye on your surroundings so that when trouble breaks out, you're ready for it</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You roll initiative and dislike the result</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You reroll the triggering check, using your Streetwise check modifier in place of your initiative check modifier, and can use either result as your roll.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
@@ -616,6 +710,81 @@
    
    <category>
       <name>Nature</name>
+      
+      <power>
+         <title>Mounted Coordination</title>
+         <class>Athletics or Nature</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You synchronize your attack with your mount's movements to maximize your damage</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must be mounted on a willing creature</text>
+            </section>
+            <section>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You gain a +2 bonus to the first damage roll you make before the start of your next turn. You lose this bonus if you are no longer mounted.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 11:</name>
+               <name-style>italic</name-style>
+               <text>+4 bonus.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name>
+               <name-style>italic</name-style>
+               <text>+6 bonus.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Nature Instinct</title>
+         <class>Nature</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>The forest is quiet... too quiet</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Close</type>
+            <range>burst 5</range>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You roll initiative in a natural environment</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>You, and each ally in the burst that can see or hear you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You use your Nature check modifier in place of your initiative check modifier for the triggering roll.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You and each target gains a +2 bonus to all defenses until the end of his or her first turn.</text>
+            </section>
+         </part>
+      </power>
+      
       <power>
          <title>Studied Ritualist</title>
          <class>Arcana, Nature or Religion</class>
@@ -704,6 +873,32 @@
    
    <category>
       <name>Streetwise</name>
+      
+      <power>
+         <title>Nose for Trouble</title>
+         <class>Insight or Streetwise</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You have learned to keep a close eye on your surroundings so that when trouble breaks out, you're ready for it</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You roll initiative and dislike the result</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You reroll the triggering check, using your Streetwise check modifier in place of your initiative check modifier, and can use either result as your roll.</text>
+            </section>
+         </part>
+      </power>
       
       <power>
          <title>Secrets of the City</title>
@@ -1238,131 +1433,6 @@
             </section>
          </part>
       </power>
-      <power>
-         <title>Master Diplomat</title>
-         <class>Diplomacy</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Catching a possible faux pas in what you were about to say, you quickly adjust your soothing words and flattery to work more magic than the most powerful spell</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Interrupt</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You make a Diplomacy check and dislike the result</text>
-            </section>
-            <section>
-               <indent>1</indent>
-               <text>You decide whether to use this power before the DM announces the result of your roll</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You reroll the triggering check, and use whichever result you prefer.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Mounted Coordination</title>
-         <class>Athletics or Nature</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You synchronize your attack with your mount's movements to maximize your damage</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>You must be mounted on a willing creature</text>
-            </section>
-            <section>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You gain a +2 bonus to the first damage roll you make before the start of your next turn. You lose this bonus if you are no longer mounted.</text>
-            </section>
-            <section>
-               <indent>1</indent>
-               <name>Level 11:</name>
-               <name-style>italic</name-style>
-               <text>+4 bonus.</text>
-            </section>
-            <section>
-               <indent>1</indent>
-               <name>Level 21:</name>
-               <name-style>italic</name-style>
-               <text>+6 bonus.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Nature Instinct</title>
-         <class>Nature</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>The forest is quiet... too quiet</fluff>
-         <part>
-            <frequency>Daily</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Interrupt</subaction>
-            <type>Close</type>
-            <range>burst 5</range>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You roll initiative in a natural environment</text>
-            </section>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>You, and each ally in the burst that can see or hear you</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You use your Nature check modifier in place of your initiative check modifier for the triggering roll.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>You and each target gains a +2 bonus to all defenses until the end of his or her first turn.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Nose for Trouble</title>
-         <class>Insight or Streetwise</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You have learned to keep a close eye on your surroundings so that when trouble breaks out, you're ready for it</fluff>
-         <part>
-            <frequency>Daily</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Interrupt</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You roll initiative and dislike the result</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You reroll the triggering check, using your Streetwise check modifier in place of your initiative check modifier, and can use either result as your roll.</text>
-            </section>
-         </part>
-      </power>
+      
    </category>
 </catalog>
