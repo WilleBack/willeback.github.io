@@ -62,7 +62,7 @@
             <section>
                <name>Trigger:</name>
                <name-style>bold</name-style>
-               <text>You need to make a Bluff, a Diplomacy, or an Intimidate check</text>
+               <text>You would make a Bluff check or an Intimidate check</text>
             </section>
             <section>
                <shade>true</shade>
@@ -1117,6 +1117,27 @@
       <name>Perception</name>
       
       <power>
+         <title>Corner of Your Eye</title>
+         <class>Perception</class> <category>Utility</category> <level>1</level>
+         <fluff>You catch a glimpse of something in the corner of your eye, allowing you to react faster</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You roll initiative</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You roll twice and use either result.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Far Sight</title>
          <class>Perception</class>
          <category>Utility</category>
@@ -1143,9 +1164,7 @@
       
       <power>
          <title>Faith Healing</title>
-         <class>Religion</class>
-         <category>Utility</category>
-         <level>1</level>
+         <class>Religion</class> <category>Utility</category> <level>1</level>
          <fluff>Your prayers help an ally recover their will to fight</fluff>
          <part>
             <frequency>Encounter</frequency>
@@ -1164,6 +1183,27 @@
                <name>Effect:</name>
                <name-style>bold</name-style>
                <text>The target can use his or her <![CDATA[<i>second wind</i>]]> without spending an action.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Proper Verse</title>
+         <class>Religion</class> <category>Utility</category> <level>1</level>
+         <fluff>You quote scripture to add gravitas to your words</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You would make a Diplomacy check or an Intimidate check</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You use your Religion check modifier in place of the triggering skill's check modifier.</text>
             </section>
          </part>
       </power>
@@ -1216,21 +1256,16 @@
       
       <power>
          <title>Obscured Avoidance</title>
-         <class>Stealth</class>
-         <category>Utility</category>
-         <level>1</level>
+         <class>Stealth</class> <category>Utility</category> <level>1</level>
          <fluff>Although an enemy's attention is on you, its inability to see you clearly can keep you out of harm's way</fluff>
          <part>
             <frequency>At-Will</frequency>
             <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
+            <action>Free</action> <subaction>Interrupt</subaction>
             <type>Personal</type>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>You must be marked, and have concealment from the marking creature</text>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You start your turn and are marked, and have concealment against the marking creature</text>
             </section>
             <section>
                <name>Effect:</name>
@@ -1314,7 +1349,7 @@
       
       <power>
          <title>Nose for Trouble</title>
-         <class>Insight or Streetwise</class>
+         <class>Streetwise</class>
          <category>Utility</category>
          <level>1</level>
          <fluff>You have learned to keep a close eye on your surroundings so that when trouble breaks out, you're ready for it</fluff>
