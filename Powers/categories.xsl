@@ -72,7 +72,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="category">
    
-   <div class="powercat" style="page-break-inside:avoid; width:100%;">
+   <div class="powercat" style="page-break-inside:avoid; width:100%; margin:0.1cm;">
       <div id="catname" style="width:100%; float:left; font-size:1.3em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
          <xsl:value-of select="name" />
       </div>
