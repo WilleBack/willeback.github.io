@@ -274,6 +274,32 @@
       </power>
       
       <power>
+         <title>False Bravado</title>
+         <class>Bluff</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Your apparent courage makes your enemy think twice about pressing its attack</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must be marked.</text>
+            </section>
+            <section>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You are no longer marked.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Serpent's Tongue</title>
          <class>Bluff</class>
          <category>Utility</category>
@@ -429,6 +455,32 @@
       </power>
       
       <power>
+         <title>Deep Shadows</title>
+         <class>Dungeoneering</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Judging the play of shadows against the cave wall, you spot a hiding place that an untrained explorer would overlook</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must be underground, and have cover or concealment</text>
+            </section>
+            <section>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You make a Stealth check to hide, using your Dungeoneering check modifier in place of your Stealth check modifier for the check.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Otherworldly Lore</title>
          <class>Dungeoneering</class>
          <category>Utility</category>
@@ -495,37 +547,95 @@
    <category>
       <name>Endurance</name>
       
+      
+      
       <power>
-         <title>Healer's Gift</title>
-         <class>Heal</class>
+         <title>Endure Pain</title>
+         <class>Endurance</class>
          <category>Utility</category>
          <level>1</level>
-         <fluff>You tend to a fallen comrade and stave off death's touch</fluff>
+         <fluff>You grin and bear it, shrugging off the pain of a new wound</fluff>
          <part>
-            <frequency>Encounter</frequency>
-            <keyword>Healing, Skill</keyword>
-            <action>Standard</action>
-            <subaction>Action</subaction>
-            <type>Melee</type>
-            <range>1</range>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action>
+            <subaction>Interrupt</subaction>
+            <type>Personal</type>
             <section>
-               <name>Target:</name>
+               <name>Trigger:</name>
                <name-style>bold</name-style>
-               <text>One dying creature adjacent to you</text>
+               <text>You are hit by an attack</text>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
                <name-style>bold</name-style>
-               <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
+               <text>You gain resist all against the triggering attack. The resist equals one-half the number of healing surges you have remaining.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Exemplar of Valor</title>
+         <class>Endurance</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You brace yourself against the terror inspired by a foe, and your bravery serves as an example to your friends</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action>
+            <subaction>Interrupt</subaction>
+            <type>Close</type>
+            <range>burst 10</range>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You are the target of a Fear effect</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>You and each ally in the burst that can see you</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>If the target has no healing surges remaining, he or she regains hit points equal to one-half his or her healing surge value, and is dazed until the end of his or her next turn instead.</text>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>Until the end of the encounter, each target gains a +2 power bonus to all defenses against Fear effects.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>If the target failed one or more death saving throws while it was dying, it counts as having failed one less.</text>
+               <text>If the triggering attack hits you, you gain a +2 power bonus to attack rolls against the triggering enemy until the end of your next turn. If the triggering attack misses you, target allies gain a +2 power bonus to attack rolls against the triggering enemy until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Grit and Spittle</title>
+         <class>Endurance</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Drawing on pure stubberness, you're ready to see your way through disaster</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must have at least 1 healing surge remaining</text>
+            </section>
+            <section>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You spend a healing surge to make a saving throw against every effect on you that a save can end.</text>
+            </section>
+            <section>
+               <text>For each saving throw that fails, you regain hit points equal to one-half your level (minimum 1).</text>
             </section>
          </part>
       </power>
@@ -584,6 +694,41 @@
    
    <category>
       <name>Heal</name>
+      
+      <power>
+         <title>Healer's Gift</title>
+         <class>Heal</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You tend to a fallen comrade and stave off death's touch</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Healing, Skill</keyword>
+            <action>Standard</action>
+            <subaction>Action</subaction>
+            <type>Melee</type>
+            <range>1</range>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>One dying creature adjacent to you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the target has no healing surges remaining, he or she regains hit points equal to one-half his or her healing surge value, and is dazed until the end of his or her next turn instead.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the target failed one or more death saving throws while it was dying, it counts as having failed one less.</text>
+            </section>
+         </part>
+      </power>
       
       <power>
          <title>Iron Resurgence</title>
@@ -964,7 +1109,60 @@
    </category>
    
    <category>
+      <name>Perception</name>
+      
+      <power>
+         <title>Far Sight</title>
+         <class>Perception</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You focus your senses to pick out enemies at the edge of your vision</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>Until the end of your next turn, your ranged attack rolls take no penalty from long range, and ignore cover and concealment (not superior cover or total concealment) at normal range.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>Religion</name>
+      
+      <power>
+         <title>Faith Healing</title>
+         <class>Religion</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Your prayers help an ally recover their will to fight</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Healing, Skill</keyword>
+            <action>Standard</action>
+            <subaction>Action</subaction>
+            <type>Melee</type>
+            <range>touch</range>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target can use his or her <![CDATA[<i>second wind</i>]]> without spending an action.</text>
+            </section>
+         </part>
+      </power>
+      
       <power>
          <title>Studied Ritualist</title>
          <class>Arcana, Nature or Religion</class>
@@ -996,6 +1194,27 @@
       <name>Stealth</name>
       
       <power>
+         <title>Elude Senses</title>
+         <class>Stealth</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You slip past the notice of creatures that have adapted to life underground</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>Until the end of your next turn, creatures can't use blindsight or tremorsense to detect you, and you have concealment against creatures relying on darkvision. You can be detected with other senses as normal.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Obscured Avoidance</title>
          <class>Stealth</class>
          <category>Utility</category>
@@ -1024,6 +1243,48 @@
    
    <category>
       <name>Streetwise</name>
+      
+      <power>
+         <title>Failed Diplomacy</title>
+         <class>Streetwise</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Negotiations are breaking down and will end in bloodshed - you realize this fact a split-second before your enemies do</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Close</type>
+            <range>burst 5</range>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>Initiative is rolled</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>You, and each ally in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>Each target gains the following two benefits:</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <indent>1</indent>
+               <text>► +2 power bonus to the triggering Initiative check.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <indent>1</indent>
+               <text>► Combat advantage against all enemies that have not yet acted. This lasts until the end of the targets next turn.</text>
+            </section>
+         </part>
+      </power>
       
       <power>
          <title>Nose for Trouble</title>
@@ -1080,6 +1341,32 @@
    
    <category>
       <name>Thievery</name>
+      
+      <power>
+         <title>Fast Hands</title>
+         <class>Thievery</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Your fingers blur as you manipulate objects faster than the eye can follow</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You either draw or seathe a weapon, pick up an unattended item in your space or adjacent to it, or retrieve or stow an item.</text>
+            </section>
+            <section>
+               <name>Special:</name>
+               <name-style>bold</name-style>
+               <text>You can use this power only once per round.</text>
+            </section>
+         </part>
+      </power>
       
       <power>
          <title>Lock Tap</title>
@@ -1176,278 +1463,6 @@
             </section>
          </part>
       </power>
-      <power>
-         <title>Deep Shadows</title>
-         <class>Dungeoneering</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Judging the play of shadows against the cave wall, you spot a hiding place that an untrained explorer would overlook</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>You must be underground, and have cover or concealment</text>
-            </section>
-            <section>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You make a Stealth check to hide, using your Dungeoneering check modifier in place of your Stealth check modifier for the check.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Elude Senses</title>
-         <class>Stealth</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You slip past the notice of creatures that have adapted to life underground</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>Until the end of your next turn, creatures can't use blindsight or tremorsense to detect you, and you have concealment against creatures relying on darkvision. You can be detected with other senses as normal.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Endure Pain</title>
-         <class>Endurance</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You grin and bear it, shrugging off the pain of a new wound</fluff>
-         <part>
-            <frequency>Daily</frequency>
-            <keyword>Skill</keyword>
-            <action>Immediate</action>
-            <subaction>Interrupt</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You are hit by an attack</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You gain resist all against the triggering attack. The resist equals one-half the number of healing surges you have remaining.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Exemplar of Valor</title>
-         <class>Endurance</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You brace yourself against the terror inspired by a foe, and your bravery serves as an example to your friends</fluff>
-         <part>
-            <frequency>Daily</frequency>
-            <keyword>Skill</keyword>
-            <action>Immediate</action>
-            <subaction>Interrupt</subaction>
-            <type>Close</type>
-            <range>burst 10</range>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You are the target of a Fear effect</text>
-            </section>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>You and each ally in the burst that can see you</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>Until the end of the encounter, each target gains a +2 power bonus to all defenses against Fear effects.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>If the triggering attack hits you, you gain a +2 power bonus to attack rolls against the triggering enemy until the end of your next turn. If the triggering attack misses you, target allies gain a +2 power bonus to attack rolls against the triggering enemy until the end of your next turn.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Failed Diplomacy</title>
-         <class>Streetwise</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Negotiations are breaking down and will end in bloodshed - you realize this fact a split-second before your enemies do</fluff>
-         <part>
-            <frequency>Daily</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Interrupt</subaction>
-            <type>Close</type>
-            <range>burst 5</range>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>Initiative is rolled</text>
-            </section>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>You, and each ally in the burst</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>Each target gains the following two benefits:</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <indent>1</indent>
-               <text>► +2 power bonus to the triggering Initiative check.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <indent>1</indent>
-               <text>► Combat advantage against all enemies that have not yet acted. This lasts until the end of the targets next turn.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Faith Healing</title>
-         <class>Religion</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Your prayers help an ally recover their will to fight</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Healing, Skill</keyword>
-            <action>Standard</action>
-            <subaction>Action</subaction>
-            <type>Melee</type>
-            <range>touch</range>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>The target can use his or her <![CDATA[<i>second wind</i>]]> without spending an action.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>False Bravado</title>
-         <class>Bluff</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Your apparent courage makes your enemy think twice about pressing its attack</fluff>
-         <part>
-            <frequency>At-Will</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>You must be marked.</text>
-            </section>
-            <section>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You are no longer marked.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Far Sight</title>
-         <class>Perception</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You focus your senses to pick out enemies at the edge of your vision</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>Until the end of your next turn, your ranged attack rolls take no penalty from long range, and ignore cover and concealment (not superior cover or total concealment) at normal range.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Fast Hands</title>
-         <class>Thievery</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Your fingers blur as you manipulate objects faster than the eye can follow</fluff>
-         <part>
-            <frequency>At-Will</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You either draw or seathe a weapon, pick up an unattended item in your space or adjacent to it, or retrieve or stow an item.</text>
-            </section>
-            <section>
-               <name>Special:</name>
-               <name-style>bold</name-style>
-               <text>You can use this power only once per round.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Grit and Spittle</title>
-         <class>Endurance</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Drawing on pure stubberness, you're ready to see your way through disaster</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>You must have at least 1 healing surge remaining</text>
-            </section>
-            <section>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You spend a healing surge to make a saving throw against every effect on you that a save can end.</text>
-            </section>
-            <section>
-               <text>For each saving throw that fails, you regain hit points equal to one-half your level (minimum 1).</text>
-            </section>
-         </part>
-      </power>
-      
-      
       
       
       
