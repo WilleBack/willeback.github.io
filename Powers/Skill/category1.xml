@@ -361,6 +361,37 @@
       </power>
       
       <power>
+         <title>Otherworldly Lore</title>
+         <class>Dungeoneering</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Something about the aberrant horror's movement strikes a chord - you know just where to strike it</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Close</type>
+            <range>burst 5</range>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>One aberrant you can see in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You make a Dungeoneering monster knowledge check to determine the target's resistances, vulnerabilities and other weaknesses.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the check succeeds, you or one ally who can hear you gains a +2 power bonus to his or her first attack roll against the target. The power bonus increases to +4 if the attack trigger's the target's vulnerability or weakness. The attack must come before the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Stay Back</title>
          <class>Dungeoneering</class>
          <category>Utility</category>
@@ -395,6 +426,32 @@
    
    <category>
       <name>History</name>
+      
+      <power>
+         <title>Perfect Recall</title>
+         <class>History</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Your mind is a steel trap - nothing escapes it</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You would make an Intelligence check</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You use your History check modifier in place of your Intelligence check modifier for the triggering roll.</text>
+            </section>
+         </part>
+      </power>
       
       <power>
          <title>Root Understanding</title>
@@ -519,6 +576,45 @@
    </category>
    
    <category>
+      <name>Intimidate</name>
+      
+      <power>
+         <title>Ominous Threat</title>
+         <class>Intimidate</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>You draw your enemy's attention to rest squarely on you</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action>
+            <subaction>Reaction</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You hit an enemy with a melee attack</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>The enemy you hit</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You mark the target until the end of your next turn. If the target has marked you or one of your allies, you end the marked condition one one creature.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the target was already marked by you, you end all marked conditions imposed by it and it is unable to mark until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>Nature</name>
       <power>
          <title>Studied Ritualist</title>
@@ -571,6 +667,36 @@
                <name>Effect:</name>
                <name-style>bold</name-style>
                <text>You reroll the triggering check with a +2 power bonus to the roll. You must use the second roll.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Stealth</name>
+      
+      <power>
+         <title>Obscured Avoidance</title>
+         <class>Stealth</class>
+         <category>Utility</category>
+         <level>1</level>
+         <fluff>Although an enemy's attention is on you, its inability to see you clearly can keep you out of harm's way</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must be marked, and have concealment from the marking creature</text>
+            </section>
+            <section>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The marked condition on you ends.</text>
             </section>
          </part>
       </power>
@@ -1235,120 +1361,6 @@
                <name>Effect:</name>
                <name-style>bold</name-style>
                <text>You reroll the triggering check, using your Streetwise check modifier in place of your initiative check modifier, and can use either result as your roll.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Obscured Avoidance</title>
-         <class>Stealth</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Although an enemy's attention is on you, its inability to see you clearly can keep you out of harm's way</fluff>
-         <part>
-            <frequency>At-Will</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>You must be marked, and have concealment from the marking creature</text>
-            </section>
-            <section>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>The marked condition on you ends.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Ominous Threat</title>
-         <class>Intimidate</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>You draw your enemy's attention to rest squarely on you</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Reaction</subaction>
-            <type>Special</type>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You hit an enemy with a melee attack</text>
-            </section>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>The enemy you hit</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You mark the target until the end of your next turn. If the target has marked you or one of your allies, you end the marked condition one one creature.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>If the target was already marked by you, you end all marked conditions imposed by it and it is unable to mark until the end of your next turn.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Otherworldly Lore</title>
-         <class>Dungeoneering</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Something about the aberrant horror's movement strikes a chord - you know just where to strike it</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Close</type>
-            <range>burst 5</range>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>One aberrant you can see in the burst</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You make a Dungeoneering monster knowledge check to determine the target's resistances, vulnerabilities and other weaknesses.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>If the check succeeds, you or one ally who can hear you gains a +2 power bonus to his or her first attack roll against the target. The power bonus increases to +4 if the attack trigger's the target's vulnerability or weakness. The attack must come before the end of your next turn.</text>
-            </section>
-         </part>
-      </power>
-      <power>
-         <title>Perfect Recall</title>
-         <class>History</class>
-         <category>Utility</category>
-         <level>1</level>
-         <fluff>Your mind is a steel trap - nothing escapes it</fluff>
-         <part>
-            <frequency>At-Will</frequency>
-            <keyword>Skill</keyword>
-            <action>Free</action>
-            <subaction>Interrupt</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Trigger:</name>
-               <name-style>bold</name-style>
-               <text>You would make an Intelligence check</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You use your History check modifier in place of your Intelligence check modifier for the triggering roll.</text>
             </section>
          </part>
       </power>
