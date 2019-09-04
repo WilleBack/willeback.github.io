@@ -131,21 +131,25 @@
       
       <power>
          <title>Bounding Leap</title>
-         <class>Athletics</class>
-         <category>Utility</category>
-         <level>1</level>
+         <class>Athletics</class> <category>Utility</category> <level>1</level>
          <fluff>As you spring through the air, you tuck in your legs and arms, spinning to eke out a little extra distance</fluff>
          <part>
             <frequency>At-Will</frequency>
             <keyword>Skill</keyword>
-            <action>Move</action>
-            <subaction>Action</subaction>
+            <action>Free</action> <subaction>Interrupt</subaction>
             <type>Personal</type>
             <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You make an Athletics check to jump</text>
+            </section>
+            <section>
                <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>You make an Athletics check to jump. You are considered to have a running start, and the distance you jump can exceed your speed.</text>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>If you did not have a running start for the jump, you are considered to have a running start.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If you had a running start, you gain a +5 power bonus to the check and the distance you jump can exceed your speed.</text>
             </section>
          </part>
       </power>
