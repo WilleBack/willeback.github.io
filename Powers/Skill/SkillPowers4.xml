@@ -30,6 +30,23 @@
             </section>
          </part>
       </power>
+      
+      <power>
+         <title>Graceful Maneuver</title>
+         <class>Acrobatics</class> <category>Utility</category> <level>4</level>
+         <fluff>You dodge past your enemies with speed and grace</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Move</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You shift up to half your speed.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
@@ -524,6 +541,31 @@
             <section>
                <shade>true</shade>
                <text>You shift up to one-half your speed.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Guided Shot</title>
+         <class>Perception</class> <category>Utility</category> <level>4</level>
+         <fluff>You spot a critical weakness in a foe's defenses, which an ally can exploit to deadly effect</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Close</type> <range>burst 15</range>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An ally misses an attack against AC; The target of the attack must be within 10 squares of you</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering ally in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The triggering attack is resolved against Reflex instead of AC.</text>
             </section>
          </part>
       </power>
