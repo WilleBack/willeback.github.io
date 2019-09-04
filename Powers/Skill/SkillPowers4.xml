@@ -209,6 +209,35 @@
             </section>
          </part>
       </power>
+      
+      <power>
+         <title>Fault in the Memory</title>
+         <class>Bluff</class> <category>Utility</category> <level>4</level>
+         <fluff>You spin a web of lies that makes someone doubt his or her own recollection</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Extended</action> <subaction>Action</action>
+            <type>Special</type>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature that shares a language with you</text>
+            </section>
+            <section>
+               <name>Check:</name> <name-style>bold</name-style>
+               <text>Bluff vs. Insight</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <text>The target gains a +5 bonus if it is unfriendly towards you, or a +10 bonus if it is hostile towards you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Success:</name> <name-style>bold</name-style>
+               <text>You make the target doubt its memory of an event it remembered clearly, or to believe your version of an event it remembered vaguely.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
@@ -263,6 +292,43 @@
                <name>Effect:</name>
                <name-style>bold</name-style>
                <text>You gain blindsight 10 until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Heal</name>
+      
+      <power>
+         <title>Temporary Inoculation</title>
+         <class>Heal</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>Your ministrations briefly protect your patient from poison</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Melee</type>
+            <range>touch</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must have a healer's kit.</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target is immune to poison until the end of your next turn.</text>
             </section>
          </part>
       </power>
@@ -435,6 +501,35 @@
    </category>
    
    <category>
+      <name>Perception</name>
+      
+      <power>
+         <title>Foil Ambush</title>
+         <class>Perception</class> <category>Utility</category> <level>4</level>
+         <fluff>Something out of place alerts you to imminent danger, letting you foil an enemy's ambust</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Nonaction</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You are surprised while conscious</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You are not suprised, and are aware of the location of any enemy within 10 squares of you that is hidden.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You shift up to one-half your speed.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>Religion</name>
       <power>
          <title>Censure the Unholy</title>
@@ -576,37 +671,6 @@
       
       
       
-      <power>
-         <title>Temporary Inoculation</title>
-         <class>Heal</class>
-         <category>Utility</category>
-         <level>4</level>
-         <fluff>Your ministrations briefly protect your patient from poison</fluff>
-         <part>
-            <frequency>Encounter</frequency>
-            <keyword>Skill</keyword>
-            <action>Minor</action>
-            <subaction>Action</subaction>
-            <type>Melee</type>
-            <range>touch</range>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name>
-               <name-style>bold</name-style>
-               <text>You must have a healer's kit.</text>
-            </section>
-            <section>
-               <name>Target:</name>
-               <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name>
-               <name-style>bold</name-style>
-               <text>The target is immune to poison until the end of your next turn.</text>
-            </section>
-         </part>
-      </power>
+      
    </category>
 </catalog>
