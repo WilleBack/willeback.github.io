@@ -3,417 +3,531 @@
 <catalog>
    
    <category>
+      <name>Athletics</name>
+      
+      <power>
+         <title>Crushing Escape</title>
+         <class>Athletics</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You smash free from your enemy's grasp, sending it reeling and making it susceptible to your next attack</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Martial, Skill</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You make an escape attempt using Athletics</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You gain a +4 power bonus to the triggering check.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If you escape, and a creature was grabbing you, that creature gains vulnerable 5 to your attacks until the end of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the grabbing creature is your size of smaller, you can choose to push it 1 square instead of shifting yourself.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Bluff</name>
+      
+      <power>
+         <title>Conceal Psyche</title>
+         <class>Bluff</class> <category>Utility</category> <level>4</level>
+         <fluff>You hide the core of your identity deep in your subconscious</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You gain a +2 power bonus to Will, and a +4 power bonus to saving throws against Charm and Psychic effects.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>You can also use this power with the following trigger and effect:</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You start your turn and are dominated</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You make a saving throw against the dominating effect. If the effect normally allows a saving throw, you gain a +2 power bonus to this save.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Confusing Blather</title>
+         <class>Bluff</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You spew a stream of nonsense, leaving your enemies puzzled</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Close</type>
+            <range>burst 1</range>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>Each enemy in the burst</text>
+            </section>
+            <section>
+               <name>Check:</name>
+               <name-style>bold</name-style>
+               <text>Bluff vs. passive Insight</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Success:</name>
+               <name-style>bold</name-style>
+               <text>The target cannot make <![CDATA[<i>opportunity attacks</i>]]> against you until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Insight</name>
+      
+      <power>
+         <title>Conceal Psyche</title>
+         <class>Insight</class> <category>Utility</category> <level>4</level>
+         <fluff>You hide the core of your identity deep in your subconscious</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You gain a +2 power bonus to Will, and a +4 power bonus to saving throws against Charm and Psychic effects.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>You can also use this power with the following trigger and effect:</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You start your turn and are dominated</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You make a saving throw against the dominating effect. If the effect normally allows a saving throw, you gain a +2 power bonus to this save.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>Religion</name>
-
-   <power>
-      <title>Censure the Unholy</title>
-      <class>Religion</class> <category>Utility</category> <level>4</level>
-      <fluff>Brandishing a holy symbol, you drive undead away and bolster allies against them</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Aura, Skill</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
-         <section>
-            <shade>true</shade>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be wearing or holding a holy symbol, or another similar item.</text>
-         </section>
-         <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You activate an Aura 1 until the end of your next turn.</text>
-         </section>
-         <section>
-            <text>Allies in the zone gain a +2 power bonus to all defenses against undead creatures. Also, you can use the following action at-will:</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <name>Free Reaction:</name> <name-style>bold</name-style>
-            <text><![CDATA[<i>Trigger:</i>]]> An undead ends its turn in the aura; You push the triggering undead 1 square.</text>
-         </section>
-      </part>
-   </power>
+      <power>
+         <title>Censure the Unholy</title>
+         <class>Religion</class> <category>Utility</category> <level>4</level>
+         <fluff>Brandishing a holy symbol, you drive undead away and bolster allies against them</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Aura, Skill</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must be wearing or holding a holy symbol, or another similar item.</text>
+            </section>
+            <section>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You activate an Aura 1 until the end of your next turn.</text>
+            </section>
+            <section>
+               <text>Allies in the zone gain a +2 power bonus to all defenses against undead creatures. Also, you can use the following action at-will:</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Free Reaction:</name> <name-style>bold</name-style>
+               <text><![CDATA[<i>Trigger:</i>]]> An undead ends its turn in the aura; You push the triggering undead 1 square.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Stealth</name>
+      
+      <power>
+         <title>Concealed Shift</title>
+         <class>Stealth</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>Your enemy misjudges your position, giving you a chance to duck out of the way</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action>
+            <subaction>Reaction</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>An enemy misses you with a melee or ranged attack while you have concealment or cover from it</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You shift 1 square, or shift 2 squares to a space where you have total concealment or total cover against the triggering enemy.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
       <name>Streetwise</name>
-   
-   <power>
-      <title>City Dweller</title>
-      <class>Streetwise</class> <category>Utility</category> <level>4</level>
-      <fluff>Your familiarity with cities tells you what will support your weight and helps you perceive things that are out of place</fluff>
-      <part>
-         <frequency>Daily</frequency>
-         <keyword>Skill</keyword>
-         <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You would make an Acrobatics check, and Athletics check, or a Perception check in an urban environment</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You use your Streetwise check modifier in place of the triggering skill's check modifier.</text>
-         </section>
-      </part>
-   </power>
+      
+      <power>
+         <title>City Dweller</title>
+         <class>Streetwise</class> <category>Utility</category> <level>4</level>
+         <fluff>Your familiarity with cities tells you what will support your weight and helps you perceive things that are out of place</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You would make an Acrobatics check, and Athletics check, or a Perception check in an urban environment</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You use your Streetwise check modifier in place of the triggering skill's check modifier.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
       <name>The Rest</name>
-   
-   <power>
-      <title>Conceal Psyche</title>
-      <class>Bluff or Insight</class> <category>Utility</category> <level>4</level>
-      <fluff>You hide the core of your identity deep in your subconscious</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Skill</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You gain a +2 power bonus to Will, and a +4 power bonus to saving throws against Charm and Psychic effects.</text>
-         </section>
-         <section>
-            <name>Special:</name> <name-style>bold</name-style>
-            <text>You can also use this power with the following trigger and effect:</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You start your turn and are dominated</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You make a saving throw against the dominating effect. If the effect normally allows a saving throw, you gain a +2 power bonus to this save.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Concealed Shift</title>
-      <class>Stealth</class> <category>Utility</category> <level>4</level>
-      <fluff>Your enemy misjudges your position, giving you a chance to duck out of the way</fluff>
-      <part>
-         <frequency>At-Will</frequency>
-         <keyword>Skill</keyword>
-         <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An enemy misses you with a melee or ranged attack while you have concealment or cover from it</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You shift 1 square, or shift 2 squares to a space where you have total concealment or total cover against the triggering enemy.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Confusing Blather</title>
-      <class>Bluff</class> <category>Utility</category> <level>4</level>
-      <fluff>You spew a stream of nonsense, leaving your enemies puzzled</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Skill</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 1</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
-         <section>
-            <name>Check:</name> <name-style>bold</name-style>
-            <text>Bluff vs. passive Insight</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Success:</name> <name-style>bold</name-style>
-            <text>The target cannot make <![CDATA[<i>opportunity attacks</i>]]> against you until the end of your next turn.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Crushing Escape</title>
-      <class>Athletics</class> <category>Utility</category> <level>4</level>
-      <fluff>You smash free from your enemy's grasp, sending it reeling and making it susceptible to your next attack</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Martial, Skill</keyword>
-         <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You make an escape attempt using Athletics</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You gain a +4 power bonus to the triggering check.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>If you escape, and a creature was grabbing you, that creature gains vulnerable 5 to your attacks until the end of your next turn.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>If the grabbing creature is your size of smaller, you can choose to push it 1 square instead of shifting yourself.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Deliverance of Faith</title>
-      <class>Religion</class> <category>Utility</category> <level>4</level>
-      <fluff>You give yourself in the belief that somewhere, something will give a little back</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Divine, Skill</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You spend a healing surge to gain temporary hit points equal to your healing surge value.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Demonic Bargain</title>
-      <class>Arcana</class> <category>Utility</category> <level>4</level>
-      <fluff>You call on a demonic entity to wreak greater havoc, but tear a part of your mind in the process</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Arcane, Skill, Psychic</keyword>
-         <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Special</type>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You roll damage and dislike the result</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You reroll the triggering damage, and use the second result.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>After the triggering power has been resolved, you take psychic damage equal to twice the power's level. Any resist psychic you might have does not apply to this damage.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Demoralize Foe</title>
-      <class>Intimidate</class> <category>Utility</category> <level>4</level>
-      <fluff>You spit an ugly threat  at your adversary, making it think twice before it attacks you</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Fear, Skill</keyword>
-         <action>Free</action> <subaction>Reaction</subaction>
-         <type>Melee</type> <range>1</range>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You hit an adjacent enemy with an attack</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target takes a -2 penalty to attack rolls against you until the end of your next turn.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Dodge Step</title>
-      <class>Acrobatics</class> <category>Utility</category> <level>4</level>
-      <fluff>Relying on superior balance and agility, you move in the blink of an eye</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Skill</keyword>
-         <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An enemy ends a move adjacent to you</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You shift 1 square.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Empathic Read</title>
-      <class>Insight</class> <category>Utility</category> <level>4</level>
-      <fluff>You sense where the conversation is headed, and stop an ally from making a gaffe</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Skill</keyword>
-         <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 5</range>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An ally within 5 squares of you makes a Bluff check, a Diplomacy check, or an Intimidate check, and dislikes the result</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering ally</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target rerolls the triggering check and uses either result.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Experienced Arcana</title>
-      <class>Arcana</class> <category>Utility</category> <level>4</level>
-      <fluff>You have discovered how to perform your magic rituals with fewer alchemical reagents that other ritualists require</fluff>
-      <part>
-         <frequency>Daily</frequency>
-         <keyword>Skill</keyword>
-         <action>Part of Ritual</action>
-         <type>Personal</type>
-         <section>
-            <shade>true</shade>
-            <name>Prerequisite:</name> <name-style>bold</name-style>
-            <text>You must have the Ritual Caster feat.</text>
-         </section>
-         <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You use this power as part of casting an Arcana ritual of one-half your level or lower</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You need to expend only half of the ritual's gold piece component cost, though any focus item must still meet the minimum cost. If the ritual has a healing surge cost, you can choose to reduce that by 1 (to a minimum of 0) instead of halving the gold piece cost.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>If you make an Arcana check as part of the ritual and dislike the result, you can reroll the check with a +2 power bonus and use either result.</text>
-         </section>
-         <section>
-            <name>GM Note:</name> <name-style>italic</name-style>
-            <text>Still pondering if this should be allowed to be used with item creation rituals. Possibly going to push up the level and allow them.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Eyes of the Dark Delver</title>
-      <class>Dungeoneering or Stealth</class> <category>Utility</category> <level>4</level>
-      <fluff>Long hours of working in dimness allows you to focus your senses for a moment to see in utter darkness</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Skill</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You gain blindsight 10 until the end of your next turn.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Out of My Way</title>
-      <class>Intimidate</class> <category>Utility</category> <level>4</level>
-      <fluff>You inspire terror in your enemies</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Fear, Skill</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the blast</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You push each target 1 square, but not into hindering or damaging terrain.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Survivalist's Guidance</title>
-      <class>Dungeoneering or Nature</class> <category>Utility</category> <level>4</level>
-      <fluff>Your survival skills step in to support an ally</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Skill</keyword>
-         <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 10</range>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An ally within 10 squares of you makes an Acrobatics, Athletics, or Perception check; You must see the ally and the ally must be able to hear you</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <name>Dungeoneering:</name> <name-style>bold</name-style>
-            <text>The ally can also be making a Dungeoneering check; You must be in an underground environment.</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <name>Nature:</name> <name-style>bold</name-style>
-            <text>The ally can alse be making a Nature check; You must be in a natural environment.</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering ally</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target gains a +4 power bonus to the triggering check.</text>
-         </section>
-      </part>
-   </power>
-   
-   <power>
-      <title>Temporary Inoculation</title>
-      <class>Heal</class> <category>Utility</category> <level>4</level>
-      <fluff>Your ministrations briefly protect your patient from poison</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Skill</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <section>
-            <shade>true</shade>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must have a healer's kit.</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target is immune to poison until the end of your next turn.</text>
-         </section>
-      </part>
-   </power>
+      
+      
+      <power>
+         <title>Deliverance of Faith</title>
+         <class>Religion</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You give yourself in the belief that somewhere, something will give a little back</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You spend a healing surge to gain temporary hit points equal to your healing surge value.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Demonic Bargain</title>
+         <class>Arcana</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You call on a demonic entity to wreak greater havoc, but tear a part of your mind in the process</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Arcane, Skill, Psychic</keyword>
+            <action>Free</action>
+            <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You roll damage and dislike the result</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You reroll the triggering damage, and use the second result.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>After the triggering power has been resolved, you take psychic damage equal to twice the power's level. Any resist psychic you might have does not apply to this damage.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Demoralize Foe</title>
+         <class>Intimidate</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You spit an ugly threat  at your adversary, making it think twice before it attacks you</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Fear, Skill</keyword>
+            <action>Free</action>
+            <subaction>Reaction</subaction>
+            <type>Melee</type>
+            <range>1</range>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>You hit an adjacent enemy with an attack</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>The triggering enemy</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target takes a -2 penalty to attack rolls against you until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Dodge Step</title>
+         <class>Acrobatics</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>Relying on superior balance and agility, you move in the blink of an eye</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action>
+            <subaction>Reaction</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>An enemy ends a move adjacent to you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You shift 1 square.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Empathic Read</title>
+         <class>Insight</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You sense where the conversation is headed, and stop an ally from making a gaffe</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action>
+            <subaction>Interrupt</subaction>
+            <type>Close</type>
+            <range>burst 5</range>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>An ally within 5 squares of you makes a Bluff check, a Diplomacy check, or an Intimidate check, and dislikes the result</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>The triggering ally</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target rerolls the triggering check and uses either result.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Experienced Arcana</title>
+         <class>Arcana</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You have discovered how to perform your magic rituals with fewer alchemical reagents that other ritualists require</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Part of Ritual</action>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Prerequisite:</name>
+               <name-style>bold</name-style>
+               <text>You must have the Ritual Caster feat.</text>
+            </section>
+            <section>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You use this power as part of casting an Arcana ritual of one-half your level or lower</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You need to expend only half of the ritual's gold piece component cost, though any focus item must still meet the minimum cost. If the ritual has a healing surge cost, you can choose to reduce that by 1 (to a minimum of 0) instead of halving the gold piece cost.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If you make an Arcana check as part of the ritual and dislike the result, you can reroll the check with a +2 power bonus and use either result.</text>
+            </section>
+            <section>
+               <name>GM Note:</name>
+               <name-style>italic</name-style>
+               <text>Still pondering if this should be allowed to be used with item creation rituals. Possibly going to push up the level and allow them.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Eyes of the Dark Delver</title>
+         <class>Dungeoneering or Stealth</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>Long hours of working in dimness allows you to focus your senses for a moment to see in utter darkness</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You gain blindsight 10 until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Out of My Way</title>
+         <class>Intimidate</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>You inspire terror in your enemies</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Fear, Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Close</type>
+            <range>blast 3</range>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>Each enemy in the blast</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>You push each target 1 square, but not into hindering or damaging terrain.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Survivalist's Guidance</title>
+         <class>Dungeoneering or Nature</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>Your survival skills step in to support an ally</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action>
+            <subaction>Interrupt</subaction>
+            <type>Close</type>
+            <range>burst 10</range>
+            <section>
+               <name>Trigger:</name>
+               <name-style>bold</name-style>
+               <text>An ally within 10 squares of you makes an Acrobatics, Athletics, or Perception check; You must see the ally and the ally must be able to hear you</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Dungeoneering:</name>
+               <name-style>bold</name-style>
+               <text>The ally can also be making a Dungeoneering check; You must be in an underground environment.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Nature:</name>
+               <name-style>bold</name-style>
+               <text>The ally can alse be making a Nature check; You must be in a natural environment.</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>The triggering ally</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target gains a +4 power bonus to the triggering check.</text>
+            </section>
+         </part>
+      </power>
+      <power>
+         <title>Temporary Inoculation</title>
+         <class>Heal</class>
+         <category>Utility</category>
+         <level>4</level>
+         <fluff>Your ministrations briefly protect your patient from poison</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action>
+            <subaction>Action</subaction>
+            <type>Melee</type>
+            <range>touch</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name>
+               <name-style>bold</name-style>
+               <text>You must have a healer's kit.</text>
+            </section>
+            <section>
+               <name>Target:</name>
+               <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name>
+               <name-style>bold</name-style>
+               <text>The target is immune to poison until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
    </category>
-   
 </catalog>
