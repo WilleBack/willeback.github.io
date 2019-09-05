@@ -440,6 +440,27 @@
             </section>
          </part>
       </power>
+      
+      <power>
+         <title>Stirring Speech</title>
+         <class>Diplomacy</class> <category>Utility</category> <level>4</level>
+         <fluff>Reciting your allies' great deeds and talents, you fill them with the confidence they need to win a battle ahead</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Short</action> <subaction>Rest</subaction>
+            <type>Special</type>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>Each ally who listens to you during the rest</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Until the end of the next encounter, each target gains a +1 bonus to attack rolls and saving throws while he or she is not bloodied.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
@@ -500,7 +521,7 @@
       
       <power>
          <title>Peer Through the Void</title>
-         <class>Arcana</class> <category>Utility</category> <level>4</level>
+         <class>Dungeoneering</class> <category>Utility</category> <level>4</level>
          <fluff>You part the veil between worlds, seeing creatures from the Far Realm as they really are</fluff>
          <part>
             <frequency>Encounter</frequency>
@@ -1109,6 +1130,32 @@
       </power>
       
       <power>
+         <title>Crowd Cover</title>
+         <class>Stealth</class> <category>Utility</category> <level>4</level>
+         <fluff>You keep your enemies between you and their companion, using them as a shield</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy makes a ranged attack roll against you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Until the end of the triggering enemy's turn, enemies adjacent to you and in the way of the triggering creature's ranged attacks grant cover to you against those attacks.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the triggering enemy's ranged attack misses, it must immediately reroll the attack against one enemy that granted cover to you against it.</text>
+            </section>
+         </part>
+      </power>
+               
+      
+      <power>
          <title>Eyes of the Dark Delver</title>
          <class>Stealth</class>
          <category>Utility</category>
@@ -1150,6 +1197,57 @@
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You use your Streetwise check modifier in place of the triggering skill's check modifier.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Crowd Cover</title>
+         <class>Streetwise</class> <category>Utility</category> <level>4</level>
+         <fluff>You keep your enemies between you and their companion, using them as a shield</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy makes a ranged attack roll against you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Until the end of the triggering enemy's turn, enemies adjacent to you and in the way of the triggering creature's ranged attacks grant cover to you against those attacks.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the triggering enemy's ranged attack misses, it must immediately reroll the attack against one enemy that granted cover to you against it.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Slow Pursuit</title>
+         <class>Streetwise</class> <category>Utility</category> <level>4</level>
+         <fluff>You knock over obstacles, take difficult paths, drop rubbish, and do anything else you can think of to slow your enemies' pursuit</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Move</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must be in an urban environment.</text>
+            </section>
+            <section>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You move your speed. At any point during the movement, you create an area of difficult terrain in a close blast 3. The difficult terrain lasts until the end of the encounter.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>You can use this power as part of a skill challenge to escape pursuers. If you do, you gain an automatic success, and give the next ally to make a check a +2 bonus to his or her check.</text>
             </section>
          </part>
       </power>
