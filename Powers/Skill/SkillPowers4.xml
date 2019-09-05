@@ -258,6 +258,31 @@
    </category>
    
    <category>
+      <name>Diplomacy</name>
+      
+      <power>
+         <title>Haggle</title>
+         <class>Diplomacy</class> <category>Utility</category> <level>4</level>
+         <fluff>You are a practiced haggler, often able to bring down the price on what you're buying</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Skill</keyword>
+            <action>Extended</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You use this power as part of buying a common or uncommon item of your level or lower.</text>
+            </section>
+            <section>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You get a 10% discount on the item's price if it is common, or a 5% discount if it is uncommon.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>Dungeoneering</name>
       
       <power>
@@ -346,6 +371,35 @@
                <name>Effect:</name>
                <name-style>bold</name-style>
                <text>The target is immune to poison until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>History</name>
+      
+      <power>
+         <title>Historical Revelation</title>
+         <class>History</class> <category>Utility</category> <level>4</level>
+         <fluff>When an ally struggles to recall an important fact, you supply a story to nudge him or her onto the right path</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Reaction</subaction>
+            <type>Close</type> <range>burst 5</range>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An ally within 5 squares of you makes a knowledge check and dislikes the result</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering ally in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target rerolls the triggering knowledge check and uses either result.</text>
             </section>
          </part>
       </power>
@@ -699,4 +753,30 @@
          </part>
       </power>
    </category>
+   
+   <category>
+      <name>Thievery</name>
+      
+      <power>
+         <title>Hasty Retreat</title>
+         <class>Thievery</class> <category>Utility</category> <level>4</level>
+         <fluff>It dawns on you as you botch the job that now might be a good time to make a swift exit</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>Your disarm attempt triggers a trap</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You shift a number of squares equal to one-half your Dexterity modifier.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
 </catalog>
