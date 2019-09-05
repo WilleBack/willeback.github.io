@@ -114,7 +114,7 @@
             <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
-               <text>An enemy targets you with an attack</text>
+               <text>An enemy targets you with a ranged, area or close attack</text>
             </section>
             <section>
                <shade>true</shade>
@@ -124,6 +124,31 @@
             <section>
                <shade>true</shade>
                <text>If the triggering attack only targeted you, the triggering enemy can choose a new target for the attack if you are now out of range.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Tumbling Dodge</title>
+         <class>Acrobatics</class> <category>Utility</category> <level>4</level>
+         <fluff>You deftly tumble away from a strike</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>A melee attack hits you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You make an Acrobatics check, and gain a bonus to all defenses against the triggering attack equal to the check result divided by 10 (rounded down, minimum +1).</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the triggering attack misses you, you can shift 1 square, or shift 2 squares to a space that is not within the attacker's reach.</text>
             </section>
          </part>
       </power>
@@ -248,6 +273,31 @@
             <section>
                <name>Special:</name> <name-style>bold</name-style>
                <text>You can end this stance as a free action on your turn, but not on the same turn you entered it.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Warp in the Weave</title>
+         <class>Arcana</class> <category>Utility</category> <level>4</level>
+         <fluff>You spend energy and tap into the web of magic that connects everything, ready to create a hole</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Arcane, Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>A creature uses a burst or blast power that includes you in the area</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You spend a healing surge to create a hole in the triggering power. The hole causes the triggering power to not target you or your space.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You can spend two additional surges to increase the size of the hole, making the triggering power also not target squares adjacent to you and any creatures whose space fits into those squares.</text>
             </section>
          </part>
       </power>
@@ -678,6 +728,27 @@
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You regain the use of your <![CDATA[<i>second wind</i>]]>.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Walk It Off</title>
+         <class>Endurance</class> <category>Utility</category> <level>4</level>
+         <fluff>You take a deep breath to fight off a lingering wound</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>Your turn starts and you have ongoing damage</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You make a saving throw against the ongoing damage before you take the damage. If you are suffering from several types of ongoing damage, make a saving throw against each.</text>
             </section>
          </part>
       </power>
