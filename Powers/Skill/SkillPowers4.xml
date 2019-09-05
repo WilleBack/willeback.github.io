@@ -319,6 +319,27 @@
             </section>
          </part>
       </power>
+      
+      <power>
+         <title>Sudden Leap</title>
+         <class>Athletics</class> <category>Utility</category> <level>4</level>
+         <fluff>You spring so quickly that an enemy has trouble following your movement</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Choose an enemy you can see, then make an Athletics check to long jump. You can never be consired to have a running start for this jump.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If your Athletics check result is equal to or higher than the chosen enemy's passive Perception, it cannot trigger actions based on this movement.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
@@ -564,6 +585,27 @@
             </section>
          </part>
       </power>
+      
+      <power>
+         <title>Stonecunning</title>
+         <class>Dungeoneering</class> <category>Utility</category> <level>4</level>
+         <fluff>The subterranean world keeps few secrets from you</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You make a Perception check underground</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You use your Dungeoneering check modifier in place of your Perception check modifier for the triggering check.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
@@ -599,6 +641,32 @@
       <name>Heal</name>
       
       <power>
+         <title>Physician's Care</title>
+         <class>Heal</class> <category>Utility</category> <level>4</level>
+         <fluff>Your extensive training helps you get an ally back into fighting shape</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Healing, Skill</keyword>
+            <action>Short</action> <subaction>Rest</subaction>
+            <type>Melee</type> <range>touch</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must have a healer's kit.</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>You or one ally; The target must spend at least 2 healing surges during the rest</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target regains one healing surge.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
          <title>Temporary Inoculation</title>
          <class>Heal</class>
          <category>Utility</category>
@@ -632,13 +700,13 @@
       </power>
       
       <power>
-         <title>Physician's Care</title>
+         <title>Swift Recovery</title>
          <class>Heal</class> <category>Utility</category> <level>4</level>
-         <fluff>Your extensive training helps you get an ally back into fighting shape</fluff>
+         <fluff>You address a companion's most critical wounds to get his or her fighting spirit back</fluff>
          <part>
-            <frequency>Daily</frequency>
+            <frequency>Encounter</frequency>
             <keyword>Healing, Skill</keyword>
-            <action>Short</action> <subaction>Rest</subaction>
+            <action>Minor</action> <subaction>Action</subaction>
             <type>Melee</type> <range>touch</range>
             <section>
                <shade>true</shade>
@@ -647,12 +715,12 @@
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>You or one ally; The target must spend at least 2 healing surges during the rest</text>
+               <text>One ally</text>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>The target regains one healing surge.</text>
+               <text>The target uses his or her <![CDATA[<i>second wind</i>]]> without spending an action.</text>
             </section>
          </part>
       </power>
