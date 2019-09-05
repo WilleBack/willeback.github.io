@@ -233,7 +233,7 @@
          <fluff>You part the veil between worlds, seeing creatures from the Far Realm as they really are</fluff>
          <part>
             <frequency>Encounter</frequency>
-            <keyword>Psionic, Stance</keyword>
+            <keyword>Psionic, Skill, Stance</keyword>
             <action>Minor</action> <subaction>Action</subaction>
             <type>Personal</type>
             <section>
@@ -571,7 +571,7 @@
          <fluff>You part the veil between worlds, seeing creatures from the Far Realm as they really are</fluff>
          <part>
             <frequency>Encounter</frequency>
-            <keyword>Psionic, Stance</keyword>
+            <keyword>Psionic, Skill, Stance</keyword>
             <action>Minor</action> <subaction>Action</subaction>
             <type>Personal</type>
             <section>
@@ -1014,6 +1014,27 @@
             </section>
          </part>
       </power>
+      
+      <power>
+         <title>Try the Stick</title>
+         <class>Intimidate</class> <category>Utility</category>
+         <fluff>Why waste time with diplomacy when threats can get to the heart of the matter</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You make a Diplomacy check and dislike the result</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You discard your Diplomacy check and make an Intimidate check instead.</text>
+            </section>
+         </part>
+      </power>
    </category>
    
    <category>
@@ -1156,6 +1177,31 @@
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The triggering attack is resolved against Reflex instead of AC.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Trap Sense</title>
+         <class>Perception</class> <category>Utility</category> <level>4</level>
+         <fluff>The hair in the back of your neck stands up, alerting you to a trap or hazard that was sprung</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>A trap or hazard makes an attack roll against you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You gain a +4 power bonus to all defenses against the triggering attack.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the triggering attack misses you, you can shift up to one-half your speed before resolving any effects from the miss.</text>
             </section>
          </part>
       </power>
