@@ -1075,4 +1075,74 @@
       </part>
    </power>
    
+   <power>
+      <title>Well of Shadows</title>
+      <class>Warlock</class> <category>Attack</category> <level>5</level>
+      <fluff>A pool of darkness forms on the ground, clinging to your enemies like something alive as they struggle to escape</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Implement, Necrotic, Zone</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Charisma vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d10 + Charisma modifier necrotic damage, and the target is slowed (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage, and the target is slowed until the end of its next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The burst creates a zone of pooling shadows until the end of the encounter.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While the zone remains, you can use the Clinging Shadows attack at-will, using any square in the zone as the point of origin.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Clinging Shadows</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Arcane, Implement, Necrotic</keyword>
+         <action>Opportunity</action> <subaction>Interrupt</subaction>
+         <type>Close</type> <range>burst 1</range>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>An enemy enters the zone or ends its turn there</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The triggering enemy</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Charisma vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>4 + Charisma modifier + your implement's enhancement bonus necrotic damage, and the target is slowed (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If the target is already slowed, shadows clingly tightly to it (save ends) instead.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While the shadows cling to it, the target is immobilized and takes ongoing 10 necrotic damage.</text>
+         </section>
+      </part>
+   </power>
+   
 </catalog>
