@@ -267,5 +267,67 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Grasp of the Grave</title>
+      <class>Wizard</class> <category>Attack</category> <level>5</level>
+      <fluff>Skeletal hands burst from the earth and ghostly claws swirl from the air to snatch at your foes</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Implement, Necromancy, Necrotic, Zone</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 2 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d6 + Intelligence modifier necrotic damage, and the target is dazed until the end of your next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The burst creates a zone of grasping hands and claws that lasts until the end of the encounter.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>An enemy that enters the zone or ends its turn there takes necrotic damage equal to 2 + your Wisdom modifier + your implement's enhancement bonus. Any enemy can take this damage only once per turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While the zone remains, you can use the Gravely Grasp attack at-will, using any square in the zone as the point of origin.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Gravely Grasp</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Arcane, Implement, Necromancy</keyword>
+         <action>Opportunity</action> <subaction>Reaction</subaction>
+         <type>Melee</type> <range>1</range>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>An enemy either falls prone in the zone, or starts and ends its turn in the zone</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The triggering enemy</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The target is immobilized (save ends). If the target is prone, must roll twice and use the lower result when saving against this effect.</text>
+         </section>
+      </part>
+   </power>
           
 </catalog>
