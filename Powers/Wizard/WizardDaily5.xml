@@ -69,7 +69,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You conjure a 5-foot-tall hand of ice in an unoccupied square within range. The hand lasts until the end of your next turn.</text>
+            <text>You conjure a 5-foot-tall hand of ice in an unoccupied square within range. The hand occupies its square and lasts until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -78,11 +78,12 @@
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Move Action:</name> <name-style>bold</name-style>
-            <text>You move the hand up to 6 squares.</text>
+            <text>You move the hand up to 6 squares, or up to 2 squares if it is currently grabbing a creature. For each square you move the hand, you slide the grabbed creature 1 square to a square adjacent to the hand.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Free Action:</name> <name-style>bold</name-style>
+            <text>The hand releases a creature is it currently grabbing.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -110,7 +111,16 @@
          </section>
          <section>
             <indent>1</indent>
-            <text>If the hand is currently grabbing a creature, you must attack</text>
+            <text>If the hand is currently grabbing a creature, you must attack that creature and the attack is against Fortitude instead</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d8 + Intelligence modifier cold damage, and the hand grabs the target (until escape).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The hand uses your Reflex, or your Fortitude +2 if the target attempts to escape.</text>
          </section>
       </part>
    </power>
