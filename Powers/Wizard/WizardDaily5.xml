@@ -329,5 +329,63 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Ice Knife</title>
+      <class>Wizard</class> <category>Attack</category> <level>5</level>
+      <fluff>Hurling a blade of ice against your foe causes the ice to explode into jagged shards that tear through anything they hit</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Cold, Evocation, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>7/15</range>
+         <section>
+            <name>Primary Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d6 + Intelligence modifier cold damage, and the primary target is immobilized (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage, and the target is slowed (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You make the Secondary Attack.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Secondary Attack</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Arcane, Cold, Evocation, Implement</keyword>
+         <action>Nonaction</action>
+         <type>Area</type> <range>burst 2 centered on the primary target</range>
+         <section>
+            <name>Secondary Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst</text>
+         </section>
+         <section>
+            <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d6 + Intelligence modifier cold damage, and the target is numb from cold (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While numb, the target takes a -2 penalty to AC and Reflex.</text>
+         </section>
+      </part>
+   </power>
           
 </catalog>
