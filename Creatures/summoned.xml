@@ -2,6 +2,78 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Abyssal Maw</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
+      
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod><![CDATA[+2 <i>Fortitude</i>]]></defmod>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Snapping Jaws</name> <type>aura</type>
+            <frequency>Aura</frequency> <note>1</note>
+            <line>Enemies grant combat advantage while in the aura.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +3 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + Intelligence modifier damage. On a critical hit, the target grants combat advantage until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+         
+         <block>
+            <name>Opportunity Interrupt</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> A creature adjacent to the abyssal maw provokes an <![CDATA[<i>opportunity attack</i>]]></line>
+            <line><![CDATA[<i>Effect:</i>]]> The abyssal maw makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as an <i>opportunity attack</i>]]>.</line>
+         </block>
+         
+         <block>
+            <name>Immediate Reaction</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> A creature adjacent to the abyssal maw makes an attack that doesn't target it</line>
+            <line><![CDATA[<i>Effect:</i>]]> The abyssal maw makes its <![CDATA[<i>melee basic attack</i> against the triggering creature.]]></line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the abyssal maw any commands by the end of your turn, its aura affects all creatures and it attacks an adjacent creature. If it can't do that, it moves its speed towards the nearest creature.</line>
+            <line>If the abyssal maw cannot attack or move adjacent to an enemy, enemies gain a +2 bonus to triggered attack rolls against  you until the start of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You deal +1d6 additional damage with melee and ranged attacks against enemies in the abyssal maw's aura.</line>
+         </block>
+      </category>
+      
+      <alignment>chaotic evil</alignment>
+      <language>understands Abyssal</language>
+      <source>Summon Abyssal Maw (Wizard Daily Attack 5)</source>
+   </creature>
+   
+   <creature>
       <title>Dretch</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>elemental</origin> <type>humanoid</type>
@@ -111,8 +183,8 @@
          
          <block>
             <name>Instinctive Action</name>
-            <line>If you haven't given the dust devil any commands by the end of your turn, it attacks an adjacent creature. If it can't do that, it moves its speed adjacent to the creatures furthest away from it that it can reach.</line>
-            <line>If the fire warrior cannot attack or move adjacent to an enemy, you fall prone.</line>
+            <line>If you haven't given the dust devil any commands by the end of your turn, it attacks an adjacent creature. If it can't do that, it moves its speed adjacent to the creature furthest away from it that it can reach.</line>
+            <line>If the dust devil cannot attack or move adjacent to an enemy, you fall prone.</line>
          </block>
          
          <block>
