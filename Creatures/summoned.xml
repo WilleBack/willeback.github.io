@@ -258,6 +258,64 @@
    </creature>
    
    <creature>
+      <title>Imp</title>
+      <role>Summoned creature</role>
+      <size>Small</size> <origin>immortal</origin> <type>humanoid</type> <subtype>devil</subtype>
+      
+      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>4</speed> <fly>6 (hover)</fly>
+      
+      <resist>
+         <type>fire</type> <value>5</value>
+      </resist>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>melee</type>
+            <keyword>Illusion</keyword> <keyword>Poison</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +2 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + Intelligence modifier damage, and the target takes ongoing 5 poison damage (save ends). The imp becomes invisible invisible until the start of your next turn, or the end of your next turn on a critical hit.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <keyword>Illusion</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The imp becomes invisible until the end of your next turn or until it has made an attack, whichever comes first.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category>
+         
+         <block>
+            <name>Intrinsic Nature</name>
+            <line>If you haven't given the imp any commands by the end of your turn, it attacks an enemy that grants it combat advantage. If it can't do that, it turns invisible until the start of your next turn and moves its speed to a square adjacent to an enemy.</line>
+            <line>You grant combat advantage to all enemies until the start of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You deal an additional +1d6 poison damage with attacks when your target grants you combat advantage.</line>
+         </block>
+      </category>
+      
+      <alignment>evil</alignment> <language>Common</language> <language>Supernal</language>
+      <source>Summon Imp (Wizard Daily 5)</source>
+   </creature>
+   
+   <creature>
       <title>Shadow Serpent</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>shadow</origin> <type>beast</type>
