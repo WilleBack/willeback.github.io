@@ -509,4 +509,68 @@
       <source>Summon Shadow Serpent (Wizard Utility 2)</source>
    </creature>
    
+   <creature>
+      <title>Shadow Wraith</title>
+      <role>Summoned creature</role>
+      <size>Nedium</size> <origin>shadow</origin> <type>humanoid</type> <subtype>undead</subtype>
+      
+      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>6</speed> <fly>6 (hover)</fly>
+      <speedmod>phasing</speedmod>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Insubstantial</name>
+            <line>The shadow wraith takes half damage from damage any source, except those that deal radiant damage.</line>
+         </block>
+         
+         <block>
+            <name>Fateful Death</name> <type>aura</type>
+            <frequency>Aura</frequency> <note>2</note>
+            <line>Bloodied enemies grant combat advantage while in the aura.</line>
+            <line>If an enemy drops to 0 hit points or less in the aura, it dies and the wraith gains temporary hit points equal to 3 + your Wisdom modifier.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <keyword>Necrotic</keyword> <keyword>Shadow</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + Intelligence modifier necrotic damage, and the target is weakened until the start of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you have not given the shadow wraith any commands by the end of your turn, it attacks a bloodied enemy adjacent to it. Otherwise it moves its speed towards you.</line>
+            <line>If the wraith does not attack any creature, you are weakened until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>When an enemy ends its turn adjacent to you and within the wraith's aura, you can use an opportunity reaction to deal necrotic damage to it. The damage equals 5 + your Wisdom modifier.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment> <language>Common</language>
+      <source>Summon Shadow Wraith (Wizard Daily 5)</source>
+   </creature>
+   
 </catalog>
