@@ -316,6 +316,72 @@
    </creature>
    
    <creature>
+      <title>Magma Beast</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>elemental</origin> <type>magical beast</type> <subtype>earth</subtype> <subtype>fire</subtype>
+      
+      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+2 <![CDATA[<i>Fort</i>]]></defmod>
+      <speed>4</speed>
+      <speedmod>+4 speed when charging</speedmod>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Obsidian Crust</name>
+            <line>When the magma beast takes cold damage, it is slowed until the end of its next turn and doesn't benefit from its bonus to speed when charging.</line>
+            <line>The magma beast automatically ends any slowing or immobilizing conditions on itself if an effect would deal fire damage to it, even if the damage is reduced to 0 by its resistance.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <keyword>Fire</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d10 + Intelligence modifier fire damage, and the target is covered with magma (save ends).</line>
+            <line>While covered, the target takes ongoing 5 fire damage and is slowed.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name>
+            <frequency>At-Will</frequency>
+            <line>The magma beast charges the closest enemy.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Intrinsic Nature</name>
+            <line>If you haven't given the magma beast any commands by the end of your turn, it attacks an adjacent creature or charges the nearest creature it can charge. Otherwise it moves its speed toward the nearest enemy.</line>
+            <line>If the magma beast couldn't attack or charge, you are slowed until the end of your turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>When you step, you can shift 2 squares instead of 1 square.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment> <language>Primordial</language>
+      <source>Summon Magma Beast (Wizard Daily 5)</source>
+   </creature>
+   
+   <creature>
       <title>Shadow Serpent</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>shadow</origin> <type>beast</type>
