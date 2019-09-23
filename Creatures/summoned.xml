@@ -217,7 +217,7 @@
          
          <block>
             <name>Standard Action</name> <type>mbasic</type>
-            <keyword>Weapon</keyword>
+            <keyword>Fire</keyword> <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +2 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d10 + Intelligence modifier fire damage.</line>
@@ -231,7 +231,7 @@
          
          <block>
             <name>Opportunity Interrupt</name>
-            <keyword>Weapon</keyword>
+            <keyword>Fire</keyword> <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Trigger:</i>]]> A creature adjacent to the fire warrior provokes an <![CDATA[<i>opportunity attack</i>]]></line>
             <line><![CDATA[<i>Effect:</i>]]> The fire warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as an <i>opportunity attack</i>]]>.</line>
@@ -379,6 +379,79 @@
       
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Magma Beast (Wizard Daily 5)</source>
+   </creature>
+   
+   <creature>
+      <title>Shadow Beast</title>
+      <role>Summoned creatures</role>
+      <size>Medium</size> <origin>shadow</origin> <type>beast</type>
+      
+      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>6</speed>
+      <speedmod>+2 speed while charging</speedmod> <speedmod>phasing</speedmod>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Insubstantial</name>
+            <line>The shadow beast takes half damage from any damage source, except those that deal radiant damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <keyword>Fear</keyword> <keyword>Necrotic</keyword> <keyword>Shadow</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 2 (one creature); Intelligence vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + Intelligence modifier necrotic damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The target takes a -2 penalty to attack rolls until the end of its next turn.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The shadow beast charges a bloodied enemy.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+         
+         <block>
+            <name>Immediate Reaction</name> <type>close</type>
+            <keyword>Shadow</keyword> <keyword>Zone</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> The beast takes damage</line>
+            <line><![CDATA[<i>Effect:</i>]]> The beast creates a zone of shadows in a close burst 1.</line>
+            <line>The zone is heavily obscured for creatures other than the beast and you.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the shadow beast any commands by the end of your turn, it attacks a bloodied creature in its reach, or any creature in its reach if no bloodied creature is within its reach. Otherwise it moves its speed towards the nearest creature.</line>
+            <line>If the shadow does does not attack any creature, all creatures have concealment from you until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>On your turn, if you move at least 3 squares away from where you started your turn, you gain concealment until the end of your next turn.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment> <language>-</language>
+      <source>Summon Shadow Beast (Wizard Daily 5)</source>
    </creature>
    
    <creature>
