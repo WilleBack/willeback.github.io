@@ -574,6 +574,69 @@
    </creature>
    
    <creature>
+      <title>Shambling Cadaver</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>undead</subtype>
+      
+      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+2 <![CDATA[<i>Fort</i>]]></defmod>
+      <speed>4</speed>
+      
+      <immune>disease</immune> <immune>poison</immune>
+      <resist>
+         <type>necrotic</type> <value>5</value>
+      </resist>
+      <vulnerable>
+         <type>radiant</type> <value>5</value>
+      </vulnerable>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Reflex</line>
+            <line>If the shambling cadaver is already grabbing a creature, it must target that creature and makes the attack against Fortitude instead</line>
+            <line><![CDATA[<i>Hit:</i>]]>1d8 + Intelligence modifier damage, and the target is grabbed by the cadaver until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Requirement:</i>]]> The shambling cadaver has a creature grabbed.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The grab persists until the end of your next turn, and the cadaver gains a +2 bonus to all defenses against escape attempts. If the grabbed creature is bloodied, the cadaver deals damage to it equal to your Wisdom modifier + your implement's enhancement bonus.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you have not given the shambling cadaver any commands by the end of your turn, it sustains a grab it has already made until the end of your next turn, or attacks an adjacent grabbed creature. Otherwise it moves its speed towards the nearest grabbed creature.</line>
+            <line>If the if the cadaver was not grabbing a creature, you are slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You deal additional damage against grabbed targets equal to the number of shambling cadavers you currently have summoned.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment> <language>-</language>
+      <source>Summon Shambling Cadavers (Wizard Daily 1)</source>
+   </creature>
+   
+   <creature>
       <title>Skeletal Warrior</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>humanoid</type> <subtype>undead</subtype>
