@@ -577,6 +577,62 @@
       <title>Skeletal Warrior</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>humanoid</type> <subtype>undead</subtype>
+      
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+2 <![CDATA[<i>AC</i>]]></defmod>
+      <speed>6</speed>
+      
+      <immune>disease</immune> <immune>poison</immune>
+      <resist>
+         <type>necrotic</type> <value>10</value>
+      </resist>
+      <vulnerable>
+         <type>radiant</type> <value>5</value>
+      </vulnerable>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +3 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + Intelligence modifier damage, and the target cannot shift until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+         
+         <block>
+            <name>Opportunity Interrupt</name>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i> An enemy adjacent to the skeletal warrior provokes an <i>opportunity attack</i>]]></line>
+            <line><![CDATA[<i>Effect:</i>]]> The skeletal warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature, and has a +2 bonus to the attack roll and deals an additional +1d6 damage. This counts as an <i>opportunity attack</i>]]>.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you have not given the skeletal warrior any commands by the end of your turn, it attacks an enemy adjacent to it, or any creature adjacent to it if no enemy is adjacent. Otherwise it moves its speed towards the nearest creature.</line>
+            <line>If you did not give the it commands, until the start of your next turn, the skeletal warrior uses its triggered action against your allies unless you use an opportunity interrupt to stop it each time.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +2 bonus to attack rolls with <![CDATA[<i>opportunity attacks</i>]]>.</line>
+         </block>
+      </category>
+      
    </creature>
    
 </catalog>
