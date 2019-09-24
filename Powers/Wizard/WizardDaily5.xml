@@ -773,5 +773,73 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Visions of Avarice</title>
+      <class>Wizard</class> <category>Attack</category> <level>5</level>
+      <fluff>The illusion of fabulous treasure appears out of thin air, causing your enemies to throw aside caution to seize it</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Illusion, Implement, Zone</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 4 within 10 squares</range>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You create zone of illusory treasures in the center square and squares adjacent to it until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>When an enemy ends a movement in the zone, it must succeed into a saving throw or become immobilized (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Sustain Minor:</name> <name-style>bold</name-style>
+            <text>The zone persists until the end of your next turn, and you make the Pull of Greed attack, using the zone's center square as the point of origin.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>You pull the target 4 squares towards the center square. If the target ends this forced movement in the zone, it is immobilized (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You pull the target half the distance towards the center square.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Pull of Greed</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Arcane, Illusion, Implement</keyword>
+         <action>Nonaction</action>
+         <type>Close</type> <range>burst 4</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>You pull the target 4 squares.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Critical:</name> <name-style>bold</name-style>
+            <text>If the target ends this forced movement in the zone, it is immobilized (save ends).</text>
+         </section>
+      </part>
+   </power>
           
 </catalog>
