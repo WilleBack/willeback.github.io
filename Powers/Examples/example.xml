@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../categories.xsl"?>
+<catalog>
+   
+   <power>
+      <title>Dragon's Tail</title>
+      <class>Monk</class> <category>Attack</category> <level>1</level>
+      <fluff>Your hand lashes out like a dragon's tail, and with the lightest touch unleashes power that knocks your foe to the ground</fluff>
+      <part>
+         <part-name>Attack Technique</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Full Discipline, Implement, Psionic</keyword>
+         <action>Standard Action</action>
+         <type>Melee</type> <range>touch</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Dexterity vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d6 + Dexterity modifier damage, and you knock the target prone.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>2d6 + Dexterity modifier damage.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Movement Technique</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Full Discipline, Psionic</keyword>
+         <action>Move Action</action>
+         <type>Melee</type> <range>1</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One ally, or one prone enemy</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You swap places with the target.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Slimy Transmutation</title>
+      <class>Wizard</class> <category>Attack</category> <level>1</level>
+      <fluff>A billowing cloud of greenish fog surrounds your foe. When the fog dissipates, your enemy is gone, and an ugly toad stands in its place.</fluff>
+      <part>
+         <frequency>Daily</frequency>
+         <keyword>Arcane, Implement, Polymorph, Transmutation</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack -</name> <name-style>bold</name-style>
+            <text>Int vs. Fort</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>The target turns into a Tiny toad (save ends).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>The taregt turns into a Tiny toad until the end of its next turn.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Toad Form</part-name>
+         <hide-freqkey>true</hide-freqkey>
+         <hide-actrange>true</hide-actrange>
+         <section>
+            <indent>1</indent>
+            <text>All of the target's equipment transforms with it. If it takes damage from any source, this effect immediately ends.</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>As a toad, the target has following effects:</text>
+         </section>
+         <section>
+            <indent>2</indent>
+            <text>&#9658; The target is dazed.</text>
+         </section>
+         <section>
+            <indent>2</indent>
+            <text>&#9658; The only actions the target can take are to move its speed or to shift.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Example Power</title>
+      <class>Example</class> <category>Used as</category> <level>an example</level>
+      <fluff>This example should include all tags that are recognized. The color of the power's title box is determined by the frequency of the first part.</fluff>
+      <part>
+         <part-name>Primary Attack Example</part-name>
+         <frequency>Encounter</frequency>
+         <keyword>These are not necessary, though the diamond looks a bit silly without any keywords</keyword>
+         <action>Action Type</action> <subaction>subtype</subaction>
+         <type>First type</type> <range>and range</range>
+         <type2>Second type</type2> <range2>and range</range2>
+         <section>
+            <text>You can use only the action tag if you don't want the non-bolded part for the subtype.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>2</indent>
+            <text><![CDATA[<b>Note:</b>]]> Available indents are 1 and 2. You can use HTML formatting by using the tag that is used in the start of this line (in the XML). Useful if you want to, for example, put the name of other powers in italics, but can be used to avoid using the name and name-style tags.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>You can include comments <!-- like this one --> using standard HTML comments. This can be useful if you want to fill a power with a character's final modifiers, so you can include the formula as a comment that doesn't print, but makes it easier when you need to edit.</text>
+         </section>
+      </part>
+      <part>
+         <hide-freqkey>true</hide-freqkey>
+         <hide-actrange>true</hide-actrange>
+         <keyword>These won't actually show up</keyword>
+         <section>
+            <text>Since there is no part-name and the frequency, keywords, action and type/range are hidden, you can't really tell this part apart from the the first part.</text>
+         </section>
+         <section>
+            <name>Available name-style options:</name> <name-style>bold</name-style>
+            <text>Just bold and italic. And not even combined, because I'm lazy. If you need something more complicated, you'll need to use HTML code instead instead of the name tag.</text>
+         </section>
+      </part>
+   </power>
+         
+</catalog>
