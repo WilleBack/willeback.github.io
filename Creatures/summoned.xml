@@ -316,6 +316,62 @@
    </creature>
    
    <creature>
+      <title>Iron Cohort</title>
+      <role>Summoned creature</role>
+      <size>Small</size> <origin>elemental</origin> <type>humanoid</type> <subtype>earth</subtype>
+      
+      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+2 <![CDATA[<i>AC</i>]]></defmod>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Immovable</name>
+            <line>The iron cohort reduces any pull, push or slide against it by 2 squares.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Action</category-name>
+         
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The iron cohort gains resist 5 all until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Immediate Interrupt</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Requirement:</i>]]> The iron cohort must be adjacent to you</line>
+            <line><![CDATA[<i>Trigger:</i>]]> You are targeted by a ranged or melee attack</line>
+            <line><![CDATA[<i>Effect:</i>]]> The iron cohort becomes the target of the triggering attack instead of you.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the iron cohort any commands by the end of your turn, it remains adjacent to you. If it is not adjacent to you, it moves its speed towards you.</line>
+            <line>If the iron cohort moved, you are slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>While adjacent to the iron cohort, you reduce any pull, push or slide against you by 1 square.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment> <language>Primordial</language>
+      <source>Summon Iron Cohort (Wizard Utility 6)</source>
+   
+   <creature>
       <title>Magma Beast</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>magical beast</type> <subtype>earth</subtype> <subtype>fire</subtype>
