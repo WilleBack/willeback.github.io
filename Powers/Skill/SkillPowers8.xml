@@ -3,6 +3,31 @@
 <catalog>
    
    <category>
+      <name>Acrobatics</name>
+      
+      <power>
+         <title>Drop and Roll</title>
+         <class>Acrobatics</class> <category>Utility</category> <level>8</level>
+         <fluff>You fall off a ledge, but your training allows you to dash forward after landing safely</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Skill</keyword>
+            <action>Opportunity</action> <subaction>Reaction</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You fall and take no damage from the fall</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You shift up to 3 squares.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>Diplomacy</name>
       
       <power>
@@ -161,6 +186,35 @@
             <section>
                <shade>true</shade>
                <text>If the triggering attack misses, the attacker rerolls it against one enemy of its choice that granted cover to you against it.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Thievery</name>
+      
+      <power>
+         <title>Disruptive Stunt</title>
+         <class>Thievery</class> <category>Utility</category> <level>8</level>
+         <fluff>With a flurry of taps, shoves, and nudges, you push past your foe, leaving it flustered</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Move</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>1</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature adjacent to you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You move your speed through the target's space to a square adjacent to it. This movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> from the target.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>In addition, the target takes a -2 penalty to all attack rolls until the start of your next turn.</text>
             </section>
          </part>
       </power>
