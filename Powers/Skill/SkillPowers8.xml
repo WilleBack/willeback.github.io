@@ -3,11 +3,65 @@
 <catalog>
    
    <category>
+      <name>Diplomacy</name>
+      
+      <power>
+         <title>Befriend</title>
+         <class>Diplomacy</class> <category>Utility</category> <level>8</level>
+         <fluff>You know the right things to say to make people like you</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Close</type> <range>burst 5</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One nonhostile creature in the burst that has Intelligence 5 or higher</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Until the end of the encounter, you gain a +4 power bonus to Diplomacy checks against the target, and a +2 power bonus to Bluff checks against the target.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Dungeoneering</name>
+      
+      <power>
+         <title>Crowd Cover</title>
+         <class>Dungeoneering</class> <category>Utility</category> <level>8</level>
+         <fluff>You keep enemies between you and their companion, using them as a shield</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy makes a ranged attack roll against you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Enemies adjacent to you and in the attack's way grant cover to you against the triggering attack.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the triggering attack misses, the attacker rerolls it against one enemy of its choice that granted cover to you against it.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
       <name>Religion</name>
       
       <power>
          <title>Assurance of Prophecy</title>
-         <class>Religion</class> <category>Utility</category> <level>6</level>
+         <class>Religion</class> <category>Utility</category> <level>8</level>
          <fluff>You call out verses of prophecy, and the knowledge is on your side renews your ally's vigor</fluff>
          <part>
             <frequency>Encounter</frequency>
@@ -36,6 +90,52 @@
                <shade>true</shade> <indent>1</indent>
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>3d12 temporary hit points.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Conviction</title>
+         <class>Religion</class> <category>Utility</category> <level>8</level>
+         <fluff>You whisper a prayer for aid to overcome handship</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You gain a +5 bonus to the first saving throw you make before the start of your next turn.</text>
+            </section>
+         </part>
+      </power>
+   </category>
+   
+   <category>
+      <name>Stealth</name>
+      
+      <power>
+         <title>Crowd Cover</title>
+         <class>Stealth</class> <category>Utility</category> <level>8</level>
+         <fluff>You keep enemies between you and their companion, using them as a shield</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Skill</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy makes a ranged attack roll against you</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Enemies adjacent to you and in the attack's way grant cover to you against the triggering attack.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the triggering attack misses, the attacker rerolls it against one enemy of its choice that granted cover to you against it.</text>
             </section>
          </part>
       </power>
