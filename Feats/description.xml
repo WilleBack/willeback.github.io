@@ -8963,7 +8963,7 @@
       <group>Class</group>
       <group>Grapple</group>
       <group>Shapechange</group>
-      <group>Sill Enhancement</group>
+      <group>Skill Enhancement</group>
       <benefit>You gain a +2 bonus on skill checks to <![CDATA[<i>escape</i>]]>.</benefit>
       <benefit>Whenever a creature you are grabbing while in beast form fails to escape, it takes damage equal to your Constitution modifier or Dexterity modifier.</benefit>
       <benefit>This damage increases to 5 + your Constitution modifier or your Dexterity modifier at 11th level, and to 10 + your Constitution modifier or your Dexterity modifier at 21st level.</benefit>
@@ -13033,7 +13033,7 @@
    </feat>
    
    <feat>
-      <title>Divinitation Mastery</title>
+      <title>Divination Mastery</title>
       <tier>Heroic</tier>
       <prereq>
          <type>feat</type>
@@ -14633,6 +14633,407 @@
       <benefit>Also, when you hit with <![CDATA[<i>bull rush</i>]]>, you push the target a number of squares equal to your speed. For each square you push the target, you can shift 1 square to a square adjacent to the target.</benefit>
    </feat>
    
+   <feat>
+      <title>Drow Beast Mastery</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Beast Mastery</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>cloud of darkness</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Animal Companion</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>Your beast companion is immune to the effect of your <![CDATA[<i>cloud of darkness</i>]]> racial power.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Drow Ecclesiastic</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Channel Divinity</name>
+      </prereq>
+      <group>Channel Divinity</group>
+      <group>Ongoing Damage</group>
+      <group>Poison</group>
+      <group>Power Repertoire</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>You gain the <![CDATA[<i>drow ecclesiastic</i>]]> Channel Divinity power.</benefit>
+      
+      <power>
+         <title>Drow Ecclesiastic</title>
+         <class>Feat</class> <category>Attack</category>
+         <fluff>Lolth punishes those who escape her wiles</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Poison</keyword>
+            <action>Immediate</action> <subaction>Reaction</subaction>
+            <type>Close</type> <range>burst 5</range>
+            <section>
+               <name>Channel Divinity:</name> <name-style>bold</name-style>
+               <text>You can only use one Channel Divinity power per encounter</text>
+            </section>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy within 5 squares of you succeeds in a saving throw to end a condition or effect</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering enemy in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target takes ongoing 5 poison damage (save ends).</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>Ongoing 10 poison damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>Ongoing 15 poison damage.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+   
+   <feat>
+      <title>Drow Fighting Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <group>Defense</group>
+      <group>Racial</group>
+      <group>Two-weapon Fighting</group>
+      <group>Weapon Specialization</group>
+      <benefit>When holding a light blade in one hand and a hand crossbow in the other, you do not provoke <![CDATA[<i>opportunity attacks</i>]]> when making attacks using the hand crossbow.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Drow Heretic</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <group>Spider-hunting</group>
+      <benefit>You gain a +2 bonus to damage rolls against creatures with the Spider keyword.</benefit>
+      <benefit>This bonus to damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Drowning of Nhalloth</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shadar-kai</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shadow jaunt</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Forced Movement</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +2 feat bonus to Arcana checks.</benefit>
+      <benefit>Also, when you hit an enemy with an attack while you are insubstantial due to your <![CDATA[<i>shadow jaunt</i>]]> racial power, you can slide that enemy 1 square. The enemy then takes a -2 penalty to attack rolls until the end of its next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Druid of Darkness</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <group>Shapechange</group>
+      <benefit>While you are in beast form, you gain a +2 bonus to damage rolls against enemies granting combat advantage to you.</benefit>
+      <benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dual Challenge</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Combat Challenge</name>
+      </prereq>
+      <group>Class</group>
+      <group>Marking</group>
+      <benefit>Whenever you mark an enemy using your Combat Challenge class feature, you can mark one additional enemy adjacent to that enemy. This mark lasts until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dual Implement Arcanist</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <benefit>When you use an arcane attack power and you are wielding a magic implement in each hand, you can add the off-hand implement's enhancement bonus as an item bonus to the power's damage rolls.</benefit>
+      <benefit>Both your implements must be usable with the power, and you must have proficiency with both implements, to gain this benefit.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dual Mind Reserves</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kalashtar</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Psionic Augmentation</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Recovery</group>
+      <group>Psionics</group>
+      <group>Racial</group>
+      <group>Second Wind</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you also regain 1 power point.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dual Mind Strength</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kalashtar</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Psychic Specialization</group>
+      <group>Racial</group>
+      <benefit>You gain a +2 feat bonus to damage rolls with Psychic powers.</benefit>
+      <benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dubious Manifestation</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Invoker</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Divine Covenant</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>cloud of darkness</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Concealment</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <benefit>When you trigger your Covenant Manifestation while you are within the area of your <![CDATA[<i>cloud of darkness</i>]]> racial power, one ally within 10 squares of you gains concealment until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Duelist's Panache</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>15</value>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+         <combine>with</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Duelist Training</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a feat bonus to Acrobatics checks and Athletics checks. The feat bonus equals 1 + one-half your Charisma modifier.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dungeon Enchanter</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Ritual Caster</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>ritual</type>
+         <name>Enchant Magic Item</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>ritual</type>
+         <name>Transfer Enchantment</name>
+      </prereq>
+      <group>Class</group>
+      <group>Equipment</group>
+      <group>Rituals</group>
+      <benefit>You can use the Enchant Magic Item ritual and the Transfer Enchantment ritual with a casting time of 1 minute.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dungeon Experience</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Dungeoneering</name>
+      </prereq>
+      <group>Skill Enhancement</group>
+      <group>Traps</group>
+      <benefit>You can use your Dungeoneering check modifier in place of your Thievery check modifier to disable traps and to open locks.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Durable</title>
+      <tier>Heroic</tier>
+      <group>Healing Surge</group>
+      <benefit>Your number of healing surges increases by two.</benefit>
+      <benefit>Starting at 21st level, the number increases by three instead.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dusk Elf Heritage</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <group>Dusk Elf Heritage</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <group>Stealth</group>
+      <group>Support</group>
+      <benefit>All allies within 6 squares of you gain a +2 racial bonus to Stealth checks.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dusk Elf Weapon Training</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Dusk Elf Heritage</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Dusk Elf Heritage</group>
+      <group>Proficiency Gain</group>
+      <group>Racial</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with simple light blades and military light blades.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to damage rolls with these weapons.</benefit>
+      <benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Dutiful Follower</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Goliath</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Racial</group>
+      <group>Teamwork</group>
+      <benefit>You gain a +1 bonus to attack rolls with attacks granted to you by your allies.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Duty's Virtue</title>
+      <tier>Heroic</tier>
+      <group>Bloodied</group>
+      <group>Defense</group>
+      <group>Initiative</group>
+      <group>Support</group>
+      <benefit>Once per round, you can use the <![CDATA[<i>aid defense</i>]]> action as a minor action when the chosen ally for that action is bloodied.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to initiative checks.</benefit>
+   </feat>
+      
    <feat>
       <title>Eager Mind</title>
       <tier>Heroic</tier>
