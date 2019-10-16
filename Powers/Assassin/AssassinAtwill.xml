@@ -55,7 +55,7 @@
          <action>Standard</action> <subaction>Action</subaction>
          <type>Melee</type> <range>weapon +1 reach</range>
          <section>
-            <indent>2</indent>
+            <indent>1</indent>
             <text>If the target has at least two of your shrouds on it, you increase the reach by an additional +1, or by an additional +2 if the target has four of your shrouds on it</text>
          </section>
          <section>
@@ -83,6 +83,45 @@
          <section>
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can use this power in place of a <![CDATA[<i>melee basic attack</i> when making an <i>opportunity attack</i>]]>. This does not allow you to trigger <![CDATA[<i>opportunity attacks</i>]]> further away than you normally could.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Shadow Storm</title>
+      <class>Assassin</class> <category>Attack</category> <level>1</level>
+      <fluff>Your tie to the Shadowfell call on the living shadows around your foe, causing them to claw at it at your beck and call</fluff>
+      <part>
+         <frequency>At-Will</frequency>
+         <keyword>Implement, Shadow</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>touch</range>
+         <type2>Ranged</type2> <range2>3/6</range2>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Dexterity vs. Reflex</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>You gain a bonus to the attack roll equal to your number of shrouds on the target</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d4 + Dexterity modifier damage, plus 1 damage for each creature adjacent to the target.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>2d4 + Dexterity modifier damage, plus 2 damage for each creature adjacent to the target.</text>
+         </section>
+         <section>
+            <name>Special:</name> <name-style>bold</name-style>
+            <text>This power counts as a <![CDATA[<i>basic attack</i>]]>.</text>
          </section>
       </part>
    </power>
