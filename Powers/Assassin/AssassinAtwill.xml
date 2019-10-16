@@ -46,7 +46,7 @@
    </power>
    
    <power>
-      <title>Fearsome Flickers</title>
+      <title>Frightful Flickers</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You cause shadowy flickers to cover your victim's eyes, causing it to panic when it can't see clearly</fluff>
       <part>
@@ -126,6 +126,53 @@
          <section>
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can use this power in place of a <![CDATA[<i>melee basic attack</i> when making an <i>opportunity attack</i>]]>. This does not allow you to trigger <![CDATA[<i>opportunity attacks</i>]]> further away than you normally could.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Lashing Shrouds</title>
+      <class>Assassin</class> <category>Attack</category> <level>1</level>
+      <fluff>You direct your shrouds outward from the foe they cover, lashing at the life force of another</fluff>
+      <part>
+         <frequency>At-Will</frequency>
+         <keyword>Implement, Necrotic, Shadow</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>2, using the creature your shrouds are on as the point of origin</range>
+         <section>
+            <indent>1</indent>
+            <text>Using this power provokes <![CDATA[<i>opportunity attacks</i>]]> as if you had used a ranged attack</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature within 2 squares of the creature your shrouds are on</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>If you have at least 3 of your shrouds on the creature used as the point of origin, you can target two creatures within 2 squares of that creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Dexterity vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus + your number of shrouds on the creature used as the point of origin.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 11:</name> <name-style>italic</name-style>
+            <text>Equal to 2 + your Dexterity modifier + your implement's enhancement bonus + your number of shrouds.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>Equal to 2 + your Dexterity modifier + your implement's enhancement bonus + twice your number of shrouds on the creature used as the point of origin.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
          </section>
       </part>
    </power>
