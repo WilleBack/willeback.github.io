@@ -107,21 +107,30 @@
       <fluff>As you attack, a faint glow emanates from your weapon to envelope you and bolster your defenses for a time</fluff>
       <part>
          <frequency>Encounter</frequency>
-         <keyword>Divine, Radiant, Weapon</keyword>
+         <keyword>Divine, Radiant; Implement or Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <type>Melee</type> <range>weapon</range>
+         <type2>Ranged</type2> <range2>5</range>
+         <section>
+            <name>Special:</name> <name-style>bold</name-style>
+            <text>You make this attack as either a melee Weapon attack, or a ranged Implement attack.</text>
+         </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
             <text>One creature</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
-            <text>Charisma vs. AC</text>
+            <text>Charisma vs. AC (weapon), or</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>Charisma vs. Will (implement)</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] + Charisma modifier radiant damage.</text>
+            <text>1[W] + Charisma modifier radiant damage as a Weapon attack, or 1d6 + Charisma modifier damage as an Implement attack.</text>
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
