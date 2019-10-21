@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Fire Beetle</title>
+      <level>0</level> <role>Brute</role> <xp>80</xp>
+      <size>Small</size> <origin>natural</origin> <type>beast</type>
+      
+      <init>+0</init> <perception>+0</perception> <insight>+0</insight>
+      
+      <hp>29</hp> <bloodied>14</bloodied>
+      <ac>13</ac> <fort>13</fort> <ref>10</ref> <will>11</will>
+      <speed>4</speed>
+      
+      <resist>
+         <name>fire</name> <value>5</value>
+      </resist>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Illuminating Charge</name>
+            <line>While the fire beetle's <![CDATA[<i>fire spray</i>]]> attack is avaiable, its space and all adjacent squares are dimly lit.</line>
+         </block>
+      </category>
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 2 (crit 14 + 1d12) damage.</line>
+         </block>
+         
+         <block>
+            <name>Fire Spray</name> <type>close</type>
+            <keyword>Fire</keyword>
+            <frequency>Recharge</frequency> <note>5 6</note>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (each creature in blast); +4 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 3d6 fire damage.</line>
+            <line><![CDATA[<i>Miss:</i>]]> 3 fire damage.</line>
+            <line><![CDATA[<i>Special:</i>]]> The fire beetle rolls to recharge this power at the end of its turn instead of the start.</line>
+         </block>
+      </category>
+      
+      <str>
+         <value>14</value> <mod>+2 / +2</mod>
+      </str>
+      <con>
+         <value>11</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>10</value> <mod>+0 / +0</mod>
+      </dex>
+      <int>
+         <value>1</value> <mod>-5 / -5</mod>
+      </int>
+      <wis>
+         <value>10</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>8</value> <mod>-1 / -1</mod>
+      </cha>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+   </creature>
+
+</catalog>
