@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Dire Rat</title>
+      <level>0</level> <role>Skirmisher</role> <xp>80</xp>
+      <size>Small</size> <origin>natural</origin> <type>beast</type>
+      
+      <init>+4</init> <perception>+1</perception> <insight>+1</insight>
+      <sense>low-light vision</sense>
+      
+      <hp>24</hp> <bloodied>12</bloodied>
+      <ac>14</ac> <fort>10</fort> <ref>12</ref> <will>11</will>
+      <defmod>+2 vs. attacks triggered by movement</defmod>
+      <speed>6</speed> <climb>3</climb>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Small and Evasive</name>
+            <line>The dire rat has a +2 bonus to all defenses against attacks triggered by its movement.</line>
+         </block>
+      </category>
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <keyword>Disease</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 2 damage, and additional 1d6 damage if no other enemies are adjacent to the dire rat.</line>
+            <line>The target must attempt a saving throw. On a failure, it contracts dire rat filth feaver (stage 1). If the attack was a critical hit, the target rolls the save twice and uses the lower result.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Stealth</name> <value>
+      
+      <str>
+         <value>8</value> <mod>-1 / -1</mod>
+      </str>
+      <con>
+         <value>11</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>15</value> <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>2</value> <mod>-4 / -4</mod>
+      </int>
+      <wis>
+         <value>12</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>6</value> <mod>-2 / -2</mod>
+      </cha>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+   </creature>
