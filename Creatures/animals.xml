@@ -81,6 +81,7 @@
          <block>
             <name>Charger</name>
             <keyword>Mount</keyword>
+            <line><![CDATA[<i>Requirement:</i>]]> Mounted by a friendly rider of 1st level or higher.</line>
             <line>The charger's rider gains a +3 bonus to damage rolls on charge attacks.</line>
          </block>
       </category>
@@ -96,7 +97,7 @@
          </block>
          
          <block>
-            <name>Trample</name>
+            <name>Trample</name> <type>melee</type>
             <frequency>Encounter</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The horse moves up to its speed, and can move through the space of enemies that are smaller size than it is.</line>
             <line>Each time the horse enter's an enemy's space for the first time during the move, it makes the following attack against that enemy:</line>
@@ -136,14 +137,14 @@
    
    <creature>
       <title>Horse, Riding</title>
-      <level>1</level> <role>Brute</role> <xp>100</xp>
+      <level>1</level> <role>Skirmisher</role> <xp>100</xp>
       <size>Large</size> <origin>natural</origin> <type>beast</type> <subtype>mount</subtype>
       
       <init>+2</init> <perception>+0</perception> <insight>+0</insight>
       <sense>low-light vision</sense>
       
-      <hp>31</hp> <bloodied>15</bloodied>
-      <ac>14</ac> <fort>14</fort> <ref>13</ref> <will>10</will>
+      <hp>28</hp> <bloodied>14</bloodied>
+      <ac>15</ac> <fort>14</fort> <ref>13</ref> <will>10</will>
       <speed>9</speed>
       
       <category>
@@ -154,6 +155,18 @@
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d6 + 4 damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Move Actions</category>
+         
+         <block>
+            <name>Nimble Mount</name>
+            <keyword>Mount</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Requirement:</i>]]> Mounted by a friendly rider of 1st level or higher.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The horse shifts 2 squares.</line>
          </block>
       </category>
       
