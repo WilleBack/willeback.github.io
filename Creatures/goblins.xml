@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Goblin Sneak</title>
+      <level>1</level> <role>Lurker</role> <xp>100</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>goblin</subtype>
+      
+      <init>+7</init> <perception>+1</perception> <insight>+1</insight>
+      <sense>low-light vision</sense>
+      
+      <hp>26</hp> <bloodied>13</bloodied>
+      <ac>15</ac> <fort>11</fort> <ref>14</ref> <will>12</will>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Sneak Attack</name>
+            <line>The goblin sneak deals additional +1d6 damage against any target it has combat advantage against.</line>
+         </block>
+         
+         <block>
+            <name>Sneaky</name>
+            <line>When the goblin sneak <![CDATA[<i>steps</i> or uses <i>goblin tactics</i>]]>, it can shift into the space occupied by an ally and slide the ally to the space it previously occupied.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Short sword</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Triggered Actions</category-name>
+         
+         <block>
+            <name>Goblin Tactics</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (Immediate Reaction):</i>]]> The goblin is missed by a melee attack</line>
+            <line><![CDATA[<i>Effect:</i>]]> The goblin shifts 1 square.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+      <skill>
+         <name>Thievery</name> <value>+8</value>
+      </skill>
+      
+      <str>
+         <value>11</value> <mod>+0 / +0</mod>
+      </str>
+      <con>
+         <value>11</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>17</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>8</value> <mod>-1 / -1</mod>
+      </int>
+      <wis>
+         <value>12</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>9</value> <mod>-1 / -1</mod>
+      </cha>
+      
+      <alignment>evil</alignment>
+      <language>Common</language> <language>Goblin</language>
+      
+   </creature>
+
+</catalog>
