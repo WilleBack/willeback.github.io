@@ -8122,6 +8122,7 @@
       <group>Racial</group>
       <group>Saving Throws</group>
       <group>Support</group>
+      <group>Telepathy</group>
       <benefit>When an ally within your telepathy range makes a saving throw against an effect that dazes, dominates or stuns, he or she can roll twice and use either result.</benefit>
    </feat>
    
@@ -15645,6 +15646,79 @@
       <group>Weapon Specialization</group>
       <benefit>You can use a longsword as an implement for Wizard powers. You do not count as having implement proficiency with a longsword for other purposes.</benefit>
       <benefit>When using a longsword as an implement, you treat it as a wand for all purposes, including Arcane Implement Mastery if you have that class feature.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Eladrin's Challenge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Eladrin</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Eladrin Weapon Proficiency</name>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <group>Racial</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are wielding a longsword or any spear, enemies marked by you take a -3 penalty to attack rolls for being marked instead of a -2 penalty.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elan Heritage</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>type</type>
+         <name>Humanoid</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Elan Heritage</group>
+      <group>Power Repertoire</group>
+      <group>Telepathy</group>
+      <benefit>You have undergone the rite of Awakening to strip away imperfections in your physical form, becoming an elan.</benefit>
+      <benefit>Your origin changes to immortal, making you considered an immortal creature for all purposes instead of your previous creature origin, such as natural or fey.</benefit>
+      <benefit>Also, you gain telepathy 5.</benefit>
+      <benefit>For every two additional feats from this bloodline you have, the range of your telepathy increases by 1.</benefit>
+      <benefit>In addition, you gain the <![CDATA[<i>elan resilience</i>]]> power.</benefit>
+      
+      <power>
+         <title>Elan Resilience</title>
+         <class>Elan</class> <category>Utility</category>
+         <fluff>Psionic energy flares around you, limiting the effect of an attack</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Psionic</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You take damage.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You reduce the triggering damage by your Intelligence modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>By 3 + your Intelligence modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>By 6 + your Intelligence modifier.</text>
+            </section>
+         </part>
+      </power>
    </feat>
    
    <feat>
