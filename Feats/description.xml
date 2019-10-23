@@ -16306,6 +16306,60 @@
    </feat>
    
    <feat>
+      <title>Forgeborn Heritage</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <group>Acid Specialization</group>
+      <group>Cold Specialization</group>
+      <group>Damage Bonus</group>
+      <group>Damage Resistance</group>
+      <group>Fire Specialization</group>
+      <group>Forgeborn Heritage</group>
+      <group>Lightning Specialization</group>
+      <group>Power Repertoire</group>
+      <group>Thunder Specialization</group>
+      <group>Triggered</group>
+      <benefit>You gain resist 2 acid, resist 2 cold, resist 2 fire, resist 2 lightning, and resist 2 thunder.</benefit>
+      <benefit>These resists increase to 4 at 11th level, and to 8 at 21st level.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>elemental legacy</i>]]> bloodline power.</benefit>
+      
+      <power>
+         <title>Elemental Legacy</title>
+         <class>Forgeborn</class> <category>Attack</category>
+         <fluff>You allow the elemental energy in your soul to swell forth and scour your foes</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Elemental; Acid, Cold, Fire, Lightning or Thunder</keyword>
+            <action>Nonaction</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You hit an enemy with an attack</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The triggering enemy takes 3 extra acid, cold, fire, lightning or thunder damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>6 extra damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>9 extra damage.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+   
+   <feat>
       <title>Giantslayer Circling</title>
       <tier>Heroic</tier>
       <prereq>
@@ -16666,6 +16720,67 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>Choose one creature hit by your poison damage-dealing <![CDATA[<i>dragon breath</i>]]> racial power. That creature is weakened (save ends).</benefit>
+   </feat>
+   
+   <feat>
+      <title>Wrathful Resurgence</title>
+      <tier>Paragon</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>>Forgeborn Heritage</name>
+      </prereq>
+      <group>Forgeborn Heritage</group>
+      <group>Racial</group>
+      <group>Second Wind</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you also gain temporary hit points equal to one-half your healing surge value.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Wrathful Warrior</title>
+      <tier>Heroic</tier>
+      <category>Multiclass</category>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+         <combin>or</combine>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>13</value>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Healing Surge</group>
+      <group>Multiclass Fighter</group>
+      <group>Triggered</group>
+      <benefit>Once per encounter when you spend a healing surge, you gain a +1 bonus to the first melee or close Weapon damage roll you make before the end of your next turn.</benefit>
+      <benefit>This bonus damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Wrenching Abjuration</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>abjure undead</name>
+         <qualifier>Channel Divinity</qualifier>
+      </prereq>
+      <group>Channel Divinity</group>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <group>Power Enhancement</group>
+      <benefit>When you hit with your <![CDATA[<i>abjure undead</i>]]> Channel Divinity power, you can slide the target instead of pulling it, but the target must end the forced movement closes to you than where it began.</benefit>
    </feat>
    
    <feat>
