@@ -111,6 +111,7 @@
    <category selection="Arcane Defiling" />
    <category selection="Bloodline" />
    <category selection="Dragonmark" />
+   <category selection="Elemental Companion" />
    <category selection="Familiar" />
    <category selection="Multiclass" />
    <category selection="Pact" />
@@ -15980,6 +15981,89 @@
       <group>Class</group>
       <group>Saving Throws</group>
       <benefit>You gain a +2 bonus to saving throws made at the start of your turn against ongoing effects and conditions with the Acid, Cold, Fire, Lightning, or Thunder keywords.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elemental Companion</title>
+      <tier>Heroic</tier>
+      <category>Elemental Companion</category>
+      <prereq>
+         <type>feat</type>
+         <name>Born of the Elements</name>
+      </prereq>
+      <prereq>
+         <name>must not have the Arcane Familiar feat</name>
+      </prereq>
+      <group>Elemental Companion</group>
+      <benefit>You gain an elemental companion.</benefit>
+      <benefit>For each elemental companion feat you have beyond this one, your elemental companion gains a +1 bonus to all defenses.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elemental Comrades</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Elemental Manifestation</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Resistance</group>
+      <group>Saving Throws</group>
+      <benefit>Allies that are adjacent to you gain any resistances or bonuses to saving throws that you have because of your Elemental Manifestation racial trait.</benefit>
+      <benefit>If your Elemental Manifestation gives you the ability to breath underwater, you can share this ability as a minor action with anyone you touch. You must remain touching the recipient, and must use a minor action to sustain the effect each round.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elemental Conduit</title>
+      <tier>Heroic</tier>
+      <category>Elemental Companion</category>
+      <prereq>
+         <type>level</type>
+         <name>2nd</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Elemental Companion</name>
+      </prereq>
+      <group>Elemental Companion</group>
+      <group>Power Repertoire</group>
+      <group>Skill Enhancement</group>
+      <benefit>While your elemental companion is in passive mode, you gain a +2 power bonus to Insight checks and Perception checks.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>elemental conduit</i>]]> power.</benefit>
+      
+      <power>
+         <title>Elemental Conduit</title>
+         <class>Elemental Companion</class> <category>Utility</category>
+         <fluff>Chaos from your elemental companion twists space so that the two of you can swap positions</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Elemental, Teleportation</keyword>
+            <action>Move</action> <subaction>Action</subaction>
+            <type>Close</type> <range>burst 10</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>Your elemental companion must be in active mode.</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>You, and your elemental companion in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Each target teleports, swapping positions.</text>
+            </section>
+         </part>
+      </power>
    </feat>
    
    <feat>
