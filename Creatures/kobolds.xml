@@ -2,11 +2,111 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Kobold Slinger</title>
+      <level>1</level> <role>Artillery</role> <xp>100</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
+      
+      <init>+4</init> <perception>+1</perception> <insight>+1</insight>
+      <sense>darkvision</sense>
+      
+      <hp>24</hp> <bloodied>12</bloodied>
+      <ac>14</ac> <fort>11</fort> <ref>13</ref> <will>11</will>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Mob Attack</name>
+            <line>The kobold gains a cumulative +1 bonus to attack rolls for each kobold ally adjacent to the target.</line>
+         </block>
+         
+         <block>
+            <name>Trap Sense</name>
+            <line>The kobold gains a +2 bonus to all defenses against traps.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Dagger</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +3 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d4 damage.</line>
+         </block>
+         
+         <block>
+            <name>Sling</name> <type>rbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 10/20 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage.</line>
+         </block>
+         
+         <block>
+            <name>Special Pot</name> <type>ranged</type>
+            <keyword>Weapon</keyword>
+            <frequency>3 / encounter</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 10/20 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage, and one of the following effects (1d6):</line>
+            <line indent="1"><![CDATA[<i>1-2 ~ Stinkpot (Poison):</i>]]> Target takes a -2 penalty to attack rolls (save ends).</line>
+            <line indent="1"><![CDATA[<i>3-4 ~ Firepot (Fire):</i>]]> Target takes ongoing 3 fire damage (save ends).</line>
+            <line indent="1"><![CDATA[<i>5-6 ~ Gluepot:</i>]]> Target is immobilized (save ends).</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Minor Actions</category-name>
+         
+         <block>
+            <name>Shifty</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The kobold shifts 1 square.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+      
+      <str>
+         <value>10</value> <mod>+0/ +0</mod>
+      </str>
+      <con>
+         <value>9</value> <mod>-1 / -1</mod>
+      </con>
+      <dex>
+         <value>16</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>12</value> <mod>+1 / +1</mod>
+      </int>
+      <wis>
+         <value>13</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>9</value> <mod>-1 / -1</mod>
+      </cha>
+      
+      <alignment>evil</alignment>
+      <language>Common</language> <language>Draconic</language>
+      
+      <equipment>learher armor</equipment>
+      <equipment>spear</equipment>
+      <equipment>sling</equipment>
+      <equipment>2d8+2 sling bullets</equipment>
+      <equipment>3 x special shot pot</equipment>
+   </creature>
+   
+   <creature>
       <title>Kobold Warrior</title>
       <level>0</level> <role>Skirmisher</role> <xp>80</xp>
       <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
       
-      <init>+4</init> <perception>+1</perception> <insight>+1</insight>
+      <init>+4</init> <perception>+0</perception> <insight>+0</insight>
       <sense>darkvision</sense>
       
       <hp>18</hp> <bloodied>9</bloodied>
@@ -35,7 +135,7 @@
             <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
-            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 1 damage.</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 2 damage, or 1d8 + 5 damage if the warrior flanks the target.</line>
          </block>
          
          <block>
@@ -44,7 +144,7 @@
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The warrior moves one-half its speed to a space adjacent to an enemy that has at least one kobold ally adjacent to it.</line>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
-            <line><![CDATA[<i>Hit:</i>]]> 2d8 + 1 damage.</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + 2 damage, or 2d8 + 5 damage if the warrior flanks the target.</line>
          </block>
       </category>
       
