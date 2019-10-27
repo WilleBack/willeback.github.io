@@ -2,6 +2,107 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Kobold Dragonshield</title>
+      <level>2</level> <role>Soldier</role> <xp>125</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
+      
+      <init>+3</init> <perception>+1</perception> <insight>+1</insight>
+      <sense>darkvision</sense>
+      
+      <hp>32</hp> <bloodied>16</bloodied>
+      <ac>17</ac> <fort>14</fort> <ref>13</ref> <will>15</will>
+      <speed>5</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Mob Attack</name>
+            <line>The kobold gains a cumulative +1 bonus to attack rolls for each kobold ally adjacent to the target.</line>
+         </block>
+         
+         <block>
+            <name>Trap Sense</name>
+            <line>The kobold gains a +2 bonus to all defenses against traps.</line>
+         </block>
+      </category>
+      
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Short Sword</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 2 damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The dragonshield marks the target until the end of the dragonshield's next turn.</line>
+         </block>
+         
+         <block>
+            <name>Dirty Tactics</name> <type>melee</type>
+            <keyword>Weapon</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 3 damage, and the target is immobilized until the end of the dragonshield's next turn.</line>
+            <line><![CDATA[<i>Miss:</i>]]> Half damage, and the target is slowed until the end of the dragonshield's next turn.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Minor Actions</category-name>
+         
+         <block>
+            <name>Shifty</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The kobold shifts 1 square.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Triggered Actions</category-name>
+         
+         <block>
+            <name>Dragonshield Tactics</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (Immediate Reaction):</i>]]> An enemy adjacent to the dragonshield shifts, or an enemy ends its movement in a square adjacent to the dragonshield.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The dragonshield shifts 1 square.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Athletics</name> <value>+8</value>
+      </skill>
+      
+      <str>
+         <value>14</value> <mod>+2/ +3</mod>
+      </str>
+      <con>
+         <value>12</value> <mod>+1 / +2</mod>
+      </con>
+      <dex>
+         <value>13</value> <mod>+1 / +2</mod>
+      </dex>
+      <int>
+         <value>9</value> <mod>-1 / +0</mod>
+      </int>
+      <wis>
+         <value>12</value> <mod>+1 / +2</mod>
+      </wis>
+      <cha>
+         <value>9</value> <mod>-1 / +0</mod>
+      </cha>
+      
+      <alignment>evil</alignment>
+      <language>Common</language> <language>Draconic</language>
+      
+      <equipment>scale armor</equipment>
+      <equipment>shield</equipment>
+      <equipment>short sword</equipment>
+   </creature>
+   
+   <creature>
       <title>Kobold Slinger</title>
       <level>1</level> <role>Artillery</role> <xp>100</xp>
       <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
@@ -15,11 +116,6 @@
       
       <category>
          <category-name>Traits</category-name>
-         
-         <block>
-            <name>Mob Attack</name>
-            <line>The kobold gains a cumulative +1 bonus to attack rolls for each kobold ally adjacent to the target.</line>
-         </block>
          
          <block>
             <name>Trap Sense</name>
