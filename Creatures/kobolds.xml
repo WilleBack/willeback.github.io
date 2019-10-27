@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Kobold Warrior</title>
+      <level>0</level> <role>Skirmisher</role> <xp>80</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
+      
+      <init>+4</init> <perception>+1</perception> <insight>+1</insight>
+      <sense>darkvision</sense>
+      
+      <hp>18</hp> <bloodied>9</bloodied>
+      <ac>14</ac> <fort>10</fort> <ref>13</ref> <will>11</will>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Mob Attack</name>
+            <line>The kobold gains a cumulative +1 bonus to attack rolls for each kobold ally adjacent to the target.</line>
+         </block>
+         
+         <block>
+            <name>Trap Sense</name>
+            <line>The kobold gains a +2 bonus to all defenses against traps.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Spear</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 1 damage.</line>
+         </block>
+         
+         <block>
+            <name>Gang-up Rush</name> <type>melee</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The warrior moves one-half its speed to a space adjacent to an enemy that has at least one kobold ally adjacent to it.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + 1 damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Minor Actions</category-name>
+         
+         <block>
+            <name>Shifty</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The kobold shifts 1 square.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Stealth</name> <value>+7</value>
+      </skill>
+      
+      <str>
+         <value>10</value> <mod>+0/ +0</mod>
+      </str>
+      <con>
+         <value>8</value> <mod>-1 / -1</mod>
+      </con>
+      <dex>
+         <value>15</value> <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>11</value> <mod>+0 / +0</mod>
+      </int>
+      <wis>
+         <value>10</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>7</value> <mod>-2 / -2</mod>
+      </cha>
+      
+      <alignment>evil</alignment>
+      <language>Draconic</language>
+      
+      <equipment>learher armor</equipment>
+      <equipment>spear</equipment>
+   </creature>
+   
+</catalog>
