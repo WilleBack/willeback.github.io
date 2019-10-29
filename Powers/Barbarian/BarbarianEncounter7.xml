@@ -320,4 +320,123 @@
       </part>
    </power>
    
+   <power>
+      <title>Harbinger of Doom</title>
+      <class>Barbarian</class> <category>Attack</category> <level>7</level>
+      <fluff>You hack through one foe, and your battle cry heralds doom for the enemies before you</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Primal, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Primary Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Strength modifier damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>You make the Howl Attack as a close blast 3. The primary target must be in the blast.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You make the Howl Attack as a close blast 2. The primary target must be in the blast.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Howl Attack</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Fear, Primal</keyword>
+         <action>Nonaction</action>
+         <type>Close</type> <range>blast 3</range>
+         <type2>Close</type2> <range2>blast 2</range2>
+         <section>
+            <name>Howl Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the blast</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>Each howl target gains vulnerable 5 to all damage until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Thunderborn Wrath:</name> <name-style>bold</name-style>
+            <text>The vulnerable equals 5 + one-half your Constitution modifier.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Looming Threat</title>
+      <class>Barbarian</class> <category>Attack</category> <level>7</level>
+      <fluff>An ally might have raised a foe's ire, but once you strike, that enemy must pay attention to you</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Primal, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>3[W] + Strength modifier damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If the target is marked by an ally, this attack deals +1[W] additional damage, and you must mark the target until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Rageblood Vigor:</name> <name-style>bold</name-style>
+            <text>While the target remains marked by you, you gain a power bonus to damage rolls against it equal to your Constitution modifier.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Thaneborn Triumph:</name> <name-style>bold</name-style>
+            <text>While the target remains marked by you, the ally that was marking the target gains a power bonus to damage rolls against the target equal to your Charisma modifier.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Shattering Strike</title>
+      <class>Barbarian</class> <category>Attack</category> <level>7</level>
+      <fluff>The primal force flowing from your body enables your attack to strike true even against enemies that are not fully there</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Force, Primal, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>3[W] + Strength modifier force damage. This damage ignores the insubstantial quality.</text>
+         </section>
+      </part>
+   </power>
+   
 </catalog>
