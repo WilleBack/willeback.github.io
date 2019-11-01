@@ -11,7 +11,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.container {
 				box-sizing:border-box;
 				float:left;
-				column-count: 2;
+				column-count: 3;
 				column-gap:0cm;
 			}
 			
