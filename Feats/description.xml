@@ -4210,7 +4210,7 @@
       </prereq>
       <prereq>
          <type>feat</type>
-         <name>Black Hood Style</name>
+         <name>Black Hood Student</name>
       </prereq>
       <group>Accuracy Enhancement</group>
       <group>Class</group>
@@ -16368,6 +16368,224 @@
    </feat>
    
    <feat>
+      <title>Elemental Spirit Adept</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Elemental Spirit</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <benefit>When your spirit companion disappears as a result of one of your Shaman attack powers, you and your allies gain a +1 bonus to attack rolls against any enemy that was adjacent to the spirit. The bonus lasts until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elemental Vengeance</title>
+      <tier>Heroic</tier>
+      <category>Elemental Companion</category>
+      <prereq>
+         <type>level</type>
+         <name>6th</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Elemental Companion</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Bloodied Enemey</group>
+      <group>Combat Advantage</group>
+      <group>Elemental Companion</group>
+      <group>Power Repertoire</group>
+      <group>Triggered</group>
+      <benefit>While your elemental companion is in active mode, you gain a +1 bonus to attack rolls against bloodied creatures that are adjacent to the companion.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>elemental vengeance</i>]]> power.</benefit>
+      
+      <power>
+         <title>Elemental Vengeance</title>
+         <class>Elemental Companion</class> <category>Utility</category>
+         <fluff>A burst of scintillating color erupts from your destroyed companion, distracting your enemies</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Elemental</keyword>
+            <action>Immediate</action> <subaction>Reaction</subaction>
+            <type>Close</type> <range>burst 1, using your Elemental Companion's last space as the point of origin</range>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>Your active elemental companion is destroyed</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>Each enemy in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Each target grants combat advantage until the end of its next turn.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+   
+   <feat>
+      <title>Elemental Warrior</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Elemental Manifestation</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Power Recovery</group>
+      <group>Racial</group>
+      <benefit>When you score a critical hit with a Weapon attack, you regain the use of the racial power granted by your Elemental Manifestation trait. You can gain this benefit only once per encounter.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elsir Hammer Champion</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Elsir Hammer Student</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Combat Challenge</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <group>Mobility</group>
+      <group>Triggered</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you wield a one-handed hammer or a one-handed pick that you have proficiency with, you gain the following two benefits:</benefit>
+      <benefit>&#9658; When an enemy adjacent to you and marked by your ally shifts, you can shift 1 square as an opportunity reaction.</benefit>
+      <benefit>&#9658; When you use an at-will Fighter attack on your turn, or make the attack granted by your <![CDATA[<i>enforce challenge</i>]]>, you can choose to target Fortitude instead of AC.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elsir Hammer General</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Elsir Hammer Student</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you wield a one-handed hammer or a one-handed pick that you have proficiency with, you gain the following two benefits:</benefit>
+      <benefit>&#9658; When an enemy adjacent to you and marked by your ally shifts, you can shift 1 square as an opportunity reaction.</benefit>
+      <benefit>&#9658; When you hit with an attack on your turn, one ally in your <![CDATA[<i>warlord's aura</i>]]> can shift 2 squares as an opportunity reaction.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elsir Hammer Stalker</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Elsir Hammer Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Triggered</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you wield a one-handed hammer or a one-handed pick that you have proficiency with, you gain the following two benefits:</benefit>
+      <benefit>&#9658; When an enemy adjacent to you and marked by your ally shifts, you can shift 1 square as an opportunity reaction.</benefit>
+      <benefit>&#9658; When you hit with an attack on your turn, you can shift 2 squares as a free reaction. If your attack was a melee attack, you must end this shift adjacent to the target you hit. If your attack was a ranged attack, you must end the shift closer to the target than you started it.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elsir Hammer Student</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any one-handed hammer</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any one-handed pick</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +2 feat bonus to Perception checks.</benefit>
+      <benefit>Also, when you wield a one-handed hammer or one-handed pick that you are proficient with and make a <![CDATA[<i>melee basic attack</i>]]> on your turn, you can choose to target Fortitude instead of AC.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Elusive Hexer</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Eladrin</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Warlock's Curse</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Fey Pact</name>
+      </prereq>
+      <group>Class</group>
+      <group>Racial</group>
+      <group>Stealth</group>
+      <benefit>When an enemy takes damage from your Warlock's Curse on your turn, you become invisible until the end of your current turn.</benefit>
+   </feat>
+   
+   <feat>
       <title>Expert Bloodletting</title>
       <tier>Heroic</tier>
       <group>Bloodied Enemy</group>
@@ -16473,7 +16691,7 @@
       <group>Power Enhancement</group>
       <group>Skill Enhancement</group>
       <benefit>You gain a +2 feat bonus to Insight checks.</benefit>
-      <benefit>Also, whenever you hit an enemy with a martial at-will attack, until the start of your next turn, you do not grant combat advantage for being flanked, though other abilities triggered by flanking an enemy might have  still apply.</benefit>
+      <benefit>Also, whenever you hit an enemy with a martial at-will attack, until the start of your next turn, you do not count as flanked by the target you hit. Other creatures can still flank you, including with the target you hit.</benefit>
    </feat>
    
    <feat>
