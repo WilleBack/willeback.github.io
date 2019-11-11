@@ -122,23 +122,30 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="listcontainer">
     
         <xsl:for-each select="catalog/category">
-		    <div class="groupholder">
-			    <div class="grouptitle">Simple Weapons</div>
-			    <xsl:for-each select="catalog/weapon[category='Simple']"> 
+		<div class="groupholder">
+			<div class="grouptitle"><xsl:value-of select="@selection" /> One-handed Melee Weapons</div>
+			<xsl:for-each select="catalog/weapon[category='@selection' and hand='one-handed' and type='melee']"> 
 				<xsl:call-template name="list" />
 			</xsl:for-each>
 		</div>
 		
 		<div class="groupholder">
-			<div class="grouptitle">Military Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='Military']"> 
+			<div class="grouptitle"><xsl:value-of select="@selection" /> Two-handed Melee Weapons</div>
+			<xsl:for-each select="catalog/weapon[category='@selection' and hand='two-handed' and type='melee']"> 
 				<xsl:call-template name="list" />
 			</xsl:for-each>
 		</div>
         
-        <div class="groupholder">
-			<div class="grouptitle">Superior Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='Superior']"> 
+        	<div class="groupholder">
+			<div class="grouptitle"><xsl:value-of select="@selection" /> One-handed Ranged Weapons</div>
+			<xsl:for-each select="catalog/weapon[category='@selection' and hand='one-handed' and type='ranged']"> 
+				<xsl:call-template name="list" />
+			</xsl:for-each>
+		</div>
+		
+		<div class="groupholder">
+			<div class="grouptitle"><xsl:value-of select="@selection" /> Two-handed Melee Weapons</div>
+			<xsl:for-each select="catalog/weapon[category='@selection' and hand='two-handed' and type='ranged']"> 
 				<xsl:call-template name="list" />
 			</xsl:for-each>
 		</div>
