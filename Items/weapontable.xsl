@@ -145,19 +145,28 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 	</xsl:if>
 	
-	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Paragon'])>0">
+	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='two-handed' and type='melee'])>0">
 		<div class="list">
-			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Paragon</xsl:text></div>
-			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Paragon']">
+			<div class="groupname"><xsl:text>Two-handed Melee</xsl:text></div>
+			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='two-handed' and type='melee']">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
 		</div>
 	</xsl:if>
 	
-	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier='Epic'])>0">
+	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='one-handed' and type='ranged'])>0">
 		<div class="list">
-			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Epic</xsl:text></div>
-			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Epic']">
+			<div class="groupname"><xsl:text>One-handed Ranged</xsl:text></div>
+			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='one-handed' and type='ranged']">
+				<xsl:call-template name="line" />
+			</xsl:for-each>
+		</div>
+	</xsl:if>
+	
+	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='two-handed' and type='ranged'])>0">
+		<div class="list">
+			<div class="groupname"><xsl:text>One-handed Melee</xsl:text></div>
+			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='two-handed' and type='ranged']">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
 		</div>
