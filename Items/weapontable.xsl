@@ -123,31 +123,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
         <xsl:for-each select="catalog/category">
 		<div class="groupholder">
-			<div class="grouptitle"><xsl:value-of select="@selection" /> One-handed Melee Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='@selection' and hand='one-handed' and type='melee']"> 
-				<xsl:call-template name="list" />
-			</xsl:for-each>
-		</div>
-		
-		<div class="groupholder">
-			<div class="grouptitle"><xsl:value-of select="@selection" /> Two-handed Melee Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='@selection' and hand='two-handed' and type='melee']"> 
-				<xsl:call-template name="list" />
-			</xsl:for-each>
-		</div>
-        
-        	<div class="groupholder">
-			<div class="grouptitle"><xsl:value-of select="@selection" /> One-handed Ranged Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='@selection' and hand='one-handed' and type='ranged']"> 
-				<xsl:call-template name="list" />
-			</xsl:for-each>
-		</div>
-		
-		<div class="groupholder">
-			<div class="grouptitle"><xsl:value-of select="@selection" /> Two-handed Melee Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='@selection' and hand='two-handed' and type='ranged']"> 
-				<xsl:call-template name="list" />
-			</xsl:for-each>
+			<div class="grouptitle"><xsl:value-of select="@selection" /> Weapons</div>
+			<xsl:call-template name="list" />
 		</div>
 	</xsl:for-each>
 		
@@ -159,10 +136,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="list">
 	
-	<xsl:if test="count(//catalog/weapon[category=current()/@selection and tier='Heroic'])>0">
+	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='one-handed' and type='melee'])>0">
 		<div class="list">
-			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - Heroic</xsl:text></div>
-			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier='Heroic']">
+			<div class="groupname"><xsl:text>One-handed Melee</xsl:text></div>
+			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='one-handed' and type='melee']">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
 		</div>
