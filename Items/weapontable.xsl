@@ -89,20 +89,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.property {
-				width:calc(49% - 25em);
+				width:calc(49% - 12em);
 				float:left;
 			}
 			
 			.category {
-				width:calc(49% - 25em); 
+				width:calc(49% - 12em); 
 				float:left;
 			}
 			
-			.groups{ 
-				width:calc(97% - 25em); 
-				min-width: 16.5em;
-				float:right;
-			}
 			
 			@media only screen and (min-width:600px) {
 				.container { 
