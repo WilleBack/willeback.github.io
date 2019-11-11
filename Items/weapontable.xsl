@@ -124,24 +124,25 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:for-each select="catalog/category">
 		    <div class="groupholder">
 			    <div class="grouptitle">Simple Weapons</div>
-			    <xsl:for-each select="catalog/weapon[category='current/']> 
+			    <xsl:for-each select="catalog/weapon[category='Simple']"> 
 				<xsl:call-template name="list" />
 			</xsl:for-each>
 		</div>
 		
 		<div class="groupholder">
 			<div class="grouptitle">Military Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='Military'> 
+			<xsl:for-each select="catalog/weapon[category='Military']"> 
 				<xsl:call-template name="list" />
 			</xsl:for-each>
 		</div>
         
         <div class="groupholder">
 			<div class="grouptitle">Superior Weapons</div>
-			<xsl:for-each select="catalog/weapon[category='Superior'> 
+			<xsl:for-each select="catalog/weapon[category='Superior']"> 
 				<xsl:call-template name="list" />
 			</xsl:for-each>
 		</div>
+	</xsl:for-each>
 		
 	</div> <!-- list container -->
 	
