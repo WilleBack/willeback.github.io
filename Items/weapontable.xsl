@@ -59,7 +59,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.title {
-				width:6.5em; 
+				width:8.5em; 
 				float:left;
 			}
 			
@@ -68,8 +68,33 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 			}
 			
+			.damage {
+				width:2.5em;
+				float:left;
+			}
+			
+			.range {
+				width:4em;
+				float:left;
+			}
+			
+			.price {
+				width:3em;
+				float:left;
+			}
+			
+			.weight {
+				width:3em;
+				float:left;
+			}
+			
+			.property {
+				width:calc(49% - 25em);
+				float:left;
+			}
+			
 			.category {
-				width: 8em; 
+				width:calc(49% - 25em); 
 				float:left;
 			}
 			
