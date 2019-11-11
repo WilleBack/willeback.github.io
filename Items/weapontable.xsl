@@ -237,7 +237,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 	</div>
 	<div class="category"> 
-		<i><xsl:for-each select="category">
+		<i><xsl:for-each select="group">
 			<xsl:value-of select="."/>
 			<xsl:if test="position()!=last()">
 				<xsl:text>, </xsl:text>
