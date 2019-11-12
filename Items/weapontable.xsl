@@ -59,43 +59,43 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.title {
-				width:8.5em; 
+				width:10.5em; 
 				float:left;
 			}
 			
 			.prof {
-				width:2.5em;
-				float:left;
-			}
-			
-			.damage {
 				width:3em;
 				float:left;
 			}
 			
-			.range {
+			.damage {
 				width:4em;
+				float:left;
+			}
+			
+			.range {
+				width:5em;
 				float:left;
 				text-align:center;
 			}
 			
 			.price {
-				width:3.5em;
+				width:4em;
 				float:left;
 			}
 			
 			.weight {
-				width:3em;
+				width:4em;
 				float:left;
 			}
 			
 			.property {
-				width:calc(50% - 12em);
+				width:calc(50% - 14em);
 				float:left;
 			}
 			
 			.category {
-				width:calc(50% - 12.5em); 
+				width:calc(50% - 14.5em); 
 				float:left;
 			}
 			
