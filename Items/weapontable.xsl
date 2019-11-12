@@ -95,7 +95,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.category {
-				width:calc(50% - 12em); 
+				width:calc(50% - 12.5em); 
 				float:left;
 			}
 			
