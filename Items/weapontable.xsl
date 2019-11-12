@@ -76,10 +76,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.range {
 				width:4em;
 				float:left;
+				text-align:center;
 			}
 			
 			.price {
-				width:3em;
+				width:3.5em;
 				float:left;
 			}
 			
