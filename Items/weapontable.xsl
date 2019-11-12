@@ -69,7 +69,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.damage {
-				width:4em;
+				width:3.5em;
 				float:left;
 			}
 			
@@ -85,17 +85,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.weight {
-				width:4em;
+				width:3.5em;
 				float:left;
 			}
 			
 			.property {
-				width:calc(50% - 14em);
+				width:calc(50% - 14.5em);
 				float:left;
 			}
 			
 			.category {
-				width:calc(50% - 14.5em); 
+				width:calc(50% - 15em); 
 				float:left;
 			}
 			
