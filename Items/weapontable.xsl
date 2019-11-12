@@ -90,12 +90,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.property {
-				width:calc(49% - 11.5em);
+				width:calc(50% - 12em);
 				float:left;
 			}
 			
 			.category {
-				width:calc(49% - 11.5em); 
+				width:calc(50% - 12em); 
 				float:left;
 			}
 			
