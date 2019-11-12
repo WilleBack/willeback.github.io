@@ -133,12 +133,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 				
 			@media print {
-				.listcontainer { 
-					column-count: 2; 
-					column-gap:0.3em; 
-					margin:0cm;
-				}
-			
 				.container { 
 					column-count: 2; 
 					column-gap:0.6em; 
