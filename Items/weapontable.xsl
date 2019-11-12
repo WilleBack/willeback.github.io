@@ -256,8 +256,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="prof"><xsl:text>+</xsl:text><xsl:value-of select="proficient"/></div>
 		<div class="damage"><xsl:value-of select="damage"/></div>
 		<div class="range"><xsl:value-of select="range"/></div>
-		<div class="price"><xsl:value-of select="cost"/><xsl:text> gp</xsl:text></div>
-		<div class="weight"><xsl:value-of select="weight"/><xsl:text> lb</xsl:text></div>
+		<div class="price"><xsl:value-of select="cost"/></div>
+		<div class="weight"><xsl:value-of select="weight"/></div>
 		<div class="property">
 			<xsl:for-each select="property">
 				<xsl:value-of select="."/>
