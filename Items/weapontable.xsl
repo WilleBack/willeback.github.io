@@ -69,7 +69,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.damage {
-				width:2.5em;
+				width:3em;
 				float:left;
 			}
 			
