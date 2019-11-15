@@ -254,29 +254,31 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div>
 	
 	<xsl:for-each select="secondary">
-		<div class="title"><xsl:value-of select="title"/></div>
-		<div class="prof"><xsl:text>+</xsl:text><xsl:value-of select="proficient"/></div>
-		<div class="damage"><xsl:value-of select="damage"/></div>
-		<div class="range"><xsl:value-of select="range"/></div>
-		<div class="price"><xsl:value-of select="cost"/></div>
-		<div class="weight"><xsl:value-of select="weight"/></div>
-		<div class="category"> 
-			<i><xsl:for-each select="group">
-				<xsl:value-of select="."/>
-				<xsl:if test="position()!=last()">
-					<xsl:text>, </xsl:text>
-				</xsl:if> 
-			</xsl:for-each>
-			&#160;</i> 
-		</div>
-		<div class="property">
-			<xsl:for-each select="property">
-				<xsl:value-of select="."/>
-				<xsl:if test="position()!=last()">
-					<xsl:text>, </xsl:text>
-				</xsl:if> 
-			</xsl:for-each>
-		</div>
+		<div class="linecontainer" style="width:100%; float:left;>
+			<div class="title"><xsl:value-of select="title"/></div>
+			<div class="prof"><xsl:text>+</xsl:text><xsl:value-of select="proficient"/></div>
+			<div class="damage"><xsl:value-of select="damage"/></div>
+			<div class="range"><xsl:value-of select="range"/></div>
+			<div class="price"><xsl:value-of select="cost"/></div>
+			<div class="weight"><xsl:value-of select="weight"/></div>
+			<div class="category"> 
+				<i><xsl:for-each select="group">
+					<xsl:value-of select="."/>
+					<xsl:if test="position()!=last()">
+						<xsl:text>, </xsl:text>
+					</xsl:if> 
+				</xsl:for-each>
+				&#160;</i> 
+			</div>
+			<div class="property">
+				<xsl:for-each select="property">
+					<xsl:value-of select="."/>
+					<xsl:if test="position()!=last()">
+						<xsl:text>, </xsl:text>
+					</xsl:if> 
+				</xsl:for-each>
+			</div>
+		 </div>
 		
 	</xsl:for-each>
 	
