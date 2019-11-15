@@ -90,14 +90,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.property {
-				width:calc(50% - 14.5em);
+				width:calc(50% - 14em);
 				min-width: 8em;
 				float:right;
 				margin-right: 0.5em;
 			}
 			
 			.category {
-				width:calc(50% - 15em);
+				width:calc(50% - 14.5em);
 				min-width: 8em;
 				float:right;
 				margin-left: 0.5em;
