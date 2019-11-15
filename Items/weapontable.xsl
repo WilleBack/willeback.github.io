@@ -164,9 +164,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="grouptitle">Weapons by Group</div>
 		<xsl:for-each select="catalog/group">
 			<div class="weapongroup">
-				<b><xsl:value-of select="." />: </b>
+				<b><xsl:value-of select="@selection" />: </b>
 				<xsl:for-each select="//catalog/weapon[group=current()/@selection or secondary/group=current()/@selection]">
-					<xsl:value-of select="." />
+					<xsl:value-of select="./title" />
 					<xsl:if test="position()!=last()">
 						<xsl:text>, </xsl:text>
 					</xsl:if>
