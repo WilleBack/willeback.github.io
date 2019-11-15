@@ -254,7 +254,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div>
 	
 	<xsl:for-each select="secondary">
-		<div class="linecontainer" style="width:100%; float:left;>
+		<div class="linecontainer" style="width:100%; float:left;">
 			<div class="title"><xsl:value-of select="title"/></div>
 			<div class="prof"><xsl:text>+</xsl:text><xsl:value-of select="proficient"/></div>
 			<div class="damage"><xsl:value-of select="damage"/></div>
@@ -278,7 +278,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:if> 
 				</xsl:for-each>
 			</div>
-		 </div>
+		</div>
 		
 	</xsl:for-each>
 	
