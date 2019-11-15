@@ -14,7 +14,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 			}
 			
-			.feat {
+			.weapongroup {
 				margin:0.2cm; 
 				width:98%;
 				float:left;
@@ -151,15 +151,29 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 	<div class="listcontainer">
     
-        <xsl:for-each select="catalog/category">
-		<div class="groupholder">
-			<div class="grouptitle"><xsl:value-of select="@selection" /> Weapons</div>
-			<xsl:call-template name="list" />
-		</div>
-	</xsl:for-each>
+        	<xsl:for-each select="catalog/category">
+			<div class="groupholder">
+				<div class="grouptitle"><xsl:value-of select="@selection" /> Weapons</div>
+				<xsl:call-template name="list" />
+			</div>
+		</xsl:for-each>
 		
 	</div> <!-- list container -->
 	
+	<div class="container">
+		<div class="grouptitle">Weapons by Group</div>
+		<xsl:for-each select="catalog/group">
+			<div class="weapongroup">
+				<b><xsl:value-of select="." />: </b>
+				<xsl:for-each select="//catalog/weapon[group=current()/@selection or secondary/group=current()/@selection]">
+					<xsl:value-of select="." />
+					<xsl:if test="position()!=last()">
+						<xsl:text>, </xsl:text>
+					</xsl:if>
+				</xsl:for-each>
+			</div>
+		</xsl:for-each>
+	</div>
 	</body>
 	</html>
 </xsl:template>
