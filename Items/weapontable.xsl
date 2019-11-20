@@ -329,9 +329,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:for-each select="property">
-					<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
-						<i><xsl:value-of select="." />: </i>
-					</div>
+					<xsl:call-template name="createproperty" />
 				</xsl:for-each>
 			</xsl:otherwise>
 		</xsl:choose>
@@ -352,5 +350,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div> 
 	
 </xsl:template>
+	
+<xsl:template name="createproperty">
+	<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+		<i><xsl:value-of select="." />: </i>
+		<xsl:choose>
+			<xsl:when test=".='Brutal 1'">
+				<xsl:text>This weapon's minimum damage is higher than normal. When rolling damage, reroll any die that displays 1 until the result is higher.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Brutal 2'">
+				<xsl:text>This weapon's minimum damage is higher than normal. When rolling damage, reroll any die that displays 1 or 2 until the result is higher.</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>Not defined.</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+	</div>
 	
 </xsl:stylesheet>
