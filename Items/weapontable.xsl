@@ -321,6 +321,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:value-of select="." />
 			</div>
 		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="property='-'">
+				<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+					<i>No properties.</i>
+				</div>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="property">
+					<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+						<i><xsl:value-of select="." />: </i>
+					</div>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 	</div>
 	
 </xsl:template>
