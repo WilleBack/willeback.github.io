@@ -320,10 +320,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:param name="bgcolor">#0f2f63</xsl:param>
 	
 	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
+		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 11em);"> 
 			<xsl:value-of select="title"/>
 		</div>
-		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.9em; margin:0.5em;">
+		<div id="classcat" style="width: 12em; float:right; text-align:right; font-size: 0.9em; margin:0.5em;">
 			<xsl:value-of select="category"/> <xsl:text> Weapon</xsl:text><br />
 			<xsl:value-of select="hand" /> &#160; <xsl:value-of select="type" />
 		</div>
