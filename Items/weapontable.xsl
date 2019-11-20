@@ -367,6 +367,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:when test=".='Free Hand'">
 				<xsl:text>This weapon leaves the hand free. A free hand weapon does not need to be drawn, nor does it need to be sheathed for the wielder to use the hand that the weapon is on.</xsl:text>
 			</xsl:when>
+			<xsl:when test=".='High Crit'">
+				<xsl:text>This weapon deals additional damage on a critical hit. When you score a critical hit with a high crit weapon, you deal an extra +1[W] damage. This increases to +2[W] at 11th level, and to +3[W] at 21st level. This is in addition to any critical damage the weapon might deal from being magical.</xsl:text>
+			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>Not defined.</xsl:text>
 			</xsl:otherwise>
