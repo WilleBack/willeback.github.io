@@ -314,8 +314,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:call-template name="createheader" />
 		<div class="stats" style="width:100%; margin:0.3em; float:left;">
 			<b>Proficiency: </b> <xsl:value-of select="proficient" /><xsl:text>; </xsl:text> <b>Damage: </b> <xsl:value-of select="damage" /><xsl:text>; </xsl:text> <b>Range: </b> <xsl:value-of select="range" /> <br />
-			<b>Cost: </b> <xsl:value-of select="cost" /><xsl:text>; </xsl:text> <xsl:value-of select="weight" />
+			<b>Cost: </b> <xsl:value-of select="cost" /><xsl:text> gp; </xsl:text> <b>Weight: </b> <xsl:value-of select="weight" /> <xsl:text> lb</xsl:text>
 		</div>
+		<xsl:for-each select="description">
+			<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+				<xsl:value-of select="." />
+			</div>
+		</xsl:for-each>
 	</div>
 	
 </xsl:template>
