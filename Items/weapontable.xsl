@@ -44,6 +44,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				width:100%; 
 				font-size:1.4em;
 				font-weight:bold;
+				margin:0.2em 0.1em;
 			}
 			
 			.list {
