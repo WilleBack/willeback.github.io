@@ -361,6 +361,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:when test=".='Brutal 2'">
 				<xsl:text>This weapon's minimum damage is higher than normal. When rolling damage, reroll any die that displays 1 or 2 until the result is higher.</xsl:text>
 			</xsl:when>
+			<xsl:when test=".='Defensive'">
+				<xsl:text>This weapon allows you to defend yourself. While you wield a defensive weapon that you have proficiency with in one hand and another melee weapon in your other hand, you gain a +1 bonus to AC. Wielding more than one defensive weapon does not increase this bonus, and you do not need to attack with the weapon to gain the bonus.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Free Hand'">
+				<xsl:text>This weapon leaves the hand free. A free hand weapon does not need to be drawn, nor does it need to be sheathed for the wielder to use the hand that the weapon is on.</xsl:text>
+			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>Not defined.</xsl:text>
 			</xsl:otherwise>
