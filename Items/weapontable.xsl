@@ -21,7 +21,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside:avoid;
 			}
 			
-			.power {
+			.weapon {
 				margin:0.2cm; 
 				width:98%;
 				float:left;
@@ -176,6 +176,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:for-each>
 	</div>
+		
+		<div class="container">
+			<div class="grouptitle">Weapon Descriptions</div>
+			<xsl:for-each select="catalog/weapon">
+				<xsl:call-template name="weapondesc" />
+			</xsl:for-each>
+		</div>
 	</body>
 	</html>
 </xsl:template>
@@ -299,6 +306,28 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		
 	</xsl:for-each>
+	
+</xsl:template>
+	
+<xsl:template name="weapondesc">
+	<div class="weapon">
+		<xsl:call-template name="createheader" />
+	</div>
+	
+</xsl:template>
+	
+<xsl:template name="createheader">
+	<xsl:param name="bgcolor">#0f2f63</xsl:param>
+	
+	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
+		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
+			<xsl:value-of select="title"/>
+		</div>
+		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.9em; margin:0.5em;">
+			<xsl:value-of select="category"/> <xsl:text> Weapon</xsl:text><br />
+			<xsl:value-of select="hand" />&nbsp;<xsl:value-of select="type" />
+		</div>
+	</div> 
 	
 </xsl:template>
 	
