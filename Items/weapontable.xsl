@@ -231,12 +231,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="line">
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
-			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
+			<div id="line" style="width:100%; float:left; margin-top:0.2em; margin-bottom:0.2em; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
 				<xsl:call-template name="linecontent" />
 			</div>
 		</xsl:when>
 		<xsl:otherwise>
-			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
+			<div id="line" style="width:100%; float:left; margin-top:0.2em; margin-bottom:0.2em; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
 				<xsl:call-template name="linecontent" />
 			</div>
 		</xsl:otherwise>
