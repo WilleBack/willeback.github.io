@@ -12,6 +12,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				
 				box-sizing:border-box;
 				float:left;
+				page-break-inside:avoid;
 			}
 			
 			.weapongroup {
