@@ -38,6 +38,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.groupholder {
 				width:100%;
 				float:left;
+				page-break-inside:avoid;
 			}
 			
 			.grouptitle {
@@ -313,7 +314,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="weapon">
 		<xsl:call-template name="createheader" />
 		<div class="stats" style="width:100%; margin:0.3em; float:left;">
-			<b>Proficiency: </b> <xsl:value-of select="proficient" /><xsl:text>; </xsl:text> <b>Damage: </b> <xsl:value-of select="damage" /><xsl:text>; </xsl:text> <b>Range: </b> <xsl:value-of select="range" /> <br />
+			<b>Proficiency: </b> <xsl:text>+</xsl:text><xsl:value-of select="proficient" /><xsl:text>; </xsl:text> <b>Damage: </b> <xsl:value-of select="damage" /><xsl:text>; </xsl:text> <b>Range: </b> <xsl:value-of select="range" /> <br />
 			<b>Cost: </b> <xsl:value-of select="cost" /><xsl:text> gp; </xsl:text> <b>Weight: </b> <xsl:value-of select="weight" /> <xsl:text> lb</xsl:text>
 		</div>
 		<xsl:for-each select="description">
