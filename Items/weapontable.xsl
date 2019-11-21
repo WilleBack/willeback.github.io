@@ -333,6 +333,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each>
 			</xsl:otherwise>
 		</xsl:choose>
+		<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+			<b>Weapon Groups: </b>
+			<xsl:for-each select="group">
+				<xsl:value-of select="." />
+				<xsl:if test="position()!=last()">
+					<xsl:text>, </xsl:text>
+				</xsl:if>
+			</xsl:for-each>
+		</div>
 	</div>
 	
 </xsl:template>
@@ -341,7 +350,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:param name="bgcolor">#0f2f63</xsl:param>
 	
 	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-		<div id="title" style="float:left; margin:0.5em; margin-bottom:0.1em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:100%;"> 
+		<div id="title" style="float:left; margin:0.3em; margin-bottom:0.1em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:100%;"> 
 			<xsl:value-of select="title"/>
 		</div>
 		<div id="classcat" style="width: 100%; float:left; font-size: 0.9em; margin: 0.15em 0.5em;">
@@ -392,7 +401,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text>This weapon is light enough that it can be held and attacked with effectively while also holding a weapon in the main hand. You can't attack with both weapons in the same turn unless a power allows you to do so, but you can attack with either weapon without penalty.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Reach'">
-				<xsl:text>This weapon can be used to attack targets further away. When using a reach weapon, you can attack enemies that are 2 squares away from you as well as adjacent enemies. You can still flank only enemies adjacent to you, and you can usually only make <![CDATA[<i>opportunity attacks</i>]]> against adjacent enemies.</xsl:text>
+				<xsl:text disable-output-escaping="yes">This weapon can be used to attack targets further away. When using a reach weapon, you can attack enemies that are 2 squares away from you as well as adjacent enemies. You can still flank only enemies adjacent to you, and you can usually only make <![CDATA[<i>opportunity attacks</i>]]> against adjacent enemies.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Returning'">
 				<xsl:text>This weapon returns to the wielder when thrown. After you have resolved a ranged attack with a returning weapon, it immediately returns to your hand.</xsl:text>
