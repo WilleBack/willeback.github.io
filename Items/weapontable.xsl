@@ -367,8 +367,41 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:when test=".='Free Hand'">
 				<xsl:text>This weapon leaves the hand free. A free hand weapon does not need to be drawn, nor does it need to be sheathed for the wielder to use the hand that the weapon is on.</xsl:text>
 			</xsl:when>
+			<xsl:when test=".='Heavy Thrown'">
+				<xsl:text>This weapon this weapon can be hurled from the hand to be used as a ranged weapon. A ranged attack with a heavy thrown weapon uses your Strength modifier for the attack roll and damage roll, unless the attack used defines a different ability.</xsl:text>
+			</xsl:when>
 			<xsl:when test=".='High Crit'">
 				<xsl:text>This weapon deals additional damage on a critical hit. When you score a critical hit with a high crit weapon, you deal an extra +1[W] damage. This increases to +2[W] at 11th level, and to +3[W] at 21st level. This is in addition to any critical damage the weapon might deal from being magical.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Light Thrown'">
+				<xsl:text>This weapon this weapon can be hurled from the hand to be used as a ranged weapon. A ranged attack with a light thrown weapon uses your Dexterity modifier for the attack roll and damage roll, unless the attack used defines a different ability.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Limited'">
+				<xsl:text>This weapon is limited in how it can be used. See the description for specifics.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Load Free'">
+				<xsl:text>This weapon is a ranged weapon that looses projectiles, such as arrows, bolts or stones, and takes some time to load. A load free weapon can be loaded as either a free action or as part of the action used to attack with the weapon. A weapon with a load property requires two hands to load, even if you can use only one hand to attack with it.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Load Minor'">
+				<xsl:text>This weapon is a ranged weapon that looses projectiles, such as arrows, bolts or stones, and takes some time to load. A load minor weapon can be loaded as a minor action, but if a power allows you to attack multiple targets, the additional load time for additional targets is accounted for in the power. A weapon with a load property requires two hands to load, even if you can use only one hand to attack with it.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Mounted'">
+				<xsl:text>This weapon is most effective when used while riding a mount. When you use a mounted weapon while mounted, your charge attacks with it deal +1[W] additional damage. You take a -2 penalty to attack rolls with a mounted weapon while not mounted.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Off-Hand'">
+				<xsl:text>This weapon is light enough that it can be held and attack with effectively while also holding a weapon in the main hand. You can't attack with both weapons in the same turn unless a power allows you to do so, but you can attack with either weapon without penalty.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Reach'">
+				<xsl:text>This weapon can be used to attack targets further away. When using a reach weapon, you can attack enemies that are 2 squares away from you as well as adjacent enemies. You can still flank only enemies adjacent to you, and you can usually only make <![CDATA[<i>opportunity attacks</i>]]> against adjacent enemies.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Rogue'">
+				<xsl:text>This weapon has special benefits for Rogues, usually related to the Scoundrel Weapon Talent. See the description for specifics.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Small'">
+				<xsl:text>This weapon is smaller, or otherwise designed to be used by smaller characters. If you are Small size, you can use a small two-handed weapon just as a Medium character can. If you are a Small character and wield a small versatile weapon, you are not forced to wield it in two hands, and gain the bonus to damage when you do wield it with both hands.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Stout'">
+				<xsl:text>This double weapon is extra sturdy. The stout end of a double weapon counts as a two-handed weapon for requirements and other abilities.</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>Not defined.</xsl:text>
