@@ -389,10 +389,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text>This weapon is most effective when used while riding a mount. When you use a mounted weapon while mounted, your charge attacks with it deal +1[W] additional damage. You take a -2 penalty to attack rolls with a mounted weapon while not mounted.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Off-Hand'">
-				<xsl:text>This weapon is light enough that it can be held and attack with effectively while also holding a weapon in the main hand. You can't attack with both weapons in the same turn unless a power allows you to do so, but you can attack with either weapon without penalty.</xsl:text>
+				<xsl:text>This weapon is light enough that it can be held and attacked with effectively while also holding a weapon in the main hand. You can't attack with both weapons in the same turn unless a power allows you to do so, but you can attack with either weapon without penalty.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Reach'">
 				<xsl:text>This weapon can be used to attack targets further away. When using a reach weapon, you can attack enemies that are 2 squares away from you as well as adjacent enemies. You can still flank only enemies adjacent to you, and you can usually only make <![CDATA[<i>opportunity attacks</i>]]> against adjacent enemies.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Returning'">
+				<xsl:text>This weapon returns to the wielder when thrown. After you have resolved a ranged attack with a returning weapon, it immediately returns to your hand.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Rogue'">
 				<xsl:text>This weapon has special benefits for Rogues, usually related to the Scoundrel Weapon Talent. See the description for specifics.</xsl:text>
@@ -402,6 +405,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:when>
 			<xsl:when test=".='Stout'">
 				<xsl:text>This double weapon is extra sturdy. The stout end of a double weapon counts as a two-handed weapon for requirements and other abilities.</xsl:text>
+			</xsl:when>
+			<xsl:when test=".='Versatile'">
+				<xsl:text>This weapon is one-handed, but can be wielded two-handed. When you wield a versatile weapon in two hands, you deal +1 additional damage for each [W] of damage, rounded up. If you are a Small character, you must wield a versatile weapon in two hands, but do not gain this bonus to damage.</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>Not defined.</xsl:text>
