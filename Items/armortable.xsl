@@ -22,7 +22,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside:avoid;
 			}
 			
-			.weapon {
+			.armor {
 				margin:0.2cm; 
 				width:98%;
 				float:left;
@@ -165,26 +165,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:for-each>
 		
 	</div> <!-- list container -->
-	
-	<div class="container">
-		<div class="grouptitle">Weapons by Group</div>
-		<xsl:for-each select="catalog/group">
-			<div class="weapongroup">
-				<b><xsl:value-of select="@selection" />: </b>
-				<xsl:for-each select="//catalog/weapon[group=current()/@selection or secondary/group=current()/@selection]">
-					<xsl:value-of select="./title" />
-					<xsl:if test="position()!=last()">
-						<xsl:text>, </xsl:text>
-					</xsl:if>
-				</xsl:for-each>
-			</div>
-		</xsl:for-each>
-	</div>
 		
 		<div class="container">
-			<div class="grouptitle">Weapon Descriptions</div>
-			<xsl:for-each select="catalog/weapon">
-				<xsl:call-template name="weapondesc" />
+			<div class="grouptitle">Armor Descriptions</div>
+			<xsl:for-each select="catalog/armor">
+				<xsl:call-template name="armordesc" />
 			</xsl:for-each>
 		</div>
 	</body>
@@ -257,8 +242,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 </xsl:template>
 	
-<xsl:template name="weapondesc">
-	<div class="weapon">
+<xsl:template name="armordesc">
+	<div class="armor">
 		<xsl:call-template name="createheader" />
 		<div class="stats" style="width:100%; margin:0.3em; float:left;">
 			<b>Proficiency: </b> <xsl:text>+</xsl:text><xsl:value-of select="proficient" /><xsl:text>; </xsl:text> <b>Damage: </b> <xsl:value-of select="damage" /><xsl:text>; </xsl:text> <b>Range: </b> <xsl:value-of select="range" /> <br />
