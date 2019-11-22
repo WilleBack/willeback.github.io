@@ -68,30 +68,30 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.bonus {
-				width:4em;
+				width:calc(20% - 1.5em);
 				float:left;
 				text-align:center;
 			}
 			
 			.penalty {
-				width:4em;
+				width:calc(20% - 1.5em);
 				float:left;
 				text-align:center;
 			}
 			
 			.speed {
-				width:5em;
+				width:calc(20% - 1.5em);
 				float:left;
 				text-align:center;
 			}
 			
 			.price {
-				width:4em;
+				width:calc(20% - 1.5em);
 				float:left;
 			}
 			
 			.weight {
-				width:3.5em;
+				width:calc(20% - 1.5em);
 				float:left;
 			}
 			
