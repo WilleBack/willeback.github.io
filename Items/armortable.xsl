@@ -67,17 +67,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 			}
 			
-			.prof {
-				width:3em;
+			.bonus {
+				width:4em;
 				float:left;
 			}
 			
-			.damage {
-				width:3.5em;
+			.penalty {
+				width:4em;
 				float:left;
 			}
 			
-			.range {
+			.speed {
 				width:5em;
 				float:left;
 				text-align:center;
