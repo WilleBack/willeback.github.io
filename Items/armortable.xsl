@@ -266,7 +266,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:value-of select="title"/>
 		</div>
 		<div id="classcat" style="width: 100%; float:left; font-size: 0.9em; margin: 0.15em 0.5em;">
-			<xsl:value-of select="category"/>&#160;<xsl:value-of select="hand" />&#160;<xsl:value-of select="type" /><xsl:text> weapon</xsl:text>
+			<xsl:value-of select="category"/>
 		</div>
 	</div> 
 	
