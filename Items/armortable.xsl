@@ -63,18 +63,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 			
 			.title {
-				width:10.5em; 
+				width:12em; 
 				float:left;
 			}
 			
 			.bonus {
 				width:4em;
 				float:left;
+				text-align:center;
 			}
 			
 			.penalty {
 				width:4em;
 				float:left;
+				text-align:center;
 			}
 			
 			.speed {
