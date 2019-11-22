@@ -191,50 +191,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="list">
 	
-	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='one-handed' and type='melee'])>0">
-		<div class="list">
-			<div class="groupname"><xsl:text>One-handed Melee</xsl:text></div>
-			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='one-handed' and type='melee']">
-				<xsl:call-template name="line" />
-			</xsl:for-each>
-		</div>
-	</xsl:if>
-	
-	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='two-handed' and type='melee'])>0">
-		<div class="list">
-			<div class="groupname"><xsl:text>Two-handed Melee</xsl:text></div>
-			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='two-handed' and type='melee']">
-				<xsl:call-template name="line" />
-			</xsl:for-each>
-		</div>
-	</xsl:if>
-	
-	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='double' and type='melee'])>0">
-		<div class="list">
-			<div class="groupname"><xsl:text>Double Melee</xsl:text></div>
-			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='double' and type='melee']">
-				<xsl:call-template name="line" />
-			</xsl:for-each>
-		</div>
-	</xsl:if>
-	
-	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='one-handed' and type='ranged'])>0">
-		<div class="list">
-			<div class="groupname"><xsl:text>One-handed Ranged</xsl:text></div>
-			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='one-handed' and type='ranged']">
-				<xsl:call-template name="line" />
-			</xsl:for-each>
-		</div>
-	</xsl:if>
-	
-	<xsl:if test="count(//catalog/weapon[category=current()/@selection and hand='two-handed' and type='ranged'])>0">
-		<div class="list">
-			<div class="groupname"><xsl:text>Two-handed Ranged</xsl:text></div>
-			<xsl:for-each select="//catalog/weapon[category=current()/@selection and hand='two-handed' and type='ranged']">
-				<xsl:call-template name="line" />
-			</xsl:for-each>
-		</div>
-	</xsl:if>
+	<div class="list">
+		<xsl:for-each select="//catalog/armor[category=current()/@selection]">
+			<xsl:call-template name="line" />
+		</xsl:for-each>
+	</div>
 
 </xsl:template>
 
@@ -257,28 +218,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="linecontent">
 	
 	<div class="title"><xsl:value-of select="title"/></div>
-	<div class="prof"><xsl:text>+</xsl:text><xsl:value-of select="proficient"/></div>
-	<div class="damage"><xsl:value-of select="damage"/></div>
-	<div class="range"><xsl:value-of select="range"/></div>
+	<div class="bonus"><xsl:text>+</xsl:text><xsl:value-of select="bonus"/></div>
+	<div class="penalty"><xsl:text>-</xsl:text><xsl:value-of select="penalty"/></div>
+	<div class="speed"><xsl:text>-</xsl:text><xsl:value-of select="speed"/></div>
 	<div class="price"><xsl:value-of select="cost"/><xsl:text> gp</xsl:text></div>
 	<div class="weight"><xsl:value-of select="weight"/><xsl:text> lb</xsl:text></div>
-	<div class="category"> 
-		<i><xsl:for-each select="group">
-			<xsl:value-of select="."/>
-			<xsl:if test="position()!=last()">
-				<xsl:text>, </xsl:text>
-			</xsl:if> 
-		</xsl:for-each>
-		&#160;</i> 
-	</div>
-	<div class="property">
-		<xsl:for-each select="property">
-			<xsl:value-of select="."/>
-			<xsl:if test="position()!=last()">
-				<xsl:text>, </xsl:text>
-			</xsl:if> 
-		</xsl:for-each>
-	</div>
 	
 	<xsl:for-each select="secondary">
 		<div class="linecontainer" style="width:100%; float:left;">
