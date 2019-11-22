@@ -246,7 +246,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="armor">
 		<xsl:call-template name="createheader" />
 		<div class="stats" style="width:100%; margin:0.3em; float:left;">
-			<b>Armor Bonus: </b> <xsl:text>+</xsl:text><xsl:value-of select="bonus" /><xsl:text>; </xsl:text> <b>Check Penalty: </b> <xsl:text>-</xsl:text><xsl:value-of select="penalty" /><xsl:text>; </xsl:text> <b>Speed Penalty: </b> <xsl:text>-</xsl:text><xsl:value-of select="speed" /> <br />
+			<b>Check Penalty: </b> <xsl:text>-</xsl:text><xsl:value-of select="penalty" /><xsl:text>; </xsl:text> <b>Speed Penalty: </b> <xsl:text>-</xsl:text><xsl:value-of select="speed" /> <br />
+			<b>Armor Bonus: </b> <xsl:text>+</xsl:text><xsl:value-of select="bonus" /><xsl:text><br />
 			<b>Cost: </b> <xsl:value-of select="cost" /><xsl:text> gp; </xsl:text> <b>Weight: </b> <xsl:value-of select="weight" /> <xsl:text> lb</xsl:text>
 		</div>
 		<xsl:for-each select="description">
