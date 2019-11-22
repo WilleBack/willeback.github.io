@@ -157,7 +157,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
         	<xsl:for-each select="catalog/category">
 			<div class="groupholder">
-				<div class="grouptitle"><xsl:value-of select="@selection" /> Weapons</div>
+				<div class="grouptitle"><xsl:value-of select="@selection" /></div>
 				<xsl:call-template name="list" />
 			</div>
 		</xsl:for-each>
