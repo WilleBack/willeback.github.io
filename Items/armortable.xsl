@@ -211,35 +211,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="price"><xsl:value-of select="cost"/><xsl:text> gp</xsl:text></div>
 	<div class="weight"><xsl:value-of select="weight"/><xsl:text> lb</xsl:text></div>
 	
-	<xsl:for-each select="secondary">
-		<div class="linecontainer" style="width:100%; float:left;">
-			<div class="title"><xsl:value-of select="title"/></div>
-			<div class="prof"><xsl:text>+</xsl:text><xsl:value-of select="proficient"/></div>
-			<div class="damage"><xsl:value-of select="damage"/></div>
-			<div class="range"><xsl:value-of select="range"/></div>
-			<div class="price"><xsl:value-of select="cost"/></div>
-			<div class="weight"><xsl:value-of select="weight"/></div>
-			<div class="category"> 
-				<i><xsl:for-each select="group">
-					<xsl:value-of select="."/>
-					<xsl:if test="position()!=last()">
-						<xsl:text>, </xsl:text>
-					</xsl:if> 
-				</xsl:for-each>
-				&#160;</i> 
-			</div>
-			<div class="property">
-				<xsl:for-each select="property">
-					<xsl:value-of select="."/>
-					<xsl:if test="position()!=last()">
-						<xsl:text>, </xsl:text>
-					</xsl:if> 
-				</xsl:for-each>
-			</div>
-		</div>
-		
-	</xsl:for-each>
-	
 </xsl:template>
 	
 <xsl:template name="armordesc">
@@ -247,7 +218,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:call-template name="createheader" />
 		<div class="stats" style="width:100%; margin:0.3em; float:left;">
 			<b>Check Penalty: </b> <xsl:text>-</xsl:text><xsl:value-of select="penalty" /><xsl:text>; </xsl:text> <b>Speed Penalty: </b> <xsl:text>-</xsl:text><xsl:value-of select="speed" /> <br />
-			<b>Armor Bonus: </b> <xsl:text>+</xsl:text><xsl:value-of select="bonus" /><br />
+			<b>Base Armor Bonus: </b> <xsl:text>+</xsl:text><xsl:value-of select="bonus" /><br />
 			<b>Cost: </b> <xsl:value-of select="cost" /><xsl:text> gp; </xsl:text> <b>Weight: </b> <xsl:value-of select="weight" /> <xsl:text> lb</xsl:text>
 		</div>
 		<xsl:for-each select="description">
