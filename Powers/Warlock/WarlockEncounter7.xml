@@ -606,4 +606,85 @@
       </part>
    </power>
    
+   <power>
+      <title>Mordant Rain of Dis</title>
+      <class>Warlock</class> <category>Attack</category> <level>7</level>
+      <fluff>You open a portal to Dis above your foes' heads, releasing caustic rain upon them</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Acid, Arcane, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 10 square</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Charisma vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>3d6 + Charisma modifier acid damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If the target is under your curse, it is blinded until the end of your next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>If the target is under your curse, it treats all creatures as having concealment until the end of your next turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Nypacian Serpents</title>
+      <class>Warlock</class> <category>Attack</category> <level>7</level>
+      <fluff>You create semblances of the serpents of the Nycapian Outlands to attack your enemies</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Conjuration, Implement, Poison</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One or two creatures</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You conjure semblances of serpents in each target's space until the end of your next turn. The semblance does not occupy a space, and remains in the target's space even when the target moves.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>You immediately make the Viper's Fangs attack against each target, using the conjuration as the point of origin.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The first time the target is hit after this attack is resolved, the semblance strikes the target, dealing poison damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
+         </section>
+      </part>
+      <part>
+         <frequency>Automatic</frequency>
+         <keyword>Arcane, Implement, Poison</keyword>
+         <action>Nonaction</action>
+         <type>Melee</type> <range>0 from the conjuration</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The target in the conjuration's space</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Charisma vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d8 + Charisma modifier poison damage.</text>
+         </section>
+      </part>
+   </power>
+   
 </catalog>
