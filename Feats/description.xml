@@ -17820,6 +17820,24 @@
    </feat>
    
    <feat>
+      <title>Expanded Area Training</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Arena Training</name>
+      </prereq>
+      <group>Class</group>
+      <group>Proficiency Gain</group>
+      <group>Weapon Specialization</group>
+      <benefit>Choose two weapons that are not your arena weapons.</benefit>
+      <benefit>You gain proficiency with the chosen weapons if you don't already have it, and the chosen weapons become additional arena weapons for you.</benefit>
+   </feat>
+   
+   <feat>
       <title>Expanded Shard Swarm</title>
       <tier>Epic</tier>
       <prereq>
@@ -17978,6 +17996,225 @@
       <group>Class</group>
       <group>Combat Advantage</group>
       <benefit>You gain combat advantage against enemies that are deafened, immobilized, slowed, or weakened.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Expert Tracker</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Nature</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any primal</name>
+      </prereq>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +3 bonus to Perception checks to find tracks.</benefit>
+      <benefit>You also add the bonus to the Perception DC for other creatures to find your tracks. You can extend this benefit to up to six allies traveling with your.</benefit>
+      <benefit>This bonus increases to +4 and you can extend the DC increase to 4 allies at 11th level, and to +5 and ten allies at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Expert Trample</title>
+      <tier>Heroic</tier>
+      <group>Defense</group>
+      <group>Mounted Combat</group>
+      <benefit>When you are riding your mount, it gains a +4 bonus to AC against attacks triggered by using a trample power or similar ability.</benefit>
+      <benefit>Your mount also gains a +2 bonus to AC against attacks triggered by entering an enemy's space in other ways.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Exploration Mastery</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Ritual Caster</name>
+      </prereq>
+      <prereq>
+         <type>ritual</type>
+         <name>endure elements</name>
+      </prereq>
+      <prereq>
+         <type>ritual</type>
+         <name>one other exploration</name>
+      </prereq>
+      <group>Rituals</group>
+      <group>Skill Enhancement</group>
+      <benefit>When you make an Endurance check that is not made to determine a disease's stage change, you can use your Arcana check modifier, Nature check modifier, or Religion check modifier in place of your Endurance check modifier.</benefit>
+      <benefit>Also, once per day, you can ignore the component cost of an exploration ritual of your level or lower that you have mastered.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Explosive Leader</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>earthshock</name>
+         <qualifier>racial</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>firepulse</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>When you hit an enemy with your <![CDATA[<i>earthshock</i> racial power or your <i>firepulse</i>]]> racial power, until the end of your next turn, allies in your <![CDATA[<i>warlord's aura</i>]]> gain a +2 bonus to attack rolls against that enemy.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Explosive Power</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>role</type>
+         <name>Controller</name>
+      </prereq>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <group>Power Repertoire</group>
+      <benefit>You gain the <![CDATA[<i>explosive power</i>]]> feat power.</benefit>
+      
+      <power>
+         <title>Explosive Power</title>
+         <class>Feat</class> <category>Utility</category>
+         <fluff>Your attack explodes outward in a silent wave of energy, pushing creatures away from your attack's point of origin</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You use an attack power that is a close blast, close burst, or area burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer in the blast or burst.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You must also push each other creature in the burst or blast 1 square from the attack's point of origin. This forced movement ends when the target is no longer in the blast or burst.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You can resolve the rest of the power against these creatures even if they are outside of the power's blast or burst.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+   
+   <feat>
+      <title>Explosive Spellcasting</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <benefit>When you score a critical hit with an arcane area or close attack power and you are wielding an implement that deals extra damage on a critical hit, you can choose to deal that extra damage against any single target that you hit with the attack.</benefit>
+      <benefit>If you score more than one critical hit, you can choose to deal the extra damage to the same target.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Exposing Oath</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Oath of Enmity</name>
+      </prereq>
+      <group>Class</group>
+      <group>Necrotic Specialization</group>
+      <group>Radiant Specialization</group>
+      <benefit>Your attacks ignore any resist necrotic or resist radiant that the creature under your oath might have.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Extended Aegis</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Arcane Aegis</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>aegis of assault</name>
+         <qualifier>class</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>aegis of ensnarement</name>
+         <qualifier>class</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>aegis of shielding</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <benefit>You can trigger your <![CDATA[<i>aegis or assault</i> class power, your <i>aegis of ensnarement</i> class power, or your <i>aegis of shielding</i> class power when the creature marked by your <i>arcane aegis</i>]]> class power is within 15 squares instead of 10 squares.</benefit>
+      <benefit>Starting at 21st level, you can use the power when the target is within 20 squares instead.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Extended Healing Word</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>healing word</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <benefit>The burst of your <![CDATA[<i>healing word</i>]]> class power increases by 5.</benefit>
    </feat>
    
    <feat>
