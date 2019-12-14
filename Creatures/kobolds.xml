@@ -2,6 +2,118 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Kobold Chieftain</title>
+      <level>4</level> <role>Soldier</role> <xp>175</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
+      
+      <init>+5</init> <perception>+3</perception> <insight>+3</insight>
+      <sense>darkvision</sense>
+      
+      <hp>43</hp> <bloodied>21</bloodied>
+      <ac>19</ac> <fort>16</fort> <ref>15</ref> <will>17</will>
+      <speed>5</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Fight On, You Slugs!</name> <type>aura</type>
+            <keyword>Martial</keyword>
+            <frequency>Aura</frequency> <note>5</note>
+            <line>While the chieftain is not bloodied, allied kobolds in the aura gain a +2 bonus to attack rolls.</line>
+         </block>
+         
+         <block>
+            <name>Trap Sense</name>
+            <line>The kobold gains a +2 bonus to all defenses against traps.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category>
+         
+         <block>
+            <name>Battleaxe</name> <type>mbasic</type>
+            <keyword>Martial</keyword> <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +9 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d10 + 5 damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The target is marked by the chieftain until the end of the chieftain's next turn.</line>
+         </block>
+         
+         <block>
+            <name>Handaxe</name> <type>rbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 5/10 (one creature); +8 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 4 damage.</line>
+         </block>
+         
+         <block>
+            <name>Knee Splitter</name> <type>melee</type>
+            <keyword>Martial</keyword> <keyword>Weapon</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +9 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d10 + 5 damage, and the target is immobilized (save ends).</line>
+            <line indent="1"><![CDATA[<i>Aftereffect:</i>]]> The target is slowed (save ends).</line>
+            <line><![CDATA[<i>Miss:</i>]]> 7 damage, and the target is slowed until the end of its next turn.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Minor Action</category-name>
+         
+         <block>
+            <name>Cheap Shot</name> <type>melee</type>
+            <keyword>Martial</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Requirement:</i>]]> The chieftain must be flanking the target.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one Medium or smaller creature); +8 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> The target is dazed (save ends).</line>
+         </block>
+         
+         <block>
+            <name>Shifty</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The kobold shifts 1 square.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Athletics</name> <value>+10</value>
+      </skill>
+      <skill>
+         <name>Intimidate</name> <value>+10</value>
+      </skill>
+      
+      <str>
+         <value>16</value> <mod>+3 / +5</mod>
+      </str>
+      <con>
+         <value>13</value> <mod>+1 / +3</mod>
+      </con>
+      <dex>
+         <value>14</value> <mod>+2 / +4</mod>
+      </dex>
+      <int>
+         <value>11</value> <mod>+0 / +2</mod>
+      </int>
+      <wis>
+         <value>13</value> <mod>+1 / +3</mod>
+      </wis>
+      <cha>
+         <value>16</value> <mod>+3 / +5</mod>
+      </cha>
+      
+      <alignment>evil</alignment>
+      <language>Common</language> <language>Draconi</language>
+      
+      <equipment>scale armor</equipment>
+      <equipment>battleaxe</equipment>
+      <equipment>handaxe x3</equipment>
+   </creature>
+   
+   <creature>
       <title>Kobold Dragonshield</title>
       <level>1</level> <role>Soldier</role> <xp>100</xp>
       <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
@@ -26,7 +138,6 @@
             <line>The kobold gains a +2 bonus to all defenses against traps.</line>
          </block>
       </category>
-      
       
       <category>
          <category-name>Standard Actions</category-name>
@@ -292,7 +403,7 @@
       <init>+4</init> <perception>+4</perception> <insight>+4</insight>
       <sense>darkvision</sense>
       
-      <hp>35</hp> <bloodied>17</bloodied>
+      <hp>36</hp> <bloodied>18</bloodied>
       <ac>16</ac> <fort>14</fort> <ref>13</ref> <will>15</will>
       <speed>6</speed>
       
@@ -320,16 +431,16 @@
             <name>Acid Orb</name> <type>ranged</type>
             <keyword>Acid</keyword> <keyword>Arcane</keyword>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +6 vs. Reflex</line>
-            <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 lightning damage.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +8 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 acid damage.</line>
          </block>
          
          <block>
             <name>Acid Breath</name> <type>close</type>
             <keyword>Acid</keyword> <keyword>Arcane</keyword>
             <frequency>Encounter</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +5 vs. Reflex</line>
-            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 lightning damage.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +8 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 acid damage.</line>
          </block>
       </category>
       
@@ -350,7 +461,7 @@
       </category>
       
       <skill>
-         <name>Intimidate</name> <value>+8</value>
+         <name>Intimidate</name> <value>+9</value>
       </skill>
       <skill>
          <name>Religion</name> <value>+7</value>
@@ -391,7 +502,7 @@
       <init>+4</init> <perception>+4</perception> <insight>+4</insight>
       <sense>darkvision</sense>
       
-      <hp>35</hp> <bloodied>17</bloodied>
+      <hp>36</hp> <bloodied>18</bloodied>
       <ac>16</ac> <fort>13</fort> <ref>14</ref> <will>15</will>
       <speed>6</speed>
       
@@ -419,7 +530,7 @@
             <name>Lightning Orb</name> <type>ranged</type>
             <keyword>Arcane</keyword> <keyword>Lightning</keyword>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +6 vs. Reflex</line>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +8 vs. Reflex</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 lightning damage.</line>
          </block>
          
@@ -427,7 +538,7 @@
             <name>Lightning Breath</name> <type>close</type>
             <keyword>Arcane</keyword> <keyword>Lightning</keyword>
             <frequency>Encounter</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +5 vs. Reflex</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +8 vs. Reflex</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 lightning damage.</line>
          </block>
       </category>
@@ -449,7 +560,7 @@
       </category>
       
       <skill>
-         <name>Intimidate</name> <value>+8</value>
+         <name>Intimidate</name> <value>+9</value>
       </skill>
       <skill>
          <name>Religion</name> <value>+7</value>
@@ -490,7 +601,7 @@
       <init>+4</init> <perception>+4</perception> <insight>+4</insight>
       <sense>darkvision</sense>
       
-      <hp>35</hp> <bloodied>17</bloodied>
+      <hp>36</hp> <bloodied>18</bloodied>
       <ac>16</ac> <fort>14</fort> <ref>13</ref> <will>15</will>
       <speed>6</speed>
       
@@ -518,7 +629,7 @@
             <name>Poison Orb</name> <type>ranged</type>
             <keyword>Arcane</keyword> <keyword>Poison</keyword>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +6 vs. Fortitude</line>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +8 vs. Fortitude</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 poison damage.</line>
          </block>
          
@@ -526,7 +637,7 @@
             <name>Poison Breath</name> <type>close</type>
             <keyword>Arcane</keyword> <keyword>Poison</keyword>
             <frequency>Encounter</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +5 vs. Fortitude</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +8 vs. Fortitude</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 poison damage.</line>
          </block>
       </category>
@@ -548,7 +659,7 @@
       </category>
       
       <skill>
-         <name>Intimidate</name> <value>+8</value>
+         <name>Intimidate</name> <value>+9</value>
       </skill>
       <skill>
          <name>Religion</name> <value>+7</value>
@@ -589,7 +700,7 @@
       <init>+4</init> <perception>+4</perception> <insight>+4</insight>
       <sense>darkvision</sense>
       
-      <hp>35</hp> <bloodied>17</bloodied>
+      <hp>36</hp> <bloodied>18</bloodied>
       <ac>16</ac> <fort>13</fort> <ref>14</ref> <will>15</will>
       <speed>6</speed>
       
@@ -617,7 +728,7 @@
             <name>Fire Orb</name> <type>ranged</type>
             <keyword>Arcane</keyword> <keyword>Fire</keyword>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +6 vs. Reflex</line>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +8 vs. Reflex</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 fire damage.</line>
          </block>
          
@@ -625,7 +736,7 @@
             <name>Fire Breath</name> <type>close</type>
             <keyword>Arcane</keyword> <keyword>Lightning</keyword>
             <frequency>Encounter</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +5 vs. Reflex</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +8 vs. Reflex</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 fire damage.</line>
          </block>
       </category>
@@ -647,7 +758,7 @@
       </category>
       
       <skill>
-         <name>Intimidate</name> <value>+8</value>
+         <name>Intimidate</name> <value>+9</value>
       </skill>
       <skill>
          <name>Religion</name> <value>+7</value>
@@ -688,7 +799,7 @@
       <init>+4</init> <perception>+4</perception> <insight>+4</insight>
       <sense>darkvision</sense>
       
-      <hp>35</hp> <bloodied>17</bloodied>
+      <hp>36</hp> <bloodied>18</bloodied>
       <ac>16</ac> <fort>14</fort> <ref>13</ref> <will>15</will>
       <speed>6</speed>
       
@@ -716,7 +827,7 @@
             <name>Frost Orb</name> <type>ranged</type>
             <keyword>Arcane</keyword> <keyword>Cold</keyword>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +6 vs. Fortitude</line>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +8 vs. Fortitude</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 cold damage.</line>
          </block>
          
@@ -724,7 +835,7 @@
             <name>Frost Breath</name> <type>close</type>
             <keyword>Arcane</keyword> <keyword>Cold</keyword>
             <frequency>Encounter</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +5 vs. Fortitude</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (creatures in blast); +8 vs. Fortitude</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 cold damage.</line>
          </block>
       </category>
@@ -746,7 +857,7 @@
       </category>
       
       <skill>
-         <name>Intimidate</name> <value>+8</value>
+         <name>Intimidate</name> <value>+9</value>
       </skill>
       <skill>
          <name>Religion</name> <value>+7</value>
