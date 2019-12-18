@@ -713,7 +713,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="list">
 			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:if test="@selection='Defender' or @selection='Controller' or @selection='Striker' or @selection='Leader'"> <xsl:text> role</xsl:text> </xsl:if> <xsl:text> - Heroic</xsl:text></div>
 			<xsl:choose>
-				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling' or @selection='Pixie'">
+				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling' or @selection='Pixie' or selection='Svirfneblin'">
 					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
@@ -731,7 +731,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="list">
 			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:if test="@selection='Defender' or @selection='Controller' or @selection='Striker' or @selection='Leader'"> <xsl:text> role</xsl:text> </xsl:if> <xsl:text> - Paragon</xsl:text></div>
 			<xsl:choose>
-				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling' or @selection='Pixie'">
+				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling' or @selection='Pixie' or selection='Svirfneblin'">
 					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
@@ -749,7 +749,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="list">
 			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:if test="@selection='Defender' or @selection='Controller' or @selection='Striker' or @selection='Leader'"> <xsl:text> role</xsl:text> </xsl:if> <xsl:text> - Epic</xsl:text></div>
 			<xsl:choose>
-				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling' or @selection='Pixie'">
+				<xsl:when test="@selection='Goblin' or @selection='Gnome' or @selection='Halfling' or @selection='Pixie' or selection='Svirfneblin'">
 					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
