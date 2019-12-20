@@ -753,7 +753,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="createheader">
    <xsl:param name="bgcolor">Purple</xsl:param>
    <div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-      <div id="title" style="float:left; margin:0.5em; margin-bottom: 0.2em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10.6em);"> 
+      <div id="title" style="float:left; margin:0.3em; margin-bottom: 0.2em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10.6em);"> 
          <xsl:value-of select="title"/>
       </div>
       <div id="rolelevel" style="width: 13.3em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
