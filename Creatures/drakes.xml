@@ -9,7 +9,7 @@
       
       <init>+3</init> <perception>+7</perception> <insight>+2</insight>
       
-      <hp>34</hp> <bloodied>17</bloodied>
+      <hp>40</hp> <bloodied>20</bloodied>
       <ac>14</ac> <fort>14</fort> <ref>12</ref> <will>12</will>
       <defnote>See Guarded Area</defnote>
       <speed>6</speed>
@@ -38,6 +38,11 @@
       
       <alignment>unaligned</alignment>
       <language>-</language>
+      
+      <skill>
+         <name>Perception</name>
+         <value>+7</value>
+      </skill>
       
       <str>
          <value>17</value>
@@ -127,6 +132,77 @@
       <cha>
          <value>11</value>
          <mod>+0 / +0</mod>
+      </cha>
+   </creature>
+   
+   <creature>
+      <title>Spitting Drake</title>
+      <level>2</level> <role>Artillery</role> <xp>150</xp>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type> <subtype>reptile</subtype>
+      
+      <init>+4</init> <perception>+3</perception> <insight>+3</insight>
+      
+      <hp>37</hp> <bloodied>18</bloodied>
+      <ac>16</ac> <fort>13</fort> <ref>14</ref> <will>13</will>
+      <speed>7</speed>
+      
+      <resist>
+         <type>acid</type> <value>5</value>
+      </resist>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <keyword>Acid</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage.</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]> The target also takes ongoing 5 acid damage.</line>
+         </block>
+         
+         <block>
+            <name>Caustic Spit</name> <type>ranged</type>
+            <keyword>Acid</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 7/15 (one creature); +6 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 3 acid damage.</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]> Acid sticks to the target's face (save ends).</line>
+            <line indent="1">While the acid sticks, the target is blinded and takes ongoing 5 acid damage.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+      
+      <str>
+         <value>13</value>
+         <mod>+1 / +2</mod>
+      </str>
+      <con>
+         <value>12</value>
+         <mod>+1 / +2</mod>
+      </con>
+      <dex>
+         <value>17</value>
+         <mod>+3 / +4</mod>
+      </dex>
+      <int>
+         <value>3</value>
+         <mod>-4 / -3</mod>
+      </int>
+      <wis>
+         <value>14</value>
+         <mod>+2 / +3</mod>
+      </wis>
+      <cha>
+         <value>13</value>
+         <mod>+1 / +2</mod>
       </cha>
    </creature>
 </catalog>
