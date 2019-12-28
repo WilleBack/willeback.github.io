@@ -153,6 +153,72 @@
    </creature>
    
    <creature>
+      <title>Giant Ant, Hive Warrior</title>
+      <level>2</level> <role>skirmisher</role> <xp>125</xp>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+      
+      <init>+4</init> <perception>+0</perception> <insight>+0</insight>
+      <sense>low-light vision</sense>
+      <sense>tremorsense 10</sense>
+      
+      <hp>30</hp> <bloodied>15</bloodied>
+      <ac>16</ac> <fort>14</fort> <ref>14</ref> <will>12</will>
+      <speed>8</speed> <climb>8</climb>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Piercing Bite</name> <type>mbasic</type>
+            <keyword>Acid</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage, and additional 1d10 acid damage if the target is taking ongoing acid damage.</line>
+            <line>If the hive warrior has combat advantage against the target, it deals ongoing 5 acid damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Triggered Actions</category-name>
+         
+         <block>
+            <name>Hive Warrior Frenzy</name>
+            <line><![CDATA[<i>Trigger (free reaction):</i>]]> A giant ant within 10 squares is reduced to 0 hit points or fewer</line>
+            <line><![CDATA[<i>Effect:</i>]]> The hive warrior is no longer marked, cursed, quarrier, or affected by similar effects.</line>
+            <line>The hive warrior shifts up to 2 squares.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <str>
+         <value>14</value>
+         <mod>+2 / +3</mod>
+      </str>
+      <con>
+         <value>12</value>
+         <mod>+1 / +2</mod>
+      </con>
+      <dex>
+         <value>16</value>
+         <mod>+3 / +4</mod>
+      </dex>
+      <int>
+         <value>2</value>
+         <mod>-4 / -3</mod>
+      </int>
+      <wis>
+         <value>9</value>
+         <mod>-1 / +0</mod>
+      </wis>
+      <cha>
+         <value>4</value>
+         <mod>-3 / -2</mod>
+      </cha>
+   </creature>
+   
+   <creature>
       <title>Giant Ant, Hive Worker</title>
       <level>1</level> <rolestrength>Minion</rolestrength> <role>Skirmisher</role> <xp>25</xp>
       <size>Medium</size> <origin>natural</origin> <type>beast</type>
