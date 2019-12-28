@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
+   
+   <creature>
+      <title>Guard Drake</title>
+      <level>2</level> <role>brute</role> <xp>125</xp>
+      <size>Small</size> <origin>natural</origin> <type>beast</type> <subtype>reptile</subtype>
+      
+      <init>+3</init> <perception>+7</perception> <insight>+2</insight>
+      
+      <hp>34</hp> <bloodied>17</bloodied>
+      <ac>14</ac> <fort>14</fort> <ref>12</ref> <will>12</will>
+      <defnote>See Guarded Area</defnote>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Guarded Area</name>
+            <line>A handler can designate a guarded area for a trained guard drake. Such an area is usually a doorway, a passage, or a room.</line>
+            <line>While in the area or within 10 squares of it, a guard drake gains a +1 bonus to AC and Will, and its bite deals damage on a miss.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d12 + 3 damage, or 1d12 + 8 damage while the drake is within 2 squares of an ally.</line>
+            <line><![CDATA[<i>Miss:</i>]]> 3 damage if the guard drake is in or near its guarded area.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <str>
+         <value>17</value>
+         <mod>+3 / +4</mod>
+      </str>
+      <con>
+         <value>16</value>
+         <mod>+3 / +4</mod>
+      </con>
+      <dex>
+         <value>14</value>
+         <mod>+2 / +3</mod>
+      </dex>
+      <int>
+         <value>3</value>
+         <mod>-4 / -3</mod>
+      </int>
+      <wis>
+         <value>13</value>
+         <mod>+1 / +2</mod>
+      </wis>
+      <cha>
+         <value>11</value>
+         <mod>+0 / +1</mod>
+      </cha>
+   </creature>
 
    <creature>
       <title>Spiretop Drake</title>
