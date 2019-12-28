@@ -1,6 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
+   
+   <creature>
+      <title>Centipede Swarm</title>
+      <level>2</level> <role>brute</role> <xp>125</xp>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type> <subtype>swarm</subtype>
+      
+      <init>+3</init> <perception>+1</perception> <insight>+1</insight>
+      <sense>darkvision</sense>
+      
+      <hp>37</hp> <bloodied>18</bloodied>
+      <ac>13</ac> <fort>13</fort> <ref>13</ref> <will>12</will>
+      <speed>6</speed> <climb>6 (spider climb)</climb>
+      
+      <resist>
+         <type>from melee and ranged attacks</type> <value>half damage</value>
+      </resist>
+      <vulnerable>
+         <type>to close and area attacks</type> <value>10</value>
+      </vulnerable>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Swarm Attack</name> <type>aura</type>
+            <frequency>Aura</frequency> <note>1</note>
+            <line>Each enemy that starts its turn within the aura takes 3 damage, plus 2 damage for each additional centipede swarm's swarm attack aura that the enemy is in.</line>
+         </block>
+         
+         <block>
+            <name>Swarm</name>
+            <line>A swarm can occupy the same space as another creature, and an enemy can enter its space, which is difficult terrain.</line>
+            <line>The swarm cannot be pushed, pulled, or slid by melee or ranged attacks.</line>
+            <line>It can squeeze through any opening that is large enough for at least one of the creatures it comprises (tiny).</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Swarm of Mandibles</name> <type>melee</type>
+            <keyword>Poison</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 damage, plus 1 additional damage for each additional centipede swarm adjacent to the target, and the target takes ongoing 5 poison damage (save ends).</line>
+            <line>A target that is already taking ongoing poison damage is weakened (save ends).</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <skill>
+         <name>Stealth</name> <value>+9</value>
+      </skill>
+      
+      <str>
+         <value>9</value>
+         <mod>-1 / +0</mod>
+      </str>
+      <con>
+         <value>13</value>
+         <mod>+1 / +2</mod>
+      </con>
+      <dex>
+         <value>17</value>
+         <mod>+3 / +4</mod>
+      </dex>
+      <int>
+         <value>1</value>
+         <mod>-5 / -4</mod>
+      </int>
+      <wis>
+         <value>10</value>
+         <mod>+0 / +1</mod>
+      </wis>
+      <cha>
+         <value>5</value>
+         <mod>-3 / -2</mod>
+      </cha>
+   </creature>
+   
    <creature>
       <title>Fire Beetle</title>
       <level>0</level> <role>Brute</role> <xp>80</xp>
@@ -67,6 +150,70 @@
       <alignment>unaligned</alignment>
       <language>-</language>
       
+   </creature>
+   
+   <creature>
+      <title>Giant Ant, Hive Worker</title>
+      <level>1</level> <rolestrength>Minion</rolestrength> <role>Skirmisher</role> <xp>25</xp>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+      
+      <init>+0</init> <perception>-1</perception> <insight>-1</insight>
+      <sense>low-light vision</sense>
+      <sense>tremorsense 10</sense>
+      
+      <hp>2</hp> <bloodied>any damage bloodies a minion</bloodied>
+      <ac>15</ac> <fort>12</fort> <ref>13</ref> <will>10</will>
+      <speed>6</speed> <climb>6</climb> <burrow>2 (tunneling)</burrow>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Triggered Actions</category-name>
+         
+         <block>
+            <name>Hive Worker Frenzy</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (free reaction):</i>]]> A giant ant within 10 squares is reduced to 0 hit points or fewer</line>
+            <line><![CDATA[<i>Effect:</i>]]> The hive worker shifts 2 squares.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <str>
+         <value>17</value>
+         <mod>+3 / +3</mod>
+      </str>
+      <con>
+         <value>12</value>
+         <mod>+1 / +1</mod>
+      </con>
+      <dex>
+         <value>15</value>
+         <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>2</value>
+         <mod>-4 / -4</mod>
+      </int>
+      <wis>
+         <value>9</value>
+         <mod>-1 / -1</mod>
+      </wis>
+      <cha>
+         <value>4</value>
+         <mod>-3 / -3</mod>
+      </cha>
    </creature>
 
 </catalog>
