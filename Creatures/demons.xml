@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
+   
+   <creature>
+      <title>Abyssal Maw</title>
+      <level>2</level> <role>Brute</role> <xp>125</xp>
+      <size>Medium</size> <origin>elemental</origin> <type>humanoid</type> <subtype>demon</subtype>
+      
+      <init>+1</init> <perception>+2</perception> <insight>+2</insight>
+      <sense>darkvision</sense>
+      
+      <hp>36</hp> <bloodied>18</bloodied>
+      <ac>14</ac> <fort>13</fort> <ref>11</ref> <will>12</will>
+      <speed>6</speed>
+      
+      <resist>
+         <type>see</type> <value>variable resistance</type>
+      </resist>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Snapping Jaws</name> <type>aura</type>
+            <frequency>Aura</frequency> <note>1</note>
+            <line>Non-demons in the aura grant combat advantage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d12 + 3 damage, or 1d12 + 8 damage if the target is bloodied.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Move Actions</category-name>
+         
+         <block>
+            <name>Ravenous Advance</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The maw shifts 5 squares to a space adjacent to the nearest bloodied enemy.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Triggered Actions</category-name>
+         
+         <block>
+            <name>Variable Resistance</name>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger (free interrupt):</i>]]> The demon takes acid, cold, lightning, or thunder damage</line>
+            <line><![CDATA[<i>Effect:</i>]]> The demon gains resist 10 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
+         </block>
+      </category>
+      
+      <alignment>chaotic evil</alignment>
+      <language>understands Abyssal</language>
+      
+      <str>
+         <value>17</value>
+         <mod>+3 / +4</mod>
+      </str>
+      <con>
+         <value>12</value>
+         <mod>+1 / +2</mod>
+      </con>
+      <dex>
+         <value>11</value>
+         <mod>+0 / +1</mod>
+      </dex>
+      <int>
+         <value>5</value>
+         <mod>-3 / -2</mod>
+      </int>
+      <wis>
+         <value>13</value>
+         <mod>+1 / +2</mod>
+      </wis>
+      <cha>
+         <value>6</value>
+         <mod>-2 / -1</mod>
+      </cha>
+   </creature>
+      
    <creature>
       <title>Balor</title>
       <level>27</level> <rolestrength>Elite</rolestrength> <role>Brute</role> <xp>22 000</xp>
@@ -82,8 +170,8 @@
          <block>
             <name>Variable Resistance</name>
             <frequency>3 / Encounter</frequency>
-            <line><![CDATA[<i>Trigger (free interrupt):</i>]]> The balor takes acid, cold, lightning, or thunder damage</line>
-            <line><![CDATA[<i>Effect:</i>]]> The balor gains resist 20 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
+            <line><![CDATA[<i>Trigger (free interrupt):</i>]]> The demon takes acid, cold, lightning, or thunder damage</line>
+            <line><![CDATA[<i>Effect:</i>]]> The demon gains resist 20 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
          </block>
       </category>
       
@@ -124,6 +212,102 @@
       
       <equipment>lightning sword</equipment>
       <equipment>flaming whip</equipment>
+   </creature>
+   
+   <creature>
+      <title>Evistro (Carnage Demon)</title>
+      <level>6</level> <role>brute</role> <xp>250</xp>
+      <size>Medium</size> <origin>elemental</origin> <type>magical beast</type> <subtype>demon</subtype>
+      
+      <init>+4</init> <perception>+4</perception> <insight>+4</insight>
+      <sense>low-light vision</sense>
+      <sense>sense blood</sense>
+      
+      <hp>60</hp> <bloodied>30</bloodied>
+      <ac>18</ac> <fort>16</fort>  <ref>14</ref> <will>15</will>
+      <speed>6</speed>
+      
+      <resist>
+         <type>see</type> <value>variable resistance</value>
+      </resist>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Carnage</name>
+            <line>The carnage demon gains a +1 bonus to melee attack rolls when at least ally is adjacent to its target.</line>
+            <line>This increases to +3 when at least one other carnage demon is adjacent to its target.</line>
+         </block>
+         
+         <block>
+            <name>Sense Blood</name>
+            <line>Bloodied creatures do not benefit from concealment against the carnage demon, and a bloodied creature with total concealment only gains the benefits of concealment against the carnage demon.</line>
+            <line>The carnage demon also knows the exact location of any bloodied creature within 2 squares of it.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <name>Rending Claws</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +10 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 5 damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Minor Actions</category-name>
+         
+         <block>
+            <name>Bloodthirsty Bite</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one bloodied creature); +8 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 2 damage.</line>
+            <line><![CDATA[<i>Miss:</i>]]> 3 damage.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Triggered Actions</category-name>
+         
+         <block>
+            <name>Variable Resistance</name>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger (free interrupt):</i>]]> The demon takes acid, cold, lightning, or thunder damage</line>
+            <line><![CDATA[<i>Effect:</i>]]> The demon gains resist 10 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
+         </block>
+      </category>
+      
+      <alignment>chaotic evil</alignment>
+      <language>Abyssal</language>
+      
+      <str>
+         <value>21</value>
+         <mod>+5 / +8</mod>
+      </str>
+      <con>
+         <value>14</value>
+         <mod>+2 / +5</mod>
+      </con>
+      <dex>
+         <value>12</value>
+         <mod>+1 / +4</mod>
+      </dex>
+      <int>
+         <value>5</value>
+         <mod>-3 / +0</mod>
+      </int>
+      <wis>
+         <value>12</value>
+         <mod>+1 / +4</mod>
+      </wis>
+      <cha>
+         <value>7</value>
+         <mod>-2 / +1</mod>
+      </cha>
    </creature>
    
 </catalog>
