@@ -146,7 +146,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
 			<b><xsl:text>Size: </xsl:text></b>  <xsl:value-of select="race/size" /> <xsl:text>; </xsl:text> <b><xsl:text>Origin: </xsl:text></b>  <xsl:value-of select="race/origin" /> <xsl:text>; </xsl:text> <b><xsl:text>Type: </xsl:text></b> <xsl:value-of select="race/type" />
-      <xsl:if test="subtype"><xsl:text> (</xsl:text><xsl:value-of select="subtype" /><xsl:text>)</xsl:text> <br />
+      <xsl:if test="subtype"><xsl:text> (</xsl:text><xsl:value-of select="subtype" /><xsl:text>)</xsl:text></xsl:if> <br />
 			<i><xsl:value-of select="class/shortfluff" /></i>
 		</div> 
 	</div> <!-- class header -->
