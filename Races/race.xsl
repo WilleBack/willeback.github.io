@@ -151,7 +151,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div> 
    </div> <!-- class header -->
       
-   <div class="container">
+   <!-- <div class="container">
       <xsl:for-each select="class/fluff">
          <div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left; page-break-inside:avoid;">
             <xsl:value-of select="." />
@@ -169,7 +169,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:text>; </xsl:text><xsl:value-of select="race/ability[2]" /> <xsl:text> or </xsl:text> <xsl:value-of select="race/ability[3]" />
             <b>Speed: </b> <xsl:value-of select="race/speed" /> <xsl:text> squares</xsl:text>
             <b>Vision: </b> <xsl:value-of select="race/vision" />
-         </div> <!-- blockdiv -->
+         </div> 
          
          <div class="blockdiv">
             <b>Proficiencies</b>
@@ -182,29 +182,29 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:if>
                </xsl:for-each>
             </xsl:for-each>
-         </div> <!-- blockdiv -->
+         </div> 
          
          <div class="blockdiv">
             <b>Defenses </b>
             <xsl:for-each select="class/defense">
                <br /><b><xsl:value-of select="name"/>: </b> <xsl:value-of select="value" />
             </xsl:for-each>
-         </div> <!-- blockdiv -->
+         </div> 
          
          <div class="blockdiv">
             <b>Health</b>
             <br /><b>Hit Points at 1st level: </b><xsl:value-of select="class/hpbase"/> <xsl:text> + Constitution score</xsl:text>
             <br /><b>Hit Points gained each level: </b><xsl:value-of select="class/hpgain"/> 
             <br /><b>Healing Surges: </b><xsl:value-of select="class/surgebase"/> <xsl:text> + Constitution modifier</xsl:text>
-         </div> <!-- blockdiv -->
+         </div> 
          
          <div class="blockdiv">
             <b>Skills</b>
             <br /><b>Automatically trained in: </b><xsl:value-of select="class/skills/trained"/>
             <br /><b>Additional Trained skills: </b><xsl:value-of select="class/skills/number"/> 
-         </div> <!-- blockdiv -->
+         </div> 
          
-      </div> <!-- block -->
+      </div> 
       
       <div class="feature">
          <div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
