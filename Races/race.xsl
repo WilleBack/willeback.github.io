@@ -142,16 +142,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    
    <div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
       <div id="classtitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" > 
-         <xsl:value-of select="class/name" /> 
+         <xsl:value-of select="race/name" /> 
       </div>
       <div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
-         <b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="class/role" /> <xsl:text>; </xsl:text> <b><xsl:text>Power Source: </xsl:text></b> <xsl:value-of select="class/source" /> <br />
-         <i><xsl:value-of select="class/shortfluff" /></i>
+         <b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="race/role" /> <xsl:text>; </xsl:text> <b><xsl:text>Power Source: </xsl:text></b> <xsl:value-of select="race/source" /> <br />
+         <i><xsl:value-of select="race/shortfluff" /></i>
       </div> 
    </div> <!-- class header -->
       
    <div class="container">
-      <xsl:for-each select="class/fluff">
+      <xsl:for-each select="race/fluff">
          <div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left; page-break-inside:avoid;">
             <xsl:value-of select="." />
          </div>
@@ -160,9 +160,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
          <div class="blockdiv">
             <b>Key Abilities </b> 
-            <br /><b>Primary: </b> <xsl:value-of select="class/keyability[1]" />
+            <br /><b>Primary: </b> <xsl:value-of select="race/keyability[1]" />
             <br /><b>Secondaries: </b> 
-            <xsl:for-each select="class/keyability[position()>1]">
+            <xsl:for-each select="race/keyability[position()>1]">
                <xsl:value-of select="."/>
                <xsl:if test="position()!=last()">
                   <xsl:text>, </xsl:text>
@@ -172,7 +172,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          
          <div class="blockdiv">
             <b>Proficiencies</b>
-            <xsl:for-each select="class/proficiency">
+            <xsl:for-each select="race/proficiency">
                <br /><b><xsl:value-of select="type"/> <xsl:text>: </xsl:text></b>
                <xsl:for-each select="name">
                   <xsl:value-of select="." />
@@ -185,22 +185,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          
          <div class="blockdiv">
             <b>Defenses </b>
-            <xsl:for-each select="class/defense">
+            <xsl:for-each select="race/defense">
                <br /><b><xsl:value-of select="name"/>: </b> <xsl:value-of select="value" />
             </xsl:for-each>
          </div> <!-- blockdiv -->
          
          <div class="blockdiv">
             <b>Health</b>
-               <br /><b>Hit Points at 1st level: </b><xsl:value-of select="class/hpbase"/> <xsl:text> + Constitution score</xsl:text>
-               <br /><b>Hit Points gained each level: </b><xsl:value-of select="class/hpgain"/> 
-               <br /><b>Healing Surges: </b><xsl:value-of select="class/surgebase"/> <xsl:text> + Constitution modifier</xsl:text>
+               <br /><b>Hit Points at 1st level: </b><xsl:value-of select="race/hpbase"/> <xsl:text> + Constitution score</xsl:text>
+               <br /><b>Hit Points gained each level: </b><xsl:value-of select="race/hpgain"/> 
+               <br /><b>Healing Surges: </b><xsl:value-of select="race/surgebase"/> <xsl:text> + Constitution modifier</xsl:text>
          </div> <!-- blockdiv -->
          
          <div class="blockdiv">
             <b>Skills</b>
-               <br /><b>Automatically trained in: </b><xsl:value-of select="class/skills/trained"/>
-               <br /><b>Additional Trained skills: </b><xsl:value-of select="class/skills/number"/> 
+               <br /><b>Automatically trained in: </b><xsl:value-of select="race/skills/trained"/>
+               <br /><b>Additional Trained skills: </b><xsl:value-of select="race/skills/number"/> 
          </div> <!-- blockdiv -->
          
       </div> <!-- block -->
@@ -209,12 +209,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
             <xsl:text>Class Features</xsl:text>
          </div>
-         <div class="text">
-            <xsl:text>The following are class features of the </xsl:text><xsl:value-of select="class/subname" /> <xsl:text> version of the </xsl:text> <xsl:value-of select="class/name" /> <xsl:text> class:</xsl:text>
-         </div>
       </div>
       
-      <xsl:for-each select="class/feature">
+      <xsl:for-each select="race/feature">
          <div class="feature">
             <div id="featurename" style="width:100%; float:left; font-size:1.3em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
                <xsl:value-of select="name" />
