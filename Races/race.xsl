@@ -146,12 +146,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
 			<b><xsl:text>Size: </xsl:text></b>  <xsl:value-of select="race/size" /> <xsl:text>; </xsl:text> <b><xsl:text>Origin: </xsl:text></b> <xsl:value-of select="race/origin" />  <xsl:text>; </xsl:text> <b><xsl:text>Type: </xsl:text></b> <xsl:value-of select="race/type" /> <br />
-			<i><xsl:value-of select="class/shortfluff" /></i>
+			<i><xsl:value-of select="race/shortfluff" /></i>
 		</div> 
 	</div> <!-- class header -->
 		
 	<div class="container">
-		<xsl:for-each select="class/fluff">
+		<xsl:for-each select="race/fluff">
 			<div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left; page-break-inside:avoid;">
 				<xsl:value-of select="." />
 			</div>
@@ -160,9 +160,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
 			<div class="blockdiv">
 				<b>Key Abilities </b> 
-				<br /><b>Primary: </b> <xsl:value-of select="class/keyability[1]" />
+				<br /><b>Primary: </b> <xsl:value-of select="race/keyability[1]" />
 				<br /><b>Secondaries: </b> 
-				<xsl:for-each select="class/keyability[position()>1]">
+				<xsl:for-each select="race/keyability[position()>1]">
 					<xsl:value-of select="."/>
 					<xsl:if test="position()!=last()">
 						<xsl:text>, </xsl:text>
@@ -172,7 +172,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="blockdiv">
 				<b>Proficiencies</b>
-				<xsl:for-each select="class/proficiency">
+				<xsl:for-each select="race/proficiency">
 					<br /><b><xsl:value-of select="type"/> <xsl:text>: </xsl:text></b>
 					<xsl:for-each select="name">
 						<xsl:value-of select="." />
@@ -185,7 +185,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			<div class="blockdiv">
 				<b>Defenses </b>
-				<xsl:for-each select="class/defense">
+				<xsl:for-each select="race/defense">
 					<br /><b><xsl:value-of select="name"/>: </b> <xsl:value-of select="value" />
 				</xsl:for-each>
 			</div> <!-- blockdiv -->
