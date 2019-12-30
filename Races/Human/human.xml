@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../race.xsl"?>
+
+<class>
+	<name>Fighter</name>
+	<subname>Weaponmaster</subname>
+	<role>Defender</role>
+	<source>Martial</source>
+	<shortfluff>Tough and resilient, you use tactical cunning and battle prowess to contain the enemy and protect your allies.</shortfluff>
+	<keyability>Strength</keyability>
+	<keyability>Constitution</keyability>
+	<keyability>Dexterity</keyability>
+	<keyability>Wisdom</keyability>
+	
+	<proficiency>
+		<type>Armor</type>
+		<name>Cloth</name>
+		<name>Leather</name>
+		<name>Hide</name>
+		<name>Chainmail</name>
+		<name>Scale</name>
+	</proficiency>
+	<proficiency>
+		<type>Shield</type>
+		<name>Heavy</name>
+		<name>Light</name>
+	</proficiency>
+	<proficiency>
+		<type>Weapon</type>
+		<name>Simple melee</name>
+		<name>Military melee</name>
+		<name>Simple ranged</name>
+		<name>Military ranged</name>
+	</proficiency>
+	
+	<defense>
+		<name>Fortitude</name>
+		<value>+2</value>
+	</defense>
+	
+	<hpbase>15</hpbase>
+	<hpgain>6</hpgain>
+	<surgebase>9</surgebase>
+	
+	<skills>
+		<trained>Acrobatics, Athletics or Endurance</trained>
+		<number>3</number>
+	</skills>
+	
+	<fluff>Weaponmasters can be found just about anywhere and among any sort of people. A few are gallant warriors fighting for noble causes, while others are calculating mercenaries who draw their weapons only when the pay is right. All weaponmasters, however, are adventurers, ready to face any challenge, to go where glory, plunder, or honor leads them.</fluff>
+	<fluff>Specialized combat maneuvers, or exploits, combined with a dedicated focus on a fighting style set weaponmasters apart from other fighters. A weaponmaster can slam his or her weapon through one enemy to crunch into another or carve a bloody path through enemies in a whirlwind of destruction. Weapons are crucial too, since weaponmasters know how to coax every advantage they can from their tools, and those who use axes fight differently from those who favor heavy blades.</fluff>
+	<fluff>Weaponmasters develop their combat prowess in many different ways. Most have some elementary training to expose them to different weapons and armor. These trainees are often squires, militia, students, and soldiers. Once they're cut free, they grow their ability through practice and observation. Each battle proves instructive, giving the weaponmaster new insights that might develop into full-blown techniques.</fluff>
+	
+	<feature>
+		<name>Approach to Opportunities</name>
+		<benefit>A weaponmaster is always ready to take advantage of any opportunities their enemies give.</benefit>
+		<benefit>You gain your choice of either <![CDATA[<i>combat agility</i>]]> or <![CDATA[<i>combat superiority</i>]]>.</benefit>
+			
+			<power>
+				<title>Combat Agility</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>Your foe might think it has escaped you, but in its moment of triumph you chase it down and make it pay</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Opportunity</action> <subaction>Reaction</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy adjacent to you provokes an <![CDATA[<i>opportunity attack</i>]]></text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>The triggering enemy</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>You shift a number of squares equal to your Dexterity modifier. You must end the shift closer to the target than you were when you began the shift.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If the target is within your reach, make a <![CDATA[<i>melee basic attack</i>]]> against it. You also knock the target prone on a hit.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Special:</name>
+					<text>This power counts as an <![CDATA[<i>opportunity attack</i>]]>.</text>
+				</section>
+				</part>
+			</power>
+			
+			<power>
+				<title>Combat Superiority</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>Your eye for openings is such that enemies find it almost impossible to disengage from you</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Opportunity</action> <subaction>Interrupt</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy adjacent to you provokes an <![CDATA[<i>opportunity attack</i>]]></text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>The triggering enemy</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>Make a <![CDATA[<i>melee basic attack</i>]]> against the target, with a bonus to the attack roll equal to your Wisdom modifier.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If a move triggered the attack, the target stops moving. If it has further actions remaining, it can use them to resume moving.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Special:</name>
+					<text>This power counts as an <![CDATA[<i>opportunity attack</i>]]>.</text>
+				</section>
+				</part>
+			</power>
+	</feature>
+	
+	<feature>
+		<name>Combat Challenge</name>
+		<benefit>In combat, it is dangerous to ignore a fighter. Every time you attack an enemy, whether the attack hits or misses, you can choose to mark that target until the end of your next turn.</benefit>
+		<benefit>While the target is marked, it takes a -2 penalty to attack rolls of attacks that do not include you as a target. A creature can be subject to only one mark at a time, with a new mark superseding a mark that was already in place.</benefit>
+		<benefit>In addition, you gain the <![CDATA[<i>enforce challenge</i>]]> power.</benefit>
+			<power>
+				<title>Enforce Challenge</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>It is dangerous to ignore your challenge</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Martial, Weapon</keyword>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy marked by you and within your reach either shifts or makes an attack that doesn't target you </text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Target:</name>
+					<text>The triggering enemy</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>You make a <![CDATA[<i>melee basic attack</i>]]> against the target.</text>
+				</section>
+				</part>
+			</power>
+			
+	</feature>
+	
+	<feature>
+		<name>Fighter Weapon Talent</name>
+		<benefit>As a weaponmaster, you know how to handle any weapon you come across.</benefit>
+		<benefit>You gain a +1 bonus to all attack rolls with Weapon attacks, even if you are not proficient with the weapon used.</benefit>
+	</feature>
+	
+	<feature>
+		<name>Style Training</name>
+		<benefit>A weaponmaster knows a wide array of techniques and exploits that comprise their unique fighting style. But each also has training that forms the backbone of their style.</benefit>
+		<benefit>Choose Arena Training, Battlerager Training, Brawler Training, Duelist Training, Reaver Training, Shieldbearer Training, or Tempest Training to form the backbone of your fighting style.</benefit>
+		
+		<subfeature>
+			<name>Arena Training</name>
+			<benefit>Arena Training is a style that combines different weapons into your individual style that favours light armor. It also gives the weaponmaster the readiness to pick up any weapon, including improvised ones, and be competent in using them.</benefit>
+			<benefit>Select two weapons as your arena weapons. If you are not already proficient with these weapons, you gain proficiency in them. In addition, any of your feats that grant feat bonuses to attack rolls or damage rolls with one arena weapon also apply to your other arena weapon as well.</benefit>
+			<benefit>While you are not wearing heavy armor, you gain a +1 bonus to AC. This bonus increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+			<benefit>You gain a +2 proficiency bonus to attack rolls with improvised weapons. When you attack with an improvised weapon, it deals 1d8 damage if it is one-handed, or 1d10 damage if it is two-handed. You can throw any one-handed weapon as an improvised heavy thrown weapon with a range of 3/6. </benefit>
+			<benefit>You treat all weapons you are not proficient with as improvised weapons, including gaining the above benefits.</benefit>
+		</subfeature>
+		
+		<subfeature>
+			<name>Battlerager Training</name>
+			<benefit>Dwarves were the ones who pioneered Battlerager Training, a style that focuses on pure tenacity in the face of danger.</benefit>
+			<benefit>Your number of healing surges increases by 1. When a Fighter power refers to the number of healing surges you have expended, increase the number by 1 if you have expended at least 1 healing surge, or by 2 if you have expended at least half (rounded up) of your healing surges.</benefit>
+			<benefit>Temporary hit points you gain from Fighter powers stack with those you already have, to a maximum of your level + your Constitution modifier. If you are bloodied, the maximum increases to twice your level + your Constitution modifier. If you have or gain more temporary hit points than your current limit, you do not have to reduce them to the limit, but you cannot stack them past the limit.</benefit>
+			<benefit>If a Fighter attack gives you temporary hit points on a hit but you miss, you gain one-half the temporary hit points.</benefit>
+			<benefit>When you expend a healing surge, you gain a +1 bonus to the first melee or close Weapon damage roll you make before the end of your next turn. This bonus increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+		</subfeature>
+		
+		<subfeature>
+			<name>Brawler Training</name>
+			<benefit>Brawler Training promotes getting up close and personal with the opponent, with the weaponmaster forgoing the use of a shield in favor of having a hand free to grab onto his or her opponent.</benefit>
+			<benefit>While you wield a weapon in your primary hand and your off hand is either free or grabbing a creature, you gain a +1 bonus to AC.</benefit>
+			<benefit>You gain a +2 bonus to Fortitude and Reflex defenses against escape attempts.</benefit>
+			<benefit>You are proficient in unarmed attacks, and an unarmed attack you make deals 1d6 damage. If you wield a weapon in your primary hand, then an unarmed Weapon attack, <![CDATA[<i>grab</i>]]> or <![CDATA[<i>drag</i>]]> made with your off hand is considered to be made using a magic weapon with an enhancement bonus one less. <![CDATA[<br /><i>Note:</i>]]> some Fighter powers designed for weaponmasters with Brawler Training specify making an attack with no weapon. This is not the same as making it unarmed.</benefit>
+		</subfeature>
+		
+		<subfeature>
+			<name>Duelist Training</name>
+			<benefit>Those with Duelist Training focus on mobility and being able to outmaneuver their opponents, favoring light armor and no shield to weigh them down.</benefit>
+			<benefit>While you are not wearing heavy armor and not wielding a shield, you gain a +1 bonus to AC and Reflex defenses. This bonus increases to +2 at 11th level, to +3 at 21st level.</benefit>
+			<benefit>While you wield a weapon in your primary hand and your off hand is free, you double the above bonus against all triggered attacks.</benefit>
+			<benefit>When a Fighter attack allows you to move or shift, you can increase the distance by 1 square.</benefit>
+		</subfeature>
+		
+		<subfeature>
+			<name>Reaver Training</name>
+			<benefit>Reaver Training emphasizes the use of heavy weapons and fighting hard over fighting smart, proving that a great offense is often the best defense.</benefit>
+			<benefit>You gain a +2 feat bonus to damage rolls with melee weapons you wield in two hands. This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+			<benefit>You also gain a +2 bonus to damage rolls with <![CDATA[<i>opportunity attacks</i>]]> and attacks from <![CDATA[<i>enforce challenge</i>]]>. This bonus increases to +3 at 21st level.</benefit>
+		</subfeature>
+		
+		<subfeature>
+			<name>Shieldbearer Training</name>
+			<benefit>Weaponmasters with Shieldbearer Training aim to keep themselves and their allies safe, focusing on the effective use of a shield.</benefit>
+			<benefit>While you are wielding a shield, if you hit an enemy with an attack from your <![CDATA[<i>enforce challenge</i>]]>, that enemy takes a -2 penalty to all attack rolls until the start of its next turn.</benefit>
+			<benefit>When you use <![CDATA[<i>second wind</i>]]> or <![CDATA[<i>total defense</i>]]> and are wielding a shield, allies gain one-half the defense bonuses you gain from those actions while adjacent to you.</benefit>
+			<benefit>When a Fighter power gives you a power bonus to AC, you increase that bonus by +1 while you are wielding a shield.</benefit>
+		</subfeature>
+		
+		<subfeature>
+			<name>Tempest Training</name>
+			<benefit>Tempest Training specializes in the use of a weapon in each hand, allowing for switching between a barrage of attacks and deft parries as the situation demands.</benefit>
+			<benefit>You gain a +1 bonus to attack rolls with weapons that have the off-hand property.</benefit>
+			<benefit>You gain Two-Weapon Defense as a bonus feat, even if you don't meet the prerequisites.</benefit>
+			<benefit>When you wield two melee weapons and are wearing chainmail, light armor, or unarmored, you gain a +1 bonus to damage rolls with melee and close Weapon attacks, or a +2 bonus with weapons that have the off-hand property. These bonuses increase to +2 and +3 at 11th level, and to +3 and +5 at 21st level.</benefit>
+		</subfeature>
+		
+	</feature>
+	
+	<feature>
+		<name>Optional Feature: Eldritch Knight</name>
+		<benefit>Some eladrin are known to undergo specialized training that allows them to combine the race's aptitude with arcane magic with the emphasis of a weaponmaster.</benefit>
+		<benefit>You do not gain proficiency in scale armor.</benefit>
+		<benefit>You gain training in the Arcana skill.</benefit>
+		<benefit>You gain <![CDATA[<i>feywild enforcement</i>]]> instead of <![CDATA[<i>enforce challenge</i>]]>.</benefit>
+		<benefit>Your power source counts as arcane in addition to martial, allowing you to qualify for feats, paragon paths, and other abilities.</benefit>
+		<benefit>In addition, if you choose Duelist Training, your off-hand counts as free even if you are wielding a wand that you are proficient with in that hand.</benefit>
+		
+		<power>
+				<title>Feywild Enforcement</title>
+				<class>Fighter</class> <category>Attack</category> 
+				<fluff>You teleport from one place to the next to punish an enemy that ignores you</fluff>
+				<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane, Martial, Teleportation, Weapon</keyword>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+				<type>Melee</type> <range>weapon</range>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Prerequisite:</name>
+					<text>You must be eladrin, and have the <![CDATA[<i>fey step</i>]]> power</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Trigger:</name>
+					<text>An enemy marked by you and within your reach either shifts or makes an attack that doesn't target you</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Target:</name>
+					<text>The triggering enemy</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Effect:</name>
+					<text>You teleport up to 2 squares to an unoccupied square adjacent to the triggering enemy.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Attack:</name>
+					<text>Intelligence vs. AC</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name-style>bold</name-style>
+					<name>Hit:</name>
+					<text>1[W] + Intelligence modifier damage.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<indent>1</indent>
+					<name-style>italic</name-style>
+					<name>Level 21:</name>
+					<text>2[W] + Intelligence modifier damage.</text>
+				</section>
+				<section>
+					<name-style>bold</name-style>
+					<name>Special:</name>
+					<text>This power counts as <![CDATA[<i>enforce challenge</i>]]> for feats and abilities that require it or modify it.</text>
+				</section>
+				</part>
+			</power>
+			
+		</feature>
+	
+</class>
