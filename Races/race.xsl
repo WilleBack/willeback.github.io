@@ -172,10 +172,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
          
          <div class="blockdiv">
-            <b>Key Abilities </b> 
-            <br /><b>Primary: </b> <xsl:value-of select="race/keyability[1]" />
-            <br /><b>Secondaries: </b> 
-            <xsl:for-each select="race/keyability[position()>1]">
+            <b>Ability scores: </b> <xsl:value-of select="race/ability[1]" />
+            <xsl:if test="count(race/ability)>2"><xsl:text>; </xsl:text>
+            <xsl:for-each select="race/ability[position()>1]">
                <xsl:value-of select="."/>
                <xsl:if test="position()!=last()">
                   <xsl:text>, </xsl:text>
