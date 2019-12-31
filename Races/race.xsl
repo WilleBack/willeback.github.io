@@ -172,15 +172,23 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
          
          <div class="blockdiv">
-            <b>Ability scores: </b> <xsl:text>+2 to </xsl:text><xsl:value-of select="race/ability[1]" />
-            <xsl:if test="count(race/ability)=2"><xsl:text>, </xsl:text></xsl:if>
-            <xsl:if test="count(race/ability)>2"><xsl:text>; </xsl:text></xsl:if>
-            <xsl:for-each select="race/ability[position()>1]">
-               <xsl:text>+2 to </xsl:text> <xsl:value-of select="."/>
-               <xsl:if test="position()!=last()">
-                  <xsl:text>, </xsl:text>
-               </xsl:if>
-            </xsl:for-each>
+            <div style="100%;">
+               <b>Ability scores: </b> <xsl:text>+2 to </xsl:text><xsl:value-of select="race/ability[1]" />
+               <xsl:if test="count(race/ability)=2"><xsl:text>, </xsl:text></xsl:if>
+               <xsl:if test="count(race/ability)>2"><xsl:text>; </xsl:text></xsl:if>
+               <xsl:for-each select="race/ability[position()>1]">
+                  <xsl:text>+2 to </xsl:text> <xsl:value-of select="."/>
+                  <xsl:if test="position()!=last()">
+                     <xsl:text>, </xsl:text>
+                  </xsl:if>
+               </xsl:for-each>
+            </div>
+            <div style="100%;">
+               <b>Speed: </b> <xsl:value-of select="race/speed" /> <xsl:text> squares</xsl:text>
+            </div>
+            <div style="100%;">
+               <b>Vision: </b> <xsl:value-of select="race/vision" />
+            </div>
          </div> <!-- blockdiv -->
          
          <div class="blockdiv">
