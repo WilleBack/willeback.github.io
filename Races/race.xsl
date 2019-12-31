@@ -163,8 +163,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       
       <div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
          <div class="blockdiv">
-            <b>Average Height: </b> <xsl:value-of select="height" /> <br />
-            <b>Average Weight: </b> <xsl:value-of select="weight" /> <xsl:text> lbs</xsl:text>
+            <div style="width:100%;">
+               <b>Average Height: </b> <xsl:value-of select="height" />
+            </div>
+            <div style="width:100%;">
+               <b>Average Weight: </b> <xsl:value-of select="weight" /> <xsl:text> lbs</xsl:text>
+            </div>
          </div>
          
          <div class="blockdiv">
