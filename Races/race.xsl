@@ -173,7 +173,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          
          <div class="blockdiv">
             <b>Ability scores: </b> <xsl:value-of select="race/ability[1]" />
-            <xsl:if test="count(race/ability)>2"><xsl:text>; </xsl:text>
+            <xsl:if test="count(race/ability)>2"><xsl:text>; </xsl:text></xsl:if>
             <xsl:for-each select="race/ability[position()>1]">
                <xsl:value-of select="."/>
                <xsl:if test="position()!=last()">
