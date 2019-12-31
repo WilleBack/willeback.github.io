@@ -192,16 +192,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div> <!-- blockdiv -->
          
          <div class="blockdiv">
-            <b>Proficiencies</b>
-            <xsl:for-each select="race/proficiency">
-               <br /><b><xsl:value-of select="type"/> <xsl:text>: </xsl:text></b>
-               <xsl:for-each select="name">
+            <div style="100%;">
+               <b>Languages: </b>
+               <xsl:for-each select="race/language">
                   <xsl:value-of select="." />
                   <xsl:if test="position()!=last()">
                      <xsl:text>, </xsl:text>
                   </xsl:if>
                </xsl:for-each>
-            </xsl:for-each>
+            </div>
          </div> <!-- blockdiv -->
          
          <div class="blockdiv">
