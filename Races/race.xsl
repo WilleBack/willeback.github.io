@@ -215,7 +215,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          
       </div> <!-- block -->
       
-      <xsl:for-each select="race/feature">
+      <div class="feature">
+         <xsl:apply-templates select="race/feature[1]" />
+      </div>
+      
+      <div class="feature">
+         <img src="image.png">
+      </div>
+      
+      <xsl:for-each select="race/feature[position()>1]">
          <div class="feature">
             <div id="featurename" style="width:100%; float:left; font-size:1.3em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
                <xsl:value-of select="name" />
