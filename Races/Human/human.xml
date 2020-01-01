@@ -37,25 +37,33 @@
 		<description><![CDATA[<i>Heroic Effect:</i> You have the <i>heroic effort</i>]]> racial power.</description>
 	</trait>
 	
-	<defense>
-		<name>Fortitude</name>
-		<value>+2</value>
-	</defense>
-	
-	<hpbase>15</hpbase>
-	<hpgain>6</hpgain>
-	<surgebase>9</surgebase>
-	
-	<skills>
-		<trained>Acrobatics, Athletics or Endurance</trained>
-		<number>3</number>
-	</skills>
-	
 	<fluff>Of all the civilized races, humans are the most adaptable and diverse. Human settlements can be found almost anywhere, and human morals, customs, and interests vary greatly.</fluff>
 	<fluff>Play a human if you want to: </fluff>
 	<fluff>&#9658; to be a decisive, resourceful hero with enough determination to face any challenge.</fluff>
 	<fluff>&#9658; to have the most versatility and flexibility of any race.</fluff>
 	<fluff>&#9658; to be able to excel at any class you choose.</fluff>
+	
+	<feature>
+		<power>
+			<title>Heroic Effort</title>
+			<class>Human</class> <category>Utility</category>
+			<fluff>Your grim focus and unbridled energy means that failure is not an option</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<action>Nonaction</action> <subaction>Interrupt</subaction>
+				<type>Personal</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You miss with an attack or fail a saving throw</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You gain a +4 racial bonus to the triggering attack roll or saving throw.</text>
+				</section>
+			</part>
+		</power>
+	</feature>
 	
 	<feature>
 		<name>Approach to Opportunities</name>
