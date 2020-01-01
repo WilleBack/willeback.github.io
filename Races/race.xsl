@@ -220,7 +220,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div>
       
       <div class="feature">
-         <img src="image.png" />
+         <img src="image.png" style="width:100%;" />
       </div>
       
       <xsl:for-each select="race/feature[position()>1]">
