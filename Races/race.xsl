@@ -213,33 +213,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </xsl:for-each>
          </div> <!-- blockdiv -->
          
-         <div class="blockdiv">
-            <b>Defenses </b>
-            <xsl:for-each select="race/defense">
-               <br /><b><xsl:value-of select="name"/>: </b> <xsl:value-of select="value" />
-            </xsl:for-each>
-         </div> <!-- blockdiv -->
-         
-         <div class="blockdiv">
-            <b>Health</b>
-               <br /><b>Hit Points at 1st level: </b><xsl:value-of select="race/hpbase"/> <xsl:text> + Constitution score</xsl:text>
-               <br /><b>Hit Points gained each level: </b><xsl:value-of select="race/hpgain"/> 
-               <br /><b>Healing Surges: </b><xsl:value-of select="race/surgebase"/> <xsl:text> + Constitution modifier</xsl:text>
-         </div> <!-- blockdiv -->
-         
-         <div class="blockdiv">
-            <b>Skills</b>
-               <br /><b>Automatically trained in: </b><xsl:value-of select="race/skills/trained"/>
-               <br /><b>Additional Trained skills: </b><xsl:value-of select="race/skills/number"/> 
-         </div> <!-- blockdiv -->
-         
       </div> <!-- block -->
-      
-      <div class="feature">
-         <div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
-            <xsl:text>Class Features</xsl:text>
-         </div>
-      </div>
       
       <xsl:for-each select="race/feature">
          <div class="feature">
