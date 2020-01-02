@@ -179,7 +179,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:for-each select="race/ability[position()>1]">
                   <xsl:text>+2 to </xsl:text> <xsl:value-of select="."/>
                   <xsl:if test="position()!=last()">
-                     <xsl:text>, </xsl:text>
+                     <xsl:text> or </xsl:text>
                   </xsl:if>
                </xsl:for-each>
             </div>
