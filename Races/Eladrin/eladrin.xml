@@ -122,90 +122,94 @@
 	
 	<feature>
 		<name>Racial Utility Powers</name>
-		<benefit>A human can choose any of the following powers instead of a class utility power of the same level.</benefit>
+		<benefit>An eladrin can choose any of the following powers instead of a class utility power of the same level.</benefit>
 		
 		<power>
-			<title>Extra Effort</title>
-			<class>Human</class> <category>Utility</category> <level>2</level>
-			<fluff>You dig deep to find the strength to overcome an affliction</fluff>
+			<title>Sense Magic</title>
+			<class>Eladrin</class> <category>Utility</category> <level>2</level>
+			<fluff>You attune your senses to the magical world, and in a flash, nearby magic becomes as obvious as birdsong on the wind</fluff>
 			<part>
 				<frequency>Encounter</frequency>
-				<action>Nonaction</action> <subaction>Interrupt</subaction>
-				<type>Personal</type>
-				<section>
-					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>You make a saving throw and dislike the result</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>You reroll the saving throw with a +2 power bonus, and must use the new result.</text>
-				</section>
-			</part>
-		</power>
-		
-		<power>
-			<title>Rapid Move</title>
-			<class>Human</class> <category>Utility</category> <level>6</level>
-			<fluff>You move with surprising swiftness, accomplishing more than most would think possible</fluff>
-			<part>
-				<frequency>Daily</frequency>
 				<action>Minor</action> <subaction>Action</subaction>
 				<type>Personal</type>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
-					<text>You take a move action.</text>
+					<text>You sense the presence of magic within 10 squares of you as if you succeeded on an Arcane check to do so.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>You can then make an Arcana check as a free reaction to identify any revealed magical phenomena, conjurations, or zones.</text>
 				</section>
 			</part>
 		</power>
 		
 		<power>
-			<title>Flush with Success</title>
-			<class>Human</class> <category>Utility</category> <level>10</level>
-			<fluff>You feel your confidence build with each attack that hits home</fluff>
+			<title>Eladrin Escape</title>
+			<class>Eladrin</class> <category>Utility</category> <level>6</level>
+			<fluff>Your enemy has but one chance to corner you, for wasting the chance gives you the opportunity to flee</fluff>
 			<part>
 				<frequency>Encounter</frequency>
+				<action>Immediate</action> <subaction>Reaction</subaction>
+				<type>Personal</type>
+				<keyword>Arcane, Teleportation</keyword>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>An enemy misses you with a melee attack</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You teleport up to 5 squares.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Recursive Thought</title>
+			<class>Eladrin</class> <category>Utility</category> <level>10</level>
+			<fluff>When you clear your mind, your affliction bounces back to your unsuspecting foe</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<action>Free</action> <subaction>Reaction</subaction>
+				<type>Special</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You succeed on a save against a dazing or stunning effect</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>The source of the triggering effect</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The target is subjected to the effected you saved against. The effect lasts until the end of your next turn if you made a saving throw on your turn, or until the start of the acting creature's next turn if you made a save on another creature's turn.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Spiral Dance Assault</title>
+			<class>Eladrin</class> <category>Utility</category> <level>16</level>
+			<fluff>You strike and dance away, only to reappear at your enemy's side</fluff>
+			<part>
+				<frequency>At-Will</frequency>
+				<keyword>Arcane, Teleportation</keyword>
 				<action>Free</action> <subaction>Reaction</subaction>
 				<type>Personal</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>You hit with an attack on your turn</text>
+					<text>You hit an enemy with a melee attack on your turn</text>
 				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
-					<text>You gain 10 temporary hit points, and can then shift up to half your speed.</text>
+					<text>You teleport up to 5 squares to a space adjacent to the triggering enemy.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Level 21:</name> <name-style>italic</name-style>
-					<text>15 temporary hit points.</text>
-				</section>
-			</part>
-		</power>
-		
-		<power>
-			<title>Courageous Determination</title>
-			<class>Human</class> <category>Utility</category> <level>16</level>
-			<fluff>Your enemy's success pales before your stalwart resolve as you refuse to give up</fluff>
-			<part>
-				<frequency>Daily</frequency>
-				<keyword>Healing</keyword>
-				<action>Immediate</action> <subaction>Reaction</subaction>
-				<type>Personal</type>
-				<section>
-					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>An enemy bloodies you with an attack or hits you while you are bloodied</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>You can spend a healing surge to regain hit points equal to your healing surge value. You can then shift up to your speed.</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<text>Until the start of your next turn, you gain a +2 power bonus to all defenses.</text>
+					<name>Special:</name> <name-style>bold</name-style>
+					<text>You can use this power only once per turn.</text>
 				</section>
 			</part>
 		</power>
