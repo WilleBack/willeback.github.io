@@ -89,8 +89,8 @@
 	</feature>
 	
 	<feature>
-		<name>Human Adventurers</name>
-		<benefit>Three sample adventurers are described before.</benefit>
+		<name>Sample Human Adventurers</name>
+		<benefit>Three sample adventurers are described below.</benefit>
 		
 		<subfeature>
 			<name>Brandis, Human Fighter</name>
@@ -110,6 +110,95 @@
 			<benefit>He prays to Ioun because he sees knowledge as the key to power, but he is also drawn to Vecna, wondering what power the god of secrets might offer him in exchange for his devotion.</benefit>
 		</subfeature>
 	</feature>
-			
+	
+	<feature>
+		<name>Racial Utility Powers</name>
+		<benefit>A human can choose any of the following powers instead of a class utility power of the same level.</benefit>
+		
+		<power>
+			<title>Extra Effort</title>
+			<class>Human</class> <category>Utility</category> <level>2</level>
+			<fluff>You dig deep to find the strength to overcome an affliction</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<action>Nonaction</action> <subaction>Interrupt</subaction>
+				<type>Personal</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You make a saving throw and dislike the result</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You reroll the saving throw with a +2 power bonus, and must use the new result.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Rapid Move</title>
+			<class>Human</class> <category>Utility</category> <level>6</level>
+			<fluff>You move with surprising swiftness, accomplishing more than most would think possible</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You take a move action.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Flush with Success</title>
+			<class>Human</class> <category>Utility</category> <level>10</level>
+			<fluff>You feel your confidence build with each attack that hits home</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<action>Free</action> <subaction>Reaction</subaction>
+				<type>Personal</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You hit with an attack on your turn</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You gain 10 temporary hit points, and can then shift up to half your speed.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>15 temporary hit points.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Courageous Determination</title>
+			<class>Human</class> <category>Utility</category> <level>16</level>
+			<fluff>Your enemy's success pales before your stalwart resolve as you refuse to give up</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<keyword>Healing</keyword>
+				<action>Immediate</action> <subaction>Reaction</subaction>
+				<type>Personal</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>An enemy bloodies you with an attack or hits you while you are bloodied</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You can spend a healing surge to regain hit points equal to your healing surge value. You can then shift up to your speed.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>Until the start of your next turn, you gain a +2 power bonus to all defenses.</text>
+				</section>
+			</part>
+		</power>
 	
 </race>
