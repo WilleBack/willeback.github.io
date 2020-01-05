@@ -2,68 +2,141 @@
 <?xml-stylesheet type="text/xsl" href="../race.xsl"?>
 
 <race>
-	<name>Halfling</name>
-	<size>Small</size>
+	<name>Dragonborn</name>
+	<size>Medium</size>
 	<origin>Natural</origin>
 	<type>Humanoid</type>
-	<shortfluff>Quick and resourceful wanderers, small in stature but great in courage</shortfluff>
+	<shortfluff>Proud, honorable warriors, born from the blood of an ancient dragon god</shortfluff>
 	
-	<height>3'10" - 4'2"</height>
-	<weight>75 - 85</weight>
+	<height>6'2" - 6'8"</height>
+	<weight>220 - 320</weight>
 	
-	<ability>Dexterity</ability>
+	<ability>Charisma</ability>
+    <ability>Strength</ability>
     <ability>Constitution</ability>
-    <ability>Charisma</ability>
 	<speed>6</speed>
 	<vision>Normal</vision>
 	
-	<language>Common</language> <language>choice of one other</language>
+	<language>Common</language> <language>Draconic</language>
 	
 	<trait>
 		<name>Skill Bonuses</name>
-        <description>+2 Acrobatics, +2 Thievery</description>
-	</trait>
-	<trait>
-		<name>Bold</name>
-		<description>You gain a +5 racial bonus to saving throws against Fear effects.</description>
+        <description>+2 History, +2 Intimidate</description>
 	</trait>
     <trait>
-        <name>Nimble Reaction</name>
-        <description>You gain a +2 racial bonus to AC and Reflex against <![CDATA[<i>opportunity attacks</i>]]>.</description>
+        <name>Draconic Heritage</name>
+        <description>You add your Constitution modifier to your healing surge value.</description>
     </trait>
 	<trait>
-		<name>Small Size</name>
-		<description>Due to your small stature, you can't use two-handed weapons, and when you use a Versatile weapon, you must use it two-handed but don't deal additional damage for doing so.</description>
-		<description>These restrictions don't apply to weapons with the Small property.</description>
+		<name>Dragonborn Fury</name>
+		<description>While you're bloodied, you gain a +1 racial bonus to attack rolls.</description>
 	</trait>
 	<trait>
-		<name>Halfling Racial Power</name>
-        <description>You gain the <![CDATA[<i>second chance</i>]]> racial power.</description>
+		<name>Dragonborn Racial Power Selection</name>
+        <description>Choose an option for your character:</description>
+		<description><![CDATA[<i>Dragon Breath:</i> You have the <i>dragon breath</i>]]> racial power.</description>
+		<description><![CDATA[<i>Dragonfear:</i> You have the <i>dragonfear</i>]]> racial power.</description>
 	</trait>
 	
-	<fluff>Halflings are a small race known for their resourcefull, quick wits, and steady nerves. They are a nomadic folk who roam waterways and marshlands. No people travel farther or see more of what happens in the world than halflings.</fluff>
-	<fluff>Play a halfling if you want to: </fluff>
-	<fluff>&#9658; to be a plucky hero who is all too easy to underestimate.</fluff>
-	<fluff>&#9658; to be likable, warm, and friendly.</fluff>
-	<fluff>&#9658; to be able to explore a world bigger than you.</fluff>
+	<fluff>Born to fight, dragonborn are a race of wandering mercenaries, soldiers, and adventurers. Long ago, their empire contended for worldwide dominion, but now only a few rootless clans of these honorable warriors remain to pass on their legends of ancient glory.</fluff>
+	<fluff>Play a dragonborn if you want to: </fluff>
+	<fluff>&#9658; to look like a dragon.</fluff>
+	<fluff>&#9658; to be the proud heir of an ancient, fallen empire.</fluff>
+	<fluff>&#9658; to breathe acid, cold, fire, lightning, or poison, or to inspire fear.</fluff>
 	
 	<feature>
 		<power>
-			<title>Second Chance</title>
-			<class>Halfling</class> <category>Utility</category>
-			<fluff>Luck and small size combine to work in your favor as you dodge your enemy's attack</fluff>
+			<title>Dragon Breath</title>
+			<class>Dragpnborn</class> <category>Attack</category>
+			<fluff>As you open your mouth with a roar, the deadly power of your draconic kin blasts forth to engulf your foes</fluff>
 			<part>
 				<frequency>Encounter</frequency>
-				<action>Immediate</action> <subaction>Interrupt</subaction>
-                <type>Special</type>
+				<keyword>Varies</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Close</type> <range>blast 3</range>
 				<section>
-					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>You are hit by an attack</text>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>Each creature in the blast</text>
+				</section>
+				<section>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<text>Ability +2 vs. Reflex</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>Ability +4</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>Ability +6</text>
 				</section>
 				<section>
 					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>The attacker must reroll the triggering attack roll and use the new result if it is lower.</text>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>1d6 + Constitution modifier damage.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>2d6 + ability modifier damage.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>3d6 + ability modifier damage.</text>
+				</section>
+				<section>
+					<name>Special:</name> <name-style>bold</name-style>
+					<text>When you gain this power, choose Strength or Constitution. You use the chosen ability score when making attack rolls and damage rolls with this power.</text>
+				</section>
+				<section>
+					<text>Also, choose one of the following damage types: acid, cold, fire, lightning, or poison. Your <![CDATA[<i>dragon breath</i>]]> deals damage of the chosen type, and has the corresponding keyword.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Dragonfear</title>
+			<class>Dragonborn</class> <category>Attack</category>
+			<fluff>Your presence causes your enemies to quake and tremble</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Fear</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<type>Close</type> <range>burst 5</range>
+				<section>
+					<indent>2</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<b>Close</b>]]> burst 10</text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>Each enemy in the burst</text>
+				</section>
+				<section>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<text>Ability +2 vs. Will</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>Ability +4</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>Ability +6</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>The target is stricken with fear until the end of your next turn.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>While stricken, the target takes a -2 penalty to attack rolls and grants combat advantage.</text>
 				</section>
 			</part>
 		</power>
