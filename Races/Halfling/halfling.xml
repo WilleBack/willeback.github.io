@@ -2,79 +2,68 @@
 <?xml-stylesheet type="text/xsl" href="../race.xsl"?>
 
 <race>
-	<name>Tiefling</name>
-	<size>Medium</size>
+	<name>Halfling</name>
+	<size>Small</size>
 	<origin>Natural</origin>
 	<type>Humanoid</type>
-	<shortfluff>Heirs of a shattered empire who live in the shadows and do not fear the dark</shortfluff>
+	<shortfluff>Quick and resourceful wanderers, small in stature but great in courage</shortfluff>
 	
-	<height>5'6" - 6'2"</height>
-	<weight>140 - 230</weight>
+	<height>3'10" - 4'2"</height>
+	<weight>75 - 85</weight>
 	
-	<ability>Charisma</ability>
+	<ability>Dexterity</ability>
     <ability>Constitution</ability>
-    <ability>Intelligence</ability>
+    <ability>Charisma</ability>
 	<speed>6</speed>
-	<vision>Low-light Vision</vision>
+	<vision>Normal</vision>
 	
 	<language>Common</language> <language>choice of one other</language>
 	
 	<trait>
 		<name>Skill Bonuses</name>
-        <description>+2 Bluff, +2 Stealth</description>
+        <description>+2 Acrobatics, +2 Thievery</description>
 	</trait>
 	<trait>
-		<name>Bloodhunt</name>
-		<description>You gain a +1 racial bonus to attack rolls against bloodied enemies.</description>
+		<name>Bold</name>
+		<description>You gain a +5 racial bonus to saving throws against Fear effects.</description>
 	</trait>
     <trait>
-        <name>Fire Resistance</name>
-        <description>You have resist fire equal to 5 + one-half your level.</description>
+        <name>Nimble Reaction</name>
+        <description>You gain a +2 racial bonus to AC and Reflex against <![CDATA[<i>opportunity attacks</i>]]>.</description>
     </trait>
 	<trait>
-		<name>Tiefling Racial Power</name>
-        <description>You gain the <![CDATA[<i>infernal wrath</i>]]> racial power.</description>
+		<name>Small Size</name>
+		<description>Due to your small stature, you can't use two-handed weapons, and when you use a Versatile weapon, you must use it two-handed but don't deal additional damage for doing so.</description>
+		<description>These restrictions don't apply to weapons with the Small property.</description>
+	<trait>
+		<name>Halfling Racial Power</name>
+        <description>You gain the <![CDATA[<i>second chance</i>]]> racial power.</description>
 	</trait>
 	
-	<fluff>Heirs to an ancient, infernal bloodline, tieflings have no realms of their own but instead live within human kingdoms and cities. They are descended from human nobles who bargained with dark powers, and long ago their empire subjugated half the world. But the empire was cast down into ruin, and tieflings were left to make their own way in a world that often fears and resents them.</fluff>
-	<fluff>Play a tiefling if you want to: </fluff>
-	<fluff>&#9658; to be a hero who has a dark side to overcome.</fluff>
-	<fluff>&#9658; to be good at tricking, intimidating, or persuading other to do your will.</fluff>
-	<fluff>&#9658; to attempt to redeem your people's image.</fluff>
+	<fluff>Halflings are a small race known for their resourcefull, quick wits, and steady nerves. They are a nomadic folk who roam waterways and marshlands. No people travel farther or see more of what happens in the world than halflings.</fluff>
+	<fluff>Play a halfling if you want to: </fluff>
+	<fluff>&#9658; to be a plucky hero who is all too easy to underestimate.</fluff>
+	<fluff>&#9658; to be likable, warm, and friendly.</fluff>
+	<fluff>&#9658; to be able to explore a world bigger than you.</fluff>
 	
 	<feature>
 		<power>
-			<title>Infernal Wrath</title>
-			<class>Tiefling</class> <category>Attack</category>
-			<fluff>You call upon the hellfire burning in your soul to punish your enemy</fluff>
+			<title>Second Chance</title>
+			<class>Halfling</class> <category>Utility</category>
+			<fluff>Luck and small size combine to work in your favor as you dodge your enemy's attack</fluff>
 			<part>
 				<frequency>Encounter</frequency>
-                <keyword>Fire</keyword>
-				<action>Free</action> <subaction>Reaction</subaction>
-                <type>Close</type> <range>burst 10</range>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+                <type>Special</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>An enemy within 10 squares of you hits you with an attack</text>
+					<text>You are hit by an attack</text>
 				</section>
-                <section>
-                    <name>Target:</name> <name-style>bold</name-style>
-                    <text>The triggering enemy in the burst</text>
-                </section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
-					<text>The target takes 1d6 + Intelligence modifier or Charisma modifier fire damage.</text>
+					<text>The attacker must reroll the triggering attack roll and use the new result if it is lower.</text>
 				</section>
-                <section>
-                    <shade>true</shade> <indent>1</indent>
-                    <name>Level 11:</name> <name-style>italic</name-style>
-                    <text>2d6 + Intelligence modifier or Charisma modifier fire damage.</text>
-                </section>
-                <section>
-                    <shade>true</shade> <indent>1</indent>
-                    <name>Level 21:</name> <name-style>italic</name-style>
-                    <text>3d6 + Intelligence modifier or Charisma modifier fire damage.</text>
-                </section>
 			</part>
 		</power>
 	</feature>
