@@ -175,7 +175,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <div style="100%;">
                <b>Ability scores: </b> <xsl:text>+2 to </xsl:text><xsl:value-of select="race/ability[1]" />
                <xsl:if test="count(race/ability)=2"><xsl:text>, </xsl:text></xsl:if>
-               <xsl:if test="count(race/ability)>2"><xsl:text>; </xsl:text></xsl:if>
+               <xsl:if test="count(race/ability)>2"><xsl:text>; <br /></xsl:text></xsl:if>
                <xsl:for-each select="race/ability[position()>1]">
                   <xsl:text>+2 to </xsl:text> <xsl:value-of select="."/>
                   <xsl:if test="position()!=last()">
