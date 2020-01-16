@@ -151,6 +151,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    </div> <!-- class header -->
       
    <div class="container">
+      
+      <div class="feature">
+         <img src="image.png" style="width:100%;" />
+      </div>
+      
       <xsl:for-each select="race/fluff">
          <div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left; page-break-inside:avoid;">
             <xsl:value-of select="." />
@@ -217,10 +222,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       
       <div class="feature">
          <xsl:apply-templates select="race/feature[1]" />
-      </div>
-      
-      <div class="feature">
-         <img src="image.png" style="width:100%;" />
       </div>
       
       <xsl:for-each select="race/feature[position()>1]">
