@@ -156,11 +156,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <img src="image.png" style="width:100%;" />
       </div>
       
-      <xsl:for-each select="race/fluff">
-         <div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left; page-break-inside:avoid;">
-            <xsl:value-of select="." />
-         </div>
-      </xsl:for-each>
+      <div class="feature">
+         <xsl:for-each select="race/fluff">
+            <div id="fluff" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left; page-break-inside:avoid;">
+               <xsl:value-of select="." />
+            </div>
+         </xsl:for-each>
+      </div>
       
       <div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
          <xsl:text>Racial Features</xsl:text>
