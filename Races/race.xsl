@@ -164,11 +164,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </xsl:for-each>
       </div>
       
-      <div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
-         <xsl:text>Racial Features</xsl:text>
-      </div>
-      
       <div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
+         <div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
+            <xsl:text>Racial Features</xsl:text>
+         </div>
+         
          <div class="blockdiv">
             <div style="width:100%;">
                <b>Average Height: </b> <xsl:value-of select="race/height" />
