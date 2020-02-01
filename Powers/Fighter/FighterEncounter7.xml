@@ -127,7 +127,7 @@
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] + Strength modifier damage, and you knock the target prone.</text>
+            <text>1[W] (unarmed) + Strength modifier damage, and you knock the target prone.</text>
          </section>
       </part>
    </power>
@@ -244,6 +244,49 @@
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target takes a -2 penalty to AC against the first attack made against it before the end of your next turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Hampering Flurry</title>
+      <class>Fighter</class> <category>Attack</category> <level>7</level>
+      <fluff>Using both weapons, you attack your opponent's legs and hinder it with painful wounds</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Martial, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</type>
+         <section>
+            <shade>true</shade>
+            <name>Requirement:</name> <name-style>bold</name-style>
+            <text>You must be wielding two melee weapons.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC (main weapon)</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] (main) + Strength modifier damage, and the target is slowed until the end of your next turn.</text>
+         </section>
+         <section>
+            <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <text>Strength vs. AC (off-hand weapon)</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] (off-hand) + Strength modifier damage, and the target is slowed until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If the primary attack was also a hit, this attack deals additional damage equal to your Dexterity modifier and the target cannot shift while it remains slowed.</text>
          </section>
       </part>
    </power>
