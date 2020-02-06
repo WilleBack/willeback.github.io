@@ -105,86 +105,94 @@
 		<benefit>A halfling can choose any of the following powers instead of a class utility power of the same level.</benefit>
 		
 		<power>
-			<title>Happy Feet</title>
-			<class>Halfling</class> <category>Utility</category> <level>2</level>
-			<fluff>It's hard to keep your feet under control, and sometimes they feel as if they move of their own accord</fluff>
+			<title>Avalanche Rush</title>
+			<class>Dwarf</class> <category>Utility</category> <level>2</level>
+			<fluff>The mountain's strength helps you shove an enemy from your path</fluff>
 			<part>
 				<frequency>Encounter</frequency>
-				<action>Opportunity</action> <subaction>Reaction</subaction>
+				<action>Nonaction</action> <subaction>Interrupt</subaction>
 				<type>Personal</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>A creature you can see starts its turn</text>
+					<text>You either successfully <![CDATA[<i>bull rush</i>]]> a target or use a melee attack to push a target</text>
 				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
-					<text>You shift up to 2 squares.</text>
+					<text>If you used <![CDATA[<i>bull rush</i>]]>, you increase the push by a number of squares up to your Strength modifier or your Constitution modifier, shifting into each square your target leaves.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If you used a melee attack to push a target, you increase the push by a number of squares up to one-half your Strength modifier or your Constitution modifier and can shift into each square your target leaves for these additional squares.</text>
 				</section>
 			</part>
 		</power>
 		
 		<power>
-			<title>Minor Threat</title>
-			<class>Halfling</class> <category>Utility</category> <level>6</level>
-			<fluff>Clearly you're no threat to your enemies, injured as you are and doing your best to seem small and harmless</fluff>
+			<title>Dwarven Pride</title>
+			<class>Dwarf</class> <category>Utility</category> <level>6</level>
+			<fluff>Nobody tosses a dwarf and gets away with it</fluff>
 			<part>
 				<frequency>Encounter</frequency>
-				<action>Minor</action> <subaction>Action</subaction>
+				<action>Free</action> <subaction>Reaction</subaction>
 				<type>Personal</type>
-				<section>
-					<shade>true</shade>
-					<name>Requirement:</name> <name-style>bold</name-style>
-					<text>You must be bloodied.</text>
-				</section>
-				<section>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>Until you are no longer bloodied, you have a +2 power bonus to all defenses and to Stealth checks.</text>
-				</section>
-			</part>
-		</power>
-		
-		<power>
-			<title>Pay Your Debts</title>
-			<class>Halfling</class> <category>Utility</category> <level>10</level>
-			<fluff>You acknowledge an ally's assistance by making a feint to keep your enemy off balance</fluff>
-			<part>
-				<frequency>At-Will</frequency>
-				<keyword>Martial</keyword>
-				<action>Immediate</action> <subaction>Reaction</subaction>
-				<type>Special</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>An enemy flanked by you moves out of the flanked position</text>
-				</section>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>One ally who was also flanking the triggering enemy</text>
+					<text>You are pulled, pushed, or slid</text>
 				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
-					<text>The target gains combat advantage against the enemy until the start of the enemy's next turn.</text>
+					<text>Until the end of your next turn, you gain a +1 cumulative power bonus to damage rolls for each square of the triggering forced movement.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>You also gain a +1 power bonus to the first attack roll you make against the triggering creature before the end of your next turn.</text>
 				</section>
 			</part>
 		</power>
 		
 		<power>
-			<title>Underfoot Hustle</title>
-			<class>Halfling</class> <category>Utility</category> <level>16</level>
-			<fluff>You roll between your enemy's legs and spring up on the other side</fluff>
+			<title>Stone Stubborn</title>
+			<class>Dwarf</class> <category>Utility</category> <level>10</level>
+			<fluff>You steel your mind to the onslaught, determined to go about your business</fluff>
 			<part>
 				<frequency>Encounter</frequency>
-				<action>Move</action> <subaction>Action</subaction>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
 				<type>Personal</type>
 				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>You shift up to your speed +2. You can move through squares occupied by enemies, but you must end your movement in an unoccupied square.</text>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>An effect would dominate or stun you</text>
 				</section>
 				<section>
 					<shade>true</shade>
-					<text>Enemies whose space you move through during this move grant combat advantage to you until the end of your next turn.</text>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The triggering effect makes you dazed instead of dominated or stunned.</text>
+				</section>
+			</part>
+		</power>
+		
+		<power>
+			<title>Mountainborn Tenacity</title>
+			<class>Dwarf</class> <category>Utility</category> <level>16</level>
+			<fluff>Just as no mountain fell from a single strike, no dwarf has fallen from a single blow</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<keyword>Healing</keyword>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+				<type>Personal</type>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>You drop to 0 hit points or fewer</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You can spend a healing surge to regain hit points equal to your healing surge value.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>Until the start of the acting creature's next turn, you gain resist all equal to twice your Constitution modifier.</text>
 				</section>
 			</part>
 		</power>
