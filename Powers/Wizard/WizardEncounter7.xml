@@ -39,4 +39,112 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Concussive Echo</title>
+      <class>Wizard</class> <category>Attack</category> <level>7</level>
+      <fluff>A focused blast of thunder slams into your foe, and the energy of the blast is stored in your enemy's body so that it is released in a concussive burst</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Evocation, Implement, Thunder</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>3d6 + Intelligence modifier thunder damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The first time the target makes an attack before the end of your next turn, it deals thunder damage to itself and each enemy within 3 squares of it before the attack is resolved. The thunder damage equals 3 + your Constitution modifier + your implement's enhancement bonus.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage, and the target only deals thunder damage to itself the first time it makes an attack before the end of your next turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Corrosive Mist</title>
+      <class>Wizard</class> <category>Attack</category> <level>7</level>
+      <fluff>A mist of suspended acid droplets consumes your chosen foes</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Acid, Arcane, Evocation, Implement, Zone</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 2 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d10 + Intelligence modifier acid damage.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>2 + Intelligence modifier + your implement's enhancement bonus acid damage.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The burst creates a zone of floating droplets of acid that lasts until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>Each creature that enters the zone or ends its turn in the zone takes acid damage equal to 2 + your Constitution modifier + your implement's enhancement bonus. A creature can take this damage only once per turn.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Enemies Abound</title>
+      <class>Wizard</class> <category>Attack</category> <level>7</level>
+      <fluff>You weave a veil of illusion over the eyes of your enemies, causing them to view their allies as threats</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Illusion, Implement, Psychic</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>3d6 + Intelligence modifier psychic damage.</text>
+         </section>
+         <section>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>Until the end of your next turn, the following two effects apply:</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>&#9658; You and allies can treat each target as an ally for the purposes of flanking.</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>&#9658; The target does not count as flanking you or your allies for other enemies, though it can still flank you with an enemy that is not a target.</text>
+         </section>
+      </part>
+   </power>
 </catalog>
