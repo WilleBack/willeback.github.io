@@ -282,4 +282,64 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Murderous Twin</title>
+      <class>Wizard</class> <category>Attack</category> <level>7</level>
+      <fluff>You conjure a twisted, shadowy twin of your enemy, a murderous vestige that wreaks havoc on itself and its allies</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Conjuration, Implement, Necromancy, Psychic</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d12 + Intelligence modifier psychic damage.</text>
+         </section>
+         <section>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You conjure a murderous twin of the target in an unoccupied space adjacent to the target until the end of your next. The twin is the same size as the target, and occupies its space.</text>
+         </section>
+         <section>
+            <text>The target and its allies take a -2 penalty to attack rolls while adjacent to the twin.</text>
+         </section>
+         <section>
+            <text>While the twin remains, you can use the Twin Stalker attack once, using the twin as the point of origin and the same target.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Twin Stalker</part-name>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Implement, Necromancy, Psychic, Teleportation</keyword>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <type>Melee</type> <range>1 from the twin's space</range>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>The target either leaves a square adjacent to the twin or makes an attack</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The twin teleports to a space adjacent to the target.</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>Wisdom modifier + Intelligence modifier + your implement's enhancement bonus psychic damage.</text>
+         </section>
+      </part>
+   </power>
 </catalog>
