@@ -377,8 +377,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <b>Initiative </b> <xsl:value-of select="init" />
          </div>
          <div id="senses" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
-            <b>Perception </b> <xsl:value-of select="perception" /> <br />
-            <!-- <b>Insight </b> <xsl:value-of select="insight" /> -->
+            <b>Perception </b> <xsl:value-of select="perception" /><!--  <br />
+            <b>Insight </b> <xsl:value-of select="insight" /> -->
             <xsl:if test="sense">
                <xsl:for-each select="sense">
                   <br /> <xsl:value-of select="."/>
