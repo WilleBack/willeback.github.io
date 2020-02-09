@@ -367,4 +367,45 @@
          </section>
       </part>
    </power>
+   
+   <power>
+      <title>Puckish Sprite</title>
+      <class>Wizard</class> <category>Attack</category> <level>7</level>
+      <fluff>You call forth a mischievous fey creature, aglow with fairy light and as meddlesome as a satyr</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Conjuration, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You conjure a puckish sprite in an unoccupied square adjacent to the target. The sprite occupies its square and lasts until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>Enemies adjacent to the sprite grant combat advantage to you and your allies. When the sprite appears, you make the Surprise Sprite Strike attack, using the sprite as the origin square.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Surprise Sprite Strike</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Arcane, Implement, Radiant</keyword>
+         <action>Nonaction</action>
+         <type>Melee</type> <range>1</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d10 + Intelligence modifier radiant damage, and the target must make a <![CDATA[<i>basic attack</i>]]> as a free reaction against a creature of your choice.</text>
+         </section>
+      </part>
+   </power>
 </catalog>
