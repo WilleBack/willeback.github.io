@@ -14517,7 +14517,7 @@
       <associated>infernal moon curse (lvl 7)</associated>
       <associated>coldfire vortex (lvl 13)</associated>
       <associated>despair of Zhudun (lvl 17)</associated>
-      <associated>starless void</associated>
+      <associated>starless void (lvl 23)</associated>
       <associated>banish to the void (lvl 27)</associated>
    </feat>
    
@@ -22852,6 +22852,12 @@
       <benefit>&#9658; Each enemy cursed by you must choose to either drop prone or become weakened until the start of your next turn.</benefit>
       <benefit>Also, you can expend your Fell Might to enhance any power associated with this feat. When you hit with such a power, one ally within 5 squares of you makes a <![CDATA[<i>basic attack</i>]]> as a free reaction. His or her attack deals additional thunder damage equal to your Intelligence modifier and gains the Thunder keyword.</benefit>
       <benefit>This additional thunder damage increases to 3 + your Intelligence modifier at 11th level, and to 6 + your Intelligence modifier at 21st level.</benefit>
+      <associated>frigid darkness (lvl 3)</associated>
+      <associated>howl of doom (lvl 7)</associated>
+      <associated>soul flaying (lvl 13)</associated>
+      <associated>unholy glee (lvl 17)</associated>
+      <associated>awaken the dragon (lvl 23)</associated>
+      <associated>manipulating thunderbolt (lvl 27)</associated>
    </feat>
    
    <feat>
@@ -22900,6 +22906,98 @@
       <group>Racial</group>
       <group>Second Wind</group>
       <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you gain +3 to all defenses instead of the normal +2.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Gorebrute Charge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shifter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>longtooth shifting</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Charge</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <benefit>While you are under the effects of your <![CDATA[<i>longtooth shifting</i>]]> racial power, you gain a +2 bonus to damage rolls with charge attacks.</benefit>
+      <benefit>This damage bonus increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Goring Shove</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Minotaur</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>goring charge</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Charge</group>
+      <group>Forced Movement</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you hit a target with your <![CDATA[<i>goring charge</i>]]> racial power, you can also push that target 1 square.</benefit>
+      <benefit>This push increases to 2 squares at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Gouge Specialist</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>proficiency</type>
+         <name>gouge</name>
+      </prereq>
+      <group>Power Repertoire</group>
+      <group>Weapon Specialization</group>
+      <benefit>You can learn the following powers instead of powers from your class at the appropriate levels.</benefit>
+      
+      <power>
+         <title>Gouge Sweep</title>
+         <class>Gouge</class> <category>Attack</category> <level>3</level>
+         <fluff>You swing your gouge in an arc, thrusting it a couple foes to knock them aside</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Martial, Weapon</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>weapon</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must be wielding a gouge</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One or two creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Strength vs. AC</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>1[W] + Strength modifier damage, and you slide the target 1 square and knock it prone.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 17:</name> <name-style>italic</name-style>
+               <text>If you know this power as an encounter power of level 17 or higher, the damage increases to 3[W] + Strength modifier and you slide the target up to 3 squares.</text>
+            </section>
+         </part>
+      </power>
+      
    </feat>
    
    <feat>
