@@ -3,6 +3,59 @@
 <catalog>
    
    <power>
+      <title>Binding Ooze</title>
+      <class>Wizard</class> <category>Attack</category> <level>7</level>
+      <fluff>Your foe is covered in acidic, jellylike mass that continues to eat at it when the foe tries to attack</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Acid, Arcane, Conjuration, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You conjure a binding ooze in the target's space until the end of your next turn. The ooze does not occupy a space, and remains in the target's space when the target moves. You immediately make the Ooze Cover attack.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While the ooze remains, whenever the target makes an attack, it takes acid damage equal to 3 + your Constitution modifier + your implement's enhancement bonus.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If the target has vulnerable acid or other weakness to acid, it takes one-half this damage at the start of its turn.</text>
+         </section>
+      </part>
+      <part>
+         <part-name>Ooze Cover</part-name>
+         <frequency>Automatic</frequency>
+         <keyword>Acid, Arcane, Implement</keyword>
+         <action>Nonaction</action>
+         <type>Close</type> <range>burst special</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The creature covered by the ooze</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>2d8 + Intelligence modifier acid damage.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Half damage.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
       <title>Charm of the Defender</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You weave a skein of deceitful magic, tricking your foe to become a hero to its enemies</fluff>
