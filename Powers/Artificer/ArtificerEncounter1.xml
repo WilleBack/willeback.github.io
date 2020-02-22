@@ -156,4 +156,72 @@
       </part>
    </power>
    
+   <power>
+      <title>Scouring Weapon</title>
+      <class>Artificer</class> <category>Attack</category> <level>1</level>
+      <fluff>You infuse your weapon with acid, momentarily corroding your opponent's defense</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Acid, Arcane, Weapon</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Melee</type> <range>weapon</range>
+         <type2>Ranged</type2> <range2>weapon</range2>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Intelligence modifier acid damage, and the target takes a penalty to AC until the end of your next turn. The penalty equals 1 + one-half your Constitution modifier (minimum -2 penalty).</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>One-half the penalty to AC.</text>
+         </section>
+      </part>
+   </power>
+   
+   <power>
+      <title>Shielding Cube</title>
+      <class>Artificer</class> <category>Attack</category> <level>7</level>
+      <fluff>You direct a minute cube covered in runes into the fray, and though the cube is small, it contains the force that bashes foes and shields allies</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Arcane, Force, Implement, Zone</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 5 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d6 + Intelligence modifier force damage, and you push the target 2 squares from the burst's origin square.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You push the target 1 square from the burst's origin square.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You create a zone of protective force in the burst until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>You and each ally in the zone gain a power bonus to AC. The bonus equals one-half your Wisdom modifier (minimum +1 bonus).</text>
+         </section>
+      </part>
+   </power>
+   
 </catalog>
