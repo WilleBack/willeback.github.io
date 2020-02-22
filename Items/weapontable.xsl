@@ -418,7 +418,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text>This double weapon is extra sturdy. The stout end of a double weapon counts as a two-handed weapon for requirements and other abilities.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Versatile'">
-				<xsl:text>This weapon is one-handed, but can be wielded two-handed. When you wield a versatile weapon in two hands, you deal +1 additional damage for each [W] of damage, rounded up. If you are a Small character, you must wield a versatile weapon in two hands, but do not gain this bonus to damage.</xsl:text>
+				<xsl:text>This weapon is one-handed, but can be wielded two-handed. When you wield a versatile weapon in two hands, you deal +1 additional damage for every two [W] of damage, rounded up. If you are a Small character, you must wield a versatile weapon in two hands, but do not gain this bonus to damage.</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>Not defined.</xsl:text>
