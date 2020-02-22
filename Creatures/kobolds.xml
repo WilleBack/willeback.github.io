@@ -214,6 +214,68 @@
    </creature>
    
    <creature>
+      <title>Kobold Minor</title>
+      <level>0</level> <rolestrength>Minion</rolestrength> <role>Skirmishers</role> <xp>20</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
+      
+      <init>+3</init> <perception>+0</perception> <insight>+1</insight>
+      <sense>darkvision</sense>
+      
+      <hp>2</hp> <bloodied>Any damage bloodies a minion</bloodied>
+      <ac>14</ac> <fort>10</fort> <ref>12</ref> <will>10</will>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Trap Sense</name>
+            <line>The kobold gains a +2 bonus to all defenses against traps.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Standard Actions</category-name>
+         
+         <block>
+            <nameMining Pick</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 3 damage (crit 5 damage).</line>
+            <line><![CDATA[<i>Effect:</i>]]> The minor shifts 2 squares to a space that is not adjacent to any enemies.</line>
+         </block>
+      </category>
+      
+      <skill>
+         <name>Stealth</name> <value>+6</value>
+      </skill>
+      
+      <str>
+         <value>9</value> <mod>-1 / -1</mod>
+      </str>
+      <con>
+         <value>8</value> <mod>-1 / -1</mod>
+      </con>
+      <dex>
+         <value>14</value> <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>9</value> <mod>-1 / -1</mod>
+      </int>
+      <wis>
+         <value>10</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>7</value> <mod>-2 / -2</mod>
+      </cha>
+      
+      <alignment>evil</alignment> <language>Draconic</language>
+      <equipment>leather armor</equipment>
+      <equipment>mining pick</equipment>
+   </creature>
+   
+   <creature>
       <title>Kobold Slinger</title>
       <level>1</level> <role>Artillery</role> <xp>100</xp>
       <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>reptile</subtype>
