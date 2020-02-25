@@ -260,7 +260,7 @@
       <group>Misfortune Bloodline</group>
       <group>Racial</group>
       <group>Skill Enhancement</group>
-      <benefit>When you make an Insight check against a creature within range of your <![CDATA[<i>mantle of misfortune</i>]]>, you can roll twice and take the better result.</benefit>
+      <benefit>When you make an Insight check against a creature within the aura granted by your <![CDATA[<i>mantle of misfortune</i>]]> racial power, you can roll twice and take the better result.</benefit>
    </feat>
    <feat>
       <title>Accurate Magic Armaments</title>
@@ -23819,6 +23819,29 @@
    </feat>
    
    <feat>
+      <title>Guardian's Mishaps</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Defender</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Mantle of Misfortune</name>
+      </prereq>
+      <group>Class</group>
+      <group>Marking</group>
+      <group>Misfortune Bloodline</group>
+      <group>Racial</group>
+      <benefit>When you slide a creature in the aura granted by your <![CDATA[<i>mantle of misfortune</i>]]> racial power, you can mark that creature until the end of its next turn.</benefit>
+   </feat>
+   
+   <feat>
       <title>Hunter in Darkness</title>
       <tier>Paragon</tier>
       <prereq>
@@ -23919,6 +23942,45 @@
       <group>Perception</group>
       <benefit>You gain darkvision with a range of 3 squares.</benefit>
       <benefit>The range increases to 4 squares at 11th level, and to 5 squares at 21st level.</benefit>
+   </feat>
+      
+   <feat>
+      <title>Mantle of Misfortune</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Forced Movement</group>
+      <group>Luck</group>
+      <group>Misfortune Bloodline</group>
+      <group>Power Repertoire</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +2 bonus to Insight checks and Perception checks made against other tieflings.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>mantle of misfortune</i>]]> power as a racial power.</benefit>
+      
+      <power>
+         <title>Mantle of Misfortune</title>
+         <class>Tiefling</class> <category>Utility</category>
+         <fluff>While the enemy remains near you, its feet slip, it drops things, and nothing goes right</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Arcane, Aura</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You activate an Aura 1 (Arcane) that lasts until the end of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>Enemies in the aura take a -2 penalty to attack rolls. Whenever an enemy in the aura misses with an attack, you can slide that enemy 1 square as a free reaction.</text>
+            </section>
+         </part>
+      </power>
    </feat>
    
    <feat>
