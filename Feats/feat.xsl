@@ -714,7 +714,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:if test="@selection='Defender' or @selection='Controller' or @selection='Striker' or @selection='Leader'"> <xsl:text> role</xsl:text> </xsl:if> <xsl:text> - Heroic</xsl:text></div>
 			<xsl:choose>
 				<xsl:when test="@selection='Drow' or @selection='Eladrin' or @selection='Elf' or @selection='Hamadryad' or @selection='Hengeyokai' or @selection='Satyr' or @selection='Wilden'">
-					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Heroic']">
+					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Fey') and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</xsl:when>
