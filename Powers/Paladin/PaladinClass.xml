@@ -63,38 +63,68 @@
    <fluff>Champions following the edicts of evil gods are known as Blackguards among the common folk. While often more ruthless in their methods, they are no less devoted to their cause than the Champions of good.</fluff>
    
    <feature>
-      <name>Assassin's Shroud</name>
-      <benefit> The dark magic of the Shadowfell courses through your veins, tainting your soul but granting you the ability to subject an enemy to invisible shrouds that reveal its weakest points. The more of your shrouds there are on a target, the deadlier a blow you can strike against it.</benefit>
-      <benefit>You gain the <![CDATA[<i>assassin's shroud</i>]]> class power that allows you to place your shrouds on a target. Other benefits can also allow you to place your shrouds on a target. You can have your shrouds on only one creature, and one creature can have up to four of your shrouds on it. A creature can have shrouds from multiple assassins on it.</benefit>
-      <benefit>If a creature is not aware of your presence, it is not aware of your shrouds being on it either.</benefit>
-      <benefit>Before you make an attack roll against the target, you choose to invoke either all your shrouds on it or none of them. If you invoke your shrouds and the attack hits, the attack deals +1d6 damage for each shroud. If the attack misses, you deal damage for one less shroud, even if the attack normally deals half or no damage on a miss. After the attack has been resolved, all your shrouds vanish from the target.</benefit>
-      <benefit>The damage per shroud increases to 1d8 + 2 at 11th level, and to 1d10 + 4 at 21st level.</benefit>
+      <name>Channel Divinity</name>
+      <benefit>You can invoke divine power, filling yourself with might derived from your cause. This power allows you to wield special powers.</benefit>
+      <benefit>Once per encounter, you can use a Channel Divinity power.</benefit>
+      <benefit>You gain the <![CDATA[<i<divine mettle</i> and <i>divine strength</i>]]> Channel Divinity powers.</benefit>
+      <benefit>Feats and other abilities can grant you additional Channel Divinity powers. Unless the ability specifically says otherwise, you can still only use one Channel Divinity power in an encounter. If an ability allows you to regain the use of your Channel Divinity, you can use any Channel Divinity power you know, even the same one.</benefit>
       
       <power>
-         <title>Assassin's Shroud</title>
-         <class>Asassin</class> <category>Utility</category>
-         <fluff>You cause invisible shrouds to settle on your foe that reveal the target's weak points to your keen gaze</fluff>
+         <title>Divine Mettle</title>
+         <class>Paladin</class> <category>Utility</category>
+         <fluff>Your unswerving faith in your cause empowers a nearby creature to resist a debilitating affliction</fluff>
          <part>
-            <frequency>At-Will</frequency>
-            <keyword>Shadow</keyword>
-            <action>Free</action> <subaction>Action</subaction>
+            <frequency>Encounter</frequency>
+            <keyword>Divine</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
             <type>Ranged</type> <range>10</range>
             <section>
                <indent>1</indent>
-               <text>Using this power does not trigger opportunity attacks</text>
+               <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+            </section>
+            <section>
+               <name>Channel Divinity:</name> <name-style>bold</name-style>
+               <text>You can only use one Channel Divinity power per encounter.</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One enemy you can see</text>
+               <text>One creature</text>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>You place your shrouds on the target, or increase your number of shrouds on it by one. The shrouds lasts until the end of the encounter, or until you place them on another target.</text>
+               <text>The target makes a saving throw against one effect that a save can end. It has a bonus to the roll equal to your Wisdom modifier.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Divine Strength</title>
+         <class>Paladin</class> <category>Utility</category>
+         <fluff>You call upon divine strength to lay low your enemies</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Channel Divinity:</name> <name-style>bold</name-style>
+               <text>You can only use one Channel Divinity power per encounter.</text>
             </section>
             <section>
-               <name>Special:</name> <name-style>bold</name-style>
-               <text>You can use this power only once per turn.</text>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The next attack you make gains a bonus to damage. The bonus equals your Strength modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>Equals 2 + your Strength modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>Equals 4 + your Strength modifier.</text>
             </section>
          </part>
       </power>
