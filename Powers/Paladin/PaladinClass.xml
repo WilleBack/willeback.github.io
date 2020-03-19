@@ -51,7 +51,7 @@
    
    <hpbase>15</hpbase>
    <hpgain>6</hpgain>
-   <surgebase>10</surgebase>
+   <surgebase>9</surgebase>
    
    <skills>
       <trained>Religion</trained>
@@ -175,105 +175,130 @@
    
    <feature>
       <name>Hand of the Cause</name>
-      <benefit>A champion is almost always a person of action. He or she has a hands-on approach, both figuratively and literally.</benefit>
-      <benefit>You gain your choice of either <![CDATA[<i>ardent vow</i>, <i>lay on hands</i>, or <i>virtue's touch</i>]]>.</benefit>
+      <benefit>A Champion is almost always a person of action. He or she has a hands-on approach, both figuratively and literally.</benefit>
+      <benefit>Choose either Ardent Vow, Lay on Hands, or Virtue's Touch to represent how your approach.</benefit>
       
-      <power>
-         <title>Ardent Vow</title>
-         <class>Paladin</class> <category>Utility</category>
-         <fluff>You reach toward your foe and draw on unwavering faith and inner strength, so your next strike is filled with divine fury</fluff>
-         <part>
-            <frequency>At-Will</frequency>
-            <keyword>Divine</keyword>
-            <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>The first attack you make against the target before the end of your next turn gains a bonus to damage equal to 4 + your Strength modifier.</text>
-            </section>
-            <section>
-               <shade>true</shade> <indent>1</indent>
-               <name>Level 11:</name> <name-style>italic</name-style>
-               <text>Equal to 6 + your Strength modifier.</text>
-            </section>
-            <section>
-               <shade>true</shade> <indent>1</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text>Equal to 8 + your Strength modifier.</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <text>Until the end of the encounter, whenever you attack the target, you subject it to your Divine Sanction until the end of your next turn.</text>
-            </section>
-            <section>
-               <name>Special:</name> <name-style>bold</name-style>
-               <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
-            </section>
-         </part>
-      </power>
+      <subfeature>
+         <name>Ardent Vow</name>
+         <benefit>An Ardent Vow Champion focuses as much on bringing down the enemies of his or her cause as on protecting his or her allies.</benefit>
+         <benefit>Your Divine Sanction deals one-half damage when a creature under your sanction makes an attack that includes at least one of your allies and you as a target.</benefit>
+         <benefit>Also, you gain the <![CDATA[<i>ardent vow</i>]]> class power.</benefit>
       
-      <power>
-         <title>Lay on Hands</title>
-         <class>Paladin</class> <category>Utility</category>
-         <fluff>Your divine touch instantly heals wounds</fluff>
-         <part>
-            <frequency>At-Will</frequency>
-            <keyword>Divine, Healing</keyword>
-            <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
-               <text>You must have at least one healing surge remaining.</text>
-            </section>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>You spend a healing surge, and the target regains hit points equal to his or her healing surge value.</text>
-            </section>
-            <section>
-               <name>Special:</name> <name-style>bold</name-style>
-               <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
-            </section>
-         </part>
-      </power>
+         <power>
+            <title>Ardent Vow</title>
+            <class>Paladin</class> <category>Utility</category>
+            <fluff>You reach toward your foe and draw on unwavering faith and inner strength, so your next strike is filled with divine fury</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Melee</type> <range>touch</range>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One creature</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The first attack you make against the target before the end of your next turn gains a bonus to damage equal to 4 + your Strength modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>Equal to 6 + your Strength modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Equal to 8 + your Strength modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>Until the end of the encounter, whenever you attack the target, you subject it to your Divine Sanction until the end of your next turn.</text>
+               </section>
+               <section>
+                  <name>Special:</name> <name-style>bold</name-style>
+                  <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
       
-      <power>
-         <title>Virtue's Touch</title>
-         <class>Paladin</class> <category>Utility</category>
-         <fluff>Your gentle touch removes affliction</fluff>
-         <part>
-            <frequency>At-Will</frequency>
-            <keyword>Divine</keyword>
-            <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
-               <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>You remove one of the following conditions from the target:</text>
-            </section>
-            <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>Blinded, dazed, deafened, slowed, stunned, or weakened. Your DM might allow you to remove other conditions or effects.</text>
-            </section>
-            <section>
-               <name>Special:</name> <name-style>bold</name-style>
-               <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
-            </section>
-         </part>
-      </power>
+      <subfeature>
+         <name>Lay on Hands</name>
+         <benefit>A Champion that can lay on hands is there to shield his or her allies, and then to patch their wounds when that is not enough.</benefit>
+         <benefit>Your number of healing surges increases by 1.</benefit>
+         <benefit>Also, you gain the <![CDATA[<i>lay on hands</i>]]> class power.</benefit>
+      
+         <power>
+            <title>Lay on Hands</title>
+            <class>Paladin</class> <category>Utility</category>
+            <fluff>Your divine touch instantly heals wounds</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Divine, Healing</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Melee</type> <range>touch</range>
+               <section>
+                  <shade>true</shade>
+                  <name>Requirement:</name> <name-style>bold</name-style>
+                  <text>You must have at least one healing surge remaining.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One creature</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You spend a healing surge, and the target regains hit points equal to his or her healing surge value.</text>
+               </section>
+               <section>
+                  <name>Special:</name> <name-style>bold</name-style>
+                  <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+      
+      <subfeature>
+         <name>Virtue's Touch</name>
+         <benefit>Wielding the Virtue's Touch, a Champion can ease the pain and suffering of those in need.</benefit>
+         <benefit>You gain a +1 bonus to saving throws against effects that blind, daze, slow, stun or weaken you. Your DM might allow you to apply this bonus against other effects as well.</benefit>
+         <benefit>Also, you gain the <![CDATA[<i>virtue's touch</i>]]> class power.</benefit>
+      
+         <power>
+            <title>Virtue's Touch</title>
+            <class>Paladin</class> <category>Utility</category>
+            <fluff>Your gentle touch removes affliction</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Melee</type> <range>touch</range>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One creature</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You remove one of the following conditions from the target:</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <text>Blinded, dazed, deafened, slowed, stunned, or weakened. Your DM might allow you to remove other conditions or effects.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>Instead of removing a condition, you can choose to give the target a power bonus to Endurance checks to resist disease until the end of his or her next extended rest. The bonus equals 1 + one-half your Wisdom modifier, and also applies to Heal checks to treat the target's disease.</text>
+               </section>
+               <section>
+                  <name>Special:</name> <name-style>bold</name-style>
+                  <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
    </feature>
 </class>
