@@ -6258,9 +6258,10 @@
       <tier>Heroic</tier>
       <group>Background</group>
       <group>Saving Throws</group>
+      <group>Shadow Nature</group>
       <group>Skill Enhancement</group>
       <group>Stealth</group>
-      <benefit>Your origin changes to shadow.</benefit>
+      <benefit>Your origin changes to shadow, making you considered an shadow creature for all purposes instead of your previous creature origin, such as natural or fey.</benefit>
       <benefit>Also, you gain a +2 feat bonus to Stealth</benefit>
       <benefit>In addition, you gain a +1 bonus to saving throws while in dim light or darkness.</benefit>
    </feat>
@@ -21455,6 +21456,7 @@
       <group>Background</group>
       <group>Damage Resistance</group>
       <group>Defense</group>
+      <group>Shadow Nature</group>
       <benefit>You gain resist 5 cold, and a +1 bonus to Will. If you already have resist cold, increase it by +5 instead.</benefit>
       <benefit>The resist cold increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
@@ -24693,6 +24695,128 @@
       <group>Racial</group>
       <benefit>While you are inside the cloud created by your own <![CDATA[<i>cloud of darkness</i>]]> racial power, your unaugmented psionic at-will attack powers deal 2 psychic damage in addition to their other effects.</benefit>
       <benefit>This psychic damage increases to 4 at 11th level, and to 6 at 21st leve.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Haunting Shade</title>
+      <tier>Heroic</tier>
+      <category>Multiclass</category>
+      <prereq>
+         <type>skill</type>
+         <name>Stealth</name>
+      </prereq>
+      <group>Multiclass Haunting Shade</group>
+      <group>Perception</group>
+      <group>Shadow Nature</group>
+      <group>Skill Enhancement</group>
+      <group>Stealth</group>
+      <group>Weapon Specialization</group>
+      <benefit>Your origin changes to shadow, making you considered an shadow creature for all purposes instead of your previous creature origin, such as natural or fey.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to Stealth checks.</benefit>
+      <benefit>In addition, you gain darkvision out to 5 squares. If your origin was already show or you learn any of the multiclass powers, the range limit is removed.</benefi>
+      <benefit>You can learn any of the following powers as multiclass powers of the indicated level. Choose Dexterity or Charisma when you take this feat. You use the chosen ability for attack and damage rolls with these powers.</benefit>
+      
+      <power>
+         <title>Black Blade of Despair</title>
+         <class>Haunting Shade</class> <category>Attack</category> <level>3</level>
+         <fluff>Your form blurs, becoming a thing of smoke and darkness, and where your blade falls, death surely follows</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Cold, Necrotic, Shadow, Weapon</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>weapon</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must be wielding either a Heavy Blade or a Light Blade.</text>
+            </section>
+            <section>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You become insubstantial until the end of your next turn.</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Ability vs. Reflex</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>1[W] + Ability modifier damage plus 1d6 cold and necrotic damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 17:</name> <name-style>italic</name-style>
+               <text>If you know this power as an encounter attack power of 17th level or higher, the damage increases to 2[W] + Ability modifier plus 2d6 cold and necrotic damage.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Shade Stride</title>
+         <class>Haunting Shade</class> <category>Utility</category> <level>6</level>
+         <fluff>You melt into the gloom and reappear some distance away from where you were</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Shadow, Teleportation</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You teleport 10 squares to a space containing dim light or darkness.</text>
+            </section>
+         </part>
+      </power>
+      
+      <power>
+         <title>Gathering of Shadows</title>
+         <class>Haunting Shade</class> <category>Attack</category> <level>9</level>
+         <fluff>Dark duplicates of your weapon crawl across the ground, piercing your foes' shadows and leaving them reeling in pain before the darkness wraps around you</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Cold, Illusion, Necrotic, Shadow, Weapon</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Close</type> <range>burst 2</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must be wielding either a Heavy Blade or a Light Blade.</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>Each enemy in the burst</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Ability vs. Fortitude</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <text>You gain combat advantage if the target is in darkness</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>2[W] + Ability modifier cold and necrotic damage, and the target is dazed (save ends).</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 25:</name> <name-style>italic</name-style>
+               <text>If you know this power as a daily attack power of 25th level or higher, the damage increases to 4[W] + Ability modifier.</text>
+            </section>
+            <section>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You become invisible until the end of your next turn, and can shift 1 square.</text>
+            </section>
+            <section>
+               <text>Until the end of the encounter, dim light grants you total concealment instead just concealment.</text>
+            </section>
+         </part>
+      </power>
    </feat>
    
    <feat>
