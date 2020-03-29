@@ -139,6 +139,7 @@
    <race selection="Half-elf" />
    <race selection="Half-orc" />
    <race selection="Hamadryad" />
+   <race selection="Hobgoblin" />
    <race selection="Human" />
    <race selection="Kalashtar" />
    <race selection="Minotaur" />
@@ -25746,6 +25747,229 @@
       <group>Teleportation</group>
       <benefit>You gain a +2 feat bonus to Arcana checks.</benefit>
       <benefit>When you use your <![CDATA[<i>elven accuracy</i>]]> racial power, you can use a free reaction to teleport 2 squares.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Highborn Drow</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Lolthtouched</name>
+      </prereq>
+      <group>Concealment</group>
+      <group>Condition Infliction</group>
+      <group>Power Repertoire</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +2 feat bonus to Arcana checks.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>webs of darkness</i>]]> Lolthtouched power.</benefit>
+      
+      <power>
+         <title>Webs of Darkness</title>
+         <class>Drow</class> <category>Attack</category>
+         <fluff>Inky tendrils of solidified darkness leap from your fingertip and bind your enemies</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Close</type> <range>blast 3</range>
+            <section>
+               <name>Lolthtouched:</name> <name-style>bold</name-style>
+               <text>You can only use one Lolthtouched power per encounter.</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>Each creature in the blast</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Ability +4 vs. Reflex</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>Ability +6</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>The target is covered in dark webs until the end of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>While covered, the target is slowed and all creatures have concealment against the target.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>When you gain this power, choose Intelligence, Wisdom, or Charisma. You use the chosen ability for the attack roll.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+   
+   <feat>
+      <title>Hindering Shield</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Forced Movement</group>
+      <group>Mobility Hindrance</group>
+      <group>Shield</group>
+      <benefit>Whenever you pull, push, or slide an adjacent creature with an attack while you are using a shield, you can also slow that creature until the start of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hip Throw</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Brawler Training</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Critical</group>
+      <group>Grapple</group>
+      <benefit>Whenever you score a critical hit with a <![CDATA[<i>grab</i>]]> attack or a martial attack that allows you to grab a creature, you can also knock that creature prone.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hobbling Strike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Mobility Hindrance</group>
+      <benefit>Whenever you would deal your Hunter's Quarry damage, you can forge one die of that damage to slow the target until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hobgoblin Beast Companion</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Hobgoblin</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Beast Mastery</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>hobgoblin discipline</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Animal Companion</group>
+      <group>Class</group>
+      <group>Condition Negation</group>
+      <group>Defense</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>hobgoblin discipline</i>]]> racial power and your beast companion is adjacent to you, you can also end one effect that a save can end currently affecting your beast companion.</benefit>
+      <benefit>Also, your beast companion gains a +1 feat bonus to all defenses while it is adjacent to you.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hobgoblin Phalanx Training</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Hobgoblin</name>
+      </prereq>
+      <group>Proficiency Gain</group>
+      <group>Racial</group>
+      <group>Shield</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain proficiency with light shields and heavy shields.</benefit>
+      <benefit>Also, you ignore the check penalty for wearing a shield.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hobgoblin Weapon Training</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Hobgoblin</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Proficiency Gain</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with all Flails and Spears.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to damage rolls with Weapon attacks with Flails and Spears.</benefit>
+      <benefit>This bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Holy Dilettante</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Half-elf</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Dilettante</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Radiant Specialization</group>
+      <benefit>Once per encounter, when you use the power you gained through your Dilettante racial trait, you can choose to deal radiant damage with that power instead of its normal damage type. If you do, the power gains the Radiant keyword and loses any damage type keywords it normally has.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Holy Resolve</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warforged resolve</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>warforged resolve</i>]]> racial power, until the end of your next turn, you can add your Strength modifier to the number of hit points regained by target of your cleric Healing powers.</benefit>
+      <benefit>This additional healing increases to 2 + your Strength modifier at 11th level, and to 4 + your Strength modifier at 21st level.</benefit>
    </feat>
    
    <feat>
