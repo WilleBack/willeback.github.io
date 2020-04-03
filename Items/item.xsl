@@ -758,7 +758,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Uncommon</xsl:text></div>
 					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
 						<xsl:call-template name="line">
-							<xsl:with-param name="levelvalue">5</xsl:with-param>
+							<xsl:with-param name="levelvalue">30</xsl:with-param>
 						</xsl:call-template>
 					</xsl:for-each>
 				</xsl:when>
@@ -1008,7 +1008,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Rare</xsl:text></div>
 					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
 						<xsl:call-template name="line">
-							<xsl:with-param name="levelvalue">5</xsl:with-param>
+							<xsl:with-param name="levelvalue">30</xsl:with-param>
 						</xsl:call-template>
 					</xsl:for-each>
 				</xsl:when>
@@ -1258,7 +1258,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
 					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
 						<xsl:call-template name="line">
-							<xsl:with-param name="levelvalue">5</xsl:with-param>
+							<xsl:with-param name="levelvalue">30</xsl:with-param>
 						</xsl:call-template>
 					</xsl:for-each>
 				</xsl:when>
