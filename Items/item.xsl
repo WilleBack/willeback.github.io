@@ -270,7 +270,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Common'])>0">
 		<div class="list">
-			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text></b> - Common</xsl:text></div>
+			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </b><xsl:text> - Common</xsl:text></div>
 			<xsl:choose>
 				<xsl:when test="@selection='1'">
 					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
@@ -492,7 +492,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
 	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Uncommon'])>0">
 		<div class="list">
-			<div class="groupname"> <i><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text></i> - Uncommon</xsl:text></div>
+			<div class="groupname"> <i><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </i><xsl:text> - Uncommon</xsl:text></div>
 			<xsl:choose>
 				<xsl:when test="@selection='1'">
 					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
