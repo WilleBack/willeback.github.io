@@ -6391,6 +6391,7 @@
       <group>Class</group>
       <group>Support</group>
       <group>Temporary Hit Points</group>
+      <group>Worship</group>
       <benefit>When you use your <![CDATA[<i>divine fortune</i>]]> Channel Divinity power, you and each ally adjacent to gain temporary hit points equal to your Charisma modifier.</benefit>
       <benefit>The temporary hit points increase to 2 + your Charisma modifier at 11th level, and to 5 + your Charisma modifier at 21st level.</benefit>
    </feat>
@@ -19862,7 +19863,7 @@
       <group>Languages</group>
       <group>Skill Enhancement</group>
       <benefit>You can use Nature in place of Arcana for fey-related knowledge checks.</benefit>
-      <benefit>Also, you can speak, read and write Elven. If you can already speark, read and write Elven, choose Giant or Goblin instead.</benefit>
+      <benefit>Also, you can speak, read and write Elven. If you can already speak, read and write Elven, choose Giant, Goblin or Sylvan instead.</benefit>
    </feat>
    
    <feat>
@@ -19871,11 +19872,15 @@
       <prereq>
          <type>race</type>
          <name>Eladrin</name>
-         <combine>or</combine>
       </prereq>
       <prereq>
          <type>race</type>
          <name>Gnome</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Satyr</name>
          <combine>;</combine>
       </prereq>
       <prereq>
@@ -26187,7 +26192,7 @@
    </feat>
    
    <feat>
-      <title>Human Innocation</title>
+      <title>Human Innovation</title>
       <tier>Heroic</tier>
       <prereq>
          <type>race</type>
@@ -26355,6 +26360,256 @@
    </feat>
    
    <feat>
+      <title>Hunter of Wind and Wave</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>swiftcurrent</name>
+         <qualifier>racial</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>windwalker</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <group>Power Enhancement</group>
+      <benefit>When you use your <![CDATA[<i>swiftcurrent</i> racial power or your <i>windwalker</i>]]> racial power, the power allows you to move 2 additional squares.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunter's Advantage</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <benefit>Your Hunter's Quarry additional damage increases by 2 when you have combat advantage against your quarry.</benefit>
+      <benefit>The damage increases by 4 starting at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunter's Aim</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Negation</group>
+      <group>Perception</group>
+      <benefit>You don't take the normal -2 penalty to attack rolls against your quarry if it has cover or concealment.</benefit>
+      <benefit>Starting at 21st level, you only take a -2 penalty to attack rolls instead of the normal -5 against your quarry if it has superior cover or total concealment.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunter's Resurgence</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <group>Class</group>
+      <group>Kill Effect</group>
+      <group>Second Wind</group>
+      <benefit>When you reduce your quarry to 0 hit points or fewer, you can use your <![CDATA[<i>second wind</i>]]> as a free reaction. You do not gain the normal bonus to defenses if you do so.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunting Beast</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Beast Mastery</name>
+      </prereq>
+      <group>Animal Companion</group>
+      <group>Class</group>
+      <group>Condition Negation</group>
+      <group>Perception</group>
+      <benefit>You and your beast companion ignore concealment for enemies adjacent to your beast companion.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunting Shadow</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Wilden</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Assassin's Shroud</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>pursuit of the hunter</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Teleportation</group>
+      <benefit>You can teleport instead of shift when you use your <![CDATA[<i>pursuit of the hunter</i>]]> racial power.</benefit>
+      <benefit>Also, until the end of your next turn, your attacks against the triggering enemy deal 1 extra damage for each of your shrouds on it.</benefit>
+      <benefit>This extra damage increases to 2 for each of your shrouds at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunting Spear Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Size-based</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +2 feat bonus to Athletics checks.</benefit>
+      <benefit>Also, you gain a +2 bonus to damage rolls against creatures that are larger than you when using a spear that you are proficient with.</benefit>
+      <benefit>The bonus to damage rolls increases to +3 at 21th level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunting Spider Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Flanking</group>
+      <group>Triggered</group>
+      <benefit>You gain the following benefits with martial at-will attacks:</benefit>
+      <benefit>&#9658; Against a target that cannot see you, once per turn you can reroll one attack roll, but must use the second result.</benefit>
+      <benefit>&#9658; If you are flanking the target, you can shift 1 square as a free reaction.</benefit>
+      <benefit>&#9658; If you are flanking the target and hit, until the start of your next turn, you have combat advantage on any attacks triggered by the target's movement.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunting Thre-kreen</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Thri-kreen</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>thri-kreen claws</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>While your <![CDATA[<i>thri-kreen claws</i>]]> racial power is not expended, whenever an enemy adjacent to you takes damage from your Hunter's Quarry, you can deal damage to one other enemy adjacent to you. The damage equals your Dexterity modifier. This counts as hitting the enemy with a melee attack if it has abilities triggered or otherwise related to it.</benefit>
+      <benefit>The damage increases to 2 + your Dexterity modifier at 11th level, and to 4 + your Dexterity modifier at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunting Wolf Form</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Perception</group>
+      <group>Shapechange</group>
+      <benefit>Skill Enhancement</group>
+      <benefit>While you are in beast form, you gain a +1 feat bonus to speed.</benefit>
+      <benefit>Also, while you are in beast form, you gain a +5 feat bonus to Perception checks, and when you roll a 1 on a Perception check, you can reroll the check until you get a result other than 1.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hunting Wolf Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Charge</group>
+      <group>Mobility</group>
+      <benefit>When you use a martial melee at-will attack that allows you to move or shift before making the attack, you can choose to charge instead, making that power's attack instead of a <![CDATA[<i>melee basic attack</i>]]>.</benefit>
+      <benefit>If you are a warlord and use your <![CDATA[<i>tactician's command</i>]]> while in a poise that allows the target ally to move or shift before making the attack, you can choose to allow him or her to make a charge attack instead.</benefit>
+   </feat>
+   
+   <feat>
       <title>Hurl Breath</title>
       <tier>Heroic</tier>
       <prereq>
@@ -26369,6 +26624,21 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>When you use your <![CDATA[<i>dragon breath</i>]]> racial power, you can choose to make it an area 1 within 10 squares instead of close blast 3.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Hurl Weapon</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <group>Class</group>
+      <group>Weapon Specialization</group>
+      <benefit>You can use any one-handed weapon with the Off-hand trait as a Heavy Thrown weapon with a range of 5/10. If the weapon is Light Thrown, you can use its normal range if it is better.</benefit>
+      <benefit>Starting at 11th level, you can use any one-handed weapon as a Heavy Thrown weapon with a range of 3/6.</benefit>
+      <benefit>When you use a weapon that normally has the Heavy Thrown trait, you increase the normal range by 2 squares and the long range by 4 squares. This counts as having the Far Throw feat.</benefit>
+      <benefit>This benefit also applies to Off-hand weapons you use as Heavy Thrown weapons starting at 11th level, and to any Heavy Thrown weapon starting at 21st level.</benefit>
    </feat>
    
    <feat>
