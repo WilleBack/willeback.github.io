@@ -26642,6 +26642,79 @@
    </feat>
    
    <feat>
+      <title>Ice Walk</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Eladrin</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Winterkin Heritage</name>
+      </prereq>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <group>Winterkin Heritage</group>
+      <benefit>You ignore difficult terrain created by ice or snow.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Icon of Hope</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <benefit>Bloodied allies within 10 squares of you gain a +1 bonus to saving throws.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Icon of Purity</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Resistance</group>
+      <benefit>You resist necrotic equal to your Wisdom modifier + one-half your level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Icy Clutch of Stygia</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <group>Cold Specialization</group>
+      <group>Damage Bonus</group>
+      <group>Ongoing Damage</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>Whenever an enemy successfully saves against ongoing damage that you imposed, that enemy takes cold damage equal to your Intelligence modifier or your Charisma modifier.</benefit>
+      <benefit>This cold damage increases to 5 + your Intelligence modifier or your Charisma modifier at 11th level, and to 10 + your Intelligence modifier or your Charisma modifier at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Icy Heart</title>
+      <tier>Paragon</tier>
+      <group>Background</group>
+      <group>Cold Specialization</group>
+      <group>Condition Infliction</group>
+      <group>Damage Bonus</group>
+      <group>Triggered</group>
+      <benefit>You gain a +3 feat bonus to Cold damage rolls.</benefit>
+      <benefit>This bonus increases to +4 at 21st level.</benefit>
+      <benefit>Also, whenever you take cold damage from an attack, each enemy within 2 squares of you becomes slowed until the start of the currently acting creature's next turn.</benefit>
+   </feat>
+   
+   <feat>
       <title>Infernal Rebuke</title>
       <tier>Heroic</tier>
       <prereq>
@@ -27159,7 +27232,7 @@
       </prereq>
       <group>Class</group>
       <group>Kill Effect</group>
-      <benefit>When an enemy cursed by you drops to 0 hit points or less, you can place your curse on all enemies adjacent to the triggering enemy as a free reaction.</benefit>
+      <benefit>When an enemy cursed by you drops to 0 hit points or less, you can place your curse on all enemies adjacent to the dying enemy as a free reaction.</benefit>
    </feat>
    
    <feat>
@@ -27292,6 +27365,44 @@
             <section>
                <shade>true</shade>
                <text>While affected, the target grants combat advantage to you and cannot willingly move closer to you.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+   
+   <feat>
+      <title>Winterkin Heritage</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Eladrin</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Power Repertoire</group>
+      <group>Racial</group>
+      <group>Teleportation</group>
+      <group>Winterkin Heritage</group>
+      <benefit>You gain resist cold equal to 5 + one-half your level.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>winter's shroud</i>]]> heritage power.</benefit>
+      
+      <power>
+         <title>Winter's Shroud</title>
+         <class>Winterkin</class> <category>Utility</category>
+         <fluff>When an enemy's attack falls, snow swirls around you to whisk you to safety</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Arcane, Teleportation</keyword>
+            <action>Immediate</action> <subaction>Reaction</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy damage you with an attack</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You teleport 3 squares and gain concealment until the start of the triggering enemy's next turn.</text>
             </section>
          </part>
       </power>
