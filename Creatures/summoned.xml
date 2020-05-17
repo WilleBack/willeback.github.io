@@ -5,46 +5,46 @@
       <title>Abyssal Maw</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
-      
+
       <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <defmod><![CDATA[+2 <i>Fortitude</i>]]></defmod>
       <speed>6</speed>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Snapping Jaws</name> <type>aura</type>
             <frequency>Aura</frequency> <note>1</note>
             <line>Enemies grant combat advantage while in the aura.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +3 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + Intelligence modifier damage. On a critical hit, the target grants combat advantage until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
-         
+
          <block>
             <name>Opportunity Interrupt</name>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Trigger:</i>]]> A creature adjacent to the abyssal maw provokes an <![CDATA[<i>opportunity attack</i>]]></line>
             <line><![CDATA[<i>Effect:</i>]]> The abyssal maw makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as an <i>opportunity attack</i>]]>.</line>
          </block>
-         
+
          <block>
             <name>Immediate Reaction</name>
             <frequency>At-Will</frequency>
@@ -52,53 +52,274 @@
             <line><![CDATA[<i>Effect:</i>]]> The abyssal maw makes its <![CDATA[<i>melee basic attack</i> against the triggering creature.]]></line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the abyssal maw any commands by the end of your turn, its aura affects all creatures and it attacks an adjacent creature. If it can't do that, it moves its speed towards the nearest creature.</line>
             <line>If the abyssal maw cannot attack or move adjacent to an enemy, enemies gain a +2 bonus to triggered attack rolls against  you until the start of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You deal +1d6 additional damage with melee and ranged attacks against enemies in the abyssal maw's aura.</line>
          </block>
       </category>
-      
+
       <alignment>chaotic evil</alignment>
       <language>understands Abyssal</language>
       <source>Summon Abyssal Maw (Wizard Daily Attack 5)</source>
    </creature>
-   
+
+   <creature>
+      <title>Celestial Warhorse</title>
+      <role>Summoned creature</role>
+      <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summonec creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>8</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Charger</name>
+            <keyword>Mount</keyword>
+            <line>The warhorse's rider gains a +3 bonus to damage rolls on charge attacks.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Your level +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + your Charisma modifier damage (kick).</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name> <type>melee</type>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The warhorse moves up to its speed and can move through enemies' spaces during the move by trampling them, if that enemy is Medium size or smaller. Each time the warhorse enters an enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 0 (one creature); your level +3 vs. Reflex</line>
+            <line indent="1">Combat advantage against a prone target</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + your Charisma modifier damage, and the enemy is knocked prone.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the warhorse any commands by the end of your turn and are not riding it, it moves its speed towards a bloodied ally. If there are no bloodied allies, it moves its speed towards you.</line>
+            <line>If you aren't riding the warhorse and it cannot move adjacent to either a bloodied ally or you, you take a -2 penalty to Will until the start of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You deal +2 damage on charge attacks. This stacks with the warhorse's Charger trait.</line>
+         </block>
+      </category>
+
+      <alignment>good</alignment>
+      <language>understands any you speak</language>
+      <source>Call Celestial Steed (Paladin Utility 6)</source>
+   </creature>
+
+   <creature>
+      <title>Celestial Battle Tiger</title>
+      <role>Summoned creature</role>
+      <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defnote>+1 to all defenses</defnote>
+      <speed>9</speed>
+      <speedmod>Forest Walk</speedmod>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Tiger Agility</name>
+            <keyword>Mount</keyword>
+            <line>The tiger gains a +10 bonus to Acrobatics and Athletics checks.</line>
+            <line>It is always considered to have a running start when jumping.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + your Charisma modifier damage.</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name> <type>melee</type>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The tiger jumps up to 5 squares.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 3d8 + your Charisma modifier damage, and the target falls prone.</line>
+            <line><![CDATA[<i>Miss:</i>]]> 3 + your Charisma modifier damage.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+
+         <block>
+            <name>Immediate Reaction</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> An enemy enters a square adjacent to the tiger</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (triggering enemy); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + your Charisma modifier damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the tiger any commands by the end of your turn and are not riding it, it moves its speed towards the closest enemy.</line>
+            <line>If you aren't riding the tiger and it cannot move adjacent to an enemy, you take a -5 penalty to Acrobatics checks and Athletics checks until the start of your next turn. The penalty does not apply to escape attempts.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +5 bonus to Athletics checks to jummp if you have a running start.</line>
+         </block>
+      </category>
+
+      <alignment>good</alignment>
+      <language>understands any you speak</language>
+      <source>Summon Celestial Steed (Paladin Utility 6), Improved Steed feat</source>
+   </creature>
+
+   <creature>
+      <title>Celestial Behemoth</title>
+      <role>Summoned creature</role>
+      <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+1 to all defenses</defmod> <defmod>additional +1 to <![CDATA[<i>AC</i>, <i>Fort</i>]]></defmod>
+      <speed>7</speed>
+
+      <resist>
+         <type>all</type> <value>5</value>
+      </resist>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Heavy Impact</name>
+            <keyword>Mount</keyword>
+            <line>The behemot's rider gains a +4 bonus to damage rolls with charge attacks, and a creature hit by the rider's charge attack is knocked prone.</line>
+            <line>The behemoth must reduce all forced movement against it by 1 square.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d10 + your Charisma modifier damage (gore), and the behemoth pushes the target 1 square. The behemoth can shift into the vacated space.</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The behemoth charges a target.</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name> <type>melee</type>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The behemoth moves up to its speed and can move through enemies' spaces during the move by trampling them. Each time the warhorse enters a Large size or smaller enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 0 (one creature); your level +3 vs. Fortitude</line>
+            <line indent="1">Combat advantage against a prone target</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4d8 + your Charisma modifier damage, and the behemoth pushes the target 1 square and the enemy is knocked prone.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the behemoth any commands by the end of your turn and are not riding it, it charges an enemy adjacent to a bloodied ally. If there are no enemies adjacent to bloodied allies, it takes the total defense action.</line>
+            <line>If you aren't riding the behemoth and it did not charge an enemy, you are slowed until the end of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain resist 5 all during any charge you make.</line>
+         </block>
+      </category>
+
+      <alignment>good</alignment>
+      <language>understands any you speak</language>
+      <source>Call Celestial Steed (Paladin Utility 6), Improved Steed feat</source>
+   </creature>
+
    <creature>
       <title>Dretch</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>elemental</origin> <type>humanoid</type>
-      
+
       <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <speed>5</speed>
-      
+
       <category>
          <category-name>Action</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one or two creatures); Intelligence +2 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d4 + Intelligence modifier damage.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
-         
+
          <block>
             <name>Nonaction Interrupt</name> <type>close</type>
             <keyword>Poison</keyword> <keyword>Zone</keyword>
@@ -108,32 +329,32 @@
             <line>A nondemon that ends its turn in the zone or enters it takes 5 poison damage. A creature can only take this damage once per turn.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the dretch any commands by the end of your turn, it attacks or charges the nearest creature, using the above attack in place of a melee basic attack.</line>
             <line>If the dretch cannot attack or charge a creature, it moves its speed towards the closest creature and you have vulnerable 5 to all damage for the first time you take damage before the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You gain combat advantage against any creature that the dretch has attacked until the end of your next turn.</line>
          </block>
       </category>
-      
+
       <alignment>chaotic evil</alignment>
       <language>Abyssal</language>
       <source>Summon Dretch (Wizard Daily Attack 1)</source>
    </creature>
-   
+
    <creature>
       <title>Dust Devil</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>Elemental</origin> <type>magical beast</type>
-      
+
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
@@ -141,12 +362,12 @@
       <defmod>+2 to all defenses against attacks triggered by movement when not slowed</defmod>
       <defmod>-2 to all defenses while slowed or immobilized</defmod>
       <speed>8</speed>
-      
+
       <immune>disease</immune> <immune>poison</immune>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
@@ -154,7 +375,7 @@
             <line><![CDATA[<i>Hit:</i>]]> 1d8 + Intelligence modifier damage, and the dust devil slides the target 2 squares.</line>
             <line><![CDATA[<i>Effect:</i>]]> The dust devil shifts 1 square, or 2 squares if it scored a critical hit.</line>
          </block>
-         
+
          <block>
             <name>Standard Action</name> <type>close</type>
             <frequency>Encounter</frequency>
@@ -162,7 +383,7 @@
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + Intelligence modifier damage, and the target is blinded until the end of the dust devil's next turn.</line>
             <line><![CDATA[<i>Miss:</i>]]> Half damage.</line>
          </block>
-         
+
          <block>
             <name>Move Action</name>
             <recharge>when the dust devil is critically hit</recharge>
@@ -170,51 +391,51 @@
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Fortitude</line>
             <line><![CDATA[<i>Hit:</i>]]> The target falls prone</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the dust devil any commands by the end of your turn, it attacks an adjacent creature. If it can't do that, it moves its speed adjacent to the creature furthest away from it that it can reach.</line>
             <line>If the dust devil cannot attack or move adjacent to an enemy, you fall prone.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You gain a +2 power bonus to speed, and a +2 bonus to all defenses against attacks triggered by your movement.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Dust Devil (Wizard Daily Attack 1)</source>
    </creature>
-   
+
    <creature>
       <title>Fire Warrior</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
-      
+
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <defmod><![CDATA[+2 <i>AC</i> and <i>Fort</i>]]></defmod>
       <speed>6</speed> <fly>6 (hover)</fly>
-      
+
       <resist>
          <type>fire</type> <value>10</value>
       </resist>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Fire</keyword> <keyword>Weapon</keyword>
@@ -222,13 +443,13 @@
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +2 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d10 + Intelligence modifier fire damage.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
-         
+
          <block>
             <name>Opportunity Interrupt</name>
             <keyword>Fire</keyword> <keyword>Weapon</keyword>
@@ -237,43 +458,43 @@
             <line><![CDATA[<i>Effect:</i>]]> The fire warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as an <i>opportunity attack</i>]]>.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the fire warrior any commands by the end of your turn, it attacks an adjacent creature. If it can't do that, it moves its speed toward the nearest creature.</line>
             <line>If the fire warrior cannot attack or move adjacent to an enemy, you gain vulnerable 5 fire until the start of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You gain a +1 bonus to attack rolls against enemies adjacent to the fire warrior.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Fire Warrior (Wizard Daily Attack 1)</source>
    </creature>
-   
+
    <creature>
       <title>Imp</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>immortal</origin> <type>humanoid</type> <subtype>devil</subtype>
-      
+
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <speed>4</speed> <fly>6 (hover)</fly>
-      
+
       <resist>
          <type>fire</type> <value>5</value>
       </resist>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>melee</type>
             <keyword>Illusion</keyword> <keyword>Poison</keyword>
@@ -281,75 +502,75 @@
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +2 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d8 + Intelligence modifier damage, and the target takes ongoing 5 poison damage (save ends). The imp becomes invisible invisible until the start of your next turn, or the end of your next turn on a critical hit.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <keyword>Illusion</keyword>
             <frequency>Encounter</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The imp becomes invisible until the end of your next turn or until it has made an attack, whichever comes first.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Intrinsic Nature</name>
             <line>If you haven't given the imp any commands by the end of your turn, it attacks an enemy that grants it combat advantage. If it can't do that, it turns invisible until the start of your next turn and moves its speed to a square adjacent to an enemy.</line>
             <line>You grant combat advantage to all enemies until the start of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You deal an additional +1d6 poison damage with attacks when your target grants you combat advantage.</line>
          </block>
       </category>
-      
+
       <alignment>evil</alignment> <language>Common</language> <language>Supernal</language>
       <source>Summon Imp (Wizard Daily 5)</source>
    </creature>
-   
+
    <creature>
       <title>Iron Cohort</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>elemental</origin> <type>humanoid</type> <subtype>earth</subtype>
-      
+
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <defmod>+2 <![CDATA[<i>AC</i>]]></defmod>
       <speed>6</speed>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Immovable</name>
             <line>The iron cohort reduces any pull, push or slide against it by 2 squares.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Action</category-name>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The iron cohort gains resist 5 all until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
-         
+
          <block>
             <name>Immediate Interrupt</name>
             <frequency>At-Will</frequency>
@@ -358,51 +579,51 @@
             <line><![CDATA[<i>Effect:</i>]]> The iron cohort becomes the target of the triggering attack instead of you.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the iron cohort any commands by the end of your turn, it remains adjacent to you. If it is not adjacent to you, it moves its speed towards you.</line>
             <line>If the iron cohort moved, you are slowed until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>While adjacent to the iron cohort, you reduce any pull, push or slide against you by 1 square.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Iron Cohort (Wizard Utility 6)</source>
    </creature>
-   
+
    <creature>
       <title>Magma Beast</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>magical beast</type> <subtype>earth</subtype> <subtype>fire</subtype>
-      
+
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <defmod>+2 <![CDATA[<i>Fort</i>]]></defmod>
       <speed>4</speed>
       <speedmod>+4 speed when charging</speedmod>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Obsidian Crust</name>
             <line>When the magma beast takes cold damage, it is slowed until the end of its next turn and doesn't benefit from its bonus to speed when charging.</line>
             <line>The magma beast automatically ends any slowing or immobilizing conditions on itself if an effect would deal fire damage to it, even if the damage is reduced to 0 by its resistance.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Fire</keyword>
@@ -411,62 +632,62 @@
             <line><![CDATA[<i>Hit:</i>]]> 1d10 + Intelligence modifier fire damage, and the target is covered with magma (save ends).</line>
             <line>While covered, the target takes ongoing 5 fire damage and is slowed.</line>
          </block>
-         
+
          <block>
             <name>Standard Action</name>
             <frequency>At-Will</frequency>
             <line>The magma beast charges the closest enemy.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Intrinsic Nature</name>
             <line>If you haven't given the magma beast any commands by the end of your turn, it attacks an adjacent creature or charges the nearest creature it can charge. Otherwise it moves its speed toward the nearest enemy.</line>
             <line>If the magma beast couldn't attack or charge, you are slowed until the end of your turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>When you step, you can shift 2 squares instead of 1 square.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Magma Beast (Wizard Daily 5)</source>
    </creature>
-   
+
    <creature>
       <title>Shadow Beast</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>beast</type>
-      
+
       <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <speed>6</speed>
       <speedmod>+2 speed while charging</speedmod> <speedmod>phasing</speedmod>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Insubstantial</name>
             <line>The shadow beast takes half damage from any damage source, except those that deal radiant damage.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Fear</keyword> <keyword>Necrotic</keyword> <keyword>Shadow</keyword>
@@ -475,19 +696,19 @@
             <line><![CDATA[<i>Hit:</i>]]> 2d8 + Intelligence modifier necrotic damage.</line>
             <line><![CDATA[<i>Effect:</i>]]> The target takes a -2 penalty to attack rolls until the end of its next turn.</line>
          </block>
-         
+
          <block>
             <name>Standard Action</name>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The shadow beast charges a bloodied enemy.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
-         
+
          <block>
             <name>Immediate Reaction</name> <type>close</type>
             <keyword>Shadow</keyword> <keyword>Zone</keyword>
@@ -497,100 +718,100 @@
             <line>The zone is heavily obscured for creatures other than the beast and you.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the shadow beast any commands by the end of your turn, it attacks a bloodied creature in its reach, or any creature in its reach if no bloodied creature is within its reach. Otherwise it moves its speed towards the nearest creature.</line>
             <line>If the shadow does does not attack any creature, all creatures have concealment from you until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>On your turn, if you move at least 3 squares away from where you started your turn, you gain concealment until the end of your next turn.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>-</language>
       <source>Summon Shadow Beast (Wizard Daily 5)</source>
    </creature>
-   
+
    <creature>
       <title>Shadow Serpent</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>shadow</origin> <type>beast</type>
-      
+
       <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <speed>6</speed>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Stealthy</name>
             <line>The serpent gains a +5 bonus to Stealth checks you make for it, and it takes no penalty to the checks for moving more than 2 squares.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, you can see through the serpent's eyes. The serpent has darkvision, which you also gain.</line>
             <line>You cannot gain line of sight or line of effect for your powers from the serpent's space, but you can make Perception checks from it.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the shadow serpent any commands by the end of your turn, it moves up to its speed to a square where it can hide.</line>
             <line>If the shadow serpent does not end this move in a space that is either not lit or only dimly lit, you take a -2 penalty to Perception checks until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You gain a +2 power bonus to Stealth checks.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>-</language>
       <source>Summon Shadow Serpent (Wizard Utility 2)</source>
    </creature>
-   
+
    <creature>
       <title>Shadow Wraith</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>humanoid</type> <subtype>undead</subtype>
-      
+
       <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <speed>6</speed> <fly>6 (hover)</fly>
       <speedmod>phasing</speedmod>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Insubstantial</name>
             <line>The shadow wraith takes half damage from damage any source, except those that deal radiant damage.</line>
          </block>
-         
+
          <block>
             <name>Fateful Death</name> <type>aura</type>
             <frequency>Aura</frequency> <note>2</note>
@@ -598,10 +819,10 @@
             <line>If an enemy drops to 0 hit points or less in the aura, it dies and the wraith gains temporary hit points equal to 3 + your Wisdom modifier.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Necrotic</keyword> <keyword>Shadow</keyword>
@@ -609,44 +830,44 @@
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Fortitude</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + Intelligence modifier necrotic damage, and the target is weakened until the start of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you have not given the shadow wraith any commands by the end of your turn, it attacks a bloodied enemy adjacent to it. Otherwise it moves its speed towards you.</line>
             <line>If the wraith does not attack any creature, you are weakened until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>When an enemy ends its turn adjacent to you and within the wraith's aura, you can use an opportunity reaction to deal necrotic damage to it. The damage equals 5 + your Wisdom modifier.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>Common</language>
       <source>Summon Shadow Wraith (Wizard Daily 19)</source>
    </creature>
-   
+
    <creature>
       <title>Shambling Cadaver</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>undead</subtype>
-      
+
       <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <defmod>+2 <![CDATA[<i>Fort</i>]]></defmod>
       <speed>4</speed>
-      
+
       <immune>disease</immune> <immune>poison</immune>
       <resist>
          <type>necrotic</type> <value>5</value>
@@ -654,10 +875,10 @@
       <vulnerable>
          <type>radiant</type> <value>5</value>
       </vulnerable>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
@@ -665,13 +886,13 @@
             <line>If the shambling cadaver is already grabbing a creature, it must target that creature and makes the attack against Fortitude instead</line>
             <line><![CDATA[<i>Hit:</i>]]>1d8 + Intelligence modifier damage, and the target is grabbed by the cadaver until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency>
@@ -679,37 +900,37 @@
             <line><![CDATA[<i>Effect:</i>]]> The grab persists until the end of your next turn, and the cadaver gains a +2 bonus to all defenses against escape attempts. If the grabbed creature is bloodied, the cadaver deals damage to it equal to your Wisdom modifier + your implement's enhancement bonus.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you have not given the shambling cadaver any commands by the end of your turn, it sustains a grab it has already made until the end of your next turn, or attacks an adjacent grabbed creature. Otherwise it moves its speed towards the nearest grabbed creature.</line>
             <line>If the if the cadaver was not grabbing a creature, you are slowed until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You deal additional damage against grabbed targets equal to the number of shambling cadavers you currently have summoned.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>-</language>
       <source>Summon Shambling Cadavers (Wizard Daily 1)</source>
    </creature>
-   
+
    <creature>
       <title>Skeletal Warrior</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>humanoid</type> <subtype>undead</subtype>
-      
+
       <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
       <defmod>+2 <![CDATA[<i>AC</i>]]></defmod>
       <speed>6</speed>
-      
+
       <immune>disease</immune> <immune>poison</immune>
       <resist>
          <type>necrotic</type> <value>10</value>
@@ -717,10 +938,10 @@
       <vulnerable>
          <type>radiant</type> <value>5</value>
       </vulnerable>
-      
+
       <category>
          <category-name>Actions</category-name>
-         
+
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Weapon</keyword>
@@ -728,13 +949,13 @@
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +3 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + Intelligence modifier damage, and the target cannot shift until the end of your next turn.</line>
          </block>
-         
+
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency> <note>1/round</note>
             <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
          </block>
-         
+
          <block>
             <name>Opportunity Interrupt</name>
             <keyword>Weapon</keyword>
@@ -743,24 +964,24 @@
             <line><![CDATA[<i>Effect:</i>]]> The skeletal warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature, and has a +2 bonus to the attack roll and deals an additional +1d6 damage. This counts as an <i>opportunity attack</i>]]>.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Summon Traits</category-name>
-         
+
          <block>
             <name>Instinctive Action</name>
             <line>If you have not given the skeletal warrior any commands by the end of your turn, it attacks an enemy adjacent to it, or any creature adjacent to it if no enemy is adjacent. Otherwise it moves its speed towards the nearest creature.</line>
             <line>If you did not give the it commands, until the start of your next turn, the skeletal warrior uses its triggered action against your allies unless you use an opportunity interrupt to stop it each time.</line>
          </block>
-         
+
          <block>
             <name>Symbiosis</name>
             <line>You gain a +2 bonus to attack rolls with <![CDATA[<i>opportunity attacks</i>]]>.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment> <language>Common</language>
       <source>Summon Skeletal Warrior (Wizard Daily 5)</source>
    </creature>
-   
+
 </catalog>
