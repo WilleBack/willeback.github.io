@@ -5,14 +5,14 @@
       <title>Skeleton</title>
       <level>3</level> <role>Soldier</role> <xp>150</xp>
       <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
-      
+
       <init>+6</init> <perception>+3</perception> <insight>+3</insight>
       <sense>darkvision</sense>
-      
+
       <hp>45</hp> <bloodied>22</bloodied>
       <ac>19</ac> <fort>14</fort> <ref>16</ref> <will>15</will>
       <speed>6</speed>
-      
+
       <immune>disease</immune> <immune>poison</immune>
       <resist>
          <type>necrotic</type> <value>10</value>
@@ -20,10 +20,10 @@
       <vulnerable>
          <type>radiant</type> <value>5</value>
       </vulnerable>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Speed of the Dead</name>
             <line>The skeleton gains a +2 bonus to attack rolls and deals +1d6 damage on <![CDATA[<i>opportunity attacks</i>]]>.</line>
@@ -31,7 +31,7 @@
       </category>
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Longsword</name> <type>mbasic</type>
             <keyword>Weapon</keyword>
@@ -40,7 +40,7 @@
             <line><![CDATA[<i>Hit:</i>]]> 1d8 + 5 damage, and the target is marked until the end of the skeleton's next turn.</line>
          </block>
       </category>
-      
+
       <str>
          <value>15</value> <mod>+3 / +2</mod>
       </str>
@@ -59,28 +59,28 @@
       <cha>
          <value>3</value> <mod>-3 / -4</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
       <equipment>longsword</equipment>
       <equipment>small wooden shield</equipment>
-      
+
    </creature>
-   
+
    <creature>
       <title>Skeleton Mob</title>
       <level>9</level> <role>soldier</role> <xp>400</xp>
       <size>Large</size> <origin>natural</origin> <type>animate</type> <subtype>swarm</subtype> <subtype>undead</subtype>
-      
+
       <init>+11</init>
       <perception>+6</perception> <insight>+6</insight>
       <sense>darkvision</sense>
-      
+
       <hp>93</hp> <bloodied>46</bloodied>
       <ac>25</ac> <fort>21</fort> <ref>22</ref> <will>20</will>
       <speed>6</speed>
-      
+
       <immune>disease</immune> <immune>poison</immune>
       <resist>
          <type>necrotic</type> <value>10</value>
@@ -94,10 +94,10 @@
       <vulnerable>
          <type>to close and area attacks</type> <value>5</value>
       </vulnerable>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Grasping Claws</name> <type>aura</type>
             <frequency>Aura</frequency> <note>1</note>
@@ -113,14 +113,15 @@
       </category>
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Claws</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +14 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d8 + 8 damage.</line>
          </block>
       </category>
-      
+
       <str>
          <value>17</value> <mod>+7 / +3</mod>
       </str>
@@ -139,22 +140,22 @@
       <cha>
          <value>3</value> <mod>+0 / -4</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
    </creature>
-      
-   
+
+
    <creature>
       <title>Skeleton, Blazing</title>
       <level>5</level> <role>Artillery</role> <xp>200</xp>
       <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
-      
+
       <hp>53</hp> <bloodied>26</bloodied>
       <init>+6</init> <perception>+4</perception> <insight>+4</insight> <sense>darkvision</sense>
       <ac>19</ac> <fort>15</fort> <ref>18</ref> <will>16</will>
       <speed>6</speed>
-      
+
       <immune>disease</immune> <immune>poison</immune>
       <resist>
          <type>fire</type> <value>10</value>
@@ -165,10 +166,10 @@
       <vulnerable>
          <type>radiant</type> <value>5</value>
       </vulnerable>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Fiery Aura</name> <type>aura</type>
             <keyword>Fire</keyword>
@@ -178,7 +179,7 @@
       </category>
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Blazing Claw</name> <type>mbasic</type>
             <keyword>Fire</keyword>
@@ -194,7 +195,7 @@
             <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 fire damage, and ongoing 5 fire damage (save ends).</line>
          </block>
       </category>
-      
+
       <str>
          <value>13</value> <mod>+3 / +1</mod>
       </str>
@@ -213,20 +214,20 @@
       <cha>
          <value>6</value> <mod>+0 / -2</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
    </creature>
-   
+
    <creature>
       <title>Skeleton, Bonecrusher</title>
       <level>6</level> <role>Soldier</role> <xp>250</xp>
       <size>Large</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
-      
+
       <init>+8</init> <perception>+4</perception> <insight>+4</insight>
       <sense>darkvision</sense>
-      
+
       <hp>72</hp> <bloodied>36</bloodied>
       <ac>20</ac> <fort>16</fort> <ref>18</ref> <will>16</will>
       <speed>7</speed>
@@ -237,7 +238,7 @@
       <vulnerable>
          <type>radiant</type> <value>5</value>
       </vulnerable>
-      
+
       <category>
          <category-name>Traits</category-name>
          <block>
@@ -245,7 +246,7 @@
             <line>The bonecrusher can make <![CDATA[<i>opportunity attacks</i>]]> within 2 squares instead of 1.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
          <block>
@@ -263,11 +264,11 @@
             <line><![CDATA[<i>Hit: </i>]]>2d6 + 5 damage, and pushed 2 squares and knocked prone.</line>
          </block>
       </category>
-      
+
       <skill>
          <name>Athletics</name> <value>+13</value>
       </skill>
-      
+
       <str>
          <value>20</value> <mod>+8 / +5</mod>
       </str>
@@ -286,25 +287,25 @@
       <cha>
          <value>5</value> <mod>+0 / -3</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
       <equipment>large greatclub</equipment>
    </creature>
-   
+
    <creature>
       <title>Skeleton, Decrepit</title>
       <level>1</level> <rolestrength>Minion</rolestrength> <role>Skirmisher</role> <xp>25</xp>
       <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
-      
+
       <init>+5</init> <perception>+2</perception> <insight>+2</insight>
       <sense>darkvision</sense>
-      
+
       <hp>3</hp> <bloodied>by any damage</bloodied> <hpnote>any damage kills a bloodied minion</hpnote>
       <ac>16</ac> <fort>13</fort> <ref>14</ref> <will>13</will>
       <speed>6</speed>
-      
+
       <immune>disease</immune> <immune>disease</immune>
       <resist>
          <type>necrotic</type> <value>10</value>
@@ -312,10 +313,10 @@
       <vulnerable>
          <type>radiant</type> <value>5</value>
       </vulnerable>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Longsword</name> <type>mbasic</type>
             <keyword>Weapon</keyword>
@@ -333,7 +334,7 @@
             <line><![CDATA[<i>Hit:</i>]]> 3 damage.</line>
          </block>
       </category>
-      
+
       <str>
          <value>15</value> <mod>+2</mod>
       </str>
@@ -352,13 +353,13 @@
       <cha>
          <value>3</value> <mod>-4</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
       <equipment>longsword</equipment>
       <equipment>shortbow</equipment>
       <equipment>arrow x 2d10</equipment>
    </creature>
-   
+
 </catalog>
