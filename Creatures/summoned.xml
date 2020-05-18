@@ -74,72 +74,6 @@
    </creature>
 
    <creature>
-      <title>Celestial Warhorse</title>
-      <role>Summoned creature</role>
-      <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
-
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summonec creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
-      <speed>8</speed>
-
-      <category>
-         <category-name>Traits</category-name>
-
-         <block>
-            <name>Charger</name>
-            <keyword>Mount</keyword>
-            <line>The warhorse's rider gains a +3 bonus to damage rolls on charge attacks.</line>
-         </block>
-      </category>
-
-      <category>
-         <category-name>Actions</category-name>
-
-         <block>
-            <name>Standard Action</name> <type>mbasic</type>
-            <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Your level +5 vs. AC</line>
-            <line><![CDATA[<i>Hit:</i>]]> 2d6 + your Charisma modifier damage (kick).</line>
-         </block>
-
-         <block>
-            <name>Standard Action</name> <type>melee</type>
-            <frequency>Encounter</frequency>
-            <line><![CDATA[<i>Effect:</i>]]> The warhorse moves up to its speed and can move through enemies' spaces during the move by trampling them, if that enemy is Medium size or smaller. Each time the warhorse enters an enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 0 (one creature); your level +3 vs. Reflex</line>
-            <line indent="1">Combat advantage against a prone target</line>
-            <line><![CDATA[<i>Hit:</i>]]> 2d8 + your Charisma modifier damage, and the enemy is knocked prone.</line>
-         </block>
-
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
-      </category>
-
-      <category>
-         <category-name>Summon Traits</category-name>
-
-         <block>
-            <name>Instinctive Action</name>
-            <line>If you haven't given the warhorse any commands by the end of your turn and are not riding it, it moves its speed towards a bloodied ally. If there are no bloodied allies, it moves its speed towards you.</line>
-            <line>If you aren't riding the warhorse and it cannot move adjacent to either a bloodied ally or you, you take a -2 penalty to Will until the start of your next turn.</line>
-         </block>
-
-         <block>
-            <name>Symbiosis</name>
-            <line>You deal +2 damage on charge attacks. This stacks with the warhorse's Charger trait.</line>
-         </block>
-      </category>
-
-      <alignment>good</alignment>
-      <language>understands any you speak</language>
-      <source>Call Celestial Steed (Paladin Utility 6)</source>
-   </creature>
-
-   <creature>
       <title>Celestial Battle Tiger</title>
       <role>Summoned creature</role>
       <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
@@ -168,7 +102,7 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Charisma +3 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d8 + your Charisma modifier damage.</line>
          </block>
 
@@ -176,7 +110,7 @@
             <name>Standard Action</name> <type>melee</type>
             <frequency>Encounter</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The tiger jumps up to 5 squares.</line>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Charisma +3 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 3d8 + your Charisma modifier damage, and the target falls prone.</line>
             <line><![CDATA[<i>Miss:</i>]]> 3 + your Charisma modifier damage.</line>
          </block>
@@ -191,7 +125,7 @@
             <name>Immediate Reaction</name> <type>melee</type>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Trigger:</i>]]> An enemy enters a square adjacent to the tiger</line>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (triggering enemy); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (triggering enemy); Charisma +3 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d8 + your Charisma modifier damage.</line>
          </block>
       </category>
@@ -224,7 +158,7 @@
       <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
       <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
       <defenses>Your defenses, not counting temporary bonuses</defenses>
-      <defmod>+1 to all defenses</defmod> <defmod>additional +1 to <![CDATA[<i>AC</i>, <i>Fort</i>]]></defmod>
+      <defmod>+1 to all defenses</defmod> <defmod>additional +1 to <![CDATA[<i>AC</i> and <i>Fort</i>]]></defmod>
       <speed>7</speed>
 
       <resist>
@@ -248,21 +182,21 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); your level +5 vs. AC</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Charisma +2 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d10 + your Charisma modifier damage (gore), and the behemoth pushes the target 1 square. The behemoth can shift into the vacated space.</line>
          </block>
 
          <block>
             <name>Standard Action</name>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Effect:</i>]]> The behemoth charges a target.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The behemoth charges the closest enemy.</line>
          </block>
 
          <block>
             <name>Standard Action</name> <type>melee</type>
             <frequency>Encounter</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The behemoth moves up to its speed and can move through enemies' spaces during the move by trampling them. Each time the warhorse enters a Large size or smaller enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 0 (one creature); your level +3 vs. Fortitude</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 0 (one creature); Charisma vs. Fortitude</line>
             <line indent="1">Combat advantage against a prone target</line>
             <line><![CDATA[<i>Hit:</i>]]> 4d8 + your Charisma modifier damage, and the behemoth pushes the target 1 square and the enemy is knocked prone.</line>
          </block>
@@ -292,6 +226,235 @@
       <alignment>good</alignment>
       <language>understands any you speak</language>
       <source>Call Celestial Steed (Paladin Utility 6), Improved Steed feat</source>
+   </creature>
+
+   <creature>
+      <title>Celestial Pegasus</title>
+      <role>Summoned creature</role>
+      <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defnote>+1 to all defenses</defnote> <defnote>additional +1 to <![CDATA[<i>AC</i> and Reflex</i>]]></defnote>
+      <speed>8</speed> <fly>8</fly>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Spirited Charge</name>
+            <keyword>Mount</keyword>
+            <line>The pegasus' rider gains an additional +1 bonus to attack rolls on charge attacks.</line>
+            <line>If the rider's charge attack hits, the rider can make a saving throw.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Charisma +2 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + your Charisma modifier damage (kick).</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name>
+            <frequency>At-Will</frequency>
+            <line>The pegasus charges an enemy of your choice.</line>
+            <line>The movement during the charge does not provoke <![CDATA[<i>opportunity attacks</i>]]> against the pegasus or its rider.</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name> <type>melee</type>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The pegasus flies up to its speed.</line>
+            <line>Either the pegasus or its rider can make a <![CDATA[<i>melee basic attack</i>]]> at any point during the move. The movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> against the pegasus or its rider from the target of the attack.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the pegasus any commands by the end of your turn and are not riding it, it uses its fly-by attack to attack an enemy adjacent to it and then fly its speed towards you. If there are no enemies adjacent to it, it moves its speed towards you.</line>
+            <line>If you aren't riding the warhorse and it used its instinctive action to attack, you take a -2 penalty to Will until the start of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain an additional +1 bonus to attack rolls on charge attacks. This stacks with the pegasus' Spirited Charge trait.</line>
+         </block>
+      </category>
+
+      <alignment>good</alignment>
+      <language>understands any you speak</language>
+      <source>Call Celestial Steed (Paladin Utility 6), Improved Steed feat</source>
+   </creature>
+
+   <creature>
+      <title>Celestial Silver Dragon</title>
+      <role>Summoned creature</role>
+      <size>Large</size> <origin>immortal</origin> <type>magical beast</type> <subtype>dragon</subtype> <subtype>mount</subtype>
+
+      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effecs that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defnote>+2 to all defenses</defnote>
+      <speed>8</speed> <fly>10</fly>
+
+      <resist>
+         <type>cold</type> <value>25</value>
+      </resist>
+
+      <saves>+2</saves>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Draconic Power</name>
+            <keyword>Mount</keyword>
+            <line>The dragon's rider gains a +1 bonus to all attack rolls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 2 (one creature); Charisma +3 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 3d8 + Charisma modifier damage (bite).</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name> <type>close</type>
+            <keyword>arcane</keyword> <keyword>cold</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 5 (each creature in blast); Charisma vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 3d6 + your Charisma modifier cold damage.</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]> Ongoing 15 cold damage (save ends), and the target is slowed until the end of your next turn.</line>
+            <line><![CDATA[<i>Miss:</i>]]> Half damage.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <keyword>Divine</keyword> <keyword>Healing</keyword> <keyword>mount</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The dragon regains hit points equal to your healing surge value.</line>
+            <line>If its breath weapon attack has been expended, it regains its use at the start of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+
+         <block>
+            <name>Immediate Reaction</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> An enemy enters a square adjacent to the dragon</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (triggering enemy); Charisma +3 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + your Charisma modifier damage (tail), and the dragon knocks the target prone.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the dragon any commands by the end of your turn and are not riding it, it uses its breath weapon attack if it can target at least two enemies and the attack is available. If it cannot do so and is not bloodied, it moves its speed towards the closest enemy. If it is bloodied, it moves its speed towards you.</line>
+            <line>If you aren't riding the warhorse and it cannot either attack or move adjacent to an enemy, or move adjacent to you, you lose the resist cold you gain from the symbiosis.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain resist 15 cold.</line>
+         </block>
+      </category>
+
+      <alignment>good</alignment>
+      <language>understands any you speak</language>
+      <source>Call Celestial Steed (Paladin Utility 6), Improved Steed feat</source>
+   </creature>
+
+   <creature>
+      <title>Celestial Warhorse</title>
+      <role>Summoned creature</role>
+      <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>8</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Charger</name>
+            <keyword>Mount</keyword>
+            <line>The warhorse's rider gains a +3 bonus to damage rolls on charge attacks.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Charisma +2 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + your Charisma modifier damage (kick).</line>
+         </block>
+
+         <block>
+            <name>Standard Action</name> <type>melee</type>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The warhorse moves up to its speed and can move through enemies' spaces during the move by trampling them, if that enemy is Medium size or smaller. Each time the warhorse enters an enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 0 (one creature); Charisma vs. Reflex</line>
+            <line indent="1">Combat advantage against a prone target</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + your Charisma modifier damage, and the enemy is knocked prone.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the warhorse any commands by the end of your turn and are not riding it, it moves its speed towards a bloodied ally. If there are no bloodied allies, it moves its speed towards you.</line>
+            <line>If you aren't riding the warhorse and it cannot move adjacent to either a bloodied ally or you, you take a -2 penalty to Will until the start of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You deal +2 damage on charge attacks. This stacks with the warhorse's Charger trait.</line>
+         </block>
+      </category>
+
+      <alignment>good</alignment>
+      <language>understands any you speak</language>
+      <source>Call Celestial Steed (Paladin Utility 6)</source>
    </creature>
 
    <creature>
@@ -610,6 +773,10 @@
       <defmod>+2 <![CDATA[<i>Fort</i>]]></defmod>
       <speed>4</speed>
       <speedmod>+4 speed when charging</speedmod>
+
+      <resist>
+         <type>fire</type> <value>5</value>
+      </resist>
 
       <category>
          <category-name>Traits</category-name>
