@@ -655,7 +655,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
-                  <div style="float:left; max-width:21em; "><b>Recharge </b><xsl:value-of select="recharge" /></div>
+                  <div style="float:left; max-width:30em; "><b>Recharge </b><xsl:value-of select="recharge" /></div>
                </xsl:if>
             </div>
             <xsl:for-each select="line">
