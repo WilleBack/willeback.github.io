@@ -10,22 +10,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                box-sizing:border-box;
                float:left;
             }
-            
+
             .creature {
                background:linear-gradient(to right, #d6d6c2, #ebebe1);
-               margin:0.2cm; 
+               margin:0.2cm;
                width:98%;
                float:left;
                page-break-inside:avoid;
             }
-            
+
             .pricetable {
                box-sizing:border-box;
                width: 100%;
                column-count: 2;
                column-gap:.3em;
             }
-            
+
             .priceline {
                width:100%;
                box-sizing:border-box;
@@ -33,32 +33,32 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                page-break-inside:avoid;
                margin:0.2em;
             }
-            
+
             .line {
-               width:100%; 
-               box-sizing:border-box; 
-               padding:0.2em 0.3em; 
-               text-indent:-1em; 
-               padding-left:1.3em; 
+               width:100%;
+               box-sizing:border-box;
+               padding:0.2em 0.3em;
+               text-indent:-1em;
+               padding-left:1.3em;
                float:left;
             }
-            
+
             .listcontainer {
                box-sizing:border-box;
-               float:left;	
+               float:left;
             }
-            
+
             .groupholder {
                width:100%;
                float:left;
             }
-            
+
             .grouptitle {
-               width:100%; 
+               width:100%;
                font-size:1.4em;
                font-weight:bold;
             }
-            
+
             .list {
                margin:0.4em;
                width:97%;
@@ -75,62 +75,62 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                font-style: normal;
 
             }
-            
+
             @media only screen and (min-width:600px) {
-               .container { 
-                  column-count: 2; 
-                  column-gap:.4em; 
+               .container {
+                  column-count: 2;
+                  column-gap:.4em;
                }
-            
+
             }
-            
+
             @media only screen and (min-width:1000px) {
-               .container { 
-                  column-count: 3; 
-                  column-gap:0.5em; 
+               .container {
+                  column-count: 3;
+                  column-gap:0.5em;
             }
-            
+
                .listcontainer {
                   column-count: 2;
                   column-gap:0.5em;
                }
             }
-            
+
             @media only screen and (min-width:1300px) {
-               .container { 
-                  column-count: 4; 
-                  column-gap:0.6em; 
+               .container {
+                  column-count: 4;
+                  column-gap:0.6em;
                }
-               
+
             }
-            
+
             @page {
                size: auto;
                margin: 0.85cm 0.7cm 1.1cm;
             }
-            
+
             @media print {
-               .container { 
-                  column-count: 2; 
-                  column-gap:0.5em; 
+               .container {
+                  column-count: 2;
+                  column-gap:0.5em;
                   margin:0cm;
                }
-               
-               .listcontainer { 
-                  column-count: 2; 
-                  column-gap:0.6em; 
+
+               .listcontainer {
+                  column-count: 2;
+                  column-gap:0.6em;
                   margin:0cm;
                }
-               
+
             }
-            	
+
          </style>
       </head>
-      <body style="font-family:Verdana; font-size:7pt;margin:0cm; ">	
+      <body style="font-family:Verdana; font-size:7pt;margin:0cm; ">
          <div class="container">
             <xsl:apply-templates match="creature">
                <xsl:sort select="title" />
-            </xsl:apply-templates> 
+            </xsl:apply-templates>
          </div> <!-- container -->
       </body>
    </html>
@@ -141,7 +141,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:call-template name="createheader">
          <xsl:with-param name="bgcolor">#4e5c2e</xsl:with-param>
       </xsl:call-template>
-      
+
       <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;">
          <xsl:choose>
             <xsl:when test="role='Summoned creature'">
@@ -166,7 +166,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="." disable-output-escaping="yes" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:if>
                </div>
@@ -187,7 +187,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:value-of select="." disable-output-escaping="yes" />
                   <xsl:if test="position()!=last()">
                      <xsl:text>; </xsl:text>
-                  </xsl:if> 
+                  </xsl:if>
                </xsl:for-each>
             </xsl:if>
          </div>
@@ -200,7 +200,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Resist&#160;</b>
@@ -208,7 +208,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Vulnerable&#160;</b>
@@ -216,7 +216,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="immune and resist">
@@ -225,7 +225,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Resist&#160;</b>
@@ -233,7 +233,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="immune and vulnerable">
@@ -242,7 +242,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Vulnerable&#160;</b>
@@ -250,7 +250,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="resist and vulnerable">
@@ -259,7 +259,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Vulnerable&#160;</b>
@@ -267,7 +267,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="immune">
@@ -276,7 +276,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="resist">
@@ -285,7 +285,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="vulnerable">
@@ -294,10 +294,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
-               </xsl:choose> 
+               </xsl:choose>
             </div>
          </xsl:if>
          <xsl:if test="saves or ap or savemod">
@@ -314,7 +314,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="saves and savemod">
@@ -324,7 +324,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="ap and savemod">
@@ -335,7 +335,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="saves and ap">
@@ -359,7 +359,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                </xsl:choose>
@@ -400,7 +400,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:value-of select="." disable-output-escaping="yes" />
                   <xsl:if test="position()!=last()">
                      <xsl:text>; </xsl:text>
-                  </xsl:if> 
+                  </xsl:if>
                </xsl:for-each>
             </xsl:if>
          </div>
@@ -421,7 +421,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:value-of select="." disable-output-escaping="yes"/>
                   <xsl:if test="position()!=last()">
                      <xsl:text>; </xsl:text>
-                  </xsl:if> 
+                  </xsl:if>
                </xsl:for-each>
             </xsl:if>
          </div>
@@ -434,7 +434,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Resist&#160;</b>
@@ -442,7 +442,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Vulnerable&#160;</b>
@@ -450,7 +450,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="immune and resist">
@@ -459,7 +459,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Resist&#160;</b>
@@ -467,7 +467,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="immune and vulnerable">
@@ -476,7 +476,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Vulnerable&#160;</b>
@@ -484,7 +484,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="resist and vulnerable">
@@ -493,7 +493,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>; </xsl:text>
                      <b>Vulnerable&#160;</b>
@@ -501,7 +501,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="immune">
@@ -510,7 +510,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="resist">
@@ -519,7 +519,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="vulnerable">
@@ -528,10 +528,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
-               </xsl:choose> 
+               </xsl:choose>
             </div>
          </xsl:if>
          <xsl:if test="saves or ap or savemod">
@@ -548,7 +548,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="saves and savemod">
@@ -558,7 +558,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="ap and savemod">
@@ -569,7 +569,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                   <xsl:when test="saves and ap">
@@ -593,7 +593,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>; </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                   </xsl:when>
                </xsl:choose>
@@ -601,8 +601,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </xsl:if>
 		 </xsl:otherwise>
 	      </xsl:choose>
-      </div> 
-      
+      </div>
+
       <xsl:for-each select="category">
          <div id="catname" style="background-color:#4e5c2e; color: white; width:100%; padding:0.2em; padding-left: 0.7em; box-sizing: border-box; font-variant:small-caps; font-size:1.1em; font-weight: bold; float:left;">
             <xsl:value-of select="category-name" />
@@ -640,7 +640,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:value-of select="."/>
                         <xsl:if test="position()!=last()">
                            <xsl:text>, </xsl:text>
-                        </xsl:if> 
+                        </xsl:if>
                      </xsl:for-each>
                      <xsl:text>)</xsl:text>
                   </xsl:if>
@@ -649,7 +649,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
-                  <div style="float:left; max-width:21em; "><b><xsl:value-of select="frequency" />&#160;</b><xsl:value-of select="note" disable-output-escaping="yes"/></div>
+                  <div style="float:left; max-width:30em; "><b><xsl:value-of select="frequency" />&#160;</b><xsl:value-of select="note" disable-output-escaping="yes"/></div>
                </xsl:if>
                <xsl:if test="recharge">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
@@ -677,7 +677,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:otherwise>
                </xsl:choose>
             </xsl:for-each>
-         </xsl:for-each> 
+         </xsl:for-each>
       </xsl:for-each>
       <xsl:if test="skill or str">
          <div id="checkbonus" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
@@ -688,7 +688,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      <xsl:value-of select="./name"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./value" />
                      <xsl:if test="position()!=last()">
                         <xsl:text>, </xsl:text>
-                     </xsl:if> 
+                     </xsl:if>
                   </xsl:for-each>
                </div>
             </xsl:if>
@@ -726,7 +726,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:value-of select="."/>
                <xsl:if test="position()!=last()">
                   <xsl:text>, </xsl:text>
-               </xsl:if> 
+               </xsl:if>
             </xsl:for-each>
          </div>
          <xsl:if test="equipment">
@@ -736,7 +736,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <xsl:value-of select="."/>
                   <xsl:if test="position()!=last()">
                      <xsl:text>, </xsl:text>
-                  </xsl:if> 
+                  </xsl:if>
                </xsl:for-each>
             </div>
          </xsl:if>
@@ -753,7 +753,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="createheader">
    <xsl:param name="bgcolor">Purple</xsl:param>
    <div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-      <div id="title" style="float:left; margin:0.3em; margin-bottom: 0.2em; margin-left:0.4em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10.6em);"> 
+      <div id="title" style="float:left; margin:0.3em; margin-bottom: 0.2em; margin-left:0.4em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10.6em);">
          <xsl:value-of select="title"/>
       </div>
       <div id="rolelevel" style="width: 13.3em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
@@ -775,7 +775,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      <xsl:value-of select="."/>
                      <xsl:if test="position()!=last()">
                         <xsl:text>, </xsl:text>
-                     </xsl:if> 
+                     </xsl:if>
                   </xsl:for-each>
                   <xsl:text>)</xsl:text>
                </xsl:if>
