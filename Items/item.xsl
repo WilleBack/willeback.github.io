@@ -159,7 +159,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:for-each select="level">
 						<div class="priceline">
 							<div id="lvl" style="width: 4em; float: left;"><xsl:text>Lvl </xsl:text><xsl:value-of select="value" /></div>
-							<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="bonus" /></div>
+							<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="bonus" />&#160;</div>
 							<div id="price" style="width:calc(100% - 8em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
 						</div>
 					</xsl:for-each>
