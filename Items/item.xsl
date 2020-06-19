@@ -9,26 +9,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<style>
 			.container {
-				
+
 				box-sizing:border-box;
 				float:left;
 			}
-			
+
 			.item {
 				background:linear-gradient(to right, #f8e9d5, #fcf4eb);
-				margin:0.2cm; 
+				margin:0.2cm;
 				width:97%;
 				float:left;
 				page-break-inside:avoid;
 			}
-			
+
 			.pricetable {
 				box-sizing:border-box;
 				width: 100%;
 				column-count: 2;
 				column-gap:.3em;
 			}
-			
+
 			.priceline {
 				width:100%;
 				box-sizing:border-box;
@@ -36,121 +36,121 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				page-break-inside:avoid;
 				margin:0.2em;
 			}
-			
+
 			.line {
-				width:100%; 
-				box-sizing:border-box; 
-				padding:0.2em 0.3em; 
-				text-indent:-1em; 
-				padding-left:1.3em; 
+				width:100%;
+				box-sizing:border-box;
+				padding:0.2em 0.3em;
+				text-indent:-1em;
+				padding-left:1.3em;
 				float:left;
 			}
-			
+
 			.listcontainer {
 				box-sizing:border-box;
 				float:left;
-				
+
 			}
-			
+
 			.groupholder {
 				width:100%;
 				float:left;
 			}
-			
+
 			.grouptitle {
-				width:100%; 
+				width:100%;
 				font-size:1.4em;
 				font-weight:bold;
 			}
-			
+
 			.list {
 				margin:0.4em;
 				width:97%;
 				float:left;
 				page-break-inside: avoid;
 			}
-			
+
 			@media only screen and (min-width:600px) {
-				.container { 
-					column-count: 2; 
-					column-gap:.4em; 
+				.container {
+					column-count: 2;
+					column-gap:.4em;
 				}
-			
+
 			}
-			
+
 			@media only screen and (min-width:1000px) {
-				.container { 
-					column-count: 3; 
-					column-gap:0.5em; 
+				.container {
+					column-count: 3;
+					column-gap:0.5em;
 				}
-			
+
 				.listcontainer {
 					column-count: 2;
 					column-gap:0.5em;
 				}
 			}
-			
+
 			@media only screen and (min-width:1300px) {
-				.container { 
-					column-count: 4; 
-					column-gap:0.6em; 
+				.container {
+					column-count: 4;
+					column-gap:0.6em;
 				}
-				
+
 			}
 			@page {
 				size: auto;
 				margin: 0.85cm 0.7cm 1.1cm;
 			}
-				
+
 			@media print {
-				.container { 
-					column-count: 2; 
-					column-gap:0.6em; 
+				.container {
+					column-count: 2;
+					column-gap:0.6em;
 					margin:0cm;
 				}
-			
-				.listcontainer { 
-					column-count: 2; 
-					column-gap:0.6em; 
+
+				.listcontainer {
+					column-count: 2;
+					column-gap:0.6em;
 					margin:0cm;
 				}
-				
+
 			}
-			
-			
+
+
 		</style>
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="listcontainer">
 		   <div class="groupholder">
 		      <div class="grouptitle">Lists by level</div>
-		         <xsl:for-each select="list"> 
+		         <xsl:for-each select="list">
 		            <xsl:call-template name="listgroup" />
 		         </xsl:for-each>
 		   </div> <!-- groupholder -->
 		</div>
-			
+
 		<div class="container">
-				 
+
 				<xsl:apply-templates match="item">
 					<xsl:sort select="title" />
 				</xsl:apply-templates>
-			
-			
+
+
 		</div> <!-- container -->
 	</body>
 	</html>
 </xsl:template>
 
 <xsl:template match="item">
-	
+
 	<div class="item">
 		<xsl:call-template name="createheader">
 			<xsl:with-param name="bgcolor">#DA9722</xsl:with-param>
 		</xsl:call-template>
-		
-		
-		<div id="fluff" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+
+
+		<div id="fluff" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 		<xsl:choose>
@@ -172,35 +172,38 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:value-of select="." disable-output-escaping="yes"/>
 							<xsl:if test="position()!=last()">
 								<xsl:text>, </xsl:text>
-							</xsl:if> 
+							</xsl:if>
 						</xsl:for-each>
 					</xsl:if>
 				</div>
 			</xsl:when>
 			<xsl:otherwise>
-				<div class="line">
-				     <b><xsl:value-of select="type" /></b>
-					<xsl:if test="subtype">
-						<b><xsl:text>: </xsl:text></b>
-						<xsl:for-each select="subtype">
-							<xsl:value-of select="." disable-output-escaping="yes"/>
-							<xsl:if test="position()!=last()">
-								<xsl:text>, </xsl:text>
-							</xsl:if> 
-						</xsl:for-each>
-					</xsl:if>
-					<xsl:text> </xsl:text> <xsl:value-of select="level/price" /><xsl:text>gp</xsl:text>
-				</div>
+				<div class="pricetable">
+					<div class="line">
+				     	<b><xsl:value-of select="type" /></b>
+						<xsl:if test="subtype">
+							<b><xsl:text>: </xsl:text></b>
+							<xsl:for-each select="subtype">
+								<xsl:value-of select="." disable-output-escaping="yes"/>
+								<xsl:if test="position()!=last()">
+									<xsl:text>, </xsl:text>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:if>
+					</div>
+					<div class="line">
+						<xsl:value-of select="level/price" /><xsl:text>gp</xsl:text>
+					</div>
 			</xsl:otherwise>
 		</xsl:choose>
-		
+
 		<xsl:for-each select="headline">
 			<div class="line">
 				<b><xsl:value-of select="name" /> <xsl:text>: </xsl:text></b>
 				<xsl:value-of select="text" disable-output-escaping="yes" />
 			</div>
 		</xsl:for-each>
-		
+
 		<xsl:for-each select="block">
 			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
 				<div style="float:left; width: max-content; max-width: calc(100% - 14em);">
@@ -211,7 +214,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:value-of select="."/>
 							<xsl:if test="position()!=last()">
 								<xsl:text>, </xsl:text>
-							</xsl:if> 
+							</xsl:if>
 						</xsl:for-each>
 						<xsl:text>)</xsl:text>
 					</xsl:if>
@@ -243,16 +246,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:choose>
 			</xsl:for-each>
 		</xsl:for-each>
-	
-	</div> 
+
+	</div>
 
 </xsl:template>
 
 <xsl:template name="createheader">
 	<xsl:param name="bgcolor">Purple</xsl:param>
-	
+
 	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
+		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);">
 			<xsl:value-of select="title"/>
 		</div>
 		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
@@ -262,12 +265,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text>+</xsl:text>
 			</xsl:if>
 		</div>
-	</div> 
-	
+	</div>
+
 </xsl:template>
-	
+
 <xsl:template name="listgroup">
-	
+
 	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Common'])>0">
 		<div class="list">
 			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </b><xsl:text> - Common</xsl:text></div>
@@ -486,10 +489,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<![CDATA[<i>Error</i>]]>
 				</xsl:otherwise>
 			</xsl:choose>
-				
+
 		</div>
 	</xsl:if>
-	
+
 	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Uncommon'])>0">
 		<div class="list">
 			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </b><xsl:text> - Uncommon</xsl:text></div>
@@ -710,7 +713,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:choose>
 		</div>
 	</xsl:if>
-	
+
 	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Rare'])>0">
 		<div class="list">
 			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </b><xsl:text> - Rare</xsl:text></div>
@@ -931,7 +934,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:choose>
 		</div>
 	</xsl:if>
-	
+
 	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Unique'])>0">
 		<div class="list">
 			<xsl:choose>
@@ -1183,21 +1186,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:if>
 
 </xsl:template>
-	
+
 <xsl:template name="line">
 	<xsl:param name="levelvalue" select="1"/>
-	
+
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro); box-sizing:border-box; padding:0.2em;">
 				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
-				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;"> 
+				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
 						<xsl:if test="position()!=last()">
 							<xsl:text>, </xsl:text>
-						</xsl:if> 
-					</xsl:for-each></i> 
+						</xsl:if>
+					</xsl:for-each></i>
 				</div>
 				<div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
@@ -1207,13 +1210,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:otherwise>
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow); box-sizing:border-box; padding:0.2em;">
 				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
-				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;"> 
+				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
 					<i><xsl:for-each select="subtype">
 						<xsl:value-of select="."/>
 						<xsl:if test="position()!=last()">
 							<xsl:text>, </xsl:text>
-						</xsl:if> 
-					</xsl:for-each></i> 
+						</xsl:if>
+					</xsl:for-each></i>
 				</div>
 				<div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
@@ -1221,7 +1224,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:otherwise>
 	</xsl:choose>
-	
+
 </xsl:template>
-	
+
 </xsl:stylesheet>
