@@ -194,6 +194,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div class="line">
 						<xsl:value-of select="level/price" /><xsl:text>gp</xsl:text>
 					</div>
+				</div>
 			</xsl:otherwise>
 		</xsl:choose>
 
