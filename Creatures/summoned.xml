@@ -387,7 +387,7 @@
       </category>
 
       <alignment>good</alignment>
-      <language>understands any you speak</language>
+      <language>Common</language> <language>Draconic</language> <language>understands any you speak</language>
       <source>Call Celestial Steed (Paladin Utility 6), Improved Steed feat</source>
    </creature>
 
@@ -830,6 +830,76 @@
 
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Magma Beast (Wizard Daily 5)</source>
+   </creature>
+
+   <creature>
+     <title>Obedient Servant</title>
+     <role>Summoned creature</role>
+     <size>Medium</size> <origin>elemental</origin> <type>animate</type> <subtype>construct</subtype>
+
+     <hp>Your healing surge value</hp> <bloodied</bloodied>
+     <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+     <defenses>Your defenses, not counting temporary bonuses</defenses>
+     <speed>6</speed>
+
+     <category>
+       <category-name>Traits</category-name>
+
+       <block>
+         <name>Punishing Aura</name> <type>aura</type>
+         <frequency>Aura 1</frequency>
+         <line>A enemy marked by the servant that starts its turn in the aura takes damage equal to 2 + your Wisdom modifier.</line>
+       </block>
+     </category>
+
+     <category>
+       <category-name>Actions</category-name>
+
+       <block>
+         <name>Standard Action</name> <type>mbasic</type>
+         <frequency>At-Will</frequency>
+         <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence +2 vs. AC</line>
+         <line><![CDATA[<i>Hit:</i>]]> 1d10 + Intelligence modifier damage, and the target is marked by the servant until the end of your next turn.</line>
+       </block>
+
+       <block>
+         <name>Standard Action</name> <type>ranged</type>
+         <frequency>At-Will</frequency>
+         <line><![CDATA[<i>Attack:</i>]]> Ranged 5/10 (one creature); Intelligence vs. Reflex</line>
+         <line><![CDATA[<i>Hit:</i>]]> 1d8 + Intelligence modifier damage.</line>
+       </block>
+
+       <block>
+          <name>Minor Action</name>
+          <frequency>At-Will</frequency> <note>1/round</note>
+          <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+       </block>
+
+       <block>
+         <name>Opportunity Interrupt</name>
+         <frequency>At-Will</frequency>
+         <line><![CDATA[<i>Trigger:</i>]]> A creature adjacent to the servant provokes an <![CDATA[<i>opportunity attack</i>]]> while either marked by the servant or adjacent to your bloodied ally or you if you are bloodied</line>
+         <line><![CDATA[<i>Effect:</i>]]> The servant makes a <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as an <i>opportunity attack</i>]]>.</line>
+       </block>
+     </category>
+
+     <category>
+       <category-name>Summon Traits</category-name>
+
+       <block>
+         <name>Instinctive Action</name>
+         <line>If you haven't given the obedient servant any commands by the end of your turn, it attacks an enemy adjacent to either you (if you are bloodied) or your bloodied ally. If it can't do that, it moves it speed towards the nearest bloodied ally, or towards you.</line>
+         <line>If the servant cannot attack or end adjacent to a bloodied ally, the servant is marked by the closest enemy until the end of your next turn.</line>
+       </block>
+
+       <block>
+         <name>Symbiosis</name>
+         <line>You cannot be marked while adjacent to the obedient servant, and any mark on you immediately ends when the servant becomes adjacent to you.</line>
+       </block>
+     </category>
+
+     <alignment>unaligned</alignment> <language>-</language>
+     <source>Summon Obedient Servant (Artificer Daily Attack 1)</source>
    </creature>
 
    <creature>
