@@ -55,13 +55,123 @@
 		<benefit>You gain the following benefits and weaknesses:</benefit>
       <benefit>&#9658; You are an Undead creature. You are unaffected by anything that only affects living creatures. You don't need to breathe, which means you are immune to suffocation. You also don't age. Unlike more undead, you do need to sleep.</benefit>
       <benefit>&#9658; You have darkvision.</benefit>
-      <benefit>You have resist 5 necrotic. This increases to resist 10 necrotic at 11th level, and to resist 15 necrotic at 21st level.</benefit>
-      <benefit>You have vulnerable 5 radiant. This increases to resist 10 radiant at 11th level, and to resist 15 radiant at 21st level.</benefit>
-      <benefit>If you end you your turn in direct sunlight and lack a protective covering such as a cloak or other heavy clothing, you take 5 radiant damage (plus additional damage from your vulnerable radiant) from the sunlight, and you are weakened (save ends). If you drop to 0 hit points or fewer from this damage, you are instantly destroyed instead of becoming dying.</benefit>
+      <benefit>&#9658;You have resist 5 necrotic. This increases to resist 10 necrotic at 11th level, and to resist 15 necrotic at 21st level.</benefit>
+      <benefit>&#9658;You have vulnerable 5 radiant. This increases to resist 10 radiant at 11th level, and to resist 15 radiant at 21st level.</benefit>
+      <benefit>&#9658;If you end you your turn in direct sunlight and lack a protective covering such as a cloak or other heavy clothing, you take 5 radiant damage (plus additional damage from your vulnerable radiant) from the sunlight, and you are weakened (save ends). If you drop to 0 hit points or fewer from this damage, you are instantly destroyed instead of becoming dying.</benefit>
    </feature>
 
    <feature>
       <name>Level 1: Blood is Life</name>
       <benefit>As an undead creature, you gain power and strength when you drain the life essence of other creatures. A gnawing hunger thus burns within your body and spirit, tempting you to descend into feral madness. Some Vampires embrace this impulse, becoming savage beasts with a thirst for blood. Others strive to control it, turning their hunger into a weapon they can unleash against their enemies.</benefit>
+      <benefit>You have a limited number of healing surges, and unlike most classes, you do not add your Constitution modifier to your number of healing surges. You start play with two healing surges, and gain the Durable feat as a bonus feat, for a total of four healing surges.</benefit>
+      <benefit>Many of your Vampire class powers allow you to either gain healing surges, or to expend them to enhance those powers. You gain the <![CDATA[<i>blood drinker</i>]]> attack power as your 1st-level encounter attack. This power allows you to draw on the life force of other creatures, whether is consists of blood, ichor, or the unseen energy of life itself.</benefit>
+      <benefit>Once during a short rest, an ally adjacent to you can willingly lose one healing surge to allow you to regain hit points equal to your bloodied value.</benefit>
+      <benefit>If you end a short rest with more healing surges than your usual number of healing surges for the day, you lose any healing surges beyond that number but regain all your hit points. If you were already at full hit points, you gain a +5 power bonus to Endurance checks until the end of your next extended rest.</benefit>
+
+      <power>
+         <title>Blood Drinker</title>
+         <class>Vampire</class> <category>Attack</category> <level>1</level>
+         <fluff>When your attack strikes true, you sweep past your foe's defenses to consume the essence of its life</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Shadow</keyword>
+            <action>Nonaction</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You hit an enemy with a Vampire melee at-will attack power</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering enemy</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target takes +1d10 extra damage from the triggering attack.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 13:</name> <name-style>italic</name-style>
+               <text>When you reach 13th level, this power becomes your level 13 encounter attack power, and the extra damage increases to +2d12.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 27:</name> <name-style>italic</name-style>
+               <text>When you reach 27th level, this power becomes your level 27 encounter attack, and the extra damage increases to +3d12.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You gain one healing surge.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+
+   <feature>
+      <name>Level 1: Enduring Soul</name>
+      <benefit>Your body is undead, but the lingering presence of your soul is infused into the shadow magic that grants you power. When you have taken grievous injuries, that energy heals and sustains you.</benefit>
+      <benefit>While you are bloodied, you gain regeneration equal to your Strength modifier or your Charisma modifier, whichever is higher. If you take radiant damage, your regeneration does not function until the end of your next turn.</benefit>
+      <benefit>Your regeneration increases by +3 at 11th level, and by +6 at 21st level.</benefit>
+   </feature>
+
+   <feature>
+      <name>Level 1: Vampiric Bloodline</name>
+      <benefit>Different Vampires exhibit different sets of vampiric traits, creating a set of abilities that are often referred to as vampiric bloodlines. Some bloodlines work through cunning, while others cultivate the bestial nature within all creatures of the night.</benefit>
+      <benefit>Choose either the Beguiler Bloodline or the Stalker Bloodline.</benefit>
+
+      <subfeature>
+         <name>Beguiler Bloodline</name>
+         <benefit>You prefer the company of mortals and the benefits of being a part of society. Through the magic of blood and shadow, your mastery of your appearance and your subtle hunting methods have made you the most attractive of predators. Your enemies believe your lies even as they overlook your strangeness.</benefit>
+         <benefit>You gain a bonus to the damage rolls of your Vampire powers equal to your Charisma modifier. If you take Beguiler Noble paragon path, this bonus also applies to damage rolls for that paragon path's powers.</benefit>
+         <benefit>This bonus to damage increases to 2 + your Charisma modifier at 5th level, to 5 + your Charisma modifier at 15th level, and to 8 + your Charisma modifier at 25th level.</benefit>
+         <benefit>You gain the <![CDATA[<i>dark beckoning</i>]]> 1st-level at-will attack power.</benefit>
+
+         <power>
+            <title>Dark Beckoning</title>
+            <class>Vampire</class> <category>Attack</category> <level>1</level>
+            <fluff>Your mesmerizing presence draws your enemies closer</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Charm, Implement, Psychic, Shadow</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Ranged</type> <range>5</range>
+               <section>
+                  <indent>2</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<b>Ranged</b>]]> 7</text>
+               </section>
+               <section>
+                  <indent>2</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<b>Ranged</b>]]> 10</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One creature that can see you</text>
+               </section>
+               <section>
+                  <name>Attack:</name> <name-style>bold</name-style>
+                  <text>Dexterity vs. Will</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Hit:</name> <name-style>bold</name-style>
+                  <text>1d6 + Dexterity modifier psychic damage, and you pull the target up to a number of squares equal to 2 + one-half your Charisma modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>2d6 + Dexterity modifier psychic damage.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+   </feature>
+
+   <feature>
+      <name>Level 1: Vampiric Reflexes</name>
+      <benefit>You move with uncanny grace that makes it difficult for foes to strike you.</benefit>
+      <benefit>While you are wearing cloth armor or no armor and aren't using a shield, you gain a +2 shield bonus to AC.</benefit>
    </feature>
 </class>
