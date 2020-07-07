@@ -168,7 +168,7 @@
          <name>Stalker Bloodline</name>
          <benefit>The dark curse that made you a vampire took little toll on your physical form. However, in your heart and soul, you have become a beast more terrifying than any monster you had known of in mortal life. You live for the chase and the kill, though hold on to what little humanity you have left. The monster within you is your connection between the world of mortals and the world of shadow, and it makes you strong.</benefit>
          <benefit>You gain a bonus to the damage rolls of your Vampire powers equal to your Strength modifier. If you take Stalker Noble paragon path, this bonus also applies to damage rolls for that paragon path's powers.</benefit>
-         <benefit>This bonus to damage increases to 2 + your Charisma modifier at 5th level, to 5 + your Charisma modifier at 15th level, and to 8 + your Charisma modifier at 25th level.</benefit>
+         <benefit>This bonus to damage increases to 2 + your Strength modifier at 5th level, to 5 + your Strength modifier at 15th level, and to 8 + your Strength modifier at 25th level.</benefit>
          <benefit>You gain the <![CDATA[<i>hungry pounce</i>]]> 1st-level at-will attack power.</benefit>
 
          <power>
@@ -199,18 +199,9 @@
                   <text>Dexterity vs. Reflex</text>
                </section>
                <section>
-                  <indent>1</indent>
-                  <text>If the target is bloodied, you have combat advantage against it</text>
-               </section>
-               <section>
                   <shade>true</shade>
                   <name>Hit:</name> <name-style>bold</name-style>
                   <text>1d8 + Dexterity modifier damage.</text>
-               </section>
-               <section>
-                  <shade>true</shade> <indent>1</indent>
-                  <name>Crit:</name> <name-style>bold</name-style>
-                  <text>You knock the target prone.</text>
                </section>
                <section>
                   <shade>true</shade> <indent>1</indent>
@@ -235,5 +226,84 @@
       <name>Level 1: Vampiric Reflexes</name>
       <benefit>You move with uncanny grace that makes it difficult for foes to strike you.</benefit>
       <benefit>While you are wearing cloth armor or no armor and aren't using a shield, you gain a +2 shield bonus to AC.</benefit>
+   </feature>
+
+   <feature>
+      <name>Level 1: At-Will Attacks</name>
+      <benefit>Vampires are know for their mythic strength that and thirst for blood - attributes that you wield as weapons when you enter combat.</benefit>
+      <benefit>You have the <![CDATA[<i>taste of life</i> and <i>vampire claws</i>]]> powers as your 1st-level at-will attack powers.</benefit>
+
+      <power>
+         <title>Taste of Life</title>
+         <class>Vampire</class> <category>Attack</category> <level>1</level>
+         <fluff>Your dread touch burns your foe with dark power, even as your own energy is temporarily restored</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Implement, Necrotic, Shadow</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>touch</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Dexterity vs. Fortitude</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>1d8 + Dexterity modifier necrotic damage, and you gain temporary hit points. The temporary hit points equal 2 + your Strength modifier or your Charisma modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>5 + your Strength modifier or your Charisma modifier temporary hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>2d8 + Dexterity modifier necrotic damage, and 8 + your Strength modifier or your Charisma modifier temporary hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>If the target grabbed by you, or restrained, stunned or unconscious, you gain an additional 5 temporary hit points.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Vampire Claws</title>
+         <class>Vampire</class> <category>Attack</category> <level>1</level>
+         <fluff>You use the full force of your undead strength to drive your foe around</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Implement, Shadow</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>touch</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Dexterity vs. Reflex</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>1d10 + Dexterity modifier damage, and you can slide the target 1 square.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>2d10 + Dexterity modifier damage, and slide 2 squares.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>You can use this power as a <![CDATA[<i>melee basic attack</i>]]>.</text>
+            </section>
+         </part>
+      </power>
    </feature>
 </class>
