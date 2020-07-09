@@ -135,12 +135,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div id="frequency" style="width:5.9em; float:left;">
 					<xsl:value-of select="frequency"/>
 				</div>
-				<div id="blob" style="width: 1.2em; float: left; text-align:center;">
-					&#x25C6;
-				</div>
-				<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
-					<xsl:value-of select="keyword"/>
-				</div>
+				<xsl:if test="keyword">
+					<div id="blob" style="width: 1.2em; float: left; text-align:center;">
+						&#x25C6;
+					</div>
+					<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
+						<xsl:value-of select="keyword"/>
+					</div>
+				</xsl:if>
 			</div>
 		</xsl:if>
 
