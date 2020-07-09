@@ -9,71 +9,71 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<style>
 			.container {
-				
+
 				box-sizing:border-box;
 			}
-			
+
 			.power {
-				margin:0.2cm; 
+				margin:0.2cm;
 				width:97%;
 				float:left;
 				page-break-inside:avoid;
 			}
-			
+
 			@media only screen and (min-width:600px) {
-				.container { 
-					column-count: 2; 
-					column-gap:.4em; 
+				.container {
+					column-count: 2;
+					column-gap:.4em;
 				}
-			
+
 			}
-			
+
 			@media only screen and (min-width:1000px) {
-				.container { 
-					column-count: 3; 
-					column-gap:0.5em; 
+				.container {
+					column-count: 3;
+					column-gap:0.5em;
 				}
 			}
-			
+
 			@media only screen and (min-width:1300px) {
-				.container { 
-					column-count: 4; 
-					column-gap:0.6em; 
+				.container {
+					column-count: 4;
+					column-gap:0.6em;
 				}
-				
+
 			}
 			@page {
 				size: auto;
 				margin: 0.85cm 0.7cm 1.1cm;
 			}
-				
+
 			@media print {
-				.container { 
-					column-count: 2; 
-					column-gap:0.6em; 
+				.container {
+					column-count: 2;
+					column-gap:0.6em;
 					margin:0cm;
 				}
-				
+
 			}
-			
-			
+
+
 		</style>
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<div class="container">
-				 
+
 				<xsl:apply-templates match="power">
 					<xsl:sort select="title" />
 				</xsl:apply-templates>
-			
-			
+
+
 		</div> <!-- container -->
 	</body>
 	</html>
 </xsl:template>
 
 <xsl:template match="power">
-	
+
 	<div class="power">
 		<xsl:choose>
 			<xsl:when test="part[1]/frequency = 'At-Will'">
@@ -83,7 +83,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:when>
 			<xsl:when test="part[1]/frequency = 'Encounter'">
 				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">#961334</xsl:with-param> 
+					<xsl:with-param name="bgcolor">#961334</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
 			<xsl:when test="part[1]/frequency = 'Daily'">
@@ -91,24 +91,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:with-param name="bgcolor">#4d4d4f</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
-		</xsl:choose> 
-		
-		
-		<div id="fluff" style="background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;"> 
+		</xsl:choose>
+
+
+		<div id="fluff" style="background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
-		
+
 		<xsl:apply-templates select="part" />
-	
-	</div> 
+
+	</div>
 
 </xsl:template>
 
 <xsl:template name="createheader">
 	<xsl:param name="bgcolor">Purple</xsl:param>
-	
+
 	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);"> 
+		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);">
 			<xsl:value-of select="title"/>
 		</div>
 		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
@@ -118,23 +118,23 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text> </xsl:text><xsl:value-of select="level"/>
 			</xsl:if>
 		</div>
-	</div> 
-	
-</xsl:template> 
+	</div>
+
+</xsl:template>
 
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
 		<xsl:if test="part-name != ''">
-			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;"> 
+			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;">
 				<i><b><xsl:value-of select="part-name"/></b></i>
 			</div>
 		</xsl:if>
-		
+
 		<xsl:if test="not(hide-freqkey = 'true')">
-			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;"> 
+			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left; font-weight:bold;">
 				<div id="frequency" style="width:5.9em; float:left;">
 					<xsl:value-of select="frequency"/>
-				</div> 
+				</div>
 				<div id="blob" style="width: 1.2em; float: left; text-align:center;">
 					&#x25C6;
 				</div>
@@ -143,18 +143,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</div>
 		</xsl:if>
-		
+
 		<xsl:if test="not(hide-actrange = 'true')">
-			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;"> 
+			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;">
 				<div id="action" style="width:12.2em; float:left; ">
 					<b><xsl:value-of select="action"/></b> <xsl:text> </xsl:text>
 					<xsl:value-of select="subaction"/>
-				</div> 
-				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;"> 
-					<b><xsl:value-of select="type"/>&#160;</b> 
+				</div>
+				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;">
+					<b><xsl:value-of select="type"/>&#160;</b>
 					<xsl:value-of select="range"/>
 					<xsl:if test="type2">
-						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;"> 
+						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;">
 								<b><xsl:value-of select="type2"/>&#160;</b>
 								<xsl:value-of select="range2"/>
 							</p>
@@ -162,14 +162,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</div>
 		</xsl:if>
-		
+
 		<xsl:apply-templates select="section" />
-	
+
 	</div>
-	
-</xsl:template> 
+
+</xsl:template>
 
 <xsl:template match="section">
+	<xsl:if test="augment">
+		<span style="font-variant:small-caps;">Augment <xsl:value-of select="augment" /></span>
+	</xsl:if>
 
 	<xsl:choose>
 		<xsl:when test="shade='true'">
@@ -207,20 +210,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:choose>
 		</xsl:otherwise>
 	</xsl:choose>
-	
+
 </xsl:template>
 
 <xsl:template name="shadesection">
-	 <xsl:param name="leftindent">1.2em</xsl:param> 
-	
+	 <xsl:param name="leftindent">1.2em</xsl:param>
+
 	<div style="width:100%; background:linear-gradient(to right, #D6D6C2, #ebebe0); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
 		<xsl:call-template name="sectioncontent" />
 	</div>
 </xsl:template>
 
 <xsl:template name="clearsection">
-	 <xsl:param name="leftindent">1.2em</xsl:param> 
-	
+	 <xsl:param name="leftindent">1.2em</xsl:param>
+
 	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
 		<xsl:call-template name="sectioncontent" />
 	</div>
@@ -228,7 +231,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="sectioncontent">
 	<xsl:choose>
-		<xsl:when test="name-style = 'bold'"> 
+		<xsl:when test="name-style = 'bold'">
 			<b><xsl:value-of select="name"/>&#160;</b>
 		</xsl:when>
 		<xsl:when test="name-style = 'italic'">
@@ -239,7 +242,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:value-of select="text" disable-output-escaping="yes" />
-	
+
 </xsl:template>
-	
+
 </xsl:stylesheet>
