@@ -171,7 +171,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="section">
 	<xsl:if test="augment">
-		<span style="font-variant:small-caps;">Augment <xsl:value-of select="augment" /></span>
+		<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1em; float:left; font-style:small-caps;">
+			Augment <xsl:value-of select="augment" />
+		</div>
 	</xsl:if>
 
 	<xsl:choose>
