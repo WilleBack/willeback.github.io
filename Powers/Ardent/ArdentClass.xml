@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../class.xsl"?>
+
+<class>
+   <name>Ardent</name>
+	<subname>Excitant</subname>
+	<role>Leader</role>
+	<source>Psionic</source>
+	<shortfluff>You fill your allies with with the will to fight and the clarity of purpose needed for victory. When you attack, you loose thoughts that intensify emotions and lay bare truths, infecting your enemies with doubt and filling your allies with confidence.</shortfluff>
+	<keyability>Charisma</keyability>
+	<keyability>Constitution</keyability>
+	<keyability>Wisdom</keyability>
+
+	<proficiency>
+		<type>Armor</type>
+		<name>Cloth</name>
+      <name>Leather</name>
+      <name>Hide</name>
+      <name>Chainmail</name>
+	</proficiency>
+	<proficiency>
+		<type>Weapon</type>
+		<name>Simple melee</name>
+      <name>Military melee</name>
+		<name>Simple ranged</name>
+	</proficiency>
+
+   <defense>
+      <name>Fort</name>
+      <value>+1</value>
+   </defense>
+	<defense>
+		<name>Will</name>
+		<value>+1</value>
+	</defense>
+
+	<hpbase>12</hpbase>
+	<hpgain>5</hpgain>
+	<surgebase>5</surgebase>
+
+	<skills>
+		<trained>Diplomacy, Insight or Intimidate</trained>
+		<number>3</number>
+	</skills>
+
+	<fluff>Those who let their base emotions rule them invite madness and destruction. Prolonged feelings of fear, greed, lust, or hatred can weaken the mind's defenses against manipulation. Wielding psionic power, an Ardent excites such emotions in his or her enemies, creating gaps in their defenses and frustrating their attacks, all while filling his or her allies with encouraging thoughts and guarding them against despair and other negative emotions.</fluff>
+   <fluff>Ardents rarely learn their art through formal training. In many ways, they are incidental leaders, having stumbled onto psionic power at some point earlier in their lives. How an Excitant discovered his or her psionic talent can shape how one wields this power now. He or she might have awakened to the talent in the heat of battle, experiencing a mental breakthrough that allowed him or her to augment attacks by rending the enemies' minds. Or an Excitant's friends might reflect his or her power when the Excitant's mood bleeds into theirs, altering their emotional states to match his or her own. Regardless of the revelation, an Ardent learned to harness this power to support his or her fighting prowess and to guide allies to victory.</fluff>
+
+	<feature>
+		<name>Ardent Mantle</name>
+      <benefit>A person's state of mind can be armor against the decay and madness born from base emotions, and thus Ardents gird themselves by donning particular mindsets to ward off the perils brought on by fear, despair and hatred. These emotional states are known as mantles.</benefit>
+      <benefit>Choose Mantle of Clarity, Mantle of Elation, or Mantle of Impusiveness as your mantle.</benefit>
+      <benefit>Bonuses granted by multiple Ardent Mantles are not cumulative, only the highest bonus applies.</benefit>
+
+      <subfeature>
+         <name>Mantle of Clarity</name>
+         <benefit>An Excitant with the Mantle of Clarity reads his or her enemies' weaknesses and reveals them to allies, and uses keen insight to help allies overcome adversity.</benefit>
+         <benefit>You have an Aura 5 (Psionic). You and each ally in the aura gain a bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]>.</benefit>
+         <benefit>Each ally in the aura also gains a +2 bonus to Insight checks and to Perception checks.</benefit>
+         <benefit>Also, you gain the <![CDATA[<i>ardent alacrity</i>]]> class power.</benefit>
+
+         <power>
+            <title>Ardent Alacrity</title>
+            <class>Ardent</class> <category>Utility</category>
+            <fluff>As you take a hit, your emotional energy inspires your allies</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Psionic</keyword>
+               <action>Nonaction</action> <subaction>Reaction</subaction>
+               <type>Close</type> <range>burst 5</range>
+               <section>
+                  <name>Trigger:</name><name-style>bold</name-style>
+                  <text>You become bloodied</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>Each ally in the burst </text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Each target can use a free reaction to either shift 1 square or to move half his or her speed. </text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Shift 2 squares of move half his or her speed.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Mantle of Elation</name>
+         <benefit>A Mantle of Elation Excitant can scarcely contain the emotions that strain against his or her will like a crashing tide. When he or she attacks, the emotions flood out of him or her, increasing allies' confidence and washing away enemies' courage.</benefit>
+         <benefit>You have an Aura 5 (Psionic). You and each ally in the aura gain a bonus to damage rolls with <![CDATA[<i>opportunity attacks</i>]]>. The bonus equals your Constitution modifier, and increases to 2 + your Constitution modifier at 11th level, and to 4 + your Constitution modifier at 21st level.</benefit>
+         <benefit>Each ally in the aura also gains a +2 bonus to Diplomacy checks and Intimidate checks.</benefit>
+         <benefit>Also, you gain the <![CDATA[<i>ardent outrage</i>]]> class power.</benefit>
+
+         <power>
+            <title>Ardent Outrage</title>
+            <class>Ardent</class> <category>Utility</category>
+            <fluff>As you take a hit, your anger unbalances your foes</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Psionic</keyword>
+               <action>Nonaction</action> <subaction>Reaction</subaction>
+               <type>Close</type> <range>burst 5</range>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>You become bloodied</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>Each enemy in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Each target grants combat advantage until the start of the acting creature's next turn.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Mantle of Impulsiveness</name>
+         <benefit>An Excitant with the Mantle of Impulsiveness has little use for caution or careful planning, and he or she allows natural talent and fate to guide his or her actions in improving allies' attacks and stripping away enemies' protections.</benefit>
+         <benefit>You have an Aura 5 (Psionic). When you or an ally in the aura is targeted by an <![CDATA[<i>opportunity attack</i>]]>, that character gains a bonus to all damage rolls until the end of his or her next turn. The bonus equals one-half your Constitution modifier, and increases to 1 + one-half your Constitution modifier at 11th level, and to 2 + one-half your Constitution modifier at 21st level.</benefit>
+         <benefit>Each ally in the aura also gains a +2 bonus to Endurance checks and Intimidate checks.</benefit>
+         <benefit>Also, you gain the <![CDATA[<i>ardent eruption</i>]]> class power.</benefit>
+
+         <power>
+            <title>Ardent Eruption</title>
+            <class>Ardent</class> <category>Utility</category>
+            <fluff>Your pain bleeds from you in a wave, touching your allies and lending new ferocity to their attacks</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Psionic</keyword>
+               <action>Nonaction</action> <subaction>Reaction</subaction>
+               <type>Close</type> <range>burst 5</range>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>You become bloodied</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>Each ally in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Each target gains a +2 bonus to damage rolls until the end of his or her next turn.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>+4 damage bonus.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>+6 damage bonus.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+   </feature>
+</class>
