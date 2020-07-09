@@ -323,7 +323,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
 		<xsl:if test="part-name != ''">
 			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;">
-				<b><xsl:value-of select="part-name"/></b>
+				<i><b><xsl:value-of select="part-name"/></b></i>
 			</div>
 		</xsl:if>
 
@@ -332,19 +332,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div id="frequency" style="width:5.9em; float:left;">
 					<xsl:value-of select="frequency"/>
 				</div>
-				<div id="blob" style="width: 1.2em; float: left; text-align:center;">
-					&#x25C6;
-				</div>
-				<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
-					<xsl:value-of select="keyword"/>
-				</div>
+				<xsl:if test="keyword">
+					<div id="blob" style="width: 1.2em; float: left; text-align:center;">
+						&#x25C6;
+					</div>
+					<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
+						<xsl:value-of select="keyword"/>
+					</div>
+				</xsl:if>
 			</div>
 		</xsl:if>
 
 		<xsl:if test="not(hide-actrange = 'true')">
 			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;">
 				<div id="action" style="width:12.2em; float:left; ">
-					<b><xsl:value-of select="action"/></b><xsl:text> </xsl:text>
+					<b><xsl:value-of select="action"/></b> <xsl:text> </xsl:text>
 					<xsl:value-of select="subaction"/>
 				</div>
 				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;">
@@ -352,7 +354,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:value-of select="range"/>
 					<xsl:if test="type2">
 						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;">
-								<b><xsl:value-of select="type2"/></b>&#160;
+								<b><xsl:value-of select="type2"/>&#160;</b>
 								<xsl:value-of select="range2"/>
 							</p>
 					</xsl:if>
@@ -367,6 +369,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template match="section">
+	<xsl:if test="augment">
+		<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1em; float:left; font-size:1.05em; font-variant:small-caps;">
+			<b>Augment <xsl:value-of select="augment" /></b>
+		</div>
+	</xsl:if>
 
 	<xsl:choose>
 		<xsl:when test="shade='true'">
@@ -379,6 +386,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:when test="indent='2'">
 					<xsl:call-template name="shadesection">
 						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="indent='3'">
+					<xsl:call-template name="shadesection">
+						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="indent='2'">
+					<xsl:call-template name="shadesection">
+						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise>
@@ -396,6 +413,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:when test="indent='2'">
 					<xsl:call-template name="clearsection">
 						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="indent='3'">
+					<xsl:call-template name="clearsection">
+						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
+					</xsl:call-template>
+				</xsl:when>
+				<xsl:when test="indent='4'">
+					<xsl:call-template name="clearsection">
+						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise>
