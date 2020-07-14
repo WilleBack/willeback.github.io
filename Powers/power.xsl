@@ -7,6 +7,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<xsl:if test="collection">
+			<title><xsl:value-of select="collection" /></title>
+		</xsl:if>
 		<style>
 			.container {
 
@@ -60,6 +64,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</style>
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
+		<xsl:if test="collection">
+			<div id="collection-header" style="width:100%; padding:0.2em; font-size:1.2em; font-variant:small-caps;">
+				<xsl:value-of select="collection" />
+			</div>
+		</xsl:if>
 		<div class="container">
 
 				<xsl:apply-templates match="power">
