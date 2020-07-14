@@ -65,15 +65,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
 		<xsl:if test="collection">
-			<div id="collection-header" style="width:100%; padding:0.2em; font-size:1.2em; font-variant:small-caps;">
-				<xsl:value-of select="collection" />
+			<div id="collection-header" style="width:100%; box-sizing:border-box; padding:0.2em; font-size:1.4em; font-variant:small-caps;">
+				<b><xsl:value-of select="collection" /></b>
 			</div>
 		</xsl:if>
 		<div class="container">
 
-				<xsl:apply-templates match="power">
-					<xsl:sort select="title" />
-				</xsl:apply-templates>
+				<xsl:for-each select="power">
+					<xsl:call-template name="power" />
+				</xsl:for-each>
 
 
 		</div> <!-- container -->
@@ -81,7 +81,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</html>
 </xsl:template>
 
-<xsl:template match="power">
+<xsl:template name="power">
 
 	<div class="power">
 		<xsl:choose>
