@@ -19,7 +19,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			.power {
 				margin:0.2cm;
-				width:97%;
+				width:98%;
 				float:left;
 				page-break-inside:avoid;
 			}
