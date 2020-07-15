@@ -179,7 +179,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		</style>
 	</head>
-	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
+	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
 
 	<div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
 		<div id="classtitle" style="font-family:DnDLolth; background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em 0.2em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
@@ -255,7 +255,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div> <!-- block -->
 
 		<div class="feature">
-			<div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
+			<div id="header" style="width:100%; float:left; font-family:DnDLolth; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
 				<xsl:text>Class Features</xsl:text>
 			</div>
 			<div class="text">
@@ -265,7 +265,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		<xsl:for-each select="class/feature">
 			<div class="feature">
-				<div id="featurename" style="width:100%; float:left; font-size:1.3em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
+				<div id="featurename" style="width:100%; float:left; font-family:DnDLolth; font-size:1.3em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
 					<xsl:value-of select="name" />
 				</div>
 				<xsl:for-each select="benefit">
