@@ -59,7 +59,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		</style>
 	</head>
-	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
+	<body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
 		<div class="container">
 
        <xsl:apply-templates match="category" />
