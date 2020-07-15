@@ -120,17 +120,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			@font-face {
-				font-family: 'MentorSansStd';
+				font-family: 'MentorSansStd-Light';
 				src: url('../../font/MentorSansStd-Light.otf') format('opentype');
-				font-weight: light;
+				font-weight: lighter;
 				font-style: normal;
 
 			}
 
 			@font-face {
-				font-family: 'MentorSansStd';
+				font-family: 'MentorSansStd-Light';
 				src: url('../../font/MentorSansStd-LightIta.otf') format('opentype');
-				font-weight: light;
+				font-weight: lighter;
 				font-style: italic;
 
 			}
@@ -190,7 +190,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
 			<b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="class/role" /> <xsl:text>; </xsl:text> <b><xsl:text>Power Source: </xsl:text></b> <xsl:value-of select="class/source" /> <br />
-			<span style="font-weight:light; font-style:italic;"><xsl:value-of select="class/shortfluff" /></span>
+			<span style="font-family:MentorSansStd-Light; font-style:italic;"><xsl:value-of select="class/shortfluff" /></span>
 		</div>
 	</div> <!-- class header -->
 
@@ -332,7 +332,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:choose>
 
 
-		<div id="fluff" style="font-weight:light; font-style:italic; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
+		<div id="fluff" style="font-family:MentorSansStd-Light; font-style:italic; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
 			<xsl:value-of select="fluff"/>
 		</div>
 
