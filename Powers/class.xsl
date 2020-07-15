@@ -97,7 +97,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			@font-face {
 				font-family: 'MentorSansStd';
-				src: url('../font/MentorSansStd.otf') format('opentype');
+				src: url('../../font/MentorSansStd.otf') format('opentype');
 				font-weight: normal;
 				font-style: normal;
 
@@ -105,7 +105,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			@font-face {
 				font-family: 'MentorSansStd-Light';
-				src: url('../font/MentorSansStd-Light.otf') format('opentype');
+				src: url('../../font/MentorSansStd-Light.otf') format('opentype');
 				font-weight: normal;
 				font-style: normal;
 
