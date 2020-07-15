@@ -103,6 +103,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			}
 
+			@font-face {
+				font-family: 'MentorSansStd-Light';
+				src: url('../font/MentorSansStd-light.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
 			@media only screen and (min-width:600px) {
 				.container {
 					column-count: 2;
@@ -158,7 +166,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
 			<b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="class/role" /> <xsl:text>; </xsl:text> <b><xsl:text>Power Source: </xsl:text></b> <xsl:value-of select="class/source" /> <br />
-			<i><xsl:value-of select="class/shortfluff" /></i>
+			<span style="font-family:MentorSansStd-Light;"><i><xsl:value-of select="class/shortfluff" /></i></span>
 		</div>
 	</div> <!-- class header -->
 
@@ -300,7 +308,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:choose>
 
 
-		<div id="fluff" style="background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
+		<div id="fluff" style="font-family:MentorSansStd-Light;background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 
