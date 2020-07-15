@@ -104,10 +104,34 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			@font-face {
-				font-family: 'MentorSansStd-Light';
-				src: url('../../font/MentorSansStd-Light.otf') format('opentype');
+				font-family: 'MentorSansStd';
+				src: url('../../font/MentorSansStd-Bold.otf') format('opentype');
+				font-weight: bold;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'DnDLolth';
+				src: url('../../font/DnDLolth.otf') format('opentype');
 				font-weight: normal;
 				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../../font/MentorSansStd-Light.otf') format('opentype');
+				font-weight: light;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../../font/MentorSansStd-LightIta.otf') format('opentype');
+				font-weight: light;
+				font-style: italic;
 
 			}
 
@@ -158,15 +182,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
 
 	<div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
-		<div id="classtitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em 0.2em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
+		<div id="classtitle" style="font-family:DnDLolth; background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em 0.2em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
 			<xsl:value-of select="class/name" />
 		</div>
-		<div id="subclasstitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.2em; padding:0em 1.2em 1em; font-variant:small-caps; letter-spacing:1px;">
+		<div id="subclasstitle" style="font-family:DnDLolth; background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.2em; padding:0em 1.2em 1em; font-variant:small-caps; letter-spacing:1px;">
 			<xsl:text>- </xsl:text><xsl:value-of select="class/subname" />
 		</div>
 		<div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
 			<b><xsl:text>Role: </xsl:text></b>  <xsl:value-of select="class/role" /> <xsl:text>; </xsl:text> <b><xsl:text>Power Source: </xsl:text></b> <xsl:value-of select="class/source" /> <br />
-			<span style="font-family:MentorSansStd-Light;"><i><xsl:value-of select="class/shortfluff" /></i></span>
+			<span style="font-weight:light; font-style:italic;"><xsl:value-of select="class/shortfluff" /></span>
 		</div>
 	</div> <!-- class header -->
 
@@ -308,8 +332,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:choose>
 
 
-		<div id="fluff" style="font-family:MentorSansStd-Light;background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
-			<i><xsl:value-of select="fluff"/></i>
+		<div id="fluff" style="font-weight:light; font-style:italic; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
+			<xsl:value-of select="fluff"/>
 		</div>
 
 		<xsl:apply-templates select="part" />
