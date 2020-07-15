@@ -95,6 +95,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:right;
 			}
 
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../font/MentorSansStd.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
 			@media only screen and (min-width:600px) {
 				.container {
 					column-count: 2;
@@ -139,7 +147,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		</style>
 	</head>
-	<body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
+	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
 
 	<div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
 		<div id="classtitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em 0.2em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
