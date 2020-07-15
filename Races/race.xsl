@@ -95,6 +95,46 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             float:right;
          }
 
+         @font-face {
+				font-family: 'MentorSansStd';
+				src: url('../../font/MentorSansStd.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../../font/MentorSansStd-Bold.otf') format('opentype');
+				font-weight: bold;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'DnDLolth';
+				src: url('../../font/DnDLolth.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd-Light';
+				src: url('../../font/MentorSansStd-Light.otf') format('opentype');
+				font-weight: lighter;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd-Light';
+				src: url('../../font/MentorSansStd-LightIta.otf') format('opentype');
+				font-weight: lighter;
+				font-style: italic;
+
+			}
+
          @media only screen and (min-width:600px) {
             .container {
                column-count: 2;
@@ -139,15 +179,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       </style>
    </head>
-   <body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
+   <body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
 
    <div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
-      <div id="classtitle" style="background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
+      <div id="classtitle" style="font-family:DnDLolth; background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
          <xsl:value-of select="race/name" />
       </div>
       <div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
          <b><xsl:text>Size: </xsl:text></b>  <xsl:value-of select="race/size" /> <xsl:text>; </xsl:text> <b><xsl:text>Origin: </xsl:text></b> <xsl:value-of select="race/origin" /> <xsl:text>; </xsl:text> <b><xsl:text>Type: </xsl:text></b> <xsl:value-of select="race/type" /> <br />
-         <i><xsl:value-of select="race/shortfluff" /></i>
+         <span style="font-family:MentorSansStd-Light; font-style:italic;"><xsl:value-of select="race/shortfluff" /></span>
       </div>
    </div> <!-- class header -->
 
@@ -166,7 +206,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div>
 
       <div id="block" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left; page-break-inside:avoid;">
-         <div id="header" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
+         <div id="header" style="font-family:DnDLolth; width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
             <xsl:text>Racial Traits</xsl:text>
          </div>
 
@@ -229,7 +269,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <xsl:for-each select="race/feature[position()>1]">
          <div class="feature">
-            <div id="featurename" style="width:100%; float:left; font-size:1.3em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
+            <div id="featurename" style="font-family:DnDLolth; width:100%; float:left; font-size:1.3em; padding:0.3em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001;">
                <xsl:value-of select="name" />
             </div>
             <xsl:for-each select="benefit">
@@ -296,7 +336,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:choose>
 
 
-		<div id="fluff" style="background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
+		<div id="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 
