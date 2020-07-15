@@ -63,7 +63,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		</style>
 	</head>
-	<body style="font-family:Verdana; font-size:8pt;margin:0cm; ">
+	<body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
 		<xsl:if test="collection">
 			<div id="collection-header" style="width:100%; box-sizing:border-box; padding:0.2em; font-size:1.4em; font-variant:small-caps;">
 				<b><xsl:value-of select="collection" /></b>
