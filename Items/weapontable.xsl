@@ -44,6 +44,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			.grouptitle {
 				width:100%;
+				font-family:DnDLolth;
 				font-size:1.4em;
 				font-weight:bold;
 				margin:0.2em 0.1em;
@@ -58,6 +59,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			.groupname {
 				width:100%;
+				font-family:DnDLolth;
 				font-size:1.2em;
 				font-weight:bold;
 			}
@@ -152,7 +154,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		</style>
 	</head>
-	<body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
+	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
 	<div class="listcontainer">
 
         	<xsl:for-each select="catalog/category">

@@ -40,6 +40,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			.grouptitle {
+				font-family:DnDLolth;
 				width:100%;
 				font-size:1.4em;
 				font-weight:bold;
@@ -53,6 +54,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			.groupname {
+				font-family:DnDLolth;
 				width:100%;
 				font-size:1.2em;
 				font-weight:bold;
@@ -72,6 +74,46 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				width:calc(97% - 25em);
 				min-width: 16.5em;
 				float:right;
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../../font/MentorSansStd.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../../font/MentorSansStd-Bold.otf') format('opentype');
+				font-weight: bold;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'DnDLolth';
+				src: url('../../font/DnDLolth.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd-Light';
+				src: url('../../font/MentorSansStd-Light.otf') format('opentype');
+				font-weight: lighter;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd-Light';
+				src: url('../../font/MentorSansStd-LightIta.otf') format('opentype');
+				font-weight: lighter;
+				font-style: italic;
+
 			}
 
 			@media only screen and (min-width:600px) {
@@ -118,7 +160,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		</style>
 	</head>
-	<body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
+	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
 	<div class="listcontainer">
 		<div class="groupholder">
 			<div class="grouptitle">Feat Groups</div>
