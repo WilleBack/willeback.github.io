@@ -20,7 +20,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             }
 
             .affliction {
-               background:linear-gradient(to right, #8e1f3c, #af264a);
+               background:linear-gradient(to right, #dabfc7, #efe4e7);
                margin:0.2cm;
                width:98%;
                float:left;
