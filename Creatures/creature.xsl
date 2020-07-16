@@ -820,7 +820,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:value-of select="affliction/type" />
             </div>
          </div>
-         <div class="fluff" style="background-color:#3c232a; font-family:MentorSansStd-Light; font-style:italic;">
+         <div class="fluff" style="background:linear-gradient(to right, #D6D6C2, #ebebe0); font-family:MentorSansStd-Light; font-style:italic;">
             <xsl:value-of select="affliction/fluff" />
          </div>
          <xsl:for-each select="affliction/stage">
