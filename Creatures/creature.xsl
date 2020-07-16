@@ -19,6 +19,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                page-break-inside:avoid;
             }
 
+            .affliction {
+               background:linear-gradient(to right, #8e1f3c, #af264a);
+               margin:0.2cm;
+               width:98%;
+               float:left;
+               page-break-inside:avoid;
+            }
+
             .pricetable {
                box-sizing:border-box;
                width: 100%;
