@@ -2,21 +2,82 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Blood Hawk</title>
+      <level>0</level> <role>Skirmisher</role> <xp>80</xp>
+      <size>Small</size> <origin>natural</origin> <type>beast</type>
+
+      <init>+3</init> <perception>+3</perception> <insight>+3</insigh>
+
+      <hp>20</hp> <bloodied>10</bloodied>
+      <ac>15</ac> <fort>10</fort> <ref>14</ref> <will>10</will>
+      <speed>2 (clumsy)</speed> <fly>6</fly>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Claw Rake</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage, and ongoing 2 damage (save ends), or ongoing 5 damage if the blood hawk is bloodied.</line>
+            <line>If the target is bloodied, it takes a -2 penalty to the saving throw.</line>
+         </block>
+
+         <block>
+            <name>Flyby Attack</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The blood hawk flies 6 squares and makes a Claw Rake at any points during that movement.</line>
+            <line>The blood hawk does not provoke <![CDATA[<i>opportunity attacks</i>]]> from the target of the attack when moving.</line>
+         </block>
+      </category>
+
+      <str>
+         <value>11</value>
+         <mod>+0 / +0</mod>
+      </str>
+      <con>
+         <value>10</value>
+         <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>16</value>
+         <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>2</value>
+         <mod>-4 / -4</mod>
+      </int>
+      <wis>
+         <value>14</value>
+         <mod>+2 / +2</mod>
+      </wis>
+      <cha>
+         <value>7</value>
+         <mod>-2 / -2</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>Blood hawks are aggressive hunters that use their razor-sharp claws to inflict grievous wounds</description>
+   </creature>
+
+   <creature>
       <title>Dire Rat</title>
       <level>0</level> <role>Skirmisher</role> <xp>80</xp>
       <size>Small</size> <origin>natural</origin> <type>beast</type>
-      
+
       <init>+4</init> <perception>+1</perception> <insight>+1</insight>
       <sense>low-light vision</sense>
-      
+
       <hp>21</hp> <bloodied>10</bloodied>
       <ac>14</ac> <fort>10</fort> <ref>12</ref> <will>11</will>
       <defmod>+2 vs. attacks triggered by movement</defmod>
       <speed>6</speed> <climb>3</climb>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Small and Evasive</name>
             <line>The dire rat has a +2 bonus to all defenses against attacks triggered by its movement.</line>
@@ -24,21 +85,21 @@
       </category>
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Bite</name> <type>mbasic</type>
             <keyword>Disease</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d6 + 2 damage, and additional 1d6 damage if no other enemies are adjacent to the dire rat.</line>
-            <line>The target must attempt a saving throw. On a failure, it contracts dire rat filth feaver (stage 1). If the attack was a critical hit, the target rolls the save twice and uses the lower result.</line>
+            <line>The target must attempt a saving throw. On a failure, it contracts dire rat filth fever (stage 1). If the attack was a critical hit, the target rolls the save twice and uses the lower result.</line>
          </block>
       </category>
-      
+
       <skill>
          <name>Stealth</name> <value>+7</value>
       </skill>
-      
+
       <str>
          <value>8</value> <mod>-1 / -1</mod>
       </str>
@@ -57,27 +118,27 @@
       <cha>
          <value>6</value> <mod>-2 / -2</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
    </creature>
-   
+
    <creature>
       <title>Horse, Charger</title>
       <level>1</level> <role>Brute</role> <xp>100</xp>
       <size>Large</size> <origin>natural</origin> <type>beast</type> <subtype>mount</subtype>
-      
+
       <init>+1</init> <perception>+0</perception> <insight>+0</insight>
       <sense>low-light vision</sense>
-      
+
       <hp>33</hp> <bloodied>16</bloodied>
       <ac>14</ac> <fort>14</fort> <ref>12</ref> <will>10</will>
       <speed>8</speed>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Charger</name>
             <keyword>Mount</keyword>
@@ -85,17 +146,17 @@
             <line>The charger's rider gains a +3 bonus to damage rolls on charge attacks.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Kick</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 damage.</line>
          </block>
-         
+
          <block>
             <name>Trample</name> <type>melee</type>
             <frequency>Encounter</frequency>
@@ -106,11 +167,11 @@
             <line><![CDATA[<i>Miss:</i>]]> Half damage if the target was already prone.</line>
          </block>
       </category>
-      
+
       <skill>
          <name>Athletics</name> <value>+9</value>
       </skill>
-      
+
       <str>
          <value>19</value> <mod>+4 / +4</mod>
       </str>
@@ -129,27 +190,27 @@
       <cha>
          <value>8</value> <mod>-1 / -1</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
    </creature>
-   
+
    <creature>
       <title>Horse, Riding</title>
       <level>1</level> <role>Skirmisher</role> <xp>100</xp>
       <size>Large</size> <origin>natural</origin> <type>beast</type> <subtype>mount</subtype>
-      
+
       <init>+2</init> <perception>+0</perception> <insight>+0</insight>
       <sense>low-light vision</sense>
-      
+
       <hp>28</hp> <bloodied>14</bloodied>
       <ac>15</ac> <fort>14</fort> <ref>13</ref> <will>10</will>
       <speed>9</speed>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Kick</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
@@ -157,10 +218,10 @@
             <line><![CDATA[<i>Hit:</i>]]> 1d6 + 4 damage.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Move Actions</category-name>
-         
+
          <block>
             <name>Nimble Mount</name>
             <keyword>Mount</keyword>
@@ -169,11 +230,11 @@
             <line><![CDATA[<i>Effect:</i>]]> The horse shifts 2 squares.</line>
          </block>
       </category>
-      
+
       <skill>
          <name>Endurance</name> <value>+8</value>
       </skill>
-      
+
       <str>
          <value>19</value> <mod>+4 / +4</mod>
       </str>
@@ -192,10 +253,10 @@
       <cha>
          <value>8</value> <mod>-1 / -1</mod>
       </cha>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
    </creature>
 
 </catalog>

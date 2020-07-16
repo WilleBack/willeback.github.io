@@ -785,6 +785,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <i>Source Power: </i> <xsl:value-of select="source" />
             </div>
          </xsl:if>
+         <xsl:if test="description">
+            <div id="description" class="line" style="font-family:MentorSansStd-Light;">
+               <xsl:value-of select="description" />
+            </div>
+         </xsl:if>
       </div>
    </div>
 
