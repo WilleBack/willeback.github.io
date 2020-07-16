@@ -801,6 +801,36 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div>
    </div>
 
+   <xsl:if test="affliction">
+      <div class="affliction">
+         <div class="afflictheader" style="background-color:#4E1126; width:100%; float:left; color:white; ">
+            <div id="affliction/title" style="font-family:DnDVecna; float:left; margin:0.3em; margin-bottom: 0.2em; margin-left:0.4em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10.6em);">
+               <xsl:value-of select="title"/>
+            </div>
+            <div id="typelevel" style="width: 13.3em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
+               <xsl:text>Lvl </xsl:text><xsl:value-of select="affliction/level"/><br/>
+               <xsl:value-of select="affliction/type" />
+            </div>
+         </div>
+         <div class="fluff" style="font-family:MentorSansStd-Light; font-style:italic;">
+            <xsl:value-of select="affliction/fluff" />
+         </div>
+         <xsl:for-each select="affliction/stage">
+            <div class="line">
+               <b><xsl:value-of select="name" /> </b><xsl:value-of select="text" />
+            </div>
+         </xsl:for-each>
+         <div class="line">
+            <b>Check: </b><xsl:value-of select="affliction/check/text" />
+            <xsl:for-each select="affliction/check/result">
+               <div class="line" style="padding-left:2.3em;">
+                  <i><xsl:value-of select="roll" /> </i><xsl:value-of select="text" />
+               </div>
+            </xsl:for-each>
+         </div>
+      </div>
+   </xsl:if>
+
 </xsl:template>
 
 <xsl:template name="createheader">
@@ -840,36 +870,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </xsl:if>
       </div>
    </div>
-
-   <xsl:if test="affliction">
-      <div class="affliction">
-         <div class="afflictheader" style="background-color:#4E1126; width:100%; float:left; color:white; ">
-            <div id="affliction/title" style="font-family:DnDVecna; float:left; margin:0.3em; margin-bottom: 0.2em; margin-left:0.4em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 10.6em);">
-               <xsl:value-of select="title"/>
-            </div>
-            <div id="typelevel" style="width: 13.3em; float:right; text-align:right; font-size: 0.8em; margin:0.5em; font-weight: bold;">
-               <xsl:text>Lvl </xsl:text><xsl:value-of select="affliction/level"/><br/>
-               <xsl:value-of select="affliction/type" />
-            </div>
-         </div>
-         <div class="fluff" style="font-family:MentorSansStd-Light; font-style:italic;">
-            <xsl:value-of select="affliction/fluff" />
-         </div>
-         <xsl:for-each select="affliction/stage">
-            <div class="line">
-               <b><xsl:value-of select="name" /> </b><xsl:value-of select="text" />
-            </div>
-         </xsl:for-each>
-         <div class="line">
-            <b>Check: </b><xsl:value-of select="affliction/check/text" />
-            <xsl:for-each select="affliction/check/result">
-               <div class="line" style="padding-left:2.3em;">
-                  <i><xsl:value-of select="roll" /> </i><xsl:value-of select="text" />
-               </div>
-            </xsl:for-each>
-         </div>
-      </div>
-   </xsl:if>
 
 </xsl:template>
 
