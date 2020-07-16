@@ -124,6 +124,43 @@
 
       <description>Dire rats are stealthy creatures that like to hunt in small packs, sneaking up on prey and ganging up on one creature at a time</description>
 
+      <affliction>
+         <title>Dire Rat Filth Fever</title>
+         <level>1</level> <type>Disease</type>
+         <fluff>Those afflicted with this disease waste away as they alternately suffer chills and hot flashes</fluff>
+         <stage>
+            <name>Stage 0:</name>
+            <text>The target recovers from the disease.</text>
+         </stage>
+         <stage>
+            <name>Stage 1:</name>
+            <text>The target loses a healing surge, and its maximum number of healing surges is reduced by 1.</text>
+         </stage>
+         <stage>
+            <name>Stage 2:</name>
+            <text>The target loses two healing surges, and its maximum number of healing surges is reduced by 2. The target also takes a -2 penalty to AC, Fortitude, and Reflex.</text>
+         </stage>
+         <stage>
+            <name>Stage 3:</name>
+            <text>The target loses all healing surges, cannot regain healing surges, and cannot regain hit points. The target also takes a -2 penalty to AC, Fortitude, and Reflex.</text>
+         </stage>
+         <check>
+            <text>While at Stage 1 or Stage 2, the target makes an Endurance check at the end of each extended rest.</text>
+            <result>
+               <roll>9 or lower:</roll>
+               <text>The stage of the disease increases by 1.</text>
+            </result>
+            <result>
+               <roll>10-13:</roll>
+               <text>No change.</text>
+            </result>
+            <result>
+               <roll>14 or higher:</roll>
+               <text>The stage of the disease decreases by 1.</text>
+            </result>
+         </check>
+      </affliction>
+
    </creature>
 
    <creature>
