@@ -176,15 +176,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </head>
       <body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
          <div class="container">
-            <xsl:apply-templates match="creature">
-               <xsl:sort select="title" />
-            </xsl:apply-templates>
+            <xsl:for-each select="creature">
+               <xsl:call-template name="creature" />
+            </xsl:for-each>
          </div> <!-- container -->
       </body>
    </html>
 </xsl:template>
 
-<xsl:template match="creature">
+<xsl:template name="creature">
    <div class="creature">
       <xsl:call-template name="createheader">
          <xsl:with-param name="bgcolor">#4e5c2e</xsl:with-param>
