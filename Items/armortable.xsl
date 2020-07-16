@@ -113,7 +113,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			@font-face {
 				font-family: 'MentorSansStd';
-				src: url('../../font/MentorSansStd.otf') format('opentype');
+				src: url('../font/MentorSansStd.otf') format('opentype');
 				font-weight: normal;
 				font-style: normal;
 
@@ -121,7 +121,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			@font-face {
 				font-family: 'MentorSansStd';
-				src: url('../../font/MentorSansStd-Bold.otf') format('opentype');
+				src: url('../font/MentorSansStd-Bold.otf') format('opentype');
 				font-weight: bold;
 				font-style: normal;
 
@@ -129,7 +129,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			@font-face {
 				font-family: 'DnDLolth';
-				src: url('../../font/DnDLolth.otf') format('opentype');
+				src: url('../font/DnDLolth.otf') format('opentype');
 				font-weight: normal;
 				font-style: normal;
 
@@ -137,7 +137,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			@font-face {
 				font-family: 'MentorSansStd-Light';
-				src: url('../../font/MentorSansStd-Light.otf') format('opentype');
+				src: url('../font/MentorSansStd-Light.otf') format('opentype');
 				font-weight: lighter;
 				font-style: normal;
 
@@ -145,7 +145,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			@font-face {
 				font-family: 'MentorSansStd-Light';
-				src: url('../../font/MentorSansStd-LightIta.otf') format('opentype');
+				src: url('../font/MentorSansStd-LightIta.otf') format('opentype');
 				font-weight: lighter;
 				font-style: italic;
 

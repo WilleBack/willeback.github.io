@@ -109,6 +109,45 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				margin-left: 0.5em;
 			}
 
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../font/MentorSansStd.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd';
+				src: url('../font/MentorSansStd-Bold.otf') format('opentype');
+				font-weight: bold;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'DnDLolth';
+				src: url('../font/DnDLolth.otf') format('opentype');
+				font-weight: normal;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd-Light';
+				src: url('../font/MentorSansStd-Light.otf') format('opentype');
+				font-weight: lighter;
+				font-style: normal;
+
+			}
+
+			@font-face {
+				font-family: 'MentorSansStd-Light';
+				src: url('../font/MentorSansStd-LightIta.otf') format('opentype');
+				font-weight: lighter;
+				font-style: italic;
+
+			}
 
 			@media only screen and (min-width:600px) {
 				.container {
