@@ -20,7 +20,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             }
 
             .affliction {
-               background:linear-gradient(to right, #fbecf0, #fefcfd);
+               background:linear-gradient(to right, #e3ddde, #ece8e9);
                margin:0.2cm;
                width:98%;
                float:left;
@@ -820,7 +820,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:value-of select="affliction/type" />
             </div>
          </div>
-         <div class="line" style="background:linear-gradient(to right, #D6D6C2, #ebebe0); font-family:MentorSansStd-Light; font-style:italic;">
+         <div class="line" style="background:linear-gradient(to right, #ae9da0, #bfb2b5); font-family:MentorSansStd-Light; font-style:italic;">
             <xsl:value-of select="affliction/fluff" />
          </div>
          <xsl:for-each select="affliction/stage">
