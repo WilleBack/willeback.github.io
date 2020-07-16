@@ -857,14 +857,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
          <xsl:for-each select="stage">
             <div class="line">
-               <b><xsl:value-of select="name" /> </b><xsl:value-select="text" />
+               <b><xsl:value-of select="name" /> </b><xsl:value-of select="text" />
             </div>
          </xsl:for-each>
          <div class="line">
             <b>Check: </b><xsl:value-of select="check/text" />
             <xsl:for-each select="check/result">
                <div class="line" style="padding-left:2.3em;">
-                  <i><xsl:value-of select="roll" /> <xsl:value-of select="text" />
+                  <i><xsl:value-of select="roll" /> </i><xsl:value-of select="text" />
                </div>
             </xsl:for-each>
          </div>
