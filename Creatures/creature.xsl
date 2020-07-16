@@ -825,14 +825,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
          <xsl:for-each select="affliction/stage">
             <div class="line">
-               <b><xsl:value-of select="name" /> </b><xsl:value-of select="text" />
+               <b><xsl:value-of select="name" /></b><xsl:text> </xsl:text><xsl:value-of select="text" />
             </div>
          </xsl:for-each>
          <div class="line">
             <b>Check: </b><xsl:value-of select="affliction/check/text" />
             <xsl:for-each select="affliction/check/result">
                <div class="line" style="padding-left:2.3em;">
-                  <i><xsl:value-of select="roll" /> </i><xsl:value-of select="text" />
+                  <i><xsl:value-of select="roll" /></i><xsl:text> </xsl:text><xsl:value-of select="text" />
                </div>
             </xsl:for-each>
          </div>
