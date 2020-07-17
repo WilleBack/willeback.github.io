@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
-   
+
    <creature>
       <title>Abyssal Maw</title>
       <level>2</level> <role>Brute</role> <xp>125</xp>
       <size>Medium</size> <origin>elemental</origin> <type>humanoid</type> <subtype>demon</subtype>
-      
+
       <init>+1</init> <perception>+2</perception> <insight>+2</insight>
       <sense>darkvision</sense>
-      
+
       <hp>36</hp> <bloodied>18</bloodied>
       <ac>14</ac> <fort>13</fort> <ref>11</ref> <will>12</will>
       <speed>6</speed>
-      
+
       <resist>
          <type>variable resistance</type> <value>see</value>
       </resist>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Snapping Jaws</name> <type>aura</type>
             <frequency>Aura</frequency> <note>1</note>
             <line>Non-demons in the aura grant combat advantage.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Bite</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
@@ -38,20 +38,20 @@
             <line><![CDATA[<i>Hit:</i>]]> 1d12 + 3 damage, or 1d12 + 8 damage if the target is bloodied.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Move Actions</category-name>
-         
+
          <block>
             <name>Ravenous Advance</name>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Effect:</i>]]> The maw shifts 5 squares to a space adjacent to the nearest bloodied enemy.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Triggered Actions</category-name>
-         
+
          <block>
             <name>Variable Resistance</name>
             <frequency>Encounter</frequency>
@@ -59,10 +59,10 @@
             <line><![CDATA[<i>Effect:</i>]]> The demon gains resist 10 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
          </block>
       </category>
-      
+
       <alignment>chaotic evil</alignment>
       <language>understands Abyssal</language>
-      
+
       <str>
          <value>17</value>
          <mod>+3 / +4</mod>
@@ -88,32 +88,32 @@
          <mod>-2 / -1</mod>
       </cha>
    </creature>
-      
+
    <creature>
       <title>Balor</title>
       <level>27</level> <rolestrength>Elite</rolestrength> <role>Brute</role> <xp>22 000</xp>
       <size>Huge</size> <origin>elemental</origin> <type>humanoid</type> <subtype>demon</subtype>
-      
+
       <init>+20</init>
       <perception>+27</perception> <insight>+27</insight>
       <sense>blindsight 6</sense> <sense>darkvision</sense>
-      
+
       <hp>622</hp> <bloodied>311</bloodied>
       <ac>40</ac> <fort>39</fort> <ref>36</ref> <will>38</will>
       <speed>8</speed> <fly>12 (clumsy)</fly>
-      
+
       <resist>
          <type>fire</type> <value>20</value>
       </resist>
       <resist>
          <type>variable resistance</type> <value>see</value>
       </resist>
-      
+
       <saves>+2</saves> <ap>1</ap>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Flaming Body</name> <type>aura</type>
             <keyword>Fire</keyword>
@@ -123,7 +123,7 @@
       </category>
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Lightning Sword</name> <type>mbasic</type>
             <keyword>Lightning</keyword> <keyword>Weapon</keyword>
@@ -148,7 +148,7 @@
          <block>
             <name>Beheading Blade</name> <type>close</type>
             <keyword>Lightning</keyword> <keyword>Weapon</keyword>
-            <recharge>when first bloodied</recharge>
+            <frequency>Recharge</frequency> <note>when first bloodied</note>
             <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (enemies in the blast); +32 vs. AC</line>
             <line indent="1">The attack can score a critical hit on a roll of 15 to 20</line>
             <line><![CDATA[<i>Hit:</i>]]> 6d10 + 11 (crit 5d10 + 71) lightning damage.</line>
@@ -156,7 +156,7 @@
       </category>
       <category>
          <category-name>Triggered Actions</category-name>
-         
+
          <block>
             <name>Death Burst</name> <type>close</type>
             <keyword>Elemental</keyword> <keyword>Fire</keyword>
@@ -174,7 +174,7 @@
             <line><![CDATA[<i>Effect:</i>]]> The demon gains resist 20 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
          </block>
       </category>
-      
+
       <skill>
          <name>Bluff</name> <value>+20</value>
       </skill>
@@ -187,7 +187,7 @@
       <skill>
          <name>Perception</name> <value>+27</value>
       </skill>
-      
+
       <str>
          <value>30</value> <mod>+23 / +10</mod>
       </str>
@@ -206,50 +206,50 @@
       <cha>
          <value>14</value> <mod>+15 / +2</mod>
       </cha>
-      
+
       <alignment>chaotic evil</alignment>
       <language>Abyssal</language> <language>Common</language>
-      
+
       <equipment>lightning sword</equipment>
       <equipment>flaming whip</equipment>
    </creature>
-   
+
    <creature>
       <title>Evistro (Carnage Demon)</title>
       <level>6</level> <role>brute</role> <xp>250</xp>
       <size>Medium</size> <origin>elemental</origin> <type>magical beast</type> <subtype>demon</subtype>
-      
+
       <init>+4</init> <perception>+4</perception> <insight>+4</insight>
       <sense>low-light vision</sense>
       <sense>sense blood</sense>
-      
+
       <hp>60</hp> <bloodied>30</bloodied>
       <ac>18</ac> <fort>16</fort>  <ref>14</ref> <will>15</will>
       <speed>6</speed>
-      
+
       <resist>
          <type>variable resistance</type> <value>see</value>
       </resist>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Carnage</name>
             <line>The carnage demon gains a +1 bonus to melee attack rolls when at least ally is adjacent to its target.</line>
             <line>This increases to +3 when at least one other carnage demon is adjacent to its target.</line>
          </block>
-         
+
          <block>
             <name>Sense Blood</name>
             <line>Bloodied creatures do not benefit from concealment against the carnage demon, and a bloodied creature with total concealment only gains the benefits of concealment against the carnage demon.</line>
             <line>The carnage demon also knows the exact location of any bloodied creature within 2 squares of it.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Rending Claws</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
@@ -257,10 +257,10 @@
             <line><![CDATA[<i>Hit:</i>]]> 2d6 + 5 damage.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Minor Actions</category-name>
-         
+
          <block>
             <name>Bloodthirsty Bite</name> <type>melee</type>
             <frequency>At-Will</frequency>
@@ -269,10 +269,10 @@
             <line><![CDATA[<i>Miss:</i>]]> 3 damage.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Triggered Actions</category-name>
-         
+
          <block>
             <name>Variable Resistance</name>
             <frequency>Encounter</frequency>
@@ -280,10 +280,10 @@
             <line><![CDATA[<i>Effect:</i>]]> The demon gains resist 10 to the triggering damage type or types until the end of the encounter, or until it uses Variable Resistance again.</line>
          </block>
       </category>
-      
+
       <alignment>chaotic evil</alignment>
       <language>Abyssal</language>
-      
+
       <str>
          <value>21</value>
          <mod>+5 / +8</mod>
@@ -309,5 +309,5 @@
          <mod>-2 / +1</mod>
       </cha>
    </creature>
-   
+
 </catalog>
