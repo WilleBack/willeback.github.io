@@ -682,6 +682,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:when test="type='rbasic'">
                            <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>r</xsl:text></div>
                         </xsl:when>
+                        <xsl:when test="type='mrbasic'">
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>m/r</xsl:text></div>
+                        </xsl:when>
+                        <xsl:when test="type='mr'">
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>M/R</xsl:text></div>
+                        </xsl:when>
                         <xsl:when test="type='close'">
                            <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>C</xsl:text></div>
                         </xsl:when>
