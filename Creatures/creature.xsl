@@ -683,7 +683,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                            <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><xsl:text>r</xsl:text></div>
                         </xsl:when>
                         <xsl:when test="type='mrbasic'">
-                           <div style="font-family: 'game_icons';font-size: 0.78em; width:4em; float: left; text-align: center;"><xsl:text>m/r</xsl:text></div>
+                           <div style="font-family: 'game_icons';font-size: 0.78em; width:4.2em; float: left; text-align: center;"><xsl:text>m/r</xsl:text></div>
                         </xsl:when>
                         <xsl:when test="type='mr'">
                            <div style="font-family: 'game_icons';font-size: 0.78em; width:3em; float: left; text-align: center;"><xsl:text>M / R</xsl:text></div>
@@ -717,7 +717,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                      <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
                   </div>
-                  <div style="float:left; max-width:30em; "><b>Recharge </b><span style="font-family:'game_icons'; font-size:0.78em;"><xsl:value-of select="recharge" /></span></div>
+                  <div style="float:left; max-width:30em; "><b>Recharge </b><span style="font-family:'game_icons'; font-size:0.82em;"><xsl:value-of select="recharge" /></span></div>
                </xsl:if>
             </div>
             <xsl:for-each select="line">
