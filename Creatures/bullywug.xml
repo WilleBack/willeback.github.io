@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Bullywug Twitcher</title>
+      <level>1</level> <role>Skirmisher</role> <xp>100</xp>
+      <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>aquatic</subtype>
+
+      <init>+6</init> <perception>+2</perception> <insight>+2</insight>
+
+      <hp>25</hp> <bloodied>12</bloodied>
+      <ac>14</ac> <fort>12</fort> <ref>14</ref> <will>13</will>
+      <speed>6</speed> <swim>4</swim>
+      <speedmod>Swamp Walk</speedmod>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Rancid Air</name> <type>aura</type>
+            <keyword>Poison</keyword>
+            <frequency>Aura</frequency> <note>2</note>
+            <line>Each enemy that spends a healing surge within the aura is weakened until the start of the acting creature's next turn.</line>
+         </block>
+
+         <block>
+            <name>Aquatic</name>
+            <line>The bullywug can breathe underwater.</line>
+            <line>In aquatic combat, the bullywug gains a +2 bonus to attack rolls against nonaquatic creatures.</line>
+         </block>
+
+         <block>
+            <name>Nature's Release</name>
+            <keyword>Healing</keyword>
+            <line>Any attacker that scores a critical hit against the bullywug regains 3 hit points.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Spear</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 4 damage.</line>
+         </block>
+
+         <block>
+            <name>Javelin</name> <type>rbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 10/20 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 4 damage.</line>
+         </block>
+
+         <block>
+            <name>Spasmodic Leap</name> <type>melee</type>
+            <keyword>Weapon</keyword>
+            <recharge>4 5 6</recharge>
+            <line><![CDATA[<i>Effect:</i>]]> The twitcher is no longer marked, and it jumps 3 squares. This movement counts as a shift.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + 4 damage, and an additional +1d6 damage if the twitcher has combat advantage against the target.</line>
+            <line>The target takes a -2 penalty to attack rolls against the twitcher until the end of the twitcher's next turn.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Athletics</name> <value>+7</value>
+      </skill>
+
+      <str>
+         <value>14</value> <mod>+2 / +2</mod>
+      </str>
+      <con>
+         <value>10</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>16</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>10</value> <mod>+0 / +0</mod>
+      </int>
+      <wis>
+         <value>14</value> <mod>+2 / +2</mod>
+      </wis>
+      <cha>
+         <value>8/value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>chaotic evil</alignment>
+      <language>Primordial</language>
+
+      <equipment>javelin x4</equipment> <equipment>spear</equipment>
+
+      <description>This frog-like humanoid spasms around the battlefield erratically, making it hard to know where its next attack will come from</description>
+   </creature>
