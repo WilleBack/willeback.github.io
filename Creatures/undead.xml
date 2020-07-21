@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Crawling Claw</title>
+      <level>1</level> <rolestrength>Minion</rolestrength> <role>minion</role> <xp>25</xp>
+      <size>Tiny</size> <origin>natural</origin> <type>animate</type> <subtype>undead</subtype>
+
+      <init>+5</init> <perception>+0</perception> <insight>+0</insight>
+      <sense>tremorsense 5</sense>
+
+      <hp>2</hp> <bloodied>any damage bloodies a minion</bloodied>
+      <ac>15</ac> <fort>12</fort> <ref>13</ref> <will>10</will>
+      <speed>8</speed> <climb>4</climb>
+
+      <immune>disease</immune> <immune>poison</immune>
+      <resist>
+         <type>necrotic</type> <value>5</value>
+      </resist>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Hampering Claws</name>
+            <line>A creature that starts its turn adjacent to at least three crawling claws is slowed until the start of its next turn.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Jumping Claw</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Move Actions</category-name>
+
+         <block>
+            <name>Digit Slide</name>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The crawling claw shifts up to 8 squares.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>3</value> <mod>-4 / -4</mod>
+      </str>
+      <con>
+         <value>13</value> <mod>+1 / +1</mod>
+      </con>
+      <dex>
+         <value>16</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>3</value> <mod>-3 / -4</mod>
+      </int>
+      <wis>
+         <value>10</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>6</value> <mod>-2 / -2</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>A desiccated claw, crawling along surprisingly quickly on its sharp digits</description>
+   </creature>
+</catalog>
