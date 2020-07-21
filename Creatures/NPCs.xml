@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Dwarf Caravan Guard</title>
+      <level>1</level> <role>Soldier</role> <xp>100</xp>
+      <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>dwarf</subtype>
+
+      <init>+2</init> <perception>+6</perception> <insight>+1</insight>
+      <sense>darkvision</sense>
+
+      <hp>31</hp> <bloodied>15</bloodied>
+      <ac>17</ac> <fort>15</fort> <ref>13</ref> <will>12</will>
+      <speed>5</speed>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Warhammer</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d10 + 3 damage.</line>
+         </block>
+
+         <block>
+            <name>Skullcracker</name> <type>melee</type>
+            <keyword>Martial</keyword> <keyword>Weapon</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d10 + 3 damage.</line>
+            <line><![CDATA[<i>Miss:</i>]]> Half damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Free Actions</category-name>
+
+         <block>
+            <name>Focused Guard</name>
+            <keyword>Martial</keyword>
+            <frequency>At-Will</frequency> <note>1 / round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The caravan guard designates one adjacent ally it focuses on guarding until the end of the encounter or until this power is used again.</line>
+            <line>The caravan guard gains 4 temporary hit points if the designated ally starts his or her turn adjacent to the caravan guard.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Triggered Actions</category-name>
+
+         <block>
+            <name>Shield Bash</name> <type>melee</type>
+            <keyword>Martial</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (opportunity interrupt):</i>]]> An enemy makes an attack against the ally the caravan guard is focused on guarding</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (the triggering enemy); +5 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage, and the target takes a -3 penalty attack rolls on the triggering attack.</line>
+         </block>
+      </category>
+
+      <str>
+         <value>13</value> <mod>+1 / +1</mod>
+      </str>
+      <con>
+         <value>16</value> <mod>+3 / +3</mod>
+      </con>
+      <dex>
+         <value>13</value> <mod>+1 / +1</mod>
+      </dex>
+      <int>
+         <value>9</value> <mod>-1 / -1</mod>
+      </int>
+      <wis>
+         <value>13</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>8</value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>Common</language> <language>Dwarven</language>
+
+      <equipment>warhammer</equipment> <equipment>scale armor</equipment> <equipment>buckler</equipment>
+
+      <description>These stout dwarves are often hired for their defensive prowess</description>
+   </creature>
+   
+   <creature>
+      <title>Flailing Guard</title>
+      <level>1</level> <role>Soldier</role> <xp>100</xp>
+      <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>human</subtype>
+
+      <init>+0</init> <perception>-1</perception> <insight>-1</insight>
+
+      <hp>29</hp> <bloodied>14</bloodied>
+      <ac>18</ac> <fort>14</fort> <ref>13</ref> <will>13</will>
+      <speed>5</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Flailing Defense</name> <type>aura</type>
+            <keyword>Martial</keyword> <keyword>Weapon</keyword>
+            <frequency>Aura</frequency> <note>1</note>
+            <line>When an enemy adjacent to the flailing guard misses either the guard or his or her ally with an attack, the enemy takes 4 damage and the flailing guard is dazed until the start of his or her next turn.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Longsword</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 3 damage.</line>
+         </block>
+
+         <block>
+            <name>Furious Slash</name> <type>melee</type>
+            <keyword>Martial</keyword> <keyword>Weapon</keyword>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 3 damage, and the guard can push the target 1 square.</line>
+            <line><![CDATA[<i>Effect:</i>]]> One ally adjacent to the guard can shift 1 square.</line>
+         </block>
+
+         <block>
+            <name>All In</name> <type>melee</type>
+            <keyword>Martial</keyword> <keyword>Weapon</keyword>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +9 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + 3 damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The flailing guard falls prone and cannot stand up before the start of his or her next turn.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Athletics</name> <value>+8</value>
+      </skill>
+      <skill>
+         <name>Nature</name> <value>+4</value>
+      </skill>
+
+      <str>
+         <value>16</value> <mod>+3 / +3</mod>
+      </str>
+      <con>
+         <value>14</value> <mod>+2 / +2</mod>
+      </con>
+      <dex>
+         <value>10</value> <mod>+0 / +0</mod>
+      </dex>
+      <int>
+         <value>9</value> <mod>-1 / -1</mod>
+      </int>
+      <wis>
+         <value>9</value> <mod>-1 / -1</mod>
+      </wis>
+      <cha>
+         <value>12</value> <mod>+1 / +1</mod>
+      </cha>
+
+      <alignment>good</alignment>
+      <language>Common</language>
+
+      <equipment>longsword</equipment> <equipment>scale armor</equipment>
+
+      <description>This bumbling human guard means good</description>
+   </creature>
+</catalog>
