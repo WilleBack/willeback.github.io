@@ -3,6 +3,184 @@
 <catalog>
 
    <creature>
+      <title>Ankheg</title>
+      <level>3</level> <rolestrenght>Elite</rolestrength> <role>Brute</role> <xp>300</xp>
+      <size>Large</size> <origin>natural</origin> <type>beast</type>
+
+      <init>+7</init> <perception>+8</perception> <insight>+3</insight>
+      <sense>tremorsense 5</sense>
+
+      <hp>70</hp> <bloodied>35</bloodied>
+      <ac>16</ac> <fort>14</fort> <ref>15</ref> <will>13</will>
+      <defmod>+2 vs. escape attempts</defmod>
+      <speed>8</speed> <burrow>4 (tunneling)</burrow>
+      <speedmod>see Mandible Carry</speedmod>
+
+      <resist>
+         <type>acid</type> <value>5</value>
+      </resist>
+
+      <saves>+2</saves>
+      <ap>1</ap>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Mandible Carry</name>
+            <line>When an ankheg grabs a Medium size or smaller creature, it pulls the creature into its space.</line>
+            <line>An ankheg can move at normal speed while grabbing a Medium size or smaller creature, sliding the grabbed creature with it. It does not need to make a check or attack roll to do this, and its movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> from the grabbed creature.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Claw</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 5 damage.</line>
+         </block>
+
+         <block>
+            <name>Mandible Grab</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Requirement:</i>]]> The ankheg does not have a creature grabbed.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +8 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 5 damage and the target is grabbed (until escape). See also Mandible Carry.</line>
+         </block>
+
+         <block>
+            <name>Acid Spray</name> <type>close</type>
+            <keyword>Acid</keyword>
+            <frequency>Recharge</frequency> <note>when first bloodied</note>
+            <line><![CDATA[<i>Special:</i>]]> If the ankheg has a creature grabbed, it also targets that creature.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (each creature in the blast); +6 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 3 acid damage, and the target is covered by acid (save ends).</line>
+            <line>While covered, a target is slowed and takes ongoing 5 acid damage.</line>
+            <line><![CDATA[<i>Miss:</i>]]> 5 acid damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Minor Actions</category-name>
+
+         <block>
+            <name>Gnaw and Scuttle</name> <type>melee</type>
+            <keyword>Acid</keyword>
+            <frequency>At-Will</frequency> <note>1 / round</note>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one grabbed creature); +6 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage and ongoing 5 acid damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The ankheg shifts 2 squares.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Stealth</name> <value>+11</value>
+      </skill>
+
+      <str>
+         <value>17</value> <mod>+3 / +4</mod>
+      </str>
+      <con>
+         <value>15</value> <mod>+2 / +3</mod>
+      </con>
+      <dex>
+         <value>18</value> <mod>+4 / +5</mod>
+      </dex>
+      <int>
+         <value>2</value> <mod>-4 / -3</mod>
+      </int>
+      <wis>
+         <value>15</value> <mod>+2 / +3</mod>
+      </wis>
+      <cha>
+         <value>4</value> <mod>-3 / -2</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>Loathsome insects with a taste for humanoid prey, ankhegs burst from hiding to seize the unwary in their great mandibles; might be detected by the faint whiff of acid</description>
+   </creature>
+
+
+   <creature>
+      <title>Ankheg Broodling</title>
+      <level>2</level> <rolestrength>Minion</rolestrength> <role>Brute</role> <xp>30</xp>
+      <size>Small</size> <origin>natural</origin> <type>beast</type>
+
+      <init>+4</init> <perception>+2</perception> <insight>+2</insight>
+      <sense>tremorsense 5</sense>
+
+      <hp>3</hp> <bloodied>any damage bloodies a minion</bloodied>
+      <ac>15</ac> <fort>13</fort> <ref>14</ref> <will>12</will>
+      <speed>6</speed> <burrow>2 (tunneling)</burrow>
+
+      <resist>
+         <type>acid</type> <value>5</value>
+      </resist>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Brood Swarm</name>
+            <line>The broodling gains a +4 bonus to attack rolls against creatures that are grabbed by any ankheg.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Claw</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage.</line>
+         </block>
+
+         <block>
+            <name>Mandibles</name> <type>melee</type>
+            <keyword>Acid</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage and 3 acid damage.</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]> Each creature adjacent to the target takes 3 acid damage.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Stealth</name> <value>+9</value>
+      </skill>
+
+      <str>
+         <value>10</value> <mod>+0 / +1</mod>
+      </str>
+      <con>
+         <value>13</value> <mod>+1 / +2</mod>
+      </con>
+      <dex>
+         <value>16</value> <mod>+3 / +4</mod>
+      </dex>
+      <int>
+         <value>1</value> <mod>-5 / -4</mod>
+      </int>
+      <wis>
+         <value>12</value> <mod>+1 / +2</mod>
+      </wis>
+      <cha>
+         <value>2</value> <mod>-4 / -3</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>Ankheg broodlings are rarely encountered outside of their nest, and prefers to remain in hiding until an adult ankheg brings a victim towards it</description>
+   </creature>
+
+   <creature>
       <title>Centipede Swarm</title>
       <level>2</level> <role>brute</role> <xp>125</xp>
       <size>Medium</size> <origin>natural</origin> <type>beast</type> <subtype>swarm</subtype>
