@@ -234,6 +234,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <xsl:if test="climb">
                <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" />
             </xsl:if>
+            <xsl:if test="burrow">
+               <xsl:text>, </xsl:text> <i>burrow&#160;</i> <xsl:value-of select="burrow" />
+            </xsl:if>
             <xsl:if test="swim">
                <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
             </xsl:if>
