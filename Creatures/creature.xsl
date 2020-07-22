@@ -382,6 +382,7 @@
                      </xsl:if>
                      <xsl:if test="burrow">
                         <xsl:text>, </xsl:text> <i>burrow&#160;</i> <xsl:value-of select="burrow" />
+                     </xsl:if>
                      <xsl:if test="swim">
                         <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
                      </xsl:if>
