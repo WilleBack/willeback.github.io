@@ -2,6 +2,93 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Bullywuck Mucker</title>
+      <level>1</level> <role>Brute</role> <xp>100</xp>
+      <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>aquatic</subtype>
+
+      <init>+2</init> <perception>+0</perception> <insight>+0</insight>
+
+      <hp>37</hp> <bloodied>18</bloodied>
+      <ac>14</ac> <fort>14</fort> <ref>12</ref> <will>10</will>
+      <speed>6</speed> <swim>4</swim>
+      <speedmod>Swamp Walk</speedmod>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Rancid Air</name> <type>aura</type>
+            <keyword>Poison</keyword>
+            <frequency>Aura</frequency> <note>2</note>
+            <line>Each enemy that spends a healing surge within the aura is weakened until the start of the acting creature's next turn.</line>
+         </block>
+
+         <block>
+            <name>Aquatic</name>
+            <line>The bullywug can breathe underwater.</line>
+            <line>In aquatic combat, the bullywug gains a +2 bonus to attack rolls against nonaquatic creatures.</line>
+         </block>
+
+         <block>
+            <name>Nature's Release</name>
+            <keyword>Healing</keyword>
+            <line>Any attacker that scores a critical hit against the bullywug regains 3 hit points.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Spear</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]>1d8 + 4 damage, plus 1d8 extra damage against a prone target.</line>
+         </block>
+
+         <block>
+            <name>Bullywug Rush</name> <type>melee</type>
+            <recharge>5 6</recharge>
+            <line><![CDATA[<i>Requirement:</i>]]> The mucker must charge and make the following attack in place of a <![CDATA[<i>melee basic attack</i>]]>.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 3d6 + 4 damage, plus 1d8 extra damage against a prone target, and the target falls prone.</line>
+            <line><![CDATA[<i>Miss:</i>]]> The mucker takes 3 damage and falls prone.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Athletics</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>16</value> <mod>+3 / +3</mod>
+      </str>
+      <con>
+         <value>14</value> <mod>+2 / +2</mod>
+      </con>
+      <dex>
+         <value>14</value> <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>6</value> <mod>-2 / -2</mod>
+      </int>
+      <wis>
+         <value>11</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>8</value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>chaotic evil</alignment>
+      <language>primordial</language>
+
+      <equipment>spear</equipment> <equipment>leather armor</equipment>
+
+      <description>Strong and stout, a bullywug mucker leaps into combat to knock foes prone</description>
+   </creature>
+   
+   <creature>
       <title>Bullywug Twitcher</title>
       <level>1</level> <role>Skirmisher</role> <xp>100</xp>
       <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>aquatic</subtype>
@@ -9,7 +96,7 @@
       <init>+6</init> <perception>+2</perception> <insight>+2</insight>
 
       <hp>25</hp> <bloodied>12</bloodied>
-      <ac>14</ac> <fort>12</fort> <ref>14</ref> <will>13</will>
+      <ac>15</ac> <fort>12</fort> <ref>14</ref> <will>13</will>
       <speed>6</speed> <swim>4</swim>
       <speedmod>Swamp Walk</speedmod>
 
