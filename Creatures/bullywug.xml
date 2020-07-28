@@ -2,6 +2,216 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Bullywug Champion</title>
+      <level>1</level> <rolestrength>Elite</rolestrength> <role>Soldier</role> <xp>200</xp>
+      <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>aquatic</subtype>
+
+      <init>+4</init> <perception>+0</perception> <insight>+0</insight>
+
+      <hp>58</hp> <bloodied>29</bloodied>
+      <ac>17</ac> <fort>15</fort> <ref>14</ref> <will>12</will>
+      <speed>6</speed> <swim>4</swim>
+      <speedmod>Swamp Walk</speedmod>
+
+      <saves>+2</saves>
+      <ap>1</ap>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Rancid Air</name> <type>aura</type>
+            <keyword>Poison</keyword>
+            <frequency>Aura</frequency> <note>2</note>
+            <line>Each enemy that spends a healing surge within the aura is weakened until the start of the acting creature's next turn.</line>
+         </block>
+
+         <block>
+            <name>Aquatic</name>
+            <line>The bullywug can breathe underwater.</line>
+            <line>In aquatic combat, the bullywug gains a +2 bonus to attack rolls against nonaquatic creatures.</line>
+         </block>
+
+         <block>
+            <name>Nature's Release</name>
+            <keyword>Healing</keyword>
+            <line>Any attacker that scores a critical hit against the bullywug regains 4 hit points.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Spear</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 4 damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The target is marked until the end of the champion's next turn.</line>
+         </block>
+
+         <block>
+            <name>Crossbow</name> <type>rbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency> <note>Load Minor</note>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 15/30 (one creature); +4 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 2 damage.</line>
+         </block>
+
+         <block>
+            <name>Champion's Charge</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The champion charges and makes the following attack in place of a <![CDATA[<i>melee basic attack</i>]]>.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 5 damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The target is marked until the end of the champion's next turn.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Minor Actions</category-name>
+
+         <block>
+            <name>Taunting Croak</name> <type>close</type>
+            <keyword>Elemental</keyword>
+            <frequency>Recharge</frequency> <note>when the champion spends an action point</note>
+            <line><![CDATA[<i>Attack:</i>]]> Close burst 5 (each enemy in the burst); +4 vs. Will</line>
+            <line><![CDATA[<i>Hit:</i>]]> The target is pulled 4 squares.</line>
+            <line><![CDATA[<i>Miss:</i>]]> The target is pulled 1 square.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Triggered Actions</category-name>
+
+         <block>
+            <name>Interceding Strike</name> <type>melee</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (Immediate Interrupt):</i>]]> A creature marked by the champion makes an attack that doesn't include the champion as a target</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (the triggering enemy); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 4 damage.</line>
+            <line><![CDATA[<i>Miss:</i>]]> 5 damage.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Athletics</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>17</value> <mod>+3 / +3</mod>
+      </str>
+      <con>
+         <value>14</value> <mod>+2 / +2</mod>
+      </con>
+      <dex>
+         <value>14</value> <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>6</value> <mod>-2 / -2</mod>
+      </int>
+      <wis>
+         <value>10</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>8</value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>chaotic neutral</alignment>
+      <language>Primordial</language>
+
+      <equipment>leather armor</equipment> <equipment>spear</equipment> <equipment>crossbow with 10 bolts</equipment>
+
+      <description>A rare breed, a bullywug champion stands a head taller than most bullywugs</description>
+   </creature>
+
+   <creature>
+      <title>Bullywug Croaker</title>
+      <level>2</level> <rolestrength>Minion</rolestrength> <role>Brute</role> <xp>31</xp>
+      <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>aquatic</subtype>
+
+      <init>+3</init> <perception>+1</perception> <insight>+1</insight>
+
+      <hp>3</hp> <bloodied>any damage bloodies a minion</bloodied>
+      <ac>15</ac> <fort>14</fort> <ref>14</ref> <will>12</will>
+      <speed>6</speed> <swim>4</swim>
+      <speedmod>Swamp Walk</speedmod>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Rancid Air</name> <type>aura</type>
+            <keyword>Poison</keyword>
+            <frequency>Aura</frequency> <note>2</note>
+            <line>Each enemy that spends a healing surge within the aura is weakened until the start of the acting creature's next turn.</line>
+         </block>
+
+         <block>
+            <name>Aquatic</name>
+            <line>The bullywug can breathe underwater.</line>
+            <line>In aquatic combat, the bullywug gains a +2 bonus to attack rolls against nonaquatic creatures.</line>
+         </block>
+
+         <block>
+            <name>Nature's Release</name>
+            <keyword>Healing</keyword>
+            <line>Any attacker that scores a critical hit against the bullywug regains 3 hit points.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Claw</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 6 damage.</line>
+         </block>
+
+         <block>
+            <name>Foul Croak</name> <type>close</type>
+            <keyword>Poison</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 2 (one creature); +6 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 5 poison damage.</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]>The target grants combat advantage (save ends).</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Athletics</name> <value>+6</value>
+      </skill>
+
+      <str>
+         <value>10</value> <mod>+0 / +1</mod>
+      </str>
+      <con>
+         <value>14</value> <mod>+2 / +3</mod>
+      </con>
+      <dex>
+         <value>13</value> <mod>+1 / +2</mod>
+      </dex>
+      <int>
+         <value>6</value> <mod>-2 / -1</mod>
+      </int>
+      <wis>
+         <value>10</value> <mod>+0 / +1</mod>
+      </wis>
+      <cha>
+         <value>5</value> <mod>-3 / -2</mod>
+      </cha>
+
+      <alignment>chaotic evil</alignment>
+      <language>Primordial</language>
+
+      <description>Weak and flabby, a croaker belches foul gas in loud croaks</description>
+   </creature>
+
+   <creature>
       <title>Bullywuck Mucker</title>
       <level>1</level> <role>Brute</role> <xp>100</xp>
       <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>aquatic</subtype>
@@ -119,7 +329,7 @@
          <block>
             <name>Nature's Release</name>
             <keyword>Healing</keyword>
-            <line>Any attacker that scores a critical hit against the bullywug regains 3 hit points.</line>
+            <line>Any attacker that scores a critical hit against the bullywug regains 5 hit points.</line>
          </block>
       </category>
 
@@ -127,7 +337,7 @@
          <category-name>Standard Actions</category-name>
 
          <block>
-            <name>Quarterstaff</name> <type>mbasic</name>
+            <name>Quarterstaff</name> <type>mbasic</type>
             <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
@@ -190,6 +400,8 @@
       <language>Common</language> <language>Primordial</language>
 
       <equipment>quarterstaff</equipment>
+
+      <description>A mud lord possesses greater intelligence and presence than others of its kind; it prefers to keep out of harm's way and draws power from sacrificing underlings</description>
    </creature>
 
    <creature>
@@ -263,7 +475,7 @@
          <value>16</value> <mod>+3 / +3</mod>
       </dex>
       <int>
-         <value>10</value> <mod>+0 / +0</mod>
+         <value>8</value> <mod>-1 / -1</mod>
       </int>
       <wis>
          <value>14</value> <mod>+2 / +2</mod>
