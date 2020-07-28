@@ -45,7 +45,7 @@
                .line {
                width:100%;
                box-sizing:border-box;
-               padding:0.2em 0.3em;
+               padding:0.2em;
                text-indent:-1em;
                padding-left:1.3em;
                float:left;
@@ -553,6 +553,11 @@
                      </xsl:when>
                      <xsl:when test="@indent='2'">
                         <div class="line" style="padding-left:4.3em;">
+                           <xsl:value-of select="." disable-output-escaping="yes"/>
+                        </div>
+                     </xsl:when>
+                     <xsl:when test="@indent='3'">
+                        <div class="line" style="padding-left:5.3em;">
                            <xsl:value-of select="." disable-output-escaping="yes"/>
                         </div>
                      </xsl:when>
