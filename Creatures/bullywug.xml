@@ -93,7 +93,7 @@
       <level>3</level> <role>Artillery</role> <xp>150</xp>
       <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>aquatic</subtype>
 
-      <init>+3</init> <perception>+9</perception> <insight>+4</insight>
+      <init>+3</init> <perception>+7</perception> <insight>+2</insight>
 
       <hp>38</hp> <bloodied>19</bloodied>
       <ac>17</ac> <fort>14</fort> <ref>14</ref> <will>16</will>
@@ -102,9 +102,96 @@
 
       <category>
          <category-name>Traits</category-name>
+
+         <block>
+            <name>Rancid Air</name> <type>aura</type>
+            <keyword>Poison</keyword>
+            <frequency>Aura</frequency> <note>2</note>
+            <line>Each enemy that spends a healing surge within the aura is weakened until the start of the acting creature's next turn.</line>
+         </block>
+
+         <block>
+            <name>Aquatic</name>
+            <line>The bullywug can breathe underwater.</line>
+            <line>In aquatic combat, the bullywug gains a +2 bonus to attack rolls against nonaquatic creatures.</line>
+         </block>
+
+         <block>
+            <name>Nature's Release</name>
+            <keyword>Healing</keyword>
+            <line>Any attacker that scores a critical hit against the bullywug regains 3 hit points.</line>
+         </block>
       </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Quarterstaff</name> <type>mbasic</name>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 3 damage.</line>
+         </block>
+
+         <block>
+            <name>Fiery Croak</name> <type>area</type>
+            <keyword>Elemental</keyword> <keyword>Fire</keyword> <keyword>Thunder</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Area burst 1 within 15 squares (each creature in the burst); +6 vs. Reflex</line>
+            <line indent="1">+2 to attack if at least one ally is targeted</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d10 + 5 fire and thunder damage.</line>
+         </block>
+
+         <block>
+            <name>Electric Reflux</name> <type>close</type>
+            <keyword>Acid</keyword> <keyword>Elemental</keyword> <keyword>Lightning</keyword>
+            <recharge>6</recharge>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (each creature in the blast); +6 vs. Reflex</line>
+            <line indent="1">+2 to attack if at least one ally is targeted</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 5 lightning damage, and the target is dazed until the end of the mud lord's next turn.</line>
+            <line><![CDATA[<i>Miss:</i>]]> Half damage.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Arcana</name> <value>+6</value>
+      </skill>
+      <skill>
+         <name>Intimidate</name> <value>+9</value>
+      </skill>
+      <skill>
+         <name>Nature</name> <value>+7</value>
+      </skill>
+      <skill>
+         <name>Perception</name> <value>+7</value>
+      </skill>
+
+      <str>
+         <value>12</value> <mod>+1 / +2</mod>
+      </str>
+      <con>
+         <value>15</value> <mod>+2 / +3</mod>
+      </con>
+      <dex>
+         <value>14</value> <mod>+2 / +3</mod>
+      </dex>
+      <int>
+         <value>11</value> <mod>+0 / +1</mod>
+      </int>
+      <wis>
+         <value>12</value> <mod>+1 / +2</mod>
+      </wis>
+      <cha>
+         <value>17</value> <mod>+3 / +4</mod>
+      </cha>
+
+      <alignment>chaotic evil</alignment>
+      <language>Common</language> <language>Primordial</language>
+
+      <equipment>quarterstaff</equipment>
    </creature>
-   
+
    <creature>
       <title>Bullywug Twitcher</title>
       <level>1</level> <role>Skirmisher</role> <xp>100</xp>
