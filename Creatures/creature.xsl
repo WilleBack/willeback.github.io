@@ -45,7 +45,7 @@
                .line {
                width:100%;
                box-sizing:border-box;
-               padding:0.2em;
+               padding:0.15em 0.3em;
                text-indent:-1em;
                padding-left:1.3em;
                float:left;
