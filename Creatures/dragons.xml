@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>White Dragon, Fledgling</title>
+      <level>1</level> <rolestrength>Solo</rolestrength> <role>Brute</role> <xp>500</xp>
+      <size>Large</size> <origin>natural</origin> <type>magical beast</type> <subtype>dragon</subtype>
+
+      <init>+0</init> <perception>+7</perception> <insight>+2</insight>
+      <sense>darkvision</sense>
+
+      <hp>124</hp> <bloodied>62</bloodied>
+      <ac>15</ac> <fort>14</fort> <ref>12</ref> <will>13</will>
+      <speed>6</speed> <fly>6</fly>
+      <speedmod>Ice Walk</speedmod>
+
+      <resist>
+         <type>cold</type> <value>5</value>
+      </resist>
+
+      <saves>+5</saves>
+      <ap>2</ap>
+
+      <category>
+         <category-name>Savage Blood</category-name>
+
+         <block>
+            <name>Savage Blood</name>
+            <line>While the white dragon is bloodied, it can score a critical hit on a natural roll of 17 to 20.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <keyword>Cold</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 2 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d12 + 6 damage and 1d10 cold damage.</line>
+         </block>
+
+         <block>
+            <name>Claws</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 2 (one or two creatures); +5 vs. AC</line>
+            <line indent="1">If the dragon targets only one creature, it can make this attack twice against it</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d12 + 4 damage.</line>
+         </block>
+
+         <block>
+            <name>Breath Weapon</name> <type>close</type>
+            <keyword>Cold</keyword>
+            <recharge>5 6</recharge>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 5 (each creature in the blast); +4 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d8 + 4 cold damage, and the target is slowed (save ends).</line>
+            <line><![CDATA[<i>Miss:</i>]]> Half damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Triggered Actions</category-name>
+
+         <block>
+            <name>Tail Slap</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (Immediate Reaction):</i>]]> An enemy hits the dragon while flanking it</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 2 (the triggering enemy); +4 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d12 + 4 damage, and the dragon pushes the target up to 3 squares.</line>
+         </block>
+
+         <block>
+            <name>Bloodied Breath</name>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger (Nonaction):</i>]]> The dragon is first bloodied</line>
+            <line><![CDATA[<i>Effect:</i>]]> The dragon's Breath Weapon recharges.</line>
+            <line>The dragon can take an opportunity reaction to use its Breath Weapon.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Athletics</name> <value>+9</value>
+      </skill>
+      <skill>
+         <name>Perception</name> <value>+7</value>
+      </skill>
+
+      <str>
+         <value>18</value> <mod>+4< / +4</mod>
+      </str>
+      <con>
+         <value>16</value> <mod>+3 / +3</mod>
+      </con>
+      <dex>
+         <value>11</value> <mod>+0 / +0</mod>
+      </dex>
+      <int>
+         <value>6</value> <mod>-2 / -2</mod>
+      </int>
+      <wis>
+         <value>15</value> <mod>+2 / +2</mod>
+      </wis>
+      <cha>
+         <value>8</value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>evil</alignment>
+      <language>Common</language> <language>Draconic</language>
+
+      <description>This horse-sized dragon has dull white scales and frost pillowing out between its sharp teeth, and its eyes betray a predary cunning</description>
+   </creature>
+</catalog>
