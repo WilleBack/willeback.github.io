@@ -2,6 +2,85 @@
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
    <creature>
+      <title>Goblin Beast Rider</title>
+      <level>1</level> <role>Skirmisher</role> <xp>100</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>goblin</subtype>
+
+      <init>+5</init> <perception>+1</perception> <insight>+1</insight>
+      <sense>low-light vision</sense>
+
+      <hp>25</hp> <bloodied>12</bloodied>
+      <ac>15</ac> <fort>12</fort> <ref>14</ref> <will>12</will>
+      <speed>6</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Perfect Position</name>
+            <line>If the beast rider is mounted and its mount ends its turn at least 4 squares from where it started, the beast rider's attacks deal +1d6 extra damage until the start of the mount's next turn.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Javelin</name> <type>mrbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 or Ranged 10/20 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 5 damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Triggered Actions</category-name>
+
+         <block>
+            <name>Mounted Goblin Tactics</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Requirement:</i>]]> The beast rider must be mounted.</line>
+            <line><![CDATA[<i>Trigger (Immediate Reaction):</i>]]> The beast rider or its mount is missed by a melee attack</line>
+            <line><![CDATA[<i>Effect:</i>]]> The beast rider's mount shifts 1 square.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Athletics</name> <value>+6</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>12</value> <mod>+1 / +1</mod>
+      </str>
+      <con>
+         <value>10</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>16</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>9</value> <mod>-1 / -1</mod>
+      </int>
+      <wis>
+         <value>12</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>8</value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>evil</alignment>
+      <language>Common</language> <language>Goblin</language>
+
+      <equipment>leather armor</equipment> <equipment>javelin x6</equipment>
+
+      <description>The beast rider takes full advantage of the goblinoid knack for coaxing creatures to fight alongside them</description>
+   </creature>
+
+   <creature>
       <title>Goblin Sneak</title>
       <level>1</level> <role>Lurker</role> <xp>100</xp>
       <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>goblin</subtype>
@@ -82,20 +161,34 @@
       <equipment>learher armor</equipment>
       <equipment>short sword</equipment>
 
-      <description>Like most goblins, cutters don't fight fair, instead ganging up on a single enemy and fleeing once it dawns on them that they're losing the battle</description>
+      <description>Goblin sneaks have more stomach for melee than most goblins, preferring to flank a single enemy and then trade places with fresher goblins when they become wounded</description>
    </creature>
 
    <creature>
-      <title>Goblin Cutter</title>
-      <level>1</level> <rolestrength>Minion</rolestrength> <role>Skirmisher</role> <xp>25</xp>
+      <title>Goblin Sneak</title>
+      <level>1</level> <role>Lurker</role> <xp>100</xp>
       <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>goblin</subtype>
 
-      <init>+4</init> <perception>+1</perception> <insight>+1</insight>
+      <init>+7</init> <perception>+1</perception> <insight>+1</insight>
       <sense>low-light vision</sense>
 
-      <hp>3</hp> <bloodied>Any damage bloodies a minion</bloodied>
-      <ac>14</ac> <fort>11</fort> <ref>13</ref> <will>12</will>
+      <hp>26</hp> <bloodied>13</bloodied>
+      <ac>15</ac> <fort>11</fort> <ref>14</ref> <will>12</will>
       <speed>6</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Sneak Attack</name>
+            <line>The goblin sneak deals additional +1d6 damage against any target it has combat advantage against.</line>
+         </block>
+
+         <block>
+            <name>Sneaky</name>
+            <line>When the goblin sneak <![CDATA[<i>steps</i> or uses <i>goblin tactics</i>]]>, it can shift into the space occupied by an ally and slide the ally to the space it previously occupied.</line>
+         </block>
+      </category>
 
       <category>
          <category-name>Standard Actions</category-name>
@@ -104,8 +197,8 @@
             <name>Short sword</name> <type>mbasic</type>
             <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
-            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
-            <line><![CDATA[<i>Hit:</i>]]> 3 damage, or 5 damage if the cutter has combat advantage against the target.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage.</line>
          </block>
       </category>
 
@@ -121,20 +214,118 @@
       </category>
 
       <skill>
-         <name>Stealth</name> <value>+7</value>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+      <skill>
+         <name>Thievery</name> <value>+8</value>
       </skill>
 
       <str>
-         <value>10</value> <mod>+0 / +0</mod>
+         <value>11</value> <mod>+0 / +0</mod>
+      </str>
+      <con>
+         <value>11</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>17</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>8</value> <mod>-1 / -1</mod>
+      </int>
+      <wis>
+         <value>12</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>9</value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>evil</alignment>
+      <language>Common</language> <language>Goblin</language>
+
+      <equipment>learher armor</equipment>
+      <equipment>short sword</equipment>
+
+      <description>Goblin sneaks have more stomach for melee than most goblins, preferring to flank a single enemy and then trade places with fresher goblins when they become wounded</description>
+   </creature>
+
+   <creature>
+      <title>Goblin Warrior</title>
+      <level>1</level> <role>Skirmisher</role> <xp>100</xp>
+      <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>goblin</subtype>
+
+      <init>+5</init> <perception>+6</perception> <insight>+0</insight>
+      <sense>low-light vision</sense>
+
+      <hp>24</hp> <bloodied>12</bloodied>
+      <ac>16</ac> <fort>11</fort> <ref>14</ref> <will>12</will>
+      <speed>6</speed>
+
+      <category>
+         <category-name>Great Position</category-name>
+
+         <block>
+            <name>Great Position</name>
+            <line>If, on its turn, the goblin warrior ends its move at least 4 squares away from its starting point, it deals +1d6 extra damage on its ranged attacks until the start of its next turn.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category>
+
+         <block>
+            <name>Short Sword</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 2 damage.</line>
+         </block>
+
+         <block>
+            <name>Shortbow</name> <type>rbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 15/30 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + 4 damage.</line>
+         </block>
+
+         <block>
+            <name>Mobile Ranged Attack</name> <type>ranged</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The goblin warrior moves up to half its speed, and has a +2 bonus to AC and Reflex against attacks triggered by this movement.</line>
+            <line>At any point during this movement, it can make a <![CDATA[<i>ranged basic attack</i>]]>. If a creature made an <![CDATA[<i>opportunity attack</i>]]> against the warrior, it gains a +2 bonus to attack rolls against that creature.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Triggered Actions</category-name>
+
+         <block>
+            <name>Goblin Tactics</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (Immediate Reaction):</i>]]> The goblin is missed by an attack</line>
+            <line><![CDATA[<i>Effect:</i>]]> The goblin shifts 1 square.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Perception</name> <value>+6</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>14</value> <mod>+2 / +2</mod>
       </str>
       <con>
          <value>8</value> <mod>-1 / -1</mod>
       </con>
       <dex>
-         <value>15</value> <mod>+2 / +2</mod>
+         <value>17</value> <mod>+3 / +3</mod>
       </dex>
       <int>
-         <value>8</value> <mod>-1 / -1</mod>
+         <value>9</value> <mod>-1 / -1</mod>
       </int>
       <wis>
          <value>12</value> <mod>+1 / +1</mod>
@@ -144,12 +335,11 @@
       </cha>
 
       <alignment>evil</alignment>
-      <language>Goblin</language>
+      <language>Common</language> <language>Goblin</language>
 
-      <equipment>learher armor</equipment>
-      <equipment>short sword</equipment>
+      <equipment>leather armor</equipment> <equipment>short sword</equipment> <equipment>shortbow with 15 arrows</equipment>
 
-      <description>Goblin sneaks have more stomach for melee than most goblins, preferring to flank a single enemy and then trade places with fresher goblins when they become wounded</description>
+      <description>Quick on its gangly feet, the goblin warrior prefers to stay constantly on the move and at the edge of the fight</description>
    </creature>
 
 </catalog>
