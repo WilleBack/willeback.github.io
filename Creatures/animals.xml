@@ -215,6 +215,59 @@
    </creature>
 
    <creature>
+      <title>Dog, Fierce</title>
+      <level>1</level> <rolestrength>Minion</rolestrength> <role>Soldier</role> <xp>25</xp>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+
+      <init>+2</init> <perception>+6</perception> <insight>+1</insight>
+      <sense>low-light vision</sense>
+
+      <hp>3</hp> <bloodied>Any damage bloodies a minion</bloodied>
+      <ac>16</ac> <fort>12</fort> <ref>13</ref> <will>11</will>
+      <speed>7</speed>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage, or 6 damage against a prone target.</line>
+            <line>If the fierce dog has combat advantage against the target, the target is knocked prone.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Perception</name> <value>+6</value>
+      </skill>
+
+      <str>
+         <value>13</value> <mod>+1 / +1</mod>
+      </str>
+      <con>
+         <value>14</value> <mod>+2 / +2</mod>
+      </con>
+      <dex>
+         <value>14</value> <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>2</value> <mod>-4 / -4</mod>
+      </int>
+      <wis>
+         <value>13</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>10</value> <mod>+0 / +0</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>This large canine growls menacingly</description>
+   </creature>
+
+   <creature>
       <title>Horse, Charger</title>
       <level>1</level> <role>Brute</role> <xp>100</xp>
       <size>Large</size> <origin>natural</origin> <type>beast</type> <subtype>mount</subtype>
