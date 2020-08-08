@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Id Fiend</title>
+      <level>1</level> <rolestrength>Solo</rolestrength> <role>Controller</role> <xp>500</xp>
+      <size>Large</size> <origin>aberrant</origin> <type>magical beast</type> <subtype>reptile</subtype>
+
+      <init>+1</init> <perception>+3</perception> <insight>+8</insight>
+      <sense>darkvision</sense>
+
+      <hp>109</hp> <bloodied>54</bloodied>
+      <ac>15</ac> <fort>14</fort> <ref>12</ref> <will>14</will>
+      <speed>6</speed>
+
+      <immune>fear</immune>
+      <resist>
+         <type>psychic</type> <value>5</value>
+      </resist>
+
+      <saves>+5</saves> <ap>2</ap>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Quick Slash</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The id fiend shifts 1 square.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 5 damage.</line>
+         </block>
+
+         <block>
+            <name>Snapping Jaws</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The id fiend slides the target 1 square.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 5 damage.</line>
+         </block>
+
+         <block>
+            <name>Double Attack</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The id fiend uses Quick Slash, then Snapping Jaws.</line>
+         </block>
+
+         <block>
+            <name>Manifest Fear</name> <type>close</type>
+            <keyword>Fear</keyword> <keyword>Illusion</keyword> <keyword>Psionic</keyword>
+            <recharge>4 5 6</recharge>
+            <line><![CDATA[<i>Attack:</i>]]> Close burst 5 (each enemy in the burst); +4 vs. Will</line>
+            <line><![CDATA[<i>Hit:</i>]]> The target is dazed and slowed until the end of the id fiend's next turn.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Minor Actions</category-name>
+
+         <block>
+            <name>Fearful Torment</name> <type>ranged</type>
+            <keyword>Psionic</keyword> <keyword>Psychic</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Ranged 10 (one or two dazed creatures); +5 vs. Will</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 5 psychic damage, and the target is tormented by his or her fears until the end of the id fiend's next turn.</line>
+            <line>While tormented, the target is immobilized and takes a -2 penalty to all attack rolls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Triggered Actions</category-name>
+
+         <block>
+            <name>Whipping Tail</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger (Immediate Interrupt):</i>]]> An enemy moves without teleporting to a square within 2 squares of the id fiend</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 2 (the triggering enemy); +5 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage, and the target falls prone.</line>
+         </block>
+
+         <block>
+            <name>Overwhelming Dread</name>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger (Nonaction Reaction):</i>]]> The id fiend is first bloodied in an encounter</line>
+            <line><![CDATA[<i>Effect:</i>]]> The id fiend's Manifest Fear recharges, and it is used immediately.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Insight</name> <value>+8</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+5</value>
+      </skill>
+
+      <str>
+         <value>19</value> <mod>+4 / +4</mod>
+      </str>
+      <con>
+         <calue>14</value> <mod>+2 / +2</mod>
+      </con>
+      <dex>
+         <value>10</value> <mod>+0 / +0</mod>
+      </dex>
+      <int>
+         <value>13</value> <mod>+1 / +1</mod>
+      </int>
+      <wis>
+         <value>16</value> <mod>+3 / +3</mod>
+      </wis>
+      <cha>
+         <value>10</value> <mod>+0 / +0</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>This large, chameleon-like monstrosity revels in the feelings of doubt and the fear of the unknown, using them against its prey, magnifying anxieties until the line between fantasy and reality shatters</description>
+   </creature>
+
+</catalog>
