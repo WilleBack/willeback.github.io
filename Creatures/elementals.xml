@@ -76,4 +76,84 @@
 
       <description>Whirling winds and debris rising from the ground are the only signs of of this small elemental's presence</description>
    </creature>
+
+   <creature>
+      <title>Fire Elemental, Lesser</title>
+      <level>1</level> <role>Skirmisher</role> <xp>100</xp>
+      <size>Small</size> <origin>elemental</origin> <type>magical beast</type> <subtype>fire</subtype>
+
+      <init>+6</init> <perception>+1</perception> <insight>+1</insight>
+
+      <hp>26</hp> <bloodied>13</bloodied>
+      <ac>14</ac> <fort>12</fort> <ref>14</ref> <will>13</will>
+      <speed>8</speed> <fly>4 (clumsy)</fly>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Body of Fire</name>
+            <keyword>Fire</keyword>
+            <line>The fire elemental sheds bright light for 5 squares around it, and dim light for an additional 5 squares. When it takes cold damage, both distances are reduced to 2 squares until the end of its next turn.</line>
+         </block>
+
+         <block>
+            <name>Frozen in Place</name>
+            <line>Whenever the fire elemental takes cold damage, it cannot shift until the end of its next turn.</line>
+         </block>
+
+         <block>
+            <name>Heart of Flame</name>
+            <keyword>Fire</keyword>
+            <line>Whenever an enemy adjacent to the fire elemental misses it with a melee attack, that enemy takes 3 fire damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Slam</name> <type>mbasic</type>
+            <keyword>Fire</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> Ongoing 5 fire daḿage (save ends).</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]> The target takes a -5 penalty to the first save it makes against this ongoing damage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Minor Actions</category-name>
+
+         <block>
+            <name>Flickering Flame</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The fire elemental shifts 1 square.</line>
+         </block>
+      </category>
+
+      <str>
+         <value>10</value> <mod>+0 / +0</mod>
+      </str>
+      <con>
+         <value>11</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>19</value> <mod>+4 / +4</mod>
+      </dex>
+      <int>
+         <value>5</value> <mod>-3 / -3</mod>
+      </int>
+      <wis>
+         <value>13</value> <mod>+1 / +1</mod>
+      </wis>
+      <cha>
+         <value>6</value> <mod>-2 / -2</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>understands Primordial</language>
+
+      <description>This campfire-sized creature of flame hungers for fresh fuel, darting towards new enemies to ignite, the crackle of flames almost like a cackle as another creature burst aflame</description>
+   </creature>
 </catalog>
