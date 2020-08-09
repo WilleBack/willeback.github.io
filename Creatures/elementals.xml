@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Air Elemental, Lesser</title>
+      <level>1</level> <role>Lurker</role> <xp>100</xp>
+      <size>Small</size> <origin>elemental</origin> <type>magical beast</type> <subtype>air</subtype>
+
+      <init>+7</init> <perception>+5</perception> <insight>+0</insight>
+
+      <hp>26</hp> <bloodied>13</bloodied>
+      <ac>15</ac> <fort>12</fort> <ref>14</ref> <will>13</will>
+      <speed>0</speed> <fly>6 (hover)</fly>
+
+      <vulnerable>
+         <type>fire</type> <value>5</value>
+      </vulnerable>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Phantom on the Wind</name>
+            <line>The lesser air elemental becomes invisible whenever it starts its turn without an enemy adjacent to it. The invisibility lasts until the end of its next turn, or until after it has made an attack, whichever comes first.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Slam</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage.</line>
+         </block>
+
+         <block>
+            <name>Grasp of Storms</name> <type>melee</type>
+            <keyword>Elemental</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature that can't see the air elemental); +4 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + 4 damage, and the air elemental grabs the target (until escape) if it does not have a creature grabbed.</line>
+            <line>Until the grab ends, the target takes ongoing 5 damage, and any melee or ranged attack that deals damage to the air elemental also deals one-half the damage to the target.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Perception</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>14</value> <mod>+2 / +2</mod>
+      </str>
+      <con>
+         <value>11</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>17</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>5</value> <mod>-3 / -3</mod>
+      </int>
+      <wis>
+         <value>11</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>8</value> <mod>-1 / -1</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>understands Primordial</language>
+
+      <description>Whirling winds and debris rising from the ground are the only signs of of this small elemental's presence</description>
+   </creature>
+</catalog>
