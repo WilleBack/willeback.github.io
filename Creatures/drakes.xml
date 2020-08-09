@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="creature.xsl"?>
 <catalog>
-   
+
    <creature>
       <title>Guard Drake</title>
       <level>2</level> <role>brute</role> <xp>125</xp>
       <size>Small</size> <origin>natural</origin> <type>beast</type> <subtype>reptile</subtype>
-      
+
       <init>+3</init> <perception>+7</perception> <insight>+2</insight>
-      
+
       <hp>40</hp> <bloodied>20</bloodied>
       <ac>14</ac> <fort>14</fort> <ref>12</ref> <will>12</will>
       <defnote>See Guarded Area</defnote>
       <speed>6</speed>
-      
+
       <category>
          <category-name>Traits</category-name>
-         
+
          <block>
             <name>Guarded Area</name>
             <line>A handler can designate a guarded area for a trained guard drake. Such an area is usually a doorway, a passage, or a room.</line>
             <line>While in the area or within 10 squares of it, a guard drake gains a +1 bonus to AC and Will, and its bite deals damage on a miss.</line>
          </block>
       </category>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Bite</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
@@ -35,15 +35,15 @@
             <line><![CDATA[<i>Miss:</i>]]> 3 damage if the guard drake is in or near its guarded area.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
       <skill>
          <name>Perception</name>
          <value>+7</value>
       </skill>
-      
+
       <str>
          <value>17</value>
          <mod>+3 / +4</mod>
@@ -71,33 +71,120 @@
    </creature>
 
    <creature>
+      <title>Leaping Drake</title>
+      <level>1</level> <role>Lurker</role> <xp>100</xp>
+      <size>Small</size> <origin>natural</origin> <type>beast</type> <subtype>reptile</subtype>
+
+      <init>+5</init> <perception>+7</perception> <insight>+2</insight>
+
+      <hp>27</hp> <bloodied>13</bloodied>
+      <ac>14</ac> <fort>12</fort> <ref>14</ref> <will>12</will>
+      <speed>6</speed> <climb>6</climb>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
+            <line indent="1">Attack against Fortitude when targeting a creature grabbed by the drake</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d4 + 4 damage.</line>
+         </block>
+
+         <block>
+            <name>Neck Bite</name> <type>melee</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature granting combat advantage to the leaping drake); +6 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 damage, and the target is grabbed (until escape) if the drake does not have anyone grabbed. While grabbed, the target takes ongoing 5 damage.</line>
+            <line>A creature grabbed by the leaping drake is not immobilized. Instead, the drake moves into the target's space without provoking <![CDATA[<i>opportunity attacks</i>]]>. Until the grab ends, the drake keeps occupying the same space as the target, moving with it, and the only actions the drake can take are to release the grab or use Bite against the target.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Move Actions</category-name>
+
+         <block>
+            <name>Flying Leap</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The leaping drake jumps 4 squares. This counts as shifting.</line>
+         </block>
+
+         <block>
+            <name>Instant Camouflage</name>
+            <keyword>Illusion</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Requirement:</i>]]> The leaping drake must have cover or concealment, or be at least 5 squares away from all enemies.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The leaping drake becomes invisible until it attacks or until the end of its next turn, whichever comes first.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Acrobatics</name> <value>+8</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Perception</name> <value>+7</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>10</value> <mod>+0 / +0</mod>
+      </str>
+      <con>
+         <value>12</value> <mod>+1 / +1</mod>
+      </con>
+      <dex>
+         <value>17</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>3</value> <mod>-4 / -4</mod>
+      </int>
+      <wis>
+         <value>15</value> <mod>+2 / +2</mod>
+      </wis>
+      <cha>
+         <value>11</value> <mod>+0 / +0</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>This green-scaled creature is capable of jumping out of danger and adept at camouflage, and the weak venom in its saliva turns the flesh around any bite wounds blue for several hours</description>
+   </creature>
+
+   <creature>
       <title>Spiretop Drake</title>
       <level>1</level> <role>Skirmisher</role> <xp>100</xp>
       <size>Small</size> <origin>natural</origin> <type>beast</type> <subtype>reptile</subtype>
-      
+
       <init>+5</init> <perception>+3</perception> <insight>+3</insight>
-      
+
       <hp>25</hp> <bloodied>12</bloodied>
       <ac>15</ac> <fort>11</fort> <ref>14</ref> <will>12</will>
       <speed>4</speed> <fly>8 (hover)</fly>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Bite</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
             <line><![CDATA[<i>Hit:</i>]]> 1d6 + 4 damage.</line>
          </block>
-         
+
          <block>
             <name>Snatch</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. Reflex</line>
             <line><![CDATA[<i>Hit:</i>]]> 4 damage, and the spiretop drake steals a small object from the target, such as a vial, scroll, or coin.</line>
          </block>
-         
+
          <block>
             <name>Flyby Attack</name> <type>melee</type>
             <frequency>At-Will</frequency>
@@ -105,10 +192,10 @@
             <line>The drake does not provoke <![CDATA[<i>opportunity attacks</i>]]> from the target of its attack when moving away from the target.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
       <str>
          <value>11</value>
          <mod>+0 / +0</mod>
@@ -134,25 +221,25 @@
          <mod>+0 / +0</mod>
       </cha>
    </creature>
-   
+
    <creature>
       <title>Spitting Drake</title>
       <level>2</level> <role>Artillery</role> <xp>125</xp>
       <size>Medium</size> <origin>natural</origin> <type>beast</type> <subtype>reptile</subtype>
-      
+
       <init>+4</init> <perception>+3</perception> <insight>+3</insight>
-      
+
       <hp>32</hp> <bloodied>16</bloodied>
       <ac>15</ac> <fort>12</fort> <ref>13</ref> <will>12</will>
       <speed>7</speed>
-      
+
       <resist>
          <type>acid</type> <value>5</value>
       </resist>
-      
+
       <category>
          <category-name>Standard Actions</category-name>
-         
+
          <block>
             <name>Bite</name> <type>mbasic</type>
             <keyword>Acid</keyword>
@@ -161,7 +248,7 @@
             <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage.</line>
             <line indent="1"><![CDATA[<i>Crit:</i>]]> The target also takes ongoing 5 acid damage.</line>
          </block>
-         
+
          <block>
             <name>Caustic Spit</name> <type>ranged</type>
             <keyword>Acid</keyword>
@@ -172,14 +259,14 @@
             <line indent="1">While the acid sticks, the target is blinded and takes ongoing 5 acid damage.</line>
          </block>
       </category>
-      
+
       <alignment>unaligned</alignment>
       <language>-</language>
-      
+
       <skill>
          <name>Stealth</name> <value>+8</value>
       </skill>
-      
+
       <str>
          <value>13</value>
          <mod>+1 / +2</mod>
