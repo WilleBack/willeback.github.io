@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="feat.xsl"?>
 <catalog>
    <list selection="Aberration-hunting" />
    <list selection="Acid Specialization" />
@@ -1116,6 +1114,37 @@
       <group>Racial</group>
       <benefit>When you are bloodied, the Healing power you gained as a feature of your Leader class (&lt;i&gt;healing word&lt;/i&gt;, &lt;i&gt;healing infusion&lt;/i&gt;, &lt;i&gt;majestic word&lt;/i&gt;, the Draw Inspiration action of &lt;i&gt;warlord's aura&lt;/i&gt;, etc.) heals additional hit points equal to your Constitution modifier.</benefit>
       <benefit>These additional hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Draconic Incitement</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dragon breath</name>
+         <qualifier>racial</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dragonfear</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>When you hit an enemy with your &lt;i&gt;dragon breath&lt;/i&gt; racial power or you &lt;i&gt;dragonfear&lt;/i&gt; racial power, your allies gain a +2 bonus to their first damage roll against that enemy before the end of your next turn.</benefit>
+      <benefit>This bonus to damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
    </feat>
 
    <feat>
@@ -2417,6 +2446,151 @@
       <group>Racial</group>
       <benefit>When you use your &lt;i&gt;infernal wrath&lt;/i&gt; racial power, if the next attack you make is a &lt;i&gt;basic attack&lt;/i&gt; or a Martial, Weapon power, it deals +1[W] extra damage.</benefit>
       <benefit>The extra damage increases to +2[W] at 11th level, and to +3[W] at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Infernal Warrior</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>19</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>infernal wrath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>When an enemy scores a critical hit against you, you can use your &lt;i&gt;infernal wrath&lt;/i&gt; racial power against that enemy as a free reaction without expending the power, and even if it is already expended.</benefit>
+   </feat>
+
+   <feat>
+      <title>Insightful Preparation</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Initiative</group>
+      <group>Support</group>
+      <benefit>Any ally who can see and hear you gains a +1 bonus to attack rolls against enemies that have not yet acted during the encounter.</benefit>
+   </feat>
+
+   <feat>
+      <title>Inspirational Attacker</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <benefit>When you hit with a melee attack on your turn, until the start of your next turn, allies that use the Draw Inspiration action of your &lt;i&gt;warlord's aura&lt;/i&gt; class power regain additional hit points equal to your Strength modifier. This also applies when you use the Draw Inspiration action on a dying ally.</benefit>
+      <benefit>The additional hit points regained increase to 2 + your Strength modifier at 11th level, and to 4 + your Strength modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Inspired Defense</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Human</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>A character using the Draw Inspiration action of your &lt;i&gt;warlord's aura&lt;/i&gt; also gains a +1 power bonus to all defenses until the start of his or her next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Inspiring Aid</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Skill Enhancement</group>
+      <group>Teamwork</group>
+      <benefit>Whenever you or an ally who has line of sight to you uses the &lt;i&gt;aid another&lt;/i&gt; action, the bonus granted is +4 instead of +2. A single check can only benefit from this feat once.</benefit>
+      <benefit>If you have the Inspiring Presence class feature or the Resourceful Presence class feature, this also applies to the &lt;i&gt;aid defense&lt;/i&gt; action.</benefit>
+      <benefit>If you have the Skirmishing Presence class feature or the Tactical Presence class feature, this also applies to the &lt;i&gt;aid attack&lt;/i&gt; action.</benefit>
+   </feat>
+
+   <feat>
+      <title>Invigorated Healing</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Half-orc</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Half-Orc Resilience</name>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Healing</group>
+      <benefit>When you are first bloodied in an encounter, until the end of your next turn, whenever you use a Healing power, the targets of that power regain additional hit points. The additional hit points regained are equal the temporary hit points you gained from the Half-Orc Resilience racial trait if the target spends a healing surge to regain hit points, or half this amount if not.</benefit>
+   </feat>
+
+   <feat>
+      <title>Invigorating Exploit</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Endurance</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Temporary Hit Points</group>
+      <benefit>Choose a martial encounter attack power that you know and that either has an attack roll, triggers on a hit, or requires you to have hit an enemy during your current turn. The chosen power gains the Invigorating keyword.</benefit>
+      <benefit>When you hit with the chosen power, trigger it, or use it, respectively, you gain temporary hit points equal to 10 + your Constitution modifier. If the power has more than one attack rolls, you only gain the temporary hit points once.</benefit>
    </feat>
 
    <feat>

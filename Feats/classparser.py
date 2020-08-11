@@ -22,10 +22,101 @@ def create_feat_file(targetClass, targetRole, targetSource):
 
     data.sort()
 
-    return data
+    return remove_duplicates(data)
 
+def remove_duplicates(lst):
+    return list(dict.fromkeys(lst))
 
-# Barbarian
+## Ardent ##
+############
+ardentTree = ET.parse('ardent.xml')
+ardentRoot = ardentTree.getroot()
+
+# Empty feats from Ardent file
+for feat in ardentTree.findall(".feat"):
+    ardentRoot.remove(feat)
+
+collate = create_feat_file("Ardent", "Leader", "any psionic")
+
+# Add feats to barbarian file
+for item in collate:
+    ardentRoot.append(item[-1])
+
+# Remove known false feat
+extra = ardentRoot.find(".feat[title='Devout Protector Expertise']")
+ardentRoot.remove(extra)
+
+# Save file
+ardentTree.write("ardent.xml")
+
+## Artificer ##
+###############
+artificerTree = ET.parse('artificer.xml')
+artificerRoot = artificerTree.getroot()
+
+# Empty feats from Artificer file
+for feat in artificerTree.findall(".feat"):
+    artificerRoot.remove(feat)
+
+collate = create_feat_file("Artificer", "Leader", "any arcane")
+
+# Add feats to barbarian file
+for item in collate:
+    artificerRoot.append(item[-1])
+
+# Remove known false feat
+extra = artificerRoot.find(".feat[title='Devout Protector Expertise']")
+artificerRoot.remove(extra)
+
+# Save file
+artificerTree.write("artificer.xml")
+
+## Assassin ##
+##############
+assassinTree = ET.parse('assassin.xml')
+assassinRoot = assassinTree.getroot()
+
+# Empty feats from Assassin file
+for feat in assassinTree.findall(".feat"):
+    assassinRoot.remove(feat)
+
+collate = create_feat_file("Assassin", "Striker", "any shadow")
+
+# Add feats to Assassin file
+for item in collate:
+    assassinRoot.append(item[-1])
+
+# Remove known false feat
+# extra = avengerRoot.find(".feat[title='Devout Protector Expertise']")
+# avengerRoot.remove(extra)
+
+# Save file
+assassinTree.write("assassin.xml")
+
+## Avenger ##
+#############
+avengerTree = ET.parse('avenger.xml')
+avengerRoot = avengerTree.getroot()
+
+# Empty feats from Avenger file
+for feat in avengerTree.findall(".feat"):
+    avengerRoot.remove(feat)
+
+collate = create_feat_file("Avenger", "Striker", "any divine")
+
+# Add feats to Avenger file
+for item in collate:
+    avengerRoot.append(item[-1])
+
+# Remove known false feat
+extra = avengerRoot.find(".feat[title='Devout Protector Expertise']")
+avengerRoot.remove(extra)
+
+# Save file
+avengerTree.write("avenger.xml")
+
+## Barbarian ##
+###############
 barbarianTree = ET.parse('barbarian.xml')
 barbarianRoot = barbarianTree.getroot()
 
@@ -46,7 +137,7 @@ for item in collate:
 # Save file
 barbarianTree.write("barbarian.xml")
 
-# Fighter
+# Fighter ##
 ############
 fighterTree = ET.parse('fighter.xml')
 fighterRoot = fighterTree.getroot()
@@ -67,6 +158,50 @@ fighterRoot.remove(extra)
 
 # Save file
 fighterTree.write("fighter.xml")
+
+# Monk ##
+#########
+monkTree = ET.parse('monk.xml')
+monkRoot = monkTree.getroot()
+
+# Empty feats from Monk file
+for feat in monkRoot.findall(".feat"):
+    monkRoot.remove(feat)
+
+collate = create_feat_file("Monk", "Striker", "any psionic")
+
+# Add feats to Monk file
+for item in collate:
+    monkRoot.append(item[-1])
+
+# Remove known false feat
+# extra = fighterRoot.find(".feat[title='Devout Protector Expertise']")
+# fighterRoot.remove(extra)
+
+# Save file
+monkTree.write("monk.xml")
+
+# Paladin ##
+############
+paladinTree = ET.parse('paladin.xml')
+paladinRoot = paladinTree.getroot()
+
+# Empty feats from Paladin file
+for feat in paladinRoot.findall(".feat"):
+    paladinRoot.remove(feat)
+
+collate = create_feat_file("Paladin", "Defender", "any divine")
+
+# Add feats to Paladin file
+for item in collate:
+    paladinRoot.append(item[-1])
+
+# Remove known false feat
+# extra = fighterRoot.find(".feat[title='Devout Protector Expertise']")
+# fighterRoot.remove(extra)
+
+# Save file
+paladinTree.write("paladin.xml")
 
 # Swordmage
 #############
