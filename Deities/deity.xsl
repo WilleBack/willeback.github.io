@@ -19,6 +19,13 @@
 				page-break-inside:avoid;
 			}
 
+         .power {
+				margin:0.2cm;
+				width:98%;
+				float:left;
+				page-break-inside:avoid;
+			}
+
 			.pricetable {
 				box-sizing:border-box;
 				width: 100%;
