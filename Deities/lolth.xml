@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="deity.xsl"?>
+<deity>
+   <name>Lolth</name>
+   <title>Demon Queen of Spiders</title>
+
+   <type>God</type>
+   <alignment>Chaotic Evil</alignment>
+   <gender>Female</gender>
+   <domain>Darkness</domain> <domain>Trickery</domain>
+
+   <text>Lolth is the chaotic evil god of shadow, lies, and spiders. Scheming and treachery are her commands, and her priests are a constant force of disruption in the mostly otherwise stable society of the evil drow. Though she is properly a god and not a demon, she is called Demon Queen of Spiders. She demands her followers:</text>
+   <text>&#9658; Do whatever it takes to gain and hold power.</text>
+   <text>&#9658; Rely on stealth and slander in preference to outright confrontation.</text>
+   <text>&#9658; Seek the death of elves and eladrin at every opportunity.</text>
+
+   <power>
+      <title>Drow Ecclesiastic</title>
+      <class>Channel Divinity</class> <category>Attack</category>
+      <fluff>Lolth punishes those who escape her wiles</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Divine, Poison</keyword>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <type>Ranged</type> <range>5</range>
+         <section>
+            <name>Prerequisite:</name> <name-style>bold</name-style>
+            <text>You must be drow.</text>
+         </section>
+         <section>
+            <name>Channel Divinity:</name> <name-style>bold</name-style>
+            <text>You can only use one Channel Divinity power per encounter.</text>
+         </section>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>An enemy within range succeeds on a saving throw to end a condition</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The triggering enemy</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The target takes ongoing 5 poison damage (save ends).</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 11:</name> <name-style>italic</name-style>
+            <text>Ongoing 10 poison damage.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>Ongoing 15 poison damage.</text>
+         </section>
+      </part>
+   </power>
+
+   <power>
+      <title>Lolth's Cruel Sacrifice</title>
+      <class>Channel Divinity</class> <category>Utility</category>
+      <fluff>You channel the goddess' blessing to save you from danger at an ally's expense</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Divine, Healing, Teleportation</keyword>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <type>Close</type> <range>burst 3</range>
+         <section>
+            <name>Channel Divinity:</name> <name-style>bold</name-style>
+            <text>You can only use one Channel Divinity power per encounter.</text>
+         </section>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>An enemy hits you with an attack</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One ally in the burst</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>You and the target teleport, swapping positions, and the target is hit by the triggering attack instead of you.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>You or one ally adjacent to you (other than the target) can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
+         </section>
+      </part>
+   </power>
+
+   <power>
+      <title>Spider Charmer</title>
+      <class>Channel Divinity</class> <category>Attack</category>
+      <fluff>You draw upon Lolth's ability to command spiders and drow</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Charm, Divine, Implement</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Prerequisite:</name> <name-style>bold</name-style>
+            <text>You must be drow and at least 11th level.</text>
+         </section>
+         <section>
+            <name>Channel Divinity:</name> <name-style>bold</name-style>
+            <text>You can only use one Channel Divinity power per encounter.</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One spider or drow</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Intelligence, Wisdom, or Charisma vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>The target is dominated until the end of your next turn.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>The target cannot flank until the end of your next turn, and it grants combat advantage for the first attack made against it before the end of your next turn.</text>
+         </section>
+      </part>
+   </power>
+</deity>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="deity.xsl"?>
+<deity>
+   <name>Vecna</name>
+
+   <type>God</type>
+   <alignment>Evil</alignment>
+   <gender>Male</gender>
+   <domain>Knowledge</domain> <domain>Undeath</domain>
+
+   <text>Vecna is the evil god of undead, necromancy, and secrets. He rules that which is not meant to be known and that which people wish to keep secret. Evil spellcasters and conspirators pay him homage. He commands them to:</text>
+   <text>&#9658; Never reveal all you know.</text>
+   <text>&#9658; Find the seed of darkness in your heart and nourish it; find it in others and exploit it to your advantage.</text>
+   <text>&#9658; Oppose the followers of all other deities so that Vecna alone can rule the world.</text>
+
+   <power>
+      <title>Vecna's Final Command</title>
+      <class>Channel Divinity</class> <category>Attack</category>
+      <fluff>You infuse a target with brief undeath to force it to make one final attack</fluff>
+      <part>
+         <frequency>Encounter</frequency>
+         <keyword>Divine</keyword>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <type>Close</type> <range>burst 5</range>
+         <section>
+            <name>Channel Divinity:</name> <name-style>bold</name-style>
+            <text>You can only use one Channel Divinity power per encounter.</text>
+         </section>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>A creature within 5 squares of you drops to 0 hit points or fewer</text>
+         </section>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>The triggering creature in the burst</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>The target makes a <![CDATA[<i>basic attack</i>]]> as a free interrupt against a creature you choose, and then dies. If the target is undead, it gains a +2 power bonus to the attack roll.</text>
+         </section>
+      </part>
+   </power>
+</deity>
