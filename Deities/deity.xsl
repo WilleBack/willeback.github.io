@@ -202,26 +202,25 @@
                </div>
             </div>
 
-            <div id="textcontainer" style="page-break-inside:avoid;">
+            <div id="textcontainer" style="page-break-inside:avoid; float:left;">
                <xsl:for-each select="text">
                   <div class="line" style="page-break-inside:avoid;">
                      <xsl:value-of select="." />
                   </div>
                </xsl:for-each>
             </div>
+			</div>
 
-            <xsl:if test="power">
-               <div id="powercontainer">
-                  <div class="grouptitle" style="padding-bottom:0.6em;">
-                     <xsl:text>Channel Divinity Powers Offered by </xsl:text> <xsl:value-of select="name" /> <xsl:text>:</xsl:text>
-                  </div>
+         <xsl:if test="power">
+				<div class="grouptitle" style="padding-bottom:0.6em;">
+					<xsl:text>Channel Divinity Powers Offered by </xsl:text> <xsl:value-of select="name" /> <xsl:text>:</xsl:text>
+				</div>
+            <div class="container">
 
-                  <xsl:apply-templates select="power" />
-               </div>
-            </xsl:if>
+               <xsl:apply-templates select="power" />
+            </div>
+         </xsl:if>
 
-
-		</div> <!-- container -->
 	</body>
 	</html>
 </xsl:template>
