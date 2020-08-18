@@ -2102,6 +2102,120 @@
    </item>
 
    <item>
+      <title>Frost Fury Weapon</title>
+      <category>Uncommon</category>
+      <fluff>When this axe's wielder is bloodied, it becomes icy and promises a cold death with each swing</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Axe</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 cold damage per plus, or +1d10 cold damage per plus while you're bloodied</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <keyword>Cold</keyword>
+         <line>While you are bloodied, you gain an item bonus to damage with this axe equal to your Constitution modifier.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Frost Weapon</title>
+      <category>Uncommon</category>
+      <fluff>A thin layer of frost coats the business end of this weapons</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 cold damage per plus</text>
+      </headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Cold</keyword>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Effect:</i>]]> Your Weapon attacks with this weapon that deal untyped damage deal cold damage instead. The attacks gain the Cold keyword.</line>
+         <line>If a Weapon attack you make already has a damage type, the type is changed to cold and the corresponding keyword is replaced with Cold.</line>
+         <line>Using this power again ends the effect.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Cold</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a Weapon attack using this weapon</line>
+         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes an extra +1d6 cold damage and and is slowed until the end of your next turn.</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2d6 cold damage.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3d6 cold damage.</line>
+      </block>
+   </item>
+
+   <item>
       <title>Gambler's Weapon</title>
       <category>Common</category>
       <fluff>Favored by scoundrels and rogues, this unpredictable blade is not for the faint of heart</fluff>
@@ -2154,6 +2268,65 @@
    </item>
 
    <item>
+      <title>Ghost Dance Weapon</title>
+      <category>Uncommon</category>
+      <fluff>You react to an enemy's attack with a lightning-fast strike, then slip away within a shroud of shadow</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d10 damage per plus with <![CDATA[<i>opportunity attacks</i>]]></text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Whenever you make a Weapon attack with this weapon while you have total concealment, you gain a +2 bonus to all defenses until the start of your next turn.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Augmentable</keyword><keyword>Weapon</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You take damage from a melee attack by an enemy marked by you</line>
+         <line><![CDATA[<i>Effect:</i> You make a <i>melee basic attack</i>]]> using this weapon against the triggering enemy.</line>
+         <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> The attack deals +1[W] extra damage.</line>
+         <line>You then shift a number of squares equal to the weapon's enhancement bonus.</line>
+      </block>
+   </item>
+
+   <item>
       <title>Goblin Totem</title>
       <category>Uncommon</category>
       <fluff>This crude weapon is carved from bone, its handle wrapped with leather -holding the totem makes you feel more capable of facing even formidably sized foes</fluff>
@@ -2199,6 +2372,169 @@
       <block>
          <name>Property</name>
          <line>Your Weapon attacks with this weapon gain an item bonus to damage rolls against a creature larger than you. The item bonus equals this weapon's plus.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Great Hunger Weapon</title>
+      <category>Uncommon</category>
+      <fluff>This weapon's normal low keening tones build into a great hown when it engages in battle</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>When you score a critical hit with a Weapon attack using this weapon, after the critical has been resolved, this weapon's critical damage increases by +1d8 damage. This effect is cumulative until the end of the encounter.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Weapon</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> An enemy within reach of this weapon scores a critical hit against you</line>
+         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes damage equal to this weapon's critical damage, including the additional damage from the property.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Guardian's Brand</title>
+      <category>Common</category>
+      <fluff>This weapon burns white with hatred when it's near a warden's marked enemy</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 fire damage per plus, or +1d8 fire damage per plus while you're in a Guardian Form</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fire</keyword> <keyword>Primal</keyword>
+         <frequency>Daily</frequency>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with your <![CDATA[<i>warden's fury</i>]]> class power using this weapon</line>
+         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes ongoing fire (save ends) damage equal to 2 + your Strength modifier.</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Equal to 6 + your Strength modifier.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Equal to 10 + your Strength modifier.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Gutting Weapon</title>
+      <category>Common</category>
+      <fluff>This blade slides easily past armor and through the thickest hide, though pulling it out is not so easy - on the target</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Light blade</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit a target with a Weapon attack using this weapon</line>
+         <line><![CDATA[<i>Effect:</i>]]> The target takes damage equal to your Strength modifier + twice this weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -3097,7 +3433,7 @@
          <bonus>+6</bonus>
          <price>1,625,000</price>
       </level>
-      <type>Weapon</type> <subtype>Flair</subtype> <subtype>Hammer</subtype> <subtype>Mace</subtype>
+      <type>Weapon</type> <subtype>Flail</subtype> <subtype>Hammer</subtype> <subtype>Mace</subtype>
       <headline>
          <name>Enhancement Bonus</name>
          <text>Attack rolls and damage rolls</text>

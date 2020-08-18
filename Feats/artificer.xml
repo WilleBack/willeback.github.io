@@ -153,42 +153,38 @@
    <race selection="Warforged" />
    <race selection="Wilden" />
 
-   <class selection="Swordmage" />
+   <class selection="Artificer" />
 
-   <class selection="Defender" />
+   <class selection="Leader" />
 
-<feat>
-      <title>Aegis Accuracy</title>
+   <feat>
+      <title>Academy Prodigy</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Eladrin</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <group>Class</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +3 feat bonus to two skills from the artificer's class skill list. This counts as the Skill Focus feat for these skills. </benefit>
+   </feat>
+   <feat>
+      <title>Accurate Magic Armaments</title>
       <tier>Heroic</tier>
       <prereq>
          <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Swordmage Aegis</name>
+         <name>Artificer</name>
       </prereq>
       <group>Attack Bonus</group>
       <group>Class</group>
-      <group>Mark Punishment</group>
-      <benefit>If a target marked by you makes an attack that doesn't include you as a target, you gain a +1 bonus to attack rolls against the marked creature until the end of your next turn.</benefit>
-   </feat>
-   <feat>
-      <title>Aegis Vitality</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Swordmage Aegis</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mark Punishment</group>
-      <group>Temporary Hit Points</group>
-      <benefit>If a target marked by you makes an attack that doesn't include you as a target, you gain 5 temporary hit points.</benefit>
-      <benefit>These temporary hit points increase to 10 at 11th level, and 15 at 21st level.</benefit>
+      <group>Equipment</group>
+      <group>Support</group>
+      <benefit>Whenever you use an Artificer power that targets a weapon or an implement, the next attack roll with that weapon or implement before the end of the encounter gains a +1 bonus.</benefit>
    </feat>
    <feat>
       <title>Aerenal Arcanist</title>
@@ -386,6 +382,23 @@
       <special>You can select this feat multiple times. Each time you select this feat, choose a different ritual.</special>
    </feat>
    <feat>
+      <title>Arcane Trapsmith</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Thievery</name>
+      </prereq>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <group>Traps</group>
+      <benefit>You can use your Intelligence modifier instead of your Dexterity modifier when making Thievery checks to disable traps or open locks.</benefit>
+      <benefit>Also, you gain a +4 feat bonus to Arcana checks related to traps or hazards.</benefit>
+   </feat>
+   <feat>
       <title>Arcane Vampire</title>
       <tier>Heroic</tier>
       <prereq>
@@ -405,23 +418,30 @@
       <benefit>This bonus damage increases to 3 + your Charisma modifier at 11th level, and 6 + your Charisma modifier at 21st level.</benefit>
    </feat>
    <feat>
-      <title>Binding Ensnarement</title>
-      <tier>Epic</tier>
+      <title>Astral Elixir</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Deva</name>
+      </prereq>
       <prereq>
          <type>class</type>
-         <name>Swordmage</name>
+         <name>Artificer</name>
       </prereq>
       <prereq>
-         <type>feature</type>
-         <name>Aegis of Ensnarement</name>
+         <type>power</type>
+         <name>artificer infusion: shielding elixir</name>
+         <qualifier>class</qualifier>
       </prereq>
       <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Mark Punishment</group>
-      <group>Movement Hindrance</group>
-      <benefit>When you use your aegis to teleport an enemy, that enemy is immobilized until the end of your next turn.</benefit>
+      <group>Damage Resistance</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Radiant Specialization</group>
+      <group>Saving Throws</group>
+      <benefit>When you use &lt;i&gt;shielding elixir&lt;/i&gt;, the target gains radiant resistance in addition to the resistance the power normally grants. The radiant resistance is equal to the resistance normally granted and has the same duration.</benefit>
+      <benefit>Also, when making a saving throw, the target can end the &lt;i&gt;shielding elixir&lt;/i&gt;'s effect as a free interrupt to add 1d6 to the saving throw result instead of gaining the normal benefit for ending the effect.</benefit>
    </feat>
-
    <feat>
       <title>Bitter Cold</title>
       <tier>Heroic</tier>
@@ -472,26 +492,26 @@
    </feat>
 
    <feat>
-      <title>Blade of the Raven Queen</title>
-      <tier>Epic</tier>
+      <title>Bolstering Admixture</title>
+      <tier>Heroic</tier>
       <prereq>
          <type>race</type>
-         <name>Shadar-kai</name>
-         <combine>;</combine>
+         <name>Warforged</name>
       </prereq>
       <prereq>
          <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
+         <name>Artificer</name>
       </prereq>
       <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
+         <type>power</type>
+         <name>curative admixture</name>
+         <qualifier>class</qualifier>
       </prereq>
       <group>Class</group>
-      <group>Necrotic Specialization</group>
       <group>Racial</group>
-      <benefit>Your arcane powers (if you are a Swordmage) or divine power (if you are an Avenger) that deal cold damage gain the Necrotic keyword and deal cold and necrotic damage instead.</benefit>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <benefit>When you use your &lt;i&gt;curative admixture&lt;/i&gt; class power, the target can make a saving throw to end one ongoing effect that a save can end.</benefit>
    </feat>
 
    <feat>
@@ -548,47 +568,114 @@
    </feat>
 
    <feat>
-      <title>Charging Aegis</title>
-      <tier>Paragon</tier>
+      <title>Charging Admixture</title>
+      <tier>Heroic</tier>
       <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
+         <type>race</type>
+         <name>Minotaur</name>
       </prereq>
       <prereq>
-         <type>feature</type>
-         <name>Swordmage Aegis</name>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>curative admixture</name>
+         <qualifier>class</qualifier>
       </prereq>
       <group>Charge</group>
       <group>Class</group>
-      <group>Marking</group>
-      <benefit>When you use a charge attack and hit the enemy, you can use your aegis on it as a nonaction reaction before you turn ends.</benefit>
-      <benefit>If you do so, the penalty to attack rolls imposed by your mark is -3 instead of -2.</benefit>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <benefit>When you use your &lt;i&gt;curative admixture&lt;/i&gt; power, the target gains a +2 bonus to damage rolls on charge attacks until the end of your next turn.</benefit>
+      <benefit>The damage bonus increases to +4 at 11th level, and to +6 at 21st level.</benefit>
    </feat>
 
    <feat>
-      <title>Closing Advantage</title>
+      <title>Clarifying Infusion</title>
       <tier>Heroic</tier>
       <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
+         <type>race</type>
+         <name>Kalashtar</name>
       </prereq>
-      <group>Attack Bonus</group>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Healing Infusion</name>
+      </prereq>
       <group>Class</group>
-      <group>Triggered</group>
-      <benefit>When you use a ranged or area Swordmage power and hit at least one target, you gain a +2 bonus to attack rolls with melee Swordmage powers until the end of your next turn.</benefit>
+      <group>Condition Negation</group>
+      <group>Power Enhancement</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <benefit>When you use a Healing Infusion power, the target can make a saving throw against a dazing or dominating condition that a save can end.</benefit>
    </feat>
 
    <feat>
-      <title>Combat Casting</title>
+      <title>Common Cause</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Half-elf</name>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Group Diplomacy</name>
+      </prereq>
+      <group>Class</group>
+      <group>Racial</group>
+      <group>Second Wind</group>
+      <group>Support</group>
+      <group>Temporary Hit Points</group>
+      <benefit>Whenever an ally within 10 squares of you uses his or her &lt;i&gt;second wind&lt;/i&gt;, that ally also gains 4 temporary hit points.</benefit>
+      <benefit>The temporary hit points increase to 8 at 11th level, and to 12 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Crossbow Caster</title>
       <tier>Heroic</tier>
       <prereq>
          <type>class</type>
-         <name>Swordmage</name>
+         <name>Artificer</name>
       </prereq>
       <group>Class</group>
-      <group>Defense</group>
-      <benefit>You gain a +2 bonus to all defenses against &lt;i&gt;opportunity attacks&lt;/i&gt; triggered by using Swordmage ranged and area powers.</benefit>
-      <benefit>In addition, when you use a Swordmage melee power, you do not provoke &lt;i&gt;opportunity attacks&lt;/i&gt; for using arcane ranged and area powers until the end of your next turn.</benefit>
+      <group>Implement Specialization</group>
+      <group>Proficiency Gain</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain proficiency in crossbows as an implement.</benefit>
+   </feat>
+
+   <feat>
+      <title>Cunning Artifice</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Changeling</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>changeling trick</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <group>Support</group>
+      <benefit>You can make an Arcane check instead of a Bluff check as part of your &lt;i&gt;changeling trick&lt;/i&gt; racial power.</benefit>
+      <benefit>Also, when you use an Artficer melee attack power and hit an enemy granting you combat advantage, that enemy grants combat advantage to your allies until the start of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -616,100 +703,28 @@
    </feat>
 
    <feat>
-      <title>Deadly Immobilization</title>
-      <tier>Paragon</tier>
+      <title>Defensive Enchanting</title>
+      <tier>Epic</tier>
       <prereq>
          <type>class</type>
-         <name>Swordmage</name>
+         <name>Artificer</name>
       </prereq>
       <group>Class</group>
-      <group>Damage Bonus</group>
-      <benefit>Whenever you slow or immobilize a target with a Swordmage attack power that deals damage, that power deals additional damage equal to your Constitution modifier.</benefit>
+      <group>Defense</group>
+      <benefit>Your ranged arcane attack powers do not provoke &lt;i&gt;opportunity attacks&lt;/i&gt;.</benefit>
    </feat>
 
    <feat>
-      <title>Deathward Aegis</title>
+      <title>Defensive Minion</title>
       <tier>Heroic</tier>
       <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Shadar-kai</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
          <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Aegis of Shielding</name>
+         <name>Artificer</name>
       </prereq>
       <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you reduce damage with your aegis, the protected ally also gains resist 5 necrotic until the end of the attacking creature's next turn.</benefit>
-      <benefit>This increases to resist 10 at 11th level, and to resist 15 at 21st level.</benefit>
-   </feat>
-
-   <feat>
-      <title>Dilettante's Mark</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dilettante</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Defender</name>
-      </prereq>
-      <group>Class</group>
-      <group>Marking</group>
-      <group>Racial</group>
-      <benefit>When you hit an enemy with the power gained from your Dilettante racial trait, you mark that enemy until the end of your next turn.</benefit>
-   </feat>
-
-   <feat>
-      <title>Distant Swordbond</title>
-      <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Swordbond</name>
-      </prereq>
-      <group>Class</group>
-      <group>Equipment</group>
-      <benefit>You can call your bonded weapon from up to 1 mile away as a standard action, or up to 20 squares away as a minor action.</benefit>
-      <benefit>Starting at 21st level, you can call your bonded weapon from anywhere on the same plane as a standard action, from up to 1 mile away as a minor action, or from up to 20 squares away as part of the same action to use it.</benefit>
-   </feat>
-
-   <feat>
-      <title>Double Aegis</title>
-      <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Arcane Aegis</name>
-      </prereq>
-      <group>Class</group>
-      <group>Marking</group>
-      <benefit>When you use your &lt;i&gt;arcane aegis&lt;/i&gt; class power, you can choose to target two creatures instead of one.</benefit>
-      <benefit>Starting at 21st level, you can choose to keep a previous target marked by your &lt;i&gt;arcane aegis&lt;/i&gt; when you target only one creature with the power, though you can still only have a total of two creatures marked in this way.</benefit>
-      <benefit>&lt;b&gt;Note:&lt;/b&gt; This does not give you additional immediate actions to use your specialized response with.</benefit>
+      <group>Defense</group>
+      <group>Summoning</group>
+      <benefit>A creature you summon using an Artificer Summoning power has a +2 feat bonus to all defenses.</benefit>
    </feat>
 
    <feat>
@@ -738,6 +753,59 @@
    </feat>
 
    <feat>
+      <title>Draconic Augmentation</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dragon breath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Augment Energy</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <group>Teamwork</group>
+      <benefit>When an ally hits with an attack benefiting from your Augment Energy class feature, one enemy adjacent to that ally takes damage equal to your Constitution modifier of the same damage as your &lt;i&gt;dragon breath&lt;/i&gt; racial power deals.</benefit>
+      <benefit>If your &lt;i&gt;dragon breath&lt;/i&gt; racial power can deal different types of damage, you choose which type or types of damage this feat deals when you use Augment Energy.</benefit>
+      <benefit>The damage dealt increases to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Draconic Healing</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Dragonborn Fury</name>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you are bloodied, the Healing power you gained as a feature of your Leader class (&lt;i&gt;healing word&lt;/i&gt;, &lt;i&gt;healing infusion&lt;/i&gt;, &lt;i&gt;majestic word&lt;/i&gt;, the Draw Inspiration action of &lt;i&gt;warlord's aura&lt;/i&gt;, etc.) heals additional hit points equal to your Constitution modifier.</benefit>
+      <benefit>These additional hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
       <title>Dual Implement Arcanist</title>
       <tier>Heroic</tier>
       <prereq>
@@ -756,62 +824,117 @@
    </feat>
 
    <feat>
-      <title>Elemental Assault</title>
+      <title>Dungeon Enchanter</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Ritual Caster</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>ritual</type>
+         <name>Enchant Magic Item</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>ritual</type>
+         <name>Transfer Enchantment</name>
+      </prereq>
+      <group>Class</group>
+      <group>Equipment</group>
+      <group>Rituals</group>
+      <benefit>You can use the Enchant Magic Item ritual and the Transfer Enchantment ritual with a casting time of 1 minute.</benefit>
+   </feat>
+
+   <feat>
+      <title>Dwarven Rejuvenation</title>
       <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Arcane Rejuvenation</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <benefit>When an ally gains temporary hit points due to your Arcane Rejuvenation class feature, that ally also gains a +2 bonus to all defenses until the start of his or her next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Echoing Rejuvenation</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Goliath</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Arcane Rejuvenation</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>stone's endurance</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Resistance</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>When an ally gains temporary hit points from your Arcane Rejuvenation class feature, you gain resist 2 to all damage until the end of your next turn.</benefit>
+      <benefit>This resist increases to 4 at 11th level, and to 6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Eldritch Fusillade Expertise</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <group>Class</group>
+      <group>Implement Specialization</group>
+      <group>Weapon Specialization</group>
+      <benefit>You can draw or stow a wand once per turn as a free action on your turn.</benefit>
+      <benefit>Also, you can load a crossbow as a free action.</benefit>
+   </feat>
+
+   <feat>
+      <title>Elemental Comrades</title>
+      <tier>Paragon</tier>
       <prereq>
          <type>race</type>
          <name>Genasi</name>
       </prereq>
       <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
+         <type>role</type>
+         <name>Leader</name>
       </prereq>
       <prereq>
          <type>trait</type>
          <name>Elemental Manifestation</name>
       </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Aegis of Assault</name>
-      </prereq>
       <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Mark Punishment</group>
-      <group>Racial</group>
-      <benefit>When you hit with the attack granted by your &lt;i&gt;aegis of assault&lt;/i&gt; class power, the target also takes 3 damage of a type based on your current Elemental Manifestation. The attack has the corresponding keyword.</benefit>
-      <benefit>&lt;i&gt;Earthsoul, Sandsoul:&lt;/i&gt; Force.</benefit>
-      <benefit>&lt;i&gt;Firesoul, Cindersoul, Magmasoul:&lt;/i&gt; Fire.</benefit>
-      <benefit>&lt;i&gt;Plaguesoul:&lt;/i&gt; Poison.</benefit>
-      <benefit>&lt;i&gt;Stormsoul:&lt;/i&gt; Thunder.</benefit>
-      <benefit>&lt;i&gt;Sunsoul:&lt;/i&gt; Radiant.</benefit>
-      <benefit>&lt;i&gt;Voidsoul:&lt;/i&gt; Psychic.</benefit>
-      <benefit>&lt;i&gt;Watersoul, Causticsoul:&lt;/i&gt; Acid.</benefit>
-      <benefit>&lt;i&gt;Windsoul:&lt;/i&gt; Cold.</benefit>
-      <benefit>If you are currently manifesting more than one element, choose one damage type when making the attack from those available to you.</benefit>
-      <benefit>The damage increases to 6 at 11th level, and to 9 at 21st level.</benefit>
-   </feat>
-
-   <feat>
-      <title>Elemental Blade Attunement</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Genasi</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <group>Acid Specialization</group>
-      <group>Class</group>
-      <group>Cold Specialization</group>
-      <group>Damage Bonus</group>
-      <group>Fire Specialization</group>
-      <group>Lightning Specialization</group>
-      <group>Racial</group>
-      <group>Thunder Specialization</group>
-      <benefit>When you use a Swordmage power that has the Acid, Cold, Fire, Lightning, or Thunder keyword, you gain a +2 feat bonus to damage rolls.</benefit>
-      <benefit>This bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+      <group>Damage Resistance</group>
+      <group>Saving Throws</group>
+      <benefit>Allies that are adjacent to you gain any resistances or bonuses to saving throws that you have because of your Elemental Manifestation racial trait.</benefit>
+      <benefit>If your Elemental Manifestation gives you the ability to breath underwater, you can share this ability as a minor action with anyone you touch. You must remain touching the recipient, and must use a minor action to sustain the effect each round.</benefit>
    </feat>
 
    <feat>
@@ -833,34 +956,43 @@
    </feat>
 
    <feat>
-      <title>Elemental Guardian</title>
-      <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>15</value>
-      </prereq>
+      <title>Elemental Infusion</title>
+      <tier>Heroic</tier>
       <prereq>
          <type>race</type>
          <name>Genasi</name>
       </prereq>
       <prereq>
-         <type>role</type>
-         <name>Defender</name>
+         <type>class</type>
+         <name>Artificer</name>
       </prereq>
       <prereq>
          <type>trait</type>
          <name>Elemental Manifestation</name>
       </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Magical Infusion</name>
+      </prereq>
       <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
+      <group>Damage Resistance</group>
+      <group>Power Enhancement</group>
       <group>Saving Throws</group>
-      <benefit>While you are adjacent to any ally, your innate racial defenses improve. Apply a benefit based on your current Elemental Manifestation.</benefit>
-      <benefit>&lt;i&gt;Earthsoul:&lt;/i&gt; Your racial bonus to saving throws increases to +2.</benefit>
-      <benefit>&lt;i&gt;Causticsoul, Cindersoul, Firesoul, Plaguesoul, Voidsoul:&lt;/i&gt; Your racial resistance increases by 5.</benefit>
-      <benefit>&lt;i&gt;Ember Soul, Sandsoul, Sunsoul, Watersoul:&lt;/i&gt; Your racial bonus to saving throws increases to +4.</benefit>
-      <benefit>&lt;i&gt;Magmasoul:&lt;/i&gt; The extra fire damage you deal increases to two dice.</benefit>
+      <group>Support</group>
+      <benefit>When you use your &lt;i&gt;resistive formula&lt;/i&gt; or &lt;i&gt;shielding elixir&lt;/i&gt; class power, the target gains a benefit in addition to the power's normal effects. The benefit depends on your current Elemental Manifestation and lasts until the effect of the &lt;i&gt;resistive formula&lt;/i&gt; or &lt;i&gt;shielding elixir&lt;/i&gt; ends.</benefit>
+      <benefit>&lt;i&gt;Caustic soul:&lt;/i&gt; The target gains resist 5 acid.</benefit>
+      <benefit>&lt;i&gt;Cindersoul, Firesoul:&lt;/i&gt; The target gains resist 5 fire.</benefit>
+      <benefit>&lt;i&gt;Earthsoul:&lt;/i&gt; The target gains a +1 bonus to saving throws.</benefit>
+      <benefit>&lt;i&gt;Embersoul:&lt;/i&gt; The target gains a +2 bonus to saving throws against Fire effects.</benefit>
+      <benefit>&lt;i&gt;Magma Soul:&lt;/i&gt; Whenever the target takes fire damage, his or her melee attacks deal an extra 1d6 fire damage and the attacks gain the Fire keyword. This extra damage increases to 1d8 at 11th level, and to 1d10 at 21st level.</benefit>
+      <benefit>&lt;i&gt;Plaguesoul:&lt;/i&gt; The target gains resist 5 poison.</benefit>
+      <benefit>&lt;i&gt;Sandsoul:&lt;/i&gt; The target gains a +2 bonus to saving throws against effects that immobilize, restrain, or slow it.</benefit>
+      <benefit>&lt;i&gt;Stormsoul:&lt;/i&gt; The target gains resist 5 lightning.</benefit>
+      <benefit>&lt;i&gt;Sunsoul:&lt;/i&gt; The target gains a +2 bonus to saving throws against Fire and Radiant effects.</benefit>
+      <benefit>&lt;i&gt;Voidsoul:&lt;/i&gt; The target gains resist 5 psychic.</benefit>
+      <benefit>&lt;i&gt;Watersoul:&lt;/i&gt; The target gains a +2 bonus to saving throws against ongoing damage.</benefit>
+      <benefit>&lt;i&gt;Windsoul:&lt;/i&gt; The target gains resist 5 cold.</benefit>
+      <benefit>The resist granted by this feat increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
 
    <feat>
@@ -886,42 +1018,20 @@
    </feat>
 
    <feat>
-      <title>Ensnaring Flourish</title>
+      <title>Enhanced Resistive Formula</title>
       <tier>Paragon</tier>
       <prereq>
          <type>class</type>
-         <name>Swordmage</name>
+         <name>Artificer</name>
       </prereq>
       <prereq>
-         <type>power</type>
-         <name>aegis of ensnarement</name>
-         <qualifier>class</qualifier>
+         <type>feature</type>
+         <name>Magical Infusion</name>
       </prereq>
       <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Mark Punishment</group>
-      <benefit>When you use your &lt;i&gt;aegis of ensnarement&lt;/i&gt; class power to teleport an enemy, you gain a +4 bonus to melee damage rolls against that enemy until the end of your next turn.</benefit>
-      <benefit>This damage bonus increases to +6 at 21st level.</benefit>
-   </feat>
-
-   <feat>
-      <title>Escalating Assault</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>aegis of assault</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Mark Punishment</group>
-      <benefit>You  gain a +1 bonus to the attack roll granted by your &lt;i&gt;aegis of assault&lt;/i&gt; class power.</benefit>
-      <benefit>The second time you use your &lt;i&gt;aegis of assault&lt;/i&gt; against the same creature, this increases to a +2 bonus, and to a +3 bonus the third time you use it.</benefit>
-      <benefit>The bonus resets to +1 if you are rendered unconscious, or if the same creature is no longer marked by your &lt;i&gt;arcane aegis&lt;/i&gt; class power.</benefit>
+      <group>Temporary Hit Points</group>
+      <group>Support</group>
+      <benefit>When an ally uses the free action to gain temporary hit points by ending your &lt;i&gt;resistive formula&lt;/i&gt; class power's effect, he or she can choose one ally within 5 squares of him or her. The chosen ally gains temporary hit points equal to one-half the temporary hit points the acting ally gained.</benefit>
    </feat>
 
    <feat>
@@ -935,54 +1045,6 @@
       <group>Critical</group>
       <benefit>When you score a critical hit with an arcane area or close attack power and you are wielding an implement that deals extra damage on a critical hit, you can choose to deal that extra damage against any single target that you hit with the attack.</benefit>
       <benefit>If you score more than one critical hit, you can choose to deal the extra damage to the same target.</benefit>
-   </feat>
-
-   <feat>
-      <title>Extended Aegis</title>
-      <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Arcane Aegis</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>aegis of assault</name>
-         <qualifier>class</qualifier>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>aegis of ensnarement</name>
-         <qualifier>class</qualifier>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>aegis of shielding</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mark Punishment</group>
-      <benefit>You can trigger your &lt;i&gt;aegis or assault&lt;/i&gt; class power, your &lt;i&gt;aegis of ensnarement&lt;/i&gt; class power, or your &lt;i&gt;aegis of shielding&lt;/i&gt; class power when the creature marked by your &lt;i&gt;arcane aegis&lt;/i&gt; class power is within 15 squares instead of 10 squares.</benefit>
-      <benefit>Starting at 21st level, you can use the power when the target is within 20 squares instead.</benefit>
-   </feat>
-
-   <feat>
-      <title>Extended Teleportation</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <group>Class</group>
-      <group>Teleportation</group>
-      <benefit>Whenever you teleport using a Swordmage power, add 1 square to the distance you can teleport.</benefit>
-      <benefit>If you have the Aegis of Assault class feature, you instead add 2 squares to the distance. This stacks with the bonus you gain from the feature.</benefit>
    </feat>
 
    <feat>
@@ -1009,124 +1071,144 @@
    </feat>
 
    <feat>
-      <title>Grasping Ensnarement</title>
+      <title>Feymind Infusion</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>aegis of ensnarement</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Mark Punishment</group>
-      <benefit>When you use your &lt;i&gt;aegis of ensnarement&lt;/i&gt; class power to teleport and enemy, that enemy is slowed until the end of its next turn.</benefit>
-   </feat>
-
-   <feat>
-      <title>Greater Aegis of Shielding</title>
-      <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Aegis of Shielding</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Mark Punishment</group>
-      <benefit>Your &lt;i&gt;aegis of shielding&lt;/i&gt; class power reduces damage by an additional 5 points.</benefit>
-   </feat>
-
-   <feat>
-      <title>Greater Swordmage Warding</title>
-      <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Strength</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Swordmage Warding</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <benefit>While your Swordmage Warding is active, you gain a +1 feat bonus to all defenses.</benefit>
-   </feat>
-
-   <feat>
-      <title>Gritty Determination</title>
-      <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Defender</name>
-      </prereq>
-      <group>Class</group>
-      <group>Temporary Hit Points</group>
-      <group>Triggered</group>
-      <benefit>Whenever you use a daily attack power, you gain temporary hit points equal to one-half your level + your Constitution modifier.</benefit>
-   </feat>
-
-   <feat>
-      <title>Guardian's Mishaps</title>
-      <tier>Heroic</tier>
-      <category>Bloodline</category>
       <prereq>
          <type>race</type>
-         <name>Tiefling</name>
+         <name>Eladrin</name>
       </prereq>
       <prereq>
-         <type>role</type>
-         <name>Defender</name>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Eladrin Will</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Magical Infusion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <benefit>When you use one of the powers granted by your Magical Infusion class feature, the target can make a saving throw against a single Charm or Fear effect that a save can end.</benefit>
+      <benefit>The target gains a power bonus to the save if the effect is a Charm effect. The bonus equals your Constitution modifier or Wisdom modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Free-Ranging Familiar</title>
+      <tier>Heroic</tier>
+      <category>Familiar</category>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
       </prereq>
       <prereq>
          <type>feat</type>
-         <name>Mantle of Misfortune</name>
+         <name>Arcane Familiar</name>
       </prereq>
       <group>Class</group>
-      <group>Marking</group>
-      <group>Misfortune Bloodline</group>
-      <group>Racial</group>
-      <benefit>When you slide a creature in the aura granted by your &lt;i&gt;mantle of misfortune&lt;/i&gt; racial power, you can mark that creature until the end of its next turn.</benefit>
+      <group>Familiar</group>
+      <group>Mobility</group>
+      <benefit>While in active mode, your familiar can exist up to 20 squares farther from than normal.</benefit>
+      <special>You can take this feat a second time as a paragon feat to increase the distance by a further 25 squares, and a third time as an epic feat to increase the distance by a further 35 squares.</special>
    </feat>
 
    <feat>
-      <title>Halfling Stalwart</title>
+      <title>Furious Concoction</title>
       <tier>Heroic</tier>
       <prereq>
          <type>race</type>
-         <name>Halfling</name>
+         <name>Half-orc</name>
       </prereq>
       <prereq>
-         <type>role</type>
-         <name>Defender</name>
+         <type>class</type>
+         <name>Artificer</name>
       </prereq>
-      <group>Attack Bonus</group>
+      <prereq>
+         <type>feature</type>
+         <name>Magical Infusion</name>
+      </prereq>
       <group>Class</group>
-      <group>Mark Punishment</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
       <group>Racial</group>
-      <group>Size-based</group>
-      <benefit>You gain a +1 bonus to attack rolls against Large or larger creatures marked by you.</benefit>
+      <group>Support</group>
+      <benefit>An ally benefiting from your &lt;i&gt;resistive formula&lt;/i&gt; or &lt;i&gt;shielding elixir&lt;/i&gt; class power can use the following action:</benefit>
+      <benefit>&lt;b&gt;Free Interrupt:&lt;/b&gt; &lt;i&gt;Trigger:&lt;/i&gt; The ally hits with a melee attack; The triggering attack deals 1d8 extra damage and the power ends without the normal effect for ending it.</benefit>
+      <benefit>The extra damage increases to 2d8 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Gloaming Infusion</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shadar-kai</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Magical Infusion</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shadow jaunt</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Resistance</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>While your &lt;i&gt;shadow jaunt&lt;/i&gt; racial power is not expended, an ally benefiting from either your &lt;i&gt;resistive formula&lt;/i&gt; class power or you &lt;i&gt;shielding elixir&lt;/i&gt; class power can use the following action:</benefit>
+      <benefit>&lt;b&gt;Free Action:&lt;/b&gt; The ally becomes insubstantial until the start of his or her next turn and the power ends without the normal effect for ending it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Group Vigor</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Diplomacy</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Healing Surge</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <benefit>When an ally within 10 squares of you that can see or hear you spends a healing surge to regain hit points, he or she regains 1 additional hit point for each healing surge spent.</benefit>
+      <benefit>The additional hit points regained increase to 2 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Hammer of Moradin</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Moradin</name>
+      </prereq>
+      <group>Class</group>
+      <group>Implement Specialization</group>
+      <group>Proficiency Gain</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain proficiency with the warhammer. You also gain proficiency with the warhammer as an implement.</benefit>
+      <benefit>Also, you treat the warhammer as having the Heavy Thrown property with a range of 5/10.</benefit>
    </feat>
 
    <feat>
@@ -1152,62 +1234,133 @@
    </feat>
 
    <feat>
-      <title>Immortal Warding</title>
+      <title>Human Innovation</title>
       <tier>Heroic</tier>
       <prereq>
          <type>race</type>
-         <name>Deva</name>
+         <name>Human</name>
       </prereq>
       <prereq>
          <type>class</type>
-         <name>Swordmage</name>
+         <name>Artificer</name>
       </prereq>
       <prereq>
          <type>feature</type>
-         <name>Swormage Warding</name>
+         <name>Arcane Empowerment (impart energy)</name>
+      </prereq>
+      <group>Action Point</group>
+      <group>Class</group>
+      <group>Equipment</group>
+      <group>Support</group>
+      <benefit>When you spend an action point, you can also use Impart Energy on an adjacent ally's magical item. This does not count towards how often you can use Arcane Empowerment, but does count against the number of times an item can be Imparted Energy in a day.</benefit>
+   </feat>
+
+   <feat>
+      <title>Improved Augment Energy</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Arcane Empowerment</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Support</group>
+      <benefit>When you Augment Energy using your Arcane Empowerment class feature, the wielder gains a +4 bonus instead of +2.</benefit>
+   </feat>
+
+   <feat>
+      <title>Improved Shielding Elixir</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shielding elixir</name>
+         <qualifier>class</qualifier>
       </prereq>
       <group>Class</group>
       <group>Damage Resistance</group>
-      <group>Defense</group>
-      <group>Racial</group>
-      <benefit>Your Swordmage Warding remains active even while you are unconscious.</benefit>
-      <benefit>Also, you add the bonus to AC granted by your Swordmage Warding to the resist necrotic and resist radiant granted by your Astral Resistance racial trait.</benefit>
+      <group>Power Enhancement</group>
+      <benefit>The resistance provided by your &lt;i&gt;shielding elixir&lt;/i&gt; class power increases by 2.</benefit>
+      <benefit>This increase becomes 4 at 11th level, and 6 at 21st level.</benefit>
    </feat>
 
    <feat>
-      <title>Improved Swordbond</title>
+      <title>Inciting Energy</title>
       <tier>Heroic</tier>
       <prereq>
+         <type>race</type>
+         <name>Githzerai</name>
+      </prereq>
+      <prereq>
          <type>class</type>
-         <name>Swordmage</name>
+         <name>Artificer</name>
       </prereq>
       <prereq>
          <type>feature</type>
-         <name>Swordbond</name>
+         <name>Arcane Empowerment</name>
       </prereq>
       <group>Class</group>
       <group>Equipment</group>
-      <benefit>You can call your bonded weapon from twice the distance.</benefit>
+      <group>Initiative</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>A creature wielding an implement or weapon benefiting from the Augment Energy use of your Arcane Empowerment class feature gains a +2 power bonus to initiative checks.</benefit>
    </feat>
 
    <feat>
-      <title>Improved Swordmage Warding</title>
+      <title>Invigorated Healing</title>
       <tier>Heroic</tier>
       <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
+         <type>race</type>
+         <name>Half-orc</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Half-Orc Resilience</name>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Healing</group>
+      <benefit>When you are first bloodied in an encounter, until the end of your next turn, whenever you use a Healing power, the targets of that power regain additional hit points. The additional hit points regained are equal the temporary hit points you gained from the Half-Orc Resilience racial trait if the target spends a healing surge to regain hit points, or half this amount if not.</benefit>
+   </feat>
+
+   <feat>
+      <title>Iron Formula</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Githzerai</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>iron mind</name>
+         <qualifier>racial</qualifier>
       </prereq>
       <prereq>
          <type>class</type>
-         <name>Swordmage</name>
+         <name>Artificer</name>
       </prereq>
       <prereq>
-         <type>feature</type>
-         <name>Swordmage Warding</name>
+         <type>power</type>
+         <name>resistive formula</name>
+         <qualifier>class</qualifier>
       </prereq>
       <group>Class</group>
       <group>Defense</group>
-      <benefit>The bonus granted by your Swordmage Warding class feature increases by 1.</benefit>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>If you have not expended your &lt;i&gt;iron mind&lt;/i&gt; racial power when you use your &lt;i&gt;resistive formula&lt;/i&gt; class power, the target of that power gains a +1 bonus to all defenses instead of the +1 power bonus to AC.</benefit>
    </feat>
 
    <feat>
