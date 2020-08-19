@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../class.xsl"?>
+
+<class>
+   <name>Avenger</name>
+   <subname>Chastiser</subname>
+   <role>Striker</role>
+   <source>Divine</source>
+   <shortfluff>You practice mysteries forgotten or forbidden by most religious orders, bringing divine wrath upon the enemies of your enemies, one foe at a time</shortfluff>
+   <keyability>Wisdom</keyability>
+   <keyability>Dexterity</keyability>
+   <keyability>Intelligence</keyability>
+
+   <proficiency>
+      <type>Armor</type>
+      <name>Cloth</name>
+   </proficiency>
+   <proficiency>
+      <type>Weapon</type>
+      <name>Simple melee</name>
+      <name>Simple ranged</name>
+      <name>Military melee</name>
+   </proficiency>
+   <proficiency>
+      <type>Implement</type>
+      <name>Holy symbol</name>
+   </proficiency>
+
+   <defense>
+      <name>Fortitude</name>
+      <value>+1</value>
+   </defense>
+   <defense>
+      <name>Reflex</name>
+      <value>+1</value>
+   </defense>
+   <defense>
+      <name>Will</name>
+      <value>+1</value>
+   </defense>
+
+   <hpbase>14</hpbase>
+   <hpgain>6</hpgain>
+   <surgebase>7</surgebase>
+
+   <skills>
+      <trained>Religion</trained>
+      <number>3</number>
+   </skills>
+
+   <fluff>In secret temples far from bustling cities and priestly hierarchies, orders of esoteric warriors train their initiates in ancient traditions now forgotten or forbidden by most religious organizations. The champions of these orders are Avengers - deadly weapons in the hands of their gods, imbued with divine power through secret rites of initiation. In battle, avengers swear to execute divine vengeance, entering a mental state that gives them unerring focus on a single enemy.</fluff>
+   <fluff>As an Avenger, you were initiated through secret rites, and imbued with the power to smite your god's foes. You might be a disciple of Ioun, sworn to hunt and exterminate the minions of Vecna. You could be an agent of the Raven Queen, bringing death to those who would defy your mistress. Or perhaps you serve Bahamut as an agent of justice, bringing ruin to tyrants and oppressors. Common organizations devoted to your god might view you as a heretic or a hero, but you answer only to your god and to the vows you swore upon your initiation.</fluff>
+
+   <feature>
+      <name>Armor of Faith</name>
+      <benefit>You need no armor, for you know that the favor of your deity wards you from harm.</benefit>
+      <benefit>While you are wearing cloth armor or no armor and aren't using a shield, you gain a +3 bonus to AC.</benefit>
+   </feature>
+
+   <feature>
+      <name>Avenger's Censure</name>
+      <benefit>An Avenger trains his or her mind, body, and soul toward one purpose: destroying the enemies of his or her faith. To that end, he or she gains divine aid in pursuing a single target, though the methods vary from one to another.</benefit>
+      <benefit>Choose Censure of Pursuit, Censure of Retribution, or Censure of Unity as your manifestation of divine aid.</benefit>
+
+      <subfeature>
+         <name>Censure of Pursuit</name>
+         <benefit>Divine power empowers you to pursue your sworn foe to the ends of the world.</benefit>
+         <benefit>You gain a +2 bonus to attack rolls on <![CDATA[<i>opportunity attacks</i>]]> your oath target triggers by moving.</benefit>
+         <benefit>If your Oath of Enmity target moves away from you willingly, you gain a bonus to damage rolls against the target equal to 2 + your Dexterity modifier until the end of your next turn. The bonus increases to 5 + your Dexterity modifier at 11th level, and to 8 + your Dexterity modifier at 21st level.</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Censure of Retribution</name>
+         <benefit>When others attempt to interfere with your mission, the divine power invested in you flares even more powerful.</benefit>
+         <benefit>You gain a +2 bonus to attack rolls on <![CDATA[<i>opportunity attacks</i>]]> your oath target triggers by making an attack.</benefit>
+         <benefit>If a creature other than your Oath of Enmity target hits you and deals damage to you, you gain a bonus to damage rolls against your oath target equal to your Intelligence modifier until the end of your next turn. If you are hit by multiple creatures, the bonus is cumulative. The bonus increases to 2 + your Intelligence modifier at 11th level, and to 4 + your Intelligence modifier at 21st level.</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Censure of Unity</name>
+         <benefit>There is strength in numbers, and the divine power in you is a manifestation of that.</benefit>
+         <benefit>Your allies gain a +2 bonus to attack rolls on <![CDATA[<i>opportunity attacks</i>]]> against your oath target.</benefit>
+         <benefit>You gain a bonus to damage rolls against your Oath of Enmity target equal to the number of your allies adjacent to it. This bonus increases to twice the number of allies at 11th level, and to three times the number of allies at 21st level.</benefit>
+      </subfeature>
+   </feature>
+
+   <feature>
+      <name>Channel Divinity</name>
+      <benefit>You can invoke divine power, filling yourself with power derived from your rites. This power allows you to wield special powers.</benefit>
+      <benefit>Once per encounter, you can use a Channel Divinity power.</benefit>
+      <benefit>You gain the <![CDATA[<i>abjure undead</i> and <i>divine guidance</i>]]> Channel Divinity powers. You can choose a Channel Divinity power offered by your patron deity in place of <![CDATA[<i>abjure undead</i>]]>.</benefit>
+      <benefit>Feats and other abilities can grant you additional Channel Divinity powers. Unless the ability specifically says otherwise, you can still only use one Channel Divinity power in an encounter. If an ability allows you to regain the use of your Channel Divinity, you can use any Channel Divinity power you know, even the same one.</benefit>
+
+      <power>
+         <title>Abjure Undead</title>
+         <class>Avenger</class> <category>Attack</category>
+         <fluff>You send a brilliant ray of radiant power at an undead foe, compelling it to stagger toward you</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Implement, Radiant</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Close</type> <range>burst 5</range>
+            <section>
+               <indent>4</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text><![CDATA[<b>Close</b>]]> burst 6</text>
+            </section>
+            <section>
+               <indent>4</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text><![CDATA[<b>Close</b>]]> burst 8</text>
+            </section>
+            <section>
+               <name>Channel Divinity:</name> <name-style>bold</name-style>
+               <text>You can only use one Channel Divinity power per encounter.</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One undead creature in the burst</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Wisdom vs. Will</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>3d10 + Wisdom modifier radiant damage, and you pull the target a number of squares equal to 1 + your Wisdom modifier, and the target is immobilized until the end of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 6:</name> <name-style>italic</name-style>
+               <text>4d10 + Wisdom modifier radiant damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>5d10 + Wisdom modifier radiant damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 16:</name> <name-style>italic</name-style>
+               <text>6d10 + Wisdom modifier radiant damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>7d10 + Wisdom modifier radiant damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 26:</name> <name-style>italic</name-style>
+               <text>8d10 + Wisdom modifier radiant damage.</text>
+            </section>
+            <section>
+               <name>Miss:</name> <name-style>bold</name-style>
+               <text>Half damage, and you pull the target 1 square.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>Pull 2 squares.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>Pull 3 squares.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Divine Guidance</title>
+         <class>Avenger</class> <category>Utility</category>
+         <fluff>You lend the power of your oath to guide an ally's attack</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine</keyword>
+            <action>Immediate</action> <subaction>Interrupt</subaction>
+            <type>Ranged</type> <range>10</range>
+            <section>
+               <indent>1</indent>
+               <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+            </section>
+            <section>
+               <name>Channel Divinity:</name> <name-style>bold</name-style>
+               <text>You can only use one Channel Divinity power per encounter.</text>
+            </section>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An ally within 10 squares of you makes an attack roll against your oath target</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering ally</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target rolls the triggering attack roll twice and uses the higher result.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+
+   <feature>
+      <name>Oath of Enmity</name>
+      <benefit>The initiation rites an Avenger undertakes give him or her the power to strike down a chosen prey.</benefit>
+      <benefit>You gain the <![CDATA[<i>oath of enmity</i>]]> class power that allows you to designate a creature as your oath target. Other benefits can also allow you to designate another target or change your target. Unless otherwise noted, you can only have one oath target at a time.</benefit>
+      <benefit>When you make a melee attack or an Avenger ranged attack against your oath target and there are no other enemies adjacent to you, you make two attack rolls and use the higher result.</benefit>
+      <benefit>If another effect lets you roll twice and use the higher result, roll three times and use the highest result. If another effect forces you to roll twice and use the lower result, roll three times and use the middle result.</benefit>
+      <benefit>If an effect allows you to reroll an attack roll and you rolled twice because of this feature, you reroll both dice.</benefit>
+
+      <power>
+         <title>Oath of Enmity</title>
+         <class>Avenger</class> <category>Utility</category>
+         <fluff>You focus your wrath on a single foe, giving your attacks against it extraordinary accuracy</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Ranged</type> <range>10</range>
+            <section>
+               <indent>1</indent>
+               <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One enemy you can see</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target becomes your oath target until the end of the encounter.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>Effects that allow you to regain encounter powers do not allow you to regain this power.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>However, when the target is reduced to 0 hit points or fewer, you immediately regain the use of this power and the target ceases to be your oath target.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+</class>
