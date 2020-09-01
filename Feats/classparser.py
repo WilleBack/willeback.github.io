@@ -137,6 +137,28 @@ for item in collate:
 # Save file
 barbarianTree.write("barbarian.xml")
 
+## Bard ##
+##########
+bardTree = ET.parse('bard.xml')
+bardRoot = bardTree.getroot()
+
+# Empty feats from Bard file
+for feat in bardTree.findall(".feat"):
+    bardRoot.remove(feat)
+
+collate = create_feat_file("Bard", "Leader", "any any arcane")
+
+# Add feats to barbarian file
+for item in collate:
+    bardRoot.append(item[-1])
+
+# Remove known false feat
+extra = bardRoot.find(".feat[title='Devout Protector Expertise']")
+bardRoot.remove(extra)
+
+# Save file
+bardTree.write("bard.xml")
+
 # Fighter ##
 ############
 fighterTree = ET.parse('fighter.xml')

@@ -39,6 +39,13 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("barbarian.html", pretty_print=True)
 
+# Bard
+source_doc = etree.parse("bard.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("bard.html", pretty_print=True)
+
 # Fighter
 source_doc = etree.parse("fighter.xml")
 output_doc = xslt_transformer(source_doc)
