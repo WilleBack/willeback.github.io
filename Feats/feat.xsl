@@ -765,7 +765,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</xsl:when>
-				<xsl:when test="@selection='Goblin' or @selection='Halfling'">
+				<xsl:when test="@selection='Goblin' or @selection='Halfling' or @selection='Kobold'">
 					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
@@ -793,7 +793,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</xsl:when>
-				<xsl:when test="@selection='Goblin' or @selection='Halfling'">
+				<xsl:when test="@selection='Goblin' or @selection='Halfling' or @selection='Kobold'">
 					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
@@ -821,7 +821,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</xsl:when>
-				<xsl:when test="@selection='Goblin' or @selection='Halfling'">
+				<xsl:when test="@selection='Goblin' or @selection='Halfling' or @selection='Kobold'">
 					<xsl:for-each select="//catalog/feat[(prereq/name=current()/@selection or prereq/name='Small or smaller') and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
