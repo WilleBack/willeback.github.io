@@ -18283,6 +18283,7 @@
          <name>any primal</name>
       </prereq>
       <group>Class</group>
+      <group>Exploration</group>
       <group>Skill Enhancement</group>
       <benefit>You gain a +3 bonus to Perception checks to find tracks.</benefit>
       <benefit>You also add the bonus to the Perception DC for other creatures to find your tracks. You can extend this benefit to up to six allies traveling with your.</benefit>
@@ -29995,6 +29996,16 @@
    </feat>
 
    <feat>
+      <title>Jousting Charge</title>
+      <tier>Heroic</tier>
+      <group>Charge</group>
+      <group>Forced Movement</group>
+      <group>Mounted Combat</group>
+      <benefit>If you hit a target with a charge attack while you are mounted, you can push the target 1 square and then shift 1 square into the space the target vacated.</benefit>
+      <benefit>Starting at 21st level, you can push the target 2 squares and then shift 1 square into the space the target vacates for each square of forced movement.</benefit>
+   </feat>
+
+   <feat>
       <title>Jump Through Darkness</title>
       <tier>Paragon</tier>
       <prereq>
@@ -31168,7 +31179,91 @@
       <group>Weapon Specialization</group>
       <benefit>You gain a +2 bonus to Weapon damage rolls with Light Blades against Large or larger targets.</benefit>
       <benefit>This bonus increases to +3 at 21st level.</benefit>
-   </feat> 
+   </feat>
+
+   <feat>
+      <title>Light Blade Strike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>power</type>
+         <name>power strike</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you make a <![CDATA[<i>melee basic attack</i> with a Light Blade you have proficiency with, you can choose to expend your <i>power strike</i>]]> class power as a nonaction interrupt. If you do, you make the triggering attack against Reflex instead of AC instead of the power's normal effects. The triggering attack also deals +2 damage for each additional +[W] your <![CDATA[<i>power strike</i>]]> normally deals.</benefit>
+   </feat>
+
+   <feat>
+      <title>Light Step</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Wild Step</name>
+      </prereq>
+      <group>Exploration</group>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <group>Support</group>
+      <benefit>You gain a +1 feat bonus to Acrobatics checks and to Stealth checks.</benefit>
+      <benefit>Also, allies traveling with you gain a +1 bonus to their exploration speed.</benefit>
+      <benefit>In addition, the DC to find or follow your tracks increases by +5. You can share this benefit with up to five allies traveling with you.</benefit>
+   </feat>
+
+   <feat>
+      <title>Light of Conviction</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Illumination</group>
+      <group>Power Repertoire</group>
+      <group>Radiant Specialization</group>
+      <benefit>As a minor action, you can shed bright light out to 4 squares, and dim light out to 4 squares further. The light ends 24 hours after you die, or if you end it as a free action on your turn.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>punitive radiance</i>]]> attack power. This power counts as a power of your divine class.</benefit>
+
+      <power>
+         <title>Punitive Radiance</title>
+         <class>Class</class> <category>Attack</category>
+         <fluff>The punishment you levy on the unrighteous is visible from miles away</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Radiant</keyword>
+            <action>Nonaction</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You hit an enemy with a divine attack</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering enemy</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target takes an extra +1d6 radiant damage from the triggering attack, and is surrounded by radiance until the end of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>An extra +2d6 radiant damage.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>While surrounded by radiance, the target grants combat advantage and cannot benefit from invisibility, concealment, or total concealment.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
 
    <feat>
       <title>Lineage of Warriors</title>
