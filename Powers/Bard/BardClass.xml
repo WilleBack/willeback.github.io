@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../class.xsl"?>
+
+<class>
+   <name>Bard</name>
+   <subname>Maestro</subname>
+   <role>Leader</role>
+   <source>Arcane</source>
+   <shortfluff>You channel magical power through words and music, studying long and hard to master the power contained in the lore and sagas of old to cast spells that inspire and invigorate your allies</shortfluff>
+   <keyability>Charisma</keyability>
+   <keyability>Constitution</keyability>
+   <keyability>Intelligence</keyability>
+   <keyability>Wisdom</keyability>
+
+   <proficiency>
+      <type>Armor</type>
+      <name>Cloth</name>
+      <name>Leather</name>
+      <name>Hide</name>
+      <name>Chainmail</name>
+   </proficiency>
+   <proficiency>
+      <type>Weapon</type>
+      <name>Simple melee</name>
+      <name>Simple ranged</name>
+      <name>Military ranged</name>
+      <name>longsword</name>
+      <name>rapier</name>
+      <name>scimitar</name>
+      <name>short sword</name>
+   </proficiency>
+   <proficiency>
+      <type>Implement</type>
+      <name>Wand</name>
+   </proficiency>
+
+   <defense>
+      <name>Reflex</name>
+      <value>+1</value>
+   </defense>
+   <defense>
+      <name>Will</name>
+      <value>+1</value>
+   </defense>
+
+   <hpbase>12</hpbase>
+   <hpgain>5</hpgain>
+   <surgebase>7</surgebase>
+
+   <skills>
+      <trained>Arcana, and your choice of Bluff, Diplomacy or Intimidate</trained>
+      <number>3</number>
+   </skills>
+
+   <fluff>Bards are artists first and foremost, and they practice magic just as they practice song, drama, or poetry. They have a clear sense of how people perceive reality, so they master charm magic and some illusions. Sagas of great heroes are part of a Bard's repertoire, and most Maestros follow the example of many fables and become skilled in a variety of fields. A Maestro's artistic ability, knowledge of lore, and arcane might are widely respected, particularly among the world's rulers.</fluff>
+   <fluff>Art and magic share a sublime beauty, and, as a Maestro, you seek the place where the two meet. You might be a naturally talented wanderer who casts impressive spells almost instinctively, a student of a bardic college who learned ordered systems of magic and epic poetry, a warrior skald who mixes skill at arms with thundering music, a dashing performer known for putting on a good show even for you enemies, or a perfectionist who seeks the consummate formula that blends art and magic into a higher force.</fluff>
+   <fluff>A steady rhythm beats in the back of your mind as you brandish your sword. Your eyes and ears pick up the motion of the villains that surround you, and one glance tells you everything you need to know to defeat them. You whistle three staccato notes, letting your allies know the symphone of battle is about to begin.</fluff>
+
+   <feature>
+      <name>Bardic Training</name>
+      <benefit>During their travel or education, Maestros come across bits and pieces of information that they are able to combine to their advantage.</benefit>
+      <benefit>Choose either Alchemical Lore or Ritualistic Lore to show the type of lore you collect.</benefit>
+
+      <subfeature>
+         <name>Alchemical Lore</name>
+         <benefit>Some Maestros focus on making sure that they always have the right tool for the job. Or if they don't they can whip one up right away.</benefit>
+         <benefit>You gain the Alchemist feat.</benefit>
+         <benefit>You have a formula book that contains the formulas for two alchemical items of 1st level of your choice.</benefit>
+         <benefit>Once per day, you can craft an alchemical item of your level or lower in half the time and without paying the component cost. You must have mastered the formula for the item. These items are unstable, and become inert when you start an extended rest.</benefit>
+         <benefit>Starting at 11th level, you can craft two items in this fashion each day. And starting at 21st level, you can craft three items in this fashion each day.</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Ritualistic Lore</name>
+         <benefit>Rituals are sought-after knowledge, and many Maestros collect them and then add their own bardic twist.</benefit>
+         <benefit>You gain the Ritual Caster feat.</benefit>
+         <benefit>You have a ritual book that contains one 1st-level ritual of your choice that has Bard as a prerequisite, and another 1st-level ritual of your choice.</benefit>
+         <benefit>Once per day, you perform a Bard ritual of your level or lower that you have mastered without expending components, although you must pay any other costs and use any focus required by the ritual.</benefit>
+         <benefit>At 11th level, you can perform two Bard rituals per day without expending components, and at 21st level you can peform three.</benefit>
+      </subfeature>
+   </feature>
+
+   <feature>
+      <name>Bardic Virtue</name>
+      <benefit>Bards praise many virtues in their stories, telling tales of people whose particular qualities set them above common folk. The valor of dauntless heroes, the cunning of great minds, and the foresight of daredevils are among these virtues.</benefit>
+      <benefit>Choose Virtue of Cunning, Virtue of Prescience, or Virtue of Valor as your emphasis.</benefit>
+
+      <subfeature>
+         <name>Virtue of Cunning</name>
+         <benefit>The heroes of the past that a Maestro with this emphasis holds as exemplars overcame adversity and escaped danger using their wits, by tricking their foes and concocting cunning stratagems. He or she seeks to emulate those heroes, combining a winning personality with a keen intellect.</benefit>
+         <benefit>Once between the starts of each of your turns, you can use the following action:</benefit>
+         <benefit><![CDATA[<b>Free Reaction:</b> <i>Trigger:</i>]]> An enemy misses an ally within 5 squares of you with an attack; The triggering ally can shift a number of squares equal to one-half your Intelligence modifier (minimum 1 square).</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Virtue of Prescience</name>
+         <benefit>Some Maestros have the foresight to navigate the twisting roads of luck and fate, emulating those heroes who were able to sense the truths beyond mere reality. He or she helps allies exploit every advantage by manipulating luck and glimpsing the future.</benefit>
+         <benefit>Once per encounter, you can use the following action:</benefit>
+         <benefit><![CDATA[<b>Immediate Interrupt:</b> <i>Trigger:</i>]]> An enemy hits an ally within 5 squares of you with an attack; The triggering ally gains a power bonus to the defense(s) targeted by the triggering attack. The bonus equals your Wisdom modifier and lasts until the end of the acting creature's turn.</benefit>
+         <benefit>Starting at 11th level, you can use this action twice per encounter, and starting at 21st level, you can use it three times per encounter.</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Virtue of Valor</name>
+         <benefit>To the minds of many a Maestro, the ancient heroes most worthy of emulation are those whose courage in the face of overwhelming odds carried them to victory. Such Maestros' own fortitude and forceful personality inspire similar valor in their allies.</benefit>
+         <benefit>Once between the starts of each of your turns, you can use the following action:</benefit>
+         <benefit><![CDATA[<b>Free Reaction:</b> <i>Trigger:</i>]]> An ally within 5 squares either bloodies an enemy or reduces an enemy to 0 hit points or fewer; The triggering ally gains temporary hit points equal to one-third your level + your Constitution modifier.</benefit>
+      </subfeature>
+   </feature>
+
+   <feature>
+      <name>Majestic Word</name>
+      <benefit>The arcane power of a Maestro's voice can heal allies.</benefit>
+      <benefit>You gain the <![CDATA[<i>majestic word</i>]]> class power.</benefit>
+
+      <power>
+         <title>Majestic Word</title>
+         <class>Bard</class> <category>Utility</category>
+         <fluff>You utter words laden with preternatural inspiration, restoring your ally's stamina and making wounds seem insignificant.</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Arcane, Healing</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Close</type> <range>burst 5</range>
+            <section>
+               <indent>4</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text><![CDATA[<b>Close</b>]]> burst 10</text>
+            </section>
+            <section>
+               <indent>4</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text><![CDATA[<b>Close</b>]]> burst 15</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>You or one ally in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value, and additional hit points equal to your Charisma modifier.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 6:</name> <name-style>italic</name-style>
+               <text>1d6 + your Charisma modifier additional hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>2d6 + your Charisma modifier additional hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 16:</name> <name-style>italic</name-style>
+               <text>3d6 + your Charisma modifier additional hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>4d6 + your Charisma modifier additional hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 26:</name> <name-style>italic</name-style>
+               <text>5d6 + your Charisma modifier additional hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You slide the target 1 square.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>You can use this power twice per encounter, but only once per round.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 16:</name> <name-style>italic</name-style>
+               <text>Three times per encounter.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+
+   <feature>
+      <name>Multiclass Versatility</name>
+      <benefit>As masters of a myriad skills, Maestros find it easier to learn from differend professions.</benefit>
+      <benefit>You can choose class-specific Multiclass feats from more than one class.</benefit>
+      <benefit>Unless you have another ability or feature saying otherwise, you can still only learn one encounter attack, one daily attack, and one utility power as a multiclass power.</benefit>
+   </feature>
+
+   <feature>
+      <name>Skill Versatility</name>
+      <benefit>Maestros often prove themselves to be jacks-of-all-trades.</benefit>
+      <benefit>You gain a +1 bonus to untrained skill checks.</benefit>
+   </feature>
+
+   <feature>
+      <name>Song of Rest</name>
+      <benefit>Weaving hints of arcane power into their performance, a Maestro can set everyone's mind at ease to help them recover faster.</benefit>
+      <benefit>When you play an instrument, sing, or otherwise perform during a short rest, you and each ally who can hear you are affected by your Song of Rest. When an affected character spends healing surges at the end of the rest, that character regains additional hit points equal to your Charisma modifier with each healing surge.</benefit>
+      <benefit>The additional hit points increase by 2 at 5th level, by 4 at 15th level, and by 6 at 25th level.</benefit>
+   </feature>
+
+   <feature>
+      <name>Words of Friendship</name>
+      <benefit>Empowering his or her voice, a Maestro can make friends with almost anyone.</benefit>
+      <benefit>You gain the <![CDATA[<i>words of friendship</i>]]> class power.</benefit>
+
+      <power>
+         <title>Words of Friendship</title>
+         <class>Bard</class> <category>Utility</category>
+         <fluff>You infuse your words with arcane power, turning even the simplest speech into a compelling oration</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Arcane, Charm</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You gain a +5 power bonus to the first Diplomacy check you make before the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+</class>
