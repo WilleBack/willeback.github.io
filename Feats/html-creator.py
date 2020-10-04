@@ -46,6 +46,13 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("bard.html", pretty_print=True)
 
+# Battlemind
+source_doc = etree.parse("battlemind.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("battlemind.html", pretty_print=True)
+
 # Fighter
 source_doc = etree.parse("fighter.xml")
 output_doc = xslt_transformer(source_doc)
@@ -73,6 +80,13 @@ output_doc = xslt_transformer(source_doc)
 
 print(str(output_doc))
 output_doc.write("swordmage.html", pretty_print=True)
+
+# Vampire
+source_doc = etree.parse("vampire.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("vampire.html", pretty_print=True)
 
 # Warlock
 source_doc = etree.parse("warlock.xml")

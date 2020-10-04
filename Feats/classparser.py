@@ -146,7 +146,7 @@ bardRoot = bardTree.getroot()
 for feat in bardTree.findall(".feat"):
     bardRoot.remove(feat)
 
-collate = create_feat_file("Bard", "Leader", "any any arcane")
+collate = create_feat_file("Bard", "Leader", "any arcane")
 
 # Add feats to barbarian file
 for item in collate:
@@ -158,6 +158,28 @@ bardRoot.remove(extra)
 
 # Save file
 bardTree.write("bard.xml")
+
+## Battlemind
+##############
+bmindTree = ET.parse('battlemind.xml')
+bmindRoot = bmindTree.getroot()
+
+# Empty feats from Bard file
+for feat in bmindTree.findall(".feat"):
+    bmindRoot.remove(feat)
+
+collate = create_feat_file("Battlemind", "Defender", "any psionic")
+
+# Add feats to barbarian file
+for item in collate:
+    bmindRoot.append(item[-1])
+
+# Remove known false feat
+extra = bmindRoot.find(".feat[title='Devout Protector Expertise']")
+bmindRoot.remove(extra)
+
+# Save file
+bmindTree.write("battlemind.xml")
 
 # Fighter ##
 ############
@@ -246,6 +268,28 @@ smageRoot.remove(extra)
 
 # Save file
 smageTree.write("swordmage.xml")
+
+# Vampire
+##############
+vampireTree = ET.parse('vampire.xml')
+vampireRoot = vampireTree.getroot()
+
+# Empty feats from vampire file
+for feat in vampireRoot.findall(".feat"):
+    vampireRoot.remove(feat)
+
+collate = create_feat_file("Vampire", "Striker", "any shadow")
+
+# Add feats to warlock file
+for item in collate:
+    vampireRoot.append(item[-1])
+
+# Remove known false feat
+# extra = smageRoot.find(".feat[title='Devout Protector Expertise']")
+# smageRoot.remove(extra)
+
+# Save file
+vampireTree.write("vampire.xml")
 
 # Warlock
 ##############
