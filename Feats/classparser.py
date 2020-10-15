@@ -20,6 +20,11 @@ def create_feat_file(targetClass, targetRole, targetSource):
         key = feat.findtext("title")
         data.append((key, feat))
 
+    if targetClass == 'Fighter':
+        for feat in fullRoot.findall(".feat/prereq[name='power strike']..."):
+            key = feat.findtext("title")
+            data.append((key, feat))
+
     data.sort()
 
     return remove_duplicates(data)
