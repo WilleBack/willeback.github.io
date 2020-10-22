@@ -385,6 +385,33 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 			</xsl:for-each>
 		</div>
+		<xsl:if test="secondary">
+			<div class="stats" style="width:100%; margin:0.3em; float:left;">
+				<span style="font-variant: small-caps; font-size: 1.1em;"><b><xsl:value-of select="secondary/title" />:</b></span><br/>
+				<b>Proficiency: </b> <xsl:text>+</xsl:text><xsl:value-of select="secondary/proficient" /><xsl:text>; </xsl:text> <b>Damage: </b> <xsl:value-of select="secondary/damage" /><xsl:text>; </xsl:text> <b>Range: </b> <xsl:value-of select="secondary/range" />
+			</div>
+			<xsl:choose>
+				<xsl:when test="secondary/property='-'">
+					<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+						<i>No properties.</i>
+					</div>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:for-each select="secondary/property">
+						<xsl:call-template name="createproperty" />
+					</xsl:for-each>
+				</xsl:otherwise>
+			</xsl:choose>
+			<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+				<b>Weapon Groups: </b>
+				<xsl:for-each select="group">
+					<xsl:value-of select="." />
+					<xsl:if test="position()!=last()">
+						<xsl:text>, </xsl:text>
+					</xsl:if>
+				</xsl:for-each>
+			</div>
+		</xsl:if>
 	</div>
 
 </xsl:template>
