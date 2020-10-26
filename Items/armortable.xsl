@@ -220,6 +220,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="list">
 
 	<div class="list">
+		<div id="line" style="width:100%; float:left; padding:0.1em; box-sizing:border-box;"><b>
+			<div class="title">Title</div>
+			<div class="bonus">AC Bonus</div>
+			<div class="penalty">Check Penalty</div>
+			<div class="speed">Speed Penalty</div>
+			<div class="price">Cost</div>
+			<div class="weight">Weight</div>
+		</b></div>
 		<xsl:for-each select="//catalog/armor[category=current()/@selection]">
 			<xsl:call-template name="line" />
 		</xsl:for-each>
@@ -267,6 +275,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:value-of select="." />
 			</div>
 		</xsl:for-each>
+		<xsl:choose>
+			<xsl:when test="category='Light armor'">
+				<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+					If you are at least 16th level, the bonus to AC granted by light armor increases by +1. If you are at least 26th level, the bonus increases by an additional +1, for a total of +2 more than the base bonus.
+				</div>
+			</xsl:when>
+			<xsl:when test="category='Heavy armor'">
+				<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+					If you are at least 6th level, the bonus to AC granted by heavy armor increases by +1. At 11th, 16th, and 21st level, the bonus increases by an additional +1, and at 26th level the bonus increases by an additional +2, for a total of +6 more than the base bonus.
+				</div>
+			</xsl:when>
+			<xsl:when test="category='Shield'">
+				<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
+					When you wield a shield you are proficient with, you add the bonus it grants to your AC to your Reflex defense as well.
+				</div>
+			</xsl:when>
+			<xsl:otherwise>
+				something
+			</xsl:otherwise>
+		</xsl:choose>
 	</div>
 
 </xsl:template>
