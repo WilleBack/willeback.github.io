@@ -65,35 +65,35 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			.title {
-				width:12em;
+				width:10.5em;
 				float:left;
 			}
 
 			.bonus {
-				width:calc(20% - 2.5em);
+				width:calc(20% - 2.1em);
 				float:left;
 				text-align:center;
 			}
 
 			.penalty {
-				width:calc(20% - 2.5em);
+				width:calc(20% - 2.1em);
 				float:left;
 				text-align:center;
 			}
 
 			.speed {
-				width:calc(20% - 2.5em);
+				width:calc(20% - 2.1em);
 				float:left;
 				text-align:center;
 			}
 
 			.price {
-				width:calc(20% - 2.5em);
+				width:calc(20% - 2.1em);
 				float:left;
 			}
 
 			.weight {
-				width:calc(20% - 2.5em);
+				width:calc(20% - 2.1em);
 				float:left;
 			}
 
