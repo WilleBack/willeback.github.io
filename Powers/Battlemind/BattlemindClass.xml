@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../class.xsl"?>
+
+<class>
+   <name>Battlemind</name>
+   <subname>Psychal</subname>
+   <role>Defender</role>
+   <source>Psionic</source>
+   <shortfluff>You are a psionic warrior who combines physical might with mastery of psionic power, a combination that allows you to outwit your foes</shortfluff>
+   <keyability>Constitution</keyability>
+   <keyability>Wisdom</keyability>
+   <keyability>Charisma</keyability>
+
+   <proficiency>
+      <type>Armor</type>
+      <name>Cloth</name>
+      <name>Leather</name>
+      <name>Hide</name>
+      <name>Chainmail</name>
+      <name>Scale</name>
+   </proficiency>
+   <proficiency>
+      <type>Shield</type>
+      <name>Heavy</name>
+      <name>Light</name>
+   </proficiency>
+   <proficiency>
+      <type>Weapon</type>
+      <name>Simple melee</name>
+      <name>Military melee</name>
+      <name>Simple ranged</name>
+   </proficiency>
+
+   <defense>
+      <name>Will</name>
+      <value>+2</value>
+   </defense>
+
+   <hpbase>15</hpbase>
+   <hpgain>6</hpgain>
+   <surgebase>9</surgebase>
+
+   <skills>
+      <trained>A skill depending on your Psionic Study class feature</trained>
+      <number>3</number>
+   </skills>
+
+   <fluff>As wanderers, mercenaries, and adventurers, Battleminds are carefree warriors who seek only to test their skills against the mightiest and most dangerous opponents. Battleminds possess a potent combination of psionic and physical skill, allowing them to use their supernatural power to manipulate and deceive their foes even as their fighting skill lets them carve a swath through enemy ranks. Battleminds tend to be bold and sometimes arrogant, an attitude earned through bringing ruin to enemies over the course of many conflicts.</fluff>
+   <fluff>While not all Psychals share in their fellow Battleminds' arrogance, they all have access to an array of combat abilities that manipulate, baffle, and defeat enemies. A Psychal's mind is as deadly as his or her weapon, and with the addition of psionic power, his or her body can turn aside attacks as effectively as a suit of plate armor can.</fluff>
+   <fluff>Let those who would stand against your might quiver in terror when you approach, for you are a Battlemind, and supremacy in combat is your birthright.</fluff>
+
+   <feature>
+      <name>Battlemind Defense</name>
+      <benefit>Psychals study techniques that help them maintain tactical superiority in combat. These techniques are a combination of mental compulsion and psionic enhancement of his or her own capabilities allow a Battlemind to demand enemies' attention, follow them when they try to avoid him or her, and to punish them if they attack his or her allies.</benefit>
+      <benefit>You gain the <![CDATA[<i>battlemind's demand</i>, <i>blurred step</i>, and <i>mind spike</i>]]> class powers.</benefit>
+
+      <power>
+         <title>Battlemind's Demand</title>
+         <class>Battlemind</class> <category>Utility</category>
+         <fluff>You draw your foe's concentration, taunting the foe to strike you</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Augmentable, Psionic</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Close</type> <range>burst 3</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature you can see in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You mark the target until the end of the encounter, or until you use this power again.</text>
+            </section>
+            <section>
+               <augment>1</augment>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One or two creatures in the burst</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Blurred Step</title>
+         <class>Battlemind</class> <category>Utility</category>
+         <fluff>You bend reality with the power of your mind, flashing across the space an enemy tried to create between you</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Psionic</keyword>
+            <action>Free</action> <subaction>Reaction</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy adjacent to you and marked by you shifts</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You shift 1 square, or shift 2 squares if you move as if the target had pulled you.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>You can use this power only once per turn.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Mind Spike</title>
+         <class>Battlemind</class> <category>Attack</category>
+         <fluff>Your force your enemy to feel the pain that it inflicts on your friend</fluff>
+         <part>
+            <frequency>At-Will</frequency>
+            <keyword>Force, Psionic, Psychic</keyword>
+            <action>Immediate</action> <subaction>Reaction</subaction>
+            <type>Melee</type> <range>1</range>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An enemy adjacent to you and marked by you deals damage to your ally with an attack that doesn't include you as a target</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering enemy</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target takes force and psychic damage equal to the damage it dealt to the triggering ally.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+
+   <feature>
+      <name>Kinetic Strikes</name>
+      <benefit>Battleminds learn to empower their strikes with a touch of psionic power, augmenting their combat prowess to create inescapable attacks.</benefit>
+      <benefit>When you make a <![CDATA[<i>melee basic attack</i>]]> you can use your Constitution modifier in place of your Strength modifier for the attack roll and the damage roll.</benefit>
+   </feature>
+
+   <feature>
+      <name>Psionic Augmentation</name>
+      <benefit>Through discipline and careful study, an Ardent masters a form of psionic magic that offers greater versatility than other characters command. He or she knows a broad array of at-will powers, each of which is a conduit through which he or she pours as much or as little psionic energy as desired.</benefit>
+      <benefit>You channel psionic energy from a reservoir of personal power -represented in the game as power points- that you can use to augment your at-will attack powers, replacing the encounter attack powers that other characters use. Because of this, you acquire and use powers in a slightly different manner from how most other classes do.</benefit>
+      <benefit><![CDATA[<b>At-Will Attack Powers:</b>]]> At 1st level, you choose two at-will attack powers and one daily attack power from your class, but you don't start with any encounter attack powers from your class. You can instead augment your class at-will attack powers using power points. These powers have the Augmentable keyword.</benefit>
+      <benefit>You gain new at-will attack powers from this class, instead of new encounter attack powers, as you increase in level. At 3rd level and 7th level, you choose a new at-will attack power of that level or lower from this class. At 13th, 17th, 23rd, and 27th level, you can replace one of your at-will attack powers with another one of your level or lower. Both the replaced power and the new power must be Augmentable and from this class.</benefit>
+      <benefit><![CDATA[<b>Power Points:</b>]]> You start with 2 power points. You gain 2 additional power points at 3rd, 7th, and 13th level, and 3 additional power points at 17th, 23rd, and 27th level. If you gain power points from another source (such as your paragon path), add them to your power point total. You can use your power points to augment any Augmentable power you have, regardless of how you gained the power.</benefit>
+      <benefit>You regain all your power points when you take a short or an extended rest, or when an effect allows you to regain all your expended encounter attack powers.</benefit>
+      <benefit>If an effect allows you to regain a single expended encounter attack power of a given level, you instead regain a number of power points equal to the highest augment option you have of that level or lower.</benefit>
+   </feature>
+
+   <feature>
+      <name>Psychal Study</name>
+      <benefit>Psychals learn to fight using their bodies as weapons. Some Psychals alter their own form to fir their needs, while others use their psionic power to predict the best position for launching an attack.</benefit>
+      <benefit>Choose either Battle Resilience, Persistent Harrier, Speed of Thought, or Wild Focus as your area of study.</benefit>
+
+      <subfeature>
+         <name>Battle Resilience</name>
+         <benefit>Battle Resilience is the use of psionic power to bend a Psychal's own body to protect him or her.</benefit>
+         <benefit>Whenever any power grants you resist, you increase the resist by 2. Starting at 11th level, you instead increase the resist by 3, and 21st level you increasese the resist by 5.</benefit>
+         <benefit>Also, you are trained in the Endurance skill.</benefit>
+         <benefit>In addition, you gain the <![CDATA[<i>battle resilience</i>]]> class power.</benefit>
+
+         <power>
+            <title>Battle Resilience</title>
+            <class>Battlemind</class> <category>Utility</category>
+            <fluff>You steel yourself for battle, girding yourself against your foe's initial assault</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Psionic</keyword>
+               <action>Free</action> <subaction>Interrupt</subaction>
+               <type>Personal</type>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>An attack hits or misses you for the first time during an encounter</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Until the start of the acting creature's next turn, you have resist all equal to 2 + your Wisdom modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>Equal to 4 + your Wisdom modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Equal to 6 + your Wisdom modifier.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Persistent Harrier</name>
+         <benefit>Some Psychals can outmaneuver their opponents with ease, even striking beyond reach.</benefit>
+         <benefit>When you make an <![CDATA[<i>opportunity attack</i>]]>, you can teleport 1 square to a space where you can still make the attack before making the attack. This increases to teleport 2 squares at 21st level.</benefit>
+         <benefit>Also, you are trained in the Insight skill.</benefit>
+         <benefit>In addition, you also gain the <![CDATA[<i>persistent harrier</i>]]> class power.</benefit>
+
+         <power>
+            <title>Persistent Harrier</title>
+            <class>Battlemind</class> <category>Attack</category>
+            <fluff>You slip the bonds of space to strike back at even a distant opponent</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Psionic, Teleportation, Weapon</keyword>
+               <action>Immediate</action> <subaction>Reaction</subaction>
+               <type>Melee</type> <range>special</range>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>An enemy hits or misses you with an attack for the first time during an encounter</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>The triggering enemy</text>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <text>You can attack the target regardless of your reach</text>
+               </section>
+               <section>
+                  <name>Attack:</name> <name-style>bold</name-style>
+                  <text>Constitution vs. AC</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Hit:</name> <name-style>bold</name-style>
+                  <text>You teleport to a space adjacent to the target.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>1[W] + Constitution modifier damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>2[W] + Constitution modifier damage.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Speed of Thought</name>
+         <benefit>A Psychal reacting at the speed of thought is always ready for a fight.</benefit>
+         <benefit>You gain a +1 bonus to speed.</benefit>
+         <benefit>Also, you are trained in the Athletics skill.</benefit>
+         <benefit>In addition, you gain the <![CDATA[<i>speed of thought</i>]]> class power.</benefit>
+
+         <power>
+            <title>Speed of Thought</title>
+            <class>Battlemind</class> <category>Utility</category>
+            <fluff>You move in the blink of an eye, reaching your foes before they can draw their weapons</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Psionic</keyword>
+               <action>Free</action> <subaction>Reaction</subaction>
+               <type>Personal</type>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>You roll initiative</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You move a number of squares equal to 3 + your Charisma modifier.</text>
+               </section>
+               <section>
+                  <name>Special:</name> <name-style>bold</name-style>
+                  <text>You can use this power even if you're surprised.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Wild Focus</name>
+         <benefit>Wild Psychals wield raw telekinetic power in combat.</benefit>
+         <benefit>You can increase the distance of any push, pull or slide from your Battlemind powers by 1 square. If you choose a paragon path that requires the Battlemind class, this also applies to powers from that paragon path.</benefit>
+         <benefit>Also, you are trained in the Intimidate skill.</benefit>
+         <benefit>In addition, you gain the <![CDATA[<i>wild focus</i>]]> class power.</benefit>
+
+         <power>
+            <title>Wild Focus</title>
+            <class>Battlemind</class> <category>Utility</category>
+            <fluff>Using a surge of telekinetic power, you yank an enemy toward you, forcing it to fight</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Psionic</keyword>
+               <action>Free</action> <subaction>Interrupt</subaction>
+               <type>Close</type> <range>burst 10</range>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>An enemy within 10 squares of you starts its first turn during this encounter</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>The triggering enemy in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You pull the target a number of squares equal to your Charisma modifier, and mark it until the end of its next turn.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+   </feature>
+</class>
