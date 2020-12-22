@@ -186,6 +186,28 @@ bmindRoot.remove(extra)
 # Save file
 bmindTree.write("battlemind.xml")
 
+## Cleric ##
+############
+clericTree = ET.parse('cleric.xml')
+clericRoot = clericTree.getroot()
+
+# Empty feats from Cleric file
+for feat in clericTree.findall(".feat"):
+    clericRoot.remove(feat)
+
+collate = create_feat_file("Cleric", "Leader", "any divine")
+
+# Add feats to cleric file
+for item in collate:
+    clericRoot.append(item[-1])
+
+# Remove known false feat
+# extra = artificerRoot.find(".feat[title='Devout Protector Expertise']")
+# artificerRoot.remove(extra)
+
+# Save file
+clericTree.write("cleric.xml")
+
 # Fighter ##
 ############
 fighterTree = ET.parse('fighter.xml')
