@@ -3053,11 +3053,13 @@
       <prereq>
          <type>power</type>
          <name>power strike</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
       </prereq>
+      <group>Damage Bonus</group>
       <group>Miss Mitigation</group>
       <group>Power Enhancement</group>
-      <benefit>When you miss a target with a Weapon attack using an axe and would deal no damage to it, you can expend your <![CDATA[<i>power strike</i>]]> to deal damage equal to your Strength modifier + your weapon's enhancement bonus.</benefit>
+      <benefit>When you miss a target with a Weapon attack using an Axe you have proficiency with and would deal no damage to it, you can expend your <![CDATA[<i>power strike</i>]]> class power.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you deal damage equal to your Strength modifier + your weapon's enhancement bonus. For each +[W] past the first the power would normally deal, this damage increases by +2.</benefit>
    </feat>
 
    <feat>
@@ -13861,6 +13863,10 @@
          <name>Genasi</name>
       </prereq>
       <prereq>
+         <type>trait</type>
+         <name>Elemental Manifestation</name>
+      </prereq>
+      <prereq>
          <type>feat</type>
          <name>Extra Manifestation</name>
       </prereq>
@@ -20680,11 +20686,11 @@
       <prereq>
          <type>power</type>
          <name>power strike</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
       </prereq>
       <group>Condition Infliction</group>
       <group>Mobility Hindrance</group>
-      <benefit>When you use your <![CDATA[<i>power strike</i>]]>, you can choose to reduce the damage the power deals.</benefit>
+      <benefit>When you use your <![CDATA[<i>power strike</i>]]> attack power with a Flail you have proficiency with, you can choose to reduce the additional damage the power deals by 1[W]. If your <![CDATA[<i>power strike</i>]]> deals at least +4[W], you reduce it by 2[W] instead.</benefit>
       <benefit>If you do, you knock the target prone and the target provokes an <![CDATA[<i>opportunity attack</i>]]> from you if it stands up before the start of your next turn.</benefit>
    </feat>
 
@@ -22370,10 +22376,15 @@
          <type>race</type>
          <name>Shadar-kai</name>
       </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shadow jaunt</name>
+         <qualifier>racial</qualifier>
+      </prereq>
       <group>Damage Resistance</group>
       <group>Power Enhancement</group>
       <group>Support</group>
-      <benefit>When you use a power with the Healing keyword on an ally, one target of that power can also become insubstantial until the start of your next turn.</benefit>
+      <benefit>When you use a power with the Healing keyword on at least one ally, one target of the Healing effect can also become insubstantial until the start of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -24725,21 +24736,6 @@
    </feat>
 
    <feat>
-      <title>Hammer Strike</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>power</type>
-         <name>power strike</name>
-         <qualifier>attack</qualifier>
-      </prereq>
-      <group>Condition Infliction</group>
-      <group>Power Enhancement</group>
-      <group>Weapon Enhancement</group>
-      <benefit>When you use your <![CDATA[<i>power strike</i>]]> attack power with a hammer or mace you have proficiency with, you can choose to daze the target until the end of your next turn. If you do, the extra damage is reduced by 1[W].</benefit>
-      <benefit>If your <![CDATA[<i>power strike</i>]]> adds at least +4[W] of damage, the extra damage is reduced by 2[W] instead.</benefit>
-   </feat>
-
-   <feat>
       <title>Hammer of Moradin</title>
       <tier>Heroic</tier>
       <prereq>
@@ -24767,6 +24763,21 @@
       <group>Weapon Specialization</group>
       <benefit>Whenever you hit a target with an <![CDATA[<i>opportunity attack</i>]]> using a hammer or mace you have proficiency with, you can also push the target 1 square.</benefit>
       <benefit>If your abilities or items allow you to increase this distance, calculate the full distance and halve it for this.</benefit>
+   </feat>
+
+   <feat>
+      <title>Hammering Strike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>power</type>
+         <name>power strike</name>
+         <qualifier>attack</qualifier>
+      </prereq>
+      <group>Condition Infliction</group>
+      <group>Power Enhancement</group>
+      <group>Weapon Enhancement</group>
+      <benefit>When you use your <![CDATA[<i>power strike</i>]]> attack power with a Hammer or Mace you have proficiency with, you can choose to reduce the damage by +1[W]. If your <![CDATA[<i>power strike</i>]]> deals at least +4[W] additional damage, you reduce it by +2[W] instead.</benefit>
+      <benefit>If you do, you daze the target until the end of your next turn. If you do, the extra damage is reduced by 1[W].</benefit>
    </feat>
 
    <feat>
@@ -25485,8 +25496,8 @@
       <group>Kill Effect</group>
       <group>Power Enhancement</group>
       <group>Weapon Specialization</group>
-      <benefit>When you reduce an enemy to 0 hit points or fewer with a Weapon attack using a Heavy Blade, you can choose to expend your <![CDATA[<i>power strike</i>]]> class power as a free reaction. If you do, you make a <![CDATA[<i>melee basic attack</i>]]> against a different creature instead of the power's normal effects.</benefit>
-      <benefit>If your <![CDATA[<i>power strike</i>]]> deals at least +3[W] additional damage, your <![CDATA[<i>melee basic attack</i>]]> deals +1[W] additional damage.</benefit>
+      <benefit>When you reduce an enemy to 0 hit points or fewer with a Weapon attack using a Heavy Blade, you can choose to expend your <![CDATA[<i>power strike</i>]]> class power as a free reaction.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you make a <![CDATA[<i>melee basic attack</i>]]> using the same weapon against a different creature. If your <![CDATA[<i>power strike</i>]]> deals at least +4[W] additional damage, your <![CDATA[<i>melee basic attack</i>]]> deals +1[W] additional damage.</benefit>
    </feat>
 
    <feat>
@@ -31209,12 +31220,13 @@
       <prereq>
          <type>power</type>
          <name>power strike</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
       </prereq>
       <group>Attack Bonus</group>
       <group>Power Enhancement</group>
       <group>Weapon Specialization</group>
-      <benefit>When you make a <![CDATA[<i>melee basic attack</i> with a Light Blade you have proficiency with, you can choose to expend your <i>power strike</i>]]> class power as a nonaction interrupt. If you do, you make the triggering attack against Reflex instead of AC instead of the power's normal effects. The triggering attack also deals +2 damage for each additional +[W] your <![CDATA[<i>power strike</i>]]> normally deals.</benefit>
+      <benefit>When you make a <![CDATA[<i>melee basic attack</i> with a Light Blade you have proficiency with, you can choose to expend your <i>power strike</i>]]> attack power as a nonaction interrupt before making the attack roll.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you make the triggering attack against the target's Reflex instead, and gain a +2 bonus to damage for each additional +[W] of damage the power would normally deal.</benefit>
    </feat>
 
    <feat>
@@ -32063,6 +32075,40 @@
       <group>Class</group>
       <group>Healing</group>
       <benefit>Each ally affected by your Song or Rest class feature regains 2 additional hit points for each healing surge he or she spends at the end of the rest.</benefit>
+      <benefit>These additional hit points regained increase to 3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mace Strike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>power strike</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you make an at-will Weapon attack against a target's AC using a Mace you have proficiency with, you can expend your <![CDATA[<i>attack power</i>]]> before making the attack roll.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you make the triggering attack against the target's Fortitude instead, and gain a +2 bonus to damage for each additional [W] of damage the power would normally deal.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mage Hand Trickster</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Gnome</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>mage hand</name>
+         <qualifier>Cantrip</qualifier>
+      </prereq>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <benefit>You can use the <![CDATA[<i>mage hand</i>]]> Cantrip power (from the wizard class Cantrips class feature) to perform Arcana checks made to manipulate magical phenomena, or to perform Thievery checks made to disable devices, open locks, or pick pockets. Both kinds of checks can be made from up to 5 squares away from the target of the check.</benefit>
    </feat>
 
    <feat>
@@ -32087,6 +32133,47 @@
       <group>Racial</group>
       <group>Skill Enhancement</group>
       <benefit>When you use your <![CDATA[<i>memory of a thousand lifetimes</i>]]> racial power to enhance an Arcana check, or to enhance an attack roll of an arcane power, you add +1 to the result.</benefit>
+   </feat>
+
+   <feat>
+      <title>Magic of the Mists</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Gnome</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>fade away</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Stealth</group>
+      <benefit>When you are under the effects of your <![CDATA[<i>fade away</i>]]> racial power, making an arcane attack does not end the effect.</benefit>
+   </feat>
+
+   <feat>
+      <title>Magma Eruptions</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Magmasoul Manifestation</name>
+      </prereq>
+      <group>Damage Penalty</group>
+      <group>Condition Infliction</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>Any creature damaged by the aura created by your <![CDATA[<i>flowing magma</i>]]> Elemental Manifestation racial power is also weakened until the end of its next turn.</benefit>
    </feat>
 
    <feat>

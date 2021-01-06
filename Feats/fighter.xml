@@ -323,11 +323,13 @@
       <prereq>
          <type>power</type>
          <name>power strike</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
       </prereq>
+      <group>Damage Bonus</group>
       <group>Miss Mitigation</group>
       <group>Power Enhancement</group>
-      <benefit>When you miss a target with a Weapon attack using an axe and would deal no damage to it, you can expend your &lt;i&gt;power strike&lt;/i&gt; to deal damage equal to your Strength modifier + your weapon's enhancement bonus.</benefit>
+      <benefit>When you miss a target with a Weapon attack using an Axe you have proficiency with and would deal no damage to it, you can expend your &lt;i&gt;power strike&lt;/i&gt; class power.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you deal damage equal to your Strength modifier + your weapon's enhancement bonus. For each +[W] past the first the power would normally deal, this damage increases by +2.</benefit>
    </feat>
 
    <feat>
@@ -1799,11 +1801,11 @@
       <prereq>
          <type>power</type>
          <name>power strike</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
       </prereq>
       <group>Condition Infliction</group>
       <group>Mobility Hindrance</group>
-      <benefit>When you use your &lt;i&gt;power strike&lt;/i&gt;, you can choose to reduce the damage the power deals.</benefit>
+      <benefit>When you use your &lt;i&gt;power strike&lt;/i&gt; attack power with a Flail you have proficiency with, you can choose to reduce the additional damage the power deals by 1[W]. If your &lt;i&gt;power strike&lt;/i&gt; deals at least +4[W], you reduce it by 2[W] instead.</benefit>
       <benefit>If you do, you knock the target prone and the target provokes an &lt;i&gt;opportunity attack&lt;/i&gt; from you if it stands up before the start of your next turn.</benefit>
    </feat>
 
@@ -2080,7 +2082,7 @@
    </feat>
 
    <feat>
-      <title>Hammer Strike</title>
+      <title>Hammering Strike</title>
       <tier>Heroic</tier>
       <prereq>
          <type>power</type>
@@ -2090,8 +2092,8 @@
       <group>Condition Infliction</group>
       <group>Power Enhancement</group>
       <group>Weapon Enhancement</group>
-      <benefit>When you use your &lt;i&gt;power strike&lt;/i&gt; attack power with a hammer or mace you have proficiency with, you can choose to daze the target until the end of your next turn. If you do, the extra damage is reduced by 1[W].</benefit>
-      <benefit>If your &lt;i&gt;power strike&lt;/i&gt; adds at least +4[W] of damage, the extra damage is reduced by 2[W] instead.</benefit>
+      <benefit>When you use your &lt;i&gt;power strike&lt;/i&gt; attack power with a Hammer or Mace you have proficiency with, you can choose to reduce the damage by +1[W]. If your &lt;i&gt;power strike&lt;/i&gt; deals at least +4[W] additional damage, you reduce it by +2[W] instead.</benefit>
+      <benefit>If you do, you daze the target until the end of your next turn. If you do, the extra damage is reduced by 1[W].</benefit>
    </feat>
 
    <feat>
@@ -2154,8 +2156,8 @@
       <group>Kill Effect</group>
       <group>Power Enhancement</group>
       <group>Weapon Specialization</group>
-      <benefit>When you reduce an enemy to 0 hit points or fewer with a Weapon attack using a Heavy Blade, you can choose to expend your &lt;i&gt;power strike&lt;/i&gt; class power as a free reaction. If you do, you make a &lt;i&gt;melee basic attack&lt;/i&gt; against a different creature instead of the power's normal effects.</benefit>
-      <benefit>If your &lt;i&gt;power strike&lt;/i&gt; deals at least +3[W] additional damage, your &lt;i&gt;melee basic attack&lt;/i&gt; deals +1[W] additional damage.</benefit>
+      <benefit>When you reduce an enemy to 0 hit points or fewer with a Weapon attack using a Heavy Blade, you can choose to expend your &lt;i&gt;power strike&lt;/i&gt; class power as a free reaction.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you make a &lt;i&gt;melee basic attack&lt;/i&gt; using the same weapon against a different creature. If your &lt;i&gt;power strike&lt;/i&gt; deals at least +4[W] additional damage, your &lt;i&gt;melee basic attack&lt;/i&gt; deals +1[W] additional damage.</benefit>
    </feat>
 
    <feat>
@@ -2607,12 +2609,13 @@
       <prereq>
          <type>power</type>
          <name>power strike</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
       </prereq>
       <group>Attack Bonus</group>
       <group>Power Enhancement</group>
       <group>Weapon Specialization</group>
-      <benefit>When you make a &lt;i&gt;melee basic attack&lt;/i&gt; with a Light Blade you have proficiency with, you can choose to expend your &lt;i&gt;power strike&lt;/i&gt; class power as a nonaction interrupt. If you do, you make the triggering attack against Reflex instead of AC instead of the power's normal effects. The triggering attack also deals +2 damage for each additional +[W] your &lt;i&gt;power strike&lt;/i&gt; normally deals.</benefit>
+      <benefit>When you make a &lt;i&gt;melee basic attack&lt;/i&gt; with a Light Blade you have proficiency with, you can choose to expend your &lt;i&gt;power strike&lt;/i&gt; attack power as a nonaction interrupt before making the attack roll.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you make the triggering attack against the target's Reflex instead, and gain a +2 bonus to damage for each additional +[W] of damage the power would normally deal.</benefit>
    </feat>
 
    <feat>
@@ -2759,6 +2762,21 @@
       <group>Racial</group>
       <benefit>While you are bloodied and under the effects of your &lt;i&gt;longtooth shifting&lt;/i&gt; racial power, you gain an additional +2 bonus to damage rolls against targets marked by you.</benefit>
       <benefit>This bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mace Strike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>power strike</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you make an at-will Weapon attack against a target's AC using a Mace you have proficiency with, you can expend your &lt;i&gt;attack power&lt;/i&gt; before making the attack roll.</benefit>
+      <benefit>If you do, instead of the power's normal effects, you make the triggering attack against the target's Fortitude instead, and gain a +2 bonus to damage for each additional [W] of damage the power would normally deal.</benefit>
    </feat>
 
    <feat>

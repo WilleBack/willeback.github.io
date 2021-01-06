@@ -53,6 +53,13 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("battlemind.html", pretty_print=True)
 
+# Cleric
+source_doc = etree.parse("cleric.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("cleric.html", pretty_print=True)
+
 # Fighter
 source_doc = etree.parse("fighter.xml")
 output_doc = xslt_transformer(source_doc)
