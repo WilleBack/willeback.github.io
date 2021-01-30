@@ -340,7 +340,11 @@
          <bonus>+6</bonus>
          <price>1,625,000</price>
       </level>
-      <type>Weapon</type> <subtype>one-handed Heavy blade</subtype> <subtype>one-handed Light blade</subtype>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline>
+         <name>Requirement</name>
+         <text>This enhancement can only be placed on a one-handed weapon.</text>
+      </headline>
       <headline>
          <name>Attached Component</name>
          <text>You must have the Living Construct racial trait to use this item.</text>
@@ -356,7 +360,7 @@
       <block>
          <name>Property</name>
          <line>The weapon gains the Free Hand weapon property.</line>
-         <line>If the weapon has the Off-hand or Light Thrown properties, it is fully retractable. While retracted, Perception checks to find it take a -5 penalty.</line>
+         <line>If the weapon has the Off-hand or Light Thrown properties, it is fully retracted when sheathed. While retracted, Perception checks to find it take a -5 penalty.</line>
       </block>
    </item>
 
@@ -2103,7 +2107,7 @@
 
    <item>
       <title>Frost Fury Weapon</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>When this axe's wielder is bloodied, it becomes icy and promises a cold death with each swing</fluff>
       <level>
          <value>3</value>
@@ -2147,7 +2151,7 @@
       <block>
          <name>Property</name>
          <keyword>Cold</keyword>
-         <line>While you are bloodied, you gain an item bonus to damage with this axe equal to your Constitution modifier.</line>
+         <line>While you are bloodied, you gain an item bonus to damage with this axe equal to 2 + the weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -2643,6 +2647,63 @@
    </item>
 
    <item>
+      <title>Harsh Songblade</title>
+      <category>Uncommon</category>
+      <fluff>As this blade channels your bardic magic, the blade unleashes a wail that leaves your foe senseless</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a bard Thunder power using this blade</line>
+         <line><![CDATA[<i>Effect:</i>]]> Each enemy within 1 square of the triggering enemy is dazed until the end of your next turn.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Within 2 squares.</line>
+      </block>
+   </item>
+
+   <item>
       <title>Holy Healer's Weapon</title>
       <category>Uncommon</category>
       <fluff>Healers who wield this weapon relish combat and enjoy healing their allies while attacking their enemies</fluff>
@@ -2802,6 +2863,390 @@
          <action>Standard</action> <subaction>Action</subaction>
          <line><![CDATA[<i>Effect:</i> Make a <i>ranged basic attack</i>]]> with this spear. On a hit, the target is also immobilized (save ends). The spear doesn't return to you until the effect on the target has ended.</line>
          <line><![CDATA[<i>Special:</i>]]> You can draw this weapon as part of this action.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Hyrsam Fiddlestick</title>
+      <category>Uncommon</category>
+      <fluff>This finely crafted fiddlestick is carved from wood and woven with strands of mithral</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Light blade</subtype>
+      <headline>
+         <name>Requirement</name>
+         <text>This enhancement can only be placed on a one-handed weapon.</text>
+      </headline>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d8 damage per plus if you are wielding a Hyrsam fiddle in your other hand</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>If you hold a Hyrsam fiddlestick in one hand and a Hyrsam fiddle in the other, you gain the highest enhancement bonus between them as an item bonus to any skill check made as part of a Bard ritual.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You miss with an arcane melee or arcane close attack made with this item</line>
+         <line><![CDATA[<i>Effect:</i>]]> Reroll the triggering attack roll, and use either result.</line>
+         <line><![CDATA[<i>Special:</i>]]> If you are wielding a Hyrsam fiddlestick in your other hand and miss the triggering attack roll even with the reroll, you regain the use of this power when you take a short rest.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Inertial Weapon</title>
+      <category>Uncommon</category>
+      <fluff>When you force your foe to move against its will, the solidified energy sheathing this weapon expands itself with an echoing snap, sending other enemies stumbling away</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Flail</subtype> <subtype>Hammer</subtype> <subtype>Mace</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 force damage per plus</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Augmentable</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You push or slide an enemy with a Weapon attack using this weapon</line>
+         <line><![CDATA[<i>Effect:</i>]]> You push each enemy adjacent to you, other than the triggering enemy, 1 square.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Push 2 squares.</line>
+         <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> The triggering attack deals an additional +1d10 force damage, and this attack gains the Force keyword.</line>
+         <line indent="2"><![CDATA[<i>Level 23 or 28:</i>]]> +2d10 force damage.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Inescapable Weapon</title>
+      <category>Common</category>
+      <fluff>This weapon grows increasingly eager to strike those you have trouble hitting</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>When you miss a target with this weapon, you gain a +1 bonus to your next attack roll with this weapon against the same target. If you miss while you have the bonus, the bonus increases by +1, to a maximum bonus of 1 + this weapon's enhancement bonus.</line>
+         <line>The bonus immediate ends if you attack a different target with this weapon, hit the target with this weapon, or stow or drop this weapon.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Infectious Flame Weapon</title>
+      <category>Uncommon</category>
+      <fluff>Shaped in the form of flickering flames, this devilish weapon causes fire to leap from foe to foe</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 fire damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>If you score a critical hit with this weapon against a creature taking ongoing fire damage, another enemy within 2 squares of it takes ongoing 5 fire damage (save ends).</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Ongoing 10 fire damage.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Within 3 squares, and ongoing 15 fire damage.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fire</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit a creature with a Weapon attack made using this weapon</line>
+         <line><![CDATA[<i>Effect:</i>]]> The triggering creature takes ongoing 5 fire damage (save ends).</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Ongoing 10 fire damage.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Ongoing 15 fire damage.</line>
+         <line indent="1"><![CDATA[<i>Aftereffect:</i>]]> One enemy within 2 squares of the triggering creature takes the same amount of ongoing damage without this aftereffect.</line>
+         <line indent="2"><![CDATA[<i>Level 23 or 28:</i>]]> Within 3 squares.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Inspiring Weapon</title>
+      <category>Common</category>
+      <fluff>Leaders use this weapon to rally allies around them for a powerful attack</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Effect:</i>]]> Close burst 1 (each ally in the burst); Each target gains a power bonus to damage rolls until the end of your next turn. The bonus equals this weapon's enhancement bonus.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Ki Weapon</title>
+      <category>Common</category>
+      <fluff>This weapon seems to become one with your body, allowing you to deal more damage when you strike with multiple blows</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Once per turn, when you use your Flurry of Blows power, it deals 2 extra damage to its targets.</line>
+         <line indent="1"><![CDATA[<i>Level 18, 23 or 28:</i>]]> 3 extra damage.</line>
+      </block>
+   </item>
+
+   <item>
+      <title>Luckblade</title>
+      <category>Uncommon</category>
+      <fluff>Luck favors the bold - and the wielder of this blade</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You make an attack roll using this blade and dislike the result</line>
+         <line><![CDATA[<i>Effect:</i>]]> Reroll the triggering attack roll and use the second result, even if it is lower.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Use whichever roll you wish.</line>
       </block>
    </item>
 
