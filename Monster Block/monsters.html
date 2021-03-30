@@ -1,0 +1,659 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <style>
+      .container {
+         box-sizing:border-box;
+         float:left;
+      }
+
+      .creature {
+         background:linear-gradient(to right, #d6d6c2, #ebebe1);
+         margin:0.2cm;
+         width:98%;
+         float:left;
+         page-break-inside:avoid;
+      }
+
+      .header {
+         background:#4e5c2e;
+         width:100%;
+         float:left;
+         color:white;
+      }
+
+      .title {
+         float:left;
+         width:calc(100% - 13.3em);
+         margin:0.3em;
+         margin-bottom: 0.2em;
+         margin-left:0.4em;
+         vertical-align:middle;
+         font-size:1.2em;
+         font-variant: small-caps;
+         font-weight:bold;
+         letter-spacing:1px;
+      }
+
+      .rolelevel {
+         width: 18em;
+         float:right;
+         text-align:right;
+         font-size: 0.8em;
+         margin:0.5em;
+         margin-left:0.3em;
+         font-weight: bold;
+      }
+
+      .typexp {
+         width: 100%;
+         float: left;
+      }
+
+      .type {
+         float:left;
+         width:calc(100% - 8.5em);
+         margin: 0.2em;
+         margin-top: 0.1em;
+         margin-left: 0.5em;
+         font-variant: small-caps;
+      }
+
+      .xp {
+         width: 7em;
+         float:right;
+         margin: 0.3em;
+         margin-top: 0.1em;
+         text-align: right;
+      }
+
+      .topbox {
+         float:left;
+         width:100%;
+         box-sizing:border-box;
+         padding:0.3em;
+      }
+
+      .line {
+         width:100%;
+         box-sizing:border-box;
+         padding:0.2em 0.3em;
+         text-indent:-1em;
+         padding-left:1.3em;
+         float:left;
+      }
+
+      .indent0 {
+         padding-left: 2.3em;
+      }
+
+      .indent1 {
+         padding-left: 3.3em;
+      }
+
+      .indent2 {
+         padding-left: 4.3em;
+      }
+
+      .topleft {
+         width: calc(100% - 9em);
+      }
+
+      .topright {
+         width: 9em;
+         float: right;
+         text-align: right;
+         padding-left: 0.3em;
+      }
+
+      .catname {
+         background-color:#4e5c2e;
+         color: white;
+         width:100%;
+         padding:0.2em;
+         padding-left: 0.7em;
+         box-sizing: border-box;
+         font-variant:small-caps;
+         font-size:1.1em;
+         font-weight: bold;
+         float:left;
+      }
+
+      .blockhead {
+         background:linear-gradient(to right, #c6c5ad, #d6d5c4);
+         width:100%;
+         box-sizing:border-box;
+         padding:0.3em;
+         float:left;
+      }
+
+      .blockname {
+         float:left;
+         width: max-content;
+         max-width: calc(100% - 6em);
+      }
+
+      .blockicon {
+         font-family: 'game_icons';
+         font-size: 0.78em;
+         width:2em;
+         float: left;
+         text-align: center;
+      }
+
+      .blockblob {
+         width: 1.2em;
+         float: left;
+         text-align:center;
+      }
+
+      .frequency {
+         float:left;
+         max-width:21em;
+      }
+
+      .checkmods {
+         background:linear-gradient(to right, #c6c5ad, #d6d5c4);
+         width:100%;
+         box-sizing:border-box;
+         padding:0.3em;
+         float:left;
+      }
+
+      .ability {
+         width: 32%;
+      }
+
+      .bottombox {
+         width:100%;
+         box-sizing:border-box;
+         padding:0.3em;
+         float:left;
+      }
+
+      .bottomleft {
+         width: 13em;
+      }
+
+      .bottomright {
+         width: calc(100% - 14em);
+      }
+
+      @font-face {
+         font-family: 'game_icons';
+         src: url('font/gameicons-webfont.woff2') format('woff2'),
+         url('font/gameicons-webfont.woff') format('woff'),
+         url('font/gameicons-webfont.ttf') format('truetype');
+         font-weight: normal;
+         font-style: normal;
+
+      }
+
+      @media only screen and (min-width:600px) {
+         .container {
+            column-count: 2;
+            column-gap:.4em;
+         }
+
+      }
+
+      @media only screen and (min-width:1000px) {
+         .container {
+            column-count: 3;
+            column-gap:0.5em;
+         }
+
+         .listcontainer {
+            column-count: 2;
+            column-gap:0.5em;
+         }
+      }
+
+      @media only screen and (min-width:1300px) {
+         .container {
+            column-count: 4;
+            column-gap:0.6em;
+         }
+
+      }
+
+      @page {
+         size: auto;
+         margin: 0.85cm 0.7cm 1.1cm;
+      }
+
+      @media print {
+         .container {
+            column-count: 2;
+            column-gap:0.5em;
+            margin:0cm;
+         }
+
+         .listcontainer {
+            column-count: 2;
+            column-gap:0.6em;
+            margin:0cm;
+         }
+
+      }
+   </style>
+</head>
+
+<body style="font-family:Verdana; font-size:7pt;margin:0cm; ">
+   <div class="container">
+
+      <div class="creature">
+         <div class="header">
+            <div class="title">Creature Title</div>
+            <div class="rolelevel">Lvl X Elite Skirmisher (Leader)</div>
+            <div class="typexp">
+               <div class="type">Medium natural humanoid (human)</div>
+               <div class="xp">XP 100</div>
+            </div>
+         </div>
+         <div class="topbox">
+            <div class="line topleft">
+               <b>HP</b> xx; <b>Bloodied</b> xx
+               <!-- <br />HP-related notes, such as regeneration, or healing surge information for PCs -->
+            </div>
+            <div class="line topright">
+               <b>Initiative</b> +X
+            </div>
+            <div id="senses" class="line topright">
+               <b>Perception</b> +X
+               <!--  <br /> <b>Insight</b> +X -->
+               <!-- <br /> darkvision -->
+            </div>
+            <div id="defense" class="line topleft">
+               <b>AC</b> xx, <b>Fortitude</b> xx, <b>Reflex</b> xx, <b>Will</b> xx
+               <!-- <br /> Defense-related notes, such as conditional bonuses -->
+            </div>
+            <div id="move" class="line topleft">
+               <b>Speed</b> 6<!--, <i>fly</i> x, <i>climb</i> x, <i>swim</i> x -->
+               <!-- <br /> Speed-related notes -->
+            </div>
+            <!-- <div id="resist" class="line topleft">
+               <b>Immune</b> stuff; <b>Resist</b> x stuff; <b>Vulnerable</b> x stuff
+            </div>-->
+            <!-- <div id="extra" class="line" style="width: calc(100% - 9em); float:left;">
+               <b>AP</b> X; <b>Saving Throws</b> +x; +xx vs stuff
+            </div> -->
+         </div>
+         <div class="catname">
+            Category Name
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  <!-- Aura icon <img src="font/auraicon.svg" width="12px" height="12px" />
+                  m melee basic
+                  M melee
+                  r ranged basic
+                  R ranged
+                  C close
+                  A area -->
+                  m
+               </div>
+               <b>Melee Basic Attack</b> (Weapon)
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>At-Will</b>
+            </div>
+         </div>
+         <div class="line indent0">
+            <!-- To indent lines, use indent1 or indent2 instead -->
+            <i>Attack:</i> Melee 1 (one creature); +xx vs. AC
+         </div>
+         <div class="line indent0">
+            <i>Hit:</i> xdxx + x damage.
+         </div>
+         <div class="checkmods">
+            <div class="line">
+               <b>Skill:</b> Skill +x
+            </div>
+            <div class="line ability">
+               <b>Str</b> 13 (+1)
+            </div>
+            <div class="line ability">
+               <b>Dex</b> 13 (+1)
+            </div>
+            <div class="line ability">
+               <b>Wis</b> 13 (+1)
+            </div>
+            <div class="line ability">
+               <b>Con</b> 13 (+1)
+            </div>
+            <div class="line ability">
+               <b>Int</b> 13 (+1)
+            </div>
+            <div class="line ability">
+               <b>Cha</b> 13 (+1)
+            </div>
+         </div>
+         <div class="bottombox">
+            <div class="line bottomleft">
+               <b>Alignment:</b> Unaligned
+            </div>
+            <div class="line bottomright">
+               <b>Languages:</b> -
+            </div>
+            <div class="line">
+               <b>Equipment:</b> items
+            </div>
+         </div>
+      </div>
+
+      <div class="creature">
+         <div class="header">
+            <div class="title">Dire Rat</div>
+            <div class="rolelevel">Lvl 1 Brute</div>
+            <div class="typexp">
+               <div class="type">Small natural beast</div>
+               <div class="xp">XP 100</div>
+            </div>
+         </div>
+         <div class="topbox">
+            <div class="line topleft">
+               <b>HP</b> 38; <b>Bloodied</b> 19
+            </div>
+            <div class="line topright">
+               <b>Initiative</b> +2
+            </div>
+            <div id="senses" class="line topright">
+               <b>Perception</b> +5
+               <br /> low-light vision
+            </div>
+            <div id="defense" class="line topleft">
+               <b>AC</b> 13, <b>Fortitude</b> 13, <b>Reflex</b> 11, <b>Will</b> 9
+            </div>
+            <div id="move" class="line topleft">
+               <b>Speed</b> 6, <i>climb</i> 3
+            </div>
+         </div>
+         <div class="catname">
+            Standard Actions
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  m
+               </div>
+               <b>Bite</b> (Disease)
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>At-Will</b>
+            </div>
+         </div>
+         <div class="line indent0">
+            <i>Attack:</i> Melee 1 (one creature); +6 vs. AC
+         </div>
+         <div class="line indent0">
+            <i>Hit:</i> 1d10 + 5 damage.
+         </div>
+         <div class="line indent0">
+            At the end of the encounter, the target makes a saving throw. On a failure, the target contracts dire rat filth fever (stage 1).
+         </div>
+         <div class="checkmods">
+            <div class="line">
+               <b>Skill:</b> Stealth +7
+            </div>
+            <div class="line ability">
+               <b>Str</b> 14 (+2)
+            </div>
+            <div class="line ability">
+               <b>Dex</b> 15 (+2)
+            </div>
+            <div class="line ability">
+               <b>Wis</b> 10 (+0)
+            </div>
+            <div class="line ability">
+               <b>Con</b> 18 (+4)
+            </div>
+            <div class="line ability">
+               <b>Int</b> 2 (-4)
+            </div>
+            <div class="line ability">
+               <b>Cha</b> 6 (-2)
+            </div>
+         </div>
+         <div class="bottombox">
+            <div class="line bottomleft">
+               <b>Alignment:</b> Unaligned
+            </div>
+            <div class="line bottomright">
+               <b>Languages:</b> -
+            </div>
+         </div>
+      </div>
+
+      <div class="creature">
+         <div class="header">
+            <div class="title">Balor</div>
+            <div class="rolelevel">Lvl 27 Elite Brute</div>
+            <div class="typexp">
+               <div class="type">Huge elemental humanoid (demon)</div>
+               <div class="xp">XP 22 000</div>
+            </div>
+         </div>
+         <div class="topbox">
+            <div class="line topleft">
+               <b>HP</b> 622; <b>Bloodied</b> 311
+            </div>
+            <div class="line topright">
+               <b>Initiative</b> +20
+            </div>
+            <div id="senses" class="line topright">
+               <b>Perception</b> +27
+               <br /> blindsight 6
+               <br /> darkvision
+            </div>
+            <div id="defense" class="line topleft">
+               <b>AC</b> 40, <b>Fortitude</b> 40, <b>Reflex</b> 37, <b>Will</b> 39
+            </div>
+            <div id="move" class="line topleft">
+               <b>Speed</b> 6, <i>fly</i> 12 (clumsy)
+            </div>
+            <div id="resist" class="line topleft">
+               <b>Resist</b> 20 fire; see <i>variable resistance</i>
+            </div>
+            <div id="extra" class="line" style="width: calc(100% - 9em); float:left;">
+               <b>AP</b> 1; <b>Saving Throws</b> +2
+            </div>
+         </div>
+         <div class="catname">
+            Traits
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  <img src="font/auraicon.svg" width="12px" height="12px" />
+               </div>
+               <b>Flaming Body</b> (Fire)
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>Aura</b> 2, or 3 while the balor is bloodied
+            </div>
+         </div>
+         <div class="line">
+            Any enemy that starts its turn in the aura takes 10 fire damage, or 20 fire damage while the balor is bloodied.
+         </div>
+         <div class="catname">
+            Standard Actions
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  m
+               </div>
+               <b>Lightning Sword</b> (Lightning, Weapon)
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>At-Will</b>
+            </div>
+         </div>
+         <div class="line indent0">
+            <i>Attack:</i> Melee 3 (one creature); +32 vs. AC
+         </div>
+         <div class="line indent0">
+            <i>Hit:</i> 6d10 + 11 lightning damage, or 71 + 3d10 lightning damage if the balor scores a critical hit.
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  M
+               </div>
+               <b>Flaming Whip</b> (Fire, Weapon)
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>At-Will</b>
+            </div>
+         </div>
+         <div class="line indent0">
+            <i>Attack:</i> Melee 5 (one creature); +30 vs. Reflex
+         </div>
+         <div class="line indent0">
+            <i>Hit:</i> 2d10 + 10 fire damage, and ongoing 15 fire damage (save ends). The balor pulls the target up to 5 squares to a square adjacent to it.
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  M
+               </div>
+               <b>Fire and Lightning</b>
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>At-Will</b>
+            </div>
+         </div>
+         <div class="line indent0">
+            <i>Effect:</i> The balor uses <i>lightning sword</i> once and <i>flaming whip</i> once.
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  C
+               </div>
+               <b>Beheading Blade</b> (Lightning, Weapon)
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>Recharge</b> when first bloodied
+            </div>
+         </div>
+         <div class="line indent0">
+            <i>Attack:</i> Close blast 3 (each enemy in the blast); +32 vs. AC
+         </div>
+         <div class="line indent1">
+            The attack can score a critical hit on a roll of 15 - 20
+         </div>
+         <div class="line indent0">
+            <i>Hit:</i> 5d12 + 14 lightning damage, or 84 + 3d12 lightning damage if the balor scores a critical hit.
+         </div>
+         <div class="catname">
+            Triggered Actions
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <div class="blockicon">
+                  C
+               </div>
+               <b>Death Burst</b> (Fire)
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>Encounter</b>
+            </div>
+         </div>
+         <div class="line indent0">
+            <i>Trigger:</i> The balor drops to 0 hit points.
+         </div>
+         <div class="line indent0">
+            <i>Attack (No Action):</i> Close burst 10 (creatures in the burst); +30 vs. Reflex
+         </div>
+         <div class="line indent0">
+            <i>Hit:</i> 6d10 fire damage.
+         </div>
+         <div class="line indent0">
+            <i>Miss:</i> Half damage.
+         </div>
+         <div class="line indent0">
+            <i>Effect:</i> The balor is destroyed
+         </div>
+         <div class="blockhead">
+            <div class="blockname">
+               <b>Variable Resistance</b>
+            </div>
+            <div class="blockblob">
+               &#x25C6;
+            </div>
+            <div class="frequency">
+               <b>3 / Encounter</b>
+            </div>
+         </div>
+         <div class="line indent0">
+            <i>Trigger:</i> The balor takes acid, cold, fire, lightning, or thunder damage.
+         </div>
+         <div class="line indent0">
+            <i>Effect:</i> The balor gains resist 20 to the triggering damage type until the end of the encounter, or until it uses <i>variable resistance</i> again.
+         </div>
+         <div class="checkmods">
+            <div class="line">
+               <b>Skill:</b> Bluff +20, Insight +27, Intimidate +20
+            </div>
+            <div class="line ability">
+               <b>Str</b> 30 (+23)
+            </div>
+            <div class="line ability">
+               <b>Dex</b> 25 (+20)
+            </div>
+            <div class="line ability">
+               <b>Wis</b> 29 (+22)
+            </div>
+            <div class="line ability">
+               <b>Con</b> 31 (+23)
+            </div>
+            <div class="line ability">
+               <b>Int</b> 12 (+14)
+            </div>
+            <div class="line ability">
+               <b>Cha</b> 14 (+15)
+            </div>
+         </div>
+         <div class="bottombox">
+            <div class="line bottomleft">
+               <b>Alignment:</b> Chaotic Evil
+            </div>
+            <div class="line bottomright">
+               <b>Languages:</b> Abyssal, Common
+            </div>
+            <div class="line">
+               <b>Equipment:</b> lightning sword, flaming whip
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
