@@ -287,7 +287,7 @@
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the pegasus any commands by the end of your turn and are not riding it, it uses its fly-by attack to attack an enemy adjacent to it and then fly its speed towards you. If there are no enemies adjacent to it, it moves its speed towards you.</line>
-            <line>If you aren't riding the warhorse and it used its instinctive action to attack, you take a -2 penalty to Will until the start of your next turn.</line>
+            <line>If you aren't riding the pegasus and it used its instinctive action to attack, you take a -2 penalty to Will until the start of your next turn.</line>
          </block>
 
          <block>
@@ -377,7 +377,7 @@
          <block>
             <name>Instinctive Action</name>
             <line>If you haven't given the dragon any commands by the end of your turn and are not riding it, it uses its breath weapon attack if it can target at least two enemies and the attack is available. If it cannot do so and is not bloodied, it moves its speed towards the closest enemy. If it is bloodied, it moves its speed towards you.</line>
-            <line>If you aren't riding the warhorse and it cannot either attack or move adjacent to an enemy, or move adjacent to you, you lose the resist cold you gain from the symbiosis.</line>
+            <line>If you aren't riding the dragon and it cannot either attack or move adjacent to an enemy, or move adjacent to you, you lose the resist cold you gain from the symbiosis.</line>
          </block>
 
          <block>
@@ -640,6 +640,67 @@
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Fire Warrior (Wizard Daily Attack 1)</source>
    </creature>
+
+   <creature>
+      <title>Guardian of Faith</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>immortal</origin> <type>humanoid</type>
+
+      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effecs that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>5</speed>
+
+      <resist>
+         <type>radiant</type> <value>5</value>
+      </resist>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>melee</type>
+            <keyword>Divine</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> Melee 1 (one creature); The guardian and the target gain a +2 power bonus to AC until the end of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+
+         <block>
+            <name>Nonaction Reaction</name> <type>close</type>
+            <keyword>Divine</keyword> <keyword>Radiant</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> An enemy ends its turn adjacent to the guardian</line>
+            <line><![CDATA[<i>Attack:</i>]]> Close blast 1 (the triggering enemy); Wisdom vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> Radiant damage equal to 5 + your Wisdom modifier + your implement's enhancement bonus.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the guardian of faith any commands by the end of your turn, it uses the standard action power on a bloodied creature adjacent to it. If it can't do that, it moves its speed towards the nearest bloodied creature.</line>
+            <line>If the guardian did not use its power, you take a -2 penalty to AC until the start of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +1 power bonus to AC.</line>
+         </block>
+      </category>
+
+      <alignment>Same as your deity</alignment>
+      <language>-</language>
+      <source>Summon Guardian of Faith (Cleric Daily Attack 1)</source>
+   </creature>
+
 
    <creature>
       <title>Imp</title>
