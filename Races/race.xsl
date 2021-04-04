@@ -179,13 +179,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       </style>
    </head>
-   <body style="font-family:Candara, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
+   <body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
 
    <div id="classheader" style="box-sizing:border-box; width:100%; float:left; color:white; ">
-      <div id="classtitle" style="font-family:DnDLolth; background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:1em 1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
+      <div id="classtitle" style="font-family:DnDLolth; background-color:#042151; box-sizing:border-box; width:100%; float:left; font-size:1.6em; padding:0.6em 1em; font-weight:bold; font-variant:small-caps; letter-spacing:1px;" >
          <xsl:value-of select="race/name" />
       </div>
-      <div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:1em; float:left;" >
+      <div id="classinfo" style="background:linear-gradient(to right, #45494f, #45494f, #6d737c); box-sizing:border-box; width:100%; padding:0.6em 1em; float:left;" >
          <b><xsl:text>Size: </xsl:text></b>  <xsl:value-of select="race/size" /> <xsl:text>; </xsl:text> <b><xsl:text>Origin: </xsl:text></b> <xsl:value-of select="race/origin" /> <xsl:text>; </xsl:text> <b><xsl:text>Type: </xsl:text></b> <xsl:value-of select="race/type" /> <br />
          <span style="font-family:MentorSansStd-Light; font-style:italic;"><xsl:value-of select="race/shortfluff" /></span>
       </div>
@@ -373,7 +373,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:if>
 
 		<xsl:if test="not(hide-freqkey = 'true')">
-			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em; float:left; font-size:10pt; font-weight:bold;">
+			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em 0.15em; float:left; font-size:9.5pt; font-weight:bold;">
 				<div id="frequency" style="width:5.9em; float:left;">
 					<xsl:value-of select="frequency"/>
 				</div>
@@ -389,7 +389,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:if>
 
 		<xsl:if test="not(hide-actrange = 'true')">
-			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em 0.3em; float:left;">
+			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em; float:left;">
 				<div id="action" style="width:12.2em; float:left; ">
 					<b><xsl:value-of select="action"/></b> <xsl:text> </xsl:text>
 					<xsl:value-of select="subaction"/>
