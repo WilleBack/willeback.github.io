@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../class.xsl"?>
+
+<class>
+   <name>Cleric</name>
+   <subname>Templar</subname>
+   <role>Leader</role>
+   <source>Divine</source>
+   <shortfluff>You lead by healing and shielding allies with your prayers, and by drawing on divine power to improve your allies' attacks</shortfluff>
+   <keyability>Wisdom</keyability>
+   <keyability>Strength</keyability>
+   <keyability>Charisma</keyability>
+
+   <proficiency>
+      <type>Armor</type>
+      <name>Cloth</name>
+      <name>Leather</name>
+      <name>Hide</name>
+      <name>Chainmail</name>
+   </proficiency>
+   <proficiency>
+      <type>Weapon</type>
+      <name>Simple melee</name>
+      <name>Simple ranged</name>
+   </proficiency>
+   <proficiency>
+      <type>Implement</type>
+      <name>Holy symbols</name>
+   </proficiency>
+
+   <defense>
+      <name>Will</name>
+      <value>+2</value>
+   </defense>
+
+   <hpbase>12</hpbase>
+   <hpgain>5</hpgain>
+   <surgebase>7</surgebase>
+
+   <skills>
+      <trained>Religion</trained>
+      <number>3</number>
+   </skills>
+
+   <fluff>Schooled in religious traditions, Cleric wield divine powers entrusted to them throuth ordination or investiture in the service of a deity. They are expected to further their deity's interests throughout their lives, aiding all who work in the deity's name (whether they realize it or not) and opposing any who seek to thwart the deity's will. </fluff>
+   <fluff>Templars try to sway the good people of the world to give honor and worship to the gods by setting an example of courage, understanding, patience, piety, and zeal. Sometimes this is best done through ministering to the needs of the common folk, sometimes by offering advice and counsel to those who hold power in the world, and sometimes by leading the way on bold adventures and inspiring quests.</fluff>
+   <fluff>Simply because such a wide variety of religious orders, priesthoods, and traditions are scattered across the world, Templars draw from a wide variety of powers. The divine magic they wield heals the injured, protects the weak, and chastises the wicked.</fluff>
+
+   <feature>
+      <name>Channel Divinity</name>
+      <benefit>You can invoke divine power, filling yourself with power derived from your rites. This power allows you to wield special powers.</benefit>
+      <benefit>Once per encounter, you can use a Channel Divinity power.</benefit>
+      <benefit>You gain the <![CDATA[<i>divine fortune</i>]]> Channel Divinity power, and your choice of one of <![CDATA[<i>healer's mercy</i>, <i>smite undead</i>, or <i>turn undead</i>]]>. You can choose a power offered by your patron deity in place of <![CDATA[<i>divine fortune</i>]]>. The Divine Domain option of your Clerical Training class feature also provides you with a Channel Divinity power.</benefit>
+      <benefit>Feats and other abilities can grant you additional Channel Divinity powers. Unless the ability specifically says otherwise, you can still only use one Channel Divinity power in an encounter. If an ability allows you to regain the use of your Channel Divinity, you can use any Channel Divinity power you know, even the same one.</benefit>
+
+      <subfeature>
+         <power>
+            <title>Divine Fortune</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>In the face of peril, you hold true to your faith and receive a special boon</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Free</action> <subaction>Action</subaction>
+               <type>Personal</type>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You gain a +1 bonus to your next attack roll or saving throw before the end of your next turn.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Healer's Mercy</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>Strength flows out from you to your injured comrades, rekindling their resolve to see the battle to its end</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine, Healing</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Close</type> <range>burst 5</range>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>Each bloodied ally in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Each target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>You are weakened until the end of your next turn.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Smite Undead</title>
+            <class>Cleric</class> <category>Attack</category>
+            <fluff>You scorch an undead foe with your weapon, driving it back and then binding it in place</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine, Radiant, Weapon</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Melee</type> <range>weapon</range>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One undead creature</text>
+               </section>
+               <section>
+                  <name>Attack:</name> <name-style>bold</name-style>
+                  <text>Wisdom vs. Will</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Hit:</name> <name-style>bold</name-style>
+                  <text>2[W] + Wisdom modifier radiant damage, and you push the target a number of squares equal 3 + your Strength modifier. The target is immobilized until the end of your next turn.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 6:</name> <name-style>italic</name-style>
+                  <text>3[W] + Wisdom modifier radiant damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>4[W] + Wisdom modifier radiant damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 16:</name> <name-style>italic</name-style>
+                  <text>5[W] + Wisdom modifier radiant damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>6[W] + Wisdom modifier radiant damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 26:</name> <name-style>italic</name-style>
+                  <text>7[W] + Wisdom modifier radiant damage.</text>
+               </section>
+               <section>
+                  <name>Miss:</name> <name-style>bold</name-style>
+                  <text>Half damage.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Turn Undead</title>
+            <class>Cleric</class> <category>Attack</category>
+            <fluff>You sear undead foes, push them back, and root them in place</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine, Implement, Radiant</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Close</type> <range>burst 2</range>
+               <section>
+                  <indent>4</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<b>Close</b>]]> burst 3</text>
+               </section>
+               <section>
+                  <indent>4</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<b>Close</b>]]> burst 5</text>
+               </section>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>Each undead creature in the burst</text>
+               </section>
+               <section>
+                  <name>Attack:</name> <name-style>bold</name-style>
+                  <text>Wisdom vs. Will</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Hit:</name> <name-style>bold</name-style>
+                  <text>2d10 + Wisdom modifier radiant damage, and you push the target a number of squares equal to 3 + your Charisma modifier. The target is immobilized until the end of your next turn.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>3d10 + Wisdom modifier radiant damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>level 21:</name> <name-style>italic</name-style>
+                  <text>4d10 + Wisdom modifier radiant damage.</text>
+               </section>
+               <section>
+                  <name>Miss:</name> <name-style>bold</name-style>
+                  <text>Half damage, and pushed half the distance.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+   </feature>
+
+   <feature>
+      <name>Clerical Archives</name>
+      <benefit>As part of their training, Templars are also tasked to care for the vast archives. This gives them additional knowledge that can be applied during adventures.</benefit>
+      <benefit>Choose Alchemical Archives or Ritual Archives to show the knowledge you have.</benefit>
+
+      <subfeature>
+         <name>Alchemical Archives</name>
+         <benefit>Your training included caring for the archives on mixtures that ease ailments.</benefit>
+         <benefit>You gain the Alchemist feat.</benefit>
+         <benefit>You gain a formula book containing the formula for one curative alchemical item. The formula can be for any level of item, but you can still only craft alchemical items of your level or lower.</benefit>
+         <benefit>Also, you can create <![CDATA[<i>potions of cure wounds</i>]]> as if they were curative alchemical items, and you have the formula in your formula book.</benefit>
+         <benefit>In addition, whenever you finish a long rest, you can create one curative alchemical item of your level or lower without paying the component cost. You must have the formula for the item, and you can only have one such item in existence at one time.</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Ritual Archives</name>
+         <benefit>Your archival duties focused on the catalogues of religious rituals that exist.</benefit>
+         <benefit>You gain the Ritual Caster feat.</benefit>
+         <benefit>You gain a ritual book that contains two 1st-level rituals of your choice. Both rituals must have Religion as a key skill.</benefit>
+         <benefit>Also, once per day, when you cast a ritual of a lower level than you using Religion as the skill, you only pay half of the component cost.</benefit>
+      </subfeature>
+   </feature>
+
+   <feature>
+      <name>Clerical Training</name>
+      <benefit>Templar training varies from one sect to another, from tradition to order. Some training regimes focus on the Templar's personal skill, while others on embodying a part of the deity's portfolio.</benefit>
+      <benefit>For your Templar's training, choose either Battle Lore, Divine Domain, or Healer's Lore.</benefit>
+
+      <subfeature>
+         <name>Battle Lore</name>
+         <benefit>A Battle Templar focuses on personal combat skill, allowing him or her to stand in the middle of combat to best support allies with prayer and and strength of arms.</benefit>
+         <benefit>You gain proficiency with scale armor, and a +2 shield bonus to AC.</benefit>
+         <benefit>In addition, when you use a cleric Healing power and the target spends a healing surge to regain hit points, the target also gains a +2 bonus to attack rolls until the end of your next turn.</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Divine Domain</name>
+         <benefit>Dedication to a domain of a deity's power is a path not all Templars can follow. Depending on the domain, dedication can take great physical or mental fortitude.</benefit>
+         <benefit>You gain several benefits depending on your choice of domain: benefits related to the domain, an utility power, and a Channel Divinity power.</benefit>
+         <benefit>Your domain also places restrictions on you. Each domain lists two powers; you must select at least one of these as one of your two 1st-level at-will attack powers from your class.</benefit>
+         <benefit>The available domains are Death, Earth, Life, Knowledge, Protection, Storm, Sun, Tyranny, and War. Details for each domain can be found at the end of the class description.</benefit>
+      </subfeature>
+
+      <subfeature>
+         <name>Healer's Lore</name>
+         <benefit>A Healer Templar chooses to stand back and concentrate on keeping his or her companions healthy and optimized.</benefit>
+         <benefit>You gain training in the Heal skill, and when you administer first aid, the target gains the defense bonus for using <![CDATA[<i>second wind</i>]]> until the start of your next turn.</benefit>
+         <benefit>In addition, when you use a cleric Healing power and the target spends a healing surge to regain hit points, the target regains additional hit points equal to your Wisdom modifier.</benefit>
+      </subfeature>
+   </feature>
+
+   <feature>
+      <name>Healing Word</name>
+      <benefit>With but a quick prayer, a Templar can restore and invigorate his or her allies.</benefit>
+      <benefit>You gain the <![CDATA[<i>healing word</i>]]> class power.</benefit>
+
+      <power>
+         <title>Healing Word</title>
+         <class>Cleric</class> <category>Utility</category>
+         <fluff>You utter a soothing prayer that mends wounds of the body and spirit</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Healing</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Close</type> <range>burst 5</range>
+            <section>
+               <indent>4</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text><![CDATA[<b>Close</b>]]> burst 10</text>
+            </section>
+            <section>
+               <indent>4</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text><![CDATA[<b>Close</b>]]> burst 15</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>You or one ally in the burst</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value plus an additional 1d6 hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 6:</name> <name-style>italic</name-style>
+               <text>An additional 2d6 hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>An additional 3d6 hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 16:</name> <name-style>italic</name-style>
+               <text>An additional 4d6 hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>An additional 5d6 hit points.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 26:</name> <name-style>italic</name-style>
+               <text>An additional 6d6 hit points.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>You can use this power twice per encounter, but only once per round.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 16:</name> <name-style>italic</name-style>
+               <text>Three times per encounter.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+
+   <feature>
+      <name>Share the Burden</name>
+      <benefit>A Templar not only helps build a feeling of community and belonging in his or her group, but also facilitates sharing the burden of battle among peers by balancing the drain between comrades.</benefit>
+      <benefit>When you take a short rest with at least one ally, you can link everyone's life forces. Linked characters can give their healing surges to other linked characters during the short rest. Giving a healing surge in this way does not count as spending a healing surge for the giving character, and any healing surges must be spend during the short rest or they disappear.</benefit>
+   </feature>
+
+   <feature>
+      <name>Divine Domains</name>
+      <benefit>The domains detailed here contain the following information:</benefit>
+      <benefit><![CDATA[<b>Deities:</b>]]> List of deities that offer that domain.</benefit>
+      <benefit><![CDATA[<i>Features:</i>]]> One or two features related to the domain, usually granting you small benefits or when you use your <![CDATA[<i>healing word</i>]]> class power.</benefit>
+      <benefit><![CDATA[<i>Utility Power:</i>]]> Each domain has a utility power that you gain.</benefit>
+      <benefit><![CDATA[<i>Channel Divinity Power:</i>]]> Each domain grants you a Channel Divinity power.</benefit>
+      <benefit><![CDATA[<i>At-Will Attacks:</i>]]> Listed are two 1st-level at-will attack powers. At least one of the 1st-level at-will attack powers you gain from your class must be one of these powers.</benefit>
+
+      <subfeature>
+         <name>Death</name>
+         <benefit>The living are allocated only a finity amount of time in the world, and creatures vampires, ghouls, and other undead violate this structure and must be destroyed. The gods of death are the guardians of the balance between the living and the dead, marking the end of each life and seeing the fate that awaits all living creatures. Clerics of the death domain are shunned as evil by mortals who fear death. However, the power of death is not evil in and of itself.</benefit>
+         <benefit><![CDATA[<b>Deities:</b>]]> The Raven Queen</benefit>
+         <benefit>You gain resist 5 necrotic. This increases to resist 10 at 11th level, and to resist 15 at 21st level. If you already have resist necrotic from another source, you instead increase that resist by 5.</benefit>
+         <benefit>Also, when you use your <![CDATA[<i>healing word</i>]]> class power, you gain 5 temporary hit points. These temporary hit points increase to 10 at 11th level, and to 15 at 21st level.</benefit>
+         <benefit>You gain the <![CDATA[<i>eye of the vulture</i>]]> utility power and the <![CDATA[<i>stay the hand of death</i>]]> Channel Divinity power.</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>death's shadow</i> or <i>weakening strike</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Eye of the Vulture</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>Unseen energy lances out from you to your foes, granting you perception of the balance between life and death</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Close</type> <range>burst 3</range>
+               <section>
+                  <indent>4</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<b>Close </b>burst 4]]></text>
+               </section>
+               <section>
+                  <indent>4</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<b>Close </b>burst 5]]></text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>Each bloodied creature in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You learn which targets have current hit point totals lower than you healing surge value.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Stay the Hand of Death</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>When grievous wounds hinder you or an ally, your power bestows a temporary surge of vitality</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Close</type> <range>burst 3</range>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>You or one ally in the burst; the target must be bloodied</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>italic</name-style>
+                  <text>The target gains temporary hit points equal to 2 + your Wisdom modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>Equal to 5 + your Wisdom modifier.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Equal to 10 + your Wisdom modifier.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Earth</name>
+         <benefit>The lords of the earth preach patience, endurance, and fortitude in the face of overwhelming odds. Your duty is to be like the rack of the earth to your allies and community, a reliable source of support and strength. While others crumble in despair, you stand tall, strong, and resolute.</benefit>
+         <benefit><![CDATA[<b>Deities:</b>]]> Moradin, Torog</benefit>
+         <benefit>You have an Aura 5 (Divine). You and allies in the aura gain a +2 power bonus to saves against ongoing damage.</benefit>
+         <benefit>Also, when you use your <![CDATA[<i>healing word</i>]]> class power, the target takes half damage from the next attack that deals it damage before the end of your next turn.</benefit>
+         <benefit>You gain the <![CDATA[<i>stone speak</i>]]> utility power and the <![CDATA[<i>stone's resolve</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>burden of earth</i> or <i>earth's endurance</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Stone Speak</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>You reach down to touch the stone beneath you and at your urging, it tells you the tale of this place</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Personal</type>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You make a Perception check with a +5 power bonus to detect secret doors, hidden object, hidden creatures, or to find tracks within 10 squares.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Stone's Resolve</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>For a brief moment, you or a nearby ally become a creature of living rock</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Close</type> <range>burst 2</range>
+               <section>
+                  <indent>4</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<b>Close </b>burst 3]]></text>
+               </section>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>You or one ally in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target gains resist 5 all until the end of your next turn.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>Resist 10 all.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Resist 15 all.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Life</name>
+         <benefit>If it originates in the world, and it breathes and draws sustenance, deities of life champion its right to exist. Yet not all value one of the world's living things over another. All have the right to play out the natural processes of struggle and survival. Some focus to the cause of life in different ways, watching over the fields and farms, and the harvests and herds. Most bless those who show mercy and alleviate suffering.</benefit>
+         <benefit><![CDATA[<b>Deities:</b>]]> Melora, Pelor</benefit>
+         <benefit>You gain a +2 bonus to death saving throws. While you are not dying, allies within 5 squares of you also gain this bonus.</benefit>
+         <benefit>Also, when you use your <![CDATA[<i>healing word</i>]]> class power, the target also gains 5 temporary hit points. These temporary hit points increase to 10 at 11th level, and to 15 at 21st level.</benefit>
+         <benefit>You gain the <![CDATA[<i>reinforce life</i>]]> utility power and the <![CDATA[<i>life's blessing</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>astral seal</i> or <i>recovery strike</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Reinforce Life</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>You help an ally's determination vigorate his or her body and soul</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine, Healing</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Ranged</type> <range>5</range>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One ally who has temporary hit points</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target regains a number of hit points equal to his or her temporary hit points, then loses all temporary hit points.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Life's Blessing</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>With an earnest call to your deity, you release a burst of life energy that energises your allies</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Close</type> <range>burst 3</range>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>Each ally in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Each target gains a +2 bonus to his or her healing surge value until the end of your next turn.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>+3 bonus.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>+5 bonus.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Knowledge</name>
+         <benefit>A devotee of a deity of knowledge comprehends the power of ideas and the primacy of information- not just with the mind, but with the soul. Some deities of knowledge do not dedicate themselves knowledge alone; innovation, inspiration,  and discovery too form the basis for knowledge.</benefit>
+         <benefit><![CDATA[<b>Deities:</b> ]]>Ioun, Vecna</benefit>
+         <benefit>You can use Wisdom instead of Intelligence as the ability score when making an Arcana check, a History check, or a Religion check.</benefit>
+         <benefit>Also, when you use your <![CDATA[<i>healing word</i>]]> class power, the target can roll twice on the first skill check he or she makes before the end of your next turn.</benefit>
+         <benefit>You gain the <![CDATA[<i>sudden inspiration</i>]]> utility power and the <![CDATA[<i>knowledge to spread</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>blessing of knowledge</i> or <i>mindful assault</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Sudden Inspiration</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>You gain a divine perspective into how a challenge can be surmounted, the thought arriving in the nick of time</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Immediate</action> <subaction>Interrupt</subaction>
+               <type>Ranged</type> <range>10</range>
+               <section>
+                  <indent>1</indent>
+                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+               </section>
+               <section>
+                  <name>Trigger:</name> <name-style>bold</name-style>
+                  <text>You or an ally within 10 squares of you fails a skill check</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>The triggering creature</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target gains a power bonus to the triggering check equal to your Wisdom modifier.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Knowledge to Spread</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>Fresh thoughts run through the minds of you and your allies, each idea particular to the task to which you set yourself</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Close</type> <range>burst 3</range>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>You and each ally in the burst</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Each target gains a +2 power bonus to the first skill check he or she makes before the end of your next turn.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Protection</name>
+         <benefit>Gods of protection wield their divine influence to minimize the effect of disasters, to guide those in peril to shelter, and to influence mortals away from overly destructive actions. Some protection gods inspire their followers to engage enemies through force of arms, while others work indirectly, shielding their followers with helpful weather, unexpected good fortune, or inspired champions.</benefit>
+         <benefit><![CDATA[<b>Deities:</b> ]]>Bahamut, Moradin</benefit>
+         <benefit>You cannot be forced to attack an ally under any circumstances. Such an attempt automatically fails, although damage or conditions associated with the effect that would cause you to attack your ally can still affect you. You can attack an ally if you choose to do so.</benefit>
+         <benefit>Also, when you use your <![CDATA[<i>healing word</i>]]> class power, the target gains a +2 power bonus to all defenses until the end of your next turn.</benefit>
+         <benefit>You gain the <![CDATA[<i>divine guard</i>]]> utility power and the <![CDATA[<i>knowledge to spread</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>blessing of battle</i> or <i>priest's shield</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Divine Guard</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>Your prayer brings forth a shielding presence around an ally, protecting him or her from attacks</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Ranged</type> <range>5</range>
+               <section>
+                  <indent>1</indent>
+                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>You or one ally</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Until the end of your next turn, the target gains the following benefits:</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <text>&#9658; +2 power bonus to all defenses.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <text>&#9658; When the target is critically hit, it can attempt a saving throw; on a success, the attack is a normal hit instead.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <text>&#9658; The target takes no damage from missed attacks, though other effects can still apply.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Protector's Presence</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>The power of your deity pours forth from you, enveloping you and your allies in protective energy</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Aura, Divine</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Personal</type>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can only use one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You activate an Aura 3 (Divine) until the end of your next turn.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Aura 4.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>You and each ally in the aura gain resist 3 all, and can choose to reduce any forced movement against him or her by 1 square.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>Resist 6 all.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Resist 10 all, and reduce forced movement by 2 squares.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Sustain Standard:</name> <name-style>bold</name-style>
+                  <text>The aura persists until the end of your next turn.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Storm</name>
+         <benefit>As an initiate of the storm, you learn to invoke prayers that draw on howling winds and lashing storms. The storm is a force of raw destruction that brings its power to bear upon those that lack shelter. Your faith allows you to strike your foes with the power of wind, rain, thunder, and lightning, and also to shelter yourself and your allies from harm.</benefit>
+         <benefit><![CDATA[<b>Deities:</b>]]> Kord</benefit>
+         <benefit>You gain resist 3 lightning, and resist 3 thunder. These increase to resist 6 at 11th level, and to resist 10 at 21st level.</benefit>
+         <benefit>Also, when you use your <![CDATA[<i>healing word</i>]]> class power, the target also gains a +2 power bonus to the next damage roll he or she makes before the start of your next turn. The power bonus increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+         <benefit>You gain the <![CDATA[<i>create water</i> utility power and the <i>storm surge</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>disorienting thunder</i> or <i>storm hammer</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Create Water</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>A cool breeze washes over you as a thick, magical mist fills a vessel with water</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Melee</type> <range>touch</range>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One empty cup, flask, or similar container that can hold up to 1 gallon of liquid</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You cause the container to fill with fresh, potable water.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Storm Surge</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>Crackles of lightning dance along the weapon you bless, ready to unleash a surge of power</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine, Lightning</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Ranged</type> <range>2</range>
+               <section>
+                  <indent>1</indent>
+                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+               </section>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can use only one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One weapon</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The next Weapon attack made with the target deals an additional 4 lightning damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text>Additional 7 lightning damage.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text>Additional 10 lightning damage.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Sun</name>
+         <benefit>The sun is the source of all life. Its warmth draws forth crops from freshly tilled fields. Its blinding radiance drives undead back to their crypts and holds the horrid monsters of the Underdark within their subterranean realm. And like the sun, its disciples watch over the lands as sentinels, guardians, and providers.</benefit>
+         <benefit><![CDATA[<b>Deities:</b>]]> Pelor</benefit>
+         <benefit>You gain resist 3 necrotic and resist 3 radiant. These increase to resist 6 at 11th level, and to resist 10 at 21st level.</benefit>
+         <benefit>When you use your <![CDATA[<i>healing word</i>]]> class power, until the start of your next turn, the target's space and squares adjacent to it are filled with bright light, and the squares adjacent to the bright light are lit with dim light. In addition, when a creature makes a melee attack against the target, after that attack has been resolved, the creature takes 2 radiant damage. You can choose to not activate this effect when you use your <![CDATA[<i>healing word</i>]]> class power.</benefit>
+         <benefit>This radiant damage increases to 5 at 11th level, and to 10 at 21st level.</benefit>
+         <benefit>You gain the <![CDATA[<i>sun's glow</i> utility power and the <i>soothing light</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i> You must choose either <i>blessing of light</i> or <i>brand of the sun</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Sun's Glow</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>You place an incandescent mote of sunlight upon a nearby object or in a point of space</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Melee</type> <range>touch</range>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One object or unoccupied space</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target sheds bright light that fills its space and squares within 4 squares of it, and dim light for 2 squares beyond that.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>The light lasts 1 hour, until you use this power again, or until you end the light as a free action.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Soothing Light</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>Under the light of the sun, all ills fade; Similarly, your devotion gives your ally the vigor needed to persevere</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Ranged</type> <range>3</range>
+               <section>
+                  <indent>1</indent>
+                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+               </section>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can use only one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>You or one ally</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target makes a saving throw with a +2 power bonus against an effect that a save can end.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>Tyranny</name>
+         <benefit>Asmodeus seeks nothing less than complete dominion over all existence, and thus he jealously protects his control of the Tyranny domain. Oppression, coercion, repression - these are the tools of the tyrant. Those who follow Asmodeus accept the domination of his agents or seek to gain power for themselves by crushing others in an iron grip. Some times, tyranny might be the lesser of two evils in a setting that faces an even worse threat, such as demonic hordes or invasion from the Far Realm.</benefit>
+         <benefit><![CDATA[<b>Deities:</b>]]> Asmodeus</benefit>
+         <benefit>You gain training in the Intimidation skill.</benefit>
+         <benefit>When you use your <![CDATA[<i>healing word</i>]]> class power on an ally, the target gains a +2 power bonus to attack rolls until he or she hits or the start of your next turn, whichever comes first. If the target ally does not hit and deal damage with an attack before the start of your next turn, that ally takes damage equal to 2 + one-half your level. This damage cannot be resisted or prevented in any way.</benefit>
+         <benefit> You gain the <![CDATA[<i>inspire dread</i>]]> utility power and the <![CDATA[<i>cruel inspiration</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>fell strike</i> or <i>gaze of defiance</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>Inspire Dread</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>You take on a ferocious demeanor, seeming taller and more menacing</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Personal</type>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>Choose one of the following two benefits:</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <text>&#9658; On the first Intimidate check you make before the end of your next turn, you can roll twice and keep the higher roll.</text>
+               </section>
+               <section>
+                  <shade>true</shade> <indent>1</indent>
+                  <text>&#9658; On the first Intimidate check you make before the end of your next turn, you gain a +3 power bonus.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>The benefit applies even if making the check takes longer than the end of your next turn, as along as you begin the activity before the end of that turn.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Cruel Inspiration</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>You lash out with a whip of divine energy, sparking pain but fortifying will</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine, Psychic</keyword>
+               <action>Minor</action> <subaction>Action</subaction>
+               <type>Range</type> <range>5</range>
+               <section>
+                  <indent>1</indent>
+                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+               </section>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can use only one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>You or one ally</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target takes psychic damage equal to 5 + one-half your level, and can then make a saving throw with a +5 power bonus against an effect that a save can end.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>If the target is not affected by an effected that a save can end, he or she can attempt a save against any one effect currently affecting it, but it does not gain the power bonus.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+
+      <subfeature>
+         <name>War</name>
+         <benefit>War is a powerful force in the world, the ultimate test of martial fitness. A War god can be an honorable champion who delights in demonstrations of courage, a cruel conqueror who revels in bloody triumph, or a harsh judge who measures mortals by how they meet their hour of doom. As a devotee of War, you regard battle as the principal test of your worth and devotion; sometimes a fist in the face says more than a thousand honeyed words.</benefit>
+         <benefit><![CDATA[<b>Deities:</b>]]> Bane, Kord</benefit>
+         <benefit>When you make a <![CDATA[<i>melee basic attack</i>]]> using a weapon you have proficiency with, you can use your Wisdom modifier in place of your Strength modifier for the attack roll and damage roll.</benefit>
+         <benefit>When you use your <![CDATA[<i>healing word</i>]]> class power, the target gains a +1 power bonus to the first attack roll it makes before the end of your next turn.</benefit>
+         <benefit>You gain the <![CDATA[<i>true strike</i> utility power and the <i>outmaneuver</i>]]> Channel Divinity power</benefit>
+         <benefit><![CDATA[<i>At-Will Attacks:</i>]]> You must choose either <![CDATA[<i>battle cleric's weapon</i> or <i>tenebrous blessing</i>]]> as one of the 1st-level at-will attacks you gain from your class.</benefit>
+
+         <power>
+            <title>True Strike</title>
+            <class>Cleric</class> <category>Utility</category> <level>1</level>
+            <fluff>A whispered prayer connects your ally with the divine, guiding his or her hands and mind toward the target</fluff>
+            <part>
+               <frequency>At-Will</frequency>
+               <keyword>Divine</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Ranged</type> <range>5</range>
+               <section>
+                  <indent>1</indent>
+                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One ally</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>The target gains a +4 bonus to the first attack roll it makes against an enemy before the end of your next turn.</text>
+               </section>
+            </part>
+         </power>
+
+         <power>
+            <title>Outmaneuver</title>
+            <class>Cleric</class> <category>Utility</category>
+            <fluff>A brilliant light indicates a pathway for your ally to find the right place to battle your foe</fluff>
+            <part>
+               <frequency>Encounter</frequency>
+               <keyword>Divine, Teleportation</keyword>
+               <action>Standard</action> <subaction>Action</subaction>
+               <type>Ranged</type> <range>10</range>
+               <section>
+                  <indent>1</indent>
+                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
+               </section>
+               <section>
+                  <name>Requirement:</name> <name-style>bold</name-style>
+                  <text>You must be adjacent to an enemy</text>
+               </section>
+               <section>
+                  <name>Channel Divinity:</name> <name-style>bold</name-style>
+                  <text>You can use only one Channel Divinity power per encounter.</text>
+               </section>
+               <section>
+                  <name>Target:</name> <name-style>bold</name-style>
+                  <text>One ally</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <name>Effect:</name> <name-style>bold</name-style>
+                  <text>You teleport the target to a space when it flanks an enemy adjacent to you.</text>
+               </section>
+               <section>
+                  <shade>true</shade>
+                  <text>Until the end of your next turn, you and the target gain a +1 bonus to attack rolls against that enemy as long as you both flank it.</text>
+               </section>
+            </part>
+         </power>
+      </subfeature>
+   </feature>
+</class>
