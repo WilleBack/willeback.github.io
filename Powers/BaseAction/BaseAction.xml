@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
 	<collection>Base Actions</collection>
-<!-- At-Will -->
+	
 	<power>
 		<title>Action Point</title>
 		<class>Character</class><category>Ability</category>
@@ -35,7 +35,7 @@
 			<type>Melee</type> <range>1</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One ally adjacent to you who has his or her <![CDATA[<i>second wind</i>]]> available</text>
+				<text>One ally adjacent to you</text>
 			</section>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
@@ -44,7 +44,19 @@
 			<section>
 				<shade>true</shade>
 				<name>Success:</name> <name-style>bold</name-style>
-				<text>The target can use his or her <![CDATA[<i>second wind</i>]]> without spending an action, but does not gain the usual bonus to defenses.</text>
+				<text>Choose one of the following benefits:</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<text>&#9658; If the target is dying, it stabilizes. A stabilized character does not need to make death saving throws.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<text>&#9658; If the target has at least 1 healing surge remaining, he or she can use it as a free reaction, but does not gain the bonus to defenses normally granted by that action.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<text>&#9658; If the target is affected by an effect that a save can end, you aid it with shaking off that effect. The target either can make an immediate saving throw against that effect, or gain a +2 bonus on the next saving throw he or she makes against the effect (target's choice).</text>
 			</section>
 		</part>
 	</power>
@@ -544,7 +556,11 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>You move your speed + 2. Despite the name of this action, you don't always literally run. The action can include other movement modes such as climbing, flying, and swimming.</text>
+				<text>You move your speed + 2.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>Despite the name of this action, you don't always literally run. The action can include other movement modes such as climbing, flying, and swimming.</text>
 			</section>
 		</part>
 	</power>
@@ -554,20 +570,24 @@
 		<class>Character</class><category>Utility</category>
 		<fluff>You push through the pain and fatigue</fluff>
 		<part>
-		<frequency>Encounter</frequency>
-		<keyword>Healing</keyword>
-		<action>Standard</action>
+			<frequency>Encounter</frequency>
+			<keyword>Healing</keyword>
+			<action>Standard</action>
 			<subaction>Action</subaction>
-		<type>Personal</type>
-		<section>
-			<shade>true</shade>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>You can spend a healing surge to regain hit points equal to your healing surge value.</text>
-		</section>
-		<section>
-			<shade>true</shade>
-			<text>You gain a +2 bonus to all defenses until the start of your next turn.</text>
-		</section>
+			<type>Personal</type>
+			<section>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must have at least 1 healing surge remaining</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You can spend a healing surge to regain hit points equal to your healing surge value.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>You gain a +2 bonus to all defenses until the start of your next turn.</text>
+			</section>
 		</part>
 	</power>
 
