@@ -486,6 +486,10 @@
          <type>race</type>
          <name>Tiefling</name>
       </prereq>
+	  <prereq>
+         <type>trait</type>
+         <name>Bloodhunt</name>
+      </prereq>
       <prereq>
          <type>class</type>
          <name>Fighter</name>
@@ -2775,7 +2779,7 @@
       <group>Attack Bonus</group>
       <group>Power Enhancement</group>
       <group>Weapon Specialization</group>
-      <benefit>When you make an at-will Weapon attack against a target's AC using a Mace you have proficiency with, you can expend your &lt;i&gt;attack power&lt;/i&gt; before making the attack roll.</benefit>
+      <benefit>When you make an at-will Weapon attack against a target's AC using a Mace you have proficiency with, you can expend your &lt;i&gt;power strike&lt;/i&gt; attack power before making the attack roll.</benefit>
       <benefit>If you do, instead of the power's normal effects, you make the triggering attack against the target's Fortitude instead, and gain a +2 bonus to damage for each additional [W] of damage the power would normally deal.</benefit>
    </feat>
 
@@ -2835,7 +2839,7 @@
       <group>Attack Penalty</group>
       <group>Class</group>
       <group>Mark Punishment</group>
-      <benefit>If an enemy marked by you is adjacent to you when it makes an attack that doesn't include you as a target, the penalty to attack rolls is either -2 or the number of enemies adjacent to you, whichever is worse.</benefit>
+      <benefit>If an enemy marked by you is adjacent to you when it makes an attack that doesn't include you as a target, the penalty to attack rolls is either -2 or the number of enemies adjacent to you, whichever is higher.</benefit>
    </feat>
 
    <feat>
@@ -3133,7 +3137,7 @@
    </feat>
 
    <feat>
-      <title>Martial Versatile</title>
+      <title>Martial Versatility</title>
       <tier>Heroic</tier>
       <prereq>
          <type>class</type>
@@ -3191,7 +3195,7 @@
       <group>Class</group>
       <group>Defense</group>
       <group>Triggered</group>
-      <benefit>You gain a +1 bonus to AC when you hit with a &lt;i&gt;melee basic attack&lt;/i&gt; or a fighter attack on your turn. The bonus lasts until the end of your next turn.</benefit>
+      <benefit>You gain a +1 bonus to AC when you hit with a &lt;i&gt;melee basic attack&lt;/i&gt; or a fighter at-will attack on your turn. The bonus lasts until the end of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -3255,6 +3259,80 @@
       <group>Triggered</group>
       <benefit>You gain the following benefit with martial at-will attacks while you are bloodied:</benefit>
       <benefit>&#9658; When you hit an enemy that has attacked you since the end of your next turn, that enemy takes a -2 penalty to Will until the start of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Midnight Blade Brawler</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Midnight Blade Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Mobility</group>
+      <group>Power Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are wielding a Light Blade that you have proficiency with, you gain the following benefits when attacking with it:</benefit>
+      <benefit>&#9658; When you hit with a martial melee encounter or martial melee daily attack, you can increase the distance of any shift you make by 1 square until the end of your current turn.</benefit>
+      <benefit>&#9658; When you hit with a martial melee encounter attack that allows you to move or shift before the attack, you gain a +2 bonus to damage rolls with that power.</benefit>
+      <benefit>The bonus to damage rolls increases to +3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Midnight Blade Student</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>melee Light Blade</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +2 feat bonus to Acrobatics checks.</benefit>
+      <benefit>Also, when you make a martial melee at-will attack with a Light Blade that you have proficiency with, and the attack allows you to move or shift, you can make the attack against Reflex instead of AC.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mighty Battlerage</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>17</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Battlerager Training</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Healing Surge</group>
+      <benefit>The bonus to damage you gain from your Battlerager Training increases by +1.</benefit>
+      <benefit>This increase becomes +2 starting at 21st level.</benefit>
    </feat>
 
    <feat>

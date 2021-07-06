@@ -451,6 +451,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:when test="type='proficiency'">
 								<xsl:text>proficiency with </xsl:text> <xsl:value-of select="name"/>
 							</xsl:when>
+							<xsl:when test="type='hidden'">
+							</xsl:when>
 							<xsl:otherwise>
 								<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
 							</xsl:otherwise>
@@ -462,6 +464,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 									<xsl:text> </xsl:text>
 								</xsl:if>
 								<xsl:value-of select="combine"/> <xsl:text> </xsl:text>
+							</xsl:when>
+							<xsl:when test="type='hidden'">
 							</xsl:when>
 							<xsl:when test="position()!=last()">
 								<xsl:text>, </xsl:text>
