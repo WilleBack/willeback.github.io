@@ -1171,6 +1171,7 @@
          <type>class</type>
          <name>any martial</name>
       </prereq>
+      <group>Class</group>
       <group>Damage Bonus</group>
       <group>Initiative</group>
       <benefit>The first enemy you damage during the first round of an encounter takes 1d6 extra damage if it has not acted yet.</benefit>
@@ -2263,8 +2264,8 @@
       <group>Channel Divinity</group>
       <group>Class</group>
       <group>Temporary Hit Points</group>
-      <benefit>When you use a Channel Divinity power, you gain temporary hit points equal to your Wisdom modifier.</benefit>
-      <benefit>These temporary hit points increase to 3 + your Wisdom modifier at 11th level, and to 6 + your Wisdom modifier at 21st level.</benefit>
+      <benefit>When you use a Channel Divinity power, you gain temporary hit points equal to 3 + your Wisdom modifier.</benefit>
+      <benefit>These temporary hit points increase to 6 + your Wisdom modifier at 21st level.</benefit>
    </feat>
    <feat>
       <title>Armored Sorcerer</title>
@@ -5224,46 +5225,6 @@
       <group>Temporary Hit Points</group>
       <benefit>While you are bloodied, when you hit with a martial power that grants you temporary hit points, you gain an additional 3 temporary hit points.</benefit>
       <benefit>These additional temporary hit points increase to 6 at 11th level, and to 10 at 21st level.</benefit>
-   </feat>
-
-   <feat>
-      <title>Bloodied Regeneration</title>
-      <tier>Paragon</tier>
-      <category>Bloodline</category>
-      <prereq>
-         <type>feat</type>
-         <name>Vampiric Heritage</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Healing</group>
-      <group>Power Repertoire</group>
-      <group>Vampiric Heritage</group>
-      <benefit>You can swap one 10th-level or higher utility power you know for <![CDATA[<i>bloodied regeneration</i>]]>.</benefit>
-
-      <power>
-         <title>Bloodied Regeneration</title>
-         <class>Feat</class> <category>Utility</category>
-         <fluff>Your wounds call to your immortal blood, which surges to repair your body</fluff>
-         <part>
-            <frequency>Daily</frequency>
-            <keyword>Healing, Shadow</keyword>
-            <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
-               <text>You must be bloodied </text>
-            </section>
-            <section>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>Until the end of the encounter, you gain regeneration 5 while you are bloodied.</text>
-            </section>
-            <section>
-               <text>Your regeneration is suppressed for 1 round if you take radiant damage, take damage from a silver weapon, or are in direct sunlight.</text>
-            </section>
-         </part>
-      </power>
-
    </feat>
 
    <feat>
@@ -10734,7 +10695,8 @@
       <group>Psionics</group>
       <group>Racial</group>
       <group>Teleportation</group>
-      <benefit>You can spend 1 power point to augment your <![CDATA[<i>shadow jaunt</i>]]> racial power to add 2 squares to the distance you can teleport and to remain insubstantial until the end of your next turn.</benefit>
+      <benefit>Your <![CDATA[<i>shadow jaunt</i>]]> racial power gains the Augmentable keyword and the following augmentation:</benefit>
+      <benefit><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> You add 2 squares to the distance you can teleport, and you remain insubstantial until the end of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -12035,6 +11997,23 @@
       <group>Triggered</group>
       <benefit>The first time that you are bloodied in an encounter, you regain the use of your <![CDATA[<i>battle resilience</i>]]> class power with the following trigger:</benefit>
       <benefit><![CDATA[<b>Trigger:</b>]]> An attack hits or misses you for the first time after you have regained the use of this power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Defiant Wrath</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warden</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Nature's Wrath</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Resistance</group>
+      <group>Marking</group>
+      <benefit>When you mark three or more enemies using your Nature's Wrath class feature, you gain resist all until the start of your next turn. The resist equals twice the nunmber of enemies you marked.</benefit>
    </feat>
 
    <feat>
@@ -13715,11 +13694,11 @@
       <group>Skill Enhancement</group>
       <group>Vampiric Heritage</group>
       <benefit>You gain a +2 feat bonus to Bluff checks, Diplomacy Checks, and Intimidate checks.</benefit>
-      <benefit>Also, you replace one 15th-level or higher daily attack power with <![CDATA[<i>dominating gaze</i>]]>. When you gain this feat, choose Intelligence, Wisdom, or Charisma. You use the chosen ability score when attacking with <![CDATA[<i>dominating gaze</i>]]>.</benefit>
+      <benefit>Also, you replace one 15th-level or higher daily attack power with the <![CDATA[<i>dominating gaze</i>]]> bloodline power. When you gain this feat, choose Intelligence, Wisdom, or Charisma. You use the chosen ability score when attacking with <![CDATA[<i>dominating gaze</i>]]>.</benefit>
 
       <power>
          <title>Dominating Gaze</title>
-         <class>Feat</class> <category>Attack</category> <level>15</level>
+         <class>Vampiric</class> <category>Attack</category> <level>15</level>
          <fluff>The authority in your piercing gaze demands utter submission</fluff>
          <part>
             <frequency>Daily</frequency>
@@ -13732,12 +13711,12 @@
             </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
-               <text>Chose ability +4 vs. Will</text>
+               <text>Ability +4 vs. Will</text>
             </section>
             <section>
                <indent>1</indent>
                <name>Level 21:</name> <name-style>italic</name-style>
-               <text>Chosen ability +6</text>
+               <text>Ability +6</text>
             </section>
             <section>
                <shade>true</shade>
@@ -14243,8 +14222,8 @@
          <name>Revenant</name>
       </prereq>
       <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
+         <type>trait</type>
+         <name>Past Life (dragonborn)</name>
       </prereq>
       <prereq>
          <type>power</type>
@@ -15265,6 +15244,20 @@
    </feat>
 
    <feat>
+      <title>Dusk Eyes</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Vampiric Heritage</name>
+      </prereq>
+      <group>Perception</group>
+      <group>Skill Enhancement</group>
+      <group>Vampiric Heritage</group>
+      <benefit>You gain a +2 feat bonus to Stealth checks.</benefit>
+      <benefit>Also, you gain low-light vision.</benefit>
+   </feat>
+
+   <feat>
       <title>Dutiful Follower</title>
       <tier>Heroic</tier>
       <prereq>
@@ -15374,7 +15367,7 @@
       <group>Healing Surge</group>
       <group>Racial</group>
       <benefit>Your number of healing surges increases by two.</benefit>
-      <benefit>Also, your healing surge value increases by Constitution modifier.</benefit>
+      <benefit>Also, your healing surge value increases by your Constitution modifier.</benefit>
       <benefit>Starting at 21st level, your number of healing surges increases by three instead.</benefit>
    </feat>
 
@@ -15417,6 +15410,22 @@
       <group>Support</group>
       <group>Triggered</group>
       <benefit>When an ally gains temporary hit points due to your Arcane Rejuvenation class feature, that ally also gains a +2 bonus to all defenses until the start of his or her next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Dwarven Stalwart</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Stand Your Ground</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Racial</group>
+      <benefit>At the start of your turn, you gain a +1 feat bonus to attack rolls using Axes and Hammers. This bonus lasts until you move or are moved.</benefit>
    </feat>
 
    <feat>
@@ -22334,8 +22343,8 @@
       <group>Psionics</group>
       <group>Racial</group>
       <group>Teleportation</group>
-      <benefit>Your <![CDATA[<i>fade away</i>]]> racial power gains the Augmentable keyword.</benefit>
-      <benefit>When you use <![CDATA[<i>fade away</i>]]> racial power, you can spend 1 power point to augment it. If you do, the power gains the Teleportation keyword, and you can teleport 3 squares after becoming invisible.</benefit>
+      <benefit>Your <![CDATA[<i>fade away</i>]]> racial power gains the Augmentable keyword and the following augmentation:</benefit>
+      <benefit><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> The power gains the Teleportation keyword, and you can teleport 3 squares after becoming invisible.</benefit>
    </feat>
 
    <feat>
@@ -25146,7 +25155,8 @@
       <group>Psionics</group>
       <group>Racial</group>
       <benefit>While you have at least 1 power point remaining, you can use your <![CDATA[<i>ghost sound</i>]]> racial power at-will.</benefit>
-      <benefit>Also, when you use your <![CDATA[<i>ghost sound</i>]]> racial power, you can spend 1 power point. If you do, you gain combat advantage against one enemy adjacent to the target object or square on the first attack you make before the end of your current turn.</benefit>
+      <benefit>Also, your <![CDATA[<i>ghost sound</i>]]> racial power gains the Augmentable keyword and the following augment:</benefit>
+      <benefit><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> You gain combat advantage against one enemy adjacent to the target object or square on the first attack you make before the end of your current turn.</benefit>
    </feat>
 
    <feat>
@@ -25769,6 +25779,27 @@
       <group>Racial</group>
       <group>Triggered</group>
       <benefit>When an enemy successfully saves against an effect bestowed by your Fear power, it falls prone.</benefit>
+   </feat>
+
+   <feat>
+      <title>Hellmind Scorn</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Forced Movement</group>
+      <group>Psychic Specialization</group>
+      <group>Racial</group>
+      <benefit>When an enemy successfully saves against a Psychic effect bestowed by you, you can use a free reaction to slide that enemy 1 square and make it gain vulnerable 5 psychic until the end of your next turn.</benefit>
+      <benefit>Starting at 11th level, the vulnerable increases to 7.</benefit>
+      <benefit>Starting at 21st level, you can slide the enemy up to 2 squares, and the vulnerable increases to 10.</benefit>
    </feat>
 
    <feat>
@@ -30784,7 +30815,7 @@
       <group>Weapon Specialization</group>
       <benefit>If you are attacking with a hand crossbow, a repeating crossbow, a shortbow, a shuriken, or a sling and you have proficiency with that weapon, you gain the following two benefits:</benefit>
       <benefit>&#9658; Your rogue attacks and <![CDATA[<i>ranged basic attacks</i>]]> ignore cover and concealment.</benefit>
-      <benefit>&#9658; Your rogue attacks and <![CDATA[<u>ranged basic attacks</i>]]> only take a -2 penalty to attack rolls if the target has superior cover or total concealment. You take no penalty if you are hidden from the target of your attack or it is otherwise unaware of your presence.</benefit>
+      <benefit>&#9658; Your rogue attacks and <![CDATA[<i>ranged basic attacks</i>]]> only take a -2 penalty to attack rolls if the target has superior cover or total concealment. You take no penalty if you are hidden from the target of your attack or it is otherwise unaware of your presence.</benefit>
    </feat>
 
    <feat>
@@ -30804,7 +30835,7 @@
       <group>Weapon Specialization</group>
       <benefit>If you are attacking with a hand crossbow, a repeating crossbow, a shortbow, a shuriken, or a sling and you have proficiency with that weapon, you gain the following two benefits:</benefit>
       <benefit>&#9658; Your ranger attacks and your <![CDATA[<i>ranged basic attacks</i>]]> ignore cover and concealment.</benefit>
-      <benefit>&#9658; Your ranger attacks and only take a -2 penalty to attack rolls if the target has superior cover or total concealment, or no penalty if the attack allows you to move or shift.</benefit>
+      <benefit>&#9658; Your ranger attacks and your <![CDATA[<i>ranged basic attacks</i>]]> only take a -2 penalty to attack rolls if the target has superior cover or total concealment, or no penalty if the attack allows you to move or shift.</benefit>
    </feat>
 
    <feat>
@@ -33839,6 +33870,257 @@
    </feat>
 
    <feat>
+      <title>Mighty Enmity</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>oath of enmity</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <benefit>The first time in an encounter that you use your <![CDATA[<i>oath of enmity</i>]]> class power, you can target two enemies instead of one.</benefit>
+      <benefit>This allows you to have two oath targets until both targets stop being your oath targets, or until you change your oath target, whichever comes first.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mighty Spirit</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Companion Spirit</name>
+      </prereq>
+      <group>Class</group>
+      <group>Support</group>
+      <benefit>Any benefits granted to allies adjacent to your spirit companion apply to all allies within 2 squares of your spirit companion instead.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mind Rot</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dark reaping</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Psion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Kill Effect</group>
+      <group>Power Enhancement</group>
+      <group>Psychic Specialization</group>
+      <group>Racial</group>
+      <benefit>Your <![CDATA[<i>dark reaping</i>]]> racial power deals necrotic and psychic damage, and gains the Psychic keyword.</benefit>
+      <benefit>Also, if you reduce the target of your <![CDATA[<i>dark reaping</i>]]> racial power to 0 hit points or fewer before the end of your next turn, you can trigger and use the power even though it is expended.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mind of Flawless Sight</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kalashtar</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Assassin's Shroud</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Racial</group>
+      <benefit>When a creature has at least one of your shrouds on it, you do not take the penalty to attack rolls when it has cover or concealment from you. You still take the normal penalty for superior cover or total concealment.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mind-Numbing Curse</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Warlock's Curse</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Psychic Specialization</group>
+      <benefit>When you hit an enemy under your curse with a warlock Psychic encounter attack or warlock Psychic daily attack, you can forgo dealing the additional damage from your curse to instead daze the target until the end of your next turn. This still counts as dealing your curse damage for the turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mindbite Scorn</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sorcerer-King Pact</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Star Pact</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Psychic Specialization</group>
+      <benefit>When you deal psychic damage to a creature under your curse, your curse damage increases by +2 per die of curse damage.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mindfire</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>darkfire</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Psionic Augmentation</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Psionics</group>
+      <group>Racial</group>
+      <benefit>Your <![CDATA[<i>darkfire</i>]]> racial power gains the Augmentable keyword and the following augmentation:</benefit>
+      <benefit><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> You can target Reflex or Will, your choice, and on a hit the target also treats creatures more than 5 squares away from it as having total concealment until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mindsight</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Psion</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>send thoughts</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <benefit>When you use your <![CDATA[<i>send thoughts</i>]]> class power, your Psion attacks against the target ignore concealment and cover until the end of the encounter, or until it is knocked unconscious, whichever comes first.</benefit>
+      <benefit>Starting at 21st level, you also know the exact location of the target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mineral Resilience</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shardmind</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shard swarm</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When you use your <![CDATA[<i>shard swarm</i>]]> racial power, you gain 5 temporary hit points.</benefit>
+      <benefit>These temporary hit points increase to 10 at 11th level, and to 15 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Minion of the Dark</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>any shadow</name>
+      </prereq>
+      <group>Class</group>
+      <group>Perception</group>
+      <benefit>You gain darkvision.</benefit>
+   </feat>
+
+   <feat>
+      <title>Minotaur Soul</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Past Life (minotaur)</name>
+      </prereq>
+      <group>Extra Attack</group>
+      <group>Dying</group>
+      <group>Racial</group>
+      <benefit>You gain the minotaur Ferocity racial trait.</benefit>
+   </feat>
+
+   <feat>
+      <title>Minotaur Weapon Training</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Minotaur</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Proficiency Gain</group>
+      <group>Racial</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with the battleaxe, handaxe, warhammer, and throwing hammer.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to damage rolls with these weapons.</benefit>
+      <benefit>This bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Miryath's First Strike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Githzerai</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Initiative</group>
+      <group>Psychic Specialization</group>
+      <group>Racial</group>
+      <benefit>The first creature you damage that has not yet acted during the encounter takes psychic damage equal to your Dexterity modifier or your Wisdom modifier, whichever is higher.</benefit>
+      <benefit>This psychic damage increases to 2 + your Dexterity modifier or your Wisdom modifier at 11th level, and by 4 + your Dexterity modifier or Wisdom modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
       <title>Miss and Adapt</title>
       <tier>Heroic</tier>
       <prereq>
@@ -33849,6 +34131,101 @@
       <group>Attack Bonus</group>
       <group>Miss Mitigation</group>
       <benefit>When you make an at-will attack and miss every target, you gain a +1 bonus to attack rolls against each target until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mist Form Rescue</title>
+      <tier>Paragon</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>feat</type>
+         <name>Vampiric Heritage</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>mist form</name>
+         <qualifier>bloodline</qualifier>
+      </prereq>
+      <group>Dying</group>
+      <group>Power Enhancement</group>
+      <group>Triggered</group>
+      <group>Vampiric Heritage</group>
+      <benefit>You can use your <![CDATA[<i>mist form</i>]]> bloodline power as an immediate interrupt with the following trigger:</benefit>
+      <benefit><![CDATA[<b>Trigger:</b>]]> An attack critically hits you or reduces you to 0 hit points or fewer; the triggering attack cannot deal radiant damage to you</benefit>
+      <benefit>When you use the power with this trigger, the triggering attack cannot reduce you below 1 hit point, and you can shift 2 squares after the triggering attack has been resolved, but you cannot sustain the power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mist Walker Illusion</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Gnome</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>fade away</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any shadow</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>When you hit with a shadow power, you can use your <![CDATA[<i>fade away</i>]]> racial power as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mobile Covenant</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Shifter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>razorclaw shifting</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Invoker</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Divine Covenant</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>While you are under the effects of your <![CDATA[<i>razorclaw shifting</i>]]> racial power, you can choose to shift a number of squares equal to your Wisdom modifier instead of gaining the usual benefit of your Covenant Manifestation.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mobile Enforcement</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>enforce challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <group>Mobility</group>
+      <benefit>When you hit an enemy with the attack granted by your <![CDATA[<i>enforce challenge</i>]]> class power, you can shift 1 square as a free reaction.</benefit>
    </feat>
 
    <feat>
@@ -33867,6 +34244,41 @@
       <benefit>You gain a +2 feat bonus to Athletics checks.</benefit>
       <benefit>When you use a martial at-will attack that allows you to move or shift and you have concealment, choose one ally you can see. That ally can shift 1 square as an opportunity reaction.</benefit>
       <benefit>This shift increases to 2 squares at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mobile Spirit</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Spirit Companion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <benefit>When you take a move action, you can also move your spirit companion a number of squares equal to your speed + 4 instead of just your speed.</benefit>
+      <benefit>If your spirit companion can move as part of another power or effect, you can move it 1 additional square.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mobile Warrior</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>19</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you make a <![CDATA[<i>melee basic attack</i>]]> or a martial attack with a Flail, a Heavy Blade, a Light Blade, or a Spear, you can shift 1 square after the attack has been resolved, whether or not it hits.</benefit>
    </feat>
 
    <feat>
@@ -33894,6 +34306,494 @@
    </feat>
 
    <feat>
+      <title>Monastic Adept</title>
+      <tier>Heroic</tier>
+      <category>Multiclass</category>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>any multiclass Monk</name>
+      </prereq>
+      <group>Multiclass Monk</group>
+      <group>Power Repertoire</group>
+      <group>Skill Training</group>
+      <benefit>You gain training in one skill from the Monk's class list.</benefit>
+      <benefit>Also, you choose one 1st-level monk at-will attack power. You can use that power as an encounter power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Monastic Disciple</title>
+      <tier>Heroic</tier>
+      <category>Multiclass</category>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Multiclass Monk</group>
+      <group>Power Repertoire</group>
+      <group>Proficiency Gain</group>
+      <group>Skill Training</group>
+      <benefit>You gain training in one skill from the Monk's class list.</benefit>
+      <benefit>Also, you choose one of Flurry of Blows powers. You can use that power as an encounter power.</benefit>
+      <benefit>In addition, you gain proficiency with ki focuses.</benefit>
+   </feat>
+
+   <feat>
+      <title>Monastic Vampire</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Vampire</name>
+      </prereq>
+      <group>Class Combination</group>
+      <group>Defense</group>
+      <group>Healing Surge</group>
+      <group>Mobility</group>
+      <group>Triggered</group>
+      <benefit>Once per encounter, when you hit at least one enemy with a monk encounter attack, you gain a healing surge.</benefit>
+      <benefit>Also, when you spend a healing surge, you become invigorated until the end of your next turn. While invigorated, you gain a +2 bonus to speed and a +4 bonus to all defenses against attacks triggered by your movement.</benefit>
+   </feat>
+
+   <feat>
+      <title>Monkey's Rush</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <group>Shapechange</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +2 feat bonus to Athletics checks.</benefit>
+      <benefit>Also, when you bull rush while in beast form, you can slide the target instead of pushing it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moon Fey Resilience</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Eladrin</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>fey step</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Background</group>
+      <group>Bloodied</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>If you are bloodied and there are no allies within 5 squares of you when you use your <![CDATA[<i>fey step</i>]]> racial power, the power gains the Healing keyword and you can spend a healing surge to regain hit points equal to your healing surge value. The healing happens during your teleportation.</benefit>
+      <special>You cannot select this feat if you have the Sun Fey Grace feat.</special>
+   </feat>
+
+   <feat>
+      <title>Moon Sight</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Bard</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Virtue of Prescience</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Sehanine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Psychic Specialization</group>
+      <group>Triggered</group>
+      <group>Worship</group>
+      <benefit>When you use the immediate action from your Virtue of Prescience class feature, the triggering enemy also takes psychic damage equal to your Wisdom modifier after the triggering attack has been resolved.</benefit>
+      <benefit>This psychic damage increases to 3 + your Wisdom modifier at 11th level, and to 6 + your Wisdom modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moon Strike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>deity</type>
+         <name>Sehanine</name>
+      </prereq>
+      <group>Combat Advantage</group>
+      <group>Lycanthrope-hunting</group>
+      <group>Worship</group>
+      <benefit>When you have combat advantage against an enemy, your attacks against that enemy count as silvered. Lycanthropes are one of the enemies where a silver weapon has an effect.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moonbow Dedicate</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Sehanine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Implement Specialization</group>
+      <group>Proficiency Gain</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with the shortbow as both a weapon and an implement.</benefit>
+      <benefit>Also, you gain a +1 feat bonus to Weapon damage rolls and Implement damage rolls you make while wielding a shortbow.</benefit>
+      <benefit>This bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moonbow Prelate</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Sehanine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Implement Specialization</group>
+      <group>Power Enhancement</group>
+      <group>Worship</group>
+      <benefit>When you use a shortbow as an implement for a ranged divine power, area divine power, ranged arcane power, or area arcane power, you can extend the power's range by 5 squares.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moonbow Stalker</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Sehanine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Proficiency Gain</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with the shortbow.</benefit>
+      <benefit>Also, you can use a shortbow with your Sneak Attack class feature and with any Rogue power that normally requires a Crossbow.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moradin's Forge Champion</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>enforce challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Moradin's Forge Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Mark Punishment</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are wielding a two-handed Axe, a two-handed Hammer, or a two-handed Pick and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit>&#9658; After you make a martial attack, you gain a +2 bonus to all defenses against any attack that would immobilize, restrain, or slow you. This bonus lasts until the end of your next turn.</benefit>
+      <benefit>&#9658; You can use a melee fighter attack that targets one creature, deals at least 2[W] damage, and has an additional benefit for the weapon you are wielding in place of a <![CDATA[<i>melee basic attack</i> when using your <![CDATA[<i>enforce challenge</i>]]> class power, but the number of [W] is halved.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moradin's Forge Marshal</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Moradin's Forge Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Defense</group>
+      <group>Opportunity Attacks</group>
+      <group>Teamwork</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are wielding two-handed Axe, a two-handed Hammer, or a two-handed Pick and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit>&#9658; After you make a martial attack, you gain a +2 bonus to all defenses against any attack that would immobilize, restrain, or slow you. This bonus lasts until the end of your next turn.</benefit>
+      <benefit>&#9658; If you hit with an <![CDATA[<i>opportunity attack</i>]]>, allies in your <![CDATA[<i>warlord's aura</i> deal additional damage with <i>opportunity attacks</i>]]> against the same target until the end of the target's next turn or until the enemy is no longer in your aura. The bonus equals +3, and increases to +5 at 11th level, and to +8 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Moradin's Forge Student</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any two-handed Axe</name>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any two-handed Hammer</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any two-handed Pick</name>
+      </prereq>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <group>Saving Throw Penalty</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +2 feat bonus to Intimidate checks.</benefit>
+      <benefit>Also, when you are attacking with a two-handed Axe, a two-handed Hammer, or a two-handed Pick and you have proficiency with that weapon, you gain the following benefit with martial at-will attacks and <![CDATA[<i>melee basic attacks</i>]]>:</benefit>
+      <benefit>When you hit an enemy, that enemy takes a -1 penalty to saving throws until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mountain Thunder Avalanche</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Mountain Thunder Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Saving Throw Penalty</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are wielding a one-handed Hammer, a one-handed Flail, or a one-handed Mace and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit>&#9658; Whenever you hit an enemy with a martial encounter attack or martial daily attack, that enemy takes a -2 penalty to saving throws against effects that daze or stun. This lasts until the end of your next turn, and does not stack with other Mountain Thunder feats.</benefit>
+      <benefit>&#9658; Whenever you use a Ranger encounter attack that does not involve you moving, you can shift 2 squares before resolving any other parts of the power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mountain Thunder Conqueror</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Mountain Thunder Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Saving Throw Penalty</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are wielding a one-handed Hammer, a one-handed Flail, or a one-handed Mace and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit>&#9658; Whenever you hit an enemy with a martial encounter attack or martial daily attack, that enemy takes a -2 penalty to saving throws against effects that daze or stun. This lasts until the end of your next turn, and does not stack with other Mountain Thunder feats.</benefit>
+      <benefit>&#9658; When you use a Warlord encounter attack to either mark a target or push, pull or slide it, you can knock that target prone. The knocking prone replaces the forced movement, but is in addition to marking.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mountain Thunder Crasher</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Ruthless Ruffian</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Mountain Thunder Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Saving Throw Penalty</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are wielding a one-handed Hammer, a one-handed Flail, or a one-handed Mace and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit>&#9658; You can use the weapon with any melee Rogue power that normally requires a Light Blade.</benefit>
+      <benefit>&#9658; Whenever you hit an enemy with a martial encounter attack or a martial daily attack, that enemy takes a -2 penalty to saving throws against effects that daze or stun. This lasts until the end of your next turn, and does not stack with other Mountain Thunder feats.</benefit>
+      <benefit>&#9658; You add the additional damage from your Ruthless Ruffian class feature to melee Rogue attacks with the Rattling keyword, even if you are not wielding a club or a mace.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mountain Thunder Rampart</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Endurance</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Mountain Thunder Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Saving Throw Penalty</group>
+      <group>Temporary Hit Points</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are attacking with a one-handed Hammer, a one-handed Flail, or a one-handed Mace and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit>&#9658; Whenever you hit an enemy with a martial encounter attack or a martial daily attack, that enemy takes a -2 penalty to saving throws against effects that daze or stun. This lasts until the end of your next turn, and does not stack with other Mountain Thunder feats.</benefit>
+      <benefit>&#9658; When you use a Fighter encounter attack that either has a benefit for the weapon you are wielding, or dazes or stuns the target, the power gains the Invigorating keyword and you gain temporary hit points on a hit. The temporary hit points equal one-third the power's level + your Constitution modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mountain Thunder Student</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+         <combine>with</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Ruthless Ruffian</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any one-handed Hammer</name>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any one-handed Flail</name>
+         <combine>or</combine>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Charge</group>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +2 feat bonus to Endurance checks.</benefit>
+      <benefit>Also, when you are attacking with a one-handed Hammer, a one-handed Flail, or a one-handed Mace and have proficiency with that weapon, if you charge and make a <![CDATA[<i>melee basic attack</i>]]> or a martial at-will attack as part of that charge, you can target Fortitude instead of AC.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mountain's Echo Spellcasting</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Goliath</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>stone's endurance</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>While you are affected by your <![CDATA[<i>stone's endurance</i>]]> racial power, your arcane powers ignore resistances.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mounted Combat</title>
+      <tier>Heroic</tier>
+      <group>Mounted Combat</group>
+      <benefit>While you are riding a creature, it does not take the normal -2 penalty to attack rolls that is imposed on mounts.</benefit>
+      <benefit>Also, the creature you are riding can make any Athletics checks, Acrobatics checks, Endurance checks, or Stealth checks using your skill check modifier for the corresponding skill (not including any temporary bonuses or penalties) in place of its own.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mul's Stamina</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Mul</name>
+      </prereq>
+      <group>Healing Surge</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <benefit>Your number of healing surges increases by one.</benefit>
+      <benefit>Also, when you make an Endurance check, you can roll twice and use either result.</benefit>
+   </feat>
+
+   <feat>
+      <title>Multiclass Mastery</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Bard</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Multiclass Versatility</name>
+      </prereq>
+      <group>Class</group>
+      <group>Multiclass</group>
+      <benefit>You gain two Multiclass feats for which you meet the prerequisites.</benefit>
+   </feat>
+
+   <feat>
       <title>Multitalent</title>
       <tier>Heroic</tier>
       <prereq>
@@ -33903,6 +34803,87 @@
       </prereq>
       <group>Skill Enhancement</group>
       <benefit>You gain a +1 bonus to skills in which you have training.</benefit>
+   </feat>
+
+   <feat>
+      <title>Murderous Hunter</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Assassin's Shroud</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <group>Class Combination</group>
+      <group>Damage Bonus</group>
+      <group>Miss Mitigation</group>
+      <benefit>When you invoke at least two of your shrouds on a target and miss, you can deal the bonus damage from your Hunter's Quarry class feature to the target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Myriad Crystal Eyes</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shardmind</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shard swarm</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Defense</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>shard swarm</i>]]> racial power, until the end of your next turn no creature can benefit from concealment from you or flank you.</benefit>
+   </feat>
+
+   <feat>
+      <title>Mythic Senses</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Minotaur</name>
+      </prereq>
+      <group>Initiative</group>
+      <group>Racial</group>
+      <benefit>When you roll initiative, you can use your Perception check modifier in place of your initiative check modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Nature's Bloom</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>level</type>
+         <name>2nd</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any primal</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Melora</name>
+      </prereq>
+      <group>Healing</group>
+      <group>Rituals</group>
+      <benefit>You master the <![CDATA[<i>bloom</i>]]> ritual, and can perform it without a ritual book.</benefit>
+      <benefit>Also, you can perform the ritual in 5 minutes, including during a short rest and performing the ritual does not prevent you from resting.</benefit>
+      <benefit>In addition, if a creature takes a short rest in the rituals area while you perform it, that creature heals additional hit points for each healing surge spent to regain hit points as part of that rest. These additional hit points equal 2 + one-half your Wisdom modifier.</benefit>
+      <benefit>In addition, you can perform the <![CDATA[<i>bloom</i>]]> ritual once per day without paying its component cost.</benefit>
    </feat>
 
    <feat>
@@ -34255,6 +35236,19 @@
    </feat>
 
    <feat>
+      <title>Savage Bite</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Vampiric Heritage</name>
+      </prereq>
+      <group>Combat Advantage</group>
+      <group>Power Enhancement</group>
+      <group>Vampiric Heritage</group>
+      <benefit>You can use your <![CDATA[<i>blood drain</i>]]> bloodline power against a target granting you combat advantage without having that target grabbed.</benefit>
+   </feat>
+
+   <feat>
       <title>Savage Rampage</title>
       <tier>Paragon</tier>
       <prereq>
@@ -34270,6 +35264,19 @@
       <group>Extra Attack</group>
       <benefit>Once per round when you are raging and score a critical hit with a Barbarian attack power, you can make a <![CDATA[<i>melee basic attack</i>]]> as a free reaction.</benefit>
       <benefit>If you are wielding more than one weapon, you must make the <![CDATA[<i>melee basic attack</i>]]> with the same weapon you scored the critical hit with.</benefit>
+   </feat>
+
+   <feat>
+      <title>Scent of Blood</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Vampiric Heritage</name>
+      </prereq>
+      <group>Bloodied Enemy</group>
+      <group>Combat Advantage</group>
+      <group>Vampiric Heritage</group>
+      <benefit>You have combat advantage against living enemies that are bloodied.</benefit>
    </feat>
 
    <feat>
@@ -34552,6 +35559,151 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>Choose one creature hit by your poison damage-dealing <![CDATA[<i>dragon breath</i>]]> racial power. That creature is weakened (save ends).</benefit>
+   </feat>
+
+   <feat>
+      <title>Vampiric Alacrity</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>feat</type>
+         <name>Vampiric Heritage</name>
+      </prereq>
+      <group>Mobility</group>
+      <group>Vampiric Heritage</group>
+      <benefit>You gain a +1 feat bonus to speed while you are not in direct sunglight.</benefit>
+      <benefit>Also, if you hide while you are in dim light or total darkness, you do not take the -5 penalty to your Stealth check for moving more than 2 squares.</benefit>
+   </feat>
+
+   <feat>
+      <title>Vampiric Heritage</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>living humanoid</name>
+      </prereq>
+      <group>Grapple</group>
+      <group>Healing</group>
+      <group>Power Repertoire</group>
+      <group>Vampiric Heritage</group>
+      <benefit>You gain the <![CDATA[<i>blood drain</i>]]> bloodline power. When you first take this feat, choose Strength, Constitution, or Dexterity as the ability you use for the attack rolls and damage rolls.</benefit>
+      <benefit>Also, you gain a +2 bonus to Perception checks and Insight checks to sense and recognize dhampyrs and undead.</benefit>
+      <benefit>You can learn the following powers as bloodline powers of the corresponding level.</benefit>
+      <special>You are considered a vampire for the purpose of effects that relate to vampires, though not a member of the Vampire class.</special>
+
+      <power>
+         <title>Blood Drain</title>
+         <class>Vampiric</class> <category>Attack</category>
+         <fluff>Vigor rushes through your body as you drain life energy from your victim</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Healing, Shadow</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>touch</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One living creature you have grabbed</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Ability +2 vs. Fortitude</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>Ability +4 vs. Fortitude</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>Ability +6 vs. Fortitude</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>1d4 + Ability modifier damage, and you can spend a healing surge to regain hit points equal to your healing surge value.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Crit:</name> <name-style>bold</name-style>
+               <text>The target is weakened until the end of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text>2d4 + Ability modifier damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>3d6 + Ability modifier damage.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Mist Form</title>
+         <class>Vampiric</class> <category>Utility</category> <level>6</level>
+         <fluff>Your form dissolves into an eerie, billowing mist</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Polymorph, Shadow</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You turn into a cloud of mist, and gain the following effects:</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <text>&#9658; You become insubstantial.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <text>&#9658; Yougain a fly speed of 8 (hover), and when you squeeze, you can fit through any opening that allows air to pass through. Squares of daylight are difficult terrain for you.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <text>&#9658; You cannot make any attacks while in this form.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>This lasts until the end of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Sustain Minor:</name> <name-style>bold</name-style>
+               <text>Your mist form persists until the end of your next turn.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Bloodied Regeneration</title>
+         <class>Vampiric</class> <category>Utility</category> <level>10</level>
+         <fluff>Your wounds call to your immortal blood, which surges to repair your body</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Healing, Shadow</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must be bloodied</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You gain regeneration equal to 2 + your Constitution modifier until the end of the encounter.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>This regeneration is suppressed until the end of your next turn if you take radiant damage.</text>
+            </section>
+         </part>
+      </power>
    </feat>
 
    <feat>
