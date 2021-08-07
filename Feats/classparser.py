@@ -25,6 +25,11 @@ def create_feat_file(targetClass, targetRole, targetSource):
             key = feat.findtext("title")
             data.append((key, feat))
 
+    if targetClass == 'Gnome' or targetClass == 'Goblin' or targetClass == 'Halfling' or targetClass == 'Kobold' or targetClass == 'Pixie' or targetClass == 'Svirfneblin':
+        for feat in fullRoot.findall(".feat/prereq[name='Small or smaller']..."):
+            key = feat.findtext("title")
+            data.append((key, feat))
+
     data.sort()
 
     return remove_duplicates(data)
@@ -383,3 +388,157 @@ for item in collate:
 
 # Save file
 wizardTree.write("wizard.xml")
+
+# Dragonborn
+##############
+dragonbTree = ET.parse('dragonborn.xml')
+dragonbRoot = dragonbTree.getroot()
+
+# Empty feats from Wizard file
+for feat in dragonbRoot.findall(".feat"):
+    dragonbRoot.remove(feat)
+
+collate = create_feat_file("Dragonborn", "natural", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    dragonbRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+dragonbTree.write("dragonborn.xml")
+
+# Dwarf
+##############
+dwarfTree = ET.parse('dwarf.xml')
+dwarfRoot = dwarfTree.getroot()
+
+# Empty feats from Wizard file
+for feat in dwarfRoot.findall(".feat"):
+    dwarfRoot.remove(feat)
+
+collate = create_feat_file("Dwarf", "natural", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    dwarfRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+dwarfTree.write("dwarf.xml")
+
+# Human
+##############
+humanTree = ET.parse('human.xml')
+humanRoot = humanTree.getroot()
+
+# Empty feats from Wizard file
+for feat in humanRoot.findall(".feat"):
+    humanRoot.remove(feat)
+
+collate = create_feat_file("Human", "natural", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    humanRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+humanTree.write("human.xml")
+
+# Eladrin
+##############
+eladrinTree = ET.parse('eladrin.xml')
+eladrinRoot = eladrinTree.getroot()
+
+# Empty feats from Wizard file
+for feat in eladrinRoot.findall(".feat"):
+    eladrinRoot.remove(feat)
+
+collate = create_feat_file("Eladrin", "fey", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    eladrinRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+eladrinTree.write("eladrin.xml")
+
+# Elf
+##############
+elfTree = ET.parse('elf.xml')
+elfRoot = elfTree.getroot()
+
+# Empty feats from Wizard file
+for feat in elfRoot.findall(".feat"):
+    elfRoot.remove(feat)
+
+collate = create_feat_file("Elf", "fey", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    elfRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+elfTree.write("elf.xml")
+
+# Halfling
+##############
+halflingTree = ET.parse('halfling.xml')
+halflingRoot = halflingTree.getroot()
+
+# Empty feats from Wizard file
+for feat in halflingRoot.findall(".feat"):
+    halflingRoot.remove(feat)
+
+collate = create_feat_file("Halfling", "natural", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    halflingRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+halflingTree.write("halfling.xml")
+
+# Tiefling
+##############
+tieflingTree = ET.parse('tiefling.xml')
+tieflingRoot = tieflingTree.getroot()
+
+# Empty feats from Wizard file
+for feat in tieflingRoot.findall(".feat"):
+    tieflingRoot.remove(feat)
+
+collate = create_feat_file("Tiefling", "natural", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    tieflingRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+tieflingTree.write("tiefling.xml")

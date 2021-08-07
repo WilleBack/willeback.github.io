@@ -60,12 +60,54 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("cleric.html", pretty_print=True)
 
+# Dragonborn
+source_doc = etree.parse("dragonborn.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("dragonborn.html", pretty_print=True)
+
+# Dwarf
+source_doc = etree.parse("dwarf.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("dwarf.html", pretty_print=True)
+
+# Eladrin
+source_doc = etree.parse("eladrin.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("eladrin.html", pretty_print=True)
+
+# Elf
+source_doc = etree.parse("elf.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("elf.html", pretty_print=True)
+
+# Halfling
+source_doc = etree.parse("halfling.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("halfling.html", pretty_print=True)
+
 # Fighter
 source_doc = etree.parse("fighter.xml")
 output_doc = xslt_transformer(source_doc)
 
 print(str(output_doc))
 output_doc.write("fighter.html", pretty_print=True)
+
+# Human
+source_doc = etree.parse("human.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("human.html", pretty_print=True)
 
 # Monk
 source_doc = etree.parse("monk.xml")
@@ -87,6 +129,13 @@ output_doc = xslt_transformer(source_doc)
 
 print(str(output_doc))
 output_doc.write("swordmage.html", pretty_print=True)
+
+# Tiefling
+source_doc = etree.parse("tiefling.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("tiefling.html", pretty_print=True)
 
 # Vampire
 source_doc = etree.parse("vampire.xml")
