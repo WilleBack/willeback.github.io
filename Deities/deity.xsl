@@ -406,6 +406,10 @@
 </xsl:template>
 
 <xsl:template name="sectioncontent">
+	<xsl:if test="@auto='channeldivinity'">
+		<b>Channel Divinity:&#160;</b>
+		You can only use one Channel Divinity power per encounter.
+	</xsl:if>
 	<xsl:choose>
 		<xsl:when test="name-style = 'bold'">
 			<b><xsl:value-of select="name"/>&#160;</b>
