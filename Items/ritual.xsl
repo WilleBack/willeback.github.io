@@ -265,7 +265,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
    <xsl:if test="count(//catalog/item[level=current()/@selection])>0">
       <div class="list">
-         <div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /></div>
+         <div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /></b></div>
          <xsl:choose>
             <xsl:when test="@selection='1'">
                <xsl:for-each select="//catalog/item[level=current()/@selection]">
