@@ -263,215 +263,215 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template name="listgroup">
 
-   <xsl:if test="count(//catalog/item[level=current()/@selection])>0">
+   <xsl:if test="count(//catalog/ritual[level=current()/@selection])>0">
       <div class="list">
          <div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /></b></div>
          <xsl:choose>
             <xsl:when test="@selection='1'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">1</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='2'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">2</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='3'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">3</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='4'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">4</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='5'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">5</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='6'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">6</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='7'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">7</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='8'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">8</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='9'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">9</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='10'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">10</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='11'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">11</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='12'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">12</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='13'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">13</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='14'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">14</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='15'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">15</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='16'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">16</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='17'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">17</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='18'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">18</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='19'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">19</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='20'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">20</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='21'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">21</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='22'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">22</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='23'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">23</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='24'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">24</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='25'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">25</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='26'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">26</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='27'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">27</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='28'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">28</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='29'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">29</xsl:with-param>
                   </xsl:call-template>
                </xsl:for-each>
             </xsl:when>
             <xsl:when test="@selection='30'">
-               <xsl:for-each select="//catalog/item[level=current()/@selection]">
+               <xsl:for-each select="//catalog/ritual[level=current()/@selection]">
                   <xsl:call-template name="line">
                      <xsl:with-param name="levelvalue">30</xsl:with-param>
                   </xsl:call-template>
