@@ -15,7 +15,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          }
 
          .ritual {
-            background:linear-gradient(to right, #f8e9d5, #fcf4eb);
+            background:linear-gradient(to right, #f5f5f5, #fafafa);
             margin:0.2cm;
             width:97%;
             float:left;
@@ -27,6 +27,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             width: 100%;
             column-count: 2;
             column-gap:.3em;
+            margin-bottom: 0.6em;
          }
 
          .priceline {
@@ -175,7 +176,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <xsl:for-each select="list">
                   <xsl:call-template name="listgroup" />
                </xsl:for-each>
-         </div> <!-- groupholder -->
+         </div>
       </div>
 
       <div class="grouptitle">
@@ -184,7 +185,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <div class="container">
 
-            <xsl:apply-templates match="ritual">
+           <xsl:apply-templates match="ritual">
                <xsl:sort select="title" />
             </xsl:apply-templates>
 
@@ -198,28 +199,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
    <div class="ritual">
       <xsl:call-template name="createheader">
-         <xsl:with-param name="bgcolor">#DA9722</xsl:with-param>
+         <xsl:with-param name="bgcolor">#2e5984</xsl:with-param>
       </xsl:call-template>
 
-
-      <div id="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
+      <div id="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #dedede, #ececec); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
          <i><xsl:value-of select="fluff"/></i>
       </div>
       <div class="pricetable">
-         <div class="priceline">
-           <b>Key Skill: </b><xsl:value-of election="skill" />
+        <div class="priceline">
+          <b>Market Price: </b><xsl:value-of select="price" /><xsl:text> gp</xsl:text>
+        </div>
+        <div class="priceline">
+           <b>Key Skill: </b><xsl:value-of select="skill" />
          </div>
          <div class="priceline">
-           <b>Component Cost: </b><xsl:value-of election="component" /><xsl:text> gp</xsl:text>
+           <b>Component Cost: </b><xsl:value-of select="component" /><xsl:text> gp</xsl:text>
          </div>
          <div class="priceline">
-           <b>Time: </b><xsl:value-of election="time" />
+           <b>Time: </b><xsl:value-of select="time" />
          </div>
          <div class="priceline">
-           <b>Duration: </b><xsl:value-of election="duration" />
-         </div>
-         <div class="priceline">
-           <b>Market Price: </b><xsl:value-of election="price" /><xsl:text> gp</xsl:text>
+           <b>Duration: </b><xsl:value-of select="duration" />
          </div>
       </div>
 
@@ -481,7 +481,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                <![CDATA[<i>Error</i>]]>
             </xsl:otherwise>
          </xsl:choose>
-
       </div>
    </xsl:if>
 
@@ -495,15 +494,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro); box-sizing:border-box; padding:0.2em;">
             <div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
             <div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
-               <i><xsl:for-each select="subtype">
-                  <xsl:value-of select="."/>
-                  <xsl:if test="position()!=last()">
-                     <xsl:text>, </xsl:text>
-                  </xsl:if>
-               </xsl:for-each></i>
+               <xsl:value-of select="category" />
             </div>
             <div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
-               <xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
+               <xsl:value-of select="price"/><xsl:text>gp</xsl:text>
             </div>
          </div>
       </xsl:when>
@@ -511,15 +505,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow); box-sizing:border-box; padding:0.2em;">
             <div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
             <div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
-               <i><xsl:for-each select="subtype">
-                  <xsl:value-of select="."/>
-                  <xsl:if test="position()!=last()">
-                     <xsl:text>, </xsl:text>
-                  </xsl:if>
-               </xsl:for-each></i>
+              <div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
+                 <xsl:value-of select="category" />
+              </div>
             </div>
             <div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
-               <xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
+               <xsl:value-of select="price"/><xsl:text>gp</xsl:text>
             </div>
          </div>
       </xsl:otherwise>
