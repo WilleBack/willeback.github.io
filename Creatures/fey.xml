@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Brownie</title>
+      <level>2</level> <role>Controller</role> <xp>125</xp>
+      <size>Tiny</size> <origin>fey</origin> <type>humanoid</type>
+
+      <init>+4</init> <perception>+8</perception> <insight>+3</insight>
+      <sense>low-light vision</sense>
+
+      <hp>30</hp> <bloodied>15</bloodied>
+      <ac>17</ac> <fort>12</fort> <ref>15</ref> <will>14</will>
+      <speed>5</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Blend In</name>
+            <line>A brownie needs only partial cover or partial concealment to attempt a Stealth check to become hidden.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Short Sword</name> <type>mbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 6 damage.</line>
+            <line>2d6 + 6 damage and the brownie can slide the target 1 square, if the target is granting combat advantage.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Move Actions</category-name>
+
+         <block>
+            <name>Dimension Door</name>
+            <keyword>Arcane</keyword> <keyword>Teleportation</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The brownie teleports up to 10 squares.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Minor Actions</category-name>
+
+         <block>
+            <name>Disorient</name> <type>melee</type>
+            <keyword>Arcane</keyword> <keyword>Charm</keyword>
+            <frequency>At-Will</frequency> <note>1 / round</note>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +5 vs. Will</line>
+            <line><![CDATA[<i>Hit:</i>]]> The target is disoriented (save ends).</line>
+            <line>While disoriented, if the target moves more than its speed during a turn, it falls prone. This also applies to forced movement.</line>
+         </block>
+
+         <block>
+            <name>Ventriloquism</name> <type>ranged</type>
+            <keyword>Arcane</keyword> <keyword>Illusion</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> Ranged 10 (one object, unoccupied square, or creature); The brownie causes a sound as quiet as a whisper or as loud as yelling to emanate from that target.</line>
+            <line>The brownie makes a Deception check (+2) against creatures' passive Insight. On a success, the creature believes the target made the sound.</line>
+         </block>
+
+         <block>
+            <name>Mirror Image</name>
+            <keyword>Arcane</keyword> <keyword>Illusion</keyword>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> Three images of the brownie appear in its space, and the brownie gains a +6 power bonus to AC and is unaffected by miss against AC.</line>
+            <line>Each time an attack against AC misses the brownie, one of its images disappears and the bonus granted by this power decreases by 2. When the bonus reaches 0, all the brownie's images are gone and the power ends. Otherwise, the effect lasts for 1 hour.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Perception</name> <value>+8</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+10</value>
+      </skill>
+      <skill>
+         <name>Thievery</name> <value>+10</value>
+      </skill>
+
+      <str>
+         <value>6</value> <mod>-2 / -1</mod>
+      </str>
+      <con>
+         <value>10</value> <mod>+0 / +1</mod>
+      </con>
+      <dex>
+         <value>18</value> <mod>+4 / +5</mod>
+      </dex>
+      <int>
+         <value>13</value> <mod>+1 / +2</mod>
+      </int>
+      <wis>
+         <value>14</value> <mod>+2 / +3</mod>
+      </wis>
+      <cha>
+         <value>13</value> <mod>+1 / +2</mod>
+      </cha>
+
+      <alignment>Good</alignment>
+      <language>Common</language> <language>Elven</language>
+
+      <equipment>short sword</equipment>
+
+      <description>Owing to their wingless form and clothing cobbled together from household bits and bobs, these "house elves" resemble miniature wood elves more than they do pixies or other types of sprites</description>
+   </creature>
+</catalog>
