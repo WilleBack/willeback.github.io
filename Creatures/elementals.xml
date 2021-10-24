@@ -75,6 +75,68 @@
    </creature>
 
    <creature>
+      <title>Dust Devil Wisp</title>
+      <level>1</level> <rolestrength>Minion</rolestrength> <role>Skirmisher</role> <xp>25</xp>
+      <size>Small</size> <origin>elemental</origin> <type>magical beast</type> <subtype>air</subtype> <subtype>earth</subtype>
+
+      <init>+5</init> <perception>-2</perception> <insight>-2</insight>
+
+      <hp>2</hp> <bloodied>any damage bloodies a minion</bloodied>
+      <ac>15</ac> <fort>11</fort> <ref>14</ref> <will>12</will>
+      <defmod>-2 to all defenses when slowed or immobilized</defmod>
+      <speed>8</speed>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Grasping Winds</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage, and the dust devil slides the target 2 squares.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The dust devil shifts 1 square.</line>
+         </block>
+
+         <block>
+            <name>Stinging Sands</name> <type>close</type>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Close burst 2 (creatures in the burst); +3 vs. Fortitude</line>
+            <line indent="1">Elementals with the earth subtype are immune to this attack</line>
+            <line><![CDATA[<i>Hit:</i>]]> 6 damage, and the target is blinded until the end of the dust devil's next turn.</line>
+            <line><![CDATA[<i>Miss:</i>]]> The target takes a -2 penalty to triggered attack rolls until the end of the dust devil's next turn.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Stealth</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>7</value> <mod>-2 / -2</mod>
+      </str>
+      <con>
+         <value>14</value> <mod>+2 / +2</mod>
+      </con>
+      <dex>
+         <value>17</value> <mod>+3 / +3</mod>
+      </dex>
+      <int>
+         <value>4</value> <mod>-3 / -3</mod>
+      </int>
+      <wis>
+         <value>7</value> <mod>-2 / -2</mod>
+      </wis>
+      <cha>
+         <value>11</value> <mod>+0 / +0</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>understands Primordial</language>
+
+      <description>A weak living mote of elemental air, a dust devil wisp buffets the sands around it to blind its enemies.</description>
+   </creature>
+
+   <creature>
       <title>Fire Elemental, Lesser</title>
       <level>1</level> <role>Skirmisher</role> <xp>100</xp>
       <size>Small</size> <origin>elemental</origin> <type>magical beast</type> <subtype>fire</subtype>
