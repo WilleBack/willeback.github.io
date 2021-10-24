@@ -81,28 +81,23 @@
    </creature>
 
    <creature>
-      <title>Goblin Sneak</title>
-      <level>1</level> <role>Lurker</role> <xp>100</xp>
+      <title>Goblin Skullcleaver</title>
+      <level>2</level> <role>Brute</role> <xp>125</xp>
       <size>Small</size> <origin>natural</origin> <type>humanoid</type> <subtype>goblin</subtype>
 
-      <init>+7</init> <perception>+1</perception> <insight>+1</insight>
+      <init>+3</init> <perception>+2</perception> <insight>+2</insight>
       <sense>low-light vision</sense>
 
-      <hp>26</hp> <bloodied>13</bloodied>
-      <ac>15</ac> <fort>11</fort> <ref>14</ref> <will>12</will>
+      <hp>37</hp> <bloodied>18</bloodied>
+      <ac>15</ac> <fort>14</fort> <ref>13</ref> <will>13</will>
       <speed>6</speed>
 
       <category>
          <category-name>Traits</category-name>
 
          <block>
-            <name>Sneak Attack</name>
-            <line>The goblin sneak deals additional +1d6 damage against any target it has combat advantage against.</line>
-         </block>
-
-         <block>
-            <name>Sneaky</name>
-            <line>When the goblin sneak <![CDATA[<i>steps</i> or uses <i>goblin tactics</i>]]>, it can shift into the space occupied by an ally and slide the ally to the space it previously occupied.</line>
+            <name>Bloodied Craze</name>
+            <line>While bloodied, the skullcleaver loses its ability to use <![CDATA[<i>goblin tactics</i>]]> and can do nothing bu attack the nearest enemy, charging when possible, otherwise choosing its target randomly among equally distant targets.</line>
          </block>
       </category>
 
@@ -110,11 +105,12 @@
          <category-name>Standard Actions</category-name>
 
          <block>
-            <name>Short sword</name> <type>mbasic</type>
+            <name>Battleaxe</name> <type>mbasic</type>
             <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +6 vs. AC</line>
-            <line><![CDATA[<i>Hit:</i>]]> 1d6 + 3 damage.</line>
+            <line indent="1">While bloodied, the skullcleaver can target two creatures adjacent to each other</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d10 + 4 damage, or 2d10 + 6 damage while bloodied.</line>
          </block>
       </category>
 
@@ -137,31 +133,31 @@
       </skill>
 
       <str>
-         <value>11</value> <mod>+0 / +0</mod>
+         <value>16</value> <mod>+3 / +4</mod>
       </str>
       <con>
-         <value>11</value> <mod>+0 / +0</mod>
+         <value>13</value> <mod>+1 / +2</mod>
       </con>
       <dex>
-         <value>17</value> <mod>+3 / +3</mod>
+         <value>14</value> <mod>+2 / +3</mod>
       </dex>
       <int>
-         <value>8</value> <mod>-1 / -1</mod>
+         <value>8</value> <mod>-1 / +0</mod>
       </int>
       <wis>
-         <value>12</value> <mod>+1 / +1</mod>
+         <value>13</value> <mod>+1 / +2</mod>
       </wis>
       <cha>
-         <value>9</value> <mod>-1 / -1</mod>
+         <value>8</value> <mod>-1 / +0</mod>
       </cha>
 
       <alignment>evil</alignment>
       <language>Common</language> <language>Goblin</language>
 
-      <equipment>learher armor</equipment>
-      <equipment>short sword</equipment>
+      <equipment>chainmail</equipment>
+      <equipment>battleaxe</equipment>
 
-      <description>Goblin sneaks have more stomach for melee than most goblins, preferring to flank a single enemy and then trade places with fresher goblins when they become wounded</description>
+      <description>Uncharacteristically brave, goblin skullcleavers charge (perhaps foolishly) into melee and, when bloodied, fly into a savage rage where they attack without concern for their own wellbeing</description>
    </creature>
 
    <creature>
