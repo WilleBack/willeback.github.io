@@ -405,6 +405,58 @@
    </creature>
 
    <creature>
+      <title>Rat, Giant</title>
+      <level>0</level> <rolestrength>Minion</rolestrength> <role>Brute</role> <xp>20</xp>
+      <size>Small</size> <origin>natural</origin> <type>beast</type>
+
+      <init>+2</init> <perception>+5</perception> <insight>+0</insight>
+      <sense>low-light vision</sense>
+
+      <hp>3</hp> <bloodied>any damage bloodies a minion</bloodied>
+      <ac>14</ac> <fort>10</fort> <ref>12</ref> <will>11</will>
+      <speed>6</speed> <climb>3</climb>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Bite</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +4 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 4 damage.</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]> The giant rat grabs hold onto the target with its jaws (save ends). Effects that end a grab also end this effect.</line>
+            <line indent="1">The rat shifts into the target's space, and while it holds on, the target takes ongoing 5 damage and the rat moves with the target when the target moves, remaining in its space. The rat does not provoke <![CDATA[<i>opportunity attacks</i>]]> from such movement.</line>
+            <line indent="1">When holding on, the giant rat can use this attack only against the target. It can end this effect by <![CDATA[<i>stepping</i>]]> out of the target's space.</line>
+            <line indent="1">When the target succeeds on the save, the rat shifts into an open space adjacent to the target.</line>
+         </block>
+      </category>
+
+      <str>
+         <value>12</value> <mod>+1 / +1</mod>
+      </str>
+      <con>
+         <value>11</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>15</value> <mod>+2 / +2</mod>
+      </dex>
+      <int>
+         <value>2</value> <mod>-4 / -4</mod>
+      </int>
+      <wis>
+         <value>10</value> <mod>+0 / +0</mod>
+      </wis>
+      <cha>
+         <value>6</value> <mod>-2 / -2</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+
+      <description>The common rat it a shy rodent - unlike this monstrous variant that is the size of a small dog, with a scabby tail and beady red eyes</description>
+   </creature>
+
+   <creature>
       <title>Weasel, Giant</title>
       <level>1</level> <role>Skirmisher</role> <xp>100</xp>
       <size>Small</size> <origin>natural</origin> <type>beast</type>
