@@ -99,6 +99,99 @@
    </creature>
 
    <creature>
+      <title>Elven Fleet-foot</title>
+      <level>1</level> <role>Skirmisher</role> <xp>100</xp>
+      <size>Medium</size> <origin>fey</origin> <type>humanoid</type> <subtype>elf</subtype>
+
+      <init>+4</init> <perception>+3</perception> <insight>+3</insight>
+      <sense>low-light vision</sense>
+
+      <hp>25</hp> <bloodied>12</bloodied>
+      <ac>15</ac> <fort>12</fort> <ref>14</ref> <will>13</will>
+      <speed>7</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Sneak Attack</name>
+            <line>The fleet-foot deals an additiona +1d6 damage when it has combat advantage against its target.</line>
+         </block>
+
+         <block>
+            <name>Wild Step</name>
+            <line>When the elf shifts, it ignores the first square of difficult terrain it enters during that movement.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Standard Actions</category-name>
+
+         <block>
+            <name>Dagger</name> <type>mrbasic</type>
+            <keyword>Weapon</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 or ranged 5/10 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d4 + 4 damage.</line>
+         </block>
+
+         <block>
+            <name>Evasive Strike</name> <type>melee</type>
+            <keyword>Martial</keyword> <keyword>Weapon</keyword>
+            <frequency>Recharge</frequency> <note>when the fleet-foot starts its turn flanked</note>
+            <line><![CDATA[<i>Effect:</i>]]> The fleet-foot can shift up to 4 squares.</line>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); +7 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d4 + 4 damage.</line>
+            <line><![CDATA[<i>Effect:</i>]]> If the fleet-foot did not shift before making the attack, it can shift up to 4 squares.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Triggered Actions</category-name>
+
+         <block>
+            <name>Elven Accuracy</name>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger (free interrupt):</i>]]> The fleet-foot makes an attack roll and dislikes the result</line>
+            <line><![CDATA[<i>Effect:</i>]]> The fleet-foot rerolls the triggering attack roll and uses the second result, even if it is lower.</line>
+         </block>
+      </category>
+
+      <skill>
+         <name>Acrobatics</name> <value>+9</value>
+      </skill>
+      <skill>
+         <name>Nature</name> <value>+8</value>
+      </skill>
+
+      <str>
+         <value>13</value> <mod>+1 / +1</mod>
+      </str>
+      <con>
+         <value>10</value> <mod>+0 / +0</mod>
+      </con>
+      <dex>
+         <value>18</value> <mod>+4 / +4</mod>
+      </dex>
+      <int>
+         <value>13</value> <mod>+1 / +1</mod>
+      </int>
+      <wis>
+         <value>16</value> <mod>+3 / +3</mod>
+      </wis>
+      <cha>
+         <value>11</value> <mod>+0 / +0</mod>
+      </cha>
+
+      <alignment>unaligned</alignment>
+      <language>Common</language> <language>Elven</language>
+
+      <equipment>rope and grapnel</equipment> <equipment>dagger x2</equipment> <equipment>leather armor</equipment>
+
+      <description>En elven guard or scout from a small village</description>
+   </creature>
+
+   <creature>
       <title>Flailing Guard</title>
       <level>1</level> <role>Soldier</role> <xp>100</xp>
       <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>human</subtype>
