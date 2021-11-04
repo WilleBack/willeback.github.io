@@ -223,6 +223,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          </div>
       </div>
 
+      <xsl:if test="bard">
+        <div class="line" style="margin-bottom:0.6em;">
+          <b>Bardic Ritual: </b> <xsl:text>You must be a Bard to cast this ritual.</xsl:text>
+        </div>
+      </xsl:if>
+
       <xsl:for-each select="line">
          <xsl:choose>
             <xsl:when test="@indent='1'">
@@ -495,6 +501,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
             <div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
                <xsl:value-of select="category" />
+               <xsl:if test="bard">
+                 <xsl:text>(Bardic)</xsl:text>
+               </xsl:if>
             </div>
             <div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
                <xsl:value-of select="price"/><xsl:text>gp</xsl:text>
@@ -505,9 +514,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow); box-sizing:border-box; padding:0.2em;">
             <div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
             <div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
-              <div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
-                 <xsl:value-of select="category" />
-              </div>
+              <xsl:value-of select="category" />
+              <xsl:if test="bard">
+                <xsl:text> (Bardic)</xsl:text>
+              </xsl:if>
             </div>
             <div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
                <xsl:value-of select="price"/><xsl:text>gp</xsl:text>
