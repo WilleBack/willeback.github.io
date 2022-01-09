@@ -24803,8 +24803,8 @@
       <group>Forced Movement</group>
       <group>Opportunity Attacks</group>
       <group>Weapon Specialization</group>
-      <benefit>Whenever you hit a target with an <![CDATA[<i>opportunity attack</i>]]> using a hammer or mace you have proficiency with, you can also push the target 1 square.</benefit>
-      <benefit>If your abilities or items allow you to increase this distance, calculate the full distance and halve it for this.</benefit>
+      <benefit>Whenever you hit a target with an <![CDATA[<i>opportunity attack</i>]]> using a hammer or mace you have proficiency with, you can also push the target 1 square. If your <![CDATA[<i>opportunity attack</i>]]> already pushes the target, increase the maximum distance by 1 square instead.</benefit>
+      <benefit>If you have abilities or items that allow you to increase this distance, calculate the full distance and then halve it (rounded down) for this.</benefit>
    </feat>
 
    <feat>
@@ -24819,7 +24819,7 @@
       <group>Power Enhancement</group>
       <group>Weapon Enhancement</group>
       <benefit>When you use your <![CDATA[<i>power strike</i>]]> attack power with a Hammer or Mace you have proficiency with, you can choose to reduce the damage by +1[W]. If your <![CDATA[<i>power strike</i>]]> deals at least +4[W] additional damage, you reduce it by +2[W] instead.</benefit>
-      <benefit>If you do, you daze the target until the end of your next turn. If you do, the extra damage is reduced by 1[W].</benefit>
+      <benefit>If you do, you daze the target until the end of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -37148,7 +37148,7 @@
    </feat>
 
    <feat>
-      <title>Plage of Chance</title>
+      <title>Plague of Chance</title>
       <category>Spellscar</category>
       <tier>Heroic</tier>
       <prereq>
@@ -37287,7 +37287,7 @@
       <group>Teleportation</group>
       <benefit>When you use your <![CDATA[<i>fey step</i>]]> racial power, either before or after you teleport, you can slide one creature adjacent to you 1 square.</benefit>
       <benefit>This slide increases to a maximum of 2 squares starting at 21st level.</benefit>
-      <benefit>If you have the Student of the Plague feat, you can also teleport one creature adjacent to you 2 squares. If you slide a creature before teleporting, you teleport the creature after having teleported, and vice versa.</benefit>
+      <benefit>If you have the Student of the Plague feat, you can also teleport one creature adjacent to you 2 squares. If you slide a creature before teleporting, you teleport a creature after having teleported, and vice versa.</benefit>
       <benefit>This teleport increases to 3 squares starting at 21st level.</benefit>
    </feat>
 
@@ -37304,6 +37304,416 @@
       <benefit>You gain a +5 bonus to saving throws against ongoing damage that lacks a damage type.</benefit>
       <benefit>Also, while you are bloodied, you gain a +2 bonus to saving throws against all other ongoing damage.</benefit>
       <benefit>In addition, you do not need to eat or sleep. Instead of sleeping, you enter a state of inactivity for 4 hours to gain the benefits of an extended rest. While in this state, you are fully aware of your surroundings and notice approaching enemies and other events as normal.</benefit>
+   </feat>
+
+   <feat>
+      <title>Platinum Revelation</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Bahamut</name>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Multiclass Bahamut</group>
+      <group>Power Repertoire</group>
+      <group>Skill Training</group>
+      <group>Support</group>
+      <benefit>You gain training in the Insight skill.</benefit>
+      <benefit>Also, you gain the <![CDATA[<i>Bahamut's shield</i>]]> attack power.</benefit>
+      <benefit>In addition, you can learn the following powers as multiclass powers of the appropriate levels. You use your highest ability modifier for the attack roll and damage roll.</benefit>
+
+      <power>
+         <title>Bahamut's Shield</title>
+         <class>>Bahamut</class> <category>Attack</category>
+         <fluff>You invoke the Platinum Dragon to shield yourself and others from harm</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Weapon</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>weapon</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Ability vs. AC</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>1[W] + Ability modifier damage, and the target takes a -2 penalty to attack rolls until the start of your next turn.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text>2[W] + Ability modifier damage.</text>
+            </section>
+            <section>
+               <name>Miss:</name> <name-style>bold</name-style>
+               <text>The target takes a -2 penalty to attack rolls with the first attack it makes before the start of your next turn.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Dragon's Rebuke</title>
+         <class>Bahamut</class> <category>Attack</category> <level>3</level>
+         <fluff>Your strike awakens the dragon within you, giving you the drive to punish your foe should it fail to give your god his proper due</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Weapon</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>weapon</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Ability vs. AC</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>2[W] + Ability modifier damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 17:</name> <name-style>italic</name-style>
+               <text>If you know this power as an encounter attack power of 17th level or higher, the damage increases to 4[W] + Ability modifier.</text>
+            </section>
+            <section>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You can use the following attack action at-will until the start of your next turn. This action does not have the Weapon keyword.</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Opportunity Reaction:</name> <name-style>bold</name-style>
+               <text><![CDATA[<i>Trigger:</i>]]> The target makes an attack that does not include as a target; You push the target 2 squares.</text>
+            </section>
+            <section>
+               <indent>2</indent>
+               <name>Level 17:</name> <name-style>italic</name-style>
+               <text>If you know this power as an encounter attack power of 17th level or higher, the maximum distance you can push the target increases to 4 squares.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Zealous Fury</title>
+         <class>Bahamut</class> <category>Utility</category> <level>6</level>
+         <fluff>When an enemy dishonors you by attacking an ally, you intercede to ensure your enemy does not make the same mistake twice</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Divine, Healing</keyword>
+            <action>Immediate</action> <subaction>Reaction</subaction>
+            <type>Ranged</type> <range>10</range>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>An ally within 10 squares of you is hit by an enemy's attack</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering ally</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target regains hit points equal to his or her healing surge value. If the target has abilities that activate on spending a healing surge to regain hit points, those abilities can trigger from this power.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>You teleport adjacent to the triggering enemy, and mark that enemy (save ends).</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Righteous Intolerance</title>
+         <class>Bahamut</class> <category>Attack</category> <level>9</level>
+         <fluff>Filled with righteous fury, you unleash divine wrath to penetrate your opponent's defenses</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Divine, Radiant, Weapon</keyword>
+            <action>Standard</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>weapon</range>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Ability vs. AC</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>2[W] + Ability modifier radiant damage.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 25:</name> <name-style>italic</name-style>
+               <text>If you know this power as a daily attack power of 25th level or higher, the radiant damage increases to 6[W] + Ability modifier.</text>
+            </section>
+            <section>
+               <name>Miss:</name> <name-style>bold</name-style>
+               <text>Half damage.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>Bahamut's divine fury radiates from the target (save ends).</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>While it radiates, when an ally within 3 squares of the target takes damage, that ally gains temporary hit points equal to one-half your level after the damaging effect has been resolved. You can then use a free reaction to shift your speed to a square adjacent to that ally.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Aftereffect:</name> <name-style>italic</name-style>
+               <text>The target is dazed until the end of its next turn.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+
+   <feat>
+      <title>Pledge of Retribution</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Censure of Retribution</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>oath of enmity</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Miss Mitigation</group>
+      <benefit>If you miss your oath target with an attack, you gain a +2 bonus to the next attack roll you make against it.</benefit>
+      <benefit>If you do not make an attack against your oath target before the end of your next turn, the bonus is lost. If you miss with your next attack roll, increase the bonus by +1 each time you miss and the bonus remains until the end of your following turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Plunging Blade</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Opportunity Attacks</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you make an <![CDATA[<i>opportunity attack</i>]]> using a Light Blade you have proficiency with, you can score a critical hit on a natural roll of 19 or 20.</benefit>
+      <benefit>If you have the Light Blade Mastery feat, this increases to a natural roll of 18, 19 or 20.</benefit>
+   </feat>
+
+   <feat>
+      <title>Point-blank Shot</title>
+      <tier>Paragon</tier>
+      <group>Attack Bonus</group>
+      <benefit>If you make ranged attack against a foe within 5 squares of you, your attack ignores cover and concealment, and treats superior cover as cover.</benefit>
+   </feat>
+
+   <feat>
+      <title>Pointed Step Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Flurry of Blows</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>When your Flurry of Blows power is triggered by an attack you make with a Spear, one target of that power can be up to 2 squares away from you.</benefit>
+   </feat>
+
+   <feat>
+      <title>Poison Adaptation</title>
+      <tier>Heroic</tier>
+      <group>Damage Resistance</group>
+      <benefit>You gain resist poison equal to one-half your level (minimum 1).</benefit>
+      <benefit>If you already resist poison, you instead increase that resist by 5.</benefit>
+   </feat>
+
+   <feat>
+      <title>Poison Inured</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>13</value>
+      </prereq>
+      <group>Saving Throws</group>
+      <benefit>You gain a feat bonus to saving throws against Poison effects. The bonus equals your Constitution modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Poison Plague Feast</title>
+      <category>Spellscar</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <group>Spellscar</group>
+      <group>Temporary Hit Points</group>
+      <benefit>Whenever you successfully save against a Poison, you gain temporary hit points equal to 1 + one-half your level.</benefit>
+      <benefit>If you have the Student of the Plague feat, you also gain a +2 bonus to saving throws until the end of your next turn in addition to the temporary hit points.</benefit>
+   </feat>
+
+   <feat>
+      <title>Poison's Partner</title>
+      <tier>Epic</tier>
+      <group>Combat Advantage</group>
+      <group>Poison</group>
+      <benefit>You gain combat advantage against enemies affected by a Poison effect.</benefit>
+   </feat>
+
+   <feat>
+      <title>Poisoner</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Dungeoneering</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Nature</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Multiclass Poisoner</group>
+      <group>Poison</group>
+      <group>Skill Training</group>
+      <benefit>You gain training in the Thievery skill.</benefit>
+      <benefit>Also, your attacks ignore the first 5 points the target's resist poison.</benefit>
+      <benefit>This increases to ingoring the first 10 points at 11th level, and to the first 15 points at 21st level.</benefit>
+      <benefit>In addition, you treat a creature that is immune to poison as having resist poison equal to 15 + one-half its level.</benefit>
+      <benefit>In addition, you can learn the following powers as multiclass powers of the indicated level:</benefit>
+
+      <power>
+         <title>Improvised Poison</title>
+         <class>Poisoner</class> <category>Attack</category> <level>3</level>
+         <fluff>In your experience with toxins, there's always something on hand to make an attack venomous</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Poison</keyword>
+            <action>Nonaction</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You use an at-will melee or at-will ranged attack on your turn</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The triggering power gains the Poison keyword. If the power deals typed damage, you can choose to change all typed damage to poison. If you do, the power loses the corresponding damage keyword.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>The first target you hit with the triggering power takes ongoing 5 poison damage (save ends) and grants combat advantage until the end of its next turn.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>If the triggering attack misses all targets, you regain the use of this power at the start of your next turn.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Potent Poison</title>
+         <class>Poisoner</class> <category>Utility</category> <level>6</level>
+         <fluff>Your poisons have an insidious effectiveness</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <action>Free</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You miss an attack roll with a Poison power</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>You reroll the triggering attack roll.</text>
+            </section>
+         </part>
+      </power>
+
+      <power>
+         <title>Progressive Poison</title>
+         <class>Poisoner</class> <category>Attack</category> <level>9</level>
+         <fluff>You imbue your attack with a withering poison that diminishes your foe more the longer the poison acts</fluff>
+         <part>
+            <frequency>Daily</frequency>
+            <keyword>Poison</keyword>
+            <action>Nonaction</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You use an at-will melee or at-will ranged attack</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The triggering power gains the Poison keyword. If the power deals typed damage, you can choose to change all typed damage to poison. If you do, the power loses the corresponding damage keyword.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>The first target you hit with the triggering power is affected by your progressive poison (save ends).</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>While affected, the target takes ongoing 10 poison damage, and has a -2 penalty to attack rolls.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Aftereffect:</name> <name-style>italic</name-style>
+               <text>Ongoing 5 poison damage (save ends).</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>First Failed Saving Throw:</name> <name-style>italic</name-style>
+               <text>While affected, the target is blinded instead of taking a -2 penalty to attack rolls.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Second Failed Saving Throw:</name> <name-style>italic</name-style>
+               <text>While affected, the target is also weakened.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 25:</name> <name-style>italic</name-style>
+               <text>If you know this power as a daily attack power of 25th level or higher, the ongoing poison damage increases to 20, and the aftereffect ongoing poison damage increases to 10.</text>
+            </section>
+            <section>
+               <name>Special:</name> <name-style>bold</name-style>
+               <text>If the triggering attack misses all targets, you regain the use of this power at the start of your next turn.</text>
+            </section>
+         </part>
+      </power>
    </feat>
 
    <feat>
