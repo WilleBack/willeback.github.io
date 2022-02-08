@@ -207,13 +207,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       </div>
       <div class="pricetable">
         <div class="priceline">
-          <b>Market Price: </b><xsl:value-of select="price" /><xsl:text> gp</xsl:text>
+          <b>Market Price: </b><xsl:value-of select="price" />
         </div>
         <div class="priceline">
            <b>Key Skill: </b><xsl:value-of select="skill" />
          </div>
          <div class="priceline">
-           <b>Component Cost: </b><xsl:value-of select="component" /><xsl:text> gp</xsl:text>
+           <b>Component Cost: </b><xsl:value-of select="component" />
          </div>
          <div class="priceline">
            <b>Time: </b><xsl:value-of select="time" />
@@ -226,6 +226,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <xsl:if test="bard">
         <div class="line" style="margin-bottom:0.6em;">
           <b>Bardic Ritual: </b> <xsl:text>You must be a Bard to cast this ritual.</xsl:text>
+        </div>
+      </xsl:if>
+
+      <xsl:if test="requirement">
+        <div class="line" style="margin-bottom:0.6em;">
+          <b>Requirement: </b> <xsl:value-of select="requirement" />
         </div>
       </xsl:if>
 
@@ -502,11 +508,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             <div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
                <xsl:value-of select="category" />
                <xsl:if test="bard">
-                 <xsl:text>(Bardic)</xsl:text>
+                 <xsl:text> (Bardic)</xsl:text>
                </xsl:if>
             </div>
             <div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
-               <xsl:value-of select="price"/><xsl:text>gp</xsl:text>
+               <xsl:value-of select="price"/>
             </div>
          </div>
       </xsl:when>
@@ -520,7 +526,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
               </xsl:if>
             </div>
             <div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
-               <xsl:value-of select="price"/><xsl:text>gp</xsl:text>
+               <xsl:value-of select="price"/>
             </div>
          </div>
       </xsl:otherwise>
