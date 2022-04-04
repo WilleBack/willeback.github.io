@@ -404,7 +404,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:choose>
 			<div class="descript" style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;">
 				<b>Weapon Groups: </b>
-				<xsl:for-each select="group">
+				<xsl:for-each select="secondary/group">
 					<xsl:value-of select="." />
 					<xsl:if test="position()!=last()">
 						<xsl:text>, </xsl:text>
