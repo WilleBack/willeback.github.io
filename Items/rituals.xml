@@ -91,7 +91,7 @@
       <fluff>Fire leaps and dances at your command, brightening or dimming</fluff>
 
       <price>100 gp</price>
-      <skill>Arcane or Nature (no check)</skill>
+      <skill>Arcana or Nature (no check)</skill>
       <component>15 gp</component>
       <time>1 minute</time>
       <duration>8 hours</duration>
@@ -190,7 +190,7 @@
       <skill>Nature</skill>
       <component>45 gp</component>
       <time>1 minute</time>
-      <duration>Special</duration>
+      <duration>Varies</duration>
 
       <line>You target a nonhostile Tiny natural beast, such as a cat, a fox, a fish, a mouse, or a sparrow. The animal must remain within 5 squares of you for the time necessary to perform the ritual.</line>
       <line>Once the ritual is complete, the animal regards you as friend and performs simple tasks on your behalf. The tasks are limited ot the options below,  and assigning a task requires standard action.</line>
@@ -219,7 +219,7 @@
       <skill>Nature</skill>
       <component>1 healing surge or 10 gp</component>
       <time>10 minutes</time>
-      <duration>Special</duration>
+      <duration>Varies</duration>
 
       <line>You target a nonhostile Tiny animal, such as a sparrow, a raven, a fox, or a carp. The animal must remain within 5 squares of you for the time necessary to perform the ritual.</line>
       <line>Once the ritual is complete, you whisper a message of up to 25 words to the animal and name a recipient and a location. The animal bounds off towards the location, in search of the recipient. The animal avoids danger along its path. Upon finding the recipient, the animal approaches until it is adjacent to the recipient, and your whisper issues from the animal's mouth, conveying the message.</line>
@@ -292,7 +292,7 @@
       <line>You create a magical barrier that is up to 2 squares long and tall, typically large enough to block a doorway or the entrance of a hallway. The obstruction is imperceptible from more than 10 squares away, but is readily apparent as a translucent, shimmering, paper-thin wall from closer than that.</line>
       <line>When creating the barrier, you also determine circumstances that open the barrier; this is the same as for the <![CDATA[<i>arcane lock</i>]]> ritual. Your Arcana check result + 5 is the DC for <![CDATA[<i>knock</i>]]> or similar rituals to open the barrier, and the DC to burst the barrier with a Strength check is +5 greater than that.</line>
       <line><![CDATA[<b>Special:</b>]]> You can expend a healing surge to cast this ritual as a standard action. If you do, the duration is reduced to 10 minutes, the component cost is reduced to 200 gp, and you do not gain the +5 bonus to the DC to open the barrier.</line>
-      <line>If you spend 4 hours and four times the component costs to perform this ritual, the duration increases to permanent. A ritual caster who uses <![CDATA[<i>knock</i>]]> or a similar ritual to open a permanent barrier can choose to bring it down temporary, in which case it seals again after 5 minutes, or to destroy the barrier.</line>
+      <line>If you spend 4 hours and four times the component costs to perform this ritual, the duration increases to permanent. A ritual caster who uses <![CDATA[<i>knock</i>]]> or a similar ritual to open a permanent barrier can choose to bring it down temporarily, in which case it seals again after 5 minutes, or to destroy the barrier.</line>
    </ritual>
    
    <ritual>
@@ -530,6 +530,38 @@
       <line>Alternatively, the ritual causes crops and fruit-bearing plants within 20 squares of you to yield food. The plants produce enough food to feed five people for a week.</line>
       <line><![CDATA[<b>Special:</b>]]> You can expend a healing surge to reduce the component cost to 5 gp.</line>
    </ritual>
+   
+   <ritual>
+   <title>Bolster Object</title>
+      <category>Warding</category>
+      <level>6</level>
+      <fluff>Though it looks no different, the iron portcullis has become harder than steel thanks to this ritual</fluff>
+      
+      <price>250 gp</price>
+      <skill>Arcana or Nature</skill>
+      <component>100 gp</component>
+      <time>10 minutes</time>
+      <duration>Instantaneous</duration>
+      
+      <line>You target an object you must touch during the casting of this ritual. An object can only benefit from one casting of this ritual, keeping the best result.</line>
+      <line>The target's current and maximum hit points increase by 10% for each 5 points of your check result. For example, if your check result is 23, the hit points increase by 40%</line>
+   </ritual>
+   
+   <ritual>
+      <title>Breach Disguise</title>
+      <category>Divination</category>
+      <level>5</level>
+      <fluff>The recipient of this ritual can feel their their intuition grow, especially as it comes to people pretending to be what they are not</fluff>
+      
+      <price>220 gp</price>
+      <skill>Arcana (no check)</skill>
+      <component>20 gp</component>
+      <time>1 minute</time>
+      <duration>1 hour</duration>
+      
+      <line>You grant either yourself or an ally present during the casting of the ritual the ability to discern when a creature appears as something other than what it truly is.</line>
+      <line>The target gains a +3 power bonus to checks to discern disguises or alternative form, and can use his or her Arcana check modifier in place of his or her Insight check modifier.</line>
+   </ritual>
 
    <ritual>
       <title>Brew Potion</title>
@@ -545,6 +577,110 @@
 
       <line>You create a common potion, elixir, or similar common item of your level or lower. The ritual's component cost is equal to the price of the item you create.</line>
       <line>You can create uncommon, rare, or unique potions, elixirs, and similar items if your DM allows it. In some cases, this might require you to discover how to create a specific item, or acquire special components.</line>
+   </ritual>
+   
+   <ritual>
+      <title>Call Wilderness Guide</title>
+      <category>Exploration</category>
+      <level>6</level>
+      <fluff>The spirit of an animal native to the local wilderness answers you call, approaching you and then turning away and looking over its shoulder to make sure you're following</fluff>
+      
+      <price>250 gp</price>
+      <skill>Nature</skill>
+      <component>50 gp</component>
+      <time>30 minutes</time>
+      <duration>Varies</duration>
+      
+      <line>You call a nature spirit into your service to act as a guide. The guide takes the form of a Medium or smaller natural beast, and is treated as a minion of your level with defenses equal to yours at the time of performing this ritual. It has a speed or fly speed, as appropriate to its form, of 8, though it measures its pace to so your group can keep up.</line>
+      <line>The guide leads you to a location you name as you perform the ritual. The destination must be a specific place, such as a unique natural formation or specific city. The guide cannot lead you to a general location, such as "a cave full of treasure", or to an unknown place, such as the secret lair of a dragon. For the duration of the ritual, the guide leads you to the destination by the shortest (although not necessarily the safest) route.</line>
+      <line>Your Nature check result determines how long the guide serves you. If you can't reach the destination within the allotted time, the guide leads you as far as it can along the way and then disappears.</line>
+      <line indent="1"><![CDATA[<b>Nature Check Result</b>]]></line>
+      <line indent="2"><![CDATA[<i>19 or lower:</i>]]> 1 hour</line>
+      <line indent="2"><![CDATA[<i>20 - 29:</i>]]> 4 hours</line>
+      <line indent="2"><![CDATA[<i>30 - 39:</i>]]> 8 hours</line>
+      <line indent="2"><![CDATA[<i>40 or higher:</i>]]> 16 hours</line>
+   </ritual>
+   
+   <ritual>
+      <title>Call of Friendship</title>
+      <category>Exploration</category>
+      <level>4</level>
+      <fluff>Your song calls to a person's heart, filling it with feelings of kinship, affection, and perhaps even love</fluff>
+      
+      <price>150 gp</price>
+      <skill>Arcana (no check)</skill>
+      <component>a focus, plus 10 gp</component>
+      <time>10 minutes</time>
+      <duration>Varies</duration>
+      <bard />
+      
+      <line>You target one nonhostile natural humanoid creature that is at least 2 level lower than you. The target must remain within 10 squares of you and hear the entire performance.</line>
+      <line>Once you finish casting the ritual, make a Diplomacy check to determine the effect it has on the target. Once the ritual's duration ends, the target's attitude returns to normal. The ritual does not affect the target's memory in any way.</line>
+      <line indent="1"><![CDATA[<b>Diplomacy Check Result</b>]]></line>
+      <line indent="2"><![CDATA[<i>19 or lower:</i>]]> The target acts as a friend for 1 hour, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 5 gp</line>
+      <line indent="2"><![CDATA[<i>20 - 29:</i>]]> The target acts as a friend for 1 hour, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 25 gp</line>
+      <line indent="2"><![CDATA[<i>30 - 39:</i>]]> The target acts as a friend for 6 hours, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 50 gp</line>
+      <line indent="2"><![CDATA[<i>40 or higher:</i>]]> The target acts as a friend for 1 day, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 500 gp</line>
+      <line><![CDATA[<b>Focus:</b>]]> A musical instrument worth at least 50 gp you play as part of performing the ritual.</line>
+      <line indent="1"><![CDATA[<b>Special:</b>]]> You can expend a healing surge to ignore the focus.</line>
+   </ritual>
+   
+   <ritual>
+      <title>Calm Emotions</title>
+      <category>Deception</category>
+      <level>3</level>
+      <fluff>You weave this ritual among your speech, giving magical weight to your words</fluff>
+      
+      <price>120 gp</price>
+      <skill>Arcana or Religion (no check)</skill>
+      <component>2 healing surges</component>
+      <time>1 minute</time>
+      <duration>1 hour</duration>
+      
+      <line>When you complete this ritual, nonhostile humanoid creatures within 10 squares of you become calm and reasonable, though you can exclude any creatures from the ritual's effects as you wish.</line>
+      <line>For the ritual's duration, Bluff checks, Diplomacy checks, and other similar checks to influence the affected creatures gain a +2 power bonus. The effect immediately ends on a creature if takes part on combat.</line>
+      <line><![CDATA[<b>Bardic Affinity:</b>]]> This counts as a Bardic ritual for the Ritualistic Lore class feature.</line>
+   </ritual>
+   
+   <ritual>
+      <title>Chamber of Vulnerability</title>
+      <category>Warding</category>
+      <level>20</level>
+      <fluff>You slowly exhale, watching as the destructive energy of your breath weapon swirls about before sinking into the world, as if absorbed by the world</fluff>
+      
+      <price>20,000 gp</price>
+      <skill>Arcana</skill>
+      <component>3,500 gp</component>
+      <time>30 minutes</time>
+      <duration>24 hours (see optional focus)</duration>
+      <requirement>You must possess an innate breath weapon</requirement>
+      
+      <line>You ward an area so that creatures in it gain vulnerable to the damage type you deal with your breath weapon, such as fire damage if you are a red dragon. If you deal multiple types of damage or can choose between different types of damage, you choose one of them when performing this ritual.</line>
+      <line>Your Arcana check result determines both the size of the warded area, and the vulnerable that affected creatures gain.</line>
+      <line indent="1"><![CDATA[<b>Arcana Check Result</b>]]></line>
+      <line indent="2"><![CDATA[<i>19 or lower:</i>]]> burst 3, vulnerable 5</line>
+      <line indent="2"><![CDATA[<i>20 - 29:</i>]]> burst 5, vulnerable 5</line>
+      <line indent="2"><![CDATA[<i>30 - 39:</i>]]> burst 8, vulnerable 10</line>
+      <line indent="2"><![CDATA[<i>40 or higher:</i>]]> burst 12, vulnerable 10</line>
+      <line>You are not affected by your own <![CDATA[<i>chamber of vulnerability</i>]]>. In addition, you can designate any number of ritual participants as not being affected. When performing the ritual, you can also designate one or more categories of creatures that are not affected by the ritual. You can designate these categories by obvious physical characteristics (such as height, weight, or body shape), creature type or subtype (such as humanoid, magical beast, kobold, or dragon), creature race (such as red dragon), or obvious equipment (such as creatures wearing a specific signet ring).</line>
+      <line><![CDATA[<b>Optional Focus:</b>]]> You can extend the duration of this ritual indefinitely by keeping a focus in the vicinity. This ritual focus is a small fanged mouth carved of ivory and silver, worth 2,000 gp. The ritual lasts as long as the focus remains within the warded area. You can hide or protect the ritual focus in any way you like, as long as it remains within the area.</line>
+   </ritual>
+   
+   <ritual>
+      <title>Chameleon's Cloak</title>
+      <category>Deception</category>
+      <level>10</level>
+      <fluff>No one can notice you or your friends thanks to the concealing cloak of magic you have conjured</fluff>
+      
+      <price>800 gp</price>
+      <skill>Arcana or Nature (no check)</skill>
+      <component>150 gp</component>
+      <time>10 minutes</time>
+      <duration>24 hours</duration>
+      
+      <line>You conceal yourself and up to 8 allies within 5 squares of you, using a combination of camouflage and distraction to ensure that no one notices any of you while you stay in place.</line>
+      <line>The Perception DC to notice a creature concealed by this ritual is equal to 10 + your Arcana check modifier or your Nature check modifier, with a +5 power bonus. A concealed creature that leaves the space it occupies at the completion of the ritual or that attacks a creature loses all benefit from the ritual.</line>
+      <line><![CDATA[<b>Special:</b>]]> You can expend a healing surge to cast this ritual as a standard action. If you do, the duration is reduced to 1 hour, and the component cost is reduced to 30 gp.</line>
    </ritual>
 
    <ritual>
@@ -564,6 +700,7 @@
       <line>Using this ritual on a language you have seen as a piece of writing allows you to read the language for the duration and, if your Arcana chek result is 35 or higher, to write the language in its native script or in any other script you know for the duration.</line>
       <line>Using this ritual on a language you have both heard and seen as a piece of writing within the past 24 hours allows you to understand it in both forms for the duration of the ritual, and an Arcana check result of 35 or higher alows you to speak and write the language.</line>
       <line><![CDATA[<b>Special:</b>]]> You can expend a healing surge to perform this ritual as a standard action, but you must be currently hearing the language and the duration is reduced to 4 hours.</line>
+      <line><![CDATA[<b>Bardic Affinity:</b>]]> This counts as a Bardic ritual for the Ritualistic Lore class feature.</line>
    </ritual>
 
    <ritual>
@@ -741,7 +878,7 @@
       
       <price>40 gp</price>
       <skill>Arcana</skill>
-      <componen>1 healing surge</componen>
+      <component>1 healing surge</component>
       <time>1 standard action</time>
       <duration>10 minutes or until discharged</duration>
       
@@ -797,9 +934,51 @@
       <time>1 minute</time>
       <duration>8 hours</duration>
       
-      <line>You and up to five allies present while you perform this ritual leave fewer tracks. The component costs of this ritual is equal to 2 gp, plus 2 gp for each affected creature.</line>
+      <line>You and up to five allies present while you perform this ritual leave fewer tracks. The component costs of this ritual is equal to 4 gp, plus a 2 gp increase for each affected creature.</line>
       <line>The DC to track those affected by the ritual increases by 5, as if you had taken the time to obscure the tracks.</line>
-      <line><![CDATA[<b>Special:</b>]]> A creature affected by this ritual can expend a healing surge to negate the component cost for him or her.</line>
+      <line><![CDATA[<b>Special:</b>]]> A creature affected by this ritual can expend a healing surge to negate the component cost increase for him or her.</line>
+   </ritual>
+   
+   <ritual>
+      <title>Portend Weather</title>
+      <category>Divination</category>
+      <level>1</level>
+      <fluff>You see what the weather will be in the near future</fluff>
+      
+      <price>30 gp</price>
+      <skill>Nature (no check)</skill>
+      <component>2 gp</component>
+      <time>1 minute</time>
+      <duration>24 hours</duration>
+      
+      <line>You determine what the weather will be like for the next 24 hours within a 50-mile radius of your current position.</line>
+      <line>You and up to 8 allies present during the casting of this ritual gain a +5 bonus to Endurace checks to endure any extreme weather you foresee.</line>
+   </ritual>
+   
+   <ritual>
+      <title>Purify Water</title>
+      <category>Exploration</category>
+      <level>1</level>
+      <fluff>The water, tainted by the presence of a demon that laired nearby, becomes crystal clear and refreshing to drink</fluff>
+      
+      <price>30 gp</price>
+      <skill>Arcana, Nature, or Religion</skill>
+      <component>at least 10 gp</component>
+      <time>10 minutes</time>
+      <duration>Instantaneous</duration>
+      
+      <line>You purify a volume of water. </line>
+      <line>Your Arcana check, Nature check or Religion check determines the volume of water that you can purify.</line>
+      <line indent="1"><![CDATA[<b>Check Result</b>]]></line>
+      <line indent="2"><![CDATA[<i>9 or lower:</i>]]> a 5-foot cube</line>
+      <line indent="2"><![CDATA[<i>10 - 19:</i>]]> two 5-foot cubes</line>
+      <line indent="2"><![CDATA[<i>20 - 29:</i>]]> five 5-foot cubes</line>
+      <line indent="2"><![CDATA[<i>30 - 39:</i>]]> twenty 5-foot cubes</line>
+      <line indent="2"><![CDATA[<i>40 or higher:</i>]]> fifty 5-foot cubes</line>
+      <line>The component cost for the ritual is 10 gp for each 5-foot cube.</line>
+      <line>A 5-foot cube is roucghly 935 gallons of liquid, or the contents of a sizable barrel.</line>
+      <line><![CDATA[<i>Special:</i>]]> If you are purifying a larger volume of water than you can affect with a single casting, you can expend a healing surge when you finish casting the ritual.</line>
+      <line>If you expend the healing surge and immediately begin another casting of this ritual, the affected volume remains magically pure for the duration of the casting. You can keep expending healing surges to combine castings as long as you have healing surges remaining.</line>
    </ritual>
    
    <ritual>
