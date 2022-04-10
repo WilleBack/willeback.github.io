@@ -977,9 +977,20 @@
       <group>Mobility</group>
       <benefit>When you move as part of using a Ranger attack power, you ignore difficult terrain.</benefit>
    </feat>
+
    <feat>
       <title>Agile Stand</title>
       <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+         <combine>or</combine>
+      </prereq>
       <prereq>
          <type>class</type>
          <name>Ranger</name>
@@ -992,7 +1003,9 @@
       <group>Class</group>
       <group>Mobility</group>
       <benefit>Once per turn when you stand up from prone, you can also shift 1 square.</benefit>
+      <benefit>This increases to up to 2 squares at 21st level.</benefit>
    </feat>
+
    <feat>
       <title>Agile Superiority</title>
       <tier>Heroic</tier>
@@ -9174,6 +9187,26 @@
    </feat>
 
    <feat>
+      <title>Controlled Breath</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dragon breath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>Choose an ability score.</benefit>
+      <benefit>You use the chosen ability modifier for attack rolls and damamage rolls with your <![CDATA[<i>dragon breath</i>]]> racial power instead of the ability score you chose during character generation.</benefit>
+   </feat>
+
+   <feat>
       <title>Controlling Advantage</title>
       <tier>Heroic</tier>
       <prereq>
@@ -14478,7 +14511,7 @@
       <group>Mobility</group>
       <group>Racial</group>
       <group>Support</group>
-      <benefit>When you use your <![CDATA[<i>dragon breath</i>]]> racial power, before resolving the attack, you can slide one ally in the burst a number of squares equal to your Intelligence modifier.</benefit>
+      <benefit>When you use your <![CDATA[<i>dragon breath</i>]]> racial power, before resolving the attack, you can slide one ally in the area of effect a number of squares equal to your Intelligence modifier.</benefit>
    </feat>
 
    <feat>
@@ -16902,6 +16935,12 @@
       <prereq>
          <type>class</type>
          <name>any shadow</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+         <combine>or</combine>
       </prereq>
       <prereq>
          <type>class</type>
@@ -21190,6 +21229,7 @@
       <benefit>When you use your <![CDATA[<i>dragon breath</i>]]> racial power, you can choose to make it a close blast 1 instead of close blast 3.</benefit>
       <benefit>If you do, you gain a +2 bonus to the damage roll.</benefit>
       <benefit>This bonus damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+      <benefit>If you have the Empowered Dragon Breath, you gain a +6 bonus to the damage roll instead of +4. This increases to +10 instead of +6 at 21st level.</benefit>
       <benefit>If you have the Enlarged Dragon Breath feat, you can also choose to make your <![CDATA[<i>dragon breath</i>]]> racial power a close blast 2 to gain this benefit.</benefit>
    </feat>
 
@@ -28466,6 +28506,24 @@
    </feat>
 
    <feat>
+      <title>Inevitable Breath</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dragon breath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Miss Mitigation</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>You deal half damage to targets you miss with your <![CDATA[<i>dragon breath</i>]]> racial power.</benefit>
+   </feat>
+
+   <feat>
       <title>Inevitable Doom</title>
       <tier>Epic</tier>
       <prereq>
@@ -28841,7 +28899,7 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>When you deal your Sneak Attack damage, you can choose to expend your <![CDATA[<i>infernal wrath</i>]]> racial power as a free interrupt.</benefit>
-      <benefit>If you do, your Sneak Attack damage increases by 1d6 for each die of sneak attack damage you deal, and all of the damage is fire damage.</benefit>
+      <benefit>If you do, you apply the effects of your <![CDATA[<i>infernal wrath</i>]]> racial power as part of the sneak attack, and all of the sneak attack damage is fire damage.</benefit>
    </feat>
 
    <feat>
@@ -37714,6 +37772,466 @@
             </section>
          </part>
       </power>
+   </feat>
+
+   <feat>
+      <title>Poisonous Beast</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Beast Mastery</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>companion</type>
+         <name>serpent</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>companion</type>
+         <name>spider</name>
+      </prereq>
+      <group>Animal Companion</group>
+      <group>Class</group>
+      <group>Ongoing Damage</group>
+      <group>Poison</group>
+      <benefit>Whenever your beast companion hits a creature with a <![CDATA[<i>melee basic attack</i>]]>, that creature takes ongoing 5 poison damage (save ends).</benefit>
+      <benefit>This ongoing damage increases to 10 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Polearm Expertise</title>
+      <tier>Heroic</tier>
+      <group>Defense</group>
+      <group>Weapon Specialization</group>
+      <benefit>While you are wielding a two-handed Polearm that you have proficiency with in two hands, you gain a +2 bonus to all defenses against charge attacks, and other attacks where the attacker moves to you from further away as part of the attack.</benefit>
+   </feat>
+
+   <feat>
+      <title>Polearm Flanker</title>
+      <tier>Heroic</tier>
+      <group>Flanking</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you make a melee Weapon attack with a Polearm that you have proficiency with against a target that is not adjacent to you, choose an unoccupied square that is adjacent to both you and the target. You are considered to occupy that square for the purpose of determining if you flank the target when resolving the attack.</benefit>
+   </feat>
+
+   <feat>
+      <title>Polearm Gamble</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>17</value>
+      </prereq>
+      <group>Opportunity Attacks</group>
+      <group>Weapon Specialization</group>
+      <benefit>When a nonadjacent enemy enters a square adjacent to you, you can make an opportunity attack against that enemy with a polearm you are wielding and have proficiency with. If you do, you grant combat advantage to that enemy until the end of the enemy's current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Polearm Momentum</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Forced Movement</group>
+      <group>Weapon Specialization</group>
+      <benefit>Whenever you make a Weapon attack with a Polearm or Spear you have proficiency with and push or slide the target more than 2 squares, you can choose to halve forced movement to knock the target prone at the end of the forced movement.</benefit>
+   </feat>
+
+   <feat>
+      <title>Potent Enforcement</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>enforce challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Mark Punishment</group>
+      <benefit>You gain a +1 bonus to the damage roll for the attack you make as part of your <![CDATA[<i>enforce challenge</i>]]> Fighter attack.</benefit>
+      <benefit>This bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+      <benefit>You gain an additional +1 bonus to the damage roll if you are wielding a two-handed weapon.</benefit>
+      <benefit>This additional bonus increases to +2 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Potent Rebirth</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Deva</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Damage Bonus</group>
+      <group>Dying</group>
+      <group>Racial</group>
+      <benefit>When you drop to 0 hit points or fewer, you gain a +2 bonus to attack rolls and damage rolls until the end of the encounter.</benefit>
+   </feat>
+
+   <feat>
+      <title>Potent Restorables</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <benefit>Your Artificer Healing powers restore 2 extra hit points.</benefit>
+      <benefit>The extra hit points increase to 3 at 6th level, to 4 at 11th level, to 5 at 16th level, to 6 at 21st level, and to 7 at 26th level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Pouncing Form</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Primal Predator</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Shapechange</group>
+      <benefit>When you use your <![CDATA[<i>wild shape</i>]]> class power to change from your humanoid form to beast form, you can shift a number of squares equal to 1 + one-half your Dexterity modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Power Attack</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <group>Damage Bonus</group>
+      <benefit>When making a melee Weapon attack, you can take a -2 penalty to the attack roll.</benefit>
+      <benefit>If you do, you gain a +2 bonus to the damage roll per [W] of damage, or a +4 bonus if you make the attack with a weapon wielded in two hands.</benefit>
+      <special>Your DM can allow you to use this with non-Weapon attacks as well, such as those flavored as done with your body or a shield.</special>
+   </feat>
+
+   <feat>
+      <title>Power Cascade</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Psion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Force Specialization</group>
+      <group>Psychic Specialization</group>
+      <benefit>When you hit an enemy with a psion daily attack power, you gain a cascade benefit with unaugmented psion at-will attack powers against that enemy until the end of your next turn.</benefit>
+      <benefit>The cascade benefit is an additional 1d6 extra force or psychic damage, your choice. The power also gains the corresponding keyword. You can only gain this benefit once per creature.</benefit>
+      <benefit>The additional damage increases to 2d6 if you use a daily attack power of 15th or higher, and to 3d6 if you use a daily attack power of 25th level or higher.</benefit>
+   </feat>
+
+   <feat>
+      <title>Power Strike Specialization</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>power</type>
+         <name>power strike</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Power Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>Choose one of following specialization benefits:</benefit>
+      <benefit><![CDATA[<b>Bladed Step:</b> After you use your <i>power strike</i>]]> class power with a Light Blade or a one-handed Heavy Blade, you can shift 1 square after the triggering attack has been resolved. You also gain combat advantage against the target of the triggering attack until the end of your next turn.</benefit>
+      <benefit><![CDATA[<b>Bludgeoning Staff:</b> When you use your <i>power strike</i>]]> class power with a Staff, you can push the target up to 2 squares and shift 2 squares as part of resolving the hit.</benefit>
+      <benefit><![CDATA[<b>Brutal Axe:</b> When you use your <i>power strike</i>]]> class power with an Axe, you can knock the target of the triggering attack prone.</benefit>
+      <benefit><![CDATA[<b>Driving Blade:</b> When you use your <i>power strike</i>]]> class power with a Heavy Blade, you can slide each enemy adjacent to you 1 square after the triggering attack has been resolved. If abilities such as feats or items allow you to increase the distance of forced movement, calculate the increase and halve it for this effect.</benefit>
+      <benefit><![CDATA[<b>Hooking Bludgeon:</b> When you use your <i>power strike</i>]]> class power with a Hammer or Mace and the target of the triggering attack is adjacent to you, the target is also immobilized until the end of your next turn or until you are no longer adjacent to it. You also gain combat advantage against the target of the triggering attack until the end of your next turn.</benefit>
+      <benefit><![CDATA[<b>Sweeping Polearm:</b> When you use your <i>power strike</i>]]> class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to 2 + your Wisdom modifier + your Polearm's enhancement bonus.</benefit>
+      <special>You can choose this feat multiple times, and must choose a different specialization benefit each time. If your weapon qualifier for more than one specialization, you only gain the effect of one of your choice.</special>
+   </feat>
+
+   <feat>
+      <title>Power Surge</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Psion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Recovery</group>
+      <group>Psionics</group>
+      <benefit>You can use a free action to expend a psion daily attack power to regain power points. The number of power points equals the highest augment cost for an at-will attack of the same level or lower.</benefit>
+   </feat>
+
+   <feat>
+      <title>Power Throw</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>When making a ranged Weapon attack with a Heavy Thrown weapon, you can choose to take a -2 penalty to the attack roll.</benefit>
+      <benefit>If you do, you gain a +2 bonus to the damage roll per [W] of damage.</benefit>
+      <special>Your DM can allow you to use this with non-Weapon attacks as well, if the flavour of the attack fits.</special>
+   </feat>
+
+   <feat>
+      <title>Powerful Charge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Charge</group>
+      <group>Damage Bonus</group>
+      <group>Forced Movement</group>
+      <benefit>When you charge, you gain a +2 bonus to damage rolls as part of that charge, and a +2 bonus to attack rolls when making a <![CDATA[<i>bull rush</i>]]> as part of that charge.</benefit>
+      <benefit>The bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Powerful Lure</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Satyr</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>lure of enchantment</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Forced Movement</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>lure of enchantment</i>]]> racial power, you can slide the target up to 6 squares, instead of the normal distance, and you can slide it into hindering terrain.</benefit>
+   </feat>
+
+   <feat>
+      <title>Practiced Reliability</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Miss Mitigation</group>
+      <group>Power Recovery</group>
+      <benefit>Choose a fighter encounter attack power that you know and that has a single target and a single attack roll.</benefit>
+      <benefit>The chosen power gains the Reliable keyword. On a miss, you immediately regain the use of that power.</benefit>
+      <special>Each time you gain a level, you can choose to remove this feat's benefit from the chosen power and choose a different power.</special>
+   </feat>
+
+   <feat>
+      <title>Precise Fangs</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Stalker Spirit</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <benefit>You gain a +2 bonus to attack rolls with your <![CDATA[<i>spirit's fangs</i>]]> class power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Precise Hunter</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Support</group>
+      <benefit>When you score a critical hit against your quarry with a ranged attack, your allies gain a +1 bonus to attack rolls against that target until the start of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Precise Mind</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Psion</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Psionic Augmentation</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Psionics</group>
+      <benefit>Whenever you hit with a psionic attack power that has been augmented with 2 or more power points, you gain a +1 bonus to attack rolls with unaugmented psionic at-will attack powers. The bonus lasts until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Precision Throw</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>Whenever you make a <![CDATA[<i>ranged basic attack</i>]]> using a thrown weapon that you have proficiency with, you can always use Dexterity for the attack roll and damage roll, even if the weapon has the Heavy Thrown property.</benefit>
+   </feat>
+
+   <feat>
+      <title>Predator's Burst</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Primal Predator</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>whild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Charge</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Mobility</group>
+      <benefit>When you charge while you are in beast form, you gain a +2 bonus to speed and a +1 bonus to damage rolls as part of that charge.</benefit>
+      <benefit>The bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Predatory Action</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunger's Quarry</name>
+      </prereq>
+      <group>Action Point</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <benefit>When you spend an action point to take an extra action and deal your Hunter's Quarry damage as part of that action, it does not count towards your normal limit of dealing Hunter's Quarry damage only once per turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Predatory Magic</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shifter</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>razorclaw shifting</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <benefit>When you use a close arcane attack power while you are under the effect of your <![CDATA[<i>razorclaw shifting</i>]]> racial power, you can shift 1 square either before or after resolving that power.</benefit>
+      <benefit>Starting at 21st level, you can shift 1 square both before and after resolving the power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Predatory Spirit</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shifter</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any primal</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>longtooth shifting</name>
+         <qualifier>racial</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>razorclaw shifting</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Miss Mitigation</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>longtooth shifting</i> or <i>razorclaw shifting</i>]]> racial power, you can reroll once attack roll made with a primal attack that misses before the end of your next turn. You can take either result.</benefit>
    </feat>
 
    <feat>
