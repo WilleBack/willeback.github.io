@@ -250,9 +250,9 @@ collate = create_feat_file("Monk", "Striker", "any psionic")
 for item in collate:
     monkRoot.append(item[-1])
 
-# Remove known false feat
-# extra = fighterRoot.find(".feat[title='Devout Protector Expertise']")
-# fighterRoot.remove(extra)
+# Remove known false feats
+for feat in monkRoot.findall(".feat/prereq[name='Psionic Augmentation']..."):
+    monkRoot.remove(feat)
 
 # Save file
 monkTree.write("monk.xml")
