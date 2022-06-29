@@ -352,6 +352,101 @@
 			</section>
 		</part>
 	</power>
+	
+	<power>
+		<title>Climb</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>You climb up or down a surface</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Part of movement</action>
+			<type>Personal</type>
+			<section>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must have at least one hand free to climb</text>
+			</section>
+			<section>
+				<name>Check:</name> <name-style>bold</name-style>
+				<text>Athletics vs. DC</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>You gain a +5 bonus if you can brace between two surfaces</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Success:</name> <name-style>bold</name-style>
+				<text>You climb on a surface, using squares of movement from the movement action. You must spend 1 extra square of movement for each square you climb. While climbing, you grant combat advantage and might fall if you take damage (see below).</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>When you move from a vertical surface to a horizontal surface, such as when climbing out of a pit, you choose to arrive either standing or prone.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Athletics DCs by surface:</name> <name-style>italic</name-style>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>Ladder - DC 0</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>Rope - DC 10</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>Uneven surface (cave wall) - DC 15</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>Rough surface (brick wall) - DC 20</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>Slippery surface - +5 DC</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>Unusually smooth surface - +10 DC</text>
+			</section>
+			<section>
+				<name>Failure by 4 or less:</name> <name-style>bold</name-style>
+				<text>If you were already climbing, you make no progress. If you tried to start climbing, you fail to do so. Either way, you can't move any farther as part of the current action.</text>
+			</section>
+			<section>
+				<name>Failure by 5 or more:</name> <name-style>bold</name-style>
+				<text>If you were already climbing, you fall but can try to <![CDATA[<i>arrest fall</i>]]>. If you tried to start climbing, you fail to do so. Either way, you can't move any farther as part of the current action.</text>
+			</section>
+		</part>
+		<part>
+			<part-name>Taking Damage while Climbing</part-name>
+			<frequency>At-Will</frequency>
+			<action>Free</action> <subaction>Reaction</subaction>
+			<type>Personal</type>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>You take damage while climbing</text>
+			</section>
+			<section>
+				<name>Check:</name> <name-style>bold</name-style>
+				<text>Athletics vs. DC</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>If you are bloodied or the triggering damage bloodied you, add +5 to the DC</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Success:</name> <name-style>bold</name-style>
+				<text>You hold on.</text>
+			</section>
+			<section>
+				<name>Failure:</name> <name-style>bold</name-style>
+				<text>You fall, but can try to <![CDATA[<i>arrest fall</i>]]>.</text></text>
+			</section>
+		</part>
+	</power>
 
 	<power>
 		<title>Coup de Grace</title>
@@ -560,7 +655,7 @@
 			<section>
 				<shade>true</shade>
 				<name>Result:</name> <name-style>bold</name-style>
-				<text>Divide the check result by 10 (round down). This is the number of feet you jump up, or in other words, the height that your feet clear. The table below summarizes the distance cleared based on your Athletics check result.</text>
+				<text>Divide the check result by 10 (round down). This is the number of feet you jump up, or in other words, the height that your feet clear. The table below summarizes the distance cleared (and squares of movement) based on your Athletics check result.</text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -621,6 +716,90 @@
 			<section>
 				<name>Reaching Something:</name> <name-style>italic</name-style>
 				<text>To determine whether you can reach something while jumping, add one-third to your height (round down to the nearest inch) to represent the length of your arms. This is then added to the heigh you cleared to determine whether you can reach something.</text>
+			</section>
+		</part>
+	</power>
+	
+	<power>
+		<title>Jump (Long Jump)</title>
+		<class>Base</class> <category>Action</category>
+		<fluff>You jump horizontally to clear a pit or chasm</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<action>Part of movement</action>
+			<type>Personal</type>
+			<section>
+				<name>Check:</name> <name-style>bold</name-style>
+				<text>Athletics check</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>If you have a running start (move at least 2 squares as part of the movement to jump), you double your check result</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Result:</name> <name-style>bold</name-style>
+				<text>Divide the check result by 10 (round down). This is the number of squares you clear. You land 1 square beyond the squares you clear. The table below summarizes the distance cleared (and total move) based on your Athletics check result.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>All the squares of the jump, if any and including the landing square, use squares of movement from the action. If you run out of movement before landing on something or grabbing onto something, you fall. If you have actions remaining, you can use additional actions to continue the movement, ending the first movement in midaid and continuing the jump as part of the second movement. You make a single Athletics check for the jump, even if using squares of movement from more than one action.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Athletics check result:</name> <name-style>italic</name-style>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>9 or lower: 0 squares cleared</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>10 - 19: 1 square cleared (2 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>20 - 29: 2 squares cleared (3 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>30 - 39: 3 squares cleared (4 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>40 - 49: 4 squares cleared (5 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>50 - 59: 5 squares cleared (6 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>60 - 69: 6 squares cleared (7 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>70 - 79: 7 squares cleared (8 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>80 - 89: 8 squares cleared (9 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>90 - 99: 9 squares cleared (10 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>100 - 109: 10 squares cleared (11 squares movement)</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>2</indent>
+				<text>And so on...</text>
+			</section>
+			<section>
+				<name>Vertical Clearance:</name> <name-style>italic</name-style>
+				<text>To determine the number of feet that you clear vertically during the long jump, divide the check result by 10 (rounded town) and then add 2 if the result is at least 1. If you don't clear an obstacle along the way, you hit the obstacle, fall prone and can't move any farther as part of the current action.</text>
 			</section>
 		</part>
 	</power>
