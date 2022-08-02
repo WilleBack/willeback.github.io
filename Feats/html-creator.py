@@ -67,6 +67,13 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("dragonborn.html", pretty_print=True)
 
+# Druid
+source_doc = etree.parse("druid.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("druid.html", pretty_print=True)
+
 # Dwarf
 source_doc = etree.parse("dwarf.xml")
 output_doc = xslt_transformer(source_doc)

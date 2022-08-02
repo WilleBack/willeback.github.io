@@ -213,6 +213,28 @@ for item in collate:
 # Save file
 clericTree.write("cleric.xml")
 
+## Druid ##
+###########
+druidTree = ET.parse('druid.xml')
+druidRoot = druidTree.getroot()
+
+# Empty feats from Cleric file
+for feat in druidTree.findall(".feat"):
+    druidRoot.remove(feat)
+
+collate = create_feat_file("Druid", "Controller", "any primal")
+
+# Add feats to cleric file
+for item in collate:
+    druidRoot.append(item[-1])
+
+# Remove known false feat
+# extra = artificerRoot.find(".feat[title='Devout Protector Expertise']")
+# artificerRoot.remove(extra)
+
+# Save file
+druidTree.write("druid.xml")
+
 # Fighter ##
 ############
 fighterTree = ET.parse('fighter.xml')
