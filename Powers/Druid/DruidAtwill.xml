@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../power.xsl"?>
+<catalog>
+	<collection>Druid lvl 1 At-Will Attack Evocations</collection>
+
+	<power>
+		<title>Call of the Beast</title>
+      <class>Druid</class> <category>Attack</category> <level>1</level>
+      <fluff>You draw forth the savagery that dwells in every creature, compelling your enemies to fight without forethought or plan</fluff>
+      <part>
+         <frequency>At-Will</frequency>
+         <keyword>Charm, Implement, Primal, Psychic</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each enemy in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Wisdom vs. Will</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>The target hears the call of the beast until the end of your next turn.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>While it hears the call, the target cannot gain combat advantage. Also, each time the target makes an attack on its own turn and does not include your ally nearest to it as a target of that attack, it takes psychic damage equal to 3 + your Wisdom modifier + your implement's enhancement bonus.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 11:</name> <name-style>italic</name-style>
+            <text>Psychic damage equal to 6 + your Wisdom modifier + your implement's enhancement bonus.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>Psychic damage equal to 10 + your Wisdom modifier + your implement's enhancement bonus.</text>
+         </section>
+			<section>
+				<name>Special:</name> <name-style>bold</name-style>
+				<text>When you learn this power, you can choose to add the Beast Form keyword to it. You can retrain this choice just like retraining the power.</text>
+			</section>
+      </part>
+   </power>
+
+   <power>
+      <title>Chill Wind</title>
+      <class>Druid</class> <category>Attack</category> <level>1</level>
+      <fluff>A howling gust of icy wind savages your enemies, scattering them</fluff>
+      <part>
+         <frequency>At-Will</frequency>
+         <keyword>Cold, Implement, Primal</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Area</type> <range>burst 1 within 10 squares</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>Each creature in the burst</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Wisdom vs. Fortitude</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d4 + Wisdom modifier cold damage, and you slide the target up to 2 squares.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>2d4 + Wisdom modifier cold damage, and slide up to 3 squares.</text>
+         </section>
+      </part>
+   </power>
+
+   <power>
+      <title>Fire Hawk</title>
+      <class>Druid</class> <category>Attack</category> <level>1</level>
+      <fluff>A hawk of flame swoops on your foe, burning it, and then hovers ready to swoop in for another attack should the foe's defenses falter</fluff>
+      <part>
+         <frequency>At-Will</frequency>
+         <keyword>Fire, Implement, Primal</keyword>
+         <action>Standard</action> <subaction>Action</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Target:</name> <name-style>bold</name-style>
+            <text>One creature</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <text>Wisdom vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d6 + Wisdom modifier fire damage.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>2d6 + Wisdom modifier fire damage.</text>
+         </section>
+         <section>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>Until the start of your next turn, you can use Swooping Fire attack at-will against the same target.</text>
+         </section>
+			<section>
+				<text>You can also make a Swooping Fire attack when something allows you to make a <![CDATA[<i>ranged basic attack</i>]]> against the target for the same duration.</text>
+			</section>
+      </part>
+      <part>
+         <part-name>Swooping Fire</part-name>
+         <frequency>At-Will</frequency>
+         <keyword>Fire, Implement, Primal</keyword>
+         <action>Opportunity</action> <subaction>Interrupt</subaction>
+         <type>Ranged</type> <range>10</range>
+         <section>
+            <name>Trigger:</name> <name-style>bold</name-style>
+            <text>The target is within 10 squares and takes any action that can provoke <![CDATA[<i>opportunity attacks</i>]]></text>
+         </section>
+         <section>
+            <name>Swoop Attack:</name> <name-style>bold</name-style>
+            <text>Wisdom vs. Reflex</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1d10 + Wisdom modifier fire damage.</text>
+         </section>
+         <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>2d10 + Wisdom modifier fire damage.</text>
+         </section>
+      </part>
+   </power>
+
+	<power>
+		<title>Flame Seed</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>You hurl a seed infused with primal energy at your foes and when it strikes the ground, the seed explodes in a fiery burst</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Fire, Implement, Primal, Zone</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Ranged</type> <range>10</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d6 fire damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d6 fire damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The squares adjacent to the target's space become a fiery zone until the end of your next turn.</text>
+			</section>
+			<section>
+				<text>Any enemy that enters the zone or starts its turn there takes fire damage equal equal to your Wisdom modifier + your implement's enhancement bonus.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 11:</name> <name-style>italic</name-style>
+				<text>2 + your Wisdom modifier + your implement's enhancement bonus fire damage.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>5 + your Wisdom modifier + your implement's enhancement bonus fire damage.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Grasping Claw</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>You rend and tear your foe with your claws, leaving it hobbled</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Beast Form, Implement, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Fortitude</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d8 + Wisdom modifier damage, and the target is slowed until the end of your next turn.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d8 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<name>Special:</name> <name-style>bold</name-style>
+				<text>This power counts as a <![CDATA[<i>melee basic attack</i>]]>.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Grasping Tide</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>A vortex of water appears amidst your foes, drawing them into its grasp</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Implement, Primal, Zone</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Area</type> <range>burst 1 within 10 squares</range>
+			<section>
+				<name>Primary Target:</name> <name-style>bold</name-style>
+				<text>Each creature in the burst</text>
+			</section>
+			<section>
+				<name>Primary Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Fortitude</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d4 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>bold</name-style>
+				<text>2d4 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The area creates a zone of water vortex until the end of your next turn.</text>
+			</section>
+			<section>
+				<text>While the zone remains, you can use the Tide's Pull attack at-will, using the burst origin square as the point of origin.</text>
+			</section>
+		</part>
+		<part>
+			<part-name>Tide's Pull</part-name>
+			<frequency>At-Will</frequency>
+			<keyword>Implement, Primal</keyword>
+			<action>Opportunity</action> <subaction>Interrupt</subaction>
+			<type>Close</type> <range>burst special</range>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>A primary target leaves the zone</text>
+			</section>
+			<section>
+				<name>Tide Target:</name> <name-style>bold</name-style>
+				<text>The triggering primary target</text>
+			</section>
+			<section>
+				<name>Tide Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>You knock the target prone.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Crit:</name> <name-style>bold</name-style>
+				<text>The target loses the rest of its actions this turn.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Jolt of Lightning</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>A bolt of lightning streaks down from empty air, crippling your foe with a numbing pulse of power</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Implement, Lightning, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Ranged</type> <range>7/15</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Fortitude</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d8 + Wisdom modifier lightning damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d8 + Wisdom modifier lightning damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The target cannot take opportunity actions until the end of your next turn.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Magic Stones</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>Three small stones clutched in your had glow with green light as you launch them, then explode when they strike your foes</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Implement, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Ranged</type> <range>7/15</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One, two, or three creatures</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d4 + Wisdom modifier damage, or 2d4 + Wisdom modifier damage if you only target one creature.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d4 + Wisdom modifier damage, or 4d4 + Wisdom modifier damage if you only target one creature.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You push the target 1 square.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>Up to 2 squares.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Pounce</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>You leap at your foe, catching it off guard</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Beast Form, Implement, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d10 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d10 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The target grants combat advantage to the first creature that attacks it before the end of your next turn.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Special:</name> <name-style>bold</name-style>
+				<text>When charging, you can use this power in place of a <![CDATA[<i>melee basic attack</i>]]>.</text>
+			</section>
+		</part>
+	</power>
+
+   <power>
+		<title>Reaping Claws</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>Your primal power courses through a foe you rend, wracking it with pain the next time it avoids an attack</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Beast Form, Implement, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Fortitude</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d8 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d8 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The first time an ally misses the target with an attack before the end of your next turn, the target takes damage equal to your Constitution modifier or your Dexterity modifier (whichever is higher) + your implement's enhancement bonus.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2 + your Constitution modifier or your Dexterity modifier (whichever is higher) + your implement's enhancement bonus.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Savage Rend</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>You rake your foe with your claws, setting it up for the kill</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Beast Form, Implement, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Melee</type> <range>touch</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d8 + Wisdom modifier damage, and you slide the target 1 square.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d8 + Wisdom modifier damage, and slide up to 2 squares.</text>
+			</section>
+			<section>
+				<name>Special:</name> <name-style>bold</name-style>
+				<text>This power counts as a <![CDATA[<i>melee basic attack</i>]]>.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Spirit Briar</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>Phantom thorns gouge the flesh of the foe that moves against them</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Implement, Poison, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Ranged</type> <range>10</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Will</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d6 + Wisdom modifier poison damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d6 + Wisdom modifier poison damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Choose either yourself or one ally you can see.</text>
+			</section>
+			<section>
+				<text>If the target ends its next turn adjacent to the chosen character, the target takes poison damage equal to your Constitution modifier or your Dexterity modifier (whichever is higher)+ your implement's enhancement bonus.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 11:</name> <name-style>italic</name-style>
+				<text>Poison damage equal to 3 + your Constitution modifier or your Dexterity modifier (whichever is higher) + your implement's enhancement bonus.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>Poison damage equal to 6 + your Constitution modifier or your Dexterity modifier (whichever is higher) + your implement's enhancement bonus.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Storm Spike</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>A bolt of lightning spears your foe and charges the air around it, causing a second spark to erupt if the enemy doesn't move away</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Implement, Lightning, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Ranged</type> <range>7/15</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Reflex</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d6 + Wisdom modifier lightning damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d6 + Wisdom modifier lightning damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>If the target doesn't move at least 2 squares away from its current before the end of its next turn, it takes lightning damage equal to your Wisdom modifier + your implement's enhancement bonus.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 11:</name> <name-style>italic</name-style>
+				<text>Lightning damage equal to 3 + your Wisdom modifier + your implement's enhancement bonus.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>Lightning damage equal to 6 + your Wisdom modifier + your implement's enhancement bonus.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Swarming Locusts</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>Insects launch from you to vex your enemies</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Beast Form, Implement, Primal, Zone</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Close</type> <range>blast 3</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>Each creature in the blast</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Fortitude</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d6 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d6 + Wisdom modifier damage.</text>
+			</section>
+			<section>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The blast creates a zone of swarming locusts until the end of your next turn.</text>
+			</section>
+			<section>
+				<text>While in the zone, enemies grant combat advantage.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Thorn Whip</title>
+		<class>Druid</class> <category>Attack</category> <level>1</level>
+		<fluff>Barbed vines whip out from the wood of your staff or totem to lash and ensnare your pre</fluff>
+		<part>
+			<frequency>At-Will</frequency>
+			<keyword>Implement, Primal</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<type>Ranged</type> <range>10</range>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<text>One creature</text>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<text>Wisdom vs. Fortitde</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name> <name-style>bold</name-style>
+				<text>1d8 + Wisdom modifier damage, and you pull the target 2 squares.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text>2d8 + Wisdom modifier damage, and pull 3 squares.</text>
+			</section>
+			<section>
+				<name>Miss:</name> <name-style>bold</name-style>
+				<text>You pull the target 1 square.</text>
+			</section>
+		</part>
+	</power>
+</catalog>

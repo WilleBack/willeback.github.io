@@ -4,6 +4,13 @@ from lxml import etree
 xslt_doc = etree.parse("feat.xsl")
 xslt_transformer = etree.XSLT(xslt_doc)
 
+# Full file
+source_doc = etree.parse("description.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("featlist.html", pretty_print=True)
+
 # Ardent
 source_doc = etree.parse("ardent.xml")
 output_doc = xslt_transformer(source_doc)
