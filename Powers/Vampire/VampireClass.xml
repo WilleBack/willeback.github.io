@@ -55,9 +55,9 @@
 		<benefit>You gain the following benefits and weaknesses:</benefit>
       <benefit>&#9658; You are an Undead creature. You are unaffected by anything that only affects living creatures. You don't need to breathe, which means you are immune to suffocation. You also don't age. Unlike most undead, you do need to sleep.</benefit>
       <benefit>&#9658; You have darkvision.</benefit>
-      <benefit>&#9658;You have resist 5 necrotic. This increases to resist 10 necrotic at 11th level, and to resist 15 necrotic at 21st level.</benefit>
-      <benefit>&#9658;You have vulnerable 5 radiant. This increases to vulnerable 10 radiant at 11th level, and to vulnerable 15 radiant at 21st level.</benefit>
-      <benefit>&#9658;If you end you your turn in direct sunlight and lack a protective covering such as a cloak or other heavy clothing, you take 5 radiant damage (plus additional damage from your vulnerable radiant) from the sunlight, and you are weakened (save ends). If you drop to 0 hit points or fewer from this damage, you are instantly destroyed instead of becoming dying.</benefit>
+      <benefit>&#9658; You have resist 5 necrotic. This increases to resist 10 necrotic at 11th level, and to resist 15 necrotic at 21st level.</benefit>
+      <benefit>&#9658; You have vulnerable 5 radiant. This increases to vulnerable 10 radiant at 11th level, and to vulnerable 15 radiant at 21st level.</benefit>
+      <benefit>&#9658; If you end you your turn in direct sunlight and lack a protective covering such as a cloak or other heavy clothing, you take 5 radiant damage (plus additional damage from your vulnerable radiant) from the sunlight, and you are weakened (save ends). If you drop to 0 hit points or fewer from this damage, you are instantly destroyed instead of becoming dying.</benefit>
    </feature>
 
    <feature>
@@ -160,6 +160,10 @@
                   <name>Level 21:</name> <name-style>italic</name-style>
                   <text>2d6 + Dexterity modifier psychic damage.</text>
                </section>
+					<section>
+						<name>Special:</name> <name-style>bold</name-style>
+						<text>If you use this power outside of combat, you can choose to not deal the psychic damage. If you do, the power loses the Psychic keyword, and the target is not aware that you used a power against it. Other creatures are likely to notice that something sinister happened, though.</text>
+					</section>
             </part>
          </power>
       </subfeature>
@@ -420,6 +424,7 @@
 
    <feature>
       <name>Level 3: Encounter Attack Power</name>
+		<benefit>As you gain experience, you gain better control of your hunger, allowing you to more safely channel your feral impulses. When you unleash the beast within, you foe can stand against you for long.</benefit>
       <benefit>You gain the <![CDATA[<i>feral assault</i>]]> power as your 3rd-level encounter attack power.</benefit>
 
       <power>
@@ -433,7 +438,7 @@
             <type>Melee</type> <range>touch</range>
             <section>
                <name>Blood is Life</name> <name-style>bold</name-style>
-               <text>You can expend a healing surge to either target two creatures or to deal an extra +2d8 damage.</text>
+               <text>You can expend a healing surge to either target two creatures or to deal an extra +2d6 damage.</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
@@ -448,6 +453,11 @@
                <name>Hit:</name> <name-style>bold</name-style>
                <text>2d12 + Dexterity modifier damage.</text>
             </section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Crit:</name> <name-style>bold</name-style>
+					<text>If you expended a healing surge, you gain one.</text>
+				</section>
             <section>
                <name>Miss:</name> <name-style>bold</name-style>
                <text>2 + your Dexterity modifier + your implement's enhancement bonus damage if you expended a healing surge.</text>
@@ -483,4 +493,135 @@
          </part>
       </power>
    </feature>
+
+	<feature>
+		<name>Level 5: Daily Attack Power</name>
+		<benefit>The feral impulses that surge through you threaten to overwhelm you at times. At the height of your fure, you slake your hunger like the undead monster that others fear you to be.</benefit>
+		<benefit>You gain the <![CDATA[<i>unfettered hunger</i>]]> power as your 5th-level daily attack power.</benefit>
+
+		<power>
+			<title>Unfettered Hunger</title>
+			<class>Vampire</class> <category>Attack</category> <level>5</level>
+			<fluff>Your eyes turn red with fure, your fangs lengthen, and you rage like a beast as you allow your hunger to seize control</fluff>
+			<part>
+				<frequency>Daily</frequency>
+				<keyword>Implement, Shadow</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Close</type> <range>burst 1</range>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<text>Each creature in the burst</text>
+				</section>
+				<section>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<text>Dexterity vs. Reflex</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>2d10 + Dexterity modifier damage.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Crit:</name> <name-style>bold</name-style>
+					<text>Against a non-minion enemy, you can choose to gain a healing surge instead of scoring a critical hit.</text>
+				</section>
+				<section>
+					<name>Miss:</name> <name-style>bold</name-style>
+					<text>Half damage.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>Until the end of the encounter, you gain the following effects:</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; +2 power bonus to attack rolls.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; +5 power bonus to damage rolls.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; You can shift up to your speed as a move action.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<text>&#9658; You cannot spend healing surges to regain hit points.</text>
+				</section>
+			</part>
+		</power>
+	</feature>
+
+	<feature>
+		<name>Level 6: Utility Power</name>
+		<benefit>You have learned to draw on shadow magic to become one of the creatures of the night.</benefit>
+		<benefit>You gain the <![CDATA[<i>form of the bat</i>]]> power as your 6th-level utility power.</benefit>
+
+		<power>
+			<title>Form of the Bat</title>
+			<class>Vampire</class> <category>Utility</category> <level>6</level>
+			<fluff>Your body becomes a cloud of pure shadow that shrinks and coalesces into the form of a fluttering bat</fluff>
+			<part>
+				<frequency>Encounter</frequency>
+				<keyword>Polymorph, Shadow</keyword>
+				<action>Standard</action> <subaction>Action</subaction>
+				<type>Personal</type>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>You assume the form of a Tiny bat for 1 hour. Your equipment becomes part of this form. You can use a move action to return to your normal word.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>While in this form, you have a speed of 2 and a fly speed of 8, and you cannot make attacks. You can only hold or manipulate some objects, as ruled by your DM.</text>
+				</section>
+			</part>
+		</power>
+	</feature>
+
+	<feature>
+		<name>Level 7: Encounter Attack Power</name>
+		<benefit>You have become a more efficient predator, seeking out additional opportunities to feed.</benefit>
+		<benefit>You gain a second <![CDATA[<i>blood drinker</i>]]> power as your 7th-level encounter attack power. Keep track of the powers, they have different levels and deal different amounts of damage, but both benefit equally from features that affect the <![CDATA[<i>blood drinker</i>]]> power.</benefit>
+
+		<power>
+			<title>Blood Drinker</title>
+			<class>Vampire</class> <category>Attack</category> <level>7</level>
+			<fluff>When your attack strikes true, you sweep past your foe's defenses to consume the essence of its life</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Shadow</keyword>
+            <action>Nonaction</action> <subaction>Interrupt</subaction>
+            <type>Special</type>
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>You hit an enemy with a Vampire melee at-will attack power</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>The triggering enemy</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target takes +2d8 extra damage from the triggering attack, and you gain a healing surge.</text>
+            </section>
+            <section>
+               <shade>true</shade> <indent>1</indent>
+               <name>Level 23:</name> <name-style>italic</name-style>
+               <text>When you reach 23rd level, this power becomes your level 23 encounter attack power, and the extra damage increases to +3d10.</text>
+            </section>
+         </part>
+      </power>
+   </feature>
+
+	<feature>
+		<name>Level 8: Night Crawler</name>
+		<benefit>A perfect killer must move in ways that its prey does not expect. Your otherwordly strength and shadow connection allow you to stalk your victims like a creature of living darkness.</benefit>
+		<benefit>You gain a climb speed equal to your speed.</benefit>
+		<benefit>On your turn, you can climb across a ceiling or similar surface, but if you end your turn on such a surface, you fall.</benefit>
+	</feature>
 </class>
