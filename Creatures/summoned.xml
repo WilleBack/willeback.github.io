@@ -195,7 +195,7 @@
          <block>
             <name>Standard Action</name> <type>melee</type>
             <frequency>Encounter</frequency>
-            <line><![CDATA[<i>Effect:</i>]]> The behemoth moves up to its speed and can move through enemies' spaces during the move by trampling them. Each time the warhorse enters a Large size or smaller enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
+            <line><![CDATA[<i>Effect:</i>]]> The behemoth moves up to its speed and can move through enemies' spaces during the move by trampling them. Each time the behemoth enters a Large size or smaller enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
             <line><![CDATA[<i>Attack:</i>]]> Melee 0 (one creature); Charisma vs. Fortitude</line>
             <line indent="1">Combat advantage against a prone target</line>
             <line><![CDATA[<i>Hit:</i>]]> 4d8 + your Charisma modifier damage, and the behemoth pushes the target 1 square and the enemy is knocked prone.</line>
@@ -458,6 +458,58 @@
    </creature>
 
    <creature>
+      <title>Desert Hawk</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>4</speed> <fly>8</fly>
+
+      <category>
+         <category-name>Action</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Wisdom +2 vs. AC</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + Wisdom modifier damamge.</line>
+         </block>
+         <block>
+            <name>Standard Action</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The hawk shifts up to 2 squares, then makes its <![CDATA[<i>melee basic attack</i>]]>. On a hit, it can slide the target 1 square.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the hawk any commands by the end of your turn, it attacks an adjacent enemy. If it can't, it moves its speed to a space adjacent to an enemy.</line>
+            <line>If the hawk cannot attack or move adjacent to an enemy, you take a -2 penalty to AC and Reflex against triggered attacks.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +1 bonus to speed when charging, and can move 1 additional square when an attack allows you to move or shift.</line>
+         </block>
+      </category>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      <source>Summon Desert Hawk (Druid Attack 1)</source>
+   </creature>
+
+   <creature>
       <title>Dretch</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>elemental</origin> <type>humanoid</type>
@@ -549,7 +601,7 @@
 
          <block>
             <name>Move Action</name>
-            <recharge>when the dust devil is critically hit</recharge>
+            <frequency>Recharge</frequency> <note>when the dust devil is critically hit</note>
             <line><![CDATA[<i>Effect:</i>]]> The dust devil shifts up to 5 squares. The first time it moves adjacent to an enemy during the move, it makes the following attack against that enemy:</line>
             <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Intelligence vs. Fortitude</line>
             <line><![CDATA[<i>Hit:</i>]]> The target falls prone</line>
@@ -579,6 +631,66 @@
 
       <alignment>unaligned</alignment> <language>Primordial</language>
       <source>Summon Dust Devil (Wizard Daily Attack 1)</source>
+   </creature>
+
+   <creature>
+      <title>Fierce Boar</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+
+      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+2 <![CDATA[<i>Fortitude</i>]]></defmod>
+      <speed>6</speed>
+
+      <category>
+         <category-name>Action</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Wisdom vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + Wisdom modifier damage, and boar pushes the target 1 square.</line>
+         </block>
+         <block>
+            <name>Standard Action</name>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Effect:</i>]]> The boar charges the closest enemy.</line>
+            <line>If the boar has movement remaining and the attack hits, it can keep moving, pushing the target 1 square for each square it moves. This movement does not trigger <![CDATA[<i>opportunity attacks</i>]]> from the target.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+
+         <block>
+            <name>Immediate Interrupt</name>
+            <frequency>Encounter</frequency>
+            <line><![CDATA[<i>Trigger:</i>]]> The boar is reduced to 0 hit points or fewer</line>
+            <line><![CDATA[<i>Effect:</i> The boar makes its <i>melee basic attack</i>]]>. If it targets the enemy, trap or hazard that triggered this attack, it deals half damage on a miss.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the boar any commands by the end of your turn, it attacks an adjacent enemy. If it can't do so, it charges the closest creature.</line>
+            <line>If the boar cannot attack, it moves up to half its speed towards the closest creature, and you take a -2 penalty to all defenses against charge attacks instead of the Symbiosis bonus until the end of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +2 bonus to all defenses against charge attacks.</line>
+         </block>
+      </category>
+
+      <alignment>unaligned</alignment> <language>-</language>
+      <source>Summon Fierce Board (Druid Daily Attack 1)</source>
    </creature>
 
    <creature>
