@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+   <creature>
+      <title>Giant Rat</title>
+      <level>-1</level> <role>Creature</role>
+      <alignment>N</alignment> <size>Small</size> <trait>Animal</trait>
+
+      <perception>+3</perception>
+      <sense>low-light vision</sense> <sense>scent (imprecise) 30 feet</sense>
+
+      <skill>
+         <name>Athletics</name> <value>+10</value>
+      </skill>
+      <skill>
+         <name>Intimidate</name> <value>+10</value>
+      </skill>
+
+      <str>+1</str>
+      <dex>+3</dex>
+      <con>+2</con>
+      <int>-4</int>
+      <wis>+1</wis>
+      <cha>-3</cha>
+
+      <ac>15</ac> <fort>+6</fort> <ref>+7</ref> <will>+3</will>
+
+      <hp>8</hp>
+
+      <speed>30 feet</speed>
+      <climb>10 feet</climb>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>jaws</weapon>
+         <atk>+7</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d6+1 piercing plus filth fever</damage>
+      </action>
+
+      <action>
+         <name>Filth Fever</name>
+         <trait>disease</trait>
+         <line>The sickened and unconscious conditions from filth fever don't improve on their own until the disease is cured. <![CDATA[<b>Saving Throw</b>]]> DC 14 Fortitude;</line>
+         <line><![CDATA[<b>Stage 1</b>]]> carrier with no ill effect (1d4 hours); <![CDATA[<b>Stage 2</b>]]> sickened 1 (1 day); <![CDATA[<b>Stage 3</b>]]> sickened 1 and slowed 1 (1 day); <![CDATA[<b>Stage 4</b>]]> unconscious (1 day); <![CDATA[<b>Stage 5</b>]]> dead.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Hunting Spider</title>
+      <level>1</level> <role>creature</role>
+      <alignment>N</alignment> <size>Medium</size> <trait>Animal</trait>
+
+      <perception>+7</perception>
+      <sense>darkvision</sense> <sense>web sense</sense>
+      <skill>
+         <name>Acrobatics</name> <value>+7</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+7</value>
+      </skill>
+
+      <str>+2</str>
+      <dex>+4</dex>
+      <con>+1</con>
+      <int>-5</int>
+      <wis>+2</wis>
+      <cha>-4</cha>
+
+      <interaction>
+         <name>Web Sense</name>
+         <line>The hunting spider has imprecise tremorsense to detect the vibrations of creatures touching its web.</line>
+      </interaction>
+
+      <ac>17</ac> <fort>+6</fort> <ref>+9</ref> <will>+5</will>
+
+      <hp>16</hp>
+
+      <reaction>
+         <name>Spring Upon Prey</name>
+         <action>R</action>
+         <trait>attack</trait>
+         <line><![CDATA[<b>Requirement:</b>]]> Initiative has not yet been rolled. <![CDATA[<b>Trigger:</b>]]> A creature touches the hunting spider's web while the spider is on it.</line>
+         <line><![CDATA[<b>Effect:</b>]]> The hunting spider automatically notices the creature and Strides, Climbs, or Descends on a Web before it rolls initiative.</line>
+      </reaction>
+
+      <speed>25 feet</speed>
+      <climb>25 feet</climb>
+
+      <action>
+         <name>Melee</name>
+         <action>1</action>
+         <weapon>fangs</weapon>
+         <atk>+9</atk>
+         <trait>finesse</trait>
+         <damage>1d6+2 piercing plus hunting spider venom.</damage>
+      </action>
+
+      <action>
+         <name>Ranged</name>
+         <action>1</action>
+         <weapon>web</weapon>
+         <atk>+7</atk>
+         <trait>range increment 30 feet</trait>
+         <effect>web trap</effect>
+      </action>
+
+      <action>
+         <name>Descend on a Web</name>
+         <action>1</action>
+         <trait>move</trait>
+         <line>The hunting spider moves straight down up to 40 feet, suspended by a web line. It can hang from the web or drop off. The distance it Descends on a Web doesn't count for falling damage.</line>
+         <line>A creature that successfully Strikes the web (AC 20, Hardness 3, 5 HP) severs it, causing the spider to fall.</line>
+      </action>
+      <action>
+         <name>Hunting Spider Venom</name>
+         <trait>poison</trait>
+         <line><![CDATA[<b>Saving Throw</b>]]> DC 16 Fortitude; <![CDATA[<b>Maximum Duration</b>]]> 6 rounds;</line>
+         <line><![CDATA[<b>Stage 1</b>]]> 1d10 poison damage and flat-footed (1 round); <![CDATA[<b>Stage 2</b>]]> 1d12 poison damage, clumsy 1, and flat-footed 1 round; <![CDATA[<b>Stage 3</b>]]> 2d6 poison damage, clumsy 2, and flat-footed (1 round).</line>
+      </action>
+      <action>
+         <name>Web Trap</name>
+         <line>A creature hit by the hunting spider's web attack is immobilized and stuck to the nearest surface until it Escapes (DC 17).</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Skeleton Guard</title>
+      <level>-1</level> <role>creature</role>
+      <alignment>NE</alignment> <size>Medium</size> <trait>Mindless</trait> <trait>Skeleton</trait> <trait>Undead</trait>
+
+      <perception>+2</perception>
+      <sense>darkvision</sense>
+
+      <skill>
+         <name>Acrobatics</name> <value>+6</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+3</value>
+      </skill>
+
+      <str>+2</str>
+      <dex>+4</dex>
+      <con>+0</con>
+      <int>-5</int>
+      <wis>+0</wis>
+      <cha>+0</cha>
+
+      <item>scimitar</item>
+      <item>shortbow (20 arrows)</item>
+
+      <ac>16</ac> <fort>+2</fort> <ref>+8</ref> <will>+2</will>
+
+      <hp>4</hp>
+      <hpnote>negative healing</hpnote>
+
+      <immune>death effects</immune>
+      <immune>disease</immune>
+      <immune>mental</immune>
+      <immune>paralyzed</immune>
+      <immune>poison</immune>
+      <immune>unconscious</immune>
+
+      <resist>
+         <name>cold</name> <value>5</value>
+      </resist>
+      <resist>
+         <name>electricity</name> <value>5</value>
+      </resist>
+      <resist>
+         <name>fire</name> <value>5</value>
+      </resist>
+      <resist>
+         <name>piercing</name> <value>5</value>
+      </resist>
+      <resist>
+         <name>slashing</name> <value>5</value>
+      </resist>
+
+      <reaction>
+         <name>Collapse</name>
+         <action>R</action>
+         <line><![CDATA[<b>Trigger</b>]]> The skeleton is critically hit. <![CDATA[<b>Effect</b>]]> The skeleton collapses into a pile of bones and the attack deals only normal damage.</line>
+         <line>The skeleton can reform in a standing position as an action, but until it does, it is immobilized and flat-footed.</line>
+      </reaction>
+
+      <speed>25 feet</speed>
+
+      <action>
+         <name>Melee</name>
+         <action>1</action>
+         <weapon>scimitar</weapon>
+         <atk>+6</atk>
+         <trait>forceful</trait>
+         <trait>sweep</trait>
+         <damage>1d6+2 slashing</damage>
+      </action>
+      <action>
+         <name>Melee</name>
+         <action>1</action>
+         <weapon>claw</weapon>
+         <atk>+6</atk>
+         <trait>agile</trait>
+         <trait>finesse</trait>
+         <damage>1d4+2 slashing</damage>
+      </action>
+      <action>
+         <name>Ranged</name>
+         <action>1</action>
+         <weapon>shortbow</weapon>
+         <atk>+6</atk>
+         <trait>deadly d10</trait>
+         <trait>range increment 60 feet</trait>
+         <trait>reload 0</trait>
+         <damage>1d6 piercing</damage>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Zombie Shambler</title>
+      <level>-1</level> <role>Creature</role>
+      <alignment>NE</alignment> <size>Medium</size> <trait>Mindless</trait> <trait>Undead</trait> <trait>Zombie</trait>
+
+      <perception>+0</perception>
+      <sense>darkvision</sense>
+
+      <skill>
+         <name>Athletics</name> <value>+5</value>
+      </skill>
+
+      <str>+3</str>
+      <dex>-2</dex>
+      <con>+2</con>
+      <int>-5</int>
+      <wis>+0</wis>
+      <cha>-2</cha>
+
+      <interaction>
+         <name>Slow</name>
+         <line>A zombie is permanently slowed 1 and can't use reactions.</line>
+      </interaction>
+
+      <ac>12</ac> <fort>+6</fort> <ref>+0</ref> <will>+2</will>
+
+      <hp>20</hp>
+      <hpnote>negative healing</hpnote>
+
+      <immune>death effects</immune>
+      <immune>disease</immune>
+      <immune>mental</immune>
+      <immune>paralyzed</immune>
+      <immune>poison</immune>
+      <immune>unconscious</immune>
+
+      <weakness>
+         <name>positive</name> <value>5</value>
+      </weakness>
+      <weakness>
+         <name>slashing</name> <value>5</value>
+      </weakness>
+
+      <speed>25 feet</speed>
+
+      <action>
+         <name>Melee</name>
+         <action>1</action>
+         <weapon>fist</weapon>
+         <atk>+7</atk>
+         <damage>1d6+3 bludgeoning plus Grab</damage>
+      </action>
+      <action auto="grab">
+         <title>zombie</title>
+      </action>
+      <action>
+         <name>Jaws</name>
+         <action>1</action>
+         <trait>attack</trait>
+         <line><![CDATA[<b>Requirement</b>]]> The zombie has a creature grabbed or restrained.</line>
+         <line><![CDATA[<b>Effect</b>]]> The zombie makes a jaws unarmed melee Strike against the grabbed or restrained creature with an attack modifier of +7 that deals 1d8+3 piercing damage.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Kobold Warrior</title>
+      <level>-1</level> <role>Creature</role>
+      <alignment>LE</alignment> <size>Small</size> <trait>Humanoid</trait> <trait>Kobold</trait>
+
+      <perception>+3</perception>
+      <sense>darkvision</sense>
+
+      <language>Draconic</language>
+
+      <skill>
+         <name>Acrobatics</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Craft</name> <value>+2 (+4 traps)</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+5</value>
+      </skill>
+
+      <str>+1</str>
+      <dex>+3</dex>
+      <con>+0</con>
+      <int>+0</int>
+      <wis>+1</wis>
+      <cha>-1</cha>
+
+      <item>leather armor</item>
+      <item>sling (20 bullets)</item>
+      <item>spear</item>
+
+      <ac>16</ac> <fort>+4</fort> <ref>+7</ref> <will>+3</will>
+      <hp>8</hp>
+
+      <speed>25 feet</speed>
+
+      <action>
+         <name>Melee</name>
+         <action>1</action>
+         <weapon>spear</weapon>
+         <atk>+3</atk>
+         <damage>1d6+1 piercing</damage>
+      </action>
+      <action>
+         <name>Ranged</name>
+         <action>1</action>
+         <weapon>sling</weapon>
+         <atk>+5</atk>
+         <trait>propulsive</trait>
+         <trait>range increment 50 feet</trait>
+         <trait>reload 1</trait>
+         <damage>1d4 bludgeoning</damage>
+      </action>
+      <action>
+         <name>Ranged</name>
+         <action>1</action>
+         <weapon>spear</weapon>
+         <atk>+5</atk>
+         <trait>thrown 20 feet</trait>
+         <damage>1d6+1 piercing</damage>
+      </action>
+      <action>
+         <name>Harried Retreat</name>
+         <action>1</action>
+         <line><![CDATA[<b>Requirement </b>]]>The kobold warrior is adjacent to at least one enemy.</line>
+         <line><![CDATA[<b>Effect </b>]]>The kobold warrior Strides up to its Speed plus 5 feet and gainst a +2 circumstance bonus to AC against reactions triggered by this movement. It must end this movement in a space that's no adjacent to any enemy.</line>
+      </action>
+      <action>
+         <name>Sneak Attack</name>
+         <line>The kobold warrior deals an extra 1d4 precision damage to flat-footed creatures.</line>
+      </action>
+   </creature>
+</catalog>
