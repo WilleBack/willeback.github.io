@@ -70,7 +70,7 @@
 
       <alignment>chaotic evil</alignment>
       <language>understands Abyssal</language>
-      <source>Summon Abyssal Maw (Wizard Daily Attack 5)</source>
+      <source>Summon Abyssal Maw (Wizard Daily 5)</source>
    </creature>
 
    <creature>
@@ -550,7 +550,7 @@
 
          <block>
             <name>Instinctive Action</name>
-            <line>If you haven't given the dretch any commands by the end of your turn, it attacks or charges the nearest creature, using the above attack in place of a melee basic attack.</line>
+            <line>If you haven't given the dretch any commands by the end of your turn, it attacks or charges the nearest creature.</line>
             <line>If the dretch cannot attack or charge a creature, it moves its speed towards the closest creature and you have vulnerable 5 to all damage for the first time you take damage before the end of your next turn.</line>
          </block>
 
@@ -562,7 +562,7 @@
 
       <alignment>chaotic evil</alignment>
       <language>Abyssal</language>
-      <source>Summon Dretch (Wizard Daily Attack 1)</source>
+      <source>Summon Dretch (Wizard Daily 1)</source>
    </creature>
 
    <creature>
@@ -630,7 +630,7 @@
       </category>
 
       <alignment>unaligned</alignment> <language>Primordial</language>
-      <source>Summon Dust Devil (Wizard Daily Attack 1)</source>
+      <source>Summon Dust Devil (Wizard Daily 1)</source>
    </creature>
 
    <creature>
@@ -690,7 +690,7 @@
       </category>
 
       <alignment>unaligned</alignment> <language>-</language>
-      <source>Summon Fierce Board (Druid Daily Attack 1)</source>
+      <source>Summon Fierce Board (Druid Daily 1)</source>
    </creature>
 
    <creature>
@@ -750,7 +750,163 @@
       </category>
 
       <alignment>unaligned</alignment> <language>Primordial</language>
-      <source>Summon Fire Warrior (Wizard Daily Attack 1)</source>
+      <source>Summon Fire Warrior (Wizard Daily 1)</source>
+   </creature>
+
+   <creature>
+      <title>Giant Cobra</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+
+      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>6</speed>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <keyword>Poison</keyword>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Wisdom vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d6 + Wisdom modifier damage plus 2d4 poison damage, and the target takes a -2 penalty to attack rolls until the end of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the cobra any commands by the end of your turn, it attacks an enemy adjacent to it. If it can't do that, it moves its speed towards the nearest enemy.</line>
+            <line>If the cobra cannot attack or move adjacent to an enemy, you gain vulnerable 5 poison until the end of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You deal an additional +2 poison damage with attacks when your target grants you combat advantage.</line>
+         </block>
+      </category>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      <source>Summon Natural Ally (Druid Daily 1)</source>
+   </creature>
+
+   <creature>
+      <title>Giant Toad</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+
+      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+2 to defenses against escape attempts</defmod>
+      <speed>5</speed> <swim>6</swim>
+
+      <category>
+         <category-name>Traits</category-name>
+
+         <block>
+            <name>Leaper</name>
+            <line>The giant toad gains a +10 bonus to Athletics checks to jump you make for it.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 3 (one creature); Wisdom vs. Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + Wisdom modifier damage, and the target is pulled 2 squares. If the target was adjacent, it is grabbed until the end of your next turn instead of pulled.</line>
+            <line indent="1"><![CDATA[<i>Crit:</i>]]> The target is grabbed until the end of your next turn, or grabbed and restrained if it was adjacent.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the giant toad any commands by the end of your turn, it attacks the same creature that it attacked during your previous turn, or a creature within exactly 3 squares of it cannot attack the previous target.</line>
+            <line>If the giant toad can't attack a creature, it moves its speed to be 3 squares away from the nearest enemy and you have a -5 penalty to escape checks instead of the Symbiosis bonus.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain a +4 bonus to escape attempts.</line>
+         </block>
+      </category>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      <source>Summon Giant Toad (Druid Daily 1)</source>
+   </creature>
+
+   <creature>
+      <title>Grizzly Bear</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+
+      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <defmod>+2 to defenses against escape attempts</defmod>
+      <speed>6</speed>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Wisdom vs. Reflex</line>
+            <line indent="1">+2 vs. a target already grabbed by the bear, and can make the attack against Fortitude</line>
+            <line><![CDATA[<i>Hit:</i>]]> 2d6 + Wisdom modifier damage and the grab persists until the end of your next turn. If the bear has no creatures grabbed, the target is grabbed until the end of your next turn.</line>
+            <line indent="1"><![CDATA[<i>Sustain Minor:</i>]]> The grab persists until the end of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the bear any commands by the end of your turn, it sustains a grab if it is grabbing a creature. If it isn't grabbing a creature, it attacks an adjacent enemy if it can. If it can't do either, it moves its speed towards the nearest enemy.</line>
+            <line>If the bear cannot sustain a grab, or attack or move adjacent to an enemy, you cannot escape grabs or similar effects until the end of your next turn.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You have combat advantage against targets grabbed by the bear.</line>
+         </block>
+      </category>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      <source>Summon Natural Ally (Druid Daily 1)</source>
    </creature>
 
    <creature>
@@ -775,6 +931,7 @@
             <keyword>Divine</keyword>
             <frequency>At-Will</frequency>
             <line><![CDATA[<i>Effect:</i>]]> Melee 1 (one creature); The guardian and the target gain a +2 power bonus to AC until the end of your next turn.</line>
+            <line>If the target is bloodied, the bonus increases to +4.</line>
          </block>
 
          <block>
@@ -810,7 +967,7 @@
 
       <alignment>Same as your deity</alignment>
       <language>-</language>
-      <source>Summon Guardian of Faith (Cleric Daily Attack 1)</source>
+      <source>Summon Guardian of Faith (Cleric Daily 1)</source>
    </creature>
 
 
@@ -1072,7 +1229,64 @@
      </category>
 
      <alignment>unaligned</alignment> <language>-</language>
-     <source>Summon Obedient Servant (Artificer Daily Attack 1)</source>
+     <source>Summon Obedient Servant (Artificer Daily 1)</source>
+   </creature>
+
+   <creature>
+      <title>Pack Wolf</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>natural</origin> <type>beast</type>
+
+      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <speed>6</speed>
+
+      <category>
+         <category-name>Traits</category-name>
+
+            <block>
+               <name>Pack Huner</name>
+               <line>The pack wolf has combat advantage against any enemies flanked by its allies.</line>
+            </block>
+      </category>
+
+      <category>
+         <category-name>Actions</category-name>
+
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><![CDATA[<i>Attack:</i>]]> Melee 1 (one creature); Wisdom vs. Reflex</line>
+            <line><![CDATA[<i>Hit:</i>]]> 1d8 + Wisdom modifier damage, and the target is knocked prone.</line>
+            <line>The pack wolf deals an additional +1d8 damage against a prone target.</line>
+         </block>
+
+         <block>
+            <name>Minor Action</name>
+            <frequency>At-Will</frequency> <note>1/round</note>
+            <line><![CDATA[<i>Effect:</i>]]> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+         </block>
+      </category>
+
+      <category>
+         <category-name>Summon Traits</category-name>
+
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the pack wolf any commands by the end of your turn, it attacks an adjacent prone creature, or an adjacent flanked enemy (even if not flanked by the pack wolf) if no prone creature is adjacent to it. If it does not attack, it moves its speed towards the closest enemy, flanking it if possible.</line>
+            <line>If the pack wolf did not either attack or flank a creature, until the end of your next turn, you count as flanked for an enemy if that enemy has at least one ally adjacent to you.</line>
+         </block>
+
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain combat advantage on melee and ranged attacks against any creature flanked by the pack wolf.</line>
+         </block>
+      </category>
+
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      <source>Summon Natural Ally (Druid Daily 1)</source>
    </creature>
 
    <creature>
