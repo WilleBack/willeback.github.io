@@ -311,13 +311,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
 	</xsl:if>
 	<xsl:choose>
-		<xsl:when test="name-style or name/@style = 'bold'">
+		<xsl:when test="name-style='bold' or name/@style='bold'">
 			<b><xsl:value-of select="name"/>&#160;</b>
 		</xsl:when>
-		<xsl:when test="name-style or name/@style = 'italic'">
+		<xsl:when test="name-style='italic' or name/@style='italic'">
 			<i><xsl:value-of select="name"/>&#160;</i>
 		</xsl:when>
-		<xsl:when test="name/@style='bullet'">
+		<xsl:when test="name/@style='bullet' or bullet">
 			&#9658;<xsl:text> </xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
