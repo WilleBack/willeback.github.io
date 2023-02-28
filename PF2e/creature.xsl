@@ -347,7 +347,7 @@
                         <xsl:value-of select="title" />
                         <xsl:text> disrupts the action. This Strike doesn't count toward the monster's MAP, and its MAP doesn't apply to this Strike.</xsl:text>
                      </xsl:when>
-                     <xsl:when test="@auto='aoo'">
+                     <xsl:when test="@auto='block'">
                         <b>Shield Block </b>
                         <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;">R</span>
                         <xsl:text> </xsl:text>
