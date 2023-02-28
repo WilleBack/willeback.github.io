@@ -541,7 +541,7 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>Choose a type of damage your <![CDATA[<i>dragon breath</i>]]> doesn't already deal from among acid, cold, fire, lightning, or poison.</benefit>
-      <benefit>When you use your <![CDATA[<i>dragon breath</i>]]>, you can choose to use this damage type rather than the normal damage dealt by the power. Only one damage type and keyword applies to a given attack.</benefit>
+      <benefit>When you use your <![CDATA[<i>dragon breath</i>]]> racial power, you can choose to use the chosen damage type and corresponding damage keyword rather than the normal damage dealt by the power. Only one damage type and keyword applies to a given attack.</benefit>
       <special>You can take this feat more than once. Each time you select this feat, choose another damage type for your <![CDATA[<i>dragon breath</i>]]> that you don't already have for it.</special>
    </feat>
    <feat>
@@ -580,10 +580,20 @@
          <type>power</type>
          <name>dragon breath</name>
          <qualifier>racial</qualifier>
+         <combine>;</combine>
       </prereq>
       <prereq>
          <type>feat</type>
          <name>Adaptable Breath</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Radiant Breath</name>
+      </prereq>
+      <prereq>
+         <type>hidden</type>
+         <name>any divine</name>
       </prereq>
       <group>Power Enhancement</group>
       <group>Racial</group>
@@ -6136,6 +6146,10 @@
    <feat>
       <title>Bolstering Breath</title>
       <tier>Heroic</tier>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
       <prereq>
          <type>race</type>
          <name>Dragonborn</name>
@@ -29775,14 +29789,14 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>dragonfeat</name>
+         <name>dragonfear</name>
          <qualifier>racial</qualifier>
       </prereq>
       <group>Damage Bonus</group>
       <group>Power Enhancement</group>
       <group>Racial</group>
       <group>Psychic Specialization</group>
-      <benefit>Any target hit by your <![CDATA[<i>dragon breath</i> racial power or your <i>dragonfeat</i>]]> racial power gains vulnerable 5 psychic until the end of your current turn.</benefit>
+      <benefit>Any target hit by your <![CDATA[<i>dragon breath</i> racial power or your <i>dragonfear</i>]]> racial power gains vulnerable 5 psychic until the end of your current turn.</benefit>
       <benefit>This vulnerable increases to 7 at 11th level, and to 10 at 21st level.</benefit>
    </feat>
 
@@ -39629,6 +39643,766 @@
       <benefit>Choose any skill. You gain a +2 feat bonus to checks with that skill.</benefit>
       <benefit>Also, when you make a check with the chosen skill, you can spend 1 power point to gain a +3 power bonus to that check.</benefit>
       <special>You can take this feat more than one. Each time you take this feat, you must choose a different skill.</special>
+   </feat>
+
+   <feat>
+      <title>Psionic Toughness</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Psionic Augmentation</name>
+      </prereq>
+      <group>Class</group>
+      <group>Hit Points</group>
+      <group>Psionics</group>
+      <group>Second Wind</group>
+      <benefit>You gain 3 additional hit points.</benefit>
+      <benefit>These additional hit points increase to 6 at 11th level, and to 10 at 21st level.</benefit>
+      <benefit>Also, your when you use your <![CDATA[<i>second wind</i>]]> you regain an additional 5 hit points.</benefit>
+      <benefit>These additional hit points regained increase to 10 at 11th level, and to 15 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Trick</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Changeling</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>changeling trick</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Defense</group>
+      <group>Movement</group>
+      <group>Power</group>
+      <group>Racial</group>
+      <benefit>Your movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> from enemies granting combat advantage to you.</benefit>
+      <benefit>Also, you do not provoke <![CDATA[<i>opportunity attacks</i>]]> at all from a target under the effects of your <![CDATA[<i>changeling trick</i>]]> racial power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Vampire</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Vampire</name>
+         <combine>and</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class Combination</group>
+      <group>Healing Surge</group>
+      <group>Psionics</group>
+      <benefit>Once per encounter, when you hit at least one enemy with an augmented psionic attack, you gain a healing surge.</benefit>
+      <benefit>Once per encounter, you can use a minor action to spend a healing surge to gain 2 power points. These power points expire at the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Bastion</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Psion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Defense</group>
+      <group>Psychic Specialization</group>
+      <benefit>Whenever you score a critical hit with a psionic power with the Psychic keyword, you gain a +2 bonus to all defenses until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Corruption of Malbolge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Psionic Augmentation</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Fire Specialization</group>
+      <group>Racial</group>
+      <group>Psychic Specialization</group>
+      <benefit>After you hit an enemy with an augmented psionic power, that enemy gains vulnerable 2 fire and vulnerable 2 psychic against your powers until the end of your next turn.</benefit>
+      <benefit>Both of these vulnerables increase to 4 at 11th level, and to 6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Feast</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shifter</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>longtooth shifting</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>Once per turn while you are under the effects of your <![CDATA[<i>longtooth shifting</i>]]> racial power and hit with a psionic attack on your, you immediately regain a number of hit points equal to one-half your regeneration value.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Focus</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shardmind</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Crystalline Mind</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Psychic Specialization</group>
+      <group>Racial</group>
+      <benefit>You gain a +2 feat bonus to damage with Psychic powers. This applies to damage rolls, and to any damage where you apply either your weapon or implement's enhancement bonus.</benefit>
+      <benefit>This damage bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Lock</title>
+      <tier>Paragon</tier>
+      <group>Attack Penalty</group>
+      <group>Psychic Specialization</group>
+      <benefit>Any target you hit on your turn with a power that has the Psychic keyword takes a -2 penalty to the first attack roll it makes before the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Retaliation</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kalashtar</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Oath of Enmity</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>bastion of mental clarity</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>bastion of mental clarity</i>]]> racial power, you can change the triggering enemy to be your oath target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Wail</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Kill Effect</group>
+      <group>Psychic Specialization</group>
+      <benefit>When you reduce an enemy to 0 hit points or fewer on your turn with a power that has the Psychic keyword, choose one other enemy you can see within 5 squares of the first enemy. You gain combat advantage against the chosen enemy until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Pulse of Lightning</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Wilden</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Nature's Aspect</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>When you use your Nature's Aspect racial power, the first time an enemy attacks you with a close attack or area attack before the end of your next turn, that enemy takes lightning damage equal to 3 + your Wisdom modifier.</benefit>
+      <benefit>This lightning damage increases to 6 + your Wisdom modifier at 11th level, and to 10 + your Wisdom modifier at 21st level.</benefit>
+      <benefit>If you are in the Aspect of the Elements, you can choose a second enemy you can see. The chosen enemy takes half as much lightning damage as the triggering enemy.</benefit>
+   </feat>
+
+   <feat>
+      <title>Punishing Axe</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>Whenever you score a critical hit using an axe you have proficiency, you treat rolls of 1 or 2 on the critical damage dice and the extra dice from the High Crit property as rolls of 3.</benefit>
+   </feat>
+
+   <feat>
+      <title>Punishing Radiance</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Damage Bonus</group>
+      <group>Radiant Specialization</group>
+      <benefit>Whenever you score a critical hit with a divine power that has the Radiant keyword, the target and each enemy within 5 squares of it gain vulnerable 5 radiant. If a creature already has vulnerable radiant, the value instead increases by 5. This lasts until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Punishing Rebuke</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Seeker</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>spirits' rebuke</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <benefit>Your <![CDATA[<i>spirits' rebuke</i>]]> class power deals an additional +1[W] damage.</benefit>
+   </feat>
+
+   <feat>
+      <title>Punishing Spike</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Battlemind</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>mind spike</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <group>Power Enhancement</group>
+      <group>Saving Throw Penalty</group>
+      <benefit>When you damage a target with your <![CDATA[<i>mind spike</i>]]> class power, the target takes a -2 penalty to the first saving throw it makes. If the target does not attempt any saving throws by the end of its next turn, this effect ends.</benefit>
+   </feat>
+
+   <feat>
+      <title>Pupil of the All-Father</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Moradin</name>
+      </prereq>
+      <group>Class</group>
+      <group>Equipment</group>
+      <group>Rituals</group>
+      <group>Worship</group>
+      <benefit>You have mastered the <![CDATA[<i>enchant magic item</i> and <i>make whole</i>]]> rituals, and can perform them without a ritual book.</benefit>
+      <benefit>Also, when using the <![CDATA[<i>enchant magic item</i>]]> ritual to enchant weapons or armor, you count as being three levels higher than you are.</benefit>
+      <benefit>In addition, once per day, you can perform the <![CDATA[<i>make whole</i>]]> ritual without expending components as long as the component cost would have been 100 gp or fewer.</benefit>
+   </feat>
+
+   <feat>
+      <title>Puppeteer</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Psion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <group>Triggered</group>
+      <benefit>Whenever an enemy fails a saving throw against an effect caused by one of your Psion attack powers, you can slide that enemy 1 square as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Pure Mind</title>
+      <tier>Epic</tier>
+      <group>Damage Resistance</group>
+      <group>Defense</group>
+      <benefit>You gain resist 10 psychic.</benefit>
+      <benefit>Also, you gain a +2 bonus to Will defense.</benefit>
+   </feat>
+
+   <feat>
+      <title>Purging Spirit</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>healing spirit</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Saving Throws</group>
+      <benefit>When you use your <![CDATA[<i>healing spirit</i>]]> class power, you (if you are adjacent to your spirit companion) and each ally adjacent to your spirit companion can make a saving throw against an effect that a save can end.</benefit>
+      <benefit>If a character is not affected by an effect that a save can end, he or she can attempt a save against an effect that normally does not allow a save, but must roll twice and take the lower result.</benefit>
+   </feat>
+
+   <feat>
+      <title>Purifying Light</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Radiant Specialization</group>
+      <group>Undead-hunting</group>
+      <benefit>You gain a +1 bonus to attack rolls against undead with Radiant powers.</benefit>
+   </feat>
+
+   <feat>
+      <title>Pursuing Step</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Battlemind</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>blurred step</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Power Enhancement</group>
+      <benefit>When you use your <![CDATA[<i>blurred step</i>]]> class power and end the shift adjacent to the triggering enemy, that enemy grants you combat advantage to you until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick Beast Command</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>19</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Beast Mastery</name>
+      </prereq>
+      <group>Animal Companion</group>
+      <group>Class</group>
+      <group>Extra Attack</group>
+      <benefit>You can use a minor action to command your beast companion to make a <![CDATA[<i>melee basic attack</i>]]>.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick Draw</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <group>Equip</group>
+      <group>Initiative</group>
+      <benefit>You gain a +2 feat bonus to Initiative checks.</benefit>
+      <benefit>You can draw a weapon (or an object, such as a potion, stored in a belt pouch, a bandolier, or a similar container) as part of the same action used to attack with the weapon (or use the object).</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick Familiar</title>
+      <tier>Heroic</tier>
+      <category>Familiar</category>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <group>Familiar</group>
+      <group>Mobility</group>
+      <benefit>Once per turn, you can move your familiar as a minor action instead of a move action.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick Reaction</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Battlemind</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>speed of thought</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Initiative</group>
+      <group>Mobility</group>
+      <group>Power Enhancement</group>
+      <benefit>You can use your Charisma modifier instead of your Dexterity modifier to determine your Initiative bonus.</benefit>
+      <benefit>Also, when you use your <![CDATA[<i>speed of thought</i>]]> class power, you gain a +2 bonus to speed until the end of your next turn (after any surprise round, if applicable).</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick Recovery</title>
+      <tier>Paragon</tier>
+      <group>Healing</group>
+      <benefit>You regain 5 additional hit points for each healing surge you spend at the end of a short rest.</benefit>
+      <benefit>Starting at 21ar level, this additional healing increases to 10 for each healing surge.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick Stow</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Equipment</group>
+      <group>Shapechange</group>
+      <benefit>When you use your <![CDATA[<i>wild shape</i>]]> class power to change from your humanoid form to beast form, you don't automatically drop handheld items that aren't implements. Such items become part of your beast form.</benefit>
+      <benefit>However, you gain no benefit from a handheld item, such as a shield, that must be wielded to be functional, and you can use only the properties and powers of the item that don't require you to make an attack with it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick Wild Shape</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Shapechange</group>
+      <benefit>You can use your <![CDATA[<i>wild shape</i>]]> class power as a free action during your turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quick and Dead</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dark reaping</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shadow step</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Teleportation</group>
+      <benefit>When you use your <![CDATA[<i>dark reaping</i>]]> racial power, the distance you can teleport with your <![CDATA[<i>shadow step</i>]]> class power increases by 1 square until the end of the encounter.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quickened Spellcasting</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <benefit>Choose an arcane at-will attack power that you know that is used as a standard action.</benefit>
+      <benefit>Once per encounter, you can use the chosen power as a minor action.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quori Backlash</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kalashtar</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Dual Soul</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Psychic Specialization</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>Whenever an enemy dazes, dominates, or deals psychic damage to you, that enemy takes psychic damage equal to 5 + your Wisdom modifier.</benefit>
+      <benefit>This psychic damage increases to 10 + your Wisdom modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quori Desperation</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kalashtar</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Dual Soul</name>
+      </prereq>
+      <group>Condition Negation</group>
+      <group>Dying</group>
+      <group>Racial</group>
+      <benefit>The first time each encounter that you are reduced to 0 hit points or fewer and don't die, you do not fall unconscious as a result of that condition. At the end of your next turn, you fall unconscious if you are still dying.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quori Shield</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kalashtar</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Dual Soul</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Racial</group>
+      <benefit>You gain resist psychic equal to 5 + one-half your level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Radiant Advantage</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Radiant Specialization</group>
+      <group>Support</group>
+      <benefit>When you deal radiant damage to a creature that has vulnerable radiant, you can choose to not deal the additional damage.</benefit>
+      <benefit>If you do, you and your allies gain combat advantage against that creature until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Radiant Breath</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dragon breath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Radiant Specialization</group>
+      <benefit>When you use your <![CDATA[<i>dragon breath</i>]]> racial power, you can choose to deal radiant damage rather than the normal damage dealt by the power, and replace the damage type keyword with the Radiant keyword.</benefit>
+   </feat>
+
+   <feat>
+      <title>Radiant Fortification</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>13</value>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Deva</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Astral Heritage</name>
+      </prereq>
+      <group>Radiant Specialization</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When you hit with a Radiant power, you gain temporary hit points equal to your Constitution modifier.</benefit>
+      <benefit>These temporary hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Radiant Hunter</title>
+      <tier>Paragon</tier>
+      <category>Multiclass</category>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>any divine class multiclass feat</name>
+      </prereq>
+      <group>Class combination</group>
+      <group>Damage Bonus</group>
+      <group>Multiclass Divine</group>
+      <group>Radiant Specialization</group>
+      <benefit>You can have your hunter's quarry damage count as radiant damage for the purposes of triggering vulnerable radiant and other weaknesses that creatures might have.</benefit>
+   </feat>
+
+   <feat>
+      <title>Radiant Rage</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class Combination</group>
+      <group>Damage Bonus</group>
+      <group>Healing Surge</group>
+      <group>Radiant Specialization</group>
+      <benefit>When you spend a healing surge while you are raging, you can choose to deal additional radiant damage with first melee attack before the end of your next turn. The additional radiant damage equals your Charisma modifier.</benefit>
+      <benefit>The additional radiant damage increases to 2 + your Charisma modifier at 11th level, and to 5 + your Charisma modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Radiant Touch</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Paladin</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>lay on hands</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Repertoire</group>
+      <group>Radiant Specialization</group>
+      <group>Undead-hunting</group>
+      <benefit>You gain the <![CDATA[<i>radiant touch</i>]]> power. This counts as a Paladin power.</benefit>
+
+      <power>
+         <title>Radiant Touch</title>
+         <class>Paladin</class> <category>Attack</category>
+         <fluff>You transform your divine healing into radiant energy to damage an undead</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine, Implement, Radiant</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Melee</type> <range>touch</range>
+            <section>
+               <shade>true</shade>
+               <name>Requirement:</name> <name-style>bold</name-style>
+               <text>You must have uses of your <![CDATA[<i>lay on hands</i>]]> class power available.</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <text>One undead creature</text>
+            </section>
+            <section>
+               <name>Attack:</name> <name-style>bold</name-style>
+               <text>Charisma vs. Fortitude</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Hit:</name> <name-style>bold</name-style>
+               <text>You spend a healing surge to deal radiant damage to the target. The radiant damage equals your healing surge value.</text>
+            </section>
+            <section>
+               <shade>true</shade>
+               <text>This counts as a use of your <![CDATA[<i>lay on hands</i>]]> class power.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+
+   <feat>
+      <title>Radiant Vessel</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>healing word</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <group>Radiant Specialization</group>
+      <benefit>If you hit an enemy with a cleric attack that has the Radiant keyword, the first time you use your <![CDATA[<i>healing word</i>]]> class power before the end of your next turn, the target regains an additional 1d6 hit points.</benefit>
+      <benefit>These additional hit points regained increase to 2d6 at 21st level.</benefit>
    </feat>
 
    <feat>

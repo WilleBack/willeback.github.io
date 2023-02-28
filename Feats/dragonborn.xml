@@ -168,7 +168,7 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>Choose a type of damage your &lt;i&gt;dragon breath&lt;/i&gt; doesn't already deal from among acid, cold, fire, lightning, or poison.</benefit>
-      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt;, you can choose to use this damage type rather than the normal damage dealt by the power. Only one damage type and keyword applies to a given attack.</benefit>
+      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt; racial power, you can choose to use the chosen damage type and corresponding damage keyword rather than the normal damage dealt by the power. Only one damage type and keyword applies to a given attack.</benefit>
       <special>You can take this feat more than once. Each time you select this feat, choose another damage type for your &lt;i&gt;dragon breath&lt;/i&gt; that you don't already have for it.</special>
    </feat>
    <feat>
@@ -182,10 +182,20 @@
          <type>power</type>
          <name>dragon breath</name>
          <qualifier>racial</qualifier>
+         <combine>;</combine>
       </prereq>
       <prereq>
          <type>feat</type>
          <name>Adaptable Breath</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Radiant Breath</name>
+      </prereq>
+      <prereq>
+         <type>hidden</type>
+         <name>any divine</name>
       </prereq>
       <group>Power Enhancement</group>
       <group>Racial</group>
@@ -309,6 +319,10 @@
    <feat>
       <title>Bolstering Breath</title>
       <tier>Heroic</tier>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
       <prereq>
          <type>race</type>
          <name>Dragonborn</name>
@@ -1796,14 +1810,14 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>dragonfeat</name>
+         <name>dragonfear</name>
          <qualifier>racial</qualifier>
       </prereq>
       <group>Damage Bonus</group>
       <group>Power Enhancement</group>
       <group>Racial</group>
       <group>Psychic Specialization</group>
-      <benefit>Any target hit by your &lt;i&gt;dragon breath&lt;/i&gt; racial power or your &lt;i&gt;dragonfeat&lt;/i&gt; racial power gains vulnerable 5 psychic until the end of your current turn.</benefit>
+      <benefit>Any target hit by your &lt;i&gt;dragon breath&lt;/i&gt; racial power or your &lt;i&gt;dragonfear&lt;/i&gt; racial power gains vulnerable 5 psychic until the end of your current turn.</benefit>
       <benefit>This vulnerable increases to 7 at 11th level, and to 10 at 21st level.</benefit>
    </feat>
 
@@ -1897,6 +1911,29 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt; racial power or your &lt;i&gt;dragonfear&lt;/i&gt; racial power, you can choose to mark each target. The mark lasts until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Radiant Breath</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>dragon breath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Radiant Specialization</group>
+      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt; racial power, you can choose to deal radiant damage rather than the normal damage dealt by the power, and replace the damage type keyword with the Radiant keyword.</benefit>
    </feat>
 
    <feat>
