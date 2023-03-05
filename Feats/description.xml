@@ -755,7 +755,6 @@
    <feat>
       <title>Aggressive Advantage</title>
       <tier>Heroic</tier>
-      <group>Attack Bonus</group>
       <group>Combat Advantage</group>
       <group>Initiative</group>
       <benefit>You gain combat advantage against all enemies until the end of your first turn in each combat.</benefit>
@@ -25643,6 +25642,28 @@
    </feat>
 
    <feat>
+      <title>Heedless Thought</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Minotaur</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Heedless Charge</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any psionic</name>
+      </prereq>
+      <group>Charge</group>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Racial</group>
+      <benefit>The bonus to AC granted by your Heedless Charge racial trait increases by one-half your Constitution modifier or Wisdom modifier (minimum +1).</benefit>
+   </feat>s
+
+   <feat>
       <title>Hell's Burning Mark</title>
       <tier>Epic</tier>
       <prereq>
@@ -37240,7 +37261,7 @@
       <group>Power Enhancement</group>
       <group>Support</group>
       <benefit>When you use your <![CDATA[<i>lay on hands</i> class power or <i>virtue's touch</i>]]> class power, you can target one or two creatures.</benefit>
-      <benefit>If you target two creatures with your <![CDATA[<i>lay on hands</i>]]> class power and target two creatures, you spend only one healing surge.</benefit>
+      <benefit>If you target two creatures with your <![CDATA[<i>lay on hands</i>]]> class power, you spend only one healing surge.</benefit>
    </feat>
 
    <feat>
@@ -40403,6 +40424,444 @@
       <group>Radiant Specialization</group>
       <benefit>If you hit an enemy with a cleric attack that has the Radiant keyword, the first time you use your <![CDATA[<i>healing word</i>]]> class power before the end of your next turn, the target regains an additional 1d6 hit points.</benefit>
       <benefit>These additional hit points regained increase to 2d6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rageblood Recovery</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Rageblood Vigor</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <benefit>When you hit with the charge attack granted by your <![CDATA[<i>swift charge</i>]]> class power, you can use a free reaction to spend a healing surge to regain hit points equal to your healing surge value.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raging Drake Form</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dragonborn</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Dragonborn Fury</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <group>Shapechange</group>
+      <benefit>While you are in beast form and bloodied, you gain a +2 bonus to damage rolls.</benefit>
+      <benefit>This damage bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raging Reach</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>While raging, you deal additional damage when you attack with a two-handed reach weapon that you have proficiency with and the target is not adjacent to you. The additional damage equals +1 per [W] of damage of the attack.</benefit>
+      <benefit>This additional damage increases to +2 damage per [W] of damage of the attack at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raging Storm</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Lightning Specialization</group>
+      <group>Thunder Specialization</group>
+      <benefit>You gain a +1 bonus to damage with powers that have the Lightning keyword or the Thunder keyword.</benefit>
+      <benefit>This bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rampaging Beast</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Beast Mastery</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>companion</type>
+         <name>bear</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>companion</type>
+         <name>wolf</name>
+      </prereq>
+      <group>Animal Companion</group>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <benefit>Whenever your beast companion hits a creature with a <![CDATA[<i>melee basic attack</i>]]>, it can push that creature 1 square.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rapid Aegis Reaction</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>aegis of assault</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>aegis of ensnarement</name>
+         <qualifier>class</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>aegis of shielding</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <benefit>The first time each round you use your <![CDATA[<i>aegis of assault</i>, <i>aegis of ensnarement</i>, or <i>aegis of shielding</i>]]> class power, it does not count toward the normal limit on the number of immediate actions you can take in one round.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rapid Assault</title>
+      <tier>Heroic</tier>
+      <group>Damage Bonus</group>
+      <group>Initiative</group>
+      <benefit>You gain a +2 bonus to damage rolls with melee attacks until the end of your first turn (after the surprise round, if any).</benefit>
+      <benefit>This bonus to damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rapid Enforcement</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>enforce challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <benefit>The first time each round you use your <![CDATA[<i>enforce challenge</i>]]> class power, it does not count toward the normal limit on the number of immediate actions you can take in one round.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rapid Infusion</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>Magical Infusion power</type>
+         <name>at least one</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <benefit>You can use your Magical Infusion powers as a free action on your turn instead of as a minor action. You can still only use one per round.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rapid Mind Spike</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Battlemind</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>mind spike</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <benefit>The first time each round you use your <![CDATA[<i>mind spike</i>]]> class power, it does not count toward the normal limit on the number of immediate actions you can take in one round.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rapid Regeneration</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>17</value>
+      </prereq>
+      <group>Healing</group>
+      <benefit>While you have regeneration, the value of that regeneration increases by an amount equal to your Constitution modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rapid Wild Defense</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warden</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warden's fury</name>
+         <qualifier>class</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warden's grasp</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mark Punishment</group>
+      <benefit>The first time each round you use either your <![CDATA[<i>warden's fury</i> or <i>warden's grasp</i>]]> class power, it does not count toward the normal limit on the number of immediate actions you can take in one round.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rash Sneak Attack</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Human</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <benefit>When you deal Sneak Attack damage, you can choose to gain a bonus to the damage roll equal to the number of dice of damage your Sneak Attack deals.</benefit>
+      <benefit>If you do, you grant combat advantasge to all enemies until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rattling Exploit</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Intimidate</name>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Class</group>
+      <group>Fear</group>
+      <group>Power Enhancement</group>
+      <benefit>Choose a martial encounter attack power that you know and that either has an attack roll, triggers on a hit, or requires you to have hit an enemy during your current turn. The chosen power gains the Rattling keyword.</benefit>
+      <benefit>When you hit with the chosen power, trigger it, or use it, respectively, the target hit takes a -2 penalty to attack rolls until the end of your next turn. If the power has more than one target, each one that you hit takes this penalty.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rattling Wrath</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>infernal wrath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Intimidate</name>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Class</group>
+      <group>Fear</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>infernal wrath</i>]]> racial power, any Rattling power you use against the target before the end of your next turn has an increased effect. Any penalties the target takes from the Rattling power increase by 2.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raven Queen Devotee</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>the Raven Queen</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Damage Resistance</group>
+      <group>Power Enhancement</group>
+      <group>Skill Enhancement</group>
+      <group>Undead-hunting</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Intimidate checks.</benefit>
+      <benefit>Also, you gain the following benefits with divine at-will attacks:</benefit>
+      <benefit>&#9658; When you target an undead creature and would make the target takes a penalty to attack rolls, you can choose to instead make the target grant combat advantage for the same duration. If the penalty is only for one attack roll, the target only grants combat advantage for the first attack roll against it.</benefit>
+      <benefit>&#9658; When you would grant an ally a bonus to AC, you can choose to instead grant that ally resist necrotic for the same duration. The resist equals one-half your level + one-half the higher of your Wisdom modifier or Charisma modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raven Queen's Disciple</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Bleak Disciple</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <group>Undead-hunting</group>
+      <benefit>The additional damage you deal from your Bleak Disciple class feature increases by +1, or by +2 when you add your Constitution modifier.</benefit>
+      <benefit>Also, you can add your Constitution modifier to the damage against any non-bloodied undead, instead of only one that is at full hit points or has regained hit points to become unbloodied.</benefit>
+      <benefit>The additional damage increases to +2 or +3, respectively, at 11th level, and to +3 or +5 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raven Queen's Outrage</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>the Raven Queen</name>
+      </prereq>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <group>Undead-hunting</group>
+      <benefit>Whenever you hit an undead creature with a divine encounter attack or a divine daily attack, you can also slide that creature 1 square as part of the hit. If the power already has forced movement, increase that forced movement by 1 square instead.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raven Queen's Sanction</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Assassin's Shroud</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Miss Mitigation</group>
+      <group>Racial</group>
+      <group>Undead-hunting</group>
+      <benefit>When you invoke your shrouds on an undead or shadow creature and the attack misses, you do not subtract one shroud before determining the damage.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raven Queen's Scorn</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Oath of Enmity</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>the Raven Queen</name>
+      </prereq>
+      <group>Class</group>
+      <group>Teleportation</group>
+      <group>Undead-hunting</group>
+      <group>Worship</group>
+      <benefit>If your oath target is an undead creature, you can use a minor action once per turn to teleport to any space you can see and have line of effect to that is adjacent to the target. This action has the Divine and Teleportation keywords.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ravenous Blessing</title>
+      <category>Spellscar</category>
+      <tier>Heroic</tier>
+      <group>Healing</group>
+      <group>Saving Throws</group>
+      <group>Spellscar</group>
+      <group>Support</group>
+      <benefit>Whenever you target an ally with a Healing power, you can choose to take necrotic damage equal to 3 + one-half your level. This damage cannot be decreased in any way.</benefit>
+      <benefit>If you choose to take the damage, one ally of that Healing power regains additional hit points equal to your level.</benefit>
+      <benefit>If you have the Student of the Plague feat, an ally who regains hit points from this feat also gains a +2 power bonus to saving throws until the end of your next turn.</benefit>
    </feat>
 
    <feat>
