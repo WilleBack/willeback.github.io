@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="item.xsl"?>
 <catalog>
+   <collection>Implement enchantments</collection>
+   
    <list selection="1" />
    <list selection="2" />
    <list selection="3" />
@@ -783,7 +785,7 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>When you trigger your <![CDATA[<i>blood drinker</i>]]> Vampire attack power with an attack made with this ki focus, you roll d12s instead of d10s for that power's damage.</line>
+         <line>When you trigger your <![CDATA[<i>blood drinker</i>]]> Vampire attack power with an attack made with this ki focus, you can reroll any damage die that displays a 1 or 2 until the result is higher.</line>
       </block>
    </item>
 
@@ -1537,6 +1539,68 @@
          <line><![CDATA[<i>Effect:</i>]]> You fly a number of squares equal 1 + this ki focus's enhancement bonus. This counts as shifting. You must land at the end of this movement or you fall.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Frost Wand</title>
+      <category>Uncommon</category>
+      <fluff>Frost covers the tip of this wand, threatening to unleash its icy chill</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Wand</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Crtical</name>
+         <text>+1d8 cold damage per plus</text>
+      </headline>
+      <headline>
+         <name>Item Bonus</name>
+         <text>Damage rolls with Cold powers using this wand</text>
+      </headline>
+      <block>
+         <name>Ray of Frost</name>
+         <keyword>Arcane</keyword>
+         <keyword>Cold</keyword>
+         <keyword>Evocation</keyword>
+         <keyword>Implement</keyword>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Attack:</i>]]> Ranged 5/10 (one creature); Intelligence vs. Fortitude</line>
+         <line><![CDATA[<i>Hit:</i>]]> 1d6 + Intelligence modifier cold damage.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> 2d6 + Intelligence modifier cold damage.</line>
+         <line><![CDATA[<i>Effect:</i>]]> The target is slowed until the end of your next turn.</line>
+      </block>
+   </item>
 
    <item>
       <title>Ghost Strike Ki Focus</title>
@@ -1871,9 +1935,69 @@
          <line><![CDATA[<i>Effect:</i>]]> During your current turn, each bloodied enemy you damage with your Flurry of Blows cannot regain hit points until the end of your next turn.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Implement of Brawn</title>
+      <category>Common</category>
+      <fluff>Physical strength and devotion are both enhanced by this adamantine implement</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Ki focus</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Special</name>
+         <line>When created, this implement is focused on a specific power source: divine for a holy symbol, or psionic or shadow for a ki focus (creator's choice).</line>
+         <line>The <i>enchant item</i> ritual can be used to change this choice, with a component cost of 70 gp.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit with an Implement attack power of the focused power source using this implement</line>
+         <line><![CDATA[<i>Effect:</i> You make a <i>melee basic attack</i>]]>.</line>
+         <line>If this attack hits a creature marked by you, it deals +1d10 additional damage.</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2d10 additional damage.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3d10 additional damage.</line>
+      </block>
+   </item>
 
    <item>
-      <title>Implement of Earther Might</title>
+      <title>Implement of Earthen Might</title>
       <category>Uncommon</category>
       <fluff>This implement channels the power of the earth to add strength to your limbs and weight to your blows</fluff>
       <level>
@@ -1926,6 +2050,68 @@
          <line><![CDATA[<i>For your target, the weight of the world suddenly feels like it tripled</i>]]></line>
          <line><![CDATA[<i>Trigger:</i>]]> You hit a creature with an attack using this implement</line>
          <line><![CDATA[<i>Effect:</i>]]> The triggering creature is slowed (save ends).</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Implement of Fear</title>
+      <category>Common</category>
+      <fluff>The only thing more unnerving than holding this pale implement is experiencing its horrific effects</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Ki focus</subtype> <subtype>Orb</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d8 damage per plus with Fear powers</text>
+      </headline>
+      <headline>
+         <name>Item Bonus</name>
+         <text>Intimidate checks</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <keyword>Psychic</keyword>
+         <line>When you score a critical hit with a Fear power using this implement, and that power normally deals no damage, you can choose to deal 1d4 psychic damage per plus to the target of that attack. You cannot add any modifiers to this damage rolls. This is resolved as a separate effect after the attack has been resolved.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fear</keyword>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit a target with an attack using this implement</line>
+         <line><![CDATA[<i>Effect:</i>]]> You push the triggering target up to a number of squares equal to this implement's enhancement bonus.</line>
       </block>
    </item>
 
@@ -2125,6 +2311,55 @@
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
          <line><![CDATA[<i>Effect:</i>]]> You gain a bonus to all defenses until the end of your next turn. The bonus equals 3 + this implement's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Implement of the Hunting Hound</title>
+      <category>Common</category>
+      <fluff>This plain, wooden implement has a carving of a snarling mastiff</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Ki focus</subtype> <subtype>Wand</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d4 damage per plus, and the target is immobilized (save ends), or +1d8 damage per plus if the target was already immobilized</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Attacks using this implement ignore penalties from cover.</line>
       </block>
    </item>
 
@@ -2759,10 +2994,66 @@
          <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Reroll any 1, 2 or 3 until that die's result is anything else than a 1, 2 or 3.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Master's Wand</title>
+      <category>Common</category>
+      <fluff>Your chosen power has an added benefit</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Wand</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Each <![CDATA[<i>master's wand</i>]]> is keyed to a specific arcane at-will attack, and has a specific benefit when it is used for chosen power. Work with your DM if you there isn't currently one for the power you want.</line>
+      </block>
+      <block>
+         <name>Custom Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line>Each <![CDATA[<i>master's wand</i>]]> allows the use of the chosen at-will attack as an encounter power using the wand's level for its statistics.</line>
+      </block>
+   </item>
 
    <item>
       <title>Master's Wand of Cloud of Daggers</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your cloud of daggers strikes with deadly accuracy</fluff>
       <level>
          <value>3</value>
@@ -2824,7 +3115,7 @@
 
    <item>
       <title>Master's Wand of Dire Radiance</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your dire radiance presses against foes with an invisible force</fluff>
       <level>
          <value>3</value>
@@ -2885,7 +3176,7 @@
 
    <item>
       <title>Master's Wand of Eldritch Combat</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your eldritch combat power viciously scours your enemies</fluff>
       <level>
          <value>3</value>
@@ -2939,115 +3230,8 @@
    </item>
 
    <item>
-      <title>Mindshield Implement</title>
-      <category>Common</category>
-      <fluff>This elaborate implement feels right in your hands, but at the same time dreamlike and unnaturally light, as if only partially real</fluff>
-      <level>
-         <value>2</value>
-         <bonus>+1</bonus>
-         <price>520</price>
-      </level>
-      <level>
-         <value>7</value>
-         <bonus>+2</bonus>
-         <price>2,600</price>
-      </level>
-      <level>
-         <value>12</value>
-         <bonus>+3</bonus>
-         <price>13,000</price>
-      </level>
-      <level>
-         <value>17</value>
-         <bonus>+4</bonus>
-         <price>65,000</price>
-      </level>
-      <level>
-         <value>22</value>
-         <bonus>+5</bonus>
-         <price>325,000</price>
-      </level>
-      <level>
-         <value>27</value>
-         <bonus>+6</bonus>
-         <price>1,625,000</price>
-      </level>
-      <type>Implement</type> <subtype>Orb</subtype> <subtype>Staff</subtype> <subtype>Tome</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>Attack rolls and damage rolls</text>
-      </headline>
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus</text>
-      </headline>
-      <headline>
-         <name>Item Bonus</name>
-         <text>Saving throws against Charm and Illusion effects</text>
-      </headline>
-      <block>
-         <name>Property</name>
-         <line>When you score a critical hit using this implement, you and each ally within 5 squares of you can make a saving throw against one Charm or Illusion, even if that effect normally does not end on a save.</line>
-      </block>
-   </item>
-
-   <item>
-      <title>Nature Protector's Effigy</title>
-      <category>Common</category>
-      <fluff>This egg-shaped white stone has a carving of an oak leaf that turns green when surrounded by nature</fluff>
-      <level>
-         <value>3</value>
-         <bonus>+1</bonus>
-         <price>680</price>
-      </level>
-      <level>
-         <value>8</value>
-         <bonus>+2</bonus>
-         <price>3,400</price>
-      </level>
-      <level>
-         <value>13</value>
-         <bonus>+3</bonus>
-         <price>17,000</price>
-      </level>
-      <level>
-         <value>18</value>
-         <bonus>+4</bonus>
-         <price>85,000</price>
-      </level>
-      <level>
-         <value>23</value>
-         <bonus>+5</bonus>
-         <price>425,000</price>
-      </level>
-      <level>
-         <value>28</value>
-         <bonus>+6</bonus>
-         <price>2,125,000</price>
-      </level>
-      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Totem</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>Attack rolls and damage rolls</text>
-      </headline>
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus, or +1d8 damage per plus against aberrant creatures</text>
-      </headline>
-      <block>
-         <name>Utility Power</name>
-         <keyword>Teleportation</keyword>
-         <frequency>Daily</frequency>
-         <action>Move</action> <subaction>Acion</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You teleport up to 5 squares to a space adjacent to a plant or a plant creature that is Small or larger.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Up to 10 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Up to 20 squares.</line>
-      </block>
-   </item>
-
-   <item>
       <title>Master's Wand of Ethereal Chill</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your ethereal chill also empower's your ally's attack</fluff>
       <level>
          <value>3</value>
@@ -3108,7 +3292,7 @@
 
    <item>
       <title>Master's Wand of Eyebite</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your eyebite spell occludes you just a moment longer than normal</fluff>
       <level>
          <value>3</value>
@@ -3166,7 +3350,7 @@
 
    <item>
       <title>Master's Wand of Hellish Rebuke</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your hellish rebuke consumes your attacker and its nearby allies</fluff>
       <level>
          <value>3</value>
@@ -3227,7 +3411,7 @@
 
    <item>
       <title>Master's Wand of Force Missiles</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your missiles of arcane force impact with the force of a rushing bull</fluff>
       <level>
          <value>3</value>
@@ -3281,7 +3465,7 @@
 
    <item>
       <title>Master's Wand of Ray of Frost</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your ray of frost covers the target in so much ice that it can become a hindrance to its allies</fluff>
       <level>
          <value>3</value>
@@ -3340,7 +3524,7 @@
 
    <item>
       <title>Master's Wand of Scorching Burst</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your scorching burst burns devastatingly hot at its core</fluff>
       <level>
          <value>3</value>
@@ -3401,7 +3585,7 @@
 
    <item>
       <title>Master's Wand of Staggering Note</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your staggering note includes a perfect cue for your ally to strike</fluff>
       <level>
          <value>3</value>
@@ -3461,7 +3645,7 @@
 
    <item>
       <title>Master's Wand of Static Shock</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>The hindering charge of your static shock does not dissipate as easily</fluff>
       <level>
          <value>3</value>
@@ -3520,7 +3704,7 @@
 
    <item>
       <title>Master's Wand of Thunderwave</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>This wand grants the ability to reshape your thunderwave power</fluff>
       <level>
          <value>3</value>
@@ -3579,7 +3763,7 @@
 
    <item>
       <title>Master's Wand of Vicious Mockery</title>
-      <category>Uncommon</category>
+      <category>Common</category>
       <fluff>Your vicious mockery drives an enemy into a reckless rage</fluff>
       <level>
          <value>3</value>
@@ -3632,6 +3816,113 @@
          <line><![CDATA[<i>Attack:</i>]]> Ranged 10 (one creature); Charisma vs. Will</line>
          <line><![CDATA[<i>Hit:</i>]]> 1d6 + Charisma modifier psychic damage, and the target takes a -2 penalty to attack rolls until the end of your next turn.</line>
          <line><![CDATA[<i>Miss:</i>]]> The target takes a -2 penalty to the first attack roll it makes before the end of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Mindshield Implement</title>
+      <category>Common</category>
+      <fluff>This elaborate implement feels right in your hands, but at the same time dreamlike and unnaturally light, as if only partially real</fluff>
+      <level>
+         <value>2</value>
+         <bonus>+1</bonus>
+         <price>520</price>
+      </level>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Orb</subtype> <subtype>Staff</subtype> <subtype>Tome</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <headline>
+         <name>Item Bonus</name>
+         <text>Saving throws against Charm and Illusion effects</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>When you score a critical hit using this implement, you and each ally within 5 squares of you can make a saving throw against one Charm or Illusion, even if that effect normally does not end on a save.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Nature Protector's Effigy</title>
+      <category>Common</category>
+      <fluff>This egg-shaped white stone has a carving of an oak leaf that turns green when surrounded by nature</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Totem</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d8 damage per plus against aberrant creatures</text>
+      </headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Teleportation</keyword>
+         <frequency>Daily</frequency>
+         <action>Move</action> <subaction>Acion</subaction>
+         <line><![CDATA[<i>Effect:</i>]]> You teleport up to 5 squares to a space adjacent to a plant or a plant creature that is Small or larger.</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Up to 10 squares.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Up to 20 squares.</line>
       </block>
    </item>
 
@@ -4461,6 +4752,67 @@
          <line>You transfer the chosen effect to the triggering target. It is affected for the same duration that you or the ally was affected by it.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Psychic Ravaging Wand</title>
+      <category>Uncommon</category>
+      <fluff>With this wand in hand, your psychic attacks tear through your enemies' minds</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Wand</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 psychic damage per plus</text>
+      </headline>
+      <headline>
+         <name>Item Bonus</name>
+         <text>Damage rolls with Psychic powers using this wand</text>
+      </headline>
+      <block>
+         <name>Eyebite</name>
+         <keyword>Arcane</keyword>
+         <keyword>Charm</keyword>
+         <keyword>Implement</keyword>
+         <keyword>Psychic</keyword>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Attack:</i>]]> Ranged 10 (one creature); Charisma vs. Will</line>
+         <line><![CDATA[<i>Hit:</i>]]> 1d6 + Charisma modifier psychic damage, and you are invisible to the target until the start of your next turn.</line>
+         <line><![CDATA[<i>Miss:</i>]]> You gain concealment against the target until the start of your next turn.</line>
+      </block>
+   </item>
 
    <item>
       <title>Quickcurse Rod</title>
@@ -4513,6 +4865,71 @@
          <line><![CDATA[<i>Requirement:</i>]]> You must have the Warlock's Curse class feature.</line>
          <line><![CDATA[<i>Trigger:</i>]]> You hit a creature with a power using this rod</line>
          <line><![CDATA[<i>Effect:</i>]]> You place your curse on a different creature you can see.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Radiant Wand</title>
+      <category>Uncommon</category>
+      <fluff>A pinpoint of light dances on the tip of this wand</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Wand</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 radiant damage per plus</text>
+      </headline>
+      <headline>
+         <name>Item Bonus</name>
+         <text>Damage rolls with Radiant powers using this wand</text>
+      </headline>
+      <block>
+         <name>Dire Radiance</name>
+         <keyword>Arcane</keyword>
+         <keyword>Fear</keyword>
+         <keyword>Implement</keyword>
+         <keyword>Radiant</keyword>
+         <frequency>Encounter</frequency>
+         <action>Standard</action>
+         <subaction>Action</subaction>
+         <line><![CDATA[<i>Attack:</i>]]> Ranged 10 (one creature); Charisma vs. Will</line>
+         <line><![CDATA[<i>Hit:</i>]]> 1d8 + Charisma modifier radiant damage.</line>
+         <line>If the target willingly moves nearer to you before the start of your next turn, it takes radiant damage equal to 2 + your Intelligence modifier + wands's enhancement bonus.</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> 6 + your Intelligence modifier + this wands's enhancement bonus radiant damage.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> 2d8 + Charisma modifier radiant damage, and 10 + your Intelligence modifier + this wands's enhancement bonus radiant damage.</line>
+         <line><![CDATA[<i>Effect:</i>]]> The first square of movement the target takes towards you before the start of your next turn costs an additional square.</line>
       </block>
    </item>
 
@@ -4988,9 +5405,9 @@
    </item>
 
    <item>
-      <title>Rod of Divinity</title>
+      <title>Implement of Divinity</title>
       <category>Common</category>
-      <fluff>This delicate silver rod lets you channel your deity's power back to yourself</fluff>
+      <fluff>This delicate silver implement lets you channel your deity's power back to yourself</fluff>
       <level>
          <value>3</value>
          <bonus>+1</bonus>
@@ -5021,7 +5438,7 @@
          <bonus>+6</bonus>
          <price>2,125,000</price>
       </level>
-      <type>Implement</type> <subtype>Rod</subtype>
+      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Rod</subtype>
       <headline>
          <name>Enhancement Bonus</name>
          <text>Attack rolls and damage rolls</text>
@@ -5035,8 +5452,9 @@
          <keyword>Divine</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a divine attack using this rod</line>
-         <line><![CDATA[<i>Effect:</i>]]> You can use another Channel Divinity power during this encounter. You do not regain any expended Channel Divinity power.</line>
+         <line><![CDATA[<i>Trigger:</i>]]> You hit with a divine attack using this implement</line>
+         <line><![CDATA[<i>Effect:</i>]]> You can use an additional Channel Divinity power during this encounter. You do not regain any expended Channel Divinity power.</line>
+         <line indent="1"><![CDATA[<i>Level 17, 22, 27:</i>]]> You regain any expended Channel Divinity powers.</line>
       </block>
    </item>
 
@@ -6211,34 +6629,34 @@
       <category>Uncommon</category>
       <fluff>This gnarled, jagged staff fits the hand of any spellcaster seeking to devastate his or her opponent</fluff>
       <level>
-         <value>3</value>
+         <value>4</value>
          <bonus>+1</bonus>
-         <price>680</price>
+         <price>840</price>
       </level>
       <level>
-         <value>8</value>
+         <value>9</value>
          <bonus>+2</bonus>
-         <price>3,400</price>
+         <price>4,200</price>
       </level>
       <level>
-         <value>13</value>
+         <value>14</value>
          <bonus>+3</bonus>
-         <price>17,000</price>
+         <price>21,000</price>
       </level>
       <level>
-         <value>18</value>
+         <value>19</value>
          <bonus>+4</bonus>
-         <price>85,000</price>
+         <price>105,000</price>
       </level>
       <level>
-         <value>23</value>
+         <value>24</value>
          <bonus>+5</bonus>
-         <price>425,000</price>
+         <price>525,000</price>
       </level>
       <level>
-         <value>28</value>
+         <value>29</value>
          <bonus>+6</bonus>
-         <price>2,125,000</price>
+         <price>2,625,000</price>
       </level>
       <type>Implement</type> <subtype>Staff</subtype>
       <headline>
@@ -6561,61 +6979,6 @@
    </item>
 
    <item>
-      <title>Symbol of Brawn</title>
-      <category>Common</category>
-      <fluff>Physical strength and holy devotion are both enhanced by this adamantine holy symbol</fluff>
-      <level>
-         <value>3</value>
-         <bonus>+1</bonus>
-         <price>680</price>
-      </level>
-      <level>
-         <value>8</value>
-         <bonus>+2</bonus>
-         <price>3,400</price>
-      </level>
-      <level>
-         <value>13</value>
-         <bonus>+3</bonus>
-         <price>17,000</price>
-      </level>
-      <level>
-         <value>18</value>
-         <bonus>+4</bonus>
-         <price>85,000</price>
-      </level>
-      <level>
-         <value>23</value>
-         <bonus>+5</bonus>
-         <price>425,000</price>
-      </level>
-      <level>
-         <value>28</value>
-         <bonus>+6</bonus>
-         <price>2,125,000</price>
-      </level>
-      <type>Implement</type> <subtype>Holy symbol</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>Attack rolls and damage rolls</text>
-      </headline>
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus</text>
-      </headline>
-      <block>
-         <name>Attack Power</name>
-         <frequency>Daily</frequency>
-         <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a divine attack power using this holy symbol</line>
-         <line><![CDATA[<i>Effect:</i> You make a <i>melee basic attack</i>]]>.</line>
-         <line>If this attack hits a creature marked by you, it deals +1d10 additional damage.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2d10 additional damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3d10 additional damage.</line>
-      </block>
-   </item>
-
-   <item>
       <title>Symbol of Civilization</title>
       <category>Common</category>
       <fluff>This coin-like symbol glimmers even though no light shines upon its surface</fluff>
@@ -6821,7 +7184,7 @@
       </headline>
       <headline>
          <name>Critical</name>
-         <text>+1d6 damage per plus, or +1d10 damage per plus with divine ranged attacks</text>
+         <text>+1d6 damage per plus, or +1d8 damage per plus with divine area attacks, or +1d10 damage per plus with divine ranged attacks</text>
       </headline>
       <block>
          <name>Property</name>
@@ -6829,39 +7192,40 @@
          <line>For example, a <![CDATA[<i>+3 symbol of divine reach</i>]]> would increase an "area burst 1 within 5 squares" to an "area burst 1 within 8 squares", a "ranged 5/10" to "ranged 8/13", and so on.</line>
       </block>
    </item>
-
+   
    <item>
-      <title>Symbol of Divinity</title>
+      <title>Symbol of Dragon Defense</title>
       <category>Common</category>
+      <fluff>This symbol shields you from dragons' attacks</fluff>
       <level>
-         <value>2</value>
+         <value>3</value>
          <bonus>+1</bonus>
-         <price>520</price>
+         <price>680</price>
       </level>
       <level>
-         <value>7</value>
+         <value>8</value>
          <bonus>+2</bonus>
-         <price>2,600</price>
+         <price>3,400</price>
       </level>
       <level>
-         <value>12</value>
+         <value>13</value>
          <bonus>+3</bonus>
-         <price>13,000</price>
+         <price>17,000</price>
       </level>
       <level>
-         <value>17</value>
+         <value>18</value>
          <bonus>+4</bonus>
-         <price>65,000</price>
+         <price>85,000</price>
       </level>
       <level>
-         <value>22</value>
+         <value>23</value>
          <bonus>+5</bonus>
-         <price>325,000</price>
+         <price>425,000</price>
       </level>
       <level>
-         <value>27</value>
+         <value>28</value>
          <bonus>+6</bonus>
-         <price>1,625,000</price>
+         <price>2,125,000</price>
       </level>
       <type>Implement</type> <subtype>Holy symbol</subtype>
       <headline>
@@ -6874,12 +7238,12 @@
       </headline>
       <block>
          <name>Utility Power</name>
-         <keyword>Divine</keyword>
          <frequency>Daily</frequency>
-         <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a divine attack using this holy symbol</line>
-         <line><![CDATA[<i>Effect:</i>]]> You can use an additional Channel Divinity power this encounter, though not the same power twice.</line>
-         <line indent="1"><![CDATA[<i>Level 17, 22 or 27:</i>]]> You can also use the same Channel Divinity power.</line>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> An enemy attacks ally within 5 squares of you, and the attack has the Acid, Cold, Fire, Lightning, or Thunder keyword</line>
+         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (the triggering ally); The target gains resist 5 against the triggering keyword or keywords until the end of the encounter.</line>
+         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Resist 10.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Resist 15.</line>
       </block>
    </item>
 
@@ -7143,6 +7507,59 @@
          <line><![CDATA[<i>Effect:</i>]]> Close burst 10 (you or one ally in burst); The target can make a saving throw against one effect a save can end. The target gains a power bonus to the saving throw equal to this holy symbol's enhancement bonus.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Symbol of the Channeler</title>
+      <category>Uncommon</category>
+      <fluff>Whispering a prayer to your deity while holding this symbol lets you channel more power</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Rod</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Effect:</i>]]> You can use an additional Channel Divinity power during this encounter. You do not regain any expended Channel Divinity power.</line>
+         <line indent="1"><![CDATA[<i>Level 17, 22, 27:</i>]]> You regain any expended Channel Divinity powers.</line>
+      </block>
+   </item>
 
    <item>
       <title>Symbol of the First Spirits</title>
@@ -7245,6 +7662,125 @@
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><![CDATA[<i>Effect:</i>]]> Melee touch (one weapon); The first damage roll made using the target weapon before the end of your next turn gains a bonus equal to this symbol's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Thunder Wand</title>
+      <category>Uncommon</category>
+      <fluff>This sturdy wand enhances the destructive might of your thunder attacks</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Wand</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 thunder damage per plus</text>
+      </headline>
+      <headline>
+         <name>Item Bonus</name>
+         <text>Damage rolls with Thunder powers using this wand</text>
+      </headline>
+      <block>
+         <name>Thunderwave</name>
+         <keyword>Arcane</keyword>
+         <keyword>Evocation</keyword>
+         <keyword>Implement</keyword>
+         <keyword>Thunder</keyword>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (each creature in the blast); Intelligence vs. Fortitude</line>
+         <line><![CDATA[<i>Hit:</i>]]> 1d6 + Intelligence modifier thunder damage, and you push the target a number of squares equal to your Constitution modifier.</line>
+         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]>2d6 + Intelligence modifier thunder damage.</line>
+         <line><![CDATA[<i>Miss:</i>]]> You push the target half the distance.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Tome of Forty Steps</title>
+      <category>Common</category>
+      <fluff>Included within this curious tome are a number of arcane formulas for manipulating speed and time</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Tome</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d8 damage per plus on a summoned creature's attack</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Your summoned creatures gain a +1 item bonus to speed.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><![CDATA[<i>Trigger:</i>]]> You use an arcane Summoning power</line>
+         <line><![CDATA[<i>Effect:</i>]]> Once on each of your turns while the summoned creature remains, you can use a free action instead of a minor action to command the creature to move.</line>
       </block>
    </item>
 
@@ -7359,6 +7895,72 @@
          <line><![CDATA[<i>Requirement:</i>]]> You must have implement proficiency with this tome.</line>
          <line><![CDATA[<i>Effect:</i>]]> Choose a power contained in this tome, and expend an unused arcane daily attack power of an equal or higher level.</line>
          <line>You gain the use of the chosen power during this encounter. The power is lost if not used before the end of the encounter.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Tome of the North Wind</title>
+      <category>Rare</category>
+      <fluff>Covered in a thin patina of frost even in  blazing heat, this tome unlocks secrets of ice magic</fluff>
+      
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Tome</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 cold damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <text>When you use an arcane Cold power using this tome and the target is slowed, that target takes cold damage each time it moves while it remains slowed. The damage equals your Constitution modifier + this tome's enhancement bonus.</text>
+      </block>
+      <block>
+         <name>Spellbook</name>
+         <line>This tome contains two wizard daily Cold attack powers, chosen when it wsa created. Both powers must be of a level equal to or lower than that of the tome. If the tome's level is incresed, one or both powers can be exchanged for new ones.</line>
+         <line indent="1"><![CDATA[<i>Level 18, 23 or 28:</i>]]> Three wizard Cold attack powers, one of which can be an encounter power.</line>
+         <line>If you have the wizard class feature Arcane Spellbook, these spells count as being in your spellbook.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Action</subaction>
+         <line><![CDATA[<i>Requirement:</i>]]> You must have at least one unexpended arcane daily attack power of a level equal to or higher than a power in this tome's Spellbook.</line>
+         <line indent="1"><![CDATA[<i>Level 18:23 or 28:</i>]]> You can also use this power if you have an unexpended arcane encounter attack power of a level equal to or higher than an encounter power in this tome's Spellbook.</line>
+         <line><![CDATA[<i>Effect:</i>]]> You expend an arcane daily attack power, and gain use of a daily attack power from this tome's Spellbook that is of a level equal to or lower than the power you expended. If you do not use this power by the end of the encounter, it is lost without effect.</line>
+         <line indent="1"><![CDATA[<i>Level 18, 23 or 28:</i>]]> You can instead expend an arcane encounter attack power to gain use of an encounter attack power.</line>
       </block>
    </item>
 
@@ -7612,6 +8214,56 @@
          <line>When you deal your Warlock's Curse damage, you deal +1 damage for each die.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Wand of Inevitability</title>
+      <category>Common</category>
+      <fluff>This wand, crafted from light, supple wood, allows you to accurately strike your enemies with a flick of the wrist</fluff>
+      <level>
+         <value>3</value>
+         <bonus>+1</bonus>
+         <price>680</price>
+      </level>
+      <level>
+         <value>8</value>
+         <bonus>+2</bonus>
+         <price>3,400</price>
+      </level>
+      <level>
+         <value>13</value>
+         <bonus>+3</bonus>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>18</value>
+         <bonus>+4</bonus>
+         <price>85,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <bonus>+5</bonus>
+         <price>425,000</price>
+      </level>
+      <level>
+         <value>28</value>
+         <bonus>+6</bonus>
+         <price>2,125,000</price>
+      </level>
+      <type>Implement</type> <subtype>Wand</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>If you miss every target of an at-will attack power made with this wand, you gain a +2 item bonus to all attack rolls with that power the first time you use it before the end of your next turn.</line>
+         <line>If you miss all targets when you have this bonus, the item bonus increases by a cumulative +1 and lasts until the end of your next turn.</line>
+      </block>
+   </item>
 
    <item>
       <title>Wand of Missile Mastery</title>
@@ -7764,5 +8416,59 @@
          <text>+1d10 damage per plus</text>
       </headline>
    </item>
+   
+   <item>
+      <title>Watchful Spirit Totem</title>
+      <category>Common</category>
+      <fluff>Several animal faces seem to look out from this totem with wide eyes, and the magic, channeled through your spirit companion, lashes out at those who harm your allies</fluff>
+   </item><level>
+      <value>3</value>
+      <bonus>+1</bonus>
+      <price>680</price>
+   </level>
+   <level>
+      <value>8</value>
+      <bonus>+2</bonus>
+      <price>3,400</price>
+   </level>
+   <level>
+      <value>13</value>
+      <bonus>+3</bonus>
+      <price>17,000</price>
+   </level>
+   <level>
+      <value>18</value>
+      <bonus>+4</bonus>
+      <price>85,000</price>
+   </level>
+   <level>
+      <value>23</value>
+      <bonus>+5</bonus>
+      <price>425,000</price>
+   </level>
+   <level>
+      <value>28</value>
+      <bonus>+6</bonus>
+      <price>2,125,000</price>
+   </level>
+   <type>Implement</type> <subtype>Totem</subtype>
+   <headline>
+      <name>Enhancement Bonus</name>
+      <text>Attack rolls and damage rolls</text>
+   </headline>
+   <headline>
+      <name>Critical</name>
+      <text>+1d6 damage per plus, +1d8 damage per plus against an enemy that has attacked your ally since the end of your previous turn</text>
+   </headline>
+   <headline>
+      <name>Item Bonus</name>
+      <text>Perception checks</text>
+   </headline>
+   <block>
+      <name>Attack Power</name>
+      <keyword>Primal</keyword>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction>Action</subaction>
+   </block>
 
 </catalog>
