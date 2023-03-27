@@ -186,18 +186,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 
 		<div class="container">
-
-				<xsl:apply-templates match="item">
-					<xsl:sort select="title" />
-				</xsl:apply-templates>
-
-
+			<xsl:for-each select="item">
+				<xsl:call-template name="item" />
+			</xsl:for-each>
 		</div> <!-- container -->
 	</body>
 	</html>
 </xsl:template>
 
-<xsl:template match="item">
+<xsl:template name="item">
 
 	<div class="item">
 		<xsl:call-template name="createheader">
