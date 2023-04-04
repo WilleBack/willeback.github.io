@@ -301,6 +301,28 @@ for item in collate:
 # Save file
 paladinTree.write("paladin.xml")
 
+# Ranger
+#############
+rangerTree = ET.parse('ranger.xml')
+rangerRoot = rangerTree.getroot()
+
+# Empty feats from Swordmage file
+for feat in rangerRoot.findall(".feat"):
+    rangerRoot.remove(feat)
+
+collate = create_feat_file("Ranger", "Striker", "any martial")
+
+# Add feats to swordmage file
+for item in collate:
+    rangerRoot.append(item[-1])
+
+# Remove known false feat
+# extra = smageRoot.find(".feat[title='Devout Protector Expertise']")
+# smageRoot.remove(extra)
+
+# Save file
+rangerTree.write("ranger.xml")
+
 # Swordmage
 #############
 smageTree = ET.parse('swordmage.xml')

@@ -137,6 +137,13 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("paladin.html", pretty_print=True)
 
+# Ranger
+source_doc = etree.parse("ranger.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("ranger.html", pretty_print=True)
+
 # Swordmage
 source_doc = etree.parse("swordmage.xml")
 output_doc = xslt_transformer(source_doc)
