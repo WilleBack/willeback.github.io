@@ -77,7 +77,7 @@
 
                @font-face {
                font-family: 'pfactions';
-               src: url('../font/Pathfinder2eActions.ttf') format('truetype');
+               src: url('font/Pathfinder2eActions.ttf') format('truetype');
                font-weight: normal;
                font-style: normal;
 

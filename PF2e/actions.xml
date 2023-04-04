@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Activate an Item</title>
+      <requirement>You can Activate an Item with the invested trait only if it's invested to you. If the item requires you to Interact with it, you must be wielding it (it it's a held item) or touching it with a free hand (if it's another type of item).</requirement>
+
+      <line>You call forth the effect of an item by properly activating it. This is a special activity that takes a variable number of actions, as listed in the item's stat block.</line>
+      <line>Some items can be activated as a reaction or free action. In this case, you Activate the Item as a reaction or free action (as appropriate) instead of as an activity. Such cases are noted in the item's Activate entry in its stat block (for example, "<![CDATA[<b>Activate </b> <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">R</span>]]> command").</line>
+      <line><![CDATA[<b>Long Activation Times </b>]]> Some items take minutes or hours to activate. The Activate an Item activity for these items includes a mix of the listed activation components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while activating such an item, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these activations have the exploration trait, and you can't activate them in an encounter. If combat breaks out while you're activating one, your activation is disrupted.</line>
+      <line><![CDATA[<b>Activation Components </b>]]> Each activation entry lists any components involved in the activation after the action icons or text, such as “<![CDATA[<span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span>]]> command.” The activation components, described below, add traits (listed in parentheses) and requirements to the activation. If you can't provide the components, you fail to Activate the Item.</line>
+      <line list="">
+         <entry>Command (auditory, concentrate); This component is a specific utterance you must make in a loud and strong voice. You must be able to speak to provide this component.</entry>
+         <entry>Envision (concentrate); This component is a specific image or phenomenon you need to imagine.</entry>
+         <entry>Interact (manipulate); This component works like the Interact action.</entry>
+         <entry>Cast a Spell (varies); If an item lists Cast a Spell in its Activate entry, the activation requires you to use the Cast a Spell activity. This happens when the item replicates a spell. You must have a spellcasting class feature to Activate an Item with this activation component. If the item can be used for a specific spell, the action icon for that spell is provided. If it's an item like a staff, which can be used for many spells, and you must refer to each spell to determine which actions you must spend to Activate the Item to cast it. The activation gains all the traits from the relevant components of the Cast a Spell activity.</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Administer First Aid</title>
+      <type>Medicine</type>
+      <action>2</action>
+      <trait>Manipulate</trait>
+      <requirement>You are holding healer's tools, or you are wearing them and have a hand free.</requirement>
+
+      <line>You perform first aid on an adjacent creature that is dying or bleeding. If a creature is both dying and bleeding, choose which ailment you're trying to treat before you roll. You can Administer First Aid again to attempt to remedy the other effect.</line>
+      <line list="">
+         <entry><![CDATA[<b>Stabilize </b>]]> Attempt a Medicine check on a creature that has 0 Hit Points and the dying condition. The DC is equal 5 + that creature's recovery roll DC (so typically 15 + the creature's dying value).</entry>
+         <entry><![CDATA[<b>Stop Bleeding </b>]]> Attempt a Medicine check on a creature that is taking persistent bleed damage, giving them a chance to make another flat check to remove the persistent damage. The DC is usually the DC of the effect that caused the bleed.</entry>
+      </line>
+      <line results="">
+         <success>If you're trying to stabilize, the creature loses the dying condition (but remains unconscious). If you're trying to stop bleeding, the creature attempts a flat check to end the bleeding.</success>
+         <critfail>If you were trying to stabilize, the creature's dying value increases by 1. If you were trying to stop bleeding, it immediately takes an amount of damage equal to its persistent bleed damage.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Aid</title>
+      <action>1 + R</action>
+      <trigger>An ally is about to use an action that requires a skill check or attack roll.</trigger>
+      <requirement>The ally is willing to accept your aid, and you have prepared (see text).</requirement>
+
+      <line>You try to help your ally with a task. To use the reaction, you must first prepare to help, usually by using an action during your turn. You must explain to the GM exactly how you're trying to help, and they determine whether you can Aid your ally.</line>
+      <line>When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 20, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls.</line>
+      <line result="">
+         <critsuccess>You grant your ally a +2 circumstance bonus to the triggering check. If you're a master with the check you attempted, the bonus is +3, and if you're legendary, it's +4.</critsuccess>
+         <success>You grant your ally a +1 circumstance bonus to the triggering check.</success>
+         <critfail>Your ally takes a -1 circumstance penalty to the triggering check.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Arrest a Fall</title>
+      <action>R</action>
+      <trigger>You fall</trigger>
+      <requirement>You have a fly Speed.</requirement>
+
+      <line>You attempt an Acrobatics check to slow your fall. The DC is typically 15, but it might be higher due to air turbulence or other circumstances.</line>
+      <line results="">
+         <success>You fall gently, taking no damage from the fall.</success>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Avert Gaze</title>
+      <action>1</action>
+
+      <line>You avert your gaze from danger. You gain a +2 circumstance bonus to saves against visual abilities that require you to look at a creature or object, such as a medusa's petrifying gaze. Your gaze remains averted until the start of your next turn.</line>
+   </rule>
+
+   <rule>
+      <title>Balance</title>
+      <action>1</action>
+      <type>Acrobatics</type>
+      <trait>Move</trait>
+      <requirement>You are in a square that contains a narrow surface, unever ground, or another similar feauture.</requirement>
+
+      <line>You move across a narrow surface or uneven ground, attempting an Acrobatics check against its Balance DC. You are flat-footed while on a narrow surface or uneven ground.</line>
+      <line results="">
+         <critsuccess>You move up to your Speed.</critsuccess>
+         <success>You move up to your Speed, treating it as difficult terrain (every 5 feet costs 10 feet of movement).</success>
+         <fail>You must remain stationary to keep your balance (wasting the action) or you fall. If you fall, your turn ends.</fail>
+         <critfail>You fall and your turn ends.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Burrow</title>
+      <action>1</action>
+      <trait>Move</trait>
+      <requirement>You have a burrow Speed.</requirement>
+
+      <line>You dig way your way through dirt, sand, or similar loose material at a rate up to your burrow Speed. You can't burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so.</line>
+   </rule>
+
+   <rule>
+      <title>Cast a Spell</title>
+
+      <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
+      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity. Such cases will be noted in the spell's stat block (for example, "<![CDATA[<b>Cast </b> <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">R</span>]]> verbal").</line>
+      <line><![CDATA[<b>Long Casting Times </b>]]> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes a mix of the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
+      <line><![CDATA[<b>Spell Components </b>]]> Each spell lists the spell components required to cast it after the action icons or text, such as "<![CDATA[<span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">3</span>]]> material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
+      <line list="">
+         <entry>Material (manipulate); A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
+         <entry>Somatic (manipulate); A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
+         <entry>Verbal (concentrate); A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
+         <entry>Focus (manipulate); A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
+      </line>
+      <line><![CDATA[<b>Disrupted and Lost Spells </b>]]> Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
+   </rule>
+
+   <rule>
+      <title>Climb</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Move</trait>
+      <requirement>You have both hands free.</requirement>
+
+      <line>You move up, down, or across an incline. Unless it's particularly easy, you must attempt an Athletics check. The GM determines the DC based on the nature of the incline and environmental circumstances. You are flat-footed unless you have a climb Speed.</line>
+      <line results="">
+         <critsuccess>You move up, across, or safely down the incline for 5 feet plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).</critsuccess>
+         <success>You move up, across, or safely down the inclide for 5 feet per 20 feet of your land Speed (a total of 5 feet for most PCs, minimum 5 feet if your speed is below 20 feet).</success>
+         <critfail>You fall. If you began the climb on stable ground, you fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Command an Animal</title>
+      <action>1</action>
+      <type>Nature</type>
+      <trait>Auditory</trait> <trait>Concentration</trait>
+
+      <line>You issue an order to an animal. Attempt a Nature check against the animal's Will DC. The GM might adjust the DC if the animal has a good attitude toward you, you suggest a course of action it was predisposed toward, or you offer it a treat.</line>
+      <line>You automatically fail if the animal is hostile or unfriendly to you. If the animal is helpful to you, increase the degree of success by one step. You might be able to Command an Animal more easily with a feat like Ride.</line>
+      <line>Monst animals know the Drop Prone, Leap, Seek, Stand, Stide, and Strike basic actions. If an animal knows an activity, such as a horse's Gallop, you can Command the Animal to perform the activity, but you must spend as many actions on Command an Animal as the activity's number of actions. You can also spend multiple actions to Command the Animal to perform that number of basic actions on its next turn; for instance, you could spend 3 actions to Command an Animal to Stride three times or Stride twice and then Strike.</line>
+      <line results="">
+         <success>The animal does as you command on its next turn.</success>
+         <fail>The animal is hesitant or resistant, and it does nothing.</fail>
+         <critfail>The animal misbehaves or misunderstands, and it takes some other action determined by the GM.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Crawl</title>
+      <action>1</action>
+      <trait>Move</trait>
+      <requirement>You are prone and your Speed is at least 10 feet.</requirement>
+
+      <line>You move 5 feet by crawling and continue to stay prone.</line>
+   </rule>
+
+   <rule>
+      <title>Create a Diversion</title>
+      <action>1</action>
+      <type>Deception</type>
+      <trait>Mental</trait>
+
+      <line>With a gesture, a trick, or some distracting words, you can create a diversion that draws creatures' attention elsewhere. If you use a gesture or trick, this action gains the manipulate trait. If you use distracting words, it gainst the auditory and linguistic traits.</line>
+      <line>Attempt a single Deception check and compare it to the Perception DCs of the creatures whose attention you're trying to divert. Whether or not you succeed, creatures you attempt to divert gain a +4 circumstance bonus to their Perception DCs against your attempts to Create a Diversion for 1 minute.</line>
+      <line results="">
+         <success>You become hidden to each creature whose Perception DC is less than or equal to your result (the hidden condition allows you to Sneak away). This lasts until the end of your turn or until you do anything except Step or use the Hide or Neak action. If you Strike a creature, the creature remains flat-footed against that attack and you then become observed. If you do anything else, you become observed before you act unless the GM determines otherwise.</success>
+         <fail>You don't divert the attention of any creatures whose Perception DC exceeds your result, and those creatures are aware you were trying to trick them.</fail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Delay</title>
+      <action>F</action>
+      <trigger>Your turn begins.</trigger>
+
+      <line>You wait for the right moment to act. The rest of your turn doesn't happen yet. Instead, you're removed from the initiative order. You can return to the initiative order as a free action triggered by the end of any other creature's turn. This permanently changes your initiative to the new position. You can't use reactions until you return to the initiative order. If you Delay an entire round without returning to the initiative order, the actions from the Delayed turn are lost, your initiative doesn't change, and your next turn occurs at your original position in the initiative order.</line>
+      <line>When you Delay, any persistent damage or other negative effects that normally occur at the start or end of your turn occur immediately when you use the Delay action. Any beneficial effects that would end at any point during your turn also end. The GM might determine that other effects end when you Delay as well. Essentially, you can't Delay to avoid negative consequences that would happen on your turn or to extend beneficial effects that would end on your turn.</line>
+   </rule>
+
+   <rule>
+      <title>Dismiss</title>
+      <action>1</action>
+      <trait>Concentrate</trait>
+
+      <line>You end one spell effect or magic item effect. This must be an effect you are allowed to dismiss, as defined by the spell or item. Dismissal might end the effect entirely or might end it just for a certain target or targets, depending on the spell or item.</line>
+   </rule>
+
+   <rule>
+      <title>Drop Prone</title>
+      <action>1</action>
+      <trait>Move</trait>
+
+      <line>You fall prone.</line>
+   </rule>
+
+   <rule>
+      <title>Escape</title>
+      <action>1</action>
+      <trait>Attack</trait>
+
+      <line>You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC for a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose (but this action still has the attack trait).</line>
+      <line results="">
+         <critsuccess>You get free and remove the grabbed, immobilized, or restrained conditions imposed by your chosen target. You can then Stride up to 5 feet.</critsuccess>
+         <success>You get free and remove the grabbed, immobilized, or restrained conditions imposed by your chosen target.</success>
+         <critfail>You don't get free, and you can't attempt to Escape again until your next turn.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Fly</title>
+      <action>1</action>
+      <trait>Move</trait>
+      <requirement>You have a fly Speed.</requirement>
+
+      <line>You move through the air up to your fly Speed. Moving upward (straight or diagonally) uses the rules for moving through difficult terrain). You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don't take falling damage. You can use an action to Fly 0 feet to hover in place. If you're airborne at the end of your turn and didn't use a Fly action this round, you fall.</line>
+   </rule>
+
+   <rule>
+      <title>Force Open</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+
+      <line>Using your body, a level, or some other tool, you attempt to forcefully open a door, window, container or heavy gate. WIth a high enough result, you can even smash through walls. Without a crowbar, prying something open takes a -2 item penalty to the Athletics check to Force Open.</line>
+      <line result="">
+         <critsuccess>You open the door, window, container, or gate and can avoid damaging it in the process.</critsuccess>
+         <success>You break the door, window, container, or gate open, and the door, window, container or gate gains the broken condition. If it's especially sturdy, the GM might have it take damage but not be broken.</success>
+         <critfail>Your attempt jams the door, window, container, or gate shut, imposing a -2 circumstance penalty on future attempt to Force it Open.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Grab an Edge</title>
+      <action>R</action>
+      <trait>Manipulate</trait>
+      <trigger>You fall from or past an edge or handhold</trigger>
+      <requirement>You hands are not tied behind your back or otherwise restrained.</requirement>
+
+      <line>When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can then Climb using Athletics.</line>
+      <line results="">
+         <critsuccess>You grab the edge or handhold, whether or not you have a hand free, typically by using a suitable held item to catch yourself (cathing a battle axe on a ledge, for example). You still take damage from the distance fallen so far, but you treat the fall as though it were 30 feet shorter.</critsuccess>
+         <success>If you have at least one hand free, you grab the edge or handhold, stopping your fall. You still take damage from the distance fallen so far, but you treat the fall as though it were 20 feet shorter. If you have no hands free, you continue to fall as if you had failed the check.</success>
+         <critfail>You continue to fall, and if you've fallen 20 feet or more before you use this reaction, you take 10 bludgeoning damage from the impact for every 20 feet fallen.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Grapple</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand or have your target grappled or restrained. Your target isn't more than one size larger than you.</requirement>
+
+      <line>You attempt to grab a creature or object with your free hand. Attempt an Athletics check against the target's Fortitude DC. You can Grapple a target you already have grabbed or restrained without having a hand free.</line>
+      <line results="">
+         <critsuccess>Your target is restrained until the end of your next turn unless you move or your target Escapes.</critsuccess>
+         <success>Your target is grabbed until the end of your next turn unless you move or your target Escapes.</success>
+         <fail>You fail to grab your target. If you already had the target grabbed or restrained using a Grapple, those conditions on that creature or object end.</fail>
+         <critfail>If you already had the target grabbed or restrained, it breaks free. Your target can either grab you, as if it succeed at using the Grapple action against you, or force you to fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>High Jump</title>
+      <action>2</action>
+      <type>Athletics</type>
+
+      <line>You Stride, then make a vertical Leap and attempt a DC 30 Athletics check to increase the height of your jump. If you didn't Stride at least 10 feet, you atomatically fail your check. This DC might be increased or decreased due to the situation, or as determined by the GM.</line>
+      <line results="">
+         <critsuccess>Increase the maximum vertical distance to 8 feet, or increase the maximum vertical distance to 5 feet and maximum horizontal distance to 10 feet.</critsuccess>
+         <success>Increase the maximum vertical distance to 5 feet.</success>
+         <fail>You Leap normally.</fail>
+         <critfail>You don't Leap at all, and instead fall prone in your space.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Interact</title>
+      <action>1</action>
+      <trait>Manipulate</trait>
+
+      <line>You use your hand or hands to manipulate an object or the terrain. You can grab an unattended or stored object, open a door, or produce similar effects. You might hve to attempt a skill check to determine if your Interact action was successful.</line>
+   </rule>
+
+   <rule>
+      <title>Invest an Item</title>
+
+      <line>You invest your energy in an item with the invested trait as you don it. This process requires 1 or more Interact actions, usually taking the same amount of time it takes to don the item. Once you've invested the item, you benefit from its constant magical abilities as long as you meet its other requirements (for most invested items, the only other requirement is that you must be wearing the item). This investiture lasts until you remove the item.</line>
+      <line>You can invest no more than 10 items per day. If you remove an invested item, it loses its investiture. The item still counts against your daily limit after it loses its investiture. You reset the limit during your daily preparations, at which point you invest your items anew. If you're still wearing items you had invested the previous day, you can typically keep them invested on the new day, but they still count against your limit.</line>
+   </rule>
+
+   <rule>
+      <title>Leap</title>
+      <action>1</action>
+      <trait>Move</trait>
+
+      <line>You take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space when your Leap ends (meaning you can typically clear a 5-foot gap, or a 10-foot gap if your Speed is 30 feet or more).</line>
+      <line>If you Leap vertically, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface.</line>
+      <line>Jumping a greater distance requires using the Athletics skill.</line>
+   </rule>
+
+   <rule>
+      <title>Lie</title>
+      <type>Deception</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Linguistic</trait> <trait>Mental</trait> <trait>Secret</trait>
+
+      <line>You try to fool someone with an untruth. Doing so takes at least 1 round, or longer if the lie is elaborate. You roll a single Deception check and compare it to the Perception DC of every creature you are trying to fool. The GM might give them a circumstance bonus based on the situation and the nature of the lie you are trying to tell. Elaborate or highly unbelievable lies are much harder to get a creature to believe than simpler and more believable lies, and some lies are so big that it's impossible to get anyone to believe them.</line>
+      <line>At the GM's discretion, if a creature initially believes a lie, it might attempt a Perception check later to Sense Motive against your Deception DC to realize it's a lie. This usually happens if the creature discovers enough evidence to counter your statements.</line>
+      <line results="">
+         <success>The target believes your lie.</success>
+         <fail>The target doesn't believe your lie and gains a +4 circumstance bonus against your attempts to Lie for the duration of the conversation. The target is also more likely to be suspicious of you in the future.</fail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Long Jump</title>
+      <action>2</action>
+      <type>Athletics</type>
+
+      <line>You Stride, then make a horizontal Leap and attempt an Athletics check to increase the length of your jump. The DC of the Athletics check is equal to the total distance in feet you're attempting to move during your Leap (so you'd need to succeed at a DC 20 check to Leap 20 feet). You can't Leap farther than your Speed.</line>
+      <line>If you didn't Stride at least 10 feet, or if you attempt to jump in a different direction than your Stride, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM.</line>
+      <line results="">
+         <success>Increase the maximum horizontal distance you Leap to the desired distance.</success>
+         <fail>You Leap normally.</fail>
+         <critfail>You Leap normally, but then fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Mount</title>
+      <action>1</action>
+      <trait>Move</trait>
+      <requirement>You are adjacent to a creature that is at least one size larger than you and is willing to be your mount.</requirement>
+
+      <line>You move onto the creature and ride it. If you're already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it.</line>
+   </rule>
+
+   <rule>
+      <title>Point Out</title>
+      <action>1</action>
+      <trait>Auditory</trait> <trait>Manipulate</trait> <trait>Visual</trait>
+      <requirement>A creature is undetected by one or more of your allies but isn't undetected by you.</requirement>
+
+      <line>You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. That creature is hidden to your allies, rather than undetected. This works only for allies who can see you and are in a position where they could potentially detect the target. If your allies can't hear or understand you, they must succeed at a Perception check against the creature's Stealth DC or they misunderstand and believe the target is in a different location.</line>
+   </rule>
+
+   <rule>
+      <title>Raise a Shield</title>
+      <action>1</action>
+      <requirement>You are wielding a shield.</requirement>
+
+      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
+   </rule>
+
+   <rule>
+      <title>Ready</title>
+      <action>2</action>
+      <trait>Concentrate</trait>
+
+      <line>You prepare to use an action that will occur outside your turn. Choose a single action or free action you can use, and designate a trigger. Your turn then ends. If the trigger you designated occurs before the start of your next turn, you can use the chosen action as a reaction (provided you still meet the requirements to use it). You can Ready a free action that already has a trigger.</line>
+      <line>If you have a multiple attack penalty and your readied action is an attack action, your readied attack takes the multiple attack penalty you had at the time you used Ready. This is one of the few times the multiple attack penalty applies when it's not your turn.</line>
+   </rule>
+
+   <rule>
+      <title>Recall Knowledge</title>
+      <action>1</action>
+      <type>Varies</type>
+      <trait>Concentrate</trait> <trait>Secret</trait>
+
+      <line>You attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply.</line>
+      <line results="">
+         <critsuccess>You recall the knowledge accurately and gain additional information or context.</critsuccess>
+         <success>You recall the knowledge accurately or gain a useful clue about your current situation.</success>
+         <critfail>You recall incorrect information or gain an erroneous or misleading clue.</critfail>
+      </line>
+      <line>The following skills can be used to Recall Knowledge, getting information about the listed topics. In some cases, you can get the GM's permission to use a different related skill, usually against a higher DC than normal. Some topics might appear on multiple lists, but the skills could give different information. For example, Arcana might tell you about the magical defenses of a golem, whereas Crafting could tell you about its sturdy resistance to physical attacks.</line>
+      <line list="">
+         <entry><![CDATA[<b>Arcana: </b>]]>Arcane theories, magical traditions, creatures of arcane significance, and arcane planes.</entry>
+         <entry><![CDATA[<b>Crafting: </b>]]>Alchemical reactions and creatures, item value, engineering, unusual materials, and contructs.</entry>
+         <entry><![CDATA[<b>Lore: </b>]]>The subject of the Lore skill's subcategory. Narrow Lore skills will usually have a reduced DC compared to more generall skills. For example, using Undead Lore would have a lower DC to Recall Knowledge about a vampire than when using Religion.</entry>
+         <entry><![CDATA[<b>Medicine: </b>]]> Diseases, poisons, wounds, and forensics.</entry>
+         <entry><![CDATA[<b>Nature: </b>]]> The environment, flora, geography, weather, creatures of natural origin, and natural plants.</entry>
+         <entry><![CDATA[<b>Occultism: </b>]]> Ancient mysteries, obscure philosophy, creatures of occult significance, and esoteric planes.</entry>
+         <entry><![CDATA[<b>Religion: </b>]]> Divine agents, divine planes, theology, obscure myths, and creatures of religious significance.</entry>
+         <entry><![CDATA[<b>Society: </b>]]> Local history, key personalities, legal institutions, societal structure, and humanoid culture.</entry>
+      </line>
+      <line>The GM might allow checks to Recall Knowledge using other skills. For example, you might assess the skill of an acrobat using Acrobatics. If you're using a physical skill (like in this example), the GM will most likely have you use a mental ability score -typically Intelligence- instead of the skill's normal physical ability score.</line>
+   </rule>
+
+   <rule>
+      <title>Release</title>
+      <action>F</action>
+      <trait>Manipulate</trait>
+
+      <line>You release something you're holding in your hand or hands. This might mean dropping an item, removing one hand from your weapon while continuing to hold it in another hand, releasing a rope suspending a chandelier, or performing a similar action. Unlike most manipulate actions, Release does not trigger reactions that can be triggered by actions with the manipulate trait (such as Attack of Opportunity).</line>
+      <line>If you want to prepare to Release something outside of your turn, use the Ready activity.</line>
+   </rule>
+
+   <rule>
+      <title>Request</title>
+      <action>1</action>
+      <type>Diplomacy</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Linguistics</trait> <trait>Mental</trait>
+
+      <line>You can make a request of a creature that's friendly or helpful to you. You must couch the request in terms that the target would accept given their current attitude toward you. The GM sets the DC based on the difficulty of the request. Some requests are unsavory or impossible, and even a helpful NPC would never agree to them.</line>
+      <line results="">
+         <critsuccess>The target agrees to your request without qualifications.</critsuccess>
+         <success>The target agrees to your request, but they might demand added provisions or alterations to the request.</success>
+         <fail>The target refuses the request, though they might propose an alternative that is less extreme.</fail>
+         <critfail>Not only does the target refuse the request, but their attitude toward you decreases by one step (such as from friendly to indifferent) due to the temerity of the request.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Seek</title>
+      <action>1</action>
+      <trait>Concentrate</trait> <trait>Secret</trait>
+
+      <line>You scan an area for signs of creatures or objects. If you're looking for creatures, choose an area you're scanning. If precision is necessary, the GM can have you select a 30-foot cone or a 15-foot burst within line of sight. You might take a penalty if you choose an area that's far away.</line>
+      <line>If you're using Seek to search for objects (including secret doors and hazards), you search up to a 10-foot square adjacent to you. The GM might determine you need to Seek as an activity, taking more actions or even minutes or hours if you're searching a particularly cluttered area.</line>
+      <line>The GM attempts a single secret Perception check for you and compares the result to the Stealth DCs of any undetected or hidden creatures in the area or the DC to detect each object in the area (as determined by the GM or by someone Concealing the Object). A creature you detect might remain hidden, rather than becoming observed, if you're using an imprecise sense or if an effect (such as invisibility) prevents the subject from being observed.</line>
+      <line results="">
+         <critsuccess>If you were searching for creatures, any undetected or hidden creature you critically succeeded against becomes observed by you. If you were searching for an object, you learn its location.</critsuccess>
+         <success>If you were searching for creatures, any undetected creature you succeeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. If you were searching for an object, you learn its location or get a clue to its whereabouts, as determined by the GM.</success>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Sense Motive</title>
+      <action>1</action>
+      <trait>Concentrate</trait> <trait>Secret</trait>
+
+      <line>You try to tell whether a creature's behavior is abnormal. Choose one creature, and assess it for odd body language, signs of nervousness, and other indicators that it might be trying to deceive someone. The GM attemps a single secret Perception check for you and compares the result to the Deception DC of the creature, the DC of a spell affecting the creature's mental state, or another appropriate DC determined by the GM. You typically can't try to Sense the Motive of the same creature again until the situation changes significantly.</line>
+      <line result="">
+         <critsuccess>You determine the creature's true intentions and get a solid idea of any mental magic affecting it.</critsuccess>
+         <success>You can tell whether the creature is behaving normally, but you don't know its exact intentions or what magic might be affecting it.</success>
+         <fail>You detect what a deceptive creature wants you to believe. If they're not being deceptive, you believe they're behaving normally.</fail>
+         <critfail>You get a false sense of the creature's intentions.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Shove</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You ahve at least one hand free. The target can't be more than one size larger than you.</requirement>
+
+      <line>You push a creature away from you. Attempt an Athletics check against your target's Fortitude DC.</line>
+      <line results="">
+         <critsuccess>You push your target up to 10 feet away from you. You can Stride after it, but you must move the same distance and in the same direction.</critsuccess>
+         <success>You push your target back 5 feet. You can Stride after it, but you must move the same distance and in the same direction.</success>
+         <critfail>You lose your balance, fall, and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Stand</title>
+      <action>1</action>
+      <trait>Move</trait>
+
+      <line>You stand up from prone.</line>
+   </rule>
+
+   <rule>
+      <title>Step</title>
+      <action>1</action>
+      <trait>Move</trait>
+      <requirement>Your Speed is at least 10 feet.</requirement>
+
+      <line>You carefully move 5 feet. Unlike most types of movement, Stepping doesn't trigger reactions, such as Attacks of Opportunity, that can be triggered by move actions or upon leaving or entering a square.</line>
+      <line>You can't Step into difficult terrain, and you can't Step using a Speed other than your land Speed.</line>
+   </rule>
+
+   <rule>
+      <title>Stride</title>
+      <action>1</action>
+      <trait>Move</trait>
+
+      <line>You move up to your Speed.</line>
+   </rule>
+
+   <rule>
+      <title>Strike</title>
+      <action>1</action>
+      <trait>Attack</trait>
+
+      <line>You attack with a weapon you're wielding or with an unarmed attack, targeting one creature within your reach (for a melee attack) or within range (for a ranged attack). Roll the attack roll for the weapon or unarmed attack you are using, and compare the result to the target creature's AC to determine the effect.</line>
+      <line results="">
+         <critsuccess>As success, but you deal double damage.</critsuccess>
+         <success>You deal damage according to the weapon or unarmed attack, including any modifiers, bonuses, and penalties you have to damage.</success>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Sustain a Spell</title>
+      <action>1</action>
+      <trait>Concentration</trait>
+      <requirement>You have at least one spell active with a sustained duration, and you are not fatigued.</requirement>
+
+      <line>Choose one spell with a sustained duration you have in effect. The duration of that spell continues until the end of your next turn. Some spells might have slightly different or expanded effects if you sustain them. Sustaining a Spell for more than 10 minutes (100 rounds) ends the spell and makes you fatigued unless the spell lists a different maximum duration (such as "sustained up to 1 minute" or "sustained up to 1 hour").</line>
+      <line>If you Sustain a Spell action is disrupted, the spell immediately ends.</line>
+   </rule>
+
+   <rule>
+      <title>Sustain an Activation</title>
+      <action>1</action>
+      <trait>Concentrate</trait>
+      <requirement>You have at least one magic item activation that you can sustain and you are not fatigued.</requirement>
+
+      <line>Choose one magic item activation with a sustained duration you have in effect. The duration of that activation continues until the end of your next turn. Some activations may have slightly different or expanded effects if you sustain them. Sustaining an Activation for more than 10 minutes (100 rounds) ends the activation and makes you fatigued unless the item's description states a different maximum duration (such as "up to 1 minute" or "up to 1 hour").</line>
+      <line>If your Sustain an Activation action is disrupted, the item's effect immediately ends.</line>
+   </rule>
+
+   <rule>
+      <title>Swim</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Move</trait>
+
+      <line>You propel yourself through water. In most calm water, you succeed at the action without needing to attempt a check. If you must breath air and you're submerged in water, you must hold your breath each round. If you fail to hold your breath, you begin to drown. If the water you are swimming in is turbulent or otherwise dangerous, you might have to attempt an Athletics check to Swim.</line>
+      <line>If you end your turn in water and haven't succeeded at a Swim action that turn, you sink 10 feet or get moved by the current, as determined by the GM. However, if your last action on your turn was to enter the water, you don't sink or move with the current that turn.</line>
+      <line result="">
+         <critsuccess>You move through the water 10 feet, plus 5 feet per 20 feet of your land Speed (a total of 15 feet for most PCs).</critsuccess>
+         <success>You move through the water 5 feet, plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).</success>
+         <critfail>You make no progress, and if you're holding your breath, you lose 1 round of air.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Take Cover</title>
+      <action>1</action>
+      <requirement>You are benefiting from cover, are near a feature that allows you to take cover, or are prone</requirement>
+
+      <line>You press yourself against a wall or duck behind an obstacle to take better advantage of cover. If you would have standard cover, you instead gain greater cover, which provides a +4 circumstance bonus to AC, to Reflex saves against area effects, and to Stealth checks to Hide, Sneak, or otherwise avoid detection. Otherwise, you gain the benefits of standard cover (a +2 circumstance bonus instead). This lasts until you move from your current space, use an attack action, become unconscious, or end this effect as a free action.</line>
+   </rule>
+
+   <rule>
+      <title>Trip</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one hand free. Your target can't be more than one size larger than you.</requirement>
+
+      <line>You try to knock a creature to the ground. Attempt an Athletics check against the target Reflex DC.</line>
+      <line results="">
+         <critsuccess>The target falls and lands prone and takes 1d6 bludgeoning damage.</critsuccess>
+         <success>The target falls and lands prone.</success>
+         <critfail>You lose your balance and fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Tumble Through</title>
+      <action>1</action>
+      <type>Acrobatics</type>
+      <trait>Move</trait>
+
+      <line>You Stride up to your Speed. During this movement, you can try to move through the space of one enemy. Attempt an Acrobatics check against the enemy's Reflex DC as soon as you try to enter its space. You can Tumble Throuh using Climb, Fly, Swim, or another action instead of Stride in the appropriate environment.</line>
+      <line results="">
+         <success>You move through the enemy's space, treating the squares in its space as difficult terrain (every 5 feet costs 10 feet of movement). If you don't have enough speed to move all the way through its space, you get the same effect as a failure.</success>
+         <fail>Your movement ends, and you trigger reactions as if you had moved out of the square you started in.</fail>
+      </line>
+   </rule>
+</catalog>
