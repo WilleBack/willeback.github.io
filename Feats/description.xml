@@ -1084,8 +1084,8 @@
       <group>Racial</group>
       <group>Temporary Hit Points</group>
       <benefit>Choose one damage type from the following: acid, cold, fire, lightning, necrotic, poison, or thunder.</benefit>
-      <benefit>When you use an attack power or an alchemical item attack power with the chosen keyword, you gain a +1 feat bonus to the damage roll.</benefit>
-      <benefit>This bonus increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+      <benefit>When you use an attack power or an alchemical item attack power with the chosen keyword, you gain a +2 feat bonus to the damage roll.</benefit>
+      <benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
       <benefit>Additionally, while you have any temporary hit points, you gain an untyped +1 bonus to damage rolls with alchemical item attack powers.</benefit>
    </feat>
    <feat>
@@ -8966,7 +8966,7 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <group>Temporary Hit Points</group>
-      <benefit>For each warforged component you have, your <![CDATA[<i>warforged resolve</i>]]> racial power grants you 1 additional temporary hit point.</benefit>
+      <benefit>For each attached component item you have, your <![CDATA[<i>warforged resolve</i>]]> racial power grants you 1 additional temporary hit point.</benefit>
       <benefit>These additional temporary hit points increase to 2 for each component at 21st level.</benefit>
    </feat>
 
@@ -21509,6 +21509,23 @@
    </feat>
 
    <feat>
+      <title>Fortified Core</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Warforged Resilience</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Racial</group>
+      <benefit>Whenever a critical hit is scored against you, roll a 1d20. On a result of 17 to 20, the critical hit becomes a normal hit instead.</benefit>
+      <benefit>If you are wearing heavy armor, this increases to a result of 16 to 20.</benefit>
+   </feat>
+
+   <feat>
       <title>Fortifying Word</title>
       <tier>Heroic</tier>
       <prereq>
@@ -27239,7 +27256,7 @@
 
    <feat>
       <title>Immutability</title>
-      <tier>Heroic</tier>
+      <tier>Paragon</tier>
       <prereq>
          <type>race</type>
          <name>Warforged</name>
@@ -27258,7 +27275,6 @@
       <group>Saving Throws</group>
       <benefit>When you use your <![CDATA[<i>warforged resolve</i>]]> racial power, you can make a saving throw against any effect that a save can end instead of only against an effect that deals ongoing damage.</benefit>
       <benefit>Also, you gain a +2 bonus to the saving throw granted by your <![CDATA[<i>warforged resolve</i>]]> racial power.</benefit>
-      <benefit>Starting at 21st level, you can make a saving throw against any effect, even if that effect does not normally end of save.</benefit>
    </feat>
 
    <feat>
@@ -27708,6 +27724,32 @@
       <benefit>&#9658; On a critical hit, your hold is so strong that if you are pulled, pushed, or slid, the creature you are grabbing moves with you. If you would be moved in a way that the creature grabbed by you cannot be, you negate the remaining forced movement.</benefit>
       <benefit>&#9658; Starting at 21st level, you can score a critical hit on a natural roll of 19 or 20.</benefit>
       <benefit>Also, you gain a +2 feat bonus to attack rolls with <![CDATA[<i>drag</i>]]>.</benefit>
+   </feat>
+
+   <feat>
+      <title>Improved Immutability</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warforged resolve</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Immutability</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Improved Warforged Resolve</name>
+      </prereq>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <benefit>When you use your <![CDATA[<i>warforged resolve</i>]]> racial power, you can make a saving throw against any one effect, even if that effect does not normally end of save, instead against an effect that ends on a save.</benefit>
    </feat>
 
    <feat>
@@ -42341,6 +42383,32 @@
    </feat>
 
    <feat>
+      <title>Shadowforged Killer</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warforged resolve</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Infused Form</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Recovery</group>
+      <group>Racial</group>
+      <benefit>You can expend your <![CDATA[<i>warforged resolve</i>]]> racial power to regain the use of the power you gained from your Infused Form class feature instead of gaining the normal effect.</benefit>
+   </feat>
+
+   <feat>
       <title>Shared Fortune</title>
       <tier>Paragon</tier>
       <prereq>
@@ -42811,6 +42879,121 @@
             </section>
          </part>
       </power>
+   </feat>
+
+   <feat>
+      <title>Warborn Fury</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>13</value>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Miss Mitigation</group>
+      <group>Power Enhancement</group>
+      <benefit>You gain the following benefits with martial at-will attacks:</benefit>
+      <benefit>&#9658; If the attack deals damage on a miss, you deal +1 additional damage on a miss. This increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+      <benefit>&#9658; If the attack allows you to shift, you can choose to instead gain a +1 bonus to the damage roll for each square you could've shifted.</benefit>
+   </feat>
+
+   <feat>
+      <title>Warforged Example</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warforged resolve</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Paladin</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhanement</group>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <benefit>When you use your <![CDATA[<i>warforged resolve</i>]]> racial power, each ally within 5 squares of you can make a saving throw against one effect that deals ongoing damage.</benefit>
+   </feat>
+
+   <feat>
+      <title>Warforged Faith</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warforged resolve</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When you use your <![CDATA[<i>warforged resolve</i>]]> racial power, one ally adjacent to you gains temporary hit points equal to your Constitution modifier (minimum 0) and can make a saving throw against one effect that deals ongoing damage.</benefit>
+      <benefit>The temporary hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Warforged Opportunist</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Approach to Opportunities</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Mobility</group>
+      <group>Opportunity Attacks</group>
+      <group>Racial</group>
+      <benefit>You gain a benefit depending on the choice you made for your Approach to Opportunities class feature:</benefit>
+      <benefit><![CDATA[<i>Combat Agility:</i>]]> You can shift 1 additional square as part of this attack. If a move triggered the attack, you can use your <![CDATA[<k>combat agility</i>]]> class power as an opportunity interrupt instead of opportunity reaction. If you do, you follow the triggering creature, shifting into each square it leaves, up to the number of squares you can shift. You make your <![CDATA[<i>melee basic attack</i>]]> the target has finished its full move, if it is still within your reach.</benefit>
+      <benefit><![CDATA[<i>Combat Superiority:</i>]]> You also knock the target prone on a hit.</benefit>
+   </feat>
+
+   <feat>
+      <title>Warforged Tactics</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Warforged</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Racial</group>
+      <group>Teamwork</group>
+      <benefit>You gain a +1 bonus to melee attack rolls against an enemy that is adjacent to an ally.</benefit>
    </feat>
 
    <feat>
