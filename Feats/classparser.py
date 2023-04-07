@@ -586,3 +586,25 @@ for item in collate:
 
 # Save file
 tieflingTree.write("tiefling.xml")
+
+# Warforged
+##############
+warforgedTree = ET.parse('warforged.xml')
+warforgedRoot = warforgedTree.getroot()
+
+# Empty feats from Wizard file
+for feat in warforgedRoot.findall(".feat"):
+    warforgedRoot.remove(feat)
+
+collate = create_feat_file("Warforged", "natural", "humanoid")
+
+# Add feats to wizard file
+for item in collate:
+    warforgedRoot.append(item[-1])
+
+# Remove known false feat
+# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
+# wizardRoot.remove(extra)
+
+# Save file
+warforgedTree.write("warforged.xml")
