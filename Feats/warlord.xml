@@ -465,6 +465,7 @@
       </prereq>
       <group>Bloodied</group>
       <group>Class</group>
+      <group>Racial</group>
       <group>Temporary Hit Points</group>
       <group>Triggered</group>
       <group>Support</group>
@@ -1287,6 +1288,7 @@
       <group>Class</group>
       <group>Extra Attack</group>
       <group>Power Recovery</group>
+      <group>Racial</group>
       <benefit>The first time you are bloodied in an encounter, you regain the use of your &lt;i&gt;dragon breath&lt;/i&gt; racial power.</benefit>
       <benefit>If your &lt;i&gt;dragon breath&lt;/i&gt; is not expended, you can instead use it as an immediate reaction.</benefit>
    </feat>
@@ -2015,6 +2017,31 @@
    </feat>
 
    <feat>
+      <title>Guiding Charge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Resourceful Presence</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Skirmishing Presence</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Charge</group>
+      <group>Class</group>
+      <group>Support</group>
+      <benefit>When you charge, you can choose to forgo the bonus to your attack roll. If you do, choose one ally who can see you</benefit>
+      <benefit>The chosen ally gains a +2 bonus to his or her first attack roll against the target of your charge. The bonus is lost if the ally does not attack the target before the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
       <title>Guiding Step</title>
       <tier>Heroic</tier>
       <prereq>
@@ -2045,6 +2072,7 @@
          <name>Intimidate</name>
       </prereq>
       <group>Attack Penalty</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Fear</group>
       <group>Weapon Specialization</group>
@@ -2229,6 +2257,7 @@
          <name>any martial</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Weapon Specialization</group>
       <benefit>When you use a Spear to make a &lt;i&gt;melee basic attack&lt;/i&gt;, you can choose to make the attack against Reflex instead of AC.</benefit>
@@ -2738,6 +2767,7 @@
          <type>class</type>
          <name>any martial</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Forced Movement</group>
       <group>Weapon Specialization</group>
@@ -2761,6 +2791,7 @@
       </prereq>
       <group>Attack Bonus</group>
       <group>Class</group>
+      <group>Racial</group>
       <group>Support</group>
       <group>Weapon Specialization</group>
       <benefit>When you hit an enemy with an attack using a Bow that you have proficiency with, each ally within 10 squares of you who can see and hear you gains a +1 bonus to ranged attack rolls against the target until the start of of your next turn.</benefit>
@@ -2950,6 +2981,7 @@
          <type>proficiency</type>
          <name>any two-handed polearm or two-handed spear</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Forced Movement</group>
       <group>Skill Enhancement</group>
@@ -3650,6 +3682,7 @@
          <name>Monk</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Weapon Specialization</group>
@@ -3945,6 +3978,86 @@
       <group>Healing</group>
       <group>Support</group>
       <benefit>Whenever you spend a healing surge to regain hit points, you can divide the hit points regained between yourself and one ally adjacent to you in any proportion.</benefit>
+   </feat>
+
+   <feat>
+      <title>Retribution Seeker</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Teamwork</group>
+      <benefit>You gain a +1 bonus to attack rolls with powers from your leader class against enemies adjacent to bloodied allies.</benefit>
+   </feat>
+
+   <feat>
+      <title>Risky Charge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <group>Charge</group>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Luck</group>
+      <benefit>When you charge, you can choose to use this feat.</benefit>
+      <benefit>If you do, you knock the target prone if you hit it, but if your charge attack misses, the target can make a melee basic attack against you as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rousing Resurgence</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Inspiring Presence</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Second Wind</group>
+      <group>Support</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When an ally in your &lt;i&gt;warlord's aura&lt;/i&gt; uses his or her &lt;i&gt;second wind&lt;/i&gt;, he or she also gains temporary hit points. The temporary hit points equal your Charisma modifier + one-half your level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rumbling Earthshock</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>earthshock</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>Your &lt;i&gt;earthshock&lt;/i&gt; racial power deals additional damage equal to your Strength modifier.</benefit>
    </feat>
 
    <feat>

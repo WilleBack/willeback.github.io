@@ -439,7 +439,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:when test="type='ability'">
 								<xsl:value-of select="name"/> <xsl:text> </xsl:text> <xsl:value-of select="value"/>
 							</xsl:when>
-							<xsl:when test="type='power'">
+							<xsl:when test="type='power' or type='ritual'">
 								<i><xsl:value-of select="name"/></i> <xsl:text> </xsl:text> <xsl:value-of select="qualifier"/> <xsl:text> </xsl:text> <xsl:value-of select="type"/>
 							</xsl:when>
 							<xsl:when test="type='skill'">
@@ -630,24 +630,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:if>
 
 	<xsl:choose>
-		<xsl:when test="shade='true'">
+		<xsl:when test="shade or @shade ='true'">
 			<xsl:choose>
-				<xsl:when test="indent='1'">
+				<xsl:when test="indent='1' or @indent='1'">
 					<xsl:call-template name="shadesection">
 						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="indent='2'">
+				<xsl:when test="indent='2' or @indent='2'">
 					<xsl:call-template name="shadesection">
 						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="indent='3'">
+				<xsl:when test="indent='3' or @indent='3'">
 					<xsl:call-template name="shadesection">
 						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="indent='2'">
+				<xsl:when test="indent='4' or @indent='4'">
 					<xsl:call-template name="shadesection">
 						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
 					</xsl:call-template>
@@ -659,22 +659,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:choose>
-				<xsl:when test="indent='1'">
+				<xsl:when test="indent='1' or @indent='1'">
 					<xsl:call-template name="clearsection">
 						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="indent='2'">
+				<xsl:when test="indent='2' or @indent='2'">
 					<xsl:call-template name="clearsection">
 						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="indent='3'">
+				<xsl:when test="indent='3' or @indent='3'">
 					<xsl:call-template name="clearsection">
 						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
-				<xsl:when test="indent='4'">
+				<xsl:when test="indent='4' or @indent='4'">
 					<xsl:call-template name="clearsection">
 						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
 					</xsl:call-template>
@@ -709,12 +709,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<b>Channel Divinity:&#160;</b>
 		You can only use one Channel Divinity power per encounter.
 	</xsl:if>
+	<xsl:if test="@auto='no-opportunity'">
+		<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
+	</xsl:if>
 	<xsl:choose>
-		<xsl:when test="name-style = 'bold'">
+		<xsl:when test="name-style='bold' or name/@style='bold'">
 			<b><xsl:value-of select="name"/>&#160;</b>
 		</xsl:when>
-		<xsl:when test="name-style = 'italic'">
+		<xsl:when test="name-style='italic' or name/@style='italic'">
 			<i><xsl:value-of select="name"/>&#160;</i>
+		</xsl:when>
+		<xsl:when test="name/@style='bullet' or bullet">
+			&#9658;<xsl:text> </xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="name"/>

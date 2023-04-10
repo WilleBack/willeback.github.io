@@ -125,20 +125,27 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:for-each>
 					</div>
 					<div style="width:100%; box-sizing:border-box; padding:0.3em; background:linear-gradient(to right, GhostWhite, Ghostwhite,White);float:left;">
-						<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;">Divine Manifestation (<xsl:value-of select="manifestation/frequency" />
+						<div style="width:100%; box-sizing:border-box; font-variant:small-caps; font-weight:bold;">Divine Manifestation
 							<xsl:if test="manifestation/keyword" >
-								<xsl:text> </xsl:text>&#x25C6; <xsl:text> </xsl:text>
+								<xsl:text> (</xsl:text>
+								<span style="font-weight:normal;">
 								<xsl:for-each select="manifestation/keyword">
 									<xsl:value-of select="."/>
 									<xsl:if test="position()!=last()">
 										<xsl:text>, </xsl:text>
 									</xsl:if>
 								</xsl:for-each>
+								</span>
+								<xsl:text>)</xsl:text>
 							</xsl:if>
+							<xsl:text> </xsl:text>&#x25C6; <xsl:text> </xsl:text>
+							<xsl:value-of select="manifestation/frequency" />
+							<xsl:text> (</xsl:text>
+							<xsl:value-of select="manifestation/action" /> <xsl:text> </xsl:text> <xsl:text> </xsl:text><span style="font-weight:normal;"><xsl:value-of select="manifestation/subaction" /></span>
 							<xsl:text>)</xsl:text>
 						</div>
 						<div style="width:100%; box-sizing:border-box; padding:0.2em; text-indent:-1em; padding-left:2.3em; float:left;">
-							<b><xsl:value-of select="manifestation/action" /></b> <xsl:text> </xsl:text><xsl:value-of select="manifestation/subaction" /><xsl:text>; </xsl:text><b><xsl:text>Trigger: </xsl:text></b><xsl:value-of select="manifestation/trigger" />
+							<b><xsl:text>Trigger: </xsl:text></b><xsl:value-of select="manifestation/trigger" />
 						</div>
 						<div style="width:100%; box-sizing:border-box; padding:0.2em; text-indent:-1em; padding-left:2.3em; float:left;">
 							<b>Effect: </b><xsl:value-of select="manifestation/effect[1]" disable-output-escaping="yes" />

@@ -37,6 +37,70 @@ def create_feat_file(targetClass, targetRole, targetSource):
 def remove_duplicates(lst):
     return list(dict.fromkeys(lst))
 
+def create_tier_file(targetTier):
+    data = []
+
+    for feat in fullRoot.findall(".feat[tier='" + targetTier + "']"):
+        key = feat.findtext("title")
+        data.append((key, feat))
+
+    return data
+
+
+## Heroic tier ##
+#################
+heroicTree = ET.parse('heroic.xml')
+heroicRoot = heroicTree.getroot()
+
+# Empty feats from file
+for feat in heroicTree.findall(".feat"):
+    heroicRoot.remove(feat)
+
+collate = create_tier_file("Heroic")
+
+# Add feats to file
+for item in collate:
+    heroicRoot.append(item[-1])
+
+# Save file
+heroicTree.write("heroic.xml")
+
+## Paragon tier ##
+##################
+paragonTree = ET.parse('paragon.xml')
+paragonRoot = paragonTree.getroot()
+
+# Empty feats from file
+for feat in paragonTree.findall(".feat"):
+    paragonRoot.remove(feat)
+
+collate = create_tier_file("Paragon")
+
+# Add feats to file
+for item in collate:
+    paragonRoot.append(item[-1])
+
+# Save file
+paragonTree.write("paragon.xml")
+
+## Epic tier ##
+###############
+epicTree = ET.parse('epic.xml')
+epicRoot = epicTree.getroot()
+
+# Empty feats from file
+for feat in epicTree.findall(".feat"):
+    epicRoot.remove(feat)
+
+collate = create_tier_file("Epic")
+
+# Add feats to file
+for item in collate:
+    epicRoot.append(item[-1])
+
+# Save file
+epicTree.write("epic.xml")
+
 ## Ardent ##
 ############
 ardentTree = ET.parse('ardent.xml')

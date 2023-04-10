@@ -10,6 +10,7 @@
    <list selection="Attack Penalty" />
 
    <list selection="Background" />
+   <list selection="Basic Attack" />
    <list selection="Bloodied" />
    <list selection="Bloodied Enemy" />
 
@@ -31,6 +32,7 @@
    <list selection="Dragon-hunting" />
    <list selection="Dying" />
 
+   <list selection="Elemental Nature" />
    <list selection="Equipment" />
    <list selection="Extra Attack" />
 
@@ -1095,6 +1097,16 @@
       <group>Opportunity Attacks</group>
       <benefit>If you have an alchemical item in hand when an enemy provokes an <![CDATA[<i>opportunity attack</i>]]> from you, you can use that alchemical item instead of making a <![CDATA[<i>melee basic attack</i>]]>.</benefit>
    </feat>
+
+   <feat>
+      <title>Alchemical Scrounger</title>
+      <tier>Heroic</tier>
+      <group>Equipment</group>
+      <group>Miss Mitigation</group>
+      <benefit>When you miss all targets with an alchemical item, roll a d20. On a result of 10 or higher, you can recover the item as a short rest activity. You can only recover one item per day.</benefit>
+      <special>If you take this feat as a paragon tier feat, you can recover two alchemical items each day. If you take it as an epic tier feat, you can recover three.</special>
+   </feat>
+
    <feat>
       <title>Alchemist</title>
       <tier>Heroic</tier>
@@ -1467,6 +1479,7 @@
          <name>wild shape</name>
          <qualifier>class</qualifier>
       </prereq>
+      <group>Basic Attack</group>
       <group>Bloodied</group>
       <group>Class</group>
       <group>Shapechange</group>
@@ -3013,6 +3026,7 @@
       <group>Bloodied</group>
       <group>Critical</group>
       <group>Dragon-hunting</group>
+      <group>Racial</group>
       <group>Temporary Hit Points</group>
       <benefit>You gain a +1 bonus to attack rolls against dragons.</benefit>
       <benefit>This bonus increases to +2 when you are bloodied.</benefit>
@@ -4172,16 +4186,14 @@
       <prereq>
          <type>feat</type>
          <name>Ritual Caster</name>
-         <combine>;</combine>
       </prereq>
       <prereq>
          <type>ritual</type>
-         <name>Magic Circle</name>
-         <combine>and</combine>
+         <name>magic circle</name>
       </prereq>
       <prereq>
-         <type>ritual</type>
-         <name>one other binding</name>
+         <type>binding ritual</type>
+         <name>one other</name>
       </prereq>
       <group>Rituals</group>
       <group>Skill Enhancement</group>
@@ -5513,6 +5525,7 @@
       </prereq>
       <group>Bloodied</group>
       <group>Class</group>
+      <group>Racial</group>
       <group>Temporary Hit Points</group>
       <group>Triggered</group>
       <group>Support</group>
@@ -6286,6 +6299,7 @@
       <group>Class</group>
       <group>Mobility</group>
       <group>Power Enhancement</group>
+      <group>Racial</group>
       <group>Temporary Hit Points</group>
       <group>Support</group>
       <benefit>When you use your <![CDATA[<i>fey step</i>]]> racial power, choose one ally adjacent to either your original space or your destination space. The chosen ally gains temporary hit points equal to your Intelligence modifier, and can then shift 1 square as a free reaction.</benefit>
@@ -6410,7 +6424,7 @@
          <type>skill</type>
          <name>Arcana</name>
       </prereq>
-      <group>Background</group>
+      <group>Elemental Nature</group>
       <group>Languages</group>
       <group>Skill Enhancement</group>
       <benefit>You gain a +2 feat bonus to Endurance and Intimidate checks.</benefit>
@@ -7470,6 +7484,7 @@
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Fire Specialization</group>
+      <group>Racial</group>
       <group>Triggered</group>
       <benefit>If you use your <![CDATA[<i>infernal wrath</i>]]> racial power against your oath target, your melee attacks against that target deal additioal fire damage equal to your Intelligence modifier until the end of your next turn.</benefit>
       <benefit>The additional damage increases to 2 + your Intelligence modifier at 11th level, and to 4 + your Intelligence modifier at 21st level.</benefit>
@@ -8082,8 +8097,8 @@
          <type>feat</type>
          <name>Born of the Elements</name>
       </prereq>
-      <group>Background</group>
       <group>Bloodied</group>
+      <group>Elemental Nature</group>
       <group>Fire Specialization</group>
       <group>Triggered</group>
       <benefit>Whenever an attack bloodies you or knocks you unconscious, one enemy of your choice within 2 squares of you takes fire damage equal to your Constitution modifier.</benefit>
@@ -8097,8 +8112,8 @@
          <type>feat</type>
          <name>Born of the Elements</name>
       </prereq>
-      <group>Background</group>
       <group>Damage Resistance</group>
+      <group>Elemental Nature</group>
       <group>Second Wind</group>
       <benefit>When you use your <![CDATA[<i>second wind</i>]]> while on an earthen or stone surface, you also gain resist 5 to all damage until the end of your next turn.</benefit>
       <benefit>This resistance increases to 10 at 11th level, and to 15 at 21st level.</benefit>
@@ -8111,7 +8126,7 @@
          <type>feat</type>
          <name>Born of the Elements</name>
       </prereq>
-      <group>Background</group>
+      <group>Elemental Nature</group>
       <group>Saving Throws</group>
       <group>Triggered</group>
       <benefit>Whenever you take acid, cold, fire, lightning, or thunder damage, you gain a +2 bonus to your next saving throw during this encounter.</benefit>
@@ -8124,7 +8139,7 @@
          <type>feat</type>
          <name>Born of the Elements</name>
       </prereq>
-      <group>Background</group>
+      <group>Elemental Nature</group>
       <group>Mobility</group>
       <benefit>You gain a swim speed equal to your speed.</benefit>
       <benefit>In addition, you gain Aquatic keyword. In aquatic combat, you gain a +2 bonus to attack rolls against nonaquatic creatures.</benefit>
@@ -8137,7 +8152,7 @@
          <type>feat</type>
          <name>Born of the Elements</name>
       </prereq>
-      <group>Background</group>
+      <group>Elemental Nature</group>
       <group>Mobiity</group>
       <benefit>Whenever you run or charge and are not wearing heavy armor, you ignore difficult terrain.</benefit>
    </feat>
@@ -8588,6 +8603,7 @@
       <group>Class</group>
       <group>Concealment</group>
       <group>Combat Advantage</group>
+      <group>Racial</group>
       <group>Triggered</group>
       <benefit>When an enemy hits you with a melee attack while you have concealment granted by your Shadow Walk, you gain combat advantage against that enemy until the end of your next turn.</benefit>
    </feat>
@@ -9287,6 +9303,242 @@
       <group>Teamwork</group>
       <benefit>If both you and your beast companion threaten an enemy that provokes an <![CDATA[<i>opportunity attack</i>]]>, the one that makes the attack deals +2 additional damage.</benefit>
       <benefit>This additional damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Corellon's Blessing of Easing Balm</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Paladin</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>longsword</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Corellon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Saving Throws</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Heal checks.</benefit>
+      <benefit>Also, on your turn, if you hit an enemy with an attack associated with this feat while using a longsword, you gain a +2 power bonus to saving throws you make at the end of your current turn.</benefit>
+      <benefit>If you ended your turn more than 2 squares away from where you started, the power bonus increases to +5.</benefit>
+      <associated>greenflame blade (swordmage at-will)</associated> <associated>holy strike (paladin at-will)</associated>
+   </feat>
+
+   <feat>
+      <title>Corellon's Blessing of Carrying Winds</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Paladin</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>longsword</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Corellon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Athletics checks.</benefit>
+      <benefit>Also, once per turn when you hit an enemy with an attack power associated with this feat while using a longsword, you can move 2 squares as a free reaction.</benefit>
+      <benefit>If you are immobilized or restrained, you can instead use a move action to move 2 squares, despite those conditions.</benefit>
+      <associated>leading strike (avenger at-will)</associated> <associated>righteous brand (cleric at-will)</associated> <associated>valiant strike (paladin at-will)</associated>
+   </feat>
+
+   <feat>
+      <title>Corellon's Blessing of Communal Recovery</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Bard</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>longsword</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Corellon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Mobility</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Endurance checks.</benefit>
+      <benefit>Also, when you hit an enemy with an attack power associated with this feat while using a longsword, you activate an Aura 1 (Divine, Healing) until the end of your next turn.</benefit>
+      <benefit>Whenever you or an ally in the aura spends a healing surge, you and each ally in the aura regain 1 hit point.</benefit>
+      <benefit>If you ended your turn more than 2 squares away from where you started, this becomes an Aura 2 instead.</benefit>
+      <benefit>The hit points regained increase to 2 at 11th level, and to 3 at 21st level.</benefit>
+      <associated>recovery strike (cleric at-will)</associated> <associated>war song strike (bard at-will)</associated>
+   </feat>
+
+   <feat>
+      <title>Corellon's Blessing of Effortless Steps</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>longsword</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Corellon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Acrobatics checks.</benefit>
+      <benefit>Also, when you hit an enemy with an attack power associated with this feat while using a longsword, you can ignore difficult terrain while shifting until the end of current turn.</benefit>
+      <associated>luring strike (swordmage at-will)</associated> <associated>overwhelming strike</associated>
+   </feat>
+
+   <feat>
+      <title>Corellon's Blessing of Fury Enduring</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>longsword</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Corellon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Skill Enhancement</group>
+      <group>Temporary Hit Points</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Endurance checks.</benefit>
+      <benefit>Also, once per turn, when you hit an enemy with an attack power associated with this feat while using a longsword, you gain 5 temporary hit points.</benefit>
+      <benefit>These temporary hit points increase to 10 at 11th level, and to 15 at 21st level.</benefit>
+      <benefit>If you moved more than 2 squares away from where you started your turn before making the attack, you gain half the temporary hit points even on a miss.</benefit>
+      <associated>booming blade (swordmage at-will)</associated> <associated>focused fury (avenger at-will)</associated>
+   </feat>
+
+   <feat>
+      <title>Corellon's Blessing of Forest Running</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>longsword</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Corellon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Skill Enhancement</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Athletics</benefit>
+      <benefit>Also, when you hit an enemy with an attack power associated with this feat while using a longsword, you gain a climb speed until the end of your current turn. The climb speed equals your speed -2.</benefit>
+      <benefit>If you moved more than 2 squares away from where you started your turn before making the attack, the climb speed lasts until the end of your next turn instead.</benefit>
+      <associated>bond of pursuit (avenger at-will)</associated> <associated>luring strike (swordmage at-will)</associated>
+   </feat>
+
+   <feat>
+      <title>Corellon's Blessing of Spring Blooming</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Bard</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>longsword</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Corellon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Dying</group>
+      <group>Mobility</group>
+      <group>Saving Throws</group>
+      <group>Skill Enhancement</group>
+      <group>Support</group>
+      <group>Weapon Specialization</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 feat bonus to Heal checks.</benefit>
+      <benefit>Also, when you hit with an attack power associated with this feat while using a longsword, dying allies adjacent to you gain a +5 power bonus to their next death saving throw.</benefit>
+      <benefit>If you moved more than 2 squares away from where you started your turn before making the attack, the allies can roll twice and use the higher result.</benefit>
+      <associated>priest's shield (cleric at-will)</associated> <associated>war song strike (bard at-will)</associated>
    </feat>
 
    <feat>
@@ -11159,6 +11411,7 @@
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Power Enhancement</group>
+      <group>Racial</group>
       <benefit>You can use your <![CDATA[<i>elven accuracy</i>]]> racial power to reroll a damage roll instead of an attack roll. If you do so, you must reroll all the dice, and use the higher of the two totals.</benefit>
    </feat>
 
@@ -12672,6 +12925,7 @@
       </prereq>
       <group>Attack Bonus</group>
       <group>Power Repertoire</group>
+      <group>Racial</group>
       <group>Shapechange</group>
       <group>Triggered</group>
       <benefit>Whenever a creature scores a critical hit against you, you gain a +2 bonus to attack rolls against that creature until the end of the encounter.</benefit>
@@ -13281,16 +13535,14 @@
       <prereq>
          <type>feat</type>
          <name>Ritual Caster</name>
-         <combine>;</combine>
       </prereq>
       <prereq>
          <type>ritual</type>
-         <name>Read Omens</name>
-         <combine>and</combine>
+         <name>read omens</name>
       </prereq>
       <prereq>
-         <type>ritual</type>
-         <name>one other divination</name>
+         <type>divination ritual</type>
+         <name>one other</name>
       </prereq>
       <group>Initiative</group>
       <group>Rituals</group>
@@ -13316,6 +13568,7 @@
       </prereq>
       <group>Channel Divinity</group>
       <group>Class</group>
+      <group>Racial</group>
       <group>Saving Throws</group>
       <benefit>When you use a Channel Divinity power, you can also make a saving throw against an effect that a save can end before resolving that power.</benefit>
       <benefit>Starting at 21st level, if you are not affected by an effect that a save can end, you can make a saving throw to end any one condition on you, even if that condition cannot normally be ended by a save.</benefit>
@@ -14564,6 +14817,7 @@
       <group>Class</group>
       <group>Extra Attack</group>
       <group>Power Recovery</group>
+      <group>Racial</group>
       <benefit>The first time you are bloodied in an encounter, you regain the use of your <![CDATA[<i>dragon breath</i>]]> racial power.</benefit>
       <benefit>If your <![CDATA[<i>dragon breath</i>]]> is not expended, you can instead use it as an immediate reaction.</benefit>
    </feat>
@@ -14690,6 +14944,7 @@
       <group>Dying</group>
       <group>Healing</group>
       <group>Power Repertoire</group>
+      <group>Racial</group>
       <group>Second Wind</group>
       <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you gain a +1 bonus to attack rolls until the end of your next turn.</benefit>
       <benefit>Also, you gain the <![CDATA[<i>dragonborn zeal</i>]]> power.</benefit>
@@ -14739,6 +14994,7 @@
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Mark Punishment</group>
+      <group>Racial</group>
       <benefit>Your <![CDATA[<i>dragon breath</i>]]> racial power deals 3 additional damage against creatures marked by you.</benefit>
       <benefit>The additional damage increases to 6 at 11th level, and to 9 at 21st level.</benefit>
    </feat>
@@ -15247,12 +15503,12 @@
       </prereq>
       <prereq>
          <type>ritual</type>
-         <name>Enchant Magic Item</name>
+         <name>enchant magic item</name>
          <combine>or</combine>
       </prereq>
       <prereq>
          <type>ritual</type>
-         <name>Transfer Enchantment</name>
+         <name>transfer enchantment</name>
       </prereq>
       <group>Class</group>
       <group>Equipment</group>
@@ -15764,7 +16020,7 @@
          <type>feat</type>
          <name>Born of the Elements</name>
       </prereq>
-      <group>Background</group>
+      <group>Elemental Nature</group>
       <group>Mobility</group>
       <group>Second Wind</group>
       <benefit>You gain the Earth Walk ability, meaning that you ignore difficult terrain caused by rubble, uneven stone, or earthen construction.</benefit>
@@ -16375,6 +16631,7 @@
          <name>must not have the Arcane Familiar feat</name>
       </prereq>
       <group>Elemental Companion</group>
+      <group>Elemental Nature</group>
       <benefit>You gain an elemental companion.</benefit>
       <benefit>For each elemental companion feat you have beyond this one, your elemental companion gains a +1 bonus to all defenses.</benefit>
    </feat>
@@ -18455,8 +18712,8 @@
          <name>endure elements</name>
       </prereq>
       <prereq>
-         <type>ritual</type>
-         <name>one other exploration</name>
+         <type>exploration ritual</type>
+         <name>one other</name>
       </prereq>
       <group>Rituals</group>
       <group>Skill Enhancement</group>
@@ -20568,6 +20825,7 @@
          <name>Born of the Elements</name>
       </prereq>
       <group>Damage Bonus</group>
+      <group>Elemental Nature</group>
       <group>Fire Specialization</group>
       <group>Triggered</group>
       <benefit>You gain a +3 feat bonus to Fire damage rolls.</benefit>
@@ -20659,9 +20917,9 @@
          <type>feat</type>
          <name>Born of the Elements</name>
       </prereq>
-      <group>Background</group>
       <group>Damage Bonus</group>
       <group>Damage Resistance</group>
+      <group>Elemental Nature</group>
       <group>Fire Specialization</group>
       <group>Second Wind</group>
       <benefit>You gain resist 5 fire.</benefit>
@@ -22803,7 +23061,7 @@
       </prereq>
       <group>Racial</group>
       <group>Rituals</group>
-      <benefit>When you perform the Linked Portal ritual, the Planar Portal ritual, or the True Portal ritual, you have the time required to perform it and gain a +5 bonus to any required skill checks.</benefit>
+      <benefit>When you perform the Linked Portal ritual, the Planar Portal ritual, or the True Portal ritual, you halve the time required to perform it and gain a +5 bonus to any required skill checks.</benefit>
       <benefit>Also, you can master those three rituals even if you don't have the Ritual Caster feat and don't need to store them in a ritual book.</benefit>
    </feat>
 
@@ -22817,6 +23075,7 @@
       <group>Attack Bonus</group>
       <group>Condition Infliction</group>
       <group>Critical</group>
+      <group>Racial</group>
       <benefit>You gain a +1 bonus to attack rolls with powers that have the Charm keyword.</benefit>
       <benefit>Also, when you score a critical hit with a Charm power, the target is also dominated until the end of your next turn.</benefit>
    </feat>
@@ -23748,6 +24007,7 @@
          <name>Dexterity</name>
          <value>15</value>
       </prereq>
+      <group>Basic Attack</group>
       <group>Damage Bonus</group>
       <group>Miss Mitigation</group>
       <benefit>When you miss with a <![CDATA[<i>ranged basic attack</i>]]> or an at-will attack that counts as one, you deal damage equal to your Dexterity modifier + your weapon or implement's enhancement bonus.</benefit>
@@ -24360,6 +24620,31 @@
    </feat>
 
    <feat>
+      <title>Guiding Charge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Resourceful Presence</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Skirmishing Presence</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Charge</group>
+      <group>Class</group>
+      <group>Support</group>
+      <benefit>When you charge, you can choose to forgo the bonus to your attack roll. If you do, choose one ally who can see you</benefit>
+      <benefit>The chosen ally gains a +2 bonus to his or her first attack roll against the target of your charge. The bonus is lost if the ally does not attack the target before the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
       <title>Guiding Rebuke</title>
       <tier>Epic</tier>
       <prereq>
@@ -24886,6 +25171,7 @@
          <name>Intimidate</name>
       </prereq>
       <group>Attack Penalty</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Fear</group>
       <group>Weapon Specialization</group>
@@ -25855,6 +26141,7 @@
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Fire Specialization</group>
+      <group>Racial</group>
       <group>Triggered</group>
       <benefit>When an enemy saves against an effect bestowed by your Fire attack, it takes fire damage equal to 5 + your Charisma modifier.</benefit>
       <benefit>This damage increases to 7 + your Charisma modifier at 11th level, and to 10 + your Charisma modifier at 21st level.</benefit>
@@ -25991,6 +26278,7 @@
       </prereq>
       <group>Class</group>
       <group>Power Enhancement</group>
+      <group>Racial</group>
       <group>Saving Throws</group>
       <group>Support</group>
       <benefit>Whenever ally you can see within 20 squares of you fails a saving throw, you can expend your <![CDATA[<i>send thoughts</i>]]> class power as a free interrupt. If you do, the ally can reroll the saving throw instead of the power's normal effects.</benefit>
@@ -26042,6 +26330,7 @@
       </prereq>
       <group>Action Point</group>
       <group>Defense</group>
+      <group>Racial</group>
       <benefit>When you spend an action point to take an extra action, you gain a +1 bonus to all defenses until the start of your next turn.</benefit>
    </feat>
 
@@ -26563,6 +26852,7 @@
       <group>Animal Companion</group>
       <group>Class</group>
       <group>Defense</group>
+      <group>Racial</group>
       <benefit>Your beast companion gains a +1 bonus to all defenses.</benefit>
    </feat>
 
@@ -26602,6 +26892,7 @@
       <group>Action Point</group>
       <group>Class</group>
       <group>Equipment</group>
+      <group>Racial</group>
       <group>Support</group>
       <benefit>When you spend an action point, you can also use Impart Energy on an adjacent ally's magical item. This does not count towards how often you can use Arcane Empowerment, but does count against the number of times an item can be Imparted Energy in a day.</benefit>
    </feat>
@@ -27285,6 +27576,7 @@
          <name>any martial</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Weapon Specialization</group>
       <benefit>When you use a Spear to make a <![CDATA[<i>melee basic attack</i>]]>, you can choose to make the attack against Reflex instead of AC.</benefit>
@@ -27326,6 +27618,7 @@
       </prereq>
       <group>Attack Penalty</group>
       <group>Initiative</group>
+      <group>Racial</group>
       <benefit>You can use your Charisma instead of Dexterity to determine your Initiative modifier.</benefit>
       <benefit>Also, when you hit a creature that has not yet acted in an encounter with an attack, it takes a penalty to attack rolls until the end of your next turn. The penalty equals one-half your Charisma modifier.</benefit>
    </feat>
@@ -28809,6 +29102,7 @@
       </prereq>
       <group>Attack Bonus</group>
       <group>Bloodied</group>
+      <group>Racial</group>
       <group>Support</group>
       <benefit>The first in an encounter that you are bloodied, each ally within 5 squares of you gains a +1 bonus to attack rolls until the end of his or her next turn.</benefit>
    </feat>
@@ -28927,6 +29221,7 @@
       <group>Attack Bonus</group>
       <group>Class</group>
       <group>Power Enhancement</group>
+      <group>Racial</group>
       <group>Support</group>
       <benefit>When you use your <![CDATA[<i>infernal wrath</i>]]> racial power, each of your allies who can see you gains a +1 power bonus to his or her first attack roll against the triggering enemy before the end of that enemy's next turn.</benefit>
    </feat>
@@ -29489,6 +29784,7 @@
          <name>Unarmed Combatant</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Opportunity Attacks</group>
@@ -30918,6 +31214,7 @@
          <type>class</type>
          <name>any martial</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Forced Movement</group>
       <group>Weapon Specialization</group>
@@ -30982,6 +31279,7 @@
       </prereq>
       <group>Attack Bonus</group>
       <group>Class</group>
+      <group>Racial</group>
       <group>Support</group>
       <group>Weapon Specialization</group>
       <benefit>When you hit an enemy with an attack using a Bow that you have proficiency with, each ally within 10 squares of you who can see and hear you gains a +1 bonus to ranged attack rolls against the target until the start of of your next turn.</benefit>
@@ -32008,6 +32306,7 @@
          <type>proficiency</type>
          <name>any two-handed polearm or two-handed spear</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Forced Movement</group>
       <group>Skill Enhancement</group>
@@ -33571,6 +33870,7 @@
       <title>Melee Training</title>
       <tier>Heroic</tier>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Damage Bonus</group>
       <benefit>Choose an ability score other than Strength.</benefit>
       <benefit>When you make a <![CDATA[<i>melee basic attack</i>]]> using a weapon with which you have proficiency, you can use the chosen ability instead of Strength for the attack roll.</benefit>
@@ -36779,6 +37079,7 @@
       <group>Damage Bonus</group>
       <group>Fire Specialization</group>
       <group>Power Enhancement</group>
+      <group>Racial</group>
       <group>Spellscar</group>
       <benefit>You deal 1 extra fire damage with encounter attacks and daily attacks.</benefit>
       <benefit>This extra fire damage increases to 2 at 11th level, and to 3 at 21st level.</benefit>
@@ -37288,6 +37589,7 @@
          <type>class</type>
          <name>Fighter</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Condition Infliction</group>
       <group>Mark Punishment</group>
@@ -38253,6 +38555,7 @@
          <name>Monk</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Weapon Specialization</group>
@@ -38720,6 +39023,7 @@
          <type>class</type>
          <name>Seeker</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Weapon Specialization</group>
@@ -39389,6 +39693,7 @@
       <group>Class</group>
       <group>Power Enhancement</group>
       <group>Psionics</group>
+      <group>Racial</group>
       <benefit>When you are bloodied and use your <![CDATA[<i>warforged resolve</i>]]> racial power, you can choose to regain 1 power point instead of hit points.</benefit>
       <benefit>The number of power points you regain increases to 2 at 21st level.</benefit>
    </feat>
@@ -41202,6 +41507,7 @@
          <type>race</type>
          <name>Shadar-kai</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>You gain the following benefits with any ranged Implement attack that you can use as a <![CDATA[<i>ranged basic attack</i>]]>:</benefit>
@@ -42233,6 +42539,72 @@
    </feat>
 
    <feat>
+      <title>Restless Dead</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>Race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Unnatural Vitality</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>the Raven Queen</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Defense</group>
+      <group>Dying</group>
+      <group>Racial</group>
+      <group>Worship</group>
+      <benefit>You gain a +2 bonus to all defenses while dying.</benefit>
+      <benefit>Also, you gain a +2 bonus to attack rolls while dying. You lose this bonus if you become unconscious from the dying condition, even if you later regain your conscious.</benefit>
+   </feat>
+
+   <feat>
+      <title>Restoration Mastery</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Ritual Caster</name>
+      </prereq>
+      <prereq>
+         <type>ritual</type>
+         <name>comrade's succor</name>
+      </prereq>
+      <prereq>
+         <type>restoration ritual</type>
+         <name>one other</name>
+      </prereq>
+      <group>Rituals</group>
+      <group>Skill Enhancement</group>
+      <group>Support</group>
+      <benefit>You gain the following benefits when you <![CDATA[<i>administer first aid</i>]]>:</benefit>
+      <benefit>&#9658; When you allow the target to use his or her <![CDATA[<i>second wind</i>]]>, he or she gains the bonus to defense from the action.</benefit>
+      <benefit>&#9658; When you aid a target with an effect that a save can end, the target gains a +2 bonus if he or she saves immediately, or increases the bonus to +5 if he or she chooses to gain a bonus to the next saving throw.</benefit>
+      <benefit>Also, you can marter and perform restoration rituals as if your level were two higher.</benefit>
+   </feat>
+
+   <feat>
+      <title>Resurgent Attack</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>17</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Paladin</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Healing Surge</group>
+      <benefit>When you spend a healing surge, you gain a +2 power bonus to the first attack roll you make before the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
       <title>Resurgent Memory</title>
       <tier>Heroic</tier>
       <prereq>
@@ -42257,6 +42629,612 @@
    </feat>
 
    <feat>
+      <title>Retreat Technique</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <benefit>Whenever you hit an enemy with a melee attack during your turn, you don't provoke <![CDATA[<i>opportunity attacks</i>]]> from that enemy when you move away from it. This lasts until the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Retribution Seeker</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Teamwork</group>
+      <benefit>You gain a +1 bonus to attack rolls with powers from your leader class against enemies adjacent to bloodied allies.</benefit>
+   </feat>
+
+   <feat>
+      <title>Retributive Action</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>enforce challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Action Point</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Mark Punishment</group>
+      <benefit>When you use your <![CDATA[<i>enforce challenge</i> class power and hit with the <i>melee basic attack</i>]]> it grants, you can expend your action point to deal an additional +2[W] damage.</benefit>
+   </feat>
+
+   <feat>
+      <title>Retribute Shield</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>aegis of shielding</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <benefit>When you use your <![CDATA[<i>aegis of shielding</i>]]> class power, you gain a +2 bonus to the first attack roll you make against the triggering enemy before the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Retributive Spirit</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>call spirit companion</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Defense Penalty</group>
+      <group>Triggered</group>
+      <benefit>When your spirit companion is destroyed, the creature that destroyed it takes a -2 penalty to all defenses until the end of the acting creature's next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Returning Resilience</title>
+      <category>Bloodline</category>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Elan Heritage</name>
+      </prereq>
+      <group>Elan Heritage</group>
+      <group>Power Recovery</group>
+      <group>Second Wind</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>, you regain the use of your <i>elan resilience</i>]]> bloodline power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Revelation of the Spirit</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Watcher Spirit</name>
+      </prereq>
+      <group>Class</group>
+      <group>Perception</group>
+      <benefit>Enemies hit by your Spirit attacks cannot benefit from cover or concealment (though they can benefit from superior cover or total concealment) until the the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Revenant's Challenge</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Paladin</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>divine challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>the Raven Queen</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Mark Punishment</group>
+      <group>Necrotic Specialization</group>
+      <group>Racial</group>
+      <group>Worship</group>
+      <benefit>Whenever the target of your <![CDATA[<i>divine challenge</i>]]> class power triggers your divine saction, it gains vulnerable 5 necrotic until the start of its next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Revitalizing Font of Life</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warden</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Font of Life</name>
+      </prereq>
+      <group>Class</group>
+      <group>Saving Throws</group>
+      <benefit>If you succeed on a saving throw granted by your Font of Life class feature, you gain a +2 bonus to all other saving throws you make during or at the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rigged Chance</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Halfling</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>second chance</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Power Recovery</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>second chacne</i>]]> racial power and the triggering attack still hits you, regain the use of that power at the start of your next turn. You only regain it once, even if this happens a second time.</benefit>
+   </feat>
+
+   <feat>
+      <title>Righteous Challenge</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Paladin</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>divine challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Class</group>
+      <group>Demon-hunting</group>
+      <group>Devil-hunting</group>
+      <group>Marking</group>
+      <group>Power Enhancement</group>
+      <benefit>If the target of your <![CDATA[<i>divine challenge</i>]]> class power is a demon or devil, it takes a -2 penalty to all attack while it remains under your divine sanction. This is in addition to penalty to attack rolls from the mark.</benefit>
+   </feat>
+
+   <feat>
+      <title>Righteous Focus</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Censure of Unity</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>Oath of Enmity</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Support</group>
+      <benefit>While you are adjacent to your oath target, your allies gain a +1 bonus to attack rolls against it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Righteous Fury</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Intimidate</name>
+      </prereq>
+      <group>Basic Attack</group>
+      <group>Fear</group>
+      <benefit>When you make a <![CDATA[<i>melee basic attack</i>]]> on your turn, you can choose to take a -2 penalty to the attack roll.</benefit>
+      <benefit>If you do, the attack gains the Fear keyword, and the target takes a -2 penalty to attack rolls until the end of your next turn if you hit, or a -2 penalty to the first attack roll it makes before the end of your next turn if you miss.</benefit>
+   </feat>
+
+   <feat>
+      <title>Righteous Rage</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Channel Divinity</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>a deity with the Strength or War domain</name>
+      </prereq>
+      <group>Channel Divinity</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Repertoire</group>
+      <benefit>You gain the <![CDATA[<i>righteous rage</i>]]> Channel Divinity power.</benefit>
+
+      <power>
+         <title>Righteous Rage</title>
+         <class>Channel Divinity</class> <category>Utility</category>
+         <fluff>Your god guides your arm and lends weight to your strike</fluff>
+         <part>
+            <frequency>Encounter</frequency>
+            <keyword>Divine</keyword>
+            <action>Minor</action> <subaction>Action</subaction>
+            <type>Personal</type>
+            <section auto="channeldivinity" />
+            <section shade="true">
+               <name style="bold">Effect:</name>
+               <text>The first time before the end of your next turn that you hit with a Weapon attack, you gain one of the following benefits:</text>
+            </section>
+            <section shade="true" indent="1">
+               <text>&#9658; If the attack is a critical hit, you automatically get the maximum result for any critical damage. If your weapon does not have an enchantment, you still deal +3 critical damage.</text>
+            </section>
+            <section shade="true" indent="1">
+               <text>&#9658; If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
+            </section>
+         </part>
+      </power>
+   </feat>
+
+   <feat>
+      <title>Righteous Summons</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Invoker</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Divine Covenant</name>
+      </prereq>
+      <group>Class</group>
+      <group>Summoning</group>
+      <benefit>Creatures summoned by your divine Summoning powers gain a benefit based on your Divine Covenant class feature:</benefit>
+      <benefit><![CDATA[<b>Covenant of Malediction:</b>]]> Enemies take a -1 penalty to attack rolls while adjacent to the summoned creature.</benefit>
+      <benefit><![CDATA[<b>Covenant of Preservation:</b>]]> An ally that starts his or her turn adjacent to the summened creature can shift 1 square as a minor action until the end of that turn. This increases to 2 squares at 21st level.</benefit>
+      <benefit><![CDATA[<b>Covenant of Wrath:</b>]]> Your summoned creatures gain a +2 feat bonus to damage rolls. This increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rising Chaos</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Born of the Elements</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Elemental Nature</group>
+      <group>Triggered</group>
+      <benefit>Whenever you take acid, cold, fire, lightning, or thunder damage, you gain a +2 bonus to damage rolls until the end of your next turn.</benefit>
+      <benefit>This bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rising Fury</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Kill Effect</group>
+      <benefit>When you reduce an enemy to 0 hit points, you gain a +3 feat bonus to damage rolls until the end of your next turn.</benefit>
+      <benefit>This bonus to damage increases to +5 at 11th level, and to +7 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rising Hopes</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ardent</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Mantle of Clarity</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>ardent surge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Dying</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <benefit>When you target a dying ally with your <![CDATA[<i>ardent surge</i>]]> class power, the target can stand up and shift 1 square as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rising Spellfure</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Sorcerer</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <benefit>When you use a sorcerer at-will attack power and hit one one enemy, you gain a +1 bonus to attack rolls with area attack powers and close attack powers until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Risky Aegis</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Human</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Arcana Aegis</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Mark Punishment</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>Your <![CDATA[<i>aegis of assault</i> class power, <i>aegis of ensnarement</i> class power, or <i>aegis of shielding</i>]]> class power gains the following additional effect:</benefit>
+      <benefit>The triggering enemy gains combat advantage against you until the end of its next turn, and you gain a +2 power bonus to attack rolls and a +2 power bonus to damage rolls against the triggering enemy until the end of your next turn.</benefit>
+      <benefit>The power bonus to damage rolls increases to +3 at 11th level, and to +5 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Risky Charge</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <group>Charge</group>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Luck</group>
+      <benefit>When you charge, you can choose to use this feat.</benefit>
+      <benefit>If you do, you knock the target prone if you hit it, but if your charge attack misses, the target can make a melee basic attack against you as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Risky Shift</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Avenger</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <benefit>Whenever you shift, you can choose to increase the maximum distance by 1 square. If you do, you grant combat advantage until the start of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rites of Spirits' Blood</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>infernal wrath</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any primal</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>The bonus to attack rolls from your Bloodhunt racial trait increases to +2.</benefit>
+      <benefit>Also, if you use your <![CDATA[<i>infernal wrath</i>]]> racial power when you are bloodied, you gain a +2 bonus to the damage roll. This increases to +4 if the triggerin attack bloodied you.</benefit>
+      <benefit>The bonus to the damage roll increases to +3 and +5, respectively, at 11th level, and to +4 and +6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ritual Caster</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Arcana</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Religion</name>
+      </prereq>
+      <group>Ritual</group>
+      <benefit>You can master and perform rituals of your level or lower. See the full rules for rituals for more information.</benefit>
+      <special>Some rituals use the Heal skill or the Nature skill, but they cannot be used to qualify for this feat.</special>
+      <special>Many classes grant this feat without having to meet the prerequisites.</special>
+   </feat>
+
+   <feat>
+      <title>River-born Ritualist</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Halfling</name>
+      </prereq>
+      <group>Background</group>
+      <group>Racial</group>
+      <group>Rituals</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +2 feat bonus to Nature checks.</benefit>
+      <benefit>Also, you have mastered the <![CDATA[<i>animal messenger</i> and <i>water walk</i>]]> rituals, and can perform them without a ritual book.</benefit>
+      <benefit>In addition, you can cast each of these rituals once per day without paying the component cost.</benefit>
+   </feat>
+
+   <feat>
+      <title>Roar of the Ancestors</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Intimidate</name>
+      </prereq>
+      <group>Class</group>
+      <group>Fear</group>
+      <group>Forced Movement</group>
+      <group>Racial</group>
+      <benefit>When you hit an enemy with a barbarian Fear attack power, you can push the target 1 square in addition to any other effects of the attack. If the attack already pushes, you instead increase the maximum distance by 1 square.</benefit>
+      <benefit>The push or increase to push increases to 2 squares at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Robust Defenses</title>
+      <tier>Epic</tier>
+      <group>Defense</group>
+      <benefit>You gain a +2 feat bonus to Fortitude, Reflex, and Will.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rod Expertise</title>
+      <tier>Heroic</tier>
+      <group>Defense</group>
+      <group>Implement Specialization</group>
+      <benefit>When you wield a rod you have proficiency with, you gain a +1 shield bonus to AC and Reflex.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rogue Weapon Mastery</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Scoundrel Weapon Talent</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Critical</group>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you wield a weapon that benefits from your Scoundrel Weapon Talent class feature and have proficiency with that weapon, the weapon gains the High Crit weapon property.</benefit>
+      <benefit>Also, if you have combat advantage when you score a critical hit, you deal +2 additional critical damage.</benefit>
+      <benefit>The additional critical damage increases to +3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Roguish Killer</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>assassin's shroud</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class Combination</group>
+      <group>Combat Advantage</group>
+      <group>Damage Bonus</group>
+      <group>Miss Mitigation</group>
+      <benefit>When you invoke your shrouds on a target you have combat advantage against, you can deal your Sneak Attack damage even if you miss if you invoked two or more shrouds.</benefit>
+   </feat>
+
+   <feat>
+      <title>Roiling Storm</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warden</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Stormheart</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Second Wind</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you can choose shift instead of sliding enemies marked by you. The number of squares you can shift equals your Constitution modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Roll with It</title>
+      <tier>Paragon</tier>
+      <group>Mobility</group>
+      <group>Triggered</group>
+      <benefit>When you are pushed, pulled, or slid, you can shift 1 square as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Roof Runners</title>
+      <tier>Heroic</tier>
+      <category>Team</category>
+      <group>Skill Enhancement</group>
+      <group>Teamwork</group>
+      <benefit>You gain a +2 feat bonus to Athletics checks.</benefit>
+      <benefit>Also, when an ally in your team successfully <![CDATA[<i>aids another</i>]]> your Athletics check and that ally has this feat or has the Skill Focus feat with Athletics, you gain a +4 bonus instead of the normal +2 bonus.</benefit>
+      <benefit>In addition, an ally in your team who has this feat or is trained in Athletics can attempt to <![CDATA[<i>aid another</i>]]> your Athletics check as part of taking the same type of action. For example, an ally could aid your attempt to make a long jump my making a similar jump.</benefit>
+   </feat>
+
+   <feat>
       <title>Root in Place</title>
       <tier>Heroic</tier>
       <prereq>
@@ -42268,6 +43246,453 @@
       <benefit>As a move action, you can root yourself in place.</benefit>
       <benefit>While rooted, you are immobilized and considered Large size for abilities that move you. You also reduce all forced movement against you by 3 squares, and cannot be knocked prone.</benefit>
       <benefit>You can stop being rooted as a move action. The effect also ends if you are moved from your space.</benefit>
+   </feat>
+
+   <feat>
+      <title>Roundabout Charge</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Acrobatics</name>
+      </prereq>
+      <group>Charging</group>
+      <group>Class</group>
+      <benefit>When you charge, each square of your movement need not bring you closer to the target of your charge, but you must start the charge at least 3 squares away from the target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rousing Resurgence</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Inspiring Presence</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Second Wind</group>
+      <group>Support</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When an ally in your <![CDATA[<i>warlord's aura</i> uses his or her <i>second wind</i>]]>, he or she also gains temporary hit points. The temporary hit points equal your Charisma modifier + one-half your level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rousing Voice</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Human</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Bard</name>
+      </prereq>
+      <group>Class</group>
+      <group>Racial</group>
+      <group>Second Wind</group>
+      <group>Support</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When ally within 10 squares of you uses his or her <![CDATA[<i>second wind</i>]]>, he or she also gains temporary hit points equal to your Charisma modifier.</benefit>
+      <benefit>These temporary hit points increase to 3 + your Charisma modifier at 11th level, and to 6 + your Charisma modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Royal Command of Asmodeus</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <group>Condition Infliction</group>
+      <group>Racial</group>
+      <benefit>Whenever you stun an enemy, you can choose to dominate the enemy for the same duration instead of stunning it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruin of Flesh</title>
+      <tier>Paragon</tier>
+      <category>Bloodline</category>
+      <prereq>
+         <type>race</type>
+         <name>Tiefling</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Gaze of Ruin</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Ruin Heritage</group>
+      <benefit>When you use your <![CDATA[<i>gaze of ruin</i>]]> racial power on an object being worn or wielded by a creature, that creature gains vulnerable to all damage until the end of your next turn. The vulnerable equals one-half your Intelligence modifier. This vulnerable immediately ends if the creature is no longer wearing or wielding the target object.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rumbling Earthshock</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>earthshock</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>Your <![CDATA[<i>earthshock</i>]]> racial power deals additional damage equal to your Strength modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Battle</title>
+      <tier>Epic</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Damage Bonus</group>
+      <group>Extra Attack</group>
+      <group>Teamwork</group>
+      <benefit>Whenever you score a critical hit with a runepriest attack power, one ally adjacent to the target can make a <![CDATA[<i>melee basic attack</i>]]> against the target as a free reaction. The ally gains a bonus to the attack roll and damage roll equal to the number of Rune feats you have.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Eloquence</title>
+      <tier>Heroic</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a feat bonus to Bluff checks and Diplomacy checks equal to 1 + one-half the number of Rune feats you have, rounded up.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Escape</title>
+      <tier>Paragon</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Second Wind</group>
+      <group>Support</group>
+      <benefit>Whenever an ally within 5 squares of you uses his or her <![CDATA[<i>second wind</i>]]>, that ally can use a free reaction to shift a number of squares equal to 1 + one-half the number of Rune feats you have.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Health</title>
+      <tier>Epic</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>rune of mending</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <benefit>When you use your <![CDATA[<i>rune of mending</i>]]> class power, allies other than the target regain a number of hit points equal to twice the number of Rune feats you have.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Hope</title>
+      <tier>Heroic</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>rune of mending</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Clas</group>
+      <group>Power Enhancement</group>
+      <group>Temporary Hit Points</group>
+      <benefit>The target of your <![CDATA[<i>rune of mending</i>]]> class power gains temporary hit points equal to twice the number of Rune feats you have.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Torment</title>
+      <tier>Paragon</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Triggered</group>
+      <benefit>Whenever an enemy within 5 squares of you fails a saving throw against an effect caused by your runepriest power, that enemy takes damage equal to 5 + the number of Rune feats you have.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Vengeance</title>
+      <tier>Heroic</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <group>Bloodied</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <benefit>The first time you are bloodied in an encounter, you gain a bonus to damage rolls until the end of your next turn. The bonus equals the number of Rune feats you have.</benefit>
+      <benefit>The bonus to damage rolls increases to 2 + the number of Rune feats you have at 11th level, and to 4 + the number of Rune feats you have at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune of Zeal</title>
+      <tier>Heroic</tier>
+      <category>Rune</category>
+      <prereq>
+         <type>class</type>
+         <name>Runepriest</name>
+      </prereq>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a feat bonus to Athletics checks and Endurance checks equal to 1 + one-half the number of Rune feats you have, rounded up.</benefit>
+   </feat>
+
+   <feat>
+      <title>Rune-scribed Soul</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Dwarven Resilience</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any arcane</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <group>Second Wind</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you gain a bonus to damage rolls with arcane attack powers equal to your Constitution modifier until the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Running Shot</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <benefit>You don't take any attack penalty to ranged attacks for running.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruthless Efficiency</title>
+      <tier>Heroic</tier>
+      <category>Multiclass</category>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Fear</group>
+      <group>Multiclass Rogue</group>
+      <group>Proficiency Gain</group>
+      <group>Skill Training</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain training in the Stealth skill.</benefit>
+      <benefit>Also, you gain the Ruthless Ruffian class feature of the Rogue, including proficiencies with the club and mace, and the bonus to damage with rogue Fear powers.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruthless Grasp</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>grasping claws</name>
+         <qualifier>at-will attack</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Power Enhancement</group>
+      <group>Shapechange</group>
+      <benefit>When you hit a target with your <![CDATA[<i>grasping claws</i>]]> at-will attack power, you can choose to immobilize the target until the end of your next turn instead of slowing it. This effect immediately ends if you are no longer adjacent to the target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruthless Injury</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Ruthless Ruffian</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Saving Throw Penalty</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you deal your Sneak Attack damage with an attack that blinds, immobilizes, slows, or weakens the target and you are wielding either the club or the mace, the target takes a -2 penalty to saves against those conditions.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruthless Price</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Seeker</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>encaging spirits</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Condition Infliction</group>
+      <group>Power Enhancement</group>
+      <benefit>When you use your <![CDATA[<i>encaging spirits</i>]]> class power, you can choose immobilize any of the targets instead of slowing that one.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruthless Shooter</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <group>Critical</group>
+      <group>Damage Bonus</group>
+      <group>Proficiency Gain</group>
+      <group>Racial</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you wield a hand crossbow, its weapon die increases to 1d8, and it gains the High Crit weapon property.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruthless Spellfury</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Sorcerer</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Extra Attack</group>
+      <benefit>Once per turn, when you score a critical hit with a sorcerer at-will attack power, you can use a sorcerer at-will attack that can be used as a <![CDATA[<i>ranged basic attack</i>]]> as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Ruthless Terror</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>19</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Intimidate</name>
+      </prereq>
+      <group>Attack Penalty</group>
+      <group>Class</group>
+      <group>Fear</group>
+      <group>Miss Mitigation</group>
+      <benefit>When you miss with a martial Fear power, the target takes a -1 penalty to attack rolls against you until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sacrifice to Patron</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Constitution</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <group>Class</group>
+      <group>Miss Mitigation</group>
+      <group>Power Recovery</group>
+      <benefit>When you make a warlock encounter attack and miss all targets, you can choose to use this feat.</benefit>
+      <benefit>If you do, you take damage equal to twice the level of the warlock encounter attack you used, and immediately regain the use of that power.</benefit>
    </feat>
 
    <feat>
@@ -42762,7 +44187,7 @@
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
-               <text>&#9658; Yougain a fly speed of 8 (hover), and when you squeeze, you can fit through any opening that allows air to pass through. Squares of daylight are difficult terrain for you.</text>
+               <text>&#9658; You gain a fly speed of 8 (hover), and when you squeeze, you can fit through any opening that allows air to pass through. Squares of daylight are difficult terrain for you.</text>
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
@@ -43109,6 +44534,7 @@
          <name>Paladin</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Marking</group>
