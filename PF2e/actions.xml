@@ -175,6 +175,20 @@
    </rule>
 
    <rule>
+      <title>Demoralize</title>
+      <type>Intimidation</type>
+      <action>1</action>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
+
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
+   </rule>
+
+   <rule>
       <title>Dismiss</title>
       <action>1</action>
       <trait>Concentrate</trait>
@@ -333,6 +347,18 @@
    </rule>
 
    <rule>
+      <title>Palm an Object</title>
+      <type>Thievery</type>
+      <trait>Manipulate</trait>
+
+      <line>Palming a small, unattended object without being noticed requires you to roll a single Thievery check against the Perception DCs of all creatures who are currently observing you. You take the object whether or not you successfully conceal that you did so. You can typically only Palm Objects of negligible Bulk, though the GM might determine otherwise depending on the situation.</line>
+      <line results="">
+         <success>The creature does not notice you Palming the Object.</success>
+         <fail>The creature notices you Palming the Object, and the GM determines the creature's response.</fail>
+      </line>
+   </rule>
+
+   <rule>
       <title>Point Out</title>
       <action>1</action>
       <trait>Auditory</trait> <trait>Manipulate</trait> <trait>Visual</trait>
@@ -437,6 +463,16 @@
    </rule>
 
    <rule>
+      <title>Shield Block</title>
+      <action>R</action>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+
+      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
+   </rule>
+
+   <rule>
       <title>Shove</title>
       <action>1</action>
       <type>Athletics</type>
@@ -457,6 +493,20 @@
       <trait>Move</trait>
 
       <line>You stand up from prone.</line>
+   </rule>
+
+   <rule>
+      <title>Steal</title>
+      <type>Thievery</type>
+      <trait>Manipulate</trait>
+
+      <line>You try to take a small object from another creature without being noticed. Typically, you can Steal only an object of negligible Bulk, and you automatically fail if the creature who has the object is in combat or on guard.</line>
+      <line>Attempt a Thievery check to determine if you successfully Steal the object. The DC to Steal is usually the Perception DC of the creature wearing the object. This assumes the object is worn but not closely guarded (like a loosely carried pouch filled with coins, or an object within such a pouch). If the object is in a pocket or similarly protected, you take a -5 penalty to your Thievery check. The GM might increase the DC of your check if the nature of the object makes it harder to steal (such as a very small item in a large pack, or a sheet of parchment mixed in with other documents).</line>
+      <line>You might also need to compare your Thievery check result against the Perception DCs of observers other than the person wearing the object. The GM may decrease the Perception DCs of these observers if they're distracted.</line>
+      <line results="">
+         <success>You Steal the item without the bearer noticing, or an observer doesn't see you take or attempt to take the item.</success>
+         <fail>The item's bearer notices your attempt before you can take the object, or an observer sees you take or attempt to take the item. The GM determines the response of any creature that notices your theft.</fail>
+      </line>
    </rule>
 
    <rule>

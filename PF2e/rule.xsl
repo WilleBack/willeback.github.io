@@ -176,10 +176,19 @@
                      <xsl:value-of select="prereq" disable-output-escaping="yes" />
                   </div>
                </xsl:if>
-               <xsl:if test="trigger">
-                  <div id="trigger" class="line" style="float: left;">
-                     <b>Trigger </b>
-                     <xsl:value-of select="trigger" disable-output-escaping="yes" />
+               <xsl:if test="trigger or cast">
+                  <div id="triggercast" class="line" style="float: left;">
+                     <xsl:if test="cast">
+                        <b>Cast <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="cast/@action" /> </span></b><xsl:text> </xsl:text>
+                        <xsl:value-of select="cast" disable-output-escaping="yes" />
+                        <xsl:if test="trigger">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
+                     </xsl:if>
+                     <xsl:if test="trigger">
+                        <b>Trigger </b>
+                        <xsl:value-of select="trigger" disable-output-escaping="yes" />
+                     </xsl:if>
                   </div>
                </xsl:if>
                <xsl:if test="requirement">
@@ -206,13 +215,36 @@
                      <xsl:if test="range">
                         <b>Range </b>
                         <xsl:value-of select="range" disable-output-escaping="yes" />
-                        <xsl:if test="reload">
+                        <xsl:if test="reload or targets or area">
                            <xsl:text>; </xsl:text>
                         </xsl:if>
+                     </xsl:if>
+                     <xsl:if test="targets">
+                        <b>Targets </b>
+                        <xsl:value-of select="targets" disable-output-escaping="yes" />
+                     </xsl:if>
+                     <xsl:if test="area">
+                        <b>Area </b>
+                        <xsl:value-of select="area" disable-output-escaping="yes" />
                      </xsl:if>
                      <xsl:if test="reload">
                         <b>Reload </b>
                         <xsl:value-of select="reload" disable-output-escaping="yes" />
+                     </xsl:if>
+                  </div>
+               </xsl:if>
+               <xsl:if test="save or duration">
+                  <div id="savedura" class="line" style="float: left;">
+                     <xsl:if test="save">
+                        <b>Saving Throw </b>
+                        <xsl:value-of select="save" disable-output-escaping="yes" />
+                        <xsl:if test="duration">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
+                     </xsl:if>
+                     <xsl:if test="duration">
+                        <b>Duration </b>
+                        <xsl:value-of select="duration" disable-output-escaping="yes" />
                      </xsl:if>
                   </div>
                </xsl:if>
@@ -285,6 +317,16 @@
                   <xsl:value-of select="." disable-output-escaping="yes"/>
                </div>
             </xsl:for-each>
+         </xsl:if>
+         <xsl:if test="heighten">
+            <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
+               <xsl:for-each select="heighten">
+                  <div id="heighten" class="line" style="float: left;">
+                     <b>Heightened (<xsl:value-of select="@value" />) </b>
+                     <xsl:value-of select="." disable-output-escaping="yes" />
+                  </div>
+               </xsl:for-each>
+            </div>
          </xsl:if>
       </div>
 

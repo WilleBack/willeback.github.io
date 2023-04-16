@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Low-Light Vision</title>
+
+      <line>You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.</line>
+   </rule>
+
+   <rule>
+      <title>Arctic Elf</title>
+
+      <line>You dwell deep in the frozen north and have gained incredible resilience against cold environments, granting you cold resistance equal to half your level (minimum 1).</line>
+      <line>You treat environmental cold effects as if they were one step less extreme (incredible cold becomes extreme cold, extreme cold becomes severe, and so on).</line>
+   </rule>
+
+   <rule>
+      <title>Nimble ELf</title>
+      <type>Feat</type>
+      <level>1</level>
+      <trait>Elf</trait>
+
+      <line>Your muscles are tightly toned. Your Speed increases by 5 feet.</line>
+   </rule>
+
+   <rule>
+      <title>Impressive Performance</title>
+      <type>Feat</type>
+      <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Performance</prereq>
+
+      <line>Your performances inspire admiration and win you fans. You can Make an Impression using Performance instead of Diplomacy.</line>
+   </rule>
+
+   <rule>
+      <title>Make an Impression</title>
+      <type>Diplomacy</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Exploration</trait> <trait>Linguistic</trait> <trait>Mental</trait>
+
+      <line>With at least 1 minute of conversation, during which you engage in charismatic overtures, flatter, and other acts of goodwill, you seek to make a good impression on someone to make them temporarily agreeable. At the end of the conversation, attempt a Diplomacy check against the Will DC of one target, modified by any circumstance the GM sees fit. Good impressions (or bad impressions, on a critical failure) last for only the current social interaction unless the GM decides otherwise.</line>
+      <line results="">
+         <critsuccess>The target's attitude toward you improves by two steps (such as from indifferent to helpful).</critsuccess>
+         <success>The target's attitude toward you improves by one step (such as from indifferent to friendly).</success>
+         <critfail>The target's attitude toward you decreases by one step (such as from indifferent to unfriendly).</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Rage</title>
+      <action>1</action>
+      <trait>Barbarian</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Mental</trait>
+      <requirement>You aren't fatigued or raging.</requirement>
+
+      <line>You tap into your inner fury and begin raging. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall unconscious, whichever comes first. You can voluntarily stop raging. While you are raging:</line>
+      <line list="">
+         <entry>You deal 2 additional damage with melee Strikes. This additional damage is halved if your weapon or unarmed attack is agile.</entry>
+         <entry>You take a -1 penalty to AC.</entry>
+         <entry>You can't use actions with the concentrate trait unless they also have the rage trait. You can Seek while raging.</entry>
+      </line>
+      <line>After you stop raging, you lose any remaining temporary Hit Points from Rage, and you can't Rage again for 1 minute.</line>
+   </rule>
+
+   <rule>
+      <title>Draconic Rage (White Dragon)</title>
+
+      <line>When you you Rage, you can increase the additional damage from 2 to 4 and change it to cold damage instead of the damage type of your weapon or unarmed attack. If you do this, your Rage action gains the arcane, cold, and evocation traits.</line>
+   </rule>
+
+   <rule>
+      <title>Anathema</title>
+
+      <line>Whenever you perform any of the following acts, you lose the Draconic Rage until you spend 1 day of downtime re-centering yourself, though you keep all of your other barbarian abilities.</line>
+      <line list="">
+         <entry>You let a personal insult against you slide.</entry>
+         <entry>You fail to defeat a white dragon you come across.</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Sudden Charge</title>
+      <type>Feat</type> <level>1</level>
+      <action>2</action>
+      <trait>Barbarian</trait> <trait>Flourish</trait>
+      <trait>Open</trait>
+
+      <line>With a quick sprint, you dash up to your foe and swing.</line>
+      <line>Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy.</line>
+      <line>You can use Sudden Charge while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</line>
+   </rule>
+
+   <rule>
+      <title>Coerce</title>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Exploration</trait> <trait>Linguistic</trait> <trait>Mental</trait>
+
+      <line>With threats veiled or overt, you attempt to bully a creature into doing what you want. You must spend at least 1 minute of conversation with a creature you can see and that can either see or sense you. At the end of the conversation, attempt an Intimidation check against the target's Will DC, modified by circumstances the GM determines.</line>
+      <line results="">
+         <critsuccess>The target gives you the information you seek or agrees to follow your directives so long as they aren't likely to harm the target in any way. The target continues to comply for an amount of time determined by the GM but not exceeding 1 day, at which point the target becomes unfriendly (if they weren't already unfriendly or hostile). However, the target is too scared of you to retaliate — at least in the short term.</critsuccess>
+         <success>As critical success, but once the target becomes unfriendly, they might decide to act against you — for example, by reporting you to the authorities or assisting your enemies.</success>
+         <fail>The target doesn't do what you say, and if they were not already unfriendly or hostile, they become unfriendly.</fail>
+         <critfail>The target refuses to comply, becomes hostile if they weren't already, and can't be Coerced by you for at least 1 week.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Demoralize</title>
+      <action>1</action>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
+
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
+   </rule>
+</catalog>
