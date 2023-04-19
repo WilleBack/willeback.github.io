@@ -49,6 +49,21 @@
          <line>If the backpack is destroyed, the object falls from its remains.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Bed of Rapid Resting</title>
+      <category>Common</category>
+      <fluff>This comfortable bed speeds your rest but is too large to cart around in the dungeon</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Furniture</subtype>
+      <block>
+         <name>Property</name>
+         <line>When you take an extended rest in this bed in a comfortable environment, you spend 4 hours (instead of the usual 6) to gain the benefit of that rest.</line>
+      </block>
+   </item>
 
    <item>
       <title>Blessed Book</title>
@@ -79,13 +94,52 @@
          <keyword>Conjuration</keyword>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You conjure the spirit contained within the bottle in an unnoccupied square within 10 squares of you. The spirit lasts until the end of your next turn.</line>
+         <line><name>Effect</name>You conjure the spirit contained within the bottle in an unnoccupied square within 10 squares of you. The spirit lasts until the end of your next turn.</line>
          <line>If you conjure the spirit into a square adjacent to yourself and are holding an object when you use this power, the hand can move the object into a pack, a pouch, a sheath, or a similar container and simultaneously move any one object carried or worn anywhere on your body into your hand.</line>
          <line>While the spirit persists, you can use the following actions:</line>
          <line indent="1"><![CDATA[<b>Minor Action:</b>]]> The spirit picks up or manipulates an object weighing 20 pounds or less. It can hold only one object at a time.</line>
          <line indent="1"><![CDATA[<b>Move Action:</b>]]> The spirit moves up to 10 squares in any direction, carrying the object it holds.</line>
          <line indent="1"><![CDATA[<b>Free Action:</b>]]> The hand drops the object it is holding.</line>
          <line indent="1"><![CDATA[<b>Sustain Minor:</b>]]> The hand persists until the end of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bridle of Conjuration</title>
+      <category>Common</category>
+      <fluff>This simple leather bridle conjures a magical mount for your use</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Summoning</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You conjure a riding horse in a space adjacent to you. Unlike most summons, this one does not use your statistics and lacks the usual summon traits. The horse does not have its attack, and you do not lose a healing surge if the horse is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the horse to spend one..</line>
+         <line>The bridle transforms into the mount's tack and saddle, and the horse serves you, obeying you spoken commands.</line>
+         <line>The horse disappears after 12 hours or if it is reduced to 0 hit points or fewer.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Chime of Awakening</title>
+      <category>Common</category>
+      <fluff>This silver chime sounds an alarm in the minds of you and your resting allies</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You set the chime to ring when a specific trigger occurs within 10 squares of it. Example triggers include the presence of anyone other than you and your allies, the light of the sun touching the area, or the appearance of a specific character or type of creature.</line>
+         <line>When the trigger is met, the chime rings in the minds of you and all allies; a creature must be within 10 squares of the chime to hear it. Creatures that hear the chime are instantly awoken (if asleep) and alert.</line>
+         <line>The chime can be fooled by creatures in disguise or hiding. It makes active Perception checks, and has a Perception check modifier of +10.</line>
       </block>
    </item>
 
@@ -118,14 +172,11 @@
          <price>2,600</price>
       </level>
       <type>Wondrous Item</type>
-      <headline>
-         <name>Attached Component</name>
-         <text>You must have the Living Construct racial trait to use this item.</text>
-      </headline>
+      <headline auto="attached" />
       <block>
          <name>Property</name>
          <line>You can mentally command the delver's light as a free action. When you command the light, you command it to shed dim light to a radius of 10 squares, bright light to a radius of 10 squares and dim light to a further 10 squares, or to shed no light.</line>
-         <line indent="1"><![CDATA[<i>Level 7:</i>]]> Dim light to a radius of 20 squares, or bright to a radius of 20 squares and dim light to a further 10 squares.</line>
+         <line indent="1"><name>Level 7</name>Dim light to a radius of 20 squares, or bright to a radius of 20 squares and dim light to a further 10 squares.</line>
       </block>
    </item>
 
@@ -149,8 +200,8 @@
       <block>
          <name>Property</name>
          <line>When you spend an action point to take an extra action, choose acid, cold, fire, lightning, or thunder. You gain resist 5 to the chosen damage type until the end of the encounter.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> Resist 10.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> Resist 15.</line>
+         <line indent="1"><name>Level 13</name>Resist 10.</line>
+         <line indent="1"><name>Level 23</name>Resist 15.</line>
       </block>
    </item>
 
@@ -193,10 +244,10 @@
          <keyword>Teleportation</keyword>
          <frequency>At-Will</frequency>
          <action>Opportunity</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> A nonminion enemy scores a critical hit against you and deals damage</line>
-         <line><![CDATA[<i>Effect:</i>]]> You teleport up to 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> Up to 2 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> Up to 3 squares.</line>
+         <line><name>Trigger</name>A nonminion enemy scores a critical hit against you and deals damage</line>
+         <line><name>Effect</name>You teleport up to 1 square.</line>
+         <line indent="1"><name>Level 13</name>Up to 2 squares.</line>
+         <line indent="1"><name>Level 23</name>Up to 3 squares.</line>
       </block>
    </item>
 
@@ -213,6 +264,21 @@
          <name>Property</name>
          <line>A stick of eternal chalk never breaks or wears down with normal use. Any writing or drawing made with this chalk cannot be erased for one week by anyone except the original artist or author.</line>
          <line>A stick of eternal chalk can be created in any color. The creator chooses a color they know at the time of creation.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Everlasting Provisions</title>
+      <category>Common</category>
+      <fluff>This plain basket radiates delicious smells</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>After an extended rest, you open the basket, creating enough food and water to feed five Medium or Small creatures (or one Large creature) for 24 hours.</line>
       </block>
    </item>
 
@@ -241,6 +307,31 @@
          <text>All your familiar's defenses.</text>
       </headline>
    </item>
+   
+   <item>
+      <title>Fireheart Tattoo</title>
+      <category>Common</category>
+      <fluff>As you call upon its power, flames flare and twist around the heart at the center of this tattoo</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>When you spend an action point to take an extra action, you gain 5 temporary hit points after resolving that action. These temporary hit points last until the end of the encounter.</line>
+         <line indent="1"><name>Level 14</name>10 temporary hit points.</line>
+         <line indent="1"><name>Level 24</name>15 temporary hit points.</line>
+      </block>
+   </item>
 
    <item>
       <title>Floating Lantern</title>
@@ -260,15 +351,15 @@
          <name>Utility Power</name>
          <frequency>At-Will</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must be holding the lantern, or be the last creature to hold it and adjacent to it.</line>
-         <line><![CDATA[<i>Effect:</i>]]> You set the lantern to full (bright light in 10-square radius and dim light for a further 10 squares), half (dim light in a 5-square radius), or off.</line>
+         <line><name>Requirement</name>You must be holding the lantern, or be the last creature to hold it and adjacent to it.</line>
+         <line><name>Effect</name>You set the lantern to full (bright light in 10-square radius and dim light for a further 10 squares), half (dim light in a 5-square radius), or off.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>At-Will</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must be the last creature to hold the lantern.</line>
-         <line><![CDATA[<i>Effect:</i>]]> You move the lantern up to 10 squares to a square within 10 squares of you.</line>
+         <line><name>Requirement</name>You must be the last creature to hold the lantern.</line>
+         <line><name>Effect</name>You move the lantern up to 10 squares to a square within 10 squares of you.</line>
       </block>
    </item>
 
@@ -315,10 +406,10 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Rest</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You use this action as part of a short rest.</line>
-         <line><![CDATA[<i>Effect:</i>]]> One ally who remained within 20 squares of you during the rest and could hear you gains a +1 power bonus to Weapon damage rolls until the end of his or her next rest. This increases to a +2 power bonus if you have the Song of Rest class feature.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2 or +3 power bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3 or +4 power bonus.</line>
+         <line><name>Requirement</name>You use this action as part of a short rest.</line>
+         <line><name>Effect</name>One ally who remained within 20 squares of you during the rest and could hear you gains a +1 power bonus to Weapon damage rolls until the end of his or her next rest. This increases to a +2 power bonus if you have the Song of Rest class feature.</line>
+         <line indent="1"><name>Level 13 or 18</name>+2 or +3 power bonus.</line>
+         <line indent="1"><name>Level 23 or 28</name>+3 or +4 power bonus.</line>
       </block>
    </item>
 
@@ -340,14 +431,14 @@
          <name>Utility Power</name>
          <frequency>At-Will</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> The globe sheds dim light in a 2-square radius, bright ligth in a 10-square radius and dim light for a further 10 squares, or stops shedding light.</line>
+         <line><name>Effect</name>The globe sheds dim light in a 2-square radius, bright ligth in a 10-square radius and dim light for a further 10 squares, or stops shedding light.</line>
       </block>
       <block>
          <name>Attack Power</name>
          <frequency>Consumable</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 3 (enemies in the burst); The target is blinded until the start of your next turn.</line>
-         <line><![CDATA[<i>Special:</i>]]> The globe is destroyed.</line>
+         <line><name>Effect</name>Close burst 3 (enemies in the burst); The target is blinded until the start of your next turn.</line>
+         <line><name>Special</name>The globe is destroyed.</line>
       </block>
    </item>
 
@@ -372,9 +463,9 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 20 (each creature in the burst); Each target takes a -10 penalty to Perception checks until the end of your next turn.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> -15 penalty, and an aftereffect of -5 penalty until the end of your following turn.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> -15 penalty, and an aftereffect of -10 penalty until the end of your next turn.</line>
+         <line><name>Effect</name>Close burst 20 (each creature in the burst); Each target takes a -10 penalty to Perception checks until the end of your next turn.</line>
+         <line indent="1"><name>Level 13</name>-15 penalty, and an aftereffect of -5 penalty until the end of your following turn.</line>
+         <line indent="1"><name>Level 23</name>-15 penalty, and an aftereffect of -10 penalty until the end of your next turn.</line>
          <line>An unconscious creature takes the penalty until it is no longer unconscious.</line>
       </block>
    </item>
@@ -395,7 +486,7 @@
       <block>
          <name>Property</name>
          <line>The mount gains a +1 bonus to all speeds.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> The bonus increases to +2 for exploration speed.</line>
+         <line indent="1"><name>Level 13</name>The bonus increases to +2 for exploration speed.</line>
       </block>
    </item>
 
@@ -445,16 +536,16 @@
       <block>
          <name>Properties</name>
          <line>The Hyrsam fiddle has the following properties:</line>
-         <line>&#9658; If you are a Bard, you can use this instrument as an implement for Bard powers.</line>
-         <line>&#9658; When you wield a Hyrsam fiddle and a Hyrsam fiddlestick in the other, you gain a +1 shield bonus to your AC and Reflex.</line>
+         <line><bullet />If you are a Bard, you can use this instrument as an implement for Bard powers.</line>
+         <line><bullet />When you wield a Hyrsam fiddle in one hand and a Hyrsam fiddlestick in the other, you gain a +1 shield bonus to your AC and Reflex.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You miss with a Charm, Psychic, or Thunder attack power using this implement</line>
-         <line><![CDATA[<i>Effect:</i>]]> Reroll the triggering attack roll, and use either result.</line>
-         <line><![CDATA[<i>Special:</i>]]> If you are wielding a Hyrsam fiddlestick in your other hand and miss the triggering attack roll even with the reroll, you regain the use of this power when you take a short rest.</line>
+         <line><name>Trigger</name>You miss with a Charm, Psychic, or Thunder attack power using this implement</line>
+         <line><name>Effect</name>Reroll the triggering attack roll, and use either result.</line>
+         <line><name>Special</name>If you are wielding a Hyrsam fiddlestick in your other hand and miss the triggering attack roll even with the reroll, you regain the use of this power when you take a short rest.</line>
       </block>
    </item>
 
@@ -478,8 +569,8 @@
       <block>
          <name>Property</name>
          <line>While ridden, the mount wearing this barding gains resist 5 to all damage.</line>
-         <line indent="1"><![CDATA[<i>Level 11:</i>]]> Resist 10.</line>
-         <line indent="1"><![CDATA[<i>Level 21:</i>]]> Resist 15.</line>
+         <line indent="1"><name>Level 11</name>Resist 10.</line>
+         <line indent="1"><name>Level 21</name>Resist 15.</line>
       </block>
    </item>
 
@@ -520,17 +611,17 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> For 1 hour, the item plays a pleasant tune that can be heard within 10 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> This power is an encounter power instead.</line>
+         <line><name>Effect</name>For 1 hour, the item plays a pleasant tune that can be heard within 10 squares.</line>
+         <line indent="1"><name>Level 23</name>This power is an encounter power instead.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <keyword>Charm</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> The item must be playing music.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> This power does not have the requirement.</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a +2 item bonus to attack rolls with Charm powers until the end of your next turn.</line>
+         <line><name>Requirement</name>The item must be playing music.</line>
+         <line indent="1"><name>Level 13</name>This power does not have the requirement.</line>
+         <line><name>Effect</name>You gain a +2 item bonus to attack rolls with Charm powers until the end of your next turn.</line>
       </block>
    </item>
 
@@ -552,8 +643,8 @@
          <keyword>Mount</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> The mount is targeted by a close or area attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering attack does not target the mount.</line>
+         <line><name>Trigger</name>The mount is targeted by a close or area attack</line>
+         <line><name>Effect</name>The triggering attack does not target the mount.</line>
       </block>
    </item>
 
@@ -594,8 +685,8 @@
       <block>
          <name>Property</name>
          <line>When you use your <![CDATA[<i>second wind</i>]]>, you gain a +2 bonus to damage the first time you hit before the end of your next turn.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> +4 bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> +6 bonus.</line>
+         <line indent="1"><name>Level 12</name>+4 bonus.</line>
+         <line indent="1"><name>Level 22</name>+6 bonus.</line>
          <line>If you are raging when you use your <![CDATA[<i>second wind</i>]]>, you also gain a +1 bonus to attack rolls until you hit, or until the end of your next turn, whichever comes first.</line>
       </block>
    </item>
@@ -619,9 +710,9 @@
       <type>Wondrous Item</type>
       <block>
          <name>Property</name>
-         <line>Whenever you complete an extended rest in the restful bedroll, you gain 1d8 temporary hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 11:</i>]]> 2d8 temporary hit points, and an additional healing surge for the day</line>
-         <line indent="1"><![CDATA[<i>Level 21:</i>]]> 3d8 temporary hit points, and two additional healing surges for the day</line>
+         <line>Whenever you complete an extended rest in the restful bedroll, you gain 1d8 temporary hit points. These temporary hit points last for 4 hours or until the end of the next encounter, whichever comes first.</line>
+         <line indent="1"><name>Level 11</name>2d8 temporary hit points, and an additional healing surge for the day</line>
+         <line indent="1"><name>Level 21</name>3d8 temporary hit points, and two additional healing surges for the day</line>
       </block>
    </item>
 
@@ -641,7 +732,7 @@
       <block>
          <name>Property</name>
          <line>The mount's carrying capacity increases by 50 percent in all categories (normal load, heavy load, and maximum drag).</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> By 100 percent.</line>
+         <line indent="1"><name>Level 13</name>By 100 percent.</line>
       </block>
    </item>
 
@@ -666,9 +757,9 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Melee 1 (one dying creature); The target gains resist 20 all.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> Resist 35.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> Resist 50, and the target gains a +2 item bonus to saving throws, including death saves.</line>
+         <line><name>Effect</name>Melee 1 (one dying creature); The target gains resist 20 all.</line>
+         <line indent="1"><name>Level 12</name>Resist 35.</line>
+         <line indent="1"><name>Level 22</name>Resist 50, and the target gains a +2 item bonus to saving throws, including death saves.</line>
          <line>The effect lasts until the target is no longer dying or until the shroud is removed (a standard action), whichever comes first.</line>
       </block>
    </item>
@@ -702,9 +793,9 @@
       <block>
          <name>Properties</name>
          <line>A spellshard has the following properties:</line>
-         <line>&#9658; Rituals, Wizard spells, and similar effects can be stored in the shard. Each item is stored as mental information rather than written words. A spellshard is equivalent to a spellbook or a ritual book for the purposes of holding such information.</line>
+         <line><bullet />Rituals, Wizard spells, and similar effects can be stored in the shard. Each item is stored as mental information rather than written words. A spellshard is equivalent to a spellbook or a ritual book for the purposes of holding such information.</line>
          <line indent="1">The cost of storing the information is unchanged, and using the stored information functions normally in all ways.</line>
-         <line>&#9658; A spellshard can be enchanted like it were a tome implement.</line>
+         <line><bullet />A spellshard can be enchanted like it were a tome implement.</line>
       </block>
    </item>
 
@@ -722,7 +813,7 @@
          <keyword>Illusion</keyword>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You light a campfire using this flint.</line>
+         <line><name>Effect</name>You light a campfire using this flint.</line>
          <line>The fire burns without smoke or sound, and sheds bright light to a radius of 10 squares. The light is invisible from outside its radius, though creatures and objects within that area can be seen if the surrounding lighting conditions allow it or if a viewer has darkvision.</line>
          <line>The campfire is a normal fire in all other respects, burning as long as it has fuel or until extinguished normally.</line>
          <line>The flint can be used to light lanterns and other fires as normal, but such fires gain no magical qualities.</line>
@@ -751,9 +842,9 @@
          <keyword>Healing</keyword>
          <frequency>Consumable</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You eat the biscuit. It provides you with the nutrition equivalent to a full day's worth of food.</line>
+         <line><name>Effect</name>You eat the biscuit. It provides you with the nutrition equivalent to a full day's worth of food.</line>
          <line>The first time during this day that you spend a healing surge to regain hit points, you regain 2 additional hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> 4 additional hit points.</line>
+         <line indent="1"><name>Level 13</name>4 additional hit points.</line>
          <line>You also gain a +2 power bonus to Endurance checks for 12 hours.</line>
       </block>
    </item>
@@ -850,8 +941,8 @@
          <keyword>Arcane</keyword>
          <frequency>Encounter</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must be wielding the tambourine in one hand</line>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (you and each ally in the burst); Each target can ignore difficult terrain until the end of your next turn.</line>
+         <line><name>Requirement</name>You must be wielding the tambourine in one hand</line>
+         <line><name>Effect</name>Close burst 5 (you and each ally in the burst); Each target can ignore difficult terrain until the end of your next turn.</line>
          <line>You move up to your speed.</line>
       </block>
    </item>
@@ -890,7 +981,7 @@
          <keyword>Illusion</keyword>
          <frequency>At-Will</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You create an illusion seen by any creature looking through the window. The illusion is static and remains until the window is broken or opened, or until this power is used to change the illusion or end it.</line>
+         <line><name>Effect</name>You create an illusion seen by any creature looking through the window. The illusion is static and remains until the window is broken or opened, or until this power is used to change the illusion or end it.</line>
          <line>The window can maintain a separate illusion in each direction, and a character using this power can change either or both at once.</line>
          <line>A creature taking its time to examine the illusion can attempt a Perception check against a Hard DC of the window's level. On a success, the creature can tell that it is looking at an illusion, but still can't see what is on the other side of the window.</line>
       </block>
@@ -916,8 +1007,8 @@
       <block>
          <name>Property</name>
          <line>When you jump or fall out of this window, you take damage as if the fall was 50 feet shorter.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> 150 feet shorter.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> You take no damage regardless of distance.</line>
+         <line indent="1"><name>Level 12</name>150 feet shorter.</line>
+         <line indent="1"><name>Level 22</name>You take no damage regardless of distance.</line>
       </block>
    </item>
 
@@ -938,9 +1029,9 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Melee touch (one creature); If the target is dying, it stops making death saving throws until it takes damage.</line>
+         <line><name>Effect</name>Melee touch (one creature); If the target is dying, it stops making death saving throws until it takes damage.</line>
          <line>If the target is taking untyped ongoing damage, it makes a saving throw against all such effects.</line>
-         <line indent="1"><![CDATA[<i>Level 11:</i>]]> With a +5 bonus to the save.</line>
+         <line indent="1"><name>Level 11</name>With a +5 bonus to the save.</line>
       </block>
    </item>
 

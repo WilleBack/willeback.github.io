@@ -35,6 +35,51 @@
    <list selection="30" />
 
    <item>
+      <title>Adamantine Plating</title>
+      <category>Common</category>
+      <fluff>Binding heavy adamantine plates to your body gives you insurance against your enemies' attacks</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Plate</subtype>
+      <headline auto="attached" />
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>You gain resist 2 to all damage.</line>
+         <line indent="1"><name>Level 14 or 19</name>Resist 5 to all damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>Resist 8 to all damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Addergrease Armor</title>
       <category>Uncommon</category>
       <fluff>The worn leather of this armor gleams with toxic grease</fluff>
@@ -69,19 +114,16 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Attack Power</name>
          <keyword>Poison</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy misses you with a melee attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes ongoing 5 poison damage (save ends), and you shift a number of squares equal to this armor's enhancement bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Ongoing 10 poison damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Ongoing 15 poison damage.</line>
+         <line><name>Trigger</name>An enemy misses you with a melee attack</line>
+         <line><name>Effect</name>The triggering enemy takes ongoing 5 poison damage (save ends), and you shift a number of squares equal to this armor's enhancement bonus.</line>
+         <line indent="1"><name>Level 13 or 18</name>Ongoing 10 poison damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>Ongoing 15 poison damage.</line>
       </block>
    </item>
 
@@ -120,13 +162,66 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While you are bloodied, you gain a +2 item bonus to Reflex.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Armor of Adaptable Resistance</title>
+      <category>Uncommon</category>
+      <fluff>This armor adapts to the attacks made against you, refocusing its protective power to keep you alive</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Hide</subtype> <subtype>Chain</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>You gain resist 5 against a single damage type. The damage type is chosen from the following list when the armor is created:</line>
+         <line indent="1">acid, cold, fire, force, lightning, necrotic, poison, psychic, thunder</line>
+         <line indent="1"><name>Level 12 or 17</name>resist 10.</line>
+         <line indent="1"><name>Level 22 or 27</name>resist 15.</line>
+         <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> The armor's resistance increases by 5 until the end of your next turn.</line>
+         <line indent="1"><![CDATA[<i>Level 24 or 29:</i> <span style="font-variant:small-caps;"><b>Augment 3:</b></span>]]> The armor's resistance increases by 5 until the end of the encounter.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Augmentable</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You take damage of a type or types that this armor does not provide resistance to</line>
+         <line><name>Effect</name>Choose one of the triggering damage types.</line>
+         <line>The armor's resistance changes to the chosen damage type until the end of the encounter.</line>
       </block>
    </item>
 
@@ -165,18 +260,15 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> A creature you have marked with your Aegis of Shielding targets you and at least one of your allies with an attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> The damage from the triggering attack is reduced by 5 + the armor's enhancement bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> 10 + the armor's enhancement bonus</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> 15 + the armor's enhancement bonus</line>
+         <line><name>Trigger</name>A creature you have marked with your Aegis of Shielding targets you and at least one of your allies with an attack</line>
+         <line><name>Effect</name>The damage from the triggering attack is reduced by 5 + the armor's enhancement bonus.</line>
+         <line indent="1"><name>Level 12 or 17</name>10 + the armor's enhancement bonus</line>
+         <line indent="1"><name>Level 22 or 27</name>15 + the armor's enhancement bonus</line>
       </block>
    </item>
 
@@ -215,10 +307,7 @@
          <price>2,125,000</price>
       </level>
       <type>Amor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain a +2 item bonus to saving throws against ongoing damage.</line>
@@ -260,10 +349,7 @@
          <price>2,625,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Bluff checks and Intimidate checks</text>
@@ -276,7 +362,7 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Ranged sight (one creature); You place your curse on the target. This counts as using your your <![CDATA[<i>warlock's curse</i>]]>, including the limit of only once per turn.</line>
+         <line><name>Effect</name>Ranged sight (one creature); You place your curse on the target. This counts as using your your <![CDATA[<i>warlock's curse</i>]]>, including the limit of only once per turn.</line>
       </block>
    </item>
 
@@ -315,10 +401,7 @@
          <price>2,625,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Healing surge value</text>
@@ -360,18 +443,15 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must have your <![CDATA[<i>second wind</i>]]> available</line>
-         <line><![CDATA[<i>Effect:</i>]]> You use your <![CDATA[<i>second wind</i>]]>, and regain an additional 1d6 hit points per plus of the armor.</line>
-         <line><![CDATA[<i>Special:</i>]]> If you have the Dwarven Resilience racial trait, you can use this power as a free action on your turn instead.</line>
+         <line><name>Requirement</name>You must have your <![CDATA[<i>second wind</i>]]> available</line>
+         <line><name>Effect</name>You use your <![CDATA[<i>second wind</i>]]>, and regain an additional 1d6 hit points per plus of the armor.</line>
+         <line><name>Special</name>If you have the Dwarven Resilience racial trait, you can use this power as a free action on your turn instead.</line>
       </block>
    </item>
 
@@ -410,13 +490,10 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
-         <text>Escape attempts</text>
+         <text><![CDATA[<i>escape</i>]]> attempts</text>
       </headline>
       <block>
          <name>Property</name>
@@ -459,10 +536,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>When you finish a short or extended rest wearing this armor, choose one at-will martial power or encounter martial power known by you or an ally and that has a level. The armor stores the chosen power.</line>
@@ -516,10 +590,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Perception checks</text>
@@ -528,8 +599,8 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy targets you with an attack and has combat advantage for the attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You don't grant combat advantage to the triggering enemy for the triggering attack.</line>
+         <line><name>Trigger</name>An enemy targets you with an attack and has combat advantage for the attack</line>
+         <line><name>Effect</name>You don't grant combat advantage to the triggering enemy for the triggering attack.</line>
          <line>If the triggering attack can only target a creature granting combat advantage, you are no longer a valid target.</line>
       </block>
    </item>
@@ -569,16 +640,13 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain resist 5 against a single damage type. The damage type is chosen from the following list when the armor is created:</line>
          <line indent="1">acid, cold, fire, force, lightning, necrotic, poison, psychic, thunder</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> resist 10.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> resist 15.</line>
+         <line indent="1"><name>Level 12 or 17</name>resist 10.</line>
+         <line indent="1"><name>Level 22 or 27</name>resist 15.</line>
       </block>
    </item>
 
@@ -617,20 +685,17 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
-         <line>You gain a +1 item bonus to saving throws against ongoing damage.</line>
+         <line>You gain a +2 item bonus to saving throws against ongoing damage.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must be taking ongoing damage</line>
-         <line><![CDATA[<i>Effect:</i>]]> The ongoing damage ends, and you gain regeneration equal to the ongoing damage. The regeneration lasts until the end of the encounter.</line>
+         <line><name>Requirement</name>You must be taking ongoing damage</line>
+         <line><name>Effect</name>The ongoing damage ends, and you gain regeneration equal to the ongoing damage. The regeneration lasts until the end of the encounter.</line>
       </block>
    </item>
 
@@ -669,10 +734,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>When you use a Channel Divinity power, you gain a +2 item bonus to AC and Fortitude until the end of your next turn.</line>
@@ -714,10 +776,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype> <subtype>Chain</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While bloodied, you gain a +1 bonus to Will.</line>
@@ -726,8 +785,102 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You are surprised</line>
-         <line><![CDATA[<i>Effect:</i>]]> You are no longer surprised.</line>
+         <line><name>Trigger</name>You are surprised</line>
+         <line><name>Effect</name>You are no longer surprised.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Battle Harness</title>
+      <category>Common</category>
+      <fluff>Attack first, have your weapons ready, keep your vitals safe - this armor does it all</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh" />
+      <headline>
+         <name>Item Bonus</name>
+         <text>Initiative checks</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>You can draw a sheathed weapon or retrieve a stowed item as a free action instead of a minor action.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bear Spirit Armor</title>
+      <category>Common</category>
+      <fluff>Crafted from bear hide and stitched with invocations to the beast's spirit, this armor rewards fury with a bear's endurance</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Utility Power</name>
+         <keyword>Primal</keyword> <keyword>Spirit</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An ally within 5 squares of your spirit companion hits an enemy</line>
+         <line><name>Effect</name>Close spirit burst 5 (each ally in the burst); You and each target gain temporary hit points equal to 5 + your Constitution modifier. These temporary hit points last until the end of the encounter.</line>
+         <line indent="1"><name>Level 14 or 19</name>Equal to 10 + your Constitution modifier.</line>
+         <line indent="1"><name>Level 24 or 29</name>Equal to 15 + your Constitution modifier.</line>
       </block>
    </item>
 
@@ -766,16 +919,150 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a charge attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You make a <![CDATA[<i>melee basic attack</i>]]> against the same target, with a +2 power bonus to the attack roll.</line>
+         <line><name>Trigger</name>You hit with a charge attack</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> against the same target, with a +2 power bonus to the attack roll.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Black Iron Armor</title>
+      <category>Common</category>
+      <fluff>The black metal of this armor glows red when violence flares</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>You gain resist 5 fire and resist 5 necrotic.</line>
+         <line indent="1"><name>Level 14 or 19</name>Resist 10 and resist 10.</line>
+         <line indent="1"><name>Level 24 or 29</name>Resist 15 and resist 15.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bloodcut Armor</title>
+      <category>Common</category>
+      <fluff>This armor has a crimson tinge that flares blood red when its power is activated</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Utility Power</name>
+         <keyword>Daily</keyword>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must be bloodied.</line>
+         <line><name>Effect</name>You gain resist 10 all until the end of your next turn.</line>
+         <line indent="1"><name>Level 14 or 19</name>Resist 15.</line>
+         <line indent="1"><name>Level 24 or 29</name>Resist 20.</line>
+         <line><name>Special</name>As part of a short rest, you can expend a healing surge to recharge this power.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bold Victory Armor</title>
+      <category>Common</category>
+      <fluff>The magic that flows through this impressive armor bolsters you or your friend as the tide of battle turns towards victory</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Chain</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You bloody an enemy, or an ally within 5 squares of you bloodies an enemy</line>
+         <line><name>Effect</name>The triggering character gains a +2 power bonus to AC until the end of the acting creature's next turn.</line>
       </block>
    </item>
 
@@ -814,18 +1101,64 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Teleportation</keyword>
          <frequency>Daily</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must be adjacent to a wall.</line>
-         <line><![CDATA[<i>Effect:</i>]]> You teleport to the other side of the wall. This teleport does not require line of sight and moves you no more than 3 squares, allowing you to teleport past a wall no more than 2 squares thick.</line>
+         <line><name>Requirement</name>You must be adjacent to a wall.</line>
+         <line><name>Effect</name>You teleport to the other side of the wall. This teleport does not require line of sight and moves you no more than 3 squares, allowing you to teleport past a wall no more than 2 squares thick.</line>
          <line>If you attempt to teleport into an occupied square or past a wall that is too thick, you go nowhere. Your move action is spent, but you regain this power when you next take a short rest.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Burrower Skin Armor</title>
+      <category>Common</category>
+      <fluff>The hide of burrowing aberrants helps you resist being held in place and avoid the resks that come with lack of mobility</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype> <subtype>Scale</subtype>
+      <headline auto="armorenh" />
+      <headline>
+         <name>Item Bonus</name>
+         <text><![CDATA[<i>escape</i>]]> attempts</text>
+      </headline>
+      <block>
+         <name>Propertis</name>
+         <line>You gain the following two benefits</line>
+         <line><bullet />You gain a +2 item bonus to saving throws against effects that restrain or immobilize you.</line>
+         <line><bullet />If you have a burrow speed, it increases by 1 square.</line>
+         <line indent="1"><name>Level 24 or 29</name>By 2 squares.</line>
       </block>
    </item>
 
@@ -864,15 +1197,54 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, you don't provoke <![CDATA[<i>opportunity attacks</i>]]> and can't be grabbed. This power doesn't end an existing grab.</line>
+         <line><name>Effect</name>Until the end of your next turn, you don't provoke <![CDATA[<i>opportunity attacks</i>]]> and can't be grabbed. This power doesn't end an existing grab.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Crystal Armor</title>
+      <category>Common</category>
+      <fluff>Seemingly made of solid quartz, this armor bolsters your mental abilities when you're badly injured</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>While you are bloodied, you gain a +2 item bonus to Will.</line>
       </block>
    </item>
 
@@ -911,17 +1283,107 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy hits you with an attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes a -3 penalty to attack rolls (save ends).</line>
-         <line indent="1"><![CDATA[<i>Aftereffect:</i>]]> -2 penalty to attack rolls (save ends).</line>
+         <line><name>Trigger</name>An enemy hits you with an attack</line>
+         <line><name>Effect</name>The triggering enemy takes a -3 penalty to attack rolls (save ends).</line>
+         <line indent="1"><name>Aftereffect</name>-2 penalty to attack rolls (save ends).</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Darkleaf Armor</title>
+      <category>Common</category>
+      <fluff>Darkleaves from the gravetrees of the Shadowfell gives this armor its protective properties</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>You gain a +2 item bonus to AC. You lose this bonus the first time you are hit in an encounter, and regain it when you take a rest.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Dazzling Plate</title>
+      <category>Common</category>
+      <fluff>Favored by paladins of Pelor, this shining suit of polished mithral plate strengthens your spirit and dazzles your foes</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Plate</subtype>
+      <headline>
+         <name>Enhancement Bonuns</name>
+         <text>AC</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>You gain a +2 item bonus to all defenses against Charm, Fear, and Psychic effects.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Close burst 1 (each creature in the burst); Each target takes a -2 penalty to attack rolls (save ends).</line>
       </block>
    </item>
 
@@ -960,15 +1422,12 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain resist 5 necrotic, and a +2 item bonus to saving throws against effects that include ongoing necrotic damage.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> Resist 10.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> Resist 15.</line>
+         <line indent="1"><name>Level 12 or 17</name>Resist 10.</line>
+         <line indent="1"><name>Level 22 or 27</name>Resist 15.</line>
       </block>
    </item>
 
@@ -1007,17 +1466,14 @@
          <price>2,125,000</price>
       </level>
       <type>Amor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Augmentable</keyword> <keyword>Psionic</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy hits you</line>
-         <line><![CDATA[<i>Effect:</i>]]> Until the start of the triggering creature's next turn, you gain a +2 power bonus to the defense that the triggering attack hit.</line>
+         <line><name>Trigger</name>An enemy hits you</line>
+         <line><name>Effect</name>Until the start of the triggering creature's next turn, you gain a +2 power bonus to the defense that the triggering attack hit.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> +5 power bonus.</line>
       </block>
    </item>
@@ -1057,16 +1513,13 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You fail a saving throw</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a +2 power bonus to the triggering saving throw.</line>
+         <line><name>Trigger</name>You fail a saving throw</line>
+         <line><name>Effect</name>You gain a +2 power bonus to the triggering saving throw.</line>
       </block>
    </item>
 
@@ -1105,17 +1558,62 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Divine</keyword>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy hits you with a melee or close attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a bonus to damage rolls against the triggering enemy until the end of your next turn. The bonus equals this armor's enhancement bonus.</line>
+         <line><name>Trigger</name>An enemy hits you with a melee or close attack</line>
+         <line><name>Effect</name>You gain a bonus to damage rolls against the triggering enemy until the end of your next turn. The bonus equals this armor's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Dragonclaw Armor</title>
+      <category>Uncommon</category>
+      <fluff>Sharp talons curl out from between the folds of this suit of armor</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Attack Power</name>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>A creature grabs you</line>
+         <line><name>Effect</name>You use the <![CDATA[<i>escape</i>]]> action with a +2 power bonus to the check.</line>
+         <line>You deal 10 damage to the triggering creature, or half that if your check failed.</line>
+         <line indent="1"><name>Level 14 or 19</name>20 damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>30 damage.</line>
       </block>
    </item>
 
@@ -1154,10 +1652,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Endurance checks</text>
@@ -1167,7 +1662,60 @@
          <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You regain hit points equal to your healing surge value.</line>
+         <line><name>Effect</name>You regain hit points equal to your healing surge value.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Ectoplasmic Armor</title>
+      <category>Common</category>
+      <fluff>This armor, covered in mottled patterns that shift with your mood, lets you take on the form of a spirit</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Proeprty</name>
+         <line>You gain resist 5 psychic.</line>
+         <line indent="1"><name>Level 14 or 19</name>Resist 10.</line>
+         <line indent="1"><name>Level 24 or 29</name>Resist 15.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Augmentable</keyword> <keyword>Psionic</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>An enemy hits you with an attack</line>
+         <line><name>Effect</name>You are insubstantial until the end of your next turn.</line>
+         <line indent="1"><augment>1</augment>You are also phasing until the end of your next turn.</line>
       </block>
    </item>
 
@@ -1206,15 +1754,61 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>The maximum distance you can teleport increases by 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> By 2 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> By 3 squares.</line>
+         <line indent="1"><name>Level 13 or 18</name>By 2 squares.</line>
+         <line indent="1"><name>Level 23 or 28</name>By 3 squares.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Eldritch Serpent Scales</title>
+      <category>Common</category>
+      <fluff>The overlapping scales of this armor are tken from magical serpents</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Scale</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>This armor does not have a speed penalty.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You gain a power bonus to damage rolls with arcane powers until the end of your next turn. The power bonus equals this armor's enhancement bonus.</line>
       </block>
    </item>
 
@@ -1253,10 +1847,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain a +2 bonus to escape checks.</line>
@@ -1266,8 +1857,8 @@
          <keyword>Augmentable</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You become immobilized</line>
-         <line><![CDATA[<i>Effect:</i>]]> You are no longer immobilized, and you shift 1 square.</line>
+         <line><name>Trigger</name>You become immobilized</line>
+         <line><name>Effect</name>You are no longer immobilized, and you shift 1 square.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> Shift a number of squares up to one-half your speed.</line>
       </block>
    </item>
@@ -1307,10 +1898,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Heal checks made to aid you</text>
@@ -1320,10 +1908,58 @@
          <keyword>Divine</keyword> <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You use a Channel Divinity power</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a +2 item bonus to AC until the end of the encounter. Also, you regain 5 hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> Regain 10 hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> Regain 15 hit points.</line>
+         <line><name>Trigger</name>You use a Channel Divinity power</line>
+         <line><name>Effect</name>You gain a +2 item bonus to AC until the end of the encounter. Also, you regain 5 hit points.</line>
+         <line indent="1"><name>Level 12 or 17</name>Regain 10 hit points.</line>
+         <line indent="1"><name>Level 22 or 27</name>Regain 15 hit points.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Feedback Armor</title>
+      <category>Common</category>
+      <fluff>Crackling psychic energy cascades around you, flaring outwards when you mentally assault your foe</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Attack Power</name>
+         <keyword>Augmentable</keyword> <keyword>Psionic</keyword> <keyword>Psychic</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You use a Psychic power</line>
+         <line><name>Effect</name>Each creature adjacent to you takes psychic damage equal to 1d6 per plus of this armor.</line>
+         <line indent="1"><augment>2</augment>Equal to 2d6 per plus of this armor.</line>
+         <line indent="1"><name>Level 24 or 29</name><augment>4</augment>Equal to 2d8 per plus of this armor.</line>
       </block>
    </item>
 
@@ -1362,10 +1998,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You automatically succeed on saving throws against ongoing fire damage.</line>
@@ -1375,7 +2008,7 @@
          <keyword>Fire</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, any creature that hits you with a melee attack takes fire damage equal to 2 + three times this armor's enhancement bonus.</line>
+         <line><name>Effect</name>Until the end of your next turn, any creature that hits you with a melee attack takes fire damage equal to 2 + three times this armor's enhancement bonus.</line>
       </block>
    </item>
 
@@ -1414,17 +2047,14 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Augmentable</keyword>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You take damage from an attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain concealment until the start of the triggering attacker's next turn.</line>
+         <line><name>Trigger</name>You take damage from an attack</line>
+         <line><name>Effect</name>You gain concealment until the start of the triggering attacker's next turn.</line>
          <line indent="1"><![CDATA[<b>Augment 1:</b>]]> You regain the use of this power at the start of your next turn.</line>
       </block>
    </item>
@@ -1464,10 +2094,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain a +2 item bonus to death saving throws.</line>
@@ -1510,17 +2137,14 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Saving throws against Fear effects</text>
       </headline>
       <block>
          <name>Property</name>
-         <line>When you use your <![CDATA[<i>second wind</i>]]>, you gain temporary hit points equal to three times this armor's enhancement bonus.</line>
+         <line>When you use your <![CDATA[<i>second wind</i>]]>, you gain temporary hit points equal to three times this armor's enhancement bonus. These temporary hit points last until the end of the encounter.</line>
       </block>
    </item>
 
@@ -1559,17 +2183,14 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Divine</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You place your Oath of Enmity on a creature</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain resist all against the triggering creature until the end of the encounter or until it is no longer your oath target. The resist equals this armor's enhancement bonus.</line>
+         <line><name>Trigger</name>You place your Oath of Enmity on a creature</line>
+         <line><name>Effect</name>You gain resist all against the triggering creature until the end of the encounter or until it is no longer your oath target. The resist equals this armor's enhancement bonus.</line>
       </block>
    </item>
 
@@ -1608,10 +2229,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>When you spend an action point to take an extra action, you also gain a +2 item bonus to all defenses until the end of your next turn.</line>
@@ -1620,8 +2238,8 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> you spend an action points</line>
-         <line><![CDATA[<i>Effect:</i>]]> You forgo the bonus to all defenses granted by this armor's property.</line>
+         <line><name>Trigger</name>you spend an action points</line>
+         <line><name>Effect</name>You forgo the bonus to all defenses granted by this armor's property.</line>
          <line>Instead, one ally of your choice within 5 squares of you can use his or her <![CDATA[<i>second wind</i>]]> as a free reaction.</line>
       </block>
    </item>
@@ -1661,16 +2279,13 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Attack Power</name>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy reduces you to 0 hit points or fewer</line>
-         <line><![CDATA[<i>Effect:</i>]]> You cannot become dying or unconscious until this power has been resolved.</line>
+         <line><name>Trigger</name>An enemy reduces you to 0 hit points or fewer</line>
+         <line><name>Effect</name>You cannot become dying or unconscious until this power has been resolved.</line>
          <line>After the triggering attack has been resolved, you make a <![CDATA[<i>melee basic attack</i>]]> with a bonus to the attack roll and damage roll equal to this armor's plus.</line>
       </block>
    </item>
@@ -1710,10 +2325,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While you are in beast form, you gain a +2 item bonus to Reflex.</line>
@@ -1723,7 +2335,7 @@
          <keyword>Beast Form</keyword>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You shift 2 squares.</line>
+         <line><name>Effect</name>You shift 2 squares.</line>
       </block>
    </item>
 
@@ -1762,10 +2374,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Endurance checks to resist disease</text>
@@ -1773,15 +2382,15 @@
       <block>
          <name>Property</name>
          <line>You gain resist 5 poison, and gain a +5 item bonus to saving throws against Poison effects.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> Resist 10 poison.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> Resist 15 poison.</line>
+         <line indent="1"><name>Level 12 or 17</name>Resist 10 poison.</line>
+         <line indent="1"><name>Level 22 or 27</name>Resist 15 poison.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You are subject to a Poison effect</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering effect immediately ends.</line>
+         <line><name>Trigger</name>You are subject to a Poison effect</line>
+         <line><name>Effect</name>The triggering effect immediately ends.</line>
       </block>
    </item>
 
@@ -1820,10 +2429,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While you are bloodied, you gain a +2 item bonus to Will.</line>
@@ -1865,22 +2471,19 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Attack Power</name>
          <keyword>Augmentable</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy misses you with a melee attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes 1d6 damage.</line>
-         <line indent="1"><![CDATA[<i>Level 8:</i>]]> 2d6 damage.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> 3d6 damage.</line>
-         <line indent="1"><![CDATA[<i>Level 18:</i>]]> 4d6 damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> 5d6 damage.</line>
-         <line indent="1"><![CDATA[<i>Level 28:</i>]]> 6d6 damage.</line>
+         <line><name>Trigger</name>An enemy misses you with a melee attack</line>
+         <line><name>Effect</name>The triggering enemy takes 1d6 damage.</line>
+         <line indent="1"><name>Level 8</name>2d6 damage.</line>
+         <line indent="1"><name>Level 13</name>3d6 damage.</line>
+         <line indent="1"><name>Level 18</name>4d6 damage.</line>
+         <line indent="1"><name>Level 23</name>5d6 damage.</line>
+         <line indent="1"><name>Level 28</name>6d6 damage.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> Roll d10s for damage instead of d6s.</line>
       </block>
    </item>
@@ -1920,17 +2523,14 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Healing</keyword> <keyword>Primal</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy scores a critical hit against you</line>
-         <line><![CDATA[<i>Effect:</i>]]> You spend a healing surge to regain a number of hit points equal to your healing surge value + twice this armor's enhancement bonus.</line>
+         <line><name>Trigger</name>An enemy scores a critical hit against you</line>
+         <line><name>Effect</name>You spend a healing surge to regain a number of hit points equal to your healing surge value + twice this armor's enhancement bonus.</line>
       </block>
    </item>
 
@@ -1969,28 +2569,25 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain resist 5 necrotic.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Resist 10 necrotic.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Resist 15 necrotic.</line>
+         <line indent="1"><name>Level 13 or 18</name>Resist 10 necrotic.</line>
+         <line indent="1"><name>Level 23 or 28</name>Resist 15 necrotic.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must be bloodied</line>
-         <line><![CDATA[<i>Effect:</i>]]> You regain a number of hit points equal to 15 - the number of healing surges you have remaining.</line>
-         <line indent="1"><![CDATA[<i>Level 8:</i>]]> Equal to 20 - the number of healing surges remaining.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> Equal to 25 - the number of healing surges remaining.</line>
-         <line indent="1"><![CDATA[<i>Level 18:</i>]]> Equal to 30 - the number of healing surges remaining.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> Equal to 35 - the number of healing surges remaining.</line>
-         <line indent="1"><![CDATA[<i>Level 28:</i>]]> Equal to 40 - the number of healing surges remaining.</line>
+         <line><name>Requirement</name>You must be bloodied</line>
+         <line><name>Effect</name>You regain a number of hit points equal to 15 - the number of healing surges you have remaining.</line>
+         <line indent="1"><name>Level 8</name>Equal to 20 - the number of healing surges remaining.</line>
+         <line indent="1"><name>Level 13</name>Equal to 25 - the number of healing surges remaining.</line>
+         <line indent="1"><name>Level 18</name>Equal to 30 - the number of healing surges remaining.</line>
+         <line indent="1"><name>Level 23</name>Equal to 35 - the number of healing surges remaining.</line>
+         <line indent="1"><name>Level 28</name>Equal to 40 - the number of healing surges remaining.</line>
       </block>
    </item>
 
@@ -2029,16 +2626,13 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Chain</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An adjacent enemy misses you with a melee attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You shift 1 square, and then slide the triggering enemy into the space you vacated.</line>
+         <line><name>Trigger</name>An adjacent enemy misses you with a melee attack</line>
+         <line><name>Effect</name>You shift 1 square, and then slide the triggering enemy into the space you vacated.</line>
       </block>
    </item>
 
@@ -2118,23 +2712,20 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>At-Will</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You take a -1 penalty to AC until the end of your next turn.</line>
+         <line><name>Effect</name>You take a -1 penalty to AC until the end of your next turn.</line>
          <line>While you have this penalty, allies adjacent to you gain a +1 power bonus to AC.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An ally adjacent to you is targeted by an attack against AC</line>
-         <line><![CDATA[<i>Effect:</i>]]> You take a penalty to AC equal to 1 + this armor's plus, and the triggering ally gains an equal power bonus to AC. Both modifiers last until the start of the triggering enemy's next turn.</line>
+         <line><name>Trigger</name>An ally adjacent to you is targeted by an attack against AC</line>
+         <line><name>Effect</name>You take a penalty to AC equal to 1 + this armor's plus, and the triggering ally gains an equal power bonus to AC. Both modifiers last until the start of the triggering enemy's next turn.</line>
       </block>
    </item>
 
@@ -2173,10 +2764,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>Each time you finish a short rest after a combat where you were bloodied, the enhancement bonus of this armor increases by 1.</line>
@@ -2219,10 +2807,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While you have at least 1 power point, you gain a +2 item bonus to saving throws against effects that daze, dominate, or stun you, or that knock you unconscious.</line>
@@ -2264,16 +2849,13 @@
          <price>2,625,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You are hit by a melee or ranged attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You take half damage from the triggering attack.</line>
+         <line><name>Trigger</name>You are hit by a melee or ranged attack</line>
+         <line><name>Effect</name>You take half damage from the triggering attack.</line>
       </block>
    </item>
 
@@ -2312,14 +2894,8 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Plate</subtype>
-      <headline>
-         <name>Attached Component</name>
-         <text>You must have the Living Construct racial trait to use this item.</text>
-      </headline>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="attached" />
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>This armor has no armor check penalty or speed penalty.</line>
@@ -2361,10 +2937,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While you're in darkness or dim light (including starlight), you gain a +1 bonus to AC.</line>
@@ -2406,17 +2979,14 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Properties</name>
          <line>You gain the following two benefits:</line>
-         <line>&#9658; You gain resist 5 psychic.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Resist 10 psychic.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Resist 15 psychic.</line>
-         <line>&#9658; You gain a +2 item bonus to savings throws against Charm, Fear, or Psychic effects.</line>
+         <line><bullet />You gain resist 5 psychic.</line>
+         <line indent="1"><name>Level 13 or 18</name>Resist 10 psychic.</line>
+         <line indent="1"><name>Level 23 or 28</name>Resist 15 psychic.</line>
+         <line><bullet />You gain a +2 item bonus to savings throws against Charm, Fear, or Psychic effects.</line>
       </block>
    </item>
 
@@ -2455,15 +3025,12 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>When you hit a target you have chosen as your quarry using your Hunter's Quarry class feature, you gain a +1 bonus to all defenses against attacks made by that quarry until the end of your next turn.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2 bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3 bonus.</line>
+         <line indent="1"><name>Level 13 or 18</name>+2 bonus.</line>
+         <line indent="1"><name>Level 23 or 28</name>+3 bonus.</line>
       </block>
    </item>
 
@@ -2502,10 +3069,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While you are in beast form, you gain a +1 item bonus to Fortitude and Will.</line>
@@ -2515,8 +3079,8 @@
          <keyword>Beast Form</keyword> <keyword>Primal</keyword>
          <frequency>Daily</frequency>
          <action>Opportunity</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy adjacent to you shifts</line>
-         <line><![CDATA[<i>Effect:</i>]]> Until the start of the triggering creature's next turn, you gain a bonus to attack rolls and damage rolls against it. The bonus equals this armor's enhancement bonus.</line>
+         <line><name>Trigger</name>An enemy adjacent to you shifts</line>
+         <line><name>Effect</name>Until the start of the triggering creature's next turn, you gain a bonus to attack rolls and damage rolls against it. The bonus equals this armor's enhancement bonus.</line>
       </block>
    </item>
 
@@ -2562,8 +3126,8 @@
       <block>
          <name>Property</name>
          <line>You gain resist 5 all against attacks from swarms.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> Resist 10 all.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> Resist 15 all.</line>
+         <line indent="1"><name>Level 12 or 17</name>Resist 10 all.</line>
+         <line indent="1"><name>Level 22 or 27</name>Resist 15 all.</line>
          <line>In addition, you can move through a space occupied by a swarm, and your movement doesn't provoke <![CDATA[<i>opportunity attacks</i>]]> from swarms.</line>
       </block>
    </item>
@@ -2603,15 +3167,12 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>When an enemy scores a critical hit against you with a melee attack, that enemy takes damage equal to 1d10 + your Dexterity modifier. This counts as melee Weapon damage if the attacker has resistance or other qualities related to it.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> Equal to 2d10 + your Dexterity modifier.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> Equal to 3d10 + your Dexterity modifier.</line>
+         <line indent="1"><name>Level 12 or 17</name>Equal to 2d10 + your Dexterity modifier.</line>
+         <line indent="1"><name>Level 22 or 27</name>Equal to 3d10 + your Dexterity modifier.</line>
       </block>
    </item>
 
@@ -2650,17 +3211,14 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of the encounter, you can use the following action at-will:</line>
+         <line><name>Effect</name>Until the end of the encounter, you can use the following action at-will:</line>
          <line indent="1"><![CDATA[<b>Immediate Interrupt:</b> <i>Trigger:</i>]]> An enemy moves into a square adjacent to you; You push the triggering enemy 1 square.</line>
-         <line indent="2"><![CDATA[<i>Level 22 or 27:</i>]]> 2 squares.</line>
+         <line indent="2"><name>Level 22 or 27</name>2 squares.</line>
       </block>
    </item>
 
@@ -2699,16 +3257,13 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy misses you with a melee attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You shift 1 square.</line>
+         <line><name>Trigger</name>An enemy misses you with a melee attack</line>
+         <line><name>Effect</name>You shift 1 square.</line>
       </block>
    </item>
 
@@ -2741,10 +3296,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Perception checks</text>
@@ -2790,16 +3342,13 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An adjacent enemy makes a melee attack against you</line>
-         <line><![CDATA[<i>Effect:</i>]]> Melee 1 (the triggering enemy); The target takes 1d6 damage per plus of this armor, and ongoing damage (save ends). The ongoing damage equals twice this armor's enhancement bonus.</line>
+         <line><name>Trigger</name>An adjacent enemy makes a melee attack against you</line>
+         <line><name>Effect</name>Melee 1 (the triggering enemy); The target takes 1d6 damage per plus of this armor, and ongoing damage (save ends). The ongoing damage equals twice this armor's enhancement bonus.</line>
       </block>
    </item>
 
@@ -2832,15 +3381,12 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>At-Will</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> The robe radiates colored lights, illuminating like a torch.</line>
+         <line><name>Effect</name>The robe radiates colored lights, illuminating like a torch.</line>
          <line>You can end the illumination as a free action.</line>
       </block>
       <block>
@@ -2848,9 +3394,9 @@
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
          <line><![CDATA[<i>The robe shines bright with myriad colors</i>]]></line>
-         <line><![CDATA[<i>Attack:</i>]]> Close burst 2 (each creature in burst); item's level +5 vs. Will</line>
-         <line><![CDATA[<i>Hit:</i>]]> The target is dazed (save ends).</line>
-         <line><![CDATA[<i>Miss:</i>]]> The target cannot take opportunity actions until the end of its next turn.</line>
+         <line><name>Attack</name>Close burst 2 (each creature in burst); item's level +5 vs. Will</line>
+         <line><name>Hit</name> The target is dazed (save ends).</line>
+         <line><name>Miss</name>The target cannot take opportunity actions until the end of its next turn.</line>
       </block>
    </item>
 
@@ -2883,15 +3429,12 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Recharge</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You procure one nonmagical item worth up to 10 gp (with the DM's approval) from the robe. The item is generic (a torch or a rope, for instance), not a specific item (the key to a particular chest). The item lasts for 1 hour, then disappears.</line>
+         <line><name>Effect</name>You procure one nonmagical item worth up to 10 gp (with the DM's approval) from the robe. The item is generic (a torch or a rope, for instance), not a specific item (the key to a particular chest). The item lasts for 1 hour, then disappears.</line>
          <line><![CDATA[<i>Recharge:</i>]]> When the item disappears, you regain the use of this power.</line>
       </block>
    </item>
@@ -2931,10 +3474,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Arcana checks</text>
@@ -2980,10 +3520,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain a +1 bonus to all defenses while the oath target from your Oath of Enmity class feature is bloodied.</line>
@@ -3019,10 +3556,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Intimidate checks</text>
@@ -3033,8 +3567,8 @@
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><![CDATA[<i>You shrieak, and your armor howls with you</i>]]></line>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 1 (each enemy adjacent to you); You push each target 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> 2 squares.</line>
+         <line><name>Effect</name>Close burst 1 (each enemy adjacent to you); You push each target 1 square.</line>
+         <line indent="1"><name>Level 22 or 27</name>2 squares.</line>
       </block>
    </item>
 
@@ -3067,10 +3601,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Intimidate checks</text>
@@ -3080,7 +3611,7 @@
          <keyword>Fear</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (one creature that can hear you); The target takes a -2 penalty to attack rolls until the end of its next turn.</line>
+         <line><name>Effect</name>Close burst 5 (one creature that can hear you); The target takes a -2 penalty to attack rolls until the end of its next turn.</line>
          <line>If you have training in the Intimidate skill, the penalty is (save ends) instead.</line>
       </block>
    </item>
@@ -3120,17 +3651,14 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Primal</keyword>
          <frequency>Daily</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You shift 3 squares. You can move through enemies' spaces during this shift, though you must end your move in a legal space.</line>
-         <line indent="1"><![CDATA[<i>Level 18, 23 or 28:</i>]]> This power becomes an encounter power.</line>
+         <line><name>Effect</name>You shift 3 squares. You can move through enemies' spaces during this shift, though you must end your move in a legal space.</line>
+         <line indent="1"><name>Level 18, 23 or 28</name>This power becomes an encounter power.</line>
       </block>
    </item>
 
@@ -3163,10 +3691,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You can move 4 squares (instead of 2) during an action while you are hidden without taking a -5 penalty to Stealth checks.</line>
@@ -3208,16 +3733,13 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Augmentable</keyword> <keyword>Illusion</keyword> <keyword>Psionic</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a +2 bonus to AC until the end of the encounter.</line>
+         <line><name>Effect</name>You gain a +2 bonus to AC until the end of the encounter.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> The bonus increases to +4.</line>
          <line>Each time an attack against your AC has been resolved, reduce the bonus by 1. When the bonus drops to +0, the effect immediately ends.</line>
       </block>
@@ -3258,10 +3780,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Chain</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Bluff checks and Diplomacy checks</text>
@@ -3270,8 +3789,8 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy targets you with a melee attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering attack instead targets a creature of your choice adjacent to you.</line>
+         <line><name>Trigger</name>An enemy targets you with a melee attack</line>
+         <line><name>Effect</name>The triggering attack instead targets a creature of your choice adjacent to you.</line>
       </block>
    </item>
 
@@ -3304,10 +3823,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain an untyped bonus to escape attempts equal to this armor's enhancement bonus.</line>
@@ -3349,16 +3865,13 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must be grabbed</line>
-         <line><![CDATA[<i>Effect:</i>]]> You escape the grab, and the enemy grabbing you takes 1d6 damage per plus.</line>
+         <line><name>Requirement</name>You must be grabbed</line>
+         <line><name>Effect</name>You escape the grab, and the enemy grabbing you takes 1d6 damage per plus.</line>
       </block>
    </item>
 
@@ -3397,10 +3910,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Saving throws against untyped ongoing damage</text>
@@ -3410,7 +3920,7 @@
          <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You spend a healing surge to regain hit points equal to your healing surge value + twice this armor's enhancement bonus.</line>
+         <line><name>Effect</name>You spend a healing surge to regain hit points equal to your healing surge value + twice this armor's enhancement bonus.</line>
       </block>
    </item>
 
@@ -3449,20 +3959,17 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You gain 15 temporary hit points that last until depleted or until you take an extended rest, whichever comes first.</line>
-         <line indent="1"><![CDATA[<i>Level 8:</i>]]> 21 temporary hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> 27 temporary hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 18:</i>]]> 33 temporary hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> 40 temporary hit points.</line>
-         <line indent="1"><![CDATA[<i>Level 28:</i>]]> 50 temporary hit points.</line>
+         <line><name>Effect</name>You gain 15 temporary hit points that last until depleted or until you take an extended rest, whichever comes first.</line>
+         <line indent="1"><name>Level 8</name>21 temporary hit points.</line>
+         <line indent="1"><name>Level 13</name>27 temporary hit points.</line>
+         <line indent="1"><name>Level 18</name>33 temporary hit points.</line>
+         <line indent="1"><name>Level 23</name>40 temporary hit points.</line>
+         <line indent="1"><name>Level 28</name>50 temporary hit points.</line>
       </block>
    </item>
 
@@ -3501,17 +4008,14 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You gain 5 temporary hit points until the end of the encounter.</line>
-         <line><![CDATA[<i>Level 13 or 18:</i>]]> 7 temporary hit points.</line>
-         <line><![CDATA[<i>Level 23 or 28:</i>]]> 10 temporary hit points.</line>
+         <line><name>Effect</name>You gain 5 temporary hit points until the end of the encounter.</line>
+         <line><name>Level 13 or 18</name>7 temporary hit points.</line>
+         <line><name>Level 23 or 28</name>10 temporary hit points.</line>
       </block>
    </item>
 
@@ -3550,10 +4054,7 @@
          <price>2,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <text>Athletics checks, and Stealth checks</text>
@@ -3595,10 +4096,7 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <headline>
          <name>Item Bonus</name>
          <line>Stealth checks</line>
@@ -3610,7 +4108,7 @@
          <keyword>Illusion</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, you have concealment against enemies that are more than 2 squares away from you.</line>
+         <line><name>Effect</name>Until the end of your next turn, you have concealment against enemies that are more than 2 squares away from you.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> Total concealment instead of concealment.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> Total concealment instead of concealment, and if you used this augment outside of combat, the power lasts for 1 hour and you can use this concealment to hide. If combat starts, the concealment ends at the start of your first turn.</line>
          <line><![CDATA[<i>Special (Level 18, 23 or 28):</i>]]> As part of a short rest, you can expend a healing surge to recharge this power.</line>
@@ -3652,15 +4150,12 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Chain</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You take a -1 penalty to AC, but ignore any penalties to speed and checks caused by this armor. This persists until you use a minor action to end this effect, or until the end of your next rest, whichever comes first.</line>
+         <line><name>Effect</name>You take a -1 penalty to AC, but ignore any penalties to speed and checks caused by this armor. This persists until you use a minor action to end this effect, or until the end of your next rest, whichever comes first.</line>
       </block>
    </item>
 
@@ -3698,10 +4193,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Any</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>When you spend an action point, you gain a +1 item bonus to all attack rolls and defenses until the end of your next turn.</line>
@@ -3710,8 +4202,8 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must have an action point available</line>
-         <line><![CDATA[<i>Effect:</i>]]> You spend an action point to regain one encounter power of your choice.</line>
+         <line><name>Requirement</name>You must have an action point available</line>
+         <line><name>Effect</name>You spend an action point to regain one encounter power of your choice.</line>
       </block>
    </item>
 
@@ -3750,10 +4242,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>While you are bloodied, you gain a +2 item bonus to Fortitude.</line>
@@ -3807,8 +4296,8 @@
             <name>Attack Power</name>
             <frequency>Encounter</frequency>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <line><![CDATA[<i>Trigger:</i>]]> An enemy hits or misses you with a bull rush or charge attack</line>
-            <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes 1d6 damage per plus and is knocked prone.</line>
+            <line><name>Trigger</name>An enemy hits or misses you with a bull rush or charge attack</line>
+            <line><name>Effect</name>The triggering enemy takes 1d6 damage per plus and is knocked prone.</line>
          </block>
       </item>
    </item>
@@ -3848,10 +4337,7 @@
          <price>1,625,000</price>
       </level>
       <type>Armor</type> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain a +2 item bonus to AC against <![CDATA[<i>opportunity attacks</i>]]> while your spirit companion is present in the encounter.</line>
@@ -3894,17 +4380,14 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Utility Power</name>
          <keyword>Arcane</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with an arcane attack power</line>
-         <line><![CDATA[<i>Effect:</i>]]> Choose one ally within 5 squares of the triggering enemy. Until the end of your next turn, the chosen ally gains a power bonus to attack rolls against the triggering enemy. The power bonus equals this armor's enhancement bonus.</line>
+         <line><name>Trigger</name>You hit an enemy with an arcane attack power</line>
+         <line><name>Effect</name>Choose one ally within 5 squares of the triggering enemy. Until the end of your next turn, the chosen ally gains a power bonus to attack rolls against the triggering enemy. The power bonus equals this armor's enhancement bonus.</line>
       </block>
    </item>
    
@@ -3943,21 +4426,18 @@
          <price>2,125,000</price>
       </level>
       <type>Armor</type> <subtype>Scale</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>AC</text>
-      </headline>
+      <headline auto="armorenh" />
       <block>
          <name>Property</name>
          <line>You gain resist 5 radiant.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Resist 10.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Resist 15.</line>
+         <line indent="1"><name>Level 13 or 18</name>Resist 10.</line>
+         <line indent="1"><name>Level 23 or 28</name>Resist 15.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You change the resist you gain from this armor to one of resist fire, resist lightning, or resist thunder. This lasts until the end of the encounter.</line>
+         <line><name>Effect</name>You change the resist you gain from this armor to one of resist fire, resist lightning, or resist thunder. This lasts until the end of the encounter.</line>
       </block>
    </item>
 

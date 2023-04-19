@@ -251,10 +251,39 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:choose>
 
 		<xsl:for-each select="headline">
-			<div class="line">
-				<b><xsl:value-of select="name" /> <xsl:text>: </xsl:text></b>
-				<xsl:value-of select="text" disable-output-escaping="yes" />
-			</div>
+			<xsl:choose>
+				<xsl:when test="@auto='attached'">
+					<div class="line">
+						<b>Attached Component: </b><xsl:text>You must have the Living Construct racial trait to use this item.</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="@auto='losttech'">
+					<div class="line">
+						<b>Lost Technology: </b><xsl:text>This item is created using lost technology. Each time the item's power is used, there is a chance the item malfunctions or even detonates.</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="@auto='attackenh'">
+					<div class="line">
+						<b>Enhancement Bonus: </b><xsl:text>Attack rolls and damage rolls</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="@auto='armorenh'">
+					<div class="line">
+						<b>Enhancement Bonus: </b><xsl:text>AC</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="@auto='neckenh'">
+					<div class="line">
+						<b>Enhancement Bonus: </b><xsl:text>Fortitude, Reflex, and Will</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:otherwise>
+					<div class="line">
+						<b><xsl:value-of select="name" /> <xsl:text>: </xsl:text></b>
+						<xsl:value-of select="text" disable-output-escaping="yes" />
+					</div>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:for-each>
 
 		<xsl:for-each select="block">
@@ -283,17 +312,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:choose>
 					<xsl:when test="@indent='1'">
 						<div class="line" style="padding-left:2.3em;">
-							<xsl:value-of select="." disable-output-escaping="yes"/>
+							<xsl:call-template name="blocklinecontent" />
 						</div>
 					</xsl:when>
 					<xsl:when test="@indent='2'">
 						<div class="line" style="padding-left:3.3em;">
-							<xsl:value-of select="." disable-output-escaping="yes"/>
+							<xsl:call-template name="blocklinecontent" />
 						</div>
 					</xsl:when>
 					<xsl:otherwise>
 						<div class="line">
-							<xsl:value-of select="." disable-output-escaping="yes"/>
+							<xsl:call-template name="blocklinecontent" />
 						</div>
 					</xsl:otherwise>
 				</xsl:choose>
@@ -302,6 +331,26 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	</div>
 
+</xsl:template>
+	
+<xsl:template name="blocklinecontent">
+	<xsl:if test="name">
+		<i><xsl:value-of select="name" />: </i>
+	</xsl:if>
+	<xsl:if test="augment">
+		<span style="font-variant:small-caps;"><b>Augment <xsl:value-of select="augment" />: </b></span>
+	</xsl:if>
+	<xsl:if test="bullet">
+		&#9658;<xsl:text> </xsl:text>
+	</xsl:if>
+	<xsl:choose>
+		<xsl:when test="@auto='bard'">
+			<xsl:text>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</xsl:text>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:value-of select="text()" disable-output-escaping="yes"/>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template name="createheader">
@@ -1254,6 +1303,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:text>, </xsl:text>
 						</xsl:if>
 					</xsl:for-each></i>
+					<xsl:if test="headline/@auto='attached'">
+						<xsl:if test="count(subtype)>0">
+							<br />
+						</xsl:if>
+						<xsl:text>[Attached Component]</xsl:text>
+					</xsl:if>
 				</div>
 				<div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>
@@ -1270,6 +1325,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:text>, </xsl:text>
 						</xsl:if>
 					</xsl:for-each></i>
+					<xsl:if test="headline/@auto='attached'">
+						<xsl:if test="count(subtype)>0">
+							<br />
+						</xsl:if>
+						<xsl:text>[Attached Component]</xsl:text>
+					</xsl:if>
 				</div>
 				<div class="price" style="width:9em; float:right; text-align:right; padding:0.1em;">
 					<xsl:value-of select="level[value=$levelvalue]/price"/><xsl:text>gp</xsl:text>

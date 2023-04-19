@@ -35,6 +35,58 @@
    <list selection="30" />
 
    <item>
+      <title>Acid Lash Weapon</title>
+      <category>Common</category>
+      <fluff>A stream of acid lashes out from this melee weapon, burning a target who might otherwise be out of reach</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype> <subtype>Spear</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 acid damage per plus</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Acid</keyword>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Make a <![CDATA[<i>melee basic attack</i>]]> using this weapon. For this attack, you have reach 5 instead of what it would normally be, and your attack has the Acid keyword instead of any damage keywords it might normally have, with all damage changed to acid damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Aegis Blade</title>
       <category>Common</category>
       <fluff>This blade allows you to place your aegis on all nearby foes with a single word of power</fluff>
@@ -82,7 +134,7 @@
          <keyword>Arcane</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 3 (each enemy in burst); Each target is marked by you (save ends).</line>
+         <line><name>Effect</name>Close burst 3 (each enemy in burst); Each target is marked by you (save ends).</line>
          <line indent="1"><![CDATA[<b>Arcane Aegis:</b>]]> Targets count as being marked by your <![CDATA[<i>arcane aegis</i>]]> class power.</line>
       </block>
    </item>
@@ -128,8 +180,12 @@
       </headline>
       <headline>
          <name>Critical</name>
-         <text>+1d6 damage per plus, and each enemy adjacent to the target of the critical hit is knocked prone</text>
+         <text>+1d6 damage per plus</text>
       </headline>
+      <block>
+         <name>Critical</name>
+         <line>When you score a critical hit using this weapon, each enemy adjacent to the target of the critical hit is knocked prone.</line>
+      </block>
    </item>
 
    <item>
@@ -188,8 +244,8 @@
          <keyword>Poison</keyword> <keyword>Primal</keyword>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You score a critical hit against an enemy with this spear</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy is dazed until the start of your next turn.</line>
+         <line><name>Trigger</name>You score a critical hit against an enemy with this spear</line>
+         <line><name>Effect</name>The triggering enemy is dazed until the start of your next turn.</line>
       </block>
    </item>
 
@@ -246,7 +302,7 @@
          <keyword>Augmentable</keyword> <keyword>Psionic</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Before the end of the encounter, the first Weapon attack with this weapon that hits an aberrant creature deals +1[W] extra damage to that creature.</line>
+         <line><name>Effect</name>Before the end of the encounter, the first Weapon attack with this weapon that hits an aberrant creature deals +1[W] extra damage to that creature.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> +2[W] extra damage.</line>
       </block>
    </item>
@@ -303,8 +359,8 @@
          <keyword>Divine</keyword> <keyword>Healing</keyword>
          <frequency>At-Will</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You reduce an enemy to 0 or fewer hit points with this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (you or one ally in burst; target must be bloodied); The target regains hit points equal to twice this weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You reduce an enemy to 0 or fewer hit points with this weapon</line>
+         <line><name>Effect</name>Close burst 5 (you or one ally in burst; target must be bloodied); The target regains hit points equal to twice this weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -347,10 +403,7 @@
          <name>Requirement</name>
          <text>This enhancement can only be placed on a one-handed weapon.</text>
       </headline>
-      <headline>
-         <name>Attached Component</name>
-         <text>You must have the Living Construct racial trait to use this item.</text>
-      </headline>
+      <headline auto="attached" />
       <headline>
          <name>Enhancement Bonus</name>
          <text>Attack rolls and damage rolls</text>
@@ -401,10 +454,7 @@
          <price>2,125,000</price>
       </level>
       <type>Weapon</type> <subtype>Crossbow</subtype>
-      <headline>
-         <name>Attached Component</name>
-         <text>You must have the Living Construct racial trait to use this item.</text>
-      </headline>
+      <headline auto="attached" />
       <headline>
          <name>Enhancement Bonus</name>
          <text>Attack rolls and damage rolls</text>
@@ -467,8 +517,56 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy that has an aura with an attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy's aura ends, and the enemy cannont reactivate it (save ends).</line>
+         <line><name>Trigger</name>You hit an enemy that has an aura with an attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy's aura ends, and the enemy cannont reactivate it (save ends).</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Avalanche Hammer</title>
+      <category>Common</category>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Hammer</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d10 damage per plus and you knock the target prone on a charge</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>When you charge and make a <![CDATA[<i>melee basic attack</i>]]>, the attack deals an additiona +1[W] damage</line>
       </block>
    </item>
 
@@ -570,7 +668,7 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line auto="bard" />
       </block>
    </item>
 
@@ -619,7 +717,69 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line auto="bard" />
+      </block>
+   </item>
+   
+   <item>
+      <title>Battlecrazed Weapon</title>
+      <category>Common</category>
+      <fluff>The weapon seeks blood where it can be found, whether among the enemy or from its wielder</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Axe</subtype> <subtype>Heavy blade</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <headline>
+         <name>Item Bonus</name>
+         <text>Damage rolls against bloodied targets</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>While you are bloodied, you deal +1d6 additional damage with this weapon.</line>
+         <line indent="1"><name>Level 14 or 19</name>+2d6 additional damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>+3d6 additional damage.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You deal damage to yourself equal to your level. This damage cannot be reduced in any way.</line>
+         <line>You are considered bloodied for all purposes until the end of your next turn.</line>
       </block>
    </item>
 
@@ -670,10 +830,10 @@
          <name>Attack Power</name>
          <frequency>Encounter</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit a creature with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> You take damage equal to the weapon's plus. This damage cannot be reduced or prevented in any way.</line>
+         <line><name>Trigger</name>You hit a creature with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>You take damage equal to the weapon's plus. This damage cannot be reduced or prevented in any way.</line>
          <line>The triggering creature takes additional damage from the triggering attack equal to twice the weapon's plus.</line>
-         <line><![CDATA[<i>Special:</i>]]> You regain the use of this power the first time in an encounter you are bloodied.</line>
+         <line><name>Special</name>You regain the use of this power the first time in an encounter you are bloodied.</line>
       </block>
    </item>
 
@@ -724,7 +884,7 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You are considered bloodied for all purposes until the end of your next turn.</line>
+         <line><name>Effect</name>You are considered bloodied for all purposes until the end of your next turn.</line>
       </block>
    </item>
 
@@ -775,8 +935,8 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy is dazed until the end of your next turn.</line>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy is dazed until the end of your next turn.</line>
          <line>If the triggering enemy is an aberrant creature, it also reality-bound until the end of your next turn.</line>
          <line>While reality-bound, the enemy is restrained and cannot teleport.</line>
       </block>
@@ -828,6 +988,72 @@
       <block>
          <name>Property</name>
          <line>When you roll the maximum result on at least one of this weapon's damage dice, the target takes extra damage equal to twice this weapon's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Chainsaw Sword</title>
+      <category>Rare</category>
+      <fluff>A series of rings and chains line the blade, and beging to move on their own after a few bulls on a loose string attached to the hilt</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heaby blade</subtype>
+      <headline auto="losttech" />
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus, and if the target is undead, you can roll the critical damage twice and use the higher result</text>
+      </headline>
+      <block>
+         <name>Malfunction</name>
+         <line>When this sword's power malfunctions or when you roll a natural 1 on an attack roll using sword, a part of you catches in the chain (save ends).</line>
+         <line>While caught in the chain, you take ongoing 10 damage and a -2 penalty to all attack rolls.</line>
+         <line indent="1"><name>Level 14 or 19</name>Ongoing 15 damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>Ongoing 20 damage.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <line>This weapon deals +1[W] extra damage to undead, and only deals half damage to constructs. The GM can decide that some constructs are made of soft enough material to take normal damage.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit a creature with a melee Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering creature takes ongoing 5 damage (save ends). If the triggering attack was a critical hit, the target has a -2 penalty to the first saving throw it attemps against this ongoing damage.</line>
+         <line indent="1"><name>Level 14 or 19</name>Ongoing 10 damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>Ongoing 15 damage.</line>
       </block>
    </item>
 
@@ -930,8 +1156,8 @@
          <keyword>Arcane</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You make an arcane ranged at-will attack using this dagger, and your attack roll is an odd number</line>
-         <line><![CDATA[<i>Effect:</i>]]> After the triggering attack has been resolved, you use the same attack power against a different target. You gain a power bonus to the attack roll equal to this dagger's enhancement bonus.</line>
+         <line><name>Trigger</name>You make an arcane ranged at-will attack using this dagger, and your attack roll is an odd number</line>
+         <line><name>Effect</name>After the triggering attack has been resolved, you use the same attack power against a different target. You gain a power bonus to the attack roll equal to this dagger's enhancement bonus.</line>
       </block>
    </item>
 
@@ -1035,6 +1261,59 @@
          <line>If the weapon's owner dies while the weapon is stowed, the weapon reappears on the owner's body after a year and a day.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Communal Weapon</title>
+      <category>Common</category>
+      <fluff>Combat can bring some people together, and you can lend aid to your allies with this weapon</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d8 damage per plus when flanking</text>
+      </headline>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>An ally within 5 squares of you makes an attack roll, ability check, skill check, or saving throw</line>
+         <line><name>Effect</name>The triggering ally gains a +1 bonus to the triggering roll, check or save.</line>
+         <line><name>Special</name>You can use this power a number of times each day equal to 1 + this weapon's enhancement bonus.</line>
+      </block>
+   </item>
 
    <item>
       <title>Cursed Weapon</title>
@@ -1134,9 +1413,65 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a melee Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> This weapon absorbs power from the hit. The weapon gains a charge equal to the number of hit points of damage the triggering attack dealt.</line>
-         <line>Before the end of the encounter, the first time you would take damage from an <![CDATA[<i>arcane defiling</i>]]>, you automatically gain temporary hit points before taking that damage. The number of temporary hit points equals the charge this weapon has.</line>
+         <line><name>Trigger</name>You hit an enemy with a melee Weapon attack using this weapon</line>
+         <line><name>Effect</name>This weapon absorbs power from the hit. The weapon gains a charge equal to the number of hit points of damage the triggering attack dealt.</line>
+         <line>Before the end of the encounter, the first time you would take damage from an <![CDATA[<i>arcane defiling</i>]]>, you automatically gain temporary hit points before taking that damage. The number of temporary hit points equals the charge this weapon has. These temporary hit points last until the end of the encounter.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Deathstalker Weapon</title>
+      <category>Common</category>
+      <fluff>This weapon leaves a wound that is black and withered, and continues to plague an enemy after the attack has been made</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 necrotic damage per plus</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Necrotic</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy takes ongoing 5 necrotic damage (save ends).</line>
+         <line indent="1"><name>Level 14 or 19</name>Ongoing 10 necrotic damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>Ongoing 15 necrotic damage.</line>
+         <line>If the triggering attack has the Necrotic keyword, the target takes a -2 penalty to saving throws against this ongoing damage.</line>
       </block>
    </item>
 
@@ -1235,6 +1570,60 @@
       <block>
          <name>Property</name>
          <line>When you take the <![CDATA[<i>total defense</i> or <i>second wind</i>]]> action, you gain an item bonus to all your defenses until the start of your next turn. The bonus equals this weapon's plus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Dislocating Weapon</title>
+      <category>Uncommon</category>
+      <fluff>This weapon flickers as it strikes, transporting your enemy into a disadvantageous position among your allies</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Augmentable</keyword> <keyword>Psionic</keyword> <keyword>Teleportation</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>You teleport the triggering enemy up to 20 squares to a space adjacent to one of your allies.</line>
+         <line indent="1"><augment>2</augment>The triggering enemy grants combat advantage until the end of your next turn.</line>
       </block>
    </item>
 
@@ -1432,7 +1821,7 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You have combat advantage against the first creature you attack using this weapon during your current turn.</line>
+         <line><name>Effect</name>You have combat advantage against the first creature you attack using this weapon during your current turn.</line>
       </block>
    </item>
 
@@ -1488,13 +1877,13 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit a Large or larger creature with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering attack deals 2 extra damage against the triggering creature, or 3 extra damage if the triggering attack was ranged.</line>
-         <line indent="1"><![CDATA[<i>Level 7:</i>]]> 4 extra damage, or 6 extra damage.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> 6 extra damage, or 9 extra damage.</line>
-         <line indent="1"><![CDATA[<i>Level 17:</i>]]> 8 extra damage, or 12 extra damage.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> 10 extra damage, or 15 extra damage.</line>
-         <line indent="1"><![CDATA[<i>Level 27:</i>]]> 12 extra damage, or 18 extra damage.</line>
+         <line><name>Trigger</name>You hit a Large or larger creature with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering attack deals 2 extra damage against the triggering creature, or 3 extra damage if the triggering attack was ranged.</line>
+         <line indent="1"><name>Level 7</name>4 extra damage, or 6 extra damage.</line>
+         <line indent="1"><name>Level 12</name>6 extra damage, or 9 extra damage.</line>
+         <line indent="1"><name>Level 17</name>8 extra damage, or 12 extra damage.</line>
+         <line indent="1"><name>Level 22</name>10 extra damage, or 15 extra damage.</line>
+         <line indent="1"><name>Level 27</name>12 extra damage, or 18 extra damage.</line>
       </block>
    </item>
 
@@ -1546,6 +1935,66 @@
          <line>While you have at least 1 power point, you gain a +2 item bonus to attack rolls with <![CDATA[<i>opportunity attacks</i>]]> made with this weapon.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Earth-Splitter Axe</title>
+      <category>Uncommon</category>
+      <fluff>This stone-headed axe bears Primordial runes, which shine with dread power as you grip its handle</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Axe</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <keyword>Elemental</keyword>
+         <line>Whenever you hit one or more targets with a Weapon attack using this axe and the attack has the Acid, Cold, Fire, Lightning, or Thunder keyword, you gain temporary hit points equal to twice this axe's enhancement bonus. These temporary hit points last until the end of the encounter.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Elemental</keyword> <keyword>Zone</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You use your <![CDATA[<i>second wind</i>]]></line>
+         <line><name>Effect</name>You create a zone of coruscating elements in a <![CDATA[<b>close</b>]]> burst 2 until the end of your next turn.</line>
+         <line indent="1"><name>Level 19, 24 or 29</name><![CDATA[<b>Close</b>]]> burst 3.</line>
+         <line>The zone is difficult terrain for your enemies.</line>
+      </block>
+   </item>
 
    <item>
       <title>Earth-Wrought Hammer</title>
@@ -1590,6 +2039,59 @@
          <name>Critical</name>
          <text>The target is knocked prone, or +1d6 damage per plus if the target was already prone</text>
       </headline>
+   </item>
+   
+   <item>
+      <title>Echoing Songblade</title>
+      <category>Common</category>
+      <fluff>The echoes of your spells reverberate in the blade, hoping to be unleashed</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus; when using a bard attack, you can choose to make this thunder damage</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line auto="bard"></line>
+      </block>
+      <block>
+         <name>Critical</name>
+         <line>When you score a critical hit with a bard encounter attack using this songblade, you can use the same power again on your next turn. You must still spend the usual action to use it, but take a -2 penalty to the attack roll and can only target a single creature, regardless of how many targets the triggering power has.</line>
+      </block>
    </item>
 
    <item>
@@ -1636,6 +2138,60 @@
          <text>+1d6 damage per plus, or 1 damage per plus and the target is restrained until the end of your next turn.</text>
       </headline>
    </item>
+   
+   <item>
+      <title>Exciccating Weapon</title>
+      <category>Uncommon</category>
+      <fluff>Glowing with crimson light, this weapon leeches moisture from the air around you</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline auto="attackenh" />
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 fire and necrotic damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Creatures that have vulnerable fire or vulnerable necrotic treat damage from this weapon as being fire and necrotic for the purposes of those vulnerabilities.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fire</keyword> <keyword>Necrotic</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy takes additional fire and necrotic damage from the triggering attack equal to twoce this weapon's enhancement bonus, and is dazed until the end of your next turn.</line>
+      </block>
+   </item>
 
    <item>
       <title>Farbond Spellblade</title>
@@ -1672,10 +2228,7 @@
          <price>1,625,000</price>
       </level>
       <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>Attack rolls and damage rolls</text>
-      </headline>
+      <headline auto="attackenh" />
       <headline>
          <name>Critical</name>
          <text>+1d6 damage per plus, or +1d8 per plus when used as an implement for an arcane power</text>
@@ -1683,8 +2236,63 @@
       <block>
          <name>Properties</name>
          <line>If you have the Swordbond feature and use it with this weapon, you gain the following benefits:</line>
-         <line indent="1">&#9658; The weapon has the Heavy Thrown weapon property, and a range of 5/10.</line>
-         <line indent="1">&#9658; You can call this weapon to your hand from up to a mile away.</line>
+         <line indent="1"><bullet />The weapon has the Heavy Thrown weapon property, and a range of 5/10.</line>
+         <line indent="1"><bullet />You can call this weapon to your hand from up to a mile away.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Firewind Blade</title>
+      <category>Uncommon</category>
+      <fluff>The air around the long blade shimmers as if it were emitting heat</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype>
+      <headline auto="attackenh" />
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 fire damage per plus, and you can slide the target 1 square per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <keyword>Fire</keyword>
+         <line>Whenever you hit one or more targets with a Fire attack using this blade, one enemy adjacent to you takes fire damage after the attack has been resolved. The fire damage equals 2 + twice this weapon's enhancement bonus.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Fire</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You use your <![CDATA[<i>second wind</i>]]> during your turn</line>
+         <line><name>Effect</name>Until the end of your next turn, melee attacks made with this blade deal extra fire damage equal to 1 + this blade's enhancement bonus.</line>
       </block>
    </item>
 
@@ -1734,8 +2342,8 @@
       <block>
          <name>Property</name>
          <line>When you push, pull or slide a creature with an attack using this flail, you increase the maximum distance by 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> By 2 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> By 3 squares.</line>
+         <line indent="1"><name>Level 13 or 18</name>By 2 squares.</line>
+         <line indent="1"><name>Level 23 or 28</name>By 3 squares.</line>
       </block>
    </item>
 
@@ -1787,12 +2395,12 @@
          <keyword>Fire</keyword> <keyword>Weapon</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i> The next <i>ranged basic attack</i>]]> you make with this weapon before the end of your current turn becomes a burst 1 centered on the target and you make the attack against each creature in the burst.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Burst 2.</line>
+         <line><name>Effect</name>The next <![CDATA[<i>ranged basic attack</i>]]> you make with this weapon before the end of your current turn becomes a burst 1 centered on the target and you make the attack against each creature in the burst.</line>
+         <line indent="1"><name>Level 23 or 28</name>Burst 2.</line>
          <line>Use your normal attack bonus for the basic attack, but against Reflex.</line>
          <line>The original target takes normal damage and ongoing 5 fire damage (save ends) on a hit. Other targets only take ongoing 5 fire damage (save ends) on a hit.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Ongoing 10 fire damage (save ends).</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Ongoing 15 fire damage (save ends).</line>
+         <line indent="1"><name>Level 13 or 18</name>Ongoing 10 fire damage (save ends).</line>
+         <line indent="1"><name>Level 23 or 28</name>Ongoing 15 fire damage (save ends).</line>
       </block>
    </item>
 
@@ -1843,8 +2451,8 @@
          <name>Attack Power</name>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a +2 item bonus to the first attack roll you make against the triggering enemy before the end of the encounter.</line>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>You gain a +2 item bonus to the first attack roll you make against the triggering enemy before the end of the encounter.</line>
       </block>
    </item>
 
@@ -1895,10 +2503,10 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You make an attack with this weapon that targets AC</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering attack targets Fortitude instead, and deals +1d6 extra damage.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2d6 extra damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3d6 extra damage.</line>
+         <line><name>Trigger</name>You make an attack with this weapon that targets AC</line>
+         <line><name>Effect</name>The triggering attack targets Fortitude instead, and deals +1d6 extra damage.</line>
+         <line indent="1"><name>Level 13 or 18</name>+2d6 extra damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>+3d6 extra damage.</line>
       </block>
    </item>
 
@@ -1949,7 +2557,7 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (each enemy that can see you in burst); You mark each target until the end of your next turn.</line>
+         <line><name>Effect</name>Close burst 5 (each enemy that can see you in burst); You mark each target until the end of your next turn.</line>
       </block>
    </item>
 
@@ -2000,8 +2608,8 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You make an attack using this weapon and target an enemy benefiting from any concealment or cover</line>
-         <line><![CDATA[<i>Effect:</i>]]> For the triggering attack, the enemy does not benefit from concealment or cover. You still receive the increased critical damage.</line>
+         <line><name>Trigger</name>You make an attack using this weapon and target an enemy benefiting from any concealment or cover</line>
+         <line><name>Effect</name>For the triggering attack, the enemy does not benefit from concealment or cover. You still receive the increased critical damage.</line>
       </block>
    </item>
 
@@ -2052,9 +2660,9 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close blast 3; You destroy vegetation, changing all difficult terrain made up primarily of flora in the blast to normal terrain.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> Close blast 5.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> This power can be used as an encounter power. You also change all challenging and blocking terrain made up primarily of flora in the blast to difficult terrain.</line>
+         <line><name>Effect</name>Close blast 3; You destroy vegetation, changing all difficult terrain made up primarily of flora in the blast to normal terrain.</line>
+         <line indent="1"><name>Level 12 or 17</name>Close blast 5.</line>
+         <line indent="1"><name>Level 22 or 27</name>This power can be used as an encounter power. You also change all challenging and blocking terrain made up primarily of flora in the blast to difficult terrain.</line>
       </block>
    </item>
 
@@ -2205,7 +2813,7 @@
          <keyword>Cold</keyword>
          <frequency>At-Will</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Your Weapon attacks with this weapon that deal untyped damage deal cold damage instead. The attacks gain the Cold keyword.</line>
+         <line><name>Effect</name>Your Weapon attacks with this weapon that deal untyped damage deal cold damage instead. The attacks gain the Cold keyword.</line>
          <line>If a Weapon attack you make already has a damage type, the type is changed to cold and the corresponding keyword is replaced with Cold.</line>
          <line>Using this power again ends the effect.</line>
       </block>
@@ -2214,10 +2822,10 @@
          <keyword>Cold</keyword>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes an extra +1d6 cold damage and and is slowed until the end of your next turn.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2d6 cold damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3d6 cold damage.</line>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy takes an extra +1d6 cold damage and and is slowed until the end of your next turn.</line>
+         <line indent="1"><name>Level 13 or 18</name>+2d6 cold damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>+3d6 cold damage.</line>
       </block>
    </item>
 
@@ -2268,8 +2876,8 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You are about to make an attack roll with this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> Roll 1d6 and subtract 3; the result is a power bonus or a penalty to your attack roll.</line>
+         <line><name>Trigger</name>You are about to make an attack roll with this weapon</line>
+         <line><name>Effect</name>Roll 1d6 and subtract 3; the result is a power bonus or a penalty to your attack roll.</line>
       </block>
    </item>
 
@@ -2325,8 +2933,8 @@
          <keyword>Augmentable</keyword><keyword>Weapon</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You take damage from a melee attack by an enemy marked by you</line>
-         <line><![CDATA[<i>Effect:</i> You make a <i>melee basic attack</i>]]> using this weapon against the triggering enemy.</line>
+         <line><name>Trigger</name>You take damage from a melee attack by an enemy marked by you</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> using this weapon against the triggering enemy.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> The attack deals +1[W] extra damage.</line>
          <line>You then shift a number of squares equal to the weapon's enhancement bonus.</line>
       </block>
@@ -2425,7 +3033,7 @@
          <text>+1d8 damage per plus</text>
       </headline>
       <block>
-         <name>Property</name>
+         <name>Critical</name>
          <line>When you score a critical hit with a Weapon attack using this weapon, after the critical has been resolved, this weapon's critical damage increases by +1d8 damage. This effect is cumulative until the end of the encounter.</line>
       </block>
       <block>
@@ -2433,8 +3041,8 @@
          <keyword>Weapon</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy within reach of this weapon scores a critical hit against you</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes damage equal to this weapon's critical damage, including the additional damage from the property.</line>
+         <line><name>Trigger</name>An enemy within reach of this weapon scores a critical hit against you</line>
+         <line><name>Effect</name>The triggering enemy takes damage equal to this weapon's critical damage, including the additional damage from the property.</line>
       </block>
    </item>
 
@@ -2485,10 +3093,10 @@
          <name>Attack Power</name>
          <keyword>Fire</keyword> <keyword>Primal</keyword>
          <frequency>Daily</frequency>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with your <![CDATA[<i>warden's fury</i>]]> class power using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes ongoing fire (save ends) damage equal to 2 + your Strength modifier.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Equal to 6 + your Strength modifier.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Equal to 10 + your Strength modifier.</line>
+         <line><name>Trigger</name>You hit an enemy with your <![CDATA[<i>warden's fury</i>]]> class power using this weapon</line>
+         <line><name>Effect</name>The triggering enemy takes ongoing fire (save ends) damage equal to 2 + your Strength modifier.</line>
+         <line indent="1"><name>Level 13 or 18</name>Equal to 6 + your Strength modifier.</line>
+         <line indent="1"><name>Level 23 or 28</name>Equal to 10 + your Strength modifier.</line>
       </block>
    </item>
 
@@ -2539,8 +3147,8 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit a target with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The target takes damage equal to your Strength modifier + twice this weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You hit a target with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The target takes damage equal to your Strength modifier + twice this weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -2638,13 +3246,13 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line auto="bard" />
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (one ally in the burst); The target ally gains a +2 power bonus to attack rolls and all defenses until the start of your next turn.</line>
+         <line><name>Effect</name>Close burst 5 (one ally in the burst); The target ally gains a +2 power bonus to attack rolls and all defenses until the start of your next turn.</line>
       </block>
    </item>
 
@@ -2693,15 +3301,15 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line auto="bard" />
       </block>
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a bard Thunder power using this blade</line>
-         <line><![CDATA[<i>Effect:</i>]]> Each enemy within 1 square of the triggering enemy is dazed until the end of your next turn.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Within 2 squares.</line>
+         <line><name>Trigger</name>You hit an enemy with a bard Thunder power using this blade</line>
+         <line><name>Effect</name>Each enemy within 1 square of the triggering enemy is dazed until the end of your next turn.</line>
+         <line indent="1"><name>Level 23 or 28</name>Within 2 squares.</line>
       </block>
    </item>
    
@@ -2756,10 +3364,10 @@
          <name>Utility Power</name>
          <frequency>At-Will</frequency>
          <action>Free</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You draw or sheathe this weapon.</line>
+         <line><name>Effect</name>You draw or sheathe this weapon.</line>
          <line>If you sheathe this weapon, it vanishes, and only you can find and draw it.</line>
          <line>If you die while the weapon is sheathed, it can be discovered with a Perception check on your body after a month and a day. The DC equals a Hard DC of this weapon's level. The weapon fully reappears on your body after a year and a day.</line>
-         <line><![CDATA[<i>Special:</i>]]> You can use this power only once per turn.</line>
+         <line><name>Special</name>You can use this power only once per turn.</line>
       </block>
    </item>
 
@@ -2815,7 +3423,7 @@
          <keyword>Divine</keyword> <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (one ally in the burst); The target can spend a healing surge to regain a number of hit points equal to your Wisdom modifier + five times this weapon's plus.</line>
+         <line><name>Effect</name>Close burst 5 (one ally in the burst); The target can spend a healing surge to regain a number of hit points equal to your Wisdom modifier + five times this weapon's plus.</line>
       </block>
    </item>
 
@@ -2864,8 +3472,8 @@
       </headline>
       <block>
          <name>Properties</name>
-         <line>&#9658; If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
-         <line>&#9658; When you hit a target with a Weapon attack using this weapon, any creature granting the target cover from your attack takes thunder damage equal to this weapon's plus.</line>
+         <line auto="bard"><bullet /></line>
+         <line><bullet />When you hit a target with a Weapon attack using this weapon, any creature granting the target cover from your attack takes thunder damage equal to this weapon's plus.</line>
       </block>
    </item>
 
@@ -2921,8 +3529,8 @@
          <keyword>Weapon</keyword>
          <frequency>Encounter</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i> Make a <i>ranged basic attack</i>]]> with this spear. On a hit, the target is also immobilized (save ends). The spear doesn't return to you until the effect on the target has ended.</line>
-         <line><![CDATA[<i>Special:</i>]]> You can draw this weapon as part of this action.</line>
+         <line><name>Effect</name>Make a <![CDATA[<i>ranged basic attack</i>]]> with this spear. On a hit, the target is also immobilized (save ends). The spear doesn't return to you until the effect on the target has ended.</line>
+         <line><name>Special</name>You can draw this weapon as part of this action.</line>
       </block>
    </item>
 
@@ -2981,9 +3589,9 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You miss with an arcane melee or arcane close attack made with this item</line>
-         <line><![CDATA[<i>Effect:</i>]]> Reroll the triggering attack roll, and use either result.</line>
-         <line><![CDATA[<i>Special:</i>]]> If you are wielding a Hyrsam fiddlestick in your other hand and miss the triggering attack roll even with the reroll, you regain the use of this power when you take a short rest.</line>
+         <line><name>Trigger</name>You miss with an arcane melee or arcane close attack made with this item</line>
+         <line><name>Effect</name>Reroll the triggering attack roll, and use either result.</line>
+         <line><name>Special</name>If you are wielding a Hyrsam fiddlestick in your other hand and miss the triggering attack roll even with the reroll, you regain the use of this power when you take a short rest.</line>
       </block>
    </item>
 
@@ -3035,11 +3643,11 @@
          <keyword>Augmentable</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You push or slide an enemy with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> You push each enemy adjacent to you, other than the triggering enemy, 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Push 2 squares.</line>
+         <line><name>Trigger</name>You push or slide an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>You push each enemy adjacent to you, other than the triggering enemy, 1 square.</line>
+         <line indent="1"><name>Level 23 or 28</name>Push 2 squares.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> The triggering attack deals an additional +1d10 force damage, and this attack gains the Force keyword.</line>
-         <line indent="2"><![CDATA[<i>Level 23 or 28:</i>]]> +2d10 force damage.</line>
+         <line indent="2"><name>Level 23 or 28</name>+2d10 force damage.</line>
       </block>
    </item>
 
@@ -3137,22 +3745,23 @@
          <text>+1d6 fire damage per plus</text>
       </headline>
       <block>
-         <name>Property</name>
-         <line>If you score a critical hit with this weapon against a creature taking ongoing fire damage, another enemy within 2 squares of it takes ongoing 5 fire damage (save ends).</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Ongoing 10 fire damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Within 3 squares, and ongoing 15 fire damage.</line>
+         <name>Critical</name>
+         <keyword>Fire</keyword>
+         <line>When you score a critical hit with this weapon against a creature taking ongoing fire damage, another enemy within 2 squares of it takes ongoing 5 fire damage (save ends).</line>
+         <line indent="1"><name>Level 13 or 18</name>Ongoing 10 fire damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>Within 3 squares, and ongoing 15 fire damage.</line>
       </block>
       <block>
          <name>Attack Power</name>
          <keyword>Fire</keyword>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit a creature with a Weapon attack made using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering creature takes ongoing 5 fire damage (save ends).</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> Ongoing 10 fire damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Ongoing 15 fire damage.</line>
-         <line indent="1"><![CDATA[<i>Aftereffect:</i>]]> One enemy within 2 squares of the triggering creature takes the same amount of ongoing damage without this aftereffect.</line>
-         <line indent="2"><![CDATA[<i>Level 23 or 28:</i>]]> Within 3 squares.</line>
+         <line><name>Trigger</name>You hit a creature with a Weapon attack made using this weapon</line>
+         <line><name>Effect</name>The triggering creature takes ongoing 5 fire damage (save ends).</line>
+         <line indent="1"><name>Level 13 or 18</name>Ongoing 10 fire damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>Ongoing 15 fire damage.</line>
+         <line indent="1"><name>Aftereffect</name>One enemy within 2 squares of the triggering creature takes the same amount of ongoing damage without this aftereffect.</line>
+         <line indent="2"><name>Level 23 or 28</name>Within 3 squares.</line>
       </block>
    </item>
 
@@ -3203,7 +3812,7 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 1 (each ally in the burst); Each target gains a power bonus to damage rolls until the end of your next turn. The bonus equals this weapon's enhancement bonus.</line>
+         <line><name>Effect</name>Close burst 1 (each ally in the burst); Each target gains a power bonus to damage rolls until the end of your next turn. The bonus equals this weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -3253,7 +3862,7 @@
       <block>
          <name>Property</name>
          <line>Once per turn, when you use your Flurry of Blows power, it deals 2 extra damage to its targets.</line>
-         <line indent="1"><![CDATA[<i>Level 18, 23 or 28:</i>]]> 3 extra damage.</line>
+         <line indent="1"><name>Level 18, 23 or 28</name>3 extra damage.</line>
       </block>
    </item>
 
@@ -3304,9 +3913,9 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You make an attack roll using this blade and dislike the result</line>
-         <line><![CDATA[<i>Effect:</i>]]> Reroll the triggering attack roll and use the second result, even if it is lower.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> Use whichever roll you wish.</line>
+         <line><name>Trigger</name>You make an attack roll using this blade and dislike the result</line>
+         <line><name>Effect</name>Reroll the triggering attack roll and use the second result, even if it is lower.</line>
+         <line indent="1"><name>Level 23 or 28</name>Use whichever roll you wish.</line>
       </block>
    </item>
 
@@ -3361,8 +3970,70 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must have an unexpended arcane encounter attack power.</line>
-         <line><![CDATA[<i>Effect:</i>]]> You expend an arcane encounter attack power, and regain the use of a martial encounter attack power. The martial encounter attack power must be of the same level or lower as the arcane encounter attack you expend.</line>
+         <line><name>Requirement</name>You must have an unexpended arcane encounter attack power.</line>
+         <line><name>Effect</name>You expend an arcane encounter attack power, and regain the use of a martial encounter attack power. The martial encounter attack power must be of the same level or lower as the arcane encounter attack you expend.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Magma Hammer</title>
+      <category>Common</category>
+      <fluff>This hammer shifts slowly, as though its surface were gently flowing lava</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Hammer</subtype>
+      <headline>
+         <name>Enhancement Bonus</name>
+         <text>Attack rolls and damage rolls</text>
+      </headline>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 fire damage per plus</text>
+      </headline>
+      <block>
+         <name>Critical</name>
+         <keyword>Fire</keyword>
+         <line>When you score a critical hit, the target takes ongoing 10 fire damage (save ends).</line>
+         <line indent="1"><name>Level 14 or 19</name>Ongoing 15 fire damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>Ongoing 20 fire damage.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fire</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit with a Weapon attack using this hammer</line>
+         <line><name>Effect</name>Close burst 1 (each creature adjacent to you); Each target takes 5 fire damage, and you push the target 1 square.</line>
+         <line indent="1"><name>Level 14 or 19</name>10 fire damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>15 fire damage, and push up to 2 squares.</line>
       </block>
    </item>
 
@@ -3413,8 +4084,8 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You gain 1 power point until the end of your next turn. You can only use this power point to augment a psionic attack power.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> 2 point points.</line>
+         <line><name>Effect</name>You gain 1 power point until the end of your next turn. You can only use this power point to augment a psionic attack power.</line>
+         <line indent="1"><name>Level 22 or 27</name>2 point points.</line>
       </block>
    </item>
 
@@ -3517,9 +4188,9 @@
          <keyword>Weapon</keyword>
          <frequency>At-Will</frequency>
          <action>Opportunity</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Requirement:</i>]]> You must have the Warlock's Curse class feature.</line>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy under your curse makes a melee attack against you</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes damage equal to twice this weapon's enhancement bonus + the number of dice of damage your Warlock's Curse deals.</line>
+         <line><name>Requirement</name>You must have the Warlock's Curse class feature.</line>
+         <line><name>Trigger</name>An enemy under your curse makes a melee attack against you</line>
+         <line><name>Effect</name>The triggering enemy takes damage equal to twice this weapon's enhancement bonus + the number of dice of damage your Warlock's Curse deals.</line>
       </block>
    </item>
 
@@ -3574,9 +4245,9 @@
          <name>Utility Power</name>
          <frequency>At-Will</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You split the weapon into two identical weapons, one in your primary hand and one in your off-hand.</line>
+         <line><name>Effect</name>You split the weapon into two identical weapons, one in your primary hand and one in your off-hand.</line>
          <line>You can use this power again to recombine the weapons into one.</line>
-         <line><![CDATA[<i>Special:</i>]]> If you have the Quick Draw feat, you can use this power as a free action.</line>
+         <line><name>Special</name>If you have the Quick Draw feat, you can use this power as a free action.</line>
       </block>
    </item>
 
@@ -3632,8 +4303,8 @@
          <keyword>Arcane</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You use a ranged warlock power against a target under your curse</line>
-         <line><![CDATA[<i>Effect:</i>]]> You use the bow's range for the triggering power instead of its normal range, and add the bow's proficiency bonus to the attack roll.</line>
+         <line><name>Trigger</name>You use a ranged warlock power against a target under your curse</line>
+         <line><name>Effect</name>You use the bow's range for the triggering power instead of its normal range, and add the bow's proficiency bonus to the attack roll.</line>
       </block>
    </item>
 
@@ -3693,8 +4364,8 @@
          <keyword>Arcane</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You use a melee warlock power against a target under your curse</line>
-         <line><![CDATA[<i>Effect:</i>]]> You can use this weapon's reach instead of the power's normal range, and add the hammer's proficiency bonus to the attack roll. You can choose to treat the attack as a Weapon attack instead of an Implement attack for abilities other creatures have..</line>
+         <line><name>Trigger</name>You use a melee warlock power against a target under your curse</line>
+         <line><name>Effect</name>You can use this weapon's reach instead of the power's normal range, and add the hammer's proficiency bonus to the attack roll. You can choose to treat the attack as a Weapon attack instead of an Implement attack for abilities other creatures have..</line>
       </block>
    </item>
 
@@ -3750,8 +4421,8 @@
          <keyword>Arcane</keyword> <keyword>Teleportation</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy under your curse with a warlock attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> You teleport the triggering enemy a number of squares equal to 1 + this weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You hit an enemy under your curse with a warlock attack using this weapon</line>
+         <line><name>Effect</name>You teleport the triggering enemy a number of squares equal to 1 + this weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -3807,8 +4478,8 @@
          <keyword>Weapon</keyword>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy you can see makes a melee attack against you</line>
-         <line><![CDATA[<i>Effect:</i>]]> You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy, with a power bonus to the attack roll equal to this weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>An enemy you can see makes a melee attack against you</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy, with a power bonus to the attack roll equal to this weapon's enhancement bonus.</line>
          <line>If your attack roll result exceeds the triggering attack's attack roll result, the triggering attack misses. The <![CDATA[<i>melee basic attack</i>]]> you make has no other effects.</line>
       </block>
    </item>
@@ -3861,8 +4532,8 @@
          <keyword>Weapon</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy is immobilized until you are no longer threatening it with this weapon.</line>
+         <line><name>Trigger</name>You hit an enemy with this weapon</line>
+         <line><name>Effect</name>The triggering enemy is immobilized until you are no longer threatening it with this weapon.</line>
       </block>
    </item>
 
@@ -3917,8 +4588,8 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You make a ranged attack with this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering attack does not provoke <![CDATA[<i>opportunity attacks</i>]]> for making a ranged attack.</line>
+         <line><name>Trigger</name>You make a ranged attack with this weapon</line>
+         <line><name>Effect</name>The triggering attack does not provoke <![CDATA[<i>opportunity attacks</i>]]> for making a ranged attack.</line>
       </block>
    </item>
 
@@ -3968,8 +4639,8 @@
       <block>
          <name>Property</name>
          <line>Your attacks with this weapon deal +1 damage if no ally is closer to the target than you are.</line>
-         <line indent="1"><![CDATA[<i>Level 12 or 17:</i>]]> +2 damage.</line>
-         <line indent="1"><![CDATA[<i>Level 22 or 27:</i>]]> +3 damage.</line>
+         <line indent="1"><name>Level 12 or 17</name>+2 damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>+3 damage.</line>
       </block>
    </item>
 
@@ -4021,7 +4692,7 @@
          <keyword>Augmentable</keyword> <keyword>Psionic</keyword> <keyword>Weapon</keyword>
          <frequency>Encounter</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i> You make a <i>ranged basic attack</i>]]> using this weapon, even if it doesn't have the Light Thrown or Heavy Thrown property. If the weapon doesn't have a range, its range is 5/10 for this attack. The weapon returns to your hand after the attack has been resolved.</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>ranged basic attack</i>]]> using this weapon, even if it doesn't have the Light Thrown or Heavy Thrown property. If the weapon doesn't have a range, its range is 5/10 for this attack. The weapon returns to your hand after the attack has been resolved.</line>
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 2:</b></span>]]> The attack deals +1[W] extra damage.</line>
       </block>
    </item>
@@ -4073,8 +4744,8 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> Make a <![CDATA[<i>basic attack</i>]]> using this weapon against a target of your choice.</line>
+         <line><name>Trigger</name>You hit with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>Make a <![CDATA[<i>basic attack</i>]]> using this weapon against a target of your choice.</line>
       </block>
    </item>
 
@@ -4126,8 +4797,8 @@
          <keyword>Weapon</keyword>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You make a ranged attack with this weapon and miss</line>
-         <line><![CDATA[<i>Effect:</i> You make a <i>ranged basic attack</i>]]> with this weapon against a different target within 5 squares of the triggering target.</line>
+         <line><name>Trigger</name>You make a ranged attack with this weapon and miss</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>ranged basic attack</i>]]> with this weapon against a different target within 5 squares of the triggering target.</line>
       </block>
    </item>
 
@@ -4182,8 +4853,8 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You make a melee Weapon attack using this weapon against an enemy adjacent to you</line>
-         <line><![CDATA[<i>Effect:</i>]]> You take a -2 penalty to AC until the end of your next turn, and gain a power bonus to damage rolls with the triggering attack. The power bonus equals 1 + twice this weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You make a melee Weapon attack using this weapon against an enemy adjacent to you</line>
+         <line><name>Effect</name>You take a -2 penalty to AC until the end of your next turn, and gain a power bonus to damage rolls with the triggering attack. The power bonus equals 1 + twice this weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -4279,8 +4950,8 @@
          <name>Attack Power</name>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with an attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes a -2 penalty to all attack rolls (save ends). The enemy has a penalty to saves against this effect equal to this weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You hit an enemy with an attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy takes a -2 penalty to all attack rolls (save ends). The enemy has a penalty to saves against this effect equal to this weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -4331,8 +5002,8 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with an attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy is dazed until the end of your next turn.</line>
+         <line><name>Trigger</name>You hit an enemy with an attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy is dazed until the end of your next turn.</line>
       </block>
    </item>
 
@@ -4433,10 +5104,10 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering attack deals an extra +1d4 damage. If the target has the Reptile keyword, the extra damage is +1d12 instead.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> +2d4 extra damage, or +2d12 if the target has the Reptile keyword.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +3d4 extra damage, or +3d12 if the target has the Reptile keyword.</line>
+         <line><name>Trigger</name>You hit with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering attack deals an extra +1d4 damage. If the target has the Reptile keyword, the extra damage is +1d12 instead.</line>
+         <line indent="1"><name>Level 13 or 18</name>+2d4 extra damage, or +2d12 if the target has the Reptile keyword.</line>
+         <line indent="1"><name>Level 23 or 28</name>+3d4 extra damage, or +3d12 if the target has the Reptile keyword.</line>
       </block>
    </item>
 
@@ -4487,7 +5158,7 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> The first target you make a ranged attack with this weapon before the end of the encounter can be behind blocking terrain or otherwise out of line of effect, but only if a clear path can be traced to that target and the path is within range.</line>
+         <line><name>Effect</name>The first target you make a ranged attack with this weapon before the end of the encounter can be behind blocking terrain or otherwise out of line of effect, but only if a clear path can be traced to that target and the path is within range.</line>
          <line>In addition, you take no penalties for cover or concealment when you make the attack against that target.</line>
       </block>
    </item>
@@ -4539,15 +5210,15 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Opportunity</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with an attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> An allied beast or summoned creature adjacent to either you or the triggering enemy can shift as a free reaction. The ally can shift up a number of squares equal to this weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You hit an enemy with an attack using this weapon</line>
+         <line><name>Effect</name>An allied beast or summoned creature adjacent to either you or the triggering enemy can shift as a free reaction. The ally can shift up a number of squares equal to this weapon's enhancement bonus.</line>
       </block>
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An allied beast or summoned creature hits an enemy that it is flanking with you</line>
-         <line><![CDATA[<i>Effect:</i>]]> You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy with this weapon.</line>
+         <line><name>Trigger</name>An allied beast or summoned creature hits an enemy that it is flanking with you</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy with this weapon.</line>
       </block>
    </item>
 
@@ -4603,11 +5274,11 @@
          <keyword>Lightning</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Attack:</i>]]> Close blast 5 (one, two, or three enemies in the blast); item's level + 3 vs. Reflex</line>
-         <line><![CDATA[<i>Hit:</i>]]> 1d8 lightning damage.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> 2d8 lightning damage.</line>
+         <line><name>Attack</name>Close blast 5 (one, two, or three enemies in the blast); item's level + 3 vs. Reflex</line>
+         <line><name>Hit</name> 1d8 lightning damage.</line>
+         <line indent="1"><name>Level 13 or 18</name>2d8 lightning damage.</line>
          <line indent="1"><![CDATA[|i>Level 23 or 28:</i>]]> 3d8 lightning damage.</line>
-         <line><![CDATA[<i>Miss:</i>]]> If you targeted only one enemy, you deal half damage.</line>
+         <line><name>Miss</name>If you targeted only one enemy, you deal half damage.</line>
       </block>
    </item>
 
@@ -4663,8 +5334,8 @@
          <keyword>Weapon</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit a target with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The target is immobilized (save ends) by the triggering attack.</line>
+         <line><name>Trigger</name>You hit a target with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The target is immobilized (save ends) by the triggering attack.</line>
       </block>
    </item>
 
@@ -4713,15 +5384,15 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line auto="bard" />
       </block>
       <block>
          <name>Utility Power</name>
          <keyword>Arcane</keyword> <keyword>Illusion</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a bard attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> You are invisible to the triggering enemy until the end of your next turn.</line>
+         <line><name>Trigger</name>You hit an enemy with a bard attack using this weapon</line>
+         <line><name>Effect</name>You are invisible to the triggering enemy until the end of your next turn.</line>
       </block>
    </item>
 
@@ -4776,8 +5447,8 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> Slide the target a number of squares equal to the weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You hit with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>Slide the target a number of squares equal to the weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -4828,7 +5499,7 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, you do not deal half damage for being weakened.</line>
+         <line><name>Effect</name>Until the end of your next turn, you do not deal half damage for being weakened.</line>
       </block>
    </item>
 
@@ -4933,7 +5604,7 @@
          <keyword>Weapon</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i> You make a <i>ranged basic attack</i>]]> with this weapon.</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>ranged basic attack</i>]]> with this weapon.</line>
       </block>
    </item>
    
@@ -4984,8 +5655,8 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with an attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, you and your allies can roll twice on attack rolls against the triggering enemy and use either result.</line>
+         <line><name>Trigger</name>You hit an enemy with an attack using this weapon</line>
+         <line><name>Effect</name>Until the end of your next turn, you and your allies can roll twice on attack rolls against the triggering enemy and use either result.</line>
          <line>If you also have combat advantage against the target, you can roll three dice and use the highest result.</line>
       </block>
    </item>
@@ -5037,10 +5708,10 @@
          <name>Attack Power</name>
          <keyword>Thunder</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit a creature with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering creature takes 1d8 thunder + this weapon's enhancement bonus thunder damage, and you must push it 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> 2d8 + this weapon's enhancement bonus thunder damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> 3d8 + this weapon's enhancement bonus thunder damage, and you must push it 2 squares.</line>
+         <line><name>Trigger</name>You hit a creature with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering creature takes 1d8 thunder + this weapon's enhancement bonus thunder damage, and you must push it 1 square.</line>
+         <line indent="1"><name>Level 13 or 18</name>2d8 + this weapon's enhancement bonus thunder damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>3d8 + this weapon's enhancement bonus thunder damage, and you must push it 2 squares.</line>
          <line>If you have abilities that increase thunder damage specifically, you can apply them to this damage roll.</line>
       </block>
    </item>
@@ -5090,8 +5761,8 @@
       </headline>
       <block>
          <name>Properties</name>
-         <line>&#9658; If you are a Shaman who has proficiency with this weapon, you also have proficiency with this weapon as an implement.</line>
-         <line>&#9658; If you have proficiency with this weapon and use it as an implement, your spirit companion's melee reach increases to 2 for that power.</line>
+         <line><bullet />If you are a Shaman who has proficiency with this weapon, you also have proficiency with this weapon as an implement.</line>
+         <line><bullet />If you have proficiency with this weapon and use it as an implement, your spirit companion's melee reach increases to 2 for that power.</line>
       </block>
    </item>
 
@@ -5140,8 +5811,8 @@
       </headline>
       <block>
          <name>Properties</name>
-         <line>&#9658; If you are a Shaman who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
-         <line>&#9658; If you have proficiency with this weapon and use it as an implement for a power that has a range of Melee spirit, you can choose to use a square in your own space as the origin square of that power.</line>
+         <line><bullet />If you are a Shaman who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line><bullet />If you have proficiency with this weapon and use it as an implement for a power that has a range of Melee spirit, you can choose to use a square in your own space as the origin square of that power.</line>
       </block>
    </item>
 
@@ -5191,14 +5862,14 @@
       <block>
          <name>Property</name>
          <line>This weapon deals +1d6 damage on a successful charge.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> +2d6 damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>+2d6 damage.</line>
       </block>
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Special:</i>]]> You lose these benefits if you do not charge as your next action on your current turn.</line>
-         <line><![CDATA[<i>Effect:</i>]]> If you hit with your charge attack, all allies within 10 squares of you gain a +1 bonus to attack rolls and gain your Charisma bonus as a bonus to damage rolls. These bonuses last until the start of your next turn.</line>
+         <line><name>Special</name>You lose these benefits if you do not charge as your next action on your current turn.</line>
+         <line><name>Effect</name>If you hit with your charge attack, all allies within 10 squares of you gain a +1 bonus to attack rolls and gain your Charisma bonus as a bonus to damage rolls. These bonuses last until the start of your next turn.</line>
       </block>
    </item>
 
@@ -5247,15 +5918,15 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line auto="bard" />
       </block>
       <block>
          <name>Attack Power</name>
          <keyword>Poison</keyword>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with an attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy is weakened (save ends).</line>
+         <line><name>Trigger</name>You hit an enemy with an attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy is weakened (save ends).</line>
       </block>
    </item>
    
@@ -5304,7 +5975,7 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
+         <line auto="bard" />
       </block>
       <block>
          <name>Attack Power</name>
@@ -5312,9 +5983,9 @@
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <line><![CDATA[<i>Trigger:</i>]]>You hit an enemy with an attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes ongoing poison damage (save ends). The poison damage equals your Charisma modifier + this bow's enhancement bonus or 5, whichever is higher.</line>
-         <line indent="1"><![CDATA[<i>Level 13 or 18:</i>]]> The ongoing poison damage equals 4 + your Charisma modifier + this weapon's enhancement bonus or 10, whichever is higher.</line>
-         <line indent="1"><![CDATA[<i>Level 23 or 28:</i>]]> The ongoing poison damage equals 8 + your Charisma modifier + this weapon's enhancement bonus or 15, whichever is higher.</line>
+         <line><name>Effect</name>The triggering enemy takes ongoing poison damage (save ends). The poison damage equals your Charisma modifier + this bow's enhancement bonus or 5, whichever is higher.</line>
+         <line indent="1"><name>Level 13 or 18</name>The ongoing poison damage equals 4 + your Charisma modifier + this weapon's enhancement bonus or 10, whichever is higher.</line>
+         <line indent="1"><name>Level 23 or 28</name>The ongoing poison damage equals 8 + your Charisma modifier + this weapon's enhancement bonus or 15, whichever is higher.</line>
       </block>
    </item>
 
@@ -5411,8 +6082,8 @@
          <keyword>Acid</keyword>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> All creatures adjacent to the target (including you if your weapon does not have reach) take acid damage equal to 3 + twice the weapon's enhancement bonus.</line>
+         <line><name>Trigger</name>You hit with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>All creatures adjacent to the target (including you if your weapon does not have reach) take acid damage equal to 3 + twice the weapon's enhancement bonus.</line>
       </block>
    </item>
 
@@ -5461,14 +6132,14 @@
       </headline>
       <block>
          <name>Properties</name>
-         <line>&#9658; If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
-         <line>&#9658; When you hit a creature with a Weapon attack using this weapon, the target takes a penalty to Stealth checks until the end of your next turn. The penalty equals this weapon's enhancement bonus.</line>
+         <line auto="bard"><bullet /></line>
+         <line><bullet />When you hit a creature with a Weapon attack using this weapon, the target takes a penalty to Stealth checks until the end of your next turn. The penalty equals this weapon's enhancement bonus.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Ranged sight (one creature you can hear that you hit with an attack using this weapon during this encounter); You ignore penalties from concealment and total concealment to the next attack roll you make with this weapon against the target.</line>
+         <line><name>Effect</name>Ranged sight (one creature you can hear that you hit with an attack using this weapon during this encounter); You ignore penalties from concealment and total concealment to the next attack roll you make with this weapon against the target.</line>
       </block>
    </item>
 
@@ -5523,11 +6194,11 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of your next turn, you are automatically aware of each enemy within 5 squares of you, including those that are hidden or invisible. You know the squares these enemies occupy, but this knowledge does not negate the effects of cover or concealment.</line>
-         <line indent="1"><![CDATA[<i>Level 14:</i>]]> Each enemy within 10 squares of you.</line>
-         <line indent="1"><![CDATA[<i>Level 19:</i>]]> Each enemy within 15 squares of you.</line>
-         <line indent="1"><![CDATA[<i>Level 24 or 29:</i>]]> Each enemy within 20 squares of you.</line>
-         <line><![CDATA[<i>Sustain Minor:</i>]]> The effect persists until the end of your next turn.</line>
+         <line><name>Effect</name>Until the end of your next turn, you are automatically aware of each enemy within 5 squares of you, including those that are hidden or invisible. You know the squares these enemies occupy, but this knowledge does not negate the effects of cover or concealment.</line>
+         <line indent="1"><name>Level 14</name>Each enemy within 10 squares of you.</line>
+         <line indent="1"><name>Level 19</name>Each enemy within 15 squares of you.</line>
+         <line indent="1"><name>Level 24 or 29</name>Each enemy within 20 squares of you.</line>
+         <line><name>Sustain Minor</name>The effect persists until the end of your next turn.</line>
       </block>
    </item>
    
@@ -5570,10 +6241,7 @@
          <name>Requirement</name>
          <text>This enhancement can only be placed on a one-handed weapon.</text>
       </headline>
-      <headline>
-         <name>Attached Component</name>
-         <text>You must have the Living Construct racial trait to use this item.</text>
-      </headline>
+      <headline auto="attached" />
       <headline>
          <name>Enhancement Bonus</name>
          <text>Attack rolls and damage rolls</text>
@@ -5590,8 +6258,8 @@
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy adjacent to you shifts</line>
-         <line><![CDATA[<i>Effect:</i> You make a <i>melee basic attack</i>]]> with this weapon against the triggering enemy.</line>
+         <line><name>Trigger</name>An enemy adjacent to you shifts</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> with this weapon against the triggering enemy.</line>
       </block>
    </item>
    
@@ -5642,7 +6310,7 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a +2 power bonus to the first attack roll you make with this weapon before the end of the encounter.</line>
+         <line><name>Effect</name>You gain a +2 power bonus to the first attack roll you make with this weapon before the end of the encounter.</line>
       </block>
    </item>
 
@@ -5687,7 +6355,7 @@
       <block>
          <name>Property</name>
          <keyword>Healing</keyword>
-         <line>When you use a Healing power to allow an ally to regain hit points, add an item bonus equal to this weapon's enhancement bonus to the number of hit points regained.</line>
+         <line>When you use a Healing power to allow an ally to regain hit points, add an item bonus equal to this weapon's enhancement bonus to the number of hit points regained. These additional hit points are halved (rounded down) if the ally does not spend a healing surge to regain the hit points.</line>
       </block>
    </item>
 
@@ -5736,8 +6404,8 @@
       </headline>
       <block>
          <name>Properties</name>
-         <line>&#9658; This weapon gains an additional range increment with maximum range equal to 10 squares longer than the weapon's long range. If a power or ability has restrictions based on long range, the extreme range counts as long range.</line>
-         <line>&#9658; You take the penalty to attack rolls for attacking with this weapon at long range only when attacking at extreme range.</line>
+         <line><bullet />This weapon gains an additional range increment with maximum range equal to 10 squares longer than the weapon's long range. If a power or ability has restrictions based on long range, the extreme range counts as long range.</line>
+         <line><bullet />You take the penalty to attack rolls for attacking with this weapon at long range only when attacking at extreme range.</line>
       </block>
    </item>
 
@@ -5788,8 +6456,8 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You become bloodied</line>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (one ally in burst); The target can make a <![CDATA[<i>basic attack</i>]]> as a free reaction.</line>
+         <line><name>Trigger</name>You become bloodied</line>
+         <line><name>Effect</name>Close burst 5 (one ally in burst); The target can make a <![CDATA[<i>basic attack</i>]]> as a free reaction.</line>
       </block>
    </item>
    
@@ -5841,8 +6509,8 @@
          <keyword>Teleportation</keyword>
          <frequency>Encountter</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an adjacent enemy with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> You teleport to a different space adjacent to the triggering enemy.</line>
+         <line><name>Trigger</name>You hit an adjacent enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>You teleport to a different space adjacent to the triggering enemy.</line>
       </block>
    </item>
    
@@ -5893,8 +6561,8 @@
          <name>Attack Power</name>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with a Weapon attack using this weapon</line>
-         <line><![CDATA[<i>Effect:</i> Make a <i>melee basic attack</i>]]> against the triggering enemy. On a hit, you deal no damage, but the target grants combat advantage until the end of your next turn.</line>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>Make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy. On a hit, you deal no damage, but the target grants combat advantage until the end of your next turn.</line>
       </block>
    </item>
 
@@ -5943,14 +6611,14 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement</line>
+         <line auto="bard" />
       </block>
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You target an enemy with a Bard power using this weapon</line>
-         <line><![CDATA[<i>Effect:</i>]]> If the triggering attack hits, each ally within 5 squares of the triggering enemy gains a +2 power bonus to his or her first attack roll against that enemy before the end of your next turn.</line>
+         <line><name>Trigger</name>You target an enemy with a Bard power using this weapon</line>
+         <line><name>Effect</name>If the triggering attack hits, each ally within 5 squares of the triggering enemy gains a +2 power bonus to his or her first attack roll against that enemy before the end of your next turn.</line>
          <line>If the triggering attack misses, one ally of your choice within 5 squares of the triggering enemy gains a +2 power bonus to his or her first attack roll against that enemy before the end of your next turn.</line>
       </block>
    </item>
@@ -6003,8 +6671,8 @@
          <keyword>Arcane</keyword>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> Your Chaos Burst class feature triggers on an odd attack roll</line>
-         <line><![CDATA[<i>Effect:</i>]]> The target of the triggering attack roll takes additional damage instead of the normal effect of your Chaos Burst class feature. The additional damage equals 1 + this dagger's enhancement bonus.</line>
+         <line><name>Trigger</name>Your Chaos Burst class feature triggers on an odd attack roll</line>
+         <line><name>Effect</name>The target of the triggering attack roll takes additional damage instead of the normal effect of your Chaos Burst class feature. The additional damage equals 1 + this dagger's enhancement bonus.</line>
       </block>
    </item>
 
@@ -6052,15 +6720,15 @@
          <text>+1d6 damage per plus</text>
       </headline>
       <block>
-         <name>Property</name>
-         <line>On a critical hit, the target loses its resistances (save ends).</line>
+         <name>Critical</name>
+         <line>When you score a critical hit using this weapon, the target loses its resistances (save ends).</line>
       </block>
       <block>
          <name>Utility Power</name>
          <keyword>Arcane</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Until the end of the encounter, Sorcerer attack powers you use through this dagger ignore the resistances of any enemy within 5 squares of you.</line>
+         <line><name>Effect</name>Until the end of the encounter, Sorcerer attack powers you use through this dagger ignore the resistances of any enemy within 5 squares of you.</line>
          <line indent="1"><![CDATA[<i>Level 17, 22 or 27:</i>]]> Within 10 squares of you.</line>
       </block>
    </item>

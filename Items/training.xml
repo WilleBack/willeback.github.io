@@ -78,8 +78,8 @@
          <keyword>Martial</keyword>
          <frequency>Daily</frequency>
          <action>Opportunity</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy hits you with a melee attack</line>
-         <line><![CDATA[<i>Effect:</i>]]> You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</line>
+         <line><name>Trigger</name>An enemy hits you with a melee attack</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</line>
       </block>
    </item>
 
@@ -103,15 +103,15 @@
       <block>
          <name>Property</name>
          <line>You gain a +1 item bonus to your healing surge value.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> +2 item bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> +3 item bonus.</line>
+         <line indent="1"><name>Level 13</name>+2 item bonus.</line>
+         <line indent="1"><name>Level 23</name>+3 item bonus.</line>
       </block>
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy bloodies you, but does not reduce you to 0 hit points or fewer</line>
-         <line><![CDATA[<i>Effect:</i>]]> You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</line>
+         <line><name>Trigger</name>An enemy bloodies you, but does not reduce you to 0 hit points or fewer</line>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</line>
       </block>
    </item>
 
@@ -135,17 +135,45 @@
       <block>
          <name>Property</name>
          <line>You gain a +1 item bonus to Acrobatics checks and Bluff checks.</line>
-         <line indent="1"><![CDATA[<i>Level 11:</i>]]> +2 item bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 21:</i>]]> +4 item bonus.</line>
+         <line indent="1"><name>Level 11</name>+2 item bonus.</line>
+         <line indent="1"><name>Level 21</name>+4 item bonus.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy marks you</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering mark ends, and you shift 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 11:</i>]]> This power can be used as an opportunity reaction instead.</line>
-         <line indent="1"><![CDATA[<i>Level 21:</i>]]> This power is an encounter power instead.</line>
+         <line><name>Trigger</name>An enemy marks you</line>
+         <line><name>Effect</name>The triggering mark ends, and you shift 1 square.</line>
+         <line indent="1"><name>Level 11</name>This power can be used as an opportunity reaction instead.</line>
+         <line indent="1"><name>Level 21</name>This power is an encounter power instead.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Climb the Giant</title>
+      <category>Uncommon</category>
+      <fluff>You can climb up one side of huge foes and tumble down the other to land like a cat</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Grandmaster Training</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must be adjacent to a creature whose size category is larger than yours.</line>
+         <line><name>Effect</name>You shift up to 3 squares to a space that is adjacent to the larger creature. During the shift, you can enter the larger creature's space, and each square you shift into must be either adjacent to the creature or in its space.</line>
+         <line indent="1"><name>Level 14</name>Shift up to 4 squares.</line>
+         <line indent="1"><name>Level 24</name>Shift up to 5 squares.</line>
       </block>
    </item>
 
@@ -169,8 +197,34 @@
       <block>
          <name>Property</name>
          <line>You gain resist 5 psychic.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> Resist 10.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> Resist 15.</line>
+         <line indent="1"><name>Level 13</name>Resist 10.</line>
+         <line indent="1"><name>Level 23</name>Resist 15.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Crimson Determination</title>
+      <category>Uncommon</category>
+      <fluff>You show no quarter to your enemies in their weakness</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Legendary Boon</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a +2 bonus to damage rolls against bloodied targets.</line>
+         <line indent="1"><name>Level 14</name>+4 bonus.</line>
+         <line indent="1"><name>Level 24</name>+6 bonus.</line>
+         <line>The bonus is halved for multiattacks.</line>
       </block>
    </item>
 
@@ -217,8 +271,8 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Nonaction</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You roll a 1 on an attack roll, ability check, skill check, or saving throw</line>
-         <line><![CDATA[<i>Effect:</i>]]> You reroll the triggering roll or check until the result is something other than a 1.</line>
+         <line><name>Trigger</name>You roll a 1 on an attack roll, ability check, skill check, or saving throw</line>
+         <line><name>Effect</name>You reroll the triggering roll or check until the result is something other than a 1.</line>
       </block>
    </item>
    
@@ -239,8 +293,8 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You spend an action point on your turn</line>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a fly speed equal to your speed until the end of your current turn.</line>
+         <line><name>Trigger</name>You spend an action point on your turn</line>
+         <line><name>Effect</name>You gain a fly speed equal to your speed until the end of your current turn.</line>
       </block>
    </item>
 
@@ -265,12 +319,12 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You move up to your speed.</line>
+         <line><name>Effect</name>You move up to your speed.</line>
          <line>While you keep one hand free, you gain a +2 power bonus to all defenses against ranged Weapon attacks until the end of your next turn.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> +4 power bonus.</line>
+         <line indent="1"><name>Level 13</name>+4 power bonus.</line>
          <line>While you have this bonus, you can use the following action:</line>
          <line indent="1"><![CDATA[<b>Immediate Interrupt:</b> <i>Trigger:</i>]]> An enemy misses you with a ranged Weapon attack; The triggering enemy rerolls the triggering attack against a creature of your choice within 5 squares of you.</line>
-         <line indent="2"><![CDATA[<i>Level 23:</i>]]> You can use this action as an opportunity interrupt instead.</line>
+         <line indent="2"><name>Level 23</name>You can use this action as an opportunity interrupt instead.</line>
       </block>
    </item>
 
@@ -296,10 +350,10 @@
          <keyword>Psionic</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You score a critical hit against an enemy with a psionic power</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering enemy takes a -2 penalty to attack rolls until the end of your next turn.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> A -2 penalty to attack rolls (save ends) or until the end of your next turn, whichever is longer.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> The triggering enemy's thoughts a scrambled (save ends). While its thoughts are scrambled, the enemy is dazed and takes a -2 penalty to attack rolls.</line>
+         <line><name>Trigger</name>You score a critical hit against an enemy with a psionic power</line>
+         <line><name>Effect</name>The triggering enemy takes a -2 penalty to attack rolls until the end of your next turn.</line>
+         <line indent="1"><name>Level 12</name>A -2 penalty to attack rolls (save ends) or until the end of your next turn, whichever is longer.</line>
+         <line indent="1"><name>Level 22</name>The triggering enemy's thoughts a scrambled (save ends). While its thoughts are scrambled, the enemy is dazed and takes a -2 penalty to attack rolls.</line>
       </block>
    </item>
 
@@ -324,10 +378,10 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You move up to half your speed.</line>
+         <line><name>Effect</name>You move up to half your speed.</line>
          <line>The first melee attack you make this turn deals 1d6 extra damage, or 2d6 extra damage against an unattended, inanimate object.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> 3d6 against an inanimate object.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> 2d6 extra damage, or 4d6 extra damage against an inanimate object.</line>
+         <line indent="1"><name>Level 12</name>3d6 against an inanimate object.</line>
+         <line indent="1"><name>Level 22</name>2d6 extra damage, or 4d6 extra damage against an inanimate object.</line>
       </block>
    </item>
 
@@ -352,9 +406,9 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Close burst 5 (you and each ally in the burst); Each target gains temporary hit points equal to the number of healing surges you have remaining.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> Twice the number of healing surges you have remaining.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> Three times the number of healing surges you have remaining.</line>
+         <line><name>Effect</name>Close burst 5 (you and each ally in the burst); Each target gains temporary hit points equal to the number of healing surges you have remaining. These temporary hit points last until the end of the encounter.</line>
+         <line indent="1"><name>Level 12</name>Twice the number of healing surges you have remaining.</line>
+         <line indent="1"><name>Level 22</name>Three times the number of healing surges you have remaining.</line>
       </block>
    </item>
 
@@ -384,10 +438,10 @@
          <keyword>Psionic</keyword>
          <frequency>Encounter</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You hit an enemy with an unaugmented at-will attack power</line>
-         <line><![CDATA[<i>Effect:</i>]]> You shift 2 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> Shift 4 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> Shift 6 squares.</line>
+         <line><name>Trigger</name>You hit an enemy with an unaugmented at-will attack power</line>
+         <line><name>Effect</name>You shift 2 squares.</line>
+         <line indent="1"><name>Level 13</name>Shift 4 squares.</line>
+         <line indent="1"><name>Level 23</name>Shift 6 squares.</line>
       </block>
    </item>
 
@@ -435,13 +489,13 @@
          <keyword>Arcane</keyword> <keyword>Illusion</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> You use an arcane power</line>
-         <line><![CDATA[<i>Effect:</i>]]> You become invisible until the end of your next turn, and can shift 1 square.</line>
-         <line indent="1"><![CDATA[<i>Level 8:</i>]]> Shift 2 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> Shift 3 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 18:</i>]]> Shift 4 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> Shift 5 squares.</line>
-         <line indent="1"><![CDATA[<i>Level 28:</i>]]> Shift 6 squares.</line>
+         <line><name>Trigger</name>You use an arcane power</line>
+         <line><name>Effect</name>You become invisible until the end of your next turn, and can shift 1 square.</line>
+         <line indent="1"><name>Level 8</name>Shift 2 squares.</line>
+         <line indent="1"><name>Level 13</name>Shift 3 squares.</line>
+         <line indent="1"><name>Level 18</name>Shift 4 squares.</line>
+         <line indent="1"><name>Level 23</name>Shift 5 squares.</line>
+         <line indent="1"><name>Level 28</name>Shift 6 squares.</line>
       </block>
    </item>
    
@@ -480,7 +534,7 @@
       </headline>
       <block>
          <name>Property</name>
-         <line>When you use your <![CDATA[<i>second wind</i>]]>, your animal companion gains temporary hit points equal to 5 + this training's level.</line>
+         <line>When you use your <![CDATA[<i>second wind</i>]]>, your animal companion gains temporary hit points equal to 5 + this training's level. These temporary hit points last until the end of the encounter.</line>
       </block>
    </item>
 
@@ -506,11 +560,11 @@
          <keyword>Varies</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><![CDATA[<i>Special:</i>]]> This power has either the Arcane, Divine, Primal, Psionic, or Shadow keyword, depending on how you gained the boon.</line>
-         <line><![CDATA[<i>Trigger:</i>]]> An attack hits you, but does not critical hit you</line>
-         <line indent="1"><![CDATA[<i>Level 18:</i>]]> Hits you or an ally within 5 squares of you</line>
-         <line indent="1"><![CDATA[<i>Level 28:</i>]]> The attack can be a critical hit</line>
-         <line><![CDATA[<i>Effect:</i>]]> The triggering attack misses instead.</line>
+         <line><name>Special</name>This power has either the Arcane, Divine, Primal, Psionic, or Shadow keyword, depending on how you gained the boon.</line>
+         <line><name>Trigger</name>An attack hits you, but does not critically hit you</line>
+         <line indent="1"><name>Level 18</name>Hits you or an ally within 5 squares of you</line>
+         <line indent="1"><name>Level 28</name>The attack can be a critical hit</line>
+         <line><name>Effect</name>The triggering attack misses instead.</line>
       </block>
    </item>
 
@@ -558,8 +612,8 @@
          <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <line><![CDATA[<i>Trigger:</i>]]> An enemy knocks you prone</line>
-         <line><![CDATA[<i>Effect:</i>]]> You spend a healing surge to regain hit points equal to your healing surge value, and can then stand from prone.</line>
+         <line><name>Trigger</name>An enemy knocks you prone</line>
+         <line><name>Effect</name>You spend a healing surge to regain hit points equal to your healing surge value, and can then stand from prone.</line>
       </block>
    </item>
 </catalog>

@@ -185,9 +185,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <div class="container">
 
-           <xsl:apply-templates match="ritual">
-               <xsl:sort select="title" />
-            </xsl:apply-templates>
+           <xsl:apply-templates match="ritual" />
 
 
       </div> <!-- container -->
@@ -245,16 +243,25 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
          <xsl:choose>
             <xsl:when test="@indent='1'">
                <div class="line" style="padding-left:2.3em;">
+                  <xsl:if test="bullet">
+                     &#9658;<xsl:text> </xsl:text>
+                  </xsl:if>
                   <xsl:value-of select="." disable-output-escaping="yes"/>
                </div>
             </xsl:when>
             <xsl:when test="@indent='2'">
                <div class="line" style="padding-left:3.3em;">
+                  <xsl:if test="bullet">
+                     &#9658;<xsl:text> </xsl:text>
+                  </xsl:if>
                   <xsl:value-of select="." disable-output-escaping="yes"/>
                </div>
             </xsl:when>
             <xsl:otherwise>
                <div class="line">
+                  <xsl:if test="bullet">
+                     &#9658;<xsl:text> </xsl:text>
+                  </xsl:if>
                   <xsl:value-of select="." disable-output-escaping="yes"/>
                </div>
             </xsl:otherwise>
