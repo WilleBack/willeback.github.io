@@ -12,9 +12,9 @@
                }
 
                .rule {
-               background-image: url("bg.png");
+               background-image: url("/bg.png");
                background-repeat: no-repeat;
-               margin:0.2cm;
+               margin:0.15cm;
                width:98%;
                float:left;
                page-break-inside:avoid;
@@ -77,7 +77,7 @@
 
                @font-face {
                font-family: 'pfactions';
-               src: url('font/Pathfinder2eActions.ttf') format('truetype');
+               src: url('/font/Pathfinder2eActions.ttf') format('truetype');
                font-weight: normal;
                font-style: normal;
 
@@ -113,7 +113,7 @@
 
                @page {
                size: auto;
-               margin: 0.85cm 0.7cm 1.1cm;
+               margin: 0.65cm 0.65cm 1cm;
                }
 
                @media print {
@@ -155,6 +155,12 @@
                      <xsl:value-of select="prereq" disable-output-escaping="yes" />
                   </div>
                </xsl:if>
+               <xsl:if test="price">
+                  <div id="price" class="line" style="float: left;">
+                     <b>Price </b>
+                     <xsl:value-of select="price" />
+                  </div>
+               </xsl:if>
                <xsl:if test="usage or bulk">
                   <div id="usagebulk" class="line" style="float: left;">
                      <xsl:if test="usage">
@@ -181,6 +187,9 @@
                      <xsl:if test="cast">
                         <b>Cast <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="cast/@action" /> </span></b><xsl:text> </xsl:text>
                         <xsl:value-of select="cast" disable-output-escaping="yes" />
+                        <xsl:if test="cast/@to">
+                           <xsl:text>to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="cast/@ato" /> </span><xsl:text> </xsl:text>
+                        </xsl:if>
                         <xsl:if test="trigger">
                            <xsl:text>; </xsl:text>
                         </xsl:if>
@@ -191,19 +200,18 @@
                      </xsl:if>
                   </div>
                </xsl:if>
-               <xsl:if test="requirement">
+               <xsl:if test="requirement or craft">
                   <div id="requirement" class="line" style="float: left;">
-                     <b>Requirement </b>
+                     <b>
+                        <xsl:if test="craft">
+                           <xsl:text>Craft </xsl:text>
+                        </xsl:if>
+                        <xsl:text>Requirement </xsl:text></b>
                      <xsl:value-of select="requirement" disable-output-escaping="yes" />
+                     <xsl:value-of select="craft" disable-output-escaping="yes" />
                   </div>
                </xsl:if>
-               <xsl:if test="price">
-                  <div id="price" class="line" style="float: left;">
-                     <b>Price </b>
-                     <xsl:value-of select="price" />
-                  </div>
-               </xsl:if>
-               <xsl:if test="hands or range or reload">
+               <xsl:if test="hands or range or reload or area">
                   <div id="handsrangereload" class="line" style="float: left;">
                      <xsl:if test="hands">
                         <b>Hands </b>
@@ -259,6 +267,18 @@
                      <b>Activate </b>
                      <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="activate/action" /></span>
                      <xsl:text> </xsl:text><xsl:value-of select="activate/type" disable-output-escaping="yes" />
+                     <xsl:if test="activate/trigger">
+                        <xsl:text>; </xsl:text><b>Trigger </b>
+                        <xsl:value-of select="activate/trigger" disable-output-escaping="yes" />
+                     </xsl:if>
+                     <xsl:if test="activate/requirement">
+                        <xsl:text>; </xsl:text>
+                        <xsl:if test="activate/requirement/@linebreak">
+                           <br />
+                        </xsl:if>
+                        <b>Requirement </b>
+                        <xsl:value-of select="activate/requirement" disable-output-escaping="yes" />
+                     </xsl:if>
                   </div>
                </xsl:if>
             </div>
@@ -301,6 +321,16 @@
                      </xsl:for-each>
                   </div>
                </xsl:when>
+               <xsl:when test="@action">
+                  <div id="list" class="line" style="float: left; padding-left: 2em;">
+                     <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="@action" /></span>
+                     <xsl:text> </xsl:text>
+                     <xsl:if test="@traits">
+                        <b> (<xsl:value-of select="@traits" disable-output-escaping="yes" />) </b>
+                     </xsl:if>
+                     <xsl:value-of select="." disable-output-escaping="yes" />
+                  </div>
+               </xsl:when>
                <xsl:otherwise>
                   <div id="description" class="line" style="float: left;">
                      <xsl:value-of select="." disable-output-escaping="yes"/>
@@ -308,6 +338,29 @@
                </xsl:otherwise>
             </xsl:choose>
          </xsl:for-each>
+         <xsl:if test="block">
+            <xsl:for-each select="block">
+               <div id="block" class="line" style="width:100%; box-sizing:border-box; padding-top:0.3em; padding-bottom:0.3em; float:left;">
+                  <b><xsl:value-of select="name" disable-output-escaping="yes" /><xsl:text> </xsl:text></b>
+                  <xsl:if test="action">
+                     <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="action" /> </span><xsl:text> </xsl:text>
+                  </xsl:if>
+                  <xsl:if test="type">
+                     <xsl:text> </xsl:text><xsl:value-of select="type" disable-output-escaping="yes" /><xsl:text>; </xsl:text>
+                  </xsl:if>
+                  <xsl:for-each select="part">
+                     <xsl:if test="@linebreak">
+                        <br />
+                     </xsl:if>
+                     <b><xsl:value-of select="name" disable-output-escaping="yes" /></b><xsl:text> </xsl:text>
+                     <xsl:value-of select="text()" disable-output-escaping="yes" />
+                     <xsl:if test="position()!=last()">
+                        <xsl:text>; </xsl:text>
+                     </xsl:if>
+                  </xsl:for-each>
+               </div>
+            </xsl:for-each>
+         </xsl:if>
          <xsl:if test="special">
             <div id="special" class="line" style="float: left;">
                <xsl:value-of select="special[1]" disable-output-escaping="yes"/>

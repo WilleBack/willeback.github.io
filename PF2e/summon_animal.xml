@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+
+   <creature>
+      <title>Bloodseeker</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Tiny</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+6</perception>
+      <sense>darkvision</sense> <sense>scent (imprecise) 60 feet</sense>
+      <skill>
+         <name>Acrobatics</name> <value>+6</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+6</value>
+      </skill>
+
+      <str>-4</str> <dex>+4</dex> <con>+0</con> <int>-5</int> <wis>+1</wis> <cha>-2</cha>
+
+      <ac>16</ac> <fort>+5</fort> <ref>+8</ref> <will>+4</will>
+      <hp>6</hp>
+
+      <speed>10</speed> <fly>30 feet</fly>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>barbed leg</weapon>
+         <atk>+8</atk>
+         <trait>finesse</trait>
+         <line><![CDATA[<b>Effect </b>]]> attach</line>
+      </action>
+      <action>
+         <name>Attach</name>
+         <line>When a bloodseeker hits a target larger than itself, its barbed legs attach it to that creature. This is similar to grabbing the creature, but the bloodseeker moves with that creature rather than holding it in place. The bloodseeker is flat-footed while attached. If the bloodseeker is killed or pushed away while attached to a creature it has drained blood from, that creature takes 1 persistent bleed damage. Escaping the attach or removing the bloodseeker in other ways doesn’t cause bleed damage.</line>
+      </action>
+      <action>
+         <name>Blood Drain</name> <action>1</action>
+         <line><![CDATA[<b>Requirement </b> The bloodseeker is attached to a creature. <b>Effect </b>]]>The bloodseeker uses its proboscis to drain blood from the creature it’s attached to. This deals 1d4 damage, and the bloodseeker gains temporary Hit Points equal to the damage dealt. A creature that has its blood drained by a bloodseeker is drained 1 until it receives healing (of any kind or amount).</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Eagle</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Small</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+6</perception>
+      <sense>low-light vision</sense>
+
+      <skill>
+         <name>Acrobatics</name> <value>+6</value>
+      </skill>
+
+      <str>+0</str> <dex>+3</dex> <con>+1</con> <int>-4</int> <wis>+1</wis> <cha>+1</cha>
+
+      <ac>16</ac>
+      <fort>+4</fort> <ref>+6</ref> <will>+2</will>
+      <hp>6</hp>
+
+      <speed>10 feet</speed> <fly>60 feet</fly>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>beak</weapon> <atk>+6</atk>
+         <trait>finesse</trait>
+         <damage>1d6 piercing</damage>
+      </action>
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>talon</weapon>
+         <atk>+6</atk>
+         <damage>ad4 slashing</damage>
+      </action>
+      <action>
+         <name>Eagle Dive</name> <action>2</action>
+         <line>The eagle Flies up to double its fly Speed in a straight line, descending at least 10 feet, and then makes a talon Strike.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Flash Beetle</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Small</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+6</perception>
+      <sense>low-light vision</sense>
+
+      <skill>
+         <name>Acrobatics</name> <value>+6</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+4</value>
+      </skill>
+
+      <str>+1</str> <dex>+3</dex> <con>+2</con> <int>-5</int> <wis>+1</wis> <cha>-2</cha>
+
+      <ac>16</ac>
+      <fort>+5</fort> <ref>+8</ref> <will>+4</will>
+      <hp>6</hp>
+
+      <passive>
+         <name>Luminescent Aura</name>
+         <trait>aura</trait> <trait>light</trait>
+         <line>10 feet. The flash beetle's bioluminescent organs fill the area with bright light.</line>
+      </passive>
+
+      <speed>20 feet</speed> <fly>15 feet</fly>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>mandibles</weapon>
+         <atk>+8</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d4+1 piercing</damage>
+      </action>
+      <action>
+         <name>Light Flash</name> <action>1</action>
+         <trait>concentrate</trait> <trait>light</trait>
+         <line>The flash beetle creates a brilliant flash of light. All creatures in its luminescent aura must succeed at a DC 17 Fortitude save or be dazzled for 1 minute. The flash beetle's glow then goes out, disabling its aura for 24 hours, during which time it cannot use Light Flash.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Giant Rat</title>
+      <level>-1</level> <role>Creature</role>
+      <alignment>N</alignment> <size>Small</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+3</perception>
+      <sense>low-light vision</sense> <sense>scent (imprecise) 30 feet</sense>
+
+      <skill>
+         <name>Athletics</name> <value>+10</value>
+      </skill>
+      <skill>
+         <name>Intimidate</name> <value>+10</value>
+      </skill>
+
+      <str>+1</str>
+      <dex>+3</dex>
+      <con>+2</con>
+      <int>-4</int>
+      <wis>+1</wis>
+      <cha>-3</cha>
+
+      <ac>15</ac> <fort>+6</fort> <ref>+7</ref> <will>+3</will>
+
+      <hp>8</hp>
+
+      <speed>30 feet</speed>
+      <climb>10 feet</climb>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>jaws</weapon>
+         <atk>+7</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d6+1 piercing plus filth fever</damage>
+      </action>
+
+      <action>
+         <name>Filth Fever</name>
+         <trait>disease</trait>
+         <line>The sickened and unconscious conditions from filth fever don't improve on their own until the disease is cured. <![CDATA[<b>Saving Throw</b>]]> DC 14 Fortitude;</line>
+         <line><![CDATA[<b>Stage 1</b>]]> carrier with no ill effect (1d4 hours); <![CDATA[<b>Stage 2</b>]]> sickened 1 (1 day); <![CDATA[<b>Stage 3</b>]]> sickened 1 and slowed 1 (1 day); <![CDATA[<b>Stage 4</b>]]> unconscious (1 day); <![CDATA[<b>Stage 5</b>]]> dead.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Guard Dog</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Small</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+4</perception>
+      <sense>low-light vision</sense> <sense>scent (imprecise) 30 feet</sense>
+
+      <skill>
+         <name>Acrobatics</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+4</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Survival</name> <value>+4</value>
+      </skill>
+
+      <str>+1</str> <dex>+2</dex> <con>+2</con> <int>-4</int> <wis>+1</wis> <cha>-1</cha>
+
+      <ac>15</ac>
+      <fort>+5</fort> <ref>+7</ref> <will>+4</will>
+      <hp>8</hp>
+
+      <speed>30 feet</speed>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>jaws</weapon>
+         <atk>+6</atk>
+         <damage>1d4+1 piercing</damage>
+      </action>
+      <action>
+         <name>Pack Attack</name>
+         <line>The dog's Strikes dead 1d4 extra damage to creatures within the reach of at least two of the dog's allies.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Monkey</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Tiny</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+5</perception>
+
+      <skill>
+         <name>Acrobatics</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Thievery</name> <value>+5</value>
+      </skill>
+
+      <str>+0</str> <dex>+3</dex> <con>+0</con> <int>-4</int> <wis>+2</wis> <cha>+0</cha>
+
+      <ac>14</ac>
+      <fort>+2</fort> <ref>+7</ref> <will>+4</will>
+      <hp>9</hp>
+
+      <speed>25 feet</speed> <climb>20 feet</climb>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>jaws</weapon>
+         <atk>+7</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d6 piercing</damage>
+      </action>
+      <action>
+         <name>Grab and Go</name> <action>2</action>
+         <line>The monkey Strides and Climbs up to its Speed. At any point during this movement, it can Interact to take a single unattended item of Light bulk or less that it can see from a square it moves through or is adjacent to. Alternatively, if not in combat, during this movement it can attempt to Steal from an adjacent creature.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Red Fox</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Tiny</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+7</perception>
+      <sense>low-light vision</sense> <sense>scent (imprecise) 30 feet</sense>
+
+      <skill>
+         <name>Acrobatics</name> <value>+6 (+8 to Escape)</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+2 (+4 to High Jump or Long Jump)</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+6</value>
+      </skill>
+      <skill>
+         <name>Survival</name> <value>+5</value>
+      </skill>
+
+      <str>-2</str> <dex>+3</dex> <con>+0</con> <int>-4</int> <wis>+2</wis> <cha>+0</cha>
+
+      <ac>17</ac>
+      <fort>+5</fort> <ref>+6</ref> <will>+3</will>
+      <hp>5</hp>
+
+      <speed>35 feet</speed>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>jaws</weapon> <trait>agile</trait> <trait>finesse</trait>
+         <atk>+9</atk>
+         <damage>1d6-2 piercing</damage>
+      </action>
+      <action>
+         <name>Leaping Pounce</name> <action>1</action>
+         <line>The red fox either Strides or Leaps up to its Speed and makes a Strike at the end of that movement. If the fox began this action hidden, it remains hidden until after this ability's Strike.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Skunk</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Tiny</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+5</perception>
+      <sense>low-light vision</sense> <sense>scent (imprecise) 40 feet</sense>
+
+      <skill>
+         <name>Acrobatics</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+2</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+5</value>
+      </skill>
+
+      <str>+0</str> <dex>+3</dex> <con>+2</con> <int>-4</int> <wis>+1</wis> <cha>+0</cha>
+
+      <ac>15</ac>
+      <fort>+4</fort> <ref>+7</ref> <will>+3</will>
+      <hp>7</hp>
+
+      <speed>20 feet</speed>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>jaws</weapon>
+         <atk>+7</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d8 piercing</damage>
+      </action>
+      <action>
+         <name>Spray Musk</name> <action>2</action>
+         <trait>poison</trait>
+         <line>The skunk propels a stream of acrid musk in a 10-foot line. Each creature in the line must attempt a DC 16 Fortitude save.</line>
+         <line indent="1"><![CDATA[<b>Critical Success</b> ]]>The target is unaffected.</line>
+         <line indent="1"><![CDATA[<b>Success </b>]]>The target is sickened 1.</line>
+         <line indent="1"><![CDATA[<b>Failure </b>]]>The target is sickened 2.</line>
+         <line indent="1"><![CDATA[<b>Critical Failure </b>]]>The target is sickened 2 and takes a -2 penalty to Stealth checks from the horrific odor for 24 hours or until the musk is removed or neutralized, requiring 10 minutes of thorough scrubbing with soap.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Viper</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>N</alignment> <size>Tiny</size> <trait>Animal</trait> <trait>Minion</trait> <trait>Summoned</trait>
+
+      <perception>+5</perception>
+      <sense>low-light vision</sense> <sense>scent (imprecise) 30 feet</sense>
+
+      <skill>
+         <name>Acrobatics</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Athletics</name> <value>+1 (+4 to Climb)</value>
+      </skill>
+      <skill>
+         <name>Stealth</name> <value>+5</value>
+      </skill>
+      <skill>
+         <name>Survival</name> <value>+3</value>
+      </skill>
+
+      <str>-3</str> <dex>+4</dex> <con>+0</con> <int>-4</int> <wis>+1</wis> <cha>-2</cha>
+
+      <ac>15</ac>
+      <fort>+2</fort> <ref>+7</ref> <will>+5</will>
+      <hp>8</hp>
+      <reaction>
+         <name>Slink</name> <action>R</action>
+         <line><![CDATA[<b>Trigger </b>]]>A creature ends its movement adjacent to the viper or within the viper's space. <![CDATA[<b>Effect </b>]]>The viper Strides, Climbs, or Swims up to 10 feet (or up to the relevant Speed, if that Speed is less than 10 feet). It must end its movement in a location that isn’t within 5 feet of a foe. This movement doesn’t trigger reactions.</line>
+      </reaction>
+
+      <speed>20 feet</speed> <climb>20 feet</climb> <swim>20 feet</swim>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>fangs</weapon>
+         <atk>+8</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d8-3 piercing plus viper venom</damage>
+      </action>
+      <action>
+         <name>Viper Venom</name> <trait>poison</trait>
+         <line><![CDATA[<b>Saving Throw</b>]]> DC 16 Fortitude; <![CDATA[<b>Maximum Duration</b>]]> 4 rounds</line>
+         <line><![CDATA[<b>Stage 1</b>]]> 1d8 poison damage (1 round).</line>
+      </action>
+   </creature>
+</catalog>

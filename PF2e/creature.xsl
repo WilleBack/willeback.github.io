@@ -337,14 +337,14 @@
                         <xsl:text> </xsl:text>
                         <b>Trigger</b>
                         <xsl:text> A creature within the  </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text>'s reach use a manipulate action or a move action, makes a ranged attack, or leaves a square during a move action it's using. </xsl:text>
                         <br />
                         <b>Effect</b>
                         <xsl:text> The </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> makes a melee Strike against the triggering creature. If the attack is a critical hit and the trigger was a manipulate action, the </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> disrupts the action. This Strike doesn't count toward the monster's MAP, and its MAP doesn't apply to this Strike.</xsl:text>
                      </xsl:when>
                      <xsl:when test="@auto='block'">
@@ -353,16 +353,16 @@
                         <xsl:text> </xsl:text>
                         <b>Trigger</b>
                         <xsl:text> The </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> has its shield raised and takes damage from a physical attack. </xsl:text>
                         <br />
                         <b>Effect</b>
                         <xsl:text> The </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> snaps its shield into place to deflect a blow. The shield prevents the </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> from taking an amount of damage up to the shield's Hardness. The </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> and the shield each take any remaining damage, possibly breaking or destroying the shield.</xsl:text>
                      </xsl:when>
                      <xsl:otherwise>
@@ -422,20 +422,20 @@
                         <xsl:text> </xsl:text>
                         <b>Requirements</b>
                         <xsl:text> The </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text>'s last action was a success with a Strike that lists Grab in its damage entry, or it has a creature grabbed using this action.</xsl:text>
                         <br />
                         <b>Effect</b>
                         <xsl:text> The </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> automatically Grabs the target until the end of the </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text>'s next turn. The creature is grabbed by whichever body part the attack was made with, and that body part can't be used to Strike creatures until the grab is ended.</xsl:text>
                         <br />
                         <xsl:text>Using Grab extends the duration of the Grab until the end of the </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text>'s next turn for all creatures grabbed by it. A grabbed creature can use the Escape action to get out of the grab, and the Grab ends for a grabbed creature if the </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> moves away from it.</xsl:text>
                      </div>
                   </xsl:when>
@@ -444,7 +444,7 @@
                         <b>Constrict</b>&#160;
                         <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;">1</span>
                         <xsl:text> The </xsl:text>
-                        <xsl:value-of select="title" />
+                        <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                         <xsl:text> deals </xsl:text>
                         <xsl:value-of select="damage" />
                         <xsl:text> to any number of creatures grabbed or restrained by it. Each of those creatures can attempt a DC </xsl:text>
@@ -459,12 +459,12 @@
                            <xsl:text> </xsl:text>
                            <b>Requirements</b>
                            <xsl:text> The </xsl:text>
-                           <xsl:value-of select="title" />
+                           <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                            <xsl:text>'s last action was a success with a Strike that lists Knockdown in its damage entry.</xsl:text>
                            <br />
                            <b>Effect</b>
                            <xsl:text> The </xsl:text>
-                           <xsl:value-of select="title" />
+                           <span style="text-transform: lowercase;"><xsl:value-of select="../title" /></span>
                            <xsl:text> knocks the target prone.</xsl:text>
                         </div>
                      </xsl:when>
