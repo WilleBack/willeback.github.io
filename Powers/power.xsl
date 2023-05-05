@@ -23,20 +23,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 				page-break-inside:avoid;
 			}
-			
+
 			.header {
 				width:100%;
 				float:left;
 				color:white;
 			}
-			
+
 			.titlebox {
 				float:left;
 				margin:0.3em;
 				vertical-align:middle;
 				width:100%;
 			}
-			
+
 			.title {
 				width:calc(100% - 1.8em);
 				float:left;
@@ -44,13 +44,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				text-indent:-1em;
 				margin-left:1.2em;
 			}
-			
+
 			.titletext {
 				font-variant: small-caps;
 				font-weight:bold;
 				letter-spacing:1px;
 			}
-			
+
 			.classcat {
 				float:right;
 				text-align:right;
@@ -58,14 +58,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				margin:0.2em;
 				margin-bottom:0em;
 			}
-			
+
 			.freqact {
 				width:100%;
 				font-size:1.05em;
 				margin:0.2em;
 				margin-top:0em;
 			}
-			
+
 			.fluff {
 				font-family:MentorSansStd-Light;
 				background:linear-gradient(to right, #D6D6C2, #ebebe0);
@@ -74,7 +74,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				padding:0.3em;
 				float:left;
 			}
-			
+
 			.keyword {
 				font-variant: small-caps;
 				font-size: 1.1em;
@@ -82,7 +82,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				width:calc(100% - 0.5em);
 				margin:0.2em;
 			}
-			
+
 			.section {
 				width:100%;
 				box-sizing:border-box;
@@ -209,7 +209,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:call-template name="createheader"/>
 			</xsl:otherwise>
 		</xsl:choose>
-		
+
 		<xsl:apply-templates select="section"/>
 
 		<xsl:apply-templates select="part" />
@@ -217,14 +217,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div>
 
 </xsl:template>
-	
+
 
 	<xsl:template name="createheader">
 		<xsl:param name="bgcolor">Purple</xsl:param>
-		
+
 		<div class="header" style="background-color:{$bgcolor};">
 			<div class="titlebox">
-				
+
 				<div class="title">
 					<div class="classcat">
 						<xsl:value-of select="class"/><br />
@@ -234,7 +234,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:if>
 					</div>
 				<span class="titletext"><xsl:value-of select="title"/></span>
-					
+
 				</div>
 				<xsl:if test="frequency">
 					<div class="freqact">
@@ -245,7 +245,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 			</div>
 		</div>
-		
+
 		<div class="fluff">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
@@ -259,18 +259,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each></b>
 			</div>
 		</xsl:if>
-		
+
 	</xsl:template>
 
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-		<xsl:if test="name or keyword">
+		<xsl:if test="name or part-name or keyword">
 			<div id="blockhead" class="header" style="color:black;">
-				<xsl:if test="name">
-			
+				<xsl:if test="name or part-name">
+
 					<div id="part-name" class="titlebox" style="margin-bottom:0em;">
 						<div class="title">
-							<span class="titletext"><i><xsl:value-of select="name"/></i></span>
+							<span class="titletext"><i><xsl:value-of select="name"/><xsl:value-of select="part-name"/></i></span>
 						</div>
 					</div>
 				</xsl:if>
@@ -293,7 +293,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 			</div>
 		</xsl:if>
-		
+
 		<xsl:if test="type">
 			<div class="section" style="padding-left:1.2em;">
 				<b><xsl:value-of select="type"/></b>&#160;<xsl:value-of select="range" disable-output-escaping="yes"/>
@@ -302,7 +302,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:if>
 			</div>
 		</xsl:if>
-		
+
 		<xsl:apply-templates select="section"/>
 
 	</div>
@@ -315,7 +315,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<b>Augment <xsl:value-of select="augment" /></b>
 		</div>
 	</xsl:if>
-	
+
 	<xsl:choose>
 		<xsl:when test="shade or @shade ='true' or @shade or @temp">
 			<xsl:choose>
@@ -392,7 +392,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="sectioncontent">
-	
+
 	<xsl:if test="bullet or name/@style='bullet'">
 		&#9658;<xsl:text> </xsl:text>
 	</xsl:if>
@@ -423,7 +423,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:if test="type2">
 			<xsl:text> or </xsl:text><i><xsl:value-of select="type2"/></i><xsl:text> </xsl:text><xsl:value-of select="range2" disable-output-escaping="yes"/>
 		</xsl:if>
-		<xsl:text> (</xsl:text><xsl:value-of select="target" disable-output-escaping="yes"/><xsl:text>); </xsl:text>
+		<xsl:text> (</xsl:text><xsl:value-of select="target" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
+		<xsl:if test="text">
+			<xsl:text>; </xsl:text>
+		</xsl:if>
 	</xsl:if>
 	<xsl:if test="type and target">
 		<br />
