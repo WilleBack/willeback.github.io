@@ -19,9 +19,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			.power {
 				margin:0.2cm;
-				width:98%;
+				width:calc(100% - 1.2em);
 				float:left;
-				page-break-inside:avoid;
+				break-inside:avoid;
 			}
 
 			.header {
@@ -35,6 +35,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				margin:0.3em;
 				vertical-align:middle;
 				width:100%;
+				break-inside:avoid;
 			}
 
 			.title {
@@ -64,6 +65,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				font-size:1.05em;
 				margin:0.2em;
 				margin-top:0em;
+				float:left;
 			}
 
 			.fluff {
@@ -134,7 +136,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			@media only screen and (min-width:600px) {
 				.container {
 					column-count: 2;
-					column-gap:.4em;
+					column-gap:.2em;
 				}
 
 			}
@@ -142,14 +144,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			@media only screen and (min-width:1000px) {
 				.container {
 					column-count: 3;
-					column-gap:0.5em;
+					column-gap:0.2em;
 				}
 			}
 
 			@media only screen and (min-width:1300px) {
 				.container {
 					column-count: 4;
-					column-gap:0.6em;
+					column-gap:0.2em;
 				}
 
 			}
@@ -161,7 +163,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			@media print {
 				.container {
 					column-count: 2;
-					column-gap:0.6em;
+					column-gap:0.3em;
 					margin:0cm;
 				}
 
@@ -179,7 +181,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="container">
 
 				<xsl:apply-templates select="power"/>
-
 
 		</div> <!-- container -->
 	</body>
@@ -218,13 +219,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 </xsl:template>
 
-
 	<xsl:template name="createheader">
 		<xsl:param name="bgcolor">Purple</xsl:param>
 
 		<div class="header" style="background-color:{$bgcolor};">
 			<div class="titlebox">
-
 				<div class="title">
 					<div class="classcat">
 						<xsl:value-of select="class"/><br />
@@ -234,7 +233,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:if>
 					</div>
 				<span class="titletext"><xsl:value-of select="title"/></span>
-
 				</div>
 				<xsl:if test="frequency">
 					<div class="freqact">
@@ -263,35 +261,35 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:template>
 
 <xsl:template match="part">
-	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-		<xsl:if test="name or part-name or keyword">
-			<div id="blockhead" class="header" style="color:black;">
-				<xsl:if test="name or part-name">
-
-					<div id="part-name" class="titlebox" style="margin-bottom:0em;">
+	<div id="part" style="width:100%; box-sizing:border-box; float:left; border-top: 0.5em solid white; break-inside:avoid;">
+		<xsl:if test="name or part-name or frequency">
+			<div class="header" style=" background:linear-gradient(to right, #D6D6C2, #ebebe0); color:black;">
+				<div class="titlebox">
+			      <xsl:if test="name or part-name">
 						<div class="title">
 							<span class="titletext"><i><xsl:value-of select="name"/><xsl:value-of select="part-name"/></i></span>
 						</div>
-					</div>
-				</xsl:if>
-				<xsl:if test="frequency">
-					<div class="freqact">
-						<b><xsl:value-of select="frequency" /> </b>
-						&#x25C6;
-						<b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" />
-					</div>
-				</xsl:if>
-				<xsl:if test="keyword">
-					<div class="keyword" style="margin-top:0em;"><b>
-						<xsl:for-each select="keyword">
-							<xsl:value-of select="."/>
-							<xsl:if test="position()!=last()">
-								<xsl:text>, </xsl:text>
-							</xsl:if>
-						</xsl:for-each>
-					</b></div>
-				</xsl:if>
+				   </xsl:if>
+				   <xsl:if test="frequency">
+					   <div class="freqact">
+						   <b><xsl:value-of select="frequency" /> </b>
+						   &#x25C6;
+						   <b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" />
+					   </div>
+				   </xsl:if>
+			   </div>
 			</div>
+		</xsl:if>
+
+		<xsl:if test="keyword">
+			<div class="keyword" style="margin-top:0em;"><b>
+				<xsl:for-each select="keyword">
+					<xsl:value-of select="."/>
+					<xsl:if test="position()!=last()">
+						<xsl:text>, </xsl:text>
+					</xsl:if>
+				</xsl:for-each>
+			</b></div>
 		</xsl:if>
 
 		<xsl:if test="type">
@@ -306,7 +304,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:apply-templates select="section"/>
 
 	</div>
-
 </xsl:template>
 
 <xsl:template match="section">
@@ -404,6 +401,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:if test="@auto='no-opportunity'">
 		<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
 	</xsl:if>
+	<xsl:if test="@auto='charge-effect'">
+		<b>Effect:&#160;</b>
+		You charge and use this attack in place of a <i>melee basic attack</i>. If an effect allows you to charge, you can use this power.
+	</xsl:if>
+	<xsl:if test="@auto='powerstrike'">
+		<b>Special:&#160;</b>
+		<i>Power strike</i> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one <i>power strike</i> per triggering attack.
+	</xsl:if>
+	<xsl:if test="@auto='personal'">
+		<b>Personal</b>
+	</xsl:if>
+	<xsl:if test="@auto='special'">
+		<b>Special</b>
+	</xsl:if>
 	<xsl:choose>
 		<xsl:when test="name-style='italic' or name/@style='italic'">
 			<i><xsl:value-of select="name"/>&#160;</i>
@@ -415,7 +426,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:value-of select="name"/>&#160;
 		</xsl:when>
 		<xsl:otherwise>
-			<b><xsl:value-of select="name"/>&#160;</b>
+			<xsl:if test="name">
+				<b><xsl:value-of select="name"/></b>
+			</xsl:if>
+			&#160;
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:if test="type">
@@ -431,8 +445,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:if test="type and target">
 		<br />
 	</xsl:if>
-
-	<xsl:value-of select="text" disable-output-escaping="yes" />
+	<xsl:if test="text">
+		<xsl:value-of select="text" disable-output-escaping="yes" />
+	</xsl:if>
 
 </xsl:template>
 
