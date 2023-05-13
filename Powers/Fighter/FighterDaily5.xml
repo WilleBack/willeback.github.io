@@ -2,22 +2,18 @@
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
    <collection>Fighter Lvl 5 Daily Attack Exploits</collection>
-   
+
    <power>
       <title>Agonizing Assault</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Your attack hits your adversary in a sensitive area, causing it to reel in pain</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -43,18 +39,16 @@
             <name>Flail:</name> <name-style>bold</name-style>
             <text>The target is slowed until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bare-Knuckled Rebuke</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Your enemies leave themselves open to your powerful punches when they miss with their attacks</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section><name>Personal</name></section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -64,15 +58,12 @@
             <shade>true</shade>
             <text>While in the stance, you can use the Rebuke Punch attack at-will.</text>
          </section>
-      </part>
       <part>
          <part-name>Rebuke Punch</part-name>
          <frequency>At-Will</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Opportunity</action> <subaction>Reaction</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must have a hand free.</text>
          </section>
@@ -81,11 +72,9 @@
             <text>An enemy within your unarmed reach misses you with a melee attack</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>the triggering enemy</target>
             <text>Strength vs. AC (unarmed)</text>
          </section>
          <section>
@@ -100,15 +89,14 @@
       <title>Basic Techniques</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You have focused your training on improving the effectiveness of your simpler attacks</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Long</action> <subaction>Rest</subaction>
-         <type>Personal</type>
+         <section><name>Personal</name></section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until you take a long rest, you gain a +1 bonus to damage rolls with <![CDATA[<i>basic attacks</i>]]> and Fighter attacks.</text>
+            <text>Until you take a long rest, you gain a +1 bonus to damage rolls with all <![CDATA[<i>basic attacks</i>]]> and Fighter attacks.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -145,24 +133,19 @@
             <name>Tempest Training:</name> <name-style>bold</name-style>
             <text>Whenever you make an attack with both weapons during the same turn, you can shift 1 square as a free reaction.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bedeviling Assault</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>While your ally distracts your opponent, you attempt to land yet another blow</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -179,29 +162,23 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of the encounter, once per round when an ally hits the target with a melee attack, you can make a <![CDATA[<i>melee basic attack</i>]]> with combat advantage against the target as a free reaction.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Brazen Assault</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Relying on your own resilience, you put yourself in danger, knowing that you can maneuver for a better attack</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Endurance.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -218,35 +195,29 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You gain resist to all damage equal to 5 + one-half the number of healing surges you have expended, but grant combat advantage to all attacks. This lasts until the end of the encounter. You can end this effect as a free action during your turn, but not on the same turn that you activated it.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Brutal Advance</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>After throwing your enemy back, you charge to deliver the killing blow</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding a two-handed weapon.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage.</text>
+            <text>1[W] + Strength modifier damage.</text>
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
@@ -261,36 +232,27 @@
             <shade>true</shade>
             <text>If this charge attack hits, the target falls prone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Cometfall Charge</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You leap through the air toward your foe, landing with a resounding crunch</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Athletics.</text>
          </section>
-         <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You charge and use this attack in place of a <![CDATA[<i>melee basic attack</i>]]>. If an effect allows you to charge, you can use this power.</text>
-         </section>
-         <section>
+         <section shade="" auto="charge-effect"/>
+         <section shade="">
             <text>During the charge movement, you must make an Athletics check to long jump. You are considered to have a running start for this jump.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -299,7 +261,7 @@
          </section>
          <section>
             <indent>1</indent>
-            <text>For each square beyond 2 you jumped, you gain a +1 bonus to the attack roll</text>
+            <text>For each square beyond 2 you cleared with the long jump, you gain a +1 bonus to the attack roll</text>
          </section>
          <section>
             <shade>true</shade>
@@ -314,24 +276,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Crack the Shell</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Seeing an opportunity, you strike your foe hard and fast, delivering a painful bleeding wound that hampers its defenses</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Reliable, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. Fortitude</text>
          </section>
          <section>
@@ -347,24 +304,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target has a -2 penalty to AC against the first attack targeting AC made against it before the end of your next turn, and you regain the use of this power at the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Crashing Assault</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Your opponent flies back from your attack and crashes into other foes, sending them staggering</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. Fortitude</text>
          </section>
          <section>
@@ -390,24 +342,19 @@
             <shade>true</shade>
             <text>You push each enemy adjacent to the target 1 square, or 2 squares if the attack was a critical hit.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Crushing Foot</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You grab your foe and smash it to the ground, placing your foot on its neck to keep the creature down</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs Fortitude</text>
          </section>
          <section>
@@ -432,88 +379,75 @@
             <shade>true</shade>
             <text>Until the end of the encounter, the target has -4 penalty to escape checks when it is prone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dancing Defense</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Each time your blade connects you strike again - or feint, allowing you to dance away</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding two melee weapons.</text>
          </section>
          <section>
-            <shade>true</shade>
             <text>You can remain in the stance if you stop wielding two melee weapons, but you cannot gain any benefit from it until you are again wielding two melee weapons.</text>
          </section>
-         <section>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You assume the Dancing Defense stance.</text>
          </section>
-         <section>
+         <section shade="">
             <text>While in the stance, once per round when you hit with an attack using your main weapon, you can choose one of the following two benefits. The effect is considered to be part of resolving the hit of the triggering attack.</text>
          </section>
-         <section>
+         <section shade="">
             <indent>1</indent>
             <text>&#9658; You make a <![CDATA[<i>melee basic attack</i>]]> with your off-hand weapon against a different target.</text>
          </section>
-         <section>
+         <section shade="">
             <indent>1</indent>
             <text>&#9658; You gain a +2 power bonus to AC and Reflex until the start of your next turn, and shift 1 square.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dervish's Challenge</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You hold your weapons close to your body, prepared to strike out when an enemy leaves you an opening</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
          <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding two melee weapons.</text>
          </section>
          <section>
-            <shade>true</shade>
             <text>You can remain in the stance if you stop wielding two melee weapons, but you cannot gain any benefit from it until you are again wielding two melee weapons.</text>
          </section>
-         <section>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You assume the Dervish's Challenge stance.</text>
          </section>
-         <section>
+         <section shade="">
             <text>While in the stance, whenever you make a <![CDATA[<i>melee basic attack</i>]]> with your main weapon as an immediate action or an opportunity action, you can make a <![CDATA[<i>melee basic attack</i>]]> with your off-hand weapon against the same creature as a free reaction.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dizzying Blow</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You croack your foe upside the head, causing it to see stars</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Reliable, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -532,29 +466,23 @@
          <section>
             <text>You regain the use of this power at the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Hounding Longarm</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>With a sharp jab, you shove your enemy backward, continuing to guard against him with your polearm</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding a reach weapon.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. Fortitude</text>
          </section>
          <section>
@@ -583,7 +511,7 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <text>&#9658; The target triggers your <![CDATA[<i>enforce challenge</i>]]> even if it isn't marked by you and is 1 square outside your reach.</text>
+            <text>&#9658; The target triggers your <![CDATA[<i>enforce challenge</i>]]> even if it isn't marked by you or is 1 square outside your reach.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -593,24 +521,19 @@
             <shade>true</shade> <indent>1</indent>
             <text>&#9658; Each time the target either shifts or makes an attack that doesn't target you and is more than 1 square outside your reach, you can use an opportunity reaction to shift 1 square.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Nimble Bladestorm</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Your weapon becomes a whirlwind around you, striking so fast that your enemies have little chance to dodge</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>weapon burst</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst you can see</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>weapon burst</range>
+            <target>each enemy in the burst you can see</target>
             <text>Strength vs. Reflex</text>
          </section>
          <section>
@@ -627,29 +550,23 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Pinning Smash</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You pummel your opponent, knocking it down to one knee and holding it down</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Endurance.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature adjacent to you</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1</range>
+            <target>one creature adjacent to you</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -673,18 +590,16 @@
          <section>
             <text>The target is immobilized until the end of your next turn, or until you are not adjacent to it, whichever comes first.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Rain of Steel</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You constantly swing your weapon about, slashing and bludgeoning into nearby foes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Stance, Weapon</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -694,28 +609,23 @@
             <shade>true</shade>
             <text>Until the stance ends, as long as you are able to take opportunity actions, any enemy that starts its turn adjacent to you takes 1[W] damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Relentless Pressure</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>Jabbing and pushing with your shield, you force your foe into using rudimentary tactics</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be using a shield.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -736,29 +646,23 @@
             <shade>true</shade>
             <text>Until the end of the encounter, whenever you make an attack against the target, the only attacks it can make until the end of your following turn are <![CDATA[<i>basic attacks</i>]]>.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Spinning Razor Strike</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You move with such alacrity that your enemies can't follow your movements: strike, step, strike, step, and finally one last combined strike to end your opponents' threat</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding two melee weapons.</text>
          </section>
          <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC (main weapon)</text>
          </section>
          <section>
@@ -771,11 +675,9 @@
             <text>You shift 1 square, or 2 squares if the primary attack was a miss.</text>
          </section>
          <section>
-            <name>Secondary Target:</name> <name-style>bold</name-style>
-            <text>One creature other than the primary target</text>
-         </section>
-         <section>
             <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature other than the primary target</target>
             <text>Strength +1 vs. AC (off-hand weapon)</text>
          </section>
          <section>
@@ -788,11 +690,9 @@
             <text>You shift 1 square, or 2 squares if the secondary attack was a miss.</text>
          </section>
          <section>
-            <name>Tertiary Target:</name> <name-style>bold</name-style>
-            <text>One creature other than the primary or secondary target</text>
-         </section>
-         <section>
             <name>Tertiary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature other than the primary or secondary targets</target>
             <text>Strength vs. AC, two attacks (main weapon and off-hand weapon)</text>
          </section>
          <section>
@@ -800,33 +700,27 @@
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Strength modifier damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Subtle Cut</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>You deftly maneuver to precisely cut your foe, drawing its blood and slowing it with suffering</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding a Light Blade.</text>
          </section>
-         <section>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You can shift 1 square.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -840,7 +734,7 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>If the attack was a critical hit or bloodied the target, it takes a -3 penalty to the first saving throw it makes to end this effect.</text>
+            <text>If the attack was a critical hit or bloodied the target, the target takes a -3 penalty to the first saving throw it makes to end this effect.</text>
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
@@ -851,29 +745,23 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You can shift 1 square.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Unexpected Shield Bash</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>As your opponent guards against the relentless fury of your weapon, you surprise them all with a shield attack that shows them you mean business</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Fear, Martial</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be using a shield.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <target>one creature</target>
             <text>Strength +3 vs. Reflex</text>
          </section>
          <section>
@@ -900,7 +788,6 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage, and you mark each enemy within 3 squares of you who can see you until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

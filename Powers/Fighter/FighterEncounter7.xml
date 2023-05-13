@@ -7,26 +7,21 @@
       <title>Armored Assault</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>Burying your shoulder into your shield, you plow forward through anyt foe</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be using a shield.</text>
          </section>
-         <section>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You move up to your speed. You can make the attack at any one point during this movement.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature adjacent to you</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1</range>
+            <target>one creature adjacent to you</target>
             <text>Strength +3 vs. Fortitude</text>
          </section>
          <section>
@@ -53,24 +48,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You slide the target 1 square.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bloody the Field</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You raise your weapon high, recognizing that the time has come to finish off your foe</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -91,29 +81,23 @@
             <name>Axe, Hammer, or Mace:</name> <name-style>bold</name-style>
             <text>Dazed until the end of your next turn instead.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bludgeoning Vise</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>Your weapon crunches down on your enemy's skull before you drive your fist into your foe's face</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must have a hand free.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -123,6 +107,8 @@
          </section>
          <section>
             <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <target>the same target</target>
             <text>Strength vs. Fortitude (unarmed)</text>
          </section>
          <section>
@@ -130,24 +116,19 @@
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] (unarmed) + Strength modifier damage, and you knock the target prone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Come and Get It</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You brandish your weapon and call out to your foes, luring them close through their overconfidence, and then deliver a spinning strike against them all</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst that can see you</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 3</range>
+            <target>each enemy in the burst that can see you</target>
             <text>Charisma +3 vs. Will</text>
          </section>
          <section>
@@ -173,24 +154,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Each target adjacent to you takes 1[W] damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Echoing Assault</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You batter the foe with a mighty swing and prepare to catch it with the backswing if it doesn't have the sense to move</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -200,26 +176,21 @@
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>If the target is within your reach at the start of your turn, it provokes an <![CDATA[<i>opportunity attack</i>]]> from you. You can take this <![CDATA[<i>opportunity attack</i>]]> even though it is your own turn.</text>
+            <text>If the target is within your reach at the start of your next turn, it provokes an <![CDATA[<i>opportunity attack</i>]]> from you. You can take this <![CDATA[<i>opportunity attack</i>]]> even though it is your own turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Griffon's Wrath</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You land a heavy blow on your foe, exposing a vulnerable spot in its defenses</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -246,29 +217,23 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target takes a -2 penalty to AC against the first attack made against it before the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Hampering Flurry</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>Using both weapons, you attack your opponent's legs and hinder it with painful wounds</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding two melee weapons.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC (main weapon)</text>
          </section>
          <section>
@@ -278,6 +243,8 @@
          </section>
          <section>
             <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>the same target</target>
             <text>Strength vs. AC (off-hand weapon)</text>
          </section>
          <section>
@@ -289,24 +256,23 @@
             <shade>true</shade>
             <text>If the primary attack was also a hit, this attack deals additional damage equal to your Dexterity modifier and the target cannot shift while it remains slowed.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Hydra Charge</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>Your advance seems brash, but it's actually a flurry of perfectly timed strikes that bewilder your foes</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>weapon burst</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
             <text>Each enemy in the burst that you can see</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>weapon burst</range>
+            <target>each enemy in the burst that you can see</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -318,29 +284,23 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>When charging, you can use this power in place of a <![CDATA[<i>melee basic attack</i>]]>.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Inertia Strike</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>Your tremendous swing carries your weapon to another foe even if you miss</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding a two-handed melee weapon.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength -2 vs. AC</text>
          </section>
          <section>
@@ -359,20 +319,17 @@
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
-            <text>Choose a different enemy you can see in your reach. That enemy takes damage equal to 3 + your Strength modifier + your weapon's enhancement bonus.</text>
+            <text>Make a <![CDATA[<i>melee basic attack</i>]]> against a creature other than the target.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Iron Bulwark</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You parry blow after another, denying your foes the satisfaction of getting a solid hit</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -383,11 +340,9 @@
             <text>If you are bloodied, you also gain resist all until the end of your next turn. The resist equals one-half the number of healing surges you have expended (minimum resist 1 all).</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -395,29 +350,23 @@
             <name>Hit:</name> <name-style>bold</name-style>
             <text>3[W] + Strength modifier damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Menacing Strike</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You deliver a brutal blow to one enemy, causing your other foes to recoil in fear whenever you lunge at one</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Fear, Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Intimidate.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -432,30 +381,25 @@
          <section>
             <indent>1</indent>
             <name>Opportunity Reaction:</name> <name-style>bold</name-style>
-            <text><![CDATA[<i>Trigger:</i>]]> An enemy ends its turn adjacent to you; You slide the triggering creature 1 square.</text>
+            <text><![CDATA[<i>Trigger:</i>]]>&#160;An enemy ends its turn adjacent to you; You slide the triggering creature 1 square.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Not So Fast!</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>Your adversary tries to slip away, but you slip your weapon through its defenses to slow it down</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An adjacent enemy willingly leaves a square adjacent to you so that it is no longer adjacent to you</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
+            <text>An enemy willingly leaves your reach</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1</range>
+            <target>the triggering enemy</target>
             <text>Strength vs. Reflex</text>
          </section>
          <section>
@@ -463,29 +407,27 @@
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Strength modifier damage, and the target is slowed until the end of its next turn.</text>
          </section>
-      </part>
+         <section>
+            <name>Effect:</name>
+            <text>The target takes a -2 penalty to AC against and Reflex against other attacks triggered by the triggering movement.</text>
+         </section>
    </power>
 
    <power>
       <title>Opportunist's Rend</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You deliver a series of deadly blows to an enemy that lets its guard down</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Special</action>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding two melee weapons.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC (main weapon)</text>
          </section>
          <section>
@@ -495,6 +437,8 @@
          </section>
          <section>
             <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>the same target</target>
             <text>Strength vs. AC (off-hand weapon)</text>
          </section>
          <section>
@@ -506,49 +450,39 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can only use this power in place of a <![CDATA[<i>melee basic attack</i> when making an <i>opportunity attack</i> or using your <i>enforce challence</i>]]> class power.</text>
          </section>
-      </part>
    </power>
 
    <power>
-      <title>Power Strike</title>
-      <class>Fighter</class> <category>Attack</category> <level>7</level>
-      <fluff>By pushing yourself beyond your limits, you unleash your full wrath against a foe</fluff>
-      <part>
-         <frequency>Encounter</frequency>
-         <keyword>Martial, Weapon</keyword>
-         <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Special</type>
-         <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You hit an enemy with a <![CDATA[<i>melee basic attack</i>]]> or a Fighter at-will attack</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The triggering attack deals +2[W] damage.</text>
-         </section>
-         <section>
-            <name>Special:</name> <name-style>bold</name-style>
-            <text><![CDATA[<i>Power strike</i>]]> can be chosen at all levels where you gain an encounter attack, allowing you to use it more than once per encounter. You cannot use more than one <![CDATA[<i>power strike</i>]]> on a given attack, and you should keep track separately of different levels of the power that deal increased damage.</text>
-         </section>
-      </part>
-   </power>
+		<title>Power Strike</title>
+		<class>Fighter</class> <category>Attack</category> <level>7</level>
+		<fluff>By pushing yourself beyond your limits, you unleash your full wrath against a foe</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<action>Nonaction</action> <subaction>Interrupt</subaction>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>You hit an enemy with a <![CDATA[<i>melee basic attack</i>]]> or a Fighter at-will attack</text>
+			</section>
+			<section auto="special"/>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The triggering attack deals +2[W] damage.</text>
+			</section>
+			<section auto="powerstrike"/>
+	</power>
 
    <power>
       <title>Reckless Strike</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You trade precision for power</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength -2 vs. AC</text>
          </section>
          <section>
@@ -556,53 +490,50 @@
             <name>Hit:</name> <name-style>bold</name-style>
             <text>4[W] + Strength modifier damage.</text>
          </section>
-      </part>
+         <section>
+            <name>Miss:</name>
+            <text>2 + your Strength modifier + your weapon's enhancement bonus damage.</text>
+         </section>
    </power>
 
    <power>
       <title>Savage Parry</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>With predatory speed, you violently parry, extorting pain as the penalty for your foe's impudent attack</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy within your reach hits an ally with a melee attack</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>the triggering enemy</target>
             <text>Strength vs. AC</text>
+         </section>
+         <section intend="1">
+            <text>You gain a +2 bonus to the attack roll if the triggering attack targets you</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Strength modifier damage, and the triggering ally takes only half damage from the triggering attack.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Stay Down</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You're not above hitting someone who's down</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -616,31 +547,26 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>If the target is prone, the attack deals an additional +1[W] damage.</text>
+            <text>If the target is prone, you can roll damage twice and choose the higher total.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Sudden Surge</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You throw your weight into an attack, using the momentum of your swing to surge forward</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You move up to a number of squares equal to your Dexterity modifier (minimum 1 square).</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -652,29 +578,23 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>If you did not move the full distance before making the attack, you can move the rest of the distance. This movement does not trigger <![CDATA[<i>opportunity attacks</i>]]> from the target.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Trip Up</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>You tangle your enemy's feet with your weapon</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must have hit an enemy with a melee Weapon attack during this turn.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature you have hit with a melee Weapon attack this turn</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature you have hit with a melee Weapon attack this turn</target>
             <text>Strength vs. Reflex</text>
          </section>
          <section>
@@ -687,29 +607,23 @@
             <name>Flail, Polearm, or Spear:</name> <name-style>bold</name-style>
             <text>You can choose to knock the target prone instead of slowing it.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Twofold Torment</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>Your carefully aimed slashes send two foes reeling away in agony</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding two melee weapons.</text>
          </section>
          <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC (main weapon)</text>
          </section>
          <section>
@@ -722,11 +636,9 @@
             <text>If you have combat advantage against the target, this attack deals additional damage equal to your Dexterity modifier.</text>
          </section>
          <section>
-            <name>Secondary Target:</name> <name-style>bold</name-style>
-            <text>One creature other than the primary target</text>
-         </section>
-         <section>
             <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature other than the primary target</target>
             <text>Strength vs. AC (off-hand weapon)</text>
          </section>
          <section>
@@ -738,29 +650,24 @@
             <shade>true</shade>
             <text>If you have combat advantage against the target, this attack deals additional damage equal to your Dexterity modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Weapon Master's Gambit</title>
       <class>Fighter</class> <category>Attack</category> <level>7</level>
       <fluff>As a master of many weapons, you use this simple attack form as the starting point for expressing your weapon's nature</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You may sheathe a weapon and draw a different one.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Strength vs. AC</text>
          </section>
          <section>
@@ -788,7 +695,6 @@
             <name>Polearm or Spear:</name> <name-style>bold</name-style>
             <text>You slide the target 2 squares, and shift 2 squares to a space adjacent to the target.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

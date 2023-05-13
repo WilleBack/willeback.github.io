@@ -2,16 +2,15 @@
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
 	<collection>Fighter Lvl 2 Utility Exploits</collection>
-	
+
 	<power>
 		<title>Battle Fury Stance</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You throw your full weight into each attack, ruining your defenses but scoring a crippling blow with each strike</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial, Stance</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="special"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -38,53 +37,52 @@
 			<section>
 				<text>You can end this stance as a free action during your turn, but not on the same turn that you activated it.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Battle Leader</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>Your leadership experience lets you enable nearby allies to move safely through combat</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 3</range>
 			<section>
-				<indent>4</indent>
-				<name>Level 21:</name> <name-style>italic</name-style>
-				<text><![CDATA[<b>Close</b>]]> burst 4</text>
-			</section>
-			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
 				<text>You must have training in Diplomacy</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>You, and each ally in the burst</text>
+				<type>Close</type> <range>burst 3</range>
+				<target>You, and each ally in the burst</target>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Level 21:</name> <name-style>italic</name-style>
+				<text><![CDATA[<i>Close</i>]]> burst 4</text>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>Target allies can shift 1 square as a free interrupt, or 2 squares if they start or end the shift adjacent to you.</text>
 			</section>
+			<section shade="" indent="1">
+				<name style="italic">Level 21:</name>
+				<text>Shift 2 squares or 3 squares, respectively.</text>
+			</section>
 			<section>
 				<shade>true</shade>
 				<text>You then shift 1 square.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Boundless Endurance Stance</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You shake off the worst of your wounds</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Healing, Martial, Stance</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -96,24 +94,22 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>While you remain in the stance, you have regeneration when you are bloodied. The regeneration equals 2 + your Constitution modifier. The regeneration is not suppressed by any damage types.</text>
+				<text>While you remain in the stance, you have regeneration when you are bloodied. The regeneration equals 2 + your Constitution modifier and is not suppressed by any damage types.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Close the Gap</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>As your foe falls, you quickly move on to challenge a new enemy</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Opportunity</action> <subaction>Reaction</subaction>
-			<type>Personal</type>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
 				<text>An enemy marked by you and within your reach drops to 0 hit points or less</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -123,21 +119,19 @@
 				<shade>true</shade>
 				<text>You can mark one enemy that is within your reach. The mark lasts until the end of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Create Opening</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You draw your enemy's attention, allowing an ally to slip away</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>1</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature</text>
+				<type>Melee</type> <range>1</range>
+				<target>One creature</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -156,22 +150,18 @@
 				<shade>true</shade> <indent>1</indent>
 				<text>&#9658; If the attack was a miss, the ally can move his or her speed as a free reaction.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Crowd Fighting</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You roll with your foe's feeble attack, causing it to lash out at another nearby enemy</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Immediate</action> <subaction>Reaction</subaction>
-			<type>Melee</type> <range>1</range>
 			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
-				<text>You must have training in Streetwise</text>
+				<text>You must have training in Streetwise.</text>
 			</section>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
@@ -179,7 +169,8 @@
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature other than the triggering enemy</text>
+				<type>Melee</type> <range>1</range>
+				<target>One creature other than the triggering enemy</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -196,18 +187,16 @@
 				<name>Level 21:</name> <name-style>italic</name-style>
 				<text>6 + your Dexterity modifier damage, or 12 + your Dexterity modifier damage if within reach.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Defensive Stance</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>Dropping into a cautious stance, you maneuver around your opponent's attacks to get into position</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Martial, Stance</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -215,12 +204,12 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>While you remain in the stance, you are slowed and gain a +2 power bonus to AC.</text>
+				<text>While you remain in the stance, you are slowed and gain a +4 power bonus to AC.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Shield:</name> <name-style>bold</name-style>
-				<text>If you are wielding a shield, you also gain a +2 power bonus to Reflex.</text>
+				<text>If you are wielding a shield, you also gain a +4 power bonus to Reflex.</text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -235,31 +224,28 @@
 				<name>Special:</name> <name-style>bold</name-style>
 				<text>You can end this stance as a free action during your turn, but not on the same turn that you activated it.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Eldritch Tactics</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>Using your talent for teleportation, you take an ally's place</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Arcane, Martial, Teleportation</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 3</range>
 			<section>
-				<indent>3</indent>
-				<name>Fey Step:</name> <name-style>bold</name-style>
-				<text>If you know the <![CDATA[<i>fey step</i>]]> racial power and it is not expended, this power is <![CDATA[<b>Close</b>]]> burst 5 instead</text>
-			</section>
-			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
-				<text>You must be eladrin</text>
+				<text>You must be eladrin.</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>You and one ally in the burst</text>
+				<type>Close</type> <range>burst 3</range>
+				<target>You and one ally in the burst</target>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Fey Step:</name> <name-style>bold</name-style>
+				<text>If you know the <![CDATA[<i>fey step</i>]]> racial power and it is not expended, this power is <![CDATA[<b>Close</b>]]> burst 5 instead</text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -270,26 +256,23 @@
 				<shade>true</shade>
 				<text>If one target has a larger space than the other, the smaller target teleports into a position of your choice within the larger target's original space, and the larger target teleports into a position of your choice that fully covers the smaller target's original space.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Forceful Drag</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You dig your fingers into a foe and drag the struggling opponent across the battlefield</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>touch</range>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must have a creature grabbed</text>
+				<text>You must have a creature grabbed.</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature grabbed by you</text>
+				<type>Melee</type> <range>touch</range>
+				<target>One creature grabbed by you</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -304,82 +287,73 @@
 				<shade>true</shade>
 				<text>At the end of the move, you can end the grab to knock the target prone and slide it 1 square.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Full Extension</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You lunge forward, hitting a spot well beyond where your foes thought you could reach</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>The reach of the next melee Weapon attack you make before the end of your current turn increases by 1.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Get Out of There</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You pull one of your allies into a more advantageous position</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>1</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One ally</text>
+				<type>Melee</type> <range>1</range>
+				<target>One ally</target>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You slide the target up to 2 squares to a square adjacent to you. You can slide the target through your own space.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Glowering Threat</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>Your intimidating glare distracts your enemies as they attempt to attack your allies</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Fear, Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Close</type> <range>blast 3</range>
 			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
 				<text>You must have training in Intimidate</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>Each enemy in the blast</text>
+				<type>Close</type> <range>blast 3</range>
+				<target>Each enemy in the blast</target>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>Each target takes a -5 penalty to attack rolls against any creature other than you. This penalty lasts until the end of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Mighty Leap</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You gather your strength for a truly impressive jump</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Free</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -411,44 +385,39 @@
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You use Athletics instead of Acrobatics to reduce the damage from the triggering fall.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Minor Resurgence</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>Your ability to withstand hardship grants you a temporary boost in combat</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
-				<text>You must have training in Endurance</text>
+				<text>You must have training in Endurance.</text>
 			</section>
 			<section>
 				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must be bloodied</text>
+				<text>You must be bloodied.</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You gain temporary hit points equal to one-half your level + your Constitution modifier.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Mobile Strikes Stance</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>The force of your strikes lets you sprint away from your foe</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Martial, Stance</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -458,39 +427,35 @@
 				<shade>true</shade>
 				<text>While you remain in the stance, each time you hit an enemy with an at-will Weapon attack, you can move a number of squares equal to your Dexterity modifier as a free reaction.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>No Opening</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You raise your weapon or shield to block an opening in your defenses</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Immediate</action> <subaction>Interrupt</subaction>
-			<type>Personal</type>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
 				<text>An enemy attacks you and has combat advantage for the attack</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You don't grant combat advantage to the triggering enemy until the end of its current turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Perfect Pass</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>With perfect timing, you slip by your foe without dropping your guard</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -500,81 +465,69 @@
 				<shade>true</shade>
 				<text>As long as you end this movement in a square adjacent to the chosen enemy, your movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> from it.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Push Forward</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>Through careful timing and balanced footwork, you avoid your enmies' attacks as you advance</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
-				<text>You must have training in Athletics</text>
+				<text>You must have training in Athletics.</text>
 			</section>
-			<section>
+			<section auto="personal"/>
+			<section shade="">
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You shift up to 3 squares to a square adjacent to an enemy.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Quick Escape</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You quickly try to shake off whatever's holding you</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You make an escape attempt, or make a saving throw against an effect that immobilizes or restrains you, even if it is not an effect that a save can end.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Shielded Sides</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You whirl with your shield, concentrating on closing any holes in your defense</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must be using a shield</text>
+				<text>You must be using a shield.</text>
 			</section>
-			<section>
+			<section auto="personal"/>
+			<section shade="">
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>Until the end of your next turn, you gain a +2 power bonus to AC and Reflex, and cannot be flanked.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Shielding Shove</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>2
 		<fluff>You shove an ally out of harms way with your shield</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Immediate</action> <subaction>Interrupt</subaction>
-			<type>Melee</type> <range>1</range>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must be using a shield</text>
+				<text>You must be using a shield.</text>
 			</section>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
@@ -582,7 +535,8 @@
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>The triggering ally</text>
+				<type>Melee</type> <range>1</range>
+				<target>The triggering ally</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -593,22 +547,20 @@
 				<shade>true</shade>
 				<text>If the triggering enemy is within your reach, you mark it until the end of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Shrewd Repositioning</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>An enemy's attack lands, but you spot a way to better your tactics</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Opportunity</action> <subaction>Reaction</subaction>
-			<type>Personal</type>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
-				<text>You are hit by an attack</text>
+				<text>An enemy hits you with an attack</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -623,22 +575,20 @@
 				<name>Shield:</name> <name-style>bold</name-style>
 				<text>If you are using a shield, the bonus also applies to your Reflex.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Sidestep Maneuver</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>The enemy closes to strike, but you duck and ready a nasty counterstrike</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Opportunity</action> <subaction>Reaction</subaction>
-			<type>Personal</type>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
 				<text>An enemy ends its move in a square adjacent to you</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -648,26 +598,23 @@
 				<shade>true</shade>
 				<text>You gain a +2 power bonus to your next attack roll against the triggering enemy before the end of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Single Out</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>Your fury in battle causes a nearby foe to quake with fear</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Fear, Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>5</range>
 			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
-				<text>You must have training in Intimidate</text>
+				<text>You must have training in Intimidate.</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One enemy that can see you</text>
+				<type>Ranged</type> <range>5</range>
+				<target>One enemy that can see you</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -678,25 +625,23 @@
 				<shade>true</shade>
 				<text>If you scored a critical hit or reduced a nonminion enemy to 0 hit points or less on this turn, the enemy also grants combat advantage on the first attack by an ally before the end of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Snagging Grip</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>When you're knocked off balance, you grab hold of the enemy in front of you and bring it staggering along with you</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Immediate</action> <subaction>Interrupt</subaction>
-			<type>Melee</type> <range>1</range>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
 				<text>You are knocked prone or forced to move</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One enemy adjacent to you</text>
+				<type>Melee</type> <range>1</range>
+				<target>One enemy adjacent to you</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -707,39 +652,34 @@
 				<shade>true</shade>
 				<text>If you were knocked prone, you knock the target prone.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Sudden Sprint</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You put on a burst of speed as you launch yourself toward a foe</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
-				<shade>true</shade>
 				<name>Prerequisite:</name> <name-style>bold</name-style>
-				<text>You must have training in Athletics</text>
+				<text>You must have training in Athletics.</text>
 			</section>
-			<section>
+			<section auto="personal"/>
+			<section shade="">
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You move a number of squares up to your Dexterity modifier to a square adjacent to an enemy.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Unstoppable Advance Stance</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>You swing with such fury that your foes are steadily driven back with each blow</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Martial, Stance</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -749,38 +689,33 @@
 				<shade>true</shade>
 				<text>While you remain in the stance, whenever you hit any creature with a melee Weapon attack, you push that creature 1 square and can shift 1 square to a square the creature vacated.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Who's Next?</title>
 		<class>Fighter</class> <category>Utility</category> <level>2</level>
 		<fluff>When the foe crumples, you move forward to find your next foe</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must have reduced a nonminion enemy to 0 hit points or less during this turn</text>
+				<text>You must have reduced a nonminion enemy to 0 hit points or less during this turn.</text>
 			</section>
-			<section>
+			<section auto="personal"/>
+			<section shade="">
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You shift up to your speed and gain a bonus to your next damage roll made before the end of your next turn. The bonus equals the number of squares you moved from your starting position.</text>
 			</section>
 			<section>
-				<shade>true</shade>
 				<name>Reaver Training:</name> <name-style>bold</name-style>
 				<text>If you have Reaver Training, you can also use this power as a free reaction with the following trigger in place of the requirement:</text>
 			</section>
 			<section>
-				<shade>true</shade> <indent>1</indent>
+				<indent>1</indent>
 				<name>Trigger:</name> <name-style>bold</name-style>
 				<text>You reduce a nonminion enemy to 0 hit points or less with your <![CDATA[<i>enforce challenge</i>]]></text>
 			</section>
-		</part>
 	</power>
 
 </catalog>
