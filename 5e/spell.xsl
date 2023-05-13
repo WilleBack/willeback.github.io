@@ -15,7 +15,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			
 			.rule {
 				margin:0.2cm; 
-				width:97%;
+				width:calc(100% - 1.4em);
 				float:left;
 				page-break-inside:avoid;
 			}
