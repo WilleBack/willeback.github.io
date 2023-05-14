@@ -437,7 +437,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:if test="type2">
 			<xsl:text> or </xsl:text><i><xsl:value-of select="type2"/></i><xsl:text> </xsl:text><xsl:value-of select="range2" disable-output-escaping="yes"/>
 		</xsl:if>
-		<xsl:text> (</xsl:text><xsl:value-of select="target" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
+		<xsl:if test="target">
+		   <xsl:text> (</xsl:text><xsl:value-of select="target" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
+		</xsl:if>
 		<xsl:if test="text">
 			<xsl:text>; </xsl:text>
 		</xsl:if>

@@ -7,34 +7,29 @@
       <title>Battle Awareness</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You can sense danger before the threat is fully realized</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You roll initiative and dislike the result</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You gain a +10 bonus to the triggering initiative check.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bewitching Glare</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You catch your enemy's eye just as the foe makes an attack, and what it sees in your gaze rattles it enough to interfere with its strike</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Charm, Martial</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 3</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must be eladrin.</text>
          </section>
@@ -44,7 +39,8 @@
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
+            <type>Close</type> <range>burst 3</range>
+            <target>the triggering enemy</target>
          </section>
          <section>
             <shade>true</shade>
@@ -55,18 +51,16 @@
             <shade>true</shade>
             <text>If the triggering attack misses, you can pull the target 1 square, or 2 squares if it is marked by you.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bodyguard's  Readyness</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You stand poised, ready to block attacks made against your allies with your shield, weapon, or failing all other options, with your body</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -91,20 +85,16 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>Reduce by 15.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dauntless Endurance</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You easily shake off a debilitating effect that would cripple another warrior</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Endurance.</text>
          </section>
@@ -112,23 +102,22 @@
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You make a saving throw and dislike the result</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You reroll the triggering saving throw, but must use the second result.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Defensive Training</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>With a soldier's discipline, you steel yourself against attacks that would overcome a lesser person</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -138,46 +127,39 @@
             <shade>true</shade>
             <text>Until the stance ends, you gain a +2 bonus to Fortitude, Reflex, and Will</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Get Up!</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>The aid you provide gets a dying ally back on his or her feet</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Healing, Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Heal.</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One dying ally adjacent to you</text>
+            <type>Melee</type> <range>1</range>
+            <target>one dying ally adjacent to you</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value, and then stand up from prone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Ignore Weakness</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>A surge of inner strength helps you shrug off the lingering effects of your enemy's attacks</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Endurance.</text>
          </section>
@@ -185,25 +167,22 @@
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You start your turn immobilized, slowed, or weakened by an effect that a save can end</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You make a saving throw against each triggering effect. You gain a +2 bonus to these saving throws if you are not bloodied.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Intimidating Reminder</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>Just the sight of your shield keeps the memory of its use fresh in the minds of your enemies</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Fear, Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Intimidate.</text>
          </section>
@@ -214,6 +193,7 @@
          <section>
             <text>You can remain in the stance if you stop using a shield, but you cannot gain any benefit from it until you are again using a shield.</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -227,26 +207,23 @@
             <shade>true</shade>
             <text>When you hit an enemy with a Fighter attack that requires you to be using a shield, the enemy takes a penalty to attack rolls with the first attack it makes before the end of your next turn. The penalty equals one-half your Wisdom modifier (minimum penalty -1).</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Knight's Challenge</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You point your weapon at your enemy, its allies now looking at it expectantly as it wavers between accepting your challenge and losing face before its comrades</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Intimidate.</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One enemy in the burst</text>
+            <type>Close</type> <range>burst 3</range>
+            <target>one enemy in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -257,74 +234,64 @@
             <shade>true</shade>
             <text>If the target's Will is higher, you regain the use of this power at the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Line Breaker</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You turn aside your enemies' attacks as you advance across the battlefield</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Athletics.</text>
          </section>
-         <section>
+         <section auto="personal"/>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You move up to your speed.</text>
          </section>
-         <section>
+         <section shade="">
             <text>You have a +5 bonus to all defenses against attacks triggered by this movement.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Line in the Sand</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You trace a circle on the ground around you with your weapon, daring your enemies to enter</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial, Zone</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 1</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Intimidate.</text>
          </section>
          <section>
             <name>Requirement:</name> <name-style>bold</name-style>
-            <text>No enemies can be in the burst.</text>
+            <text>You are not adjacent to any enemies.</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 1</range>
             <text>The burst creates a zone of control until the end of the encounter. The zone also ends if you leave it.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>You have combat advantage against any enemy in the zone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Makeshift Cover</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You are used to snatching a piece of furniture, a body, or a discarded item to block an enemy's attack</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Streetwise.</text>
          </section>
@@ -341,28 +308,26 @@
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy hits you with a close or melee attack</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You gain a bonus to AC and Reflex against the triggering attack equal to your Dexterity modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Rapid Advancement</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>Your physical training lets you surge quickly across the battlefield</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in Athletics.</text>
          </section>
+         <section auto="personal"/>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You move a number of squares equal to your speed + your Constitution modifier.</text>
@@ -377,22 +342,20 @@
             <name>Shieldbearer Training:</name> <name-style>bold</name-style>
             <text>If you are using a shield, you can use your Wisdom modifier instead of your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Rejoin the Fray</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>Reinvigorated by an ally's healing, you rush back into the fray</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Martial</keyword>
          <action>Opportunity</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An ally uses a Healing power on you</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -402,18 +365,16 @@
             <shade>true</shade>
             <text>If you are standing, you shift 3 squares.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Rock Steady</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You sink your center of gravity into the ground below you and grit your teeth, going nowhere you if you don't want to</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -443,42 +404,38 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can end this stance as a free action on your turn, but not on the same turn you activated it.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Settling the Score</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>When an enemy attacks you, you decide then and there to take it out</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy attacks you</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You gain a +2 power bonus to all attack rolls against the triggering enemy until the end of the encounter.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Steeling Roar</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You let out an explosive roar, diverting your enemies' attentions to you while steeling you against the imminent assault</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst who can hear you</text>
+            <type>Close</type> <range>burst 3</range>
+            <target>each enemy in the burst who can hear you</target>
          </section>
          <section>
             <shade>true</shade>
@@ -519,42 +476,38 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>The resist increases by +8.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Strong Focus</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>Concentration improves your ability to accomplish feats of strength</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, you gain a power bonus to Atheletics checks and Strength checks. The bonus equals 2 + one-half your Wisdom modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Unbalancing Dodge</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You duck out of the way of your foe's attack, putting the creature off balance</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy misses you with a melee attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
+            <type>Melee</type> <range>touch</range>
+            <target>the triggering enemy</target>
          </section>
          <section>
             <shade>true</shade>
@@ -566,22 +519,20 @@
             <name>Shield:</name> <name-style>bold</name-style>
             <text>You can choose to apply the penalty to the target's attack rolls instead.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Unbreakable</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You steel yourself againsta a brutal attack</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You take damage.</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -592,20 +543,16 @@
             <name>Shieldbearer Training:</name> <name-style>bold</name-style>
             <text>If you are using a shield, you can use your Wisdom modifier instead of your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Veteran Gambit</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>By recognizing your enemy's tactics, you effortlessly predict the foe's next move</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in History.</text>
          </section>
@@ -613,40 +560,37 @@
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy makes a melee attack against you</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You gain a +2 power bonus to all defenses against the triggering enemy. The bonus lasts until the end of the triggering enemy's next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Vigilant Protector</title>
       <class>Fighter</class> <category>Utility</category> <level>6</level>
       <fluff>You sweep your shield out to give your allies protection</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be using a shield.</text>
          </section>
-         <section>
+         <section auto="personal"/>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You assume the Vigilant Protector stance.</text>
          </section>
-         <section>
+         <section shade="">
             <text>Until the stance ends, you take a -1 penalty to AC and Reflex, but your allies gain a +2 bonus to AC and Reflex while adjacent to you.</text>
          </section>
-         <section>
+         <section shade="">
             <indent>1</indent>
             <name>Dragonborn:</name> <name-style>bold</name-style>
             <text>If you are a dragonborn with the Dragonborn Fury racial trait and you are bloodied, the bonus increases to +3.</text>
          </section>
-      </part>
    </power>
 </catalog>
