@@ -7,21 +7,17 @@
       <title>Blades of Fiery Wrath</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>The ambient magic of your unsuccessful attack manifests as countless blades of fire that lash out at nearby enemies</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Implement</keyword>
          <action>Free</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 1</range>
          <section>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must have used a swordmage attack power this turn and missed all targets with it.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 1</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -33,24 +29,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>If you have used a swordmage Fire attack power this turn, you deal fire damage equal to your Intelligence modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Blastback Swipe</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>Your weapon rings against your foe like a clap of thunder, sending your enemy careening away</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Thunder, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -76,24 +67,19 @@
             <name>Aegis of Assault:</name> <name-style>bold</name-style>
             <text>If you charge and use this power in place of your <![CDATA[<i>melee basic attack</i>]]>, you can choose to teleport your speed instead of moving your speed.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Blazing Lunge</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>You lunge toward your enemy, your blade ablaze with arcane flame</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon, +1 reach</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon, +1 reach</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Reflex</text>
          </section>
          <section>
@@ -109,25 +95,20 @@
             <name>Hit (Reflex):</name> <name-style>bold</name-style>
             <text>1[W] fire damage if you did not hit the target's AC.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Corrosive Ruin</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>You spin your weapon in a tight circle in front of you, assailing foes with a spray of acid</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 3</range>
-         <type2>Area</type2> <range2>burst 1 within 5 squares</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the blast</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 3</range>
+            <type2>Area</type2> <range2>burst 1 within 5 squares</range2>
+            <target>each creature in the blast or burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -139,28 +120,23 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Intelligence modifier + your implmenet's enhancement bonus acid damage if the target is marked by you.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dimensional Vortex</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>Lashing with your weapon, you warp space, causing your foe to appear a short distance away and unleash its attack elsewhere</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Teleportation</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy within 10 squares of you hits an ally with a melee attack</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>the triggering enemy</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -182,24 +158,19 @@
             <name>Aegis of Ensnarement:</name> <name-style>bold</name-style>
             <text>The target grants combat advantage to you until the start of its next turn. If the target did not hit with its attack, it grants combat advantage to all creatures instead.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dual Lightning Strike</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>Like a forked bolt of lightning, you seem to strike two creatures at once</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Lightning, Teleportation, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Reflex</text>
          </section>
          <section>
@@ -229,11 +200,9 @@
             <text>The maximum number of squares you can teleport equals 4 + your Strength modifier.</text>
          </section>
          <section>
-            <name>Secondary Target:</name> <name-style>bold</name-style>
-            <text>One creature other than the primary target</text>
-         </section>
-         <section>
             <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature other than the primary target</target>
             <text>Intelligence vs. AC and Reflex</text>
          </section>
          <section>
@@ -252,18 +221,15 @@
          <section>
             <text>You mark the target until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Incendiary Sword</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>Your weapon ignites with flames as you launch it toward your enemies and, upon striking the ground, it explodes and consumes the area in flames</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 5 squares</range>
          <section>
             <name>Prerequisites:</name> <name-style>bold</name-style>
             <text>You must have the Swordbond class feature.</text>
@@ -278,11 +244,9 @@
             <text>You use the weapon as the implement for this power despite not currently wielding it.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 5 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -298,24 +262,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Your weapon reforms in your hand.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shadow Snake Lunge</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>Like the shadow snake, your strike bites with deadly venom that makes you foe suffer with each movement</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Poison, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -343,24 +302,19 @@
             <name>Crit:</name> <name-style>bold</name-style>
             <text>The target takes damage until the end of your next turn or (save ends), whichever lasts longer.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Sloth Strike</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>As your blade sinks into the enemy, its blood turns to leaden ice, causing it to stagger heavily</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Reflex</text>
          </section>
          <section>
@@ -391,18 +345,25 @@
             <name>Aegis of Shielding:</name> <name-style>bold</name-style>
             <text>While slowed, the target takes a penalty to all damage equal to 2 + one-half your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Transposing Lunge</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>You thrust at your enemy, a flash engulfs it, and it suddenly appears elsewhere</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Teleportation, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
+            <text>Intelligence vs. AC and Will</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>Make one attack roll and compare it to both</text>
+         </section>
          <section>
             <indent>1</indent>
             <name>Aegis of Ensnarement:</name> <name-style>bold</name-style>
@@ -418,18 +379,6 @@
             <text>You must target the triggering creature, and can do so even if it is outside of your reach.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <text>Intelligence vs. AC and Will</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <text>Make one attack roll and compare it to both</text>
-         </section>
-         <section>
             <shade>true</shade>
             <name>Hit (AC):</name> <name-style>bold</name-style>
             <text>2[W] + Intelligence modifier damage.</text>
@@ -443,24 +392,19 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can resolve the hit entries any order you prefer.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Unseen Gauntlet</title>
       <class>Swordmage</class> <category>Attack</category> <level>3</level>
       <fluff>Your words of magic create a gauntleted hand that wraps around your foe, crushing it and leaving it gasping for breath</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Force, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -482,7 +426,6 @@
             <name>Aegis of Ensnarement:</name> <name-style>bold</name-style>
             <text>The target grants combat advantage to the first attack against it before the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

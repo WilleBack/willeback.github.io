@@ -7,14 +7,13 @@
       <title>Binding Aegis</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your enemy is held fast by invisible magic bonds, and if it manages to escape your retribution will be swift</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Teleportation</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature marked by your <![CDATA[<i>arcane aegis</i>]]></text>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature marked by your <![CDATA[<i>arcane aegis</i>]]></target>
          </section>
          <section>
             <shade>true</shade>
@@ -30,33 +29,28 @@
             <name>Aftereffect:</name> <name-style>italic</name-style>
             <text>You can use a free reaction to teleport up to 10 squares to a space adjacent to the target, and use a melee at-will attack power against it.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Blade of Judgement</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>You pour arcane energy into improving your aegis</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Lightning, Teleportation, Weapon</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An ally within 5 squares of you is hit by an enemy you have marked</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
-         </section>
-         <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You teleport the target to a space adjacent to you.</text>
+            <text>You teleport the triggering enemy to a space adjacent to you.</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>the triggering enemy</target>
             <text>Intelligence vs. AC and Reflex</text>
          </section>
          <section>
@@ -77,24 +71,19 @@
             <name>Hit (Reflex):</name> <name-style>bold</name-style>
             <text>The target takes ongoing 5 lightning damage (save ends).</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Burning Blade</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your fiery blade lunges toward your enemy, and its arcane warmth flares again and again in the wounds of your foes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Fire, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -128,24 +117,19 @@
             <shade>true</shade>
             <text>If an attack you make already has a damage type, the type becomes fire in addition to the type(s) it already has.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dance of the Sword</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your dazzling display of swordplay and magic captivates your foes and causes them to neglect combat tactics and opportunities</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Charm, Implement, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 2</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 2</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -161,29 +145,24 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage, and the target is captivated by your display of skill until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dimensional Thunder</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>As you pass unseen through dimensional space, you gather a thunderous roar that bombards enemies upon your arrival</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Teleportation, Thunder, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You teleport up to 4 squares, or up to 6 squares to a space adjacent to an enemy marked by you.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -208,24 +187,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Each enemy adjacent to you takes ongoing thunder damage (save ends). The ongoing damage equals 4 + one-half the distance you teleported (rounded up).</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dragon's Teeth Strike</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>When you strike, shards of force explode from your weapon and dig into your foes' flesh, goading them to move in your direction</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Force, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -237,19 +211,15 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You make the Force Teeth attack. You must include the primary target in the blast.</text>
          </section>
-      </part>
       <part>
          <part-name>Force Teeth</part-name>
          <frequency>Automatic</frequency>
          <keyword>Arcane, Force, Implement</keyword>
          <action>Nonaction</action>
-         <type>Close</type> <range>blast 5</range>
-         <section>
-            <name>Force Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the blast</text>
-         </section>
          <section>
             <name>Force Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 5</range>
+            <target>each enemy in the blast</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -272,21 +242,17 @@
       <title>Frost Backlash</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>As your enemy swings for the kill, your warding suddenly turns to ice and lashes out at your with the fury of winter</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Cold</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An adjacent creature hits you</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1</range>
+            <target>the triggering enemy</target>
             <text>Intelligence +2 vs. Fortitude</text>
          </section>
          <section>
@@ -298,18 +264,16 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lashing Asp Stance</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>A spectral asp winds itself around your weapon hand, lunging to attack nearby creatures with each of your successful strikes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Poison, Stance</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -323,24 +287,19 @@
             <shade>true</shade>
             <text>Also, whenever you hit an enemy marked by your <![CDATA[<i>arcane aegis</i>]]> with a melee attack, it also takes poison damage equal to your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Sweeping Frostblade</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>You swing your weapon in a wide circle, unleashing a freezing wave that numbs nearby foes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Cold, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>weapon burst</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>weapon burst</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -375,24 +334,19 @@
             <name>Aftereffect:</name> <name-style>italic</name-style>
             <text>The target is slowed until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Vanishing Blade</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your sudden departure after striking your foe leaves the enemy casting about to anticipate your next attack</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Illusion, Teleportation, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -413,24 +367,19 @@
             <shade>true</shade>
             <text>Until the end of the encounter, whenever you hit an enemy with a melee attack, you can teleport up 3 squares as a free reaction. If your attack is a critical hit, you can also turn invisible until the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Warding Flourish</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Fancy bladework creates a magical buffer around your enemy that keeps it away from your friends</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Force, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One or two creatures</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one or two creatures</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -455,30 +404,24 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, the target cannot enter a square that is adjacent to any of your allies. This does not prevent it from staying in such a square if it is already in one or if an ally moves adjacent to it.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Whirlwind Blade</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>You spin and suddenly hurl your sword, causing it to spin in the air in seek of an enemy to slash</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5/10</range>
-         <type2>Ranged</type2> <range2>weapon +2/+5 if your weapon can be thrown</range2>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must throw your bonded weapon as part of making this attack.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5/10</range>
+            <type2>Ranged</type2> <range2>weapon +2/+5 if your weapon can be thrown</range2>
+            <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -498,7 +441,6 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Your weapon returns to your hand.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

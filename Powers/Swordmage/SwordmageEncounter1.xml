@@ -7,17 +7,13 @@
       <title>Blazing Pursuit</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>You envelop your weapon in fire and then strike, the flames creating a lingering path that you can travel along to catch your escaping foe</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Teleportation, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Will</text>
          </section>
          <section>
@@ -38,24 +34,19 @@
             <name>Aegis of Assault:</name> <name-style>bold</name-style>
             <text>You can teleport if the target is within a number of squares equal to 3 + your Strength modifier (minimum 5 squares) instead.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Chilling Blow</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your weapon rips into your foe and cold pulses from the wound, enveloping your enemy's body in a crust of frost</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -76,24 +67,19 @@
             <name>Critical:</name> <name-style>bold</name-style>
             <text>The target also takes the damage the first time it falls prone or willingly moves before the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Crackling Burst</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your weapon sends out sprawling arcs of lightning that catch nearby enemies, making movement agonizing for them</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Lightning</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 2</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 2</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -109,28 +95,23 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>If you targeted at least 2 enemies and miss all targets, the first target that willingly moves before the start of your next turn is subject to the lightning damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dimensional Cleave</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your weapon is ready and waiting for a teleporting enemy</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Weapon</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy teleports or is teleported to a space within your reach</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>the triggering enemy</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -143,21 +124,16 @@
             <name>Aegis of Ensnarement:</name> <name-style>bold</name-style>
             <text>If the target willingly teleported, the attack deals additional damage equal to your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Falcon's Mark</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>You send your weapon flying to seek out an enemy beyond your normal reach, using your magic to mark it as your foe</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Force, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
-         <type2>Ranged</type2> <range2>weapon +2/+5 if your weapon can be thrown</range2>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must throw your bonded weapon as part of making this attack.</text>
          </section>
@@ -167,6 +143,9 @@
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5</range>
+            <type2>Ranged</type2> <range2>weapon +2/+5 if your weapon can be thrown</range2>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Will</text>
          </section>
          <section>
@@ -196,24 +175,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Your weapon returns to your hand.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Flame Cyclone</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Arcane power swirls around your weapon and outward toward your enemies, engulfing them in an inferno</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the blast</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 3</range>
+            <target>each creature in the blast</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -225,24 +199,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Your Intelligence modifier + your implement's enhancement bonus fire damage against a creature marked by you.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Foesnare</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>You cut into your foe, and links of solid eldritch energy appear to bind it to the ground</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -269,24 +238,19 @@
             <name>Opportunity Interrupt:</name> <name-style>bold</name-style>
             <text><![CDATA[<i>Trigger:</i>]]> The target is pushed, pulled, or slid; The target's reduction against forced movement from this attack doesn't apply against the triggering push, pull or slide.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fox's Feint</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>Your blade dances faster than the eye can follow, creating a small disruption that affects you and your target</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Teleportation, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. Will and AC</text>
          </section>
          <section>
@@ -314,24 +278,19 @@
          <section>
             <text>If either has a larger space than the other, you choose where inside the larger space the smaller teleports and which part of the larger space covers the smaller space.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lightning Clash</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>As your blade strikes home, a sizzling bolt of lightning leaps from your reeling foe towards its nearby ally</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Lightning, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Reflex</text>
          </section>
          <section>
@@ -347,19 +306,15 @@
             <name>Hit (Reflex):</name> <name-style>bold</name-style>
             <text>You make the Leaping Lightning attack, using the target's space as the origin. This attack does not trigger an <![CDATA[<i>opportunity attack</i>]]> for making a ranged attack.</text>
          </section>
-      </part>
       <part>
          <part-name>Leaping Lightning</part-name>
          <frequency>Automatic</frequency>
          <keyword>Arcane, Implement, Lightning</keyword>
          <action>Nonaction</action>
-         <type>Ranged</type> <range>5/10</range>
-         <section>
-            <name>Lightning Target:</name> <name-style>bold</name-style>
-            <text>One creature other than the primary target</text>
-         </section>
          <section>
             <name>Lightning Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5/10</range>
+            <target>one creature other than the primary target</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -378,17 +333,13 @@
       <title>Sword of Sigils</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>As you sweet your blade in a wide arc, it glows red and leaves arcane runes burning in the air above your foes</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Force, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>weapon burst</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>weapon burst</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. AC and Will</text>
          </section>
          <section>
@@ -414,24 +365,19 @@
             <name>Critical:</name> <name-style>bold</name-style>
             <text>The force damage increases by 2 + twice your weapon's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Thundering Blow</title>
       <class>Swordmage</class> <category>Attack</category> <level>1</level>
       <fluff>The strike of your weapon resounds like thunder, knocking your foe back</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Thunder, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC and Fortitude</text>
          </section>
          <section>
@@ -452,7 +398,6 @@
             <name>Critical:</name> <name-style>bold</name-style>
             <text>The target is knocked prone.</text>
          </section>
-      </part>
    </power>
 
 </catalog>
