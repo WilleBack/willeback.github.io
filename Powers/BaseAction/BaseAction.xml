@@ -7,11 +7,10 @@
 		<title>Action Point</title>
 		<class>Character</class><category>Ability</category>
 		<fluff>Digging into hidden reserves, you accomplish more than normally possible</fluff>
-		<part>
 		<frequency>Encounter</frequency>
 		<keyword>Action Point</keyword>
 		<action>Nonaction</action> <subaction>Action</subaction>
-		<type>Personal</type>
+		<section auto="personal"/>
 		<section>
 			<shade>true</shade>
 			<name>Effect:</name> <name-style>bold</name-style>
@@ -21,24 +20,19 @@
 			<name>Special:</name> <name-style>bold</name-style>
 			<text>Unless another ability tells you otherwise, you can only spend an action point on your own turn, and cannot use it to interrupt an action.</text>
 		</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Administer First Aid</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You tend to the worst of an ally's wounds, allowing them to catch their breath</fluff>
-		<part>
 			<frequency>At-Will</frequency>
-			<keyword>Healing</keyword>
+			<keyword>Healing</keyword> <keyword>Skill Check</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>1</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One ally adjacent to you</text>
-			</section>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>1</range>
+				<target>one ally adjacent to you</target>
 				<text>Heal vs. DC 15</text>
 			</section>
 			<section>
@@ -58,23 +52,19 @@
 				<shade>true</shade> <indent>1</indent>
 				<text>&#9658; If the target is affected by an effect that a save can end, you aid it with shaking off that effect. The target either can make an immediate saving throw against that effect, or gain a +2 bonus on the next saving throw he or she makes against the effect (target's choice).</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Aid Another</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You cooperate with an ally to provide assistance</fluff>
-		<part>
+		<keyword>Ability Check or Skill Check</keyword>
 			<frequency>At-Will</frequency>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Special</type>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One ally designated as the lead</text>
-			</section>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
+				<type>Special</type>
+				<target>one ally designed as a the lead</target>
 				<text>Skill check or ability check vs. DC</text>
 			</section>
 			<section>
@@ -95,21 +85,19 @@
 				<name>Special:</name> <name-style>bold</name-style>
 				<text>Usually, up to four creatures can use <![CDATA[<i>aid another</i>]]> to assist in a single check. In certain circumstances, the DM might decide that more or fewer creatures can assist. For example, only one creature can usually assist in picking a lock.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Aid Attack</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You feint or distract an enemy, or otherwise help an ally's attack</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One enemy</text>
+				<type>Melee</type> <range>weapon</range>
+				<target>one enemy</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -120,21 +108,19 @@
 				<name>Special:</name> <name-style>bold</name-style>
 				<text>Usually, up to four creatures can use <![CDATA[<i>aid attack</i>]]> to assist in a single attack. A given creature can only aid a given attack once.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Aid Defense</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You parry or shield block an enemy, or otherwise help an ally's defense</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One enemy</text>
+				<type>Melee</type> <range>weapon</range>
+				<target>one enemy</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -145,20 +131,18 @@
 				<name>Special:</name> <name-style>bold</name-style>
 				<text>Usually, up to four creatures can use <![CDATA[<i>aid defense</i>]]> to assist against a single attack. A given creature can only aid against a given attack once.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Arrest Fall</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You reach out and attempt to stop your fall</fluff>
-		<part>
+		<keyword>Skill Check</keyword>
 			<frequency>At-Will</frequency>
 			<action>Free</action> <subaction>Interrupt</subaction>
-			<type>Personal</type>
 			<section>
 				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must have a hand free, and be next to something you can climb</text>
+				<text>You must have a hand free, and be next to something you can climb.</text>
 			</section>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
@@ -168,6 +152,7 @@
 				<indent>1</indent>
 				<text>You jump with the intention of catching onto something</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
 				<text>Athletics vs. Climb DC +5</text>
@@ -188,24 +173,19 @@
 			<section>
 				<text>If you fall more than 500 feet, you can use this action as a move action once per turn while falling.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Basic Attack (melee)</title>
 		<class>Basic</class> <category>Attack</category>
 		<fluff>You resort to the simple strike you first learned when you picked up a melee weapon</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -213,28 +193,22 @@
 				<name>Hit:</name> <name-style>bold</name-style>
 				<text>1[W] + Strength modifier damage.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Basic Attack (ranged)</title>
 		<class>Basic</class> <category>Attack</category>
 		<fluff>You resort to the simple attack you first learned when you picked up a ranged weapon</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>weapon</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
+				<type>Ranged</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC, or</text>
 			</section>
 			<section>
-				<indent>1</indent>
 				<text>Strength vs. AC with a Heavy Thrown weapon</text>
 			</section>
 			<section>
@@ -242,28 +216,24 @@
 				<name>Hit:</name> <name-style>bold</name-style>
 				<text>1[W] + Dexterity modifier damage, or 1[W] + Strength modifier damage with a Heavy Thrown weapon.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Break Object</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You attempt to break an object with a well-placed kick or shoulder</fluff>
-		<part>
+		<keyword>Ability Check</keyword>
 			<frequency>At-Will</frequency>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>1</range>
 			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One object</text>
+				<name>Check:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>1</range>
+				<target>one object adjacent to you</target>
+				<text>Strength vs. DC</text>
 			</section>
 			<section>
 				<indent>1</indent>
 				<text>You cannot target items carried or worn by an unwilling creature</text>
-			</section>
-			<section>
-				<name>Check:</name> <name-style>bold</name-style>
-				<text>Strength vs. DC</text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -326,59 +296,37 @@
 				<shade>true</shade> <indent>2</indent>
 				<text>Force open iron portcullis - DC 28</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Bull Rush</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You force an enemy out of a defensive position or into a dangerous one</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>1</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature smaller than you, your size, or one size larger than you</text>
-			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
-				<text>Strength vs. Fortitude</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 6:</name> <name-style>italic</name-style>
-				<text>Strength +2</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 16:</name> <name-style>italic</name-style>
-				<text>Strength +4</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 26:</name> <name-style>italic</name-style>
-				<text>Strength +6</text>
+				<type>Melee</type> <range>1</range>
+				<target>one creature adjacent to you that is smaller than you, your size, or one size larger than you</target>
+				<text>Inherent Strength vs. Fortitude</text>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Hit:</name> <name-style>bold</name-style>
 				<text>You push the target 1 square, and shift 1 square into the vacated space.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Charge</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You dash forward to launch an attack</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Special</type>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature at least 3 squares away from you</text>
+				<type>Special</type>
+				<target>one creature at least 3 squares away from you</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -393,21 +341,20 @@
 				<name>Special:</name> <name-style>bold</name-style>
 				<text>You can't take any further actions after charging, except free actions. This usually means your turn ends.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Climb</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You climb up or down a surface</fluff>
-		<part>
+		<keyword>Skill Check</keyword>
 			<frequency>At-Will</frequency>
 			<action>Part of movement</action>
-			<type>Personal</type>
 			<section>
 				<name>Requirement:</name> <name-style>bold</name-style>
 				<text>You must have at least one hand free to climb</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
 				<text>Athletics vs. DC</text>
@@ -461,16 +408,15 @@
 				<name>Failure by 5 or more:</name> <name-style>bold</name-style>
 				<text>If you were already climbing, you fall but can try to <![CDATA[<i>arrest fall</i>]]>. If you tried to start climbing, you fail to do so. Either way, you can't move any farther as part of the current action.</text>
 			</section>
-		</part>
 		<part>
 			<part-name>Taking Damage while Climbing</part-name>
 			<frequency>At-Will</frequency>
 			<action>Free</action> <subaction>Reaction</subaction>
-			<type>Personal</type>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
 				<text>You take damage while climbing</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
 				<text>Athletics vs. DC</text>
@@ -495,13 +441,12 @@
 		<title>Coup de Grace</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>Sometimes there is no option to be chivalrous, only viciously effective</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Special</type>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One helpless creature adjacent to you</text>
+				<type>Special</type>
+				<target>One helpless creature adjacent to you</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -510,92 +455,66 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>If the attack hits, it automatically scores a critical hit against the target. If the critical hit deals damage greater than or equal to the target's bloodied value, the target dies.</text>
+				<text>If the attack hits, it automatically scores a critical hit against the target. If you deal damage greater than or equal to the target's bloodied value, the target dies.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Crawl</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>Sometimes you just don't have the time to stand up</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
 				<text>You must be prone.</text>
 			</section>
-			<section>
+			<section auto="personal"/>
+			<section shade="">
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You move up to half your land speed.</text>
 			</section>
 			<section>
-				<shade>true</shade>
 				<name>Special:</name> <name-style>bold</name-style>
 				<text>If you are prone when an effect allows you to move a specific distance, you can crawl half that distance.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Drag</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You forcibly move a creature you have a hold on</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>touch</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature grabbed by you, or one helpless ally</text>
-			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
-				<text>Strength vs. Fortitude</text>
+				<type>Melee</type> <range>touch</range>
+				<target>one creature grabbed by you, or one helpless ally</target>
+				<text>Inherent Strength vs. Fortitude</text>
 			</section>
 			<section>
 				<indent>1</indent>
 				<text>The attack automatically hits against a helpless ally</text>
 			</section>
 			<section>
-				<indent>1</indent>
-				<name>Level 6:</name> <name-style>italic</name-style>
-				<text>Strength +2</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 16:</name> <name-style>italic</name-style>
-				<text>Strength +4</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 26:</name> <name-style>italic</name-style>
-				<text>Strength +6</text>
-			</section>
-			<section>
 				<shade>true</shade>
 				<name>Hit:</name> <name-style>bold</name-style>
 				<text>You move up to half your speed and pull the target with you. This movement doesn't provoke <![CDATA[<i>opportunity attacks</i> from the target, but otherwise provokes <i>opportunity attacks</i>]]> as normal.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Escape</title>
 		<class>Basic</class> <category>Action</category>
-		<fluff>You muscle or wriggle out of a grab</fluff>
-		<part>
+		<fluff>You muscle or wriggle out of a bind</fluff>
+		<keyword>Skill Check</keyword>
 			<frequency>At-Will</frequency>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
 				<text>You must be grabbed, or affected by some other ability that allows an escape attempt</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
 				<text>Acrobatics vs. Reflex, or</text>
@@ -620,44 +539,23 @@
 			<section>
 				<text>In such a case, use the highest DC and add +2 for each additional creature or effect, to a maximum of +8.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Grab</title>
 		<class>Basic</class> <category>Action</category>
 		<fluff>You seize your foe bodily to keep it from moving</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>touch</range>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
 				<text>You must have a hand free</text>
 			</section>
 			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature that is smaller than you, your size, or one size larger than you</text>
-			</section>
-			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
-				<text>Strength vs. Reflex</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 6:</name> <name-style>italic</name-style>
-				<text>Strength +2</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 16:</name> <name-style>italic</name-style>
-				<text>Strength +4</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Level 26:</name> <name-style>italic</name-style>
-				<text>Strength +6</text>
+				<type>Melee</type> <range>touch</range>
+				<target>one creature that is smaller than you, your size, or one size larger than you</target>
+				<text>Inherent Strength vs. Reflex</text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -672,21 +570,20 @@
 				<shade>true</shade>
 				<text>If you move away from the creature you're grabbing, or if a pull, push or slide moves you or the creature you're grabbing out of your reach, the grab also ends.</text>
 			</section>
-			<section>
+			<section shade="" indent="1">>
 				<name>Sustain Minor:</name> <name-style>bold</name-style>
 				<text>The grab persist until the end of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Jump (High Jump)</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You jump vertically to reach a dangling rope or high ledge</fluff>
-		<part>
+		<keyword>Skill Check</keyword>
 			<frequency>At-Will</frequency>
 			<action>Part of movement</action>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
 				<text>Athletics check</text>
@@ -760,17 +657,16 @@
 				<name>Reaching Something:</name> <name-style>italic</name-style>
 				<text>To determine whether you can reach something while jumping, add one-third to your height (round down to the nearest inch) to represent the length of your arms. This is then added to the heigh you cleared to determine whether you can reach something.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Jump (Long Jump)</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You jump horizontally to clear a pit or chasm</fluff>
-		<part>
+		<keyword>Skill Check</keyword>
 			<frequency>At-Will</frequency>
 			<action>Part of movement</action>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
 				<text>Athletics check</text>
@@ -794,7 +690,7 @@
 			</section>
 			<section>
 				<shade>true</shade> <indent>2</indent>
-				<text>9 or lower: 0 squares cleared</text>
+				<text>9 or lower: 0 squares cleared (1 square of movement)</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>2</indent>
@@ -844,17 +740,15 @@
 				<name>Vertical Clearance:</name> <name-style>italic</name-style>
 				<text>To determine the number of feet that you clear vertically during the long jump, divide the check result by 10 (rounded down) and then add 2 if the result is at least 1. If you don't clear an obstacle along the way, you hit the obstacle, fall prone and can't move any farther as part of the current action.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Run</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You lower your guard to cover ground quickly</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -868,23 +762,21 @@
 				<shade>true</shade>
 				<text>Despite the name of this action, you don't always literally run. The action can include other movement modes such as climbing, flying, and swimming.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Second Wind</title>
 		<class>Character</class><category>Utility</category>
 		<fluff>You push through the pain and fatigue</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Healing</keyword>
 			<action>Standard</action>
 			<subaction>Action</subaction>
-			<type>Personal</type>
 			<section>
 				<name>Requirement:</name> <name-style>bold</name-style>
 				<text>You must have at least 1 healing surge remaining</text>
 			</section>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -894,17 +786,15 @@
 				<shade>true</shade>
 				<text>You gain a +2 bonus to all defenses until the start of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Squeeze</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You move through a tight corridor, stand on a narrow ledge, or fit into a constrained space</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -922,7 +812,6 @@
 				<shade>true</shade>
 				<text>You move up to half your speed. While squeezing, the only movement that you can take is squeezing and teleportation.</text>
 			</section>
-		</part>
 		<part>
 			<part-name>End a Squeeze</part-name>
 			<frequency>At-Will</frequency>
@@ -940,26 +829,23 @@
 		<title>Step</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You move carefully to avoid giving a foe a chance to strike</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You shift 1 square.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Swim</title>
 		<class>Base</class> <category>Action</category>
 		<fluff>You swim or tread water</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<action>Part of movement</action>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<name>Check:</name> <name-style>bold</name-style>
 				<text>Athletics vs. DC</text>
@@ -997,23 +883,20 @@
 				<name>Failure by 5 or more:</name> <name-style>bold</name-style>
 				<text>You can't swim as part of the current action, and sink 1 square.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Total Defense</title>
 		<class>Basic</class><category>Action</category>
 		<fluff>Sometimes it's more important to guard against further injury than to attack</fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<action>Standard</action> <subaction>Action</subaction>
-		<type>Personal</type>
+		<section auto="personal"/>
 		<section>
 			<shade>true</shade>
 			<name>Effect:</name> <name-style>bold</name-style>
 			<text>You gain a +2 bonus to all defenses until the start of your next turn.</text>
 		</section>
-		</part>
 	</power>
 
 </catalog>
