@@ -7,11 +7,10 @@
 		<title>Armor of Agathys</title>
 		<class>Warlock</class> <category>Attack</category> <level>1</level>
 		<fluff>You surround yourself in a sheath of black ice from a dark and doleful realm, creating protection that radiates a fierce cold</fluff>
-		<part>
 		    <frequency>Daily</frequency>
 		    <keyword>Arcane, Aura, Cold, Implement</keyword>
 		    <action>Minor</action> <subaction>Action</subaction>
-		    <type>Personal</type> <range></range>
+		    <section auto="personal"/>
 		    <section>
 			    <shade>true</shade>
 			    <name-style>bold</name-style>
@@ -20,23 +19,21 @@
 		    </section>
 		    <section>
 			    <shade>true</shade>
-			    <text>Until the end of the encounter, whenever you have temporary hit points from a warlock power, you activate an Aura 1 (Arcane, Cold, Implement).</text>
+			    <text>Until the end of the encounter, whenever you have temporary hit points from a warlock power, you automatically activate an Aura 1 (Arcane, Cold, Implement).</text>
 		    </section>
 			<section>
 				<shade>true</shade>
 				<text>Creatures that end their turn in the aura take cold damage equal to your Charisma modifier + your Implement's enhancement bonus.</text>
             </section>
-		</part>
 	</power>
+
 	<power>
 		<title>Armor of Winter's Grasp</title>
 		<class>Warlock</class> <category>Attack 1</category> <level>1</level>
 		<fluff>You create a vicious, icy wind that scythes through your enemies before settling on you as a shell of frozen air</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Cold, Implement</keyword>
 		<action>Standard</action> <subaction>Action</subaction>
-		<type>Close</type> <range>burst 1</range>
 		<section>
 			<name-style>bold</name-style>
 			<name>Target:</name>
@@ -45,6 +42,8 @@
 		<section>
 			<name-style>bold</name-style>
 			<name>Attack:</name>
+   		<type>Close</type> <range>burst 1</range>
+         <target>each creature in the burst</target>
 			<text>Charisma vs. Fortitude</text>
 		</section>
 		<section>
@@ -64,24 +63,20 @@
 			<name>Effect:</name>
 			<text>Until the end of the encounter, you gain a +2 power bonus to AC and Fortitude.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Ashen Scourge</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>You lash at your foe with a whip of fire, dragging it close and leaving behind a residue of necrotic ash that withers your foe's flesh</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Fire, Implement, Necrotic</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Melee</type><range>touch</range>
-		<type2>Ranged</type2><range2>5</range2>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Melee</type><range>touch</range>
+   		<type2>Ranged</type2><range2>5</range2>
+         <target>one creature</target>
 			<text>Charisma vs. Reflex</text>
 		</section>
 		<section>
@@ -102,23 +97,19 @@
 			<name>Effect:</name><name-style>bold</name-style>
 			<text>You pull the target up to 2 squares, or 3 squares if the attack was a critical.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Contagion</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Wih a word, lesions and angry boils rise on our foe's flesh, its blood clouds with putrid juices and boils away through the air, snaking into the eyes and ears of your other enemies</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Implement, Poison</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>10</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>10</range>
+         <target>one creature</target>
 			<text>Charisma vs. Fortitude</text>
 		</section>
 		<section>
@@ -154,17 +145,16 @@
 			<name>Successful Save:</name><name-style>italic</name-style>
 			<text>The ongoing damage is reduced by 5 points, and the effect persists.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Crown of Stars</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Flaring points of star-bright light encircle your head, and with each gesture, a painful point of blue-white light leaps away in a halo of choking smoke toward a foe</fluff>
-		<part>
 		<frequency>Daily</frequency>
-		<keyword>Arcane, Radiant</keyword>
+		<keyword>Arcane</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Personal</type>
+		<section auto="personal"/>
 		<section>
 			<shade>true</shade>
 			<name>Effect:</name><name-style>bold</name-style>
@@ -178,19 +168,19 @@
 			<shade>true</shade>
 			<text>Once per round, you can use the following attack:</text>
 		</section>
-		</part>
 		<part>
 		<part-name>Choking Starlight Attack</part-name>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Implement, Radiant</keyword>
 		<action>Minor</action><subaction>Action</subaction>
-		<type>Ranged</type><range>10</range>
 		<section>
 			<name>Target:</name><name-style>bold</name-style>
 			<text>One creature</text>
 		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>10</range>
+         <target>one creature</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
@@ -198,23 +188,20 @@
 			<name>Hit:</name><name-style>bold</name-style>
 			<text>1d6 + Charisma modifier radiant damage, and the target cannot take opportunity actions or immediate actions until the start of its next turn.</text>
 		</section>
-		</part>
+   </part>
 	</power>
+
 	<power>
 		<title>Curse of the Dark Dream</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>You inflict a waking nightmare upon your enemy so that it can no longer tell what is real and what exists only in its mind, causing it to stagger about under the dream's influence and trying to avoid falling from imaginary heights or stepping on unreal serpents</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Charm, Implement, Psychic</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>10</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>10</range>
+         <target>one creature</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
@@ -235,28 +222,24 @@
 			<shade>true</shade>
 			<text>While subject to the dream, the target is dazed and you can use a minor action once per round to slide the target 2 squares.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Decree of Khirad</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>A pale blue flame appears above your brow as you utter a condemndation that makes foes mistake allies for enemies</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Charm, Implement, Psychic</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Close</type><range>blast 3</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>Each enemy in the blast</text>
-		</section>
 		<section>
 			<shade>true</shade>
 			<name>Effect:</name><name-style>bold</name-style>
-			<text>You slide each target 2 squares.</text>
+			<text>Before you resolve the attack, you can slide each target 2 squares.</text>
 		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Close</type><range>blast 3</range>
+         <target>the same targets</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
@@ -272,28 +255,24 @@
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>1d6 + Charisma modifier psychic damage.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Dread Star</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>You create a fist-sized orb of painful blue-white radiance that whirls around your enemy, searing it with fierce rays that jab like daggers of light, fencing it in where it stands</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Fear, Implement, Radiant</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>10</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
 		<section>
 			<shade>true</shade>
 			<name>Effect:</name><name-style>bold</name-style>
-			<text>The target takes a -2 penalty to Will defense (save ends).</text>
+			<text>Before you resolve the attack, the target takes a -2 penalty to Will defense (save ends).</text>
 		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>10</range>
+         <target>the same target</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
@@ -305,23 +284,19 @@
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>Half damage, and the target is slowed until the end of your next turn.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Flames of Phlegethos</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Rivulets of clinging liquid fire appear and cascade over your target, igniting anything flammable at once and burning long after the streams of magical fire fade away</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Fire, Implement</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>7/15</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>7/15</range>
+         <target>one creature</target>
 			<text>Charisma vs. Reflex</text>
 		</section>
 		<section>
@@ -348,27 +323,23 @@
 			<name>Aftereffect:</name><name-style>italic</name-style>
 			<text>Ongoing 5 fire damage (save ends).</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Fortune's Reversal</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>With a single word of power, you reverse a creature's luck, turning fortune and happiness into misfortune and sorrow</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Implement, Psychic</keyword>
 		<action>Immediate</action><subaction>Reaction</subaction>
-		<type>Ranged</type><range>10</range>
 		<section>
 			<name>Trigger:</name><name-style>bold</name-style>
 			<text>An enemy within range scores a critical hit or succeeds on a saving throw</text>
 		</section>
 		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>The triggering enemy</text>
-		</section>
-		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>10</range>
+         <target>the triggering enemy</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
@@ -394,28 +365,27 @@
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>Half damage, and ongoing 5 psychic damage (save ends). The target cannot save against this ongoing damage before it has taken it at least once.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Hateful Shade</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>With a gesture, you wrap your enemy with a dark shroud that threatens to choke the life out of it</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Conjuration, Force, Implement</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>10</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creaure</text>
-		</section>
 		<section>
 			<shade>true</shade>
 			<name>Effect:</name><name-style>bold</name-style>
-			<text>You conjure a shade in the target's space, and the shade automatically grabs the target (escape DC 19). While grabbed, the target takes ongoing 5 force damage.</text>
+			<text>Before you resolve the attack, you conjure a shade in the target's space, and the shade automatically grabs the target until it escapes (escape DC 18 + one-half your level). While grabbed, the target takes ongoing 5 force damage. Arcana can also be used to <![CDATA[<i>escape</i>]]> the grab.</text>
 		</section>
+      <section shade="">
+         <text>A creature adjacent to the target can make the <![CDATA[<i>escape</i>]]> attempt for the target, but neither creature can shift on a success.</text>
+      </section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>10</range>
+         <target>one creature</target>
 			<text>Charisma vs. Fortitude</text>
 		</section>
 		<section>
@@ -427,23 +397,19 @@
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>Half damage.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Hellfire Blast</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Waves of flame roll forth from your extended hand, blasting your foes</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Fire, Implement</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Close</type><range>blast 4</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>Each creature in the blast</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Close</type><range>blast 4</range>
+         <target>each creature in the blast</target>
 			<text>Charisma vs. Reflex</text>
 		</section>
 		<section>
@@ -460,23 +426,19 @@
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>Half damage.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Malicious Shadow</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Your attack tears a shroud of shadow from your foe, leaving it to hover over the battlefield and hinder your enemies' movements</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Cold, Conjuration, Implement, Necrotic</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>5</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>5</range>
+         <target>one creature</target>
 			<text>Charisma vs. Reflex</text>
 		</section>
 		<section>
@@ -497,27 +459,23 @@
 			<shade>true</shade>
 			<text>While adjacent to the shadow, enemies grant combat advantage to you. While the shadow persists, you can use a move action to move it a number of squares equal to your Dexterity modifier, and can use the <![CDATA[<i>grasping malice</i>]]> attack, using the shadow as the point of origin.</text>
 		</section>
-		<section>
+		<section shade="" indent="1">
 			<name>Sustain Minor:</name><name-style>bold</name-style>
 			<text>The shadow persists until the end of your next turn.</text>
 		</section>
-		</part>
 		<part>
 		<part-name>Grasping Malice Attack</part-name>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Cold, Implement, Necrotic</keyword>
 		<action>Immediate</action><subaction>Interrupt</subaction>
-		<type>Melee</type><range>1</range>
 		<section>
 			<name>Trigger:</name><name-style>bold</name-style>
-			<text>An enemy leaves a square adjacent to the shadow on its turn</text>
-		</section>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>The triggering enemy</text>
+			<text>An enemy willingly leaves a square adjacent to the shadow</text>
 		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Melee</type><range>1</range>
+         <target>the triggering enemy</target>
 			<text>Charisma vs. Reflex</text>
 		</section>
 		<section>
@@ -525,55 +483,48 @@
 			<name>Hit:</name><name-style>bold</name-style>
 			<text>Charisma modifier + your implement's enhancement bonus cold and necrotic damage, and the target is immobilized until the end of its next turn.</text>
 		</section>
-		</part>
+   </part>
 	</power>
+
 	<power>
 		<title>Mists of Madness</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>A thick mist rises around you, holding within it intoxicating fey magic that overwhelms your enemies' senses, driving those foes to lash out at each other</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Charm, Implement, Psychic</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Close</type><range>burst 1</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>Each creature in the burst</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Close</type><range>burst 1</range>
+         <target>each creature in the burst</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
 			<shade>true</shade>
 			<name>Hit:</name><name-style>bold</name-style>
-			<text>1d6 + Charisma modifier psychic damage, and the target makes a <![CDATA[<i>melee basic attack</i>]]> as a free reaction against a creature of your choice.</text>
+			<text>1d6 + Charisma modifier psychic damage, and the target makes a <![CDATA[<i>basic attack</i>]]> as a free reaction against a creature of your choice.</text>
 		</section>
 		<section>
+			<name>Miss:</name><name-style>bold</name-style>
+			<text>If you miss every target, this power is not expended.</text>
+		</section>
+		<section shade="">
 			<name>Effect:</name><name-style>bold</name-style>
 			<text>You gain concealment until the start of your next turn.</text>
 		</section>
-		<section>
-			<shade>true</shade>
-			<name>Special:</name><name-style>bold</name-style>
-			<text>If you miss every target, this power is not expended.</text>
-		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Prophecy of Zhudun</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>You whisper snatches of prophecy glimpsed in the blank face of dead Zhudun, causing in your foe's mind a vision so horrifying that it loses track of its surroundings</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Fear, Implement, Psychic</keyword>
 		<action>Standard</action><subaction>Action</subaction>
 		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
-		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+         <type>Ranged</type> <range>10</range>
+         <target>one creature</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
@@ -589,80 +540,69 @@
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>Half damage, and the target cannot take actions before the start of its next turn.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Star Shackles</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Invisible force lifts your foes from the ground and squeezes the life from them</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Force, Implement</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Close</type><range>burst 2</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>Each enemy in the burst</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Close</type><range>burst 2</range>
+         <target>each enemy in the burst</target>
 			<text>Charisma vs. Fortitude</text>
 		</section>
 		<section>
 			<shade>true</shade>
 			<name>Hit:</name><name-style>bold</name-style>
-			<text>1d6 + Charisma modifier force damage, and the target is grabbed (escape DC 17) until the end of your next turn.</text>
+			<text>1d6 + Charisma modifier force damage, and the target is grabbed (escape DC 17 + one-half your level) until the end of your next turn.</text>
+		</section>
+		<section indent="1">
+			<shade>true</shade>
+			<name>Sustain Standard:</name><name-style>bold</name-style>
+			<text>Those grabbed by this power take 1d6 + Charisma modifier force damage, and remain grabbed until the end of your next turn.</text>
+		</section>
+		<section indent="1">
+			<shade>true</shade>
+			<text>On a turn that you have sustained the power, you can use the Spreading Shackles attack, using one of the grabbed targets as the origin square.</text>
 		</section>
 		<section>
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>The target is slowed until the end of its next turn.</text>
 		</section>
-		<section>
-			<shade>true</shade>
-			<name>Sustain Standard:</name><name-style>bold</name-style>
-			<text>Those grabbed by this power take 1d6 + Charisma modifier force damage, and remain grabbed until the end of your next turn.</text>
-		</section>
-		<section>
-			<shade>true</shade>
-			<text>On a turn that you have sustained the power, you can use the following action, using one of the grabbed targets as the origin square:</text>
-		</section>
-		</part>
 		<part>
 		<part-name>Spreading Shackles</part-name>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Force, Implement</keyword>
 		<action>Minor</action><subaction>Action</subaction>
-		<type>Melee</type><range>2</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature not currently grabbed by this power</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Melee</type><range>2</range>
+         <target>one creature not currently grabbed by this power</target>
 			<text>Charisma vs. Reflex</text>
 		</section>
 		<section>
 			<shade>true</shade>
 			<name>Hit:</name><name-style>bold</name-style>
-			<text>1d6 + Charisma modifier force damage, and the target is grabbed (escape DC 17) until the end of your next turn.</text>
+			<text>1d6 + Charisma modifier force damage, and the target is grabbed (escape DC 17 + one-half your level) until the end of your next turn.</text>
 		</section>
 		</part>
 	</power>
+
 	<power>
 		<title>The Lash's Bite</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>By focusing your will, you rip vital energy from your enemy and cause i to ache deeply at the resulting loss.</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane, Implement, Psychic</keyword>
 			<action>Standard</action><subaction>Action</subaction>
-			<type>Ranged</type><range>10</range>
-			<section>
-				<name>Target:</name><name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name>Attack:</name><name-style>bold</name-style>
+   			<type>Ranged</type><range>10</range>
+            <target>one creature</target>
 				<text>Charisma vs. Will</text>
 			</section>
 			<section>
@@ -680,34 +620,32 @@
 				<text>Choose one of the following two options:</text>
 			</section>
 			<section>
-				<indent>1</indent>
-				<text>&#9658; Half damage, and you lose all immunities and resistances until the start of your next turn.</text>
+				<indent>1</indent> <bullet/>
+				<text>Half damage.</text>
+         </section>
+         <section indent="1">
+            <text>You lose all immunities and resistances until the start of your next turn.</text>
 			</section>
 			<section>
-				<indent>1</indent>
-				<text>&#9658; You take psychic damage equal to 5 + one-half your level, you do not expend this power and also gain a +4 bonus to the attack roll with this power against the same target before the end of your next turn.</text>
+				<indent>1</indent> <bullet/>
+				<text>You take psychic damage equal to 5 + one-half your level. Immunity to psychic damage does not apply to this damage, and you only apply half any resistance you have against it.</text>
+         </section>
+         <section indent="1">
+            <text>You do not expend this power and also gain a +4 bonus to your attack roll with this power against the same target before the end of your next turn.</text>
 			</section>
-			<section>
-				<indent>1</indent>
-				<text>Immunity to psychic damage does not apply to this damage, and you only apply half any resistance you have against it.</text>
-			</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Tyranny of Flame</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Burned by the fires of the Nine Hells, your enemy grovels, begging for mercy</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Fire, Implement</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>5/10</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Ranged</type><range>5/10</range>
+         <target>one creature</target>
 			<text>Charisma vs. Will</text>
 		</section>
 		<section>
@@ -724,24 +662,19 @@
 			<name>Miss:</name><name-style>bold</name-style>
 			<text>Half damage, and the target is knocked prone.</text>
 		</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Vestige of Khaeleth</title>
 		<class>Warlock</class> <category>Attack</category> <level>1</level>
 		<fluff>Khaeleth was a divine entity that gave of himself until only a shred remained and by invoking him, you perform a similar act on behalf of your allies</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane, Implement</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>10</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
+   			<type>Ranged</type> <range>10</range>
+            <target>one creature</target>
 				<text>Charisma vs. Will</text>
 			</section>
 			<section>
@@ -761,26 +694,24 @@
 				<name>Miss:</name> <name-style>bold</name-style>
 				<text>Half damage.</text>
 			</section>
-		</part>
 		<part>
 			<part-name>Vestige Benefits</part-name>
-			<hide-freqkey>true</hide-freqkey>
-			<hide-actrange>true</hide-actrange>
-			<section>
+			<section shade="">
 				<indent>1</indent>
 				<name>Pact Boon:</name> <name-style>bold</name-style>
 				<text>An ally within 5 squares of you gains temporary hit points equal to one-third your level + your Intelligence modifier.</text>
 			</section>
-			<section>
+			<section shade="">
 				<indent>1</indent>
-				<text><![CDATA[<b><i>Eyes of the Vestige</i> Augment:</b>]]> Once before the end of your next turn, you can use the following action:</text>
+				<name><![CDATA[<i>Eyes of the Vestige</i>]]> Augment:</name>
+            <text>Once before the end of your next turn, you can use the following action:</text>
 			</section>
-			<section>
+			<section shade="">
 				<indent>2</indent>
 				<name>Free Interrupt:</name> <name-style>bold</name-style>
 				<text><![CDATA[<i>Trigger:</i>]]> The target deals damage to an ally you can see; You reduce the damage by any amount of your choice.</text>
 			</section>
-			<section>
+			<section shade="">
 				<indent>2</indent>
 				<text>Once the attack is resolved, you take damage equal to the reduction; this cannot be reduced or resisted.</text>
 			</section>
@@ -791,17 +722,13 @@
 		<title>Vestige of Mount Vaelis</title>
 		<class>Warlock</class> <category>Attack</category> <level>1</level>
 		<fluff>You tell of the victory of the primordials against the divine army at Mount Vaelis, conjuring the thunderous echoes of their success</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane, Implement, Thunder</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Area</type> <range>burst 2 within 10 squares</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>Each creature in the burst</text>
-			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
+   			<type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>each creature in the burst</target>
 				<text>Charisma vs. Fortitude</text>
 			</section>
 			<section>
@@ -817,19 +744,17 @@
 				<name>Miss:</name> <name-style>bold</name-style>
 				<text>Half damage, and the target suffers from thunderous tremors until the end of its next turn.</text>
 			</section>
-		</part>
 		<part>
 			<part-name>Vestige Benefits</part-name>
-			<hide-freqkey>true</hide-freqkey>
-			<hide-actrange>true</hide-actrange>
-			<section>
+			<section shade="">
 				<indent>1</indent>
 				<name>Pact Boon:</name> <name-style>bold</name-style>
 				<text>One enemy cursed by you and within 5 squares of you gains vulnerable 5 thunder until the end of your next turn.</text>
 			</section>
-			<section>
+			<section shade="">
 				<indent>1</indent>
-				<text><![CDATA[<b><i>Eyes of the Vestige</i> Augment:</b> While Mount Vaelis is your active vestige, your <i>eyes of the vestige</i>]]> gains the Thunder keyword and deals 1d6 additional damage. All damage is psychic and thunder instead of psychic.</text>
+				<name><![CDATA[<i>Eyes of the Vestige</i>]]> Augment:</name>
+            <text>While Mount Vaelis is your active vestige, your <![CDATA[<i>eyes of the vestige</i>]]> gains the Thunder keyword and deals 1d6 additional damage. All damage is psychic and thunder instead of psychic.</text>
 			</section>
 		</part>
 	</power>
@@ -838,11 +763,9 @@
 		<title>Vestige of Thaxter</title>
 		<class>Warlock</class> <category>Attack</category> <level>5</level>
 		<fluff>Thaxter, the great goblin hero, instills within you and your allies the cunning of a legendary goblin strike force</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane, Implement</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>7/15</range>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -853,11 +776,9 @@
 				<text>If you do not shift, you can do so after making the attack.</text>
 			</section>
 			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
-			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
+   			<type>Ranged</type> <range>7/15</range>
+            <target>one creature</target>
 				<text>Charisma vs. Reflex</text>
 			</section>
 			<section>
@@ -881,23 +802,21 @@
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>If you did not shift before making the attack, you can shift now.</text>
 			</section>
-		</part>
 		<part>
 			<part-name>Vestige Benefits</part-name>
-			<hide-freqkey>true</hide-freqkey>
-			<hide-actrange>true</hide-actrange>
-			<section>
+			<section shade="">
 				<indent>1</indent>
 				<name>Pact Boon:</name> <name-style>bold</name-style>
 				<text>Choose one ally within 5 squares of you. That ally gains a +2 power bonus to attack for his or her first attack roll before the end of your next turn.</text>
 			</section>
-			<section>
+			<section shade="">
 				<indent>1</indent>
 				<text>If the ally hits a target under your curse with an attack benefitting from this bonus, he or she can also shift 2 squares as a free reaction.</text>
 			</section>
-			<section>
+			<section shade="">
 				<indent>1</indent>
-				<text><![CDATA[<b><i>Eyes of the Vestige</i> Augment:</b>]]> Until the end of your next turn, whenever the target misses you or an ally with an attack, that character can shift 1 square as an opportunity reaction.</text>
+				<name><![CDATA[<i>Eyes of the Vestige</i>]]> Augment:</name>
+            <text>Until the end of your next turn, whenever the target misses you or an ally with an attack, that character can shift 1 square as an opportunity reaction.</text>
 			</section>
 		</part>
 	</power>
@@ -906,18 +825,14 @@
 		<title>Vile Brand</title>
 		<class>Warlock</class> <category>Attack</category> <level>1</level>
 		<fluff>With only a word, you cause a distant enemy's hide to blacken and form a brand that decreases your foe's ability to strike against you</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane, Fear, Implement, Psychic</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>touch</range>
-			<type2>Ranged</type2> <range2>10</range2>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
+   			<type>Melee</type> <range>touch</range>
+   			<type2>Ranged</type2> <range2>10</range2>
+            <target>one creature</target>
 				<text>Charisma vs. Will</text>
 			</section>
 			<section>
@@ -950,24 +865,19 @@
 				<indent>1</indent>
 				<text>Immunity to psychic damage does not apply to this damage, and you only apply half any resistance you have against it.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Web of Shadows</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Strands of darkness shroud the battlefield around your foes, forming a dense web of black tendrils that can hold any creature fast</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Arcane, Implement, Necrotic, Zone</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Area</type><range>burst 1 within 10 squares</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>Each enemy in the burst</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Area</type><range>burst 1 within 10 squares</range>
+         <target>each enemy in the burst</target>
 			<text>Charisma vs. Reflex</text>
 		</section>
 		<section>
@@ -988,23 +898,19 @@
 			<shade>true</shade>
 			<text>Affected creatures treat the zone as difficult terrain, and take a -2 penalty to Reflex while within the zone.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Yan-C-Bin's Breath</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>You exhale a cloud of roiling green vapor that eats away at anything it touches</fluff>
-		<part>
 		<frequency>Daily</frequency>
 		<keyword>Acid, Arcane, Implement, Zone</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Close</type><range>blast 4</range>
-		<section>
-			<name>Target:</name><name-style>bold</name-style>
-			<text>Each creature in the blast</text>
-		</section>
 		<section>
 			<name>Attack:</name><name-style>bold</name-style>
+   		<type>Close</type><range>blast 4</range>
+         <target>each creature in the blast</target>
 			<text>Charisma vs. Fortitude</text>
 		</section>
 		<section>
@@ -1025,24 +931,22 @@
 			<shade>true</shade>
 			<text>Affected creatures treat the zone as difficult terrain, and also take acid damage equal to your Charisma modifier + your implement's enhancement bonus when they end their turn in the zone.</text>
 		</section>
-		<section>
+		<section shade="" indent="1">
 			<name>Sustain Minor:</name><name-style>bold</name-style>
 			<text>Roll a d6. On an odd result, reduce the zone's size by 1 square of your choice. On an even result, increase the zone's size by 1 square.</text>
 		</section>
-		<section>
+		<section shade="" indent="1">
 			<text>If the zone occupies 0 squares, it ends. Otherwise, the zone persists until the end of your next turn.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Your Glorious Sacrifice</title>
 		<class>Warlock</class><category>Attack</category><level>1</level>
 		<fluff>Your true friends understand the sacrifices they need to make for your power</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane, Implement, Necrotic</keyword>
 			<action>Standard</action><subaction>Action</subaction>
-			<type>Ranged</type><range>10</range>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name><name-style>bold</name-style>
@@ -1053,11 +957,9 @@
 				<text>This damage cannot be reduced in any way.</text>
 			</section>
 			<section>
-				<name>Target:</name><name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
-			<section>
 				<name>Attack:</name><name-style>bold</name-style>
+   			<type>Ranged</type><range>10</range>
+            <target>one creature</target>
 				<text>Charisma vs. Fortitude</text>
 			</section>
 			<section>
@@ -1091,7 +993,6 @@
 				<shade>true</shade>
 				<text>The damage equals your Charisma modifier and cannot be reduced in any way.</text>
 			</section>
-		</part>
 	</power>
 
 </catalog>

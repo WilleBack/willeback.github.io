@@ -399,7 +399,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		You can only use one Channel Divinity power per encounter.
 	</xsl:if>
 	<xsl:if test="@auto='no-opportunity'">
-		<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
+		Using this power does not trigger <i>opportunity attacks</i>
 	</xsl:if>
 	<xsl:if test="@auto='charge-effect'">
 		<b>Effect:&#160;</b>
@@ -417,19 +417,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:if>
 	<xsl:choose>
 		<xsl:when test="name-style='italic' or name/@style='italic'">
-			<i><xsl:value-of select="name"/>&#160;</i>
+			<i><xsl:value-of select="name" disable-output-escaping="yes"/>&#160;</i>
 		</xsl:when>
 		<xsl:when test="name-style='bold' or name/@style='bold'">
-			<b><xsl:value-of select="name"/>&#160;</b>
+			<b><xsl:value-of select="name" disable-output-escaping="yes"/>&#160;</b>
 		</xsl:when>
 		<xsl:when test="name-style or name/@style">
-			<xsl:value-of select="name"/>&#160;
+			<xsl:value-of select="name" disable-output-escaping="yes"/>&#160;
+		</xsl:when>
+		<xsl:when test="name/@vestige">
+			<b><i>Eyes of the Vestige</i> Augment:</b>&#160;
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:if test="name">
-				<b><xsl:value-of select="name"/></b>
+				<b><xsl:value-of select="name" disable-output-escaping="yes"/></b>
 			</xsl:if>
-			&#160;
+			<xsl:text>&#160;</xsl:text>
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:if test="type">

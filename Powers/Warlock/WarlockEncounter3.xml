@@ -7,17 +7,13 @@
       <title>Cloud of Flies</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>You breathe out a cloud of acidic black flies that streak across the battlefield, swarming your foe and attempting to enter its body</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5</range>
+            <target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -33,25 +29,23 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target grants combat advantage for the first attack made against it before the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Delban's Deadly Attention</title>
       <class>Warlock</class> <category>Attack</category> <level>2</level>
       <fluff>A bolt of frigid starlight shines down and bathes your foe, causing the creature to suffer a spasm of agony just as it attacks you</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Necrotic</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 4</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy in hits you with a melee attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy in the burst</text>
+            <type>Close</type> <range>burst 4</range>
+            <target>the triggering enemy in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -67,30 +61,24 @@
             <shade>true</shade>
             <text>The target chooses either to deal half damage with the triggering attack, or to increase the necrotic damage by 1d8.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Eldritch Claws</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>At your command, clawed hands crafted from eldritch energies wrap around your foe</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement; Varies</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>10</range2>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have the Eldritch Pact class feature.</text>
          </section>
          <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>10</range2>
+            <target>one creature</target>
             <text>Charisma vs. Reflex</text>
          </section>
          <section>
@@ -129,16 +117,15 @@
          <section>
             <text>If this attack was a hit, you use the primary target as the origin square. If it was a miss, you use the space the target occupied when you made the attack.</text>
          </section>
-      </part>
       <part>
          <part-name>Eldritch Rake</part-name>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Implement; Varies</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1 from the origin square</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature other than the primary target</text>
+            <type>Melee</type> <range>1 from the origin square</range>
+            <target>one creature other than the primary target</target>
          </section>
          <section>
             <indent>1</indent>
@@ -191,23 +178,19 @@
       <title>Eldritch Rain</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>You fire purple rays of eldritch power at your foes</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>7/15</range>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature, or two creatures no more than 5 squares apart from each other</text>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>7/15</range>
+            <target>one creature, or two creatures no more than 5 squares apart from each other</target>
+            <text>Charisma vs. Reflex</text>
          </section>
          <section>
             <indent>1</indent>
             <name>Fey Pact:</name> <name-style>bold</name-style>
             <text>You can choose to target three creatures no more than 5 squares apart from each other</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <text>Charisma vs. Reflex</text>
          </section>
          <section>
             <shade>true</shade>
@@ -228,24 +211,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Your Charisma modifier + your implement's enhancement bonus damage if you only targeted one creature.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fiery Bolt</title>
       <class>Warlock</class> <category>Attack</category> <level>2</level>
       <fluff>You call up a bolt of golden flame and hurl it at your foe, with anyone standing close to him ending up burned as well</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10/20</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10/20</range>
+            <target>one creature</target>
             <text>Charisma vs. Reflex</text>
          </section>
          <section>
@@ -267,25 +245,20 @@
             <name>Infernal Pact:</name> <name-style>bold</name-style>
             <text>Additional damage equal to your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fortune Binding</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>You create ethereal black ropes that bind you to your enemy and as the ropes twist, your luck improves at the cost of your's enemy's</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>10</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>10</range2>
+            <target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -306,24 +279,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Charisma modifier + your implement's enhancement bonus psychic damage if you have a condition or effect on you that a save can end.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Frigid Darkness</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>You create a freezing black shadow around your foe, a small taste of the icy darkness in the depths of the night sky that causes the foe to not see well enough to defend itself</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Fear, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -344,24 +312,19 @@
             <name>Miss (Infernal Pact):</name> <name-style>bold</name-style>
             <text>If the target is bloodied, it grants you combat advantage to you until the end of  your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Hands of Ihbar</title>
       <class>Warock</class> <category>Attack</category> <level>3</level>
       <fluff>Inky black, frigid tendrils emerge as if from your foes' bodies, curling and winding around their hosts to tightly that blood flow and movements are hampered</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -383,25 +346,20 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>A target in the center square is slowed until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lure of Loyalty</title>
       <class>Warlock</class> <category>Attack</category> <level>2</level>
       <fluff>You lay a wreath of confusion over your enemy, drawing it closer and commanding its temporary loyalty</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Charm, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>5</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>5</range2>
+            <target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
@@ -432,25 +390,20 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target cannot make attacks against you until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lure of Minauros</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>You whisper dark promises, sending them forth to pollute your enemy's mind with overwhelming terror and leaving them lingering around you</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fear, Implement, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>5</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>5</range2>
+            <target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
@@ -474,24 +427,19 @@
             <name>Infernal Pact:</name> <name-style>bold</name-style>
             <text>Bloodied enemies in the aura take additional damage equal to your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Otherwind Stride</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>You call up an unseen maelstorm of power that lashes nearby creatures - you then step into the vortex and emerge somewhere a short distance away</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Teleportation</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 1</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 1</range>
+            <target>each creature in the burst</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -513,30 +461,25 @@
             <name>Fey Pact:</name> <name-style>bold</name-style>
             <text>You can choose to teleport before making the attack instead of after.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shared Agony</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>Sometimes pain is the price of victory - to wrack your opponent's mind, you have to give up a fragment of your own sanity</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>10</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You take psychic damage equal to the target's level. This damage cannot be reduced or negated.</text>
+            <text>Before resolving the attack, you take psychic damage equal to the target's level. This damage cannot be reduced or negated.</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>10</range2>
+            <target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
@@ -557,28 +500,23 @@
             <name>Dark Pact:</name> <name-style>bold</name-style>
             <text>If you reroll the attack, you deal additional damage equal to your Dexterity modifier for each time you choose to reroll it.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Upsetting Onslaught</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>Your attack leaves your enemy reeling, unable to get its bearings without harming itself further</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
          <section>
             <name>Infernal Pact:</name> <name-style>bold</name-style>
             <text>You can choose to give this power the Fear and Psychic keywords. If you do, the damage becomes psychic damage.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5</range>
+            <target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
@@ -595,24 +533,19 @@
             <shade>true</shade>
             <text>The target can choose to end the dazed condition as a free action on its turn. If it does, it takes damage equal to 5 + your Charisma modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Vile Calamity</title>
       <class>Warlock</class> <category>Attack</category> <level>1</level>
       <fluff>With a single word, you submerge your enemy in a deluge of chaotic energy</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Fire, Implement, Lightning, Thunder</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -629,24 +562,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Each creature adjacent to the target and under your curse takes cold, fire, lightning and thunder damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Void Blast</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>A mote of darkness appears before you, then explodes to envelop your foes in a field of shadow and madness</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the blast</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 3</range>
+            <target>each creature in the blast</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
@@ -672,25 +600,20 @@
             <name>Star Pact:</name> <name-style>bold</name-style>
             <text>Any creature other than you that ends its turn in the zone takes psychic damage equal to your Intelligence + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Worms</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>For a moment, your foe is covered in biting, swarming, and crushing maggots that make up the infinite extradimensional body of the Worm That Walks</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Healing, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>5</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>5</range2>
+            <target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -712,22 +635,15 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Acid damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Your Delicious Weakness</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
       <fluff>The voices whisper of the cold between stars, between lives, and you smile - the spell that surges out against your enemy bites down to their deepest weakness</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic; See text</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -739,6 +655,8 @@
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Charisma vs. Will (psychic damage), or</text>
          </section>
          <section>
@@ -763,7 +681,6 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>If this power deals damage of a type the target has a vulnerability or weakness to, it takes half damage.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

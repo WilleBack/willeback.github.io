@@ -7,11 +7,10 @@
       <title>Astral Eyes</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Your eyes exude the light that bathes the Astral Sea, sharpening your sight and allowing you to perceive subtle details with ease</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -34,18 +33,16 @@
             <name>Minor Action:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, you gain a +2 power bonus to Insight checks and Perception checks.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Caress of Darkness</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>You whisper to those who dwell in the darkness, affirming your undying love and loyalty, and in return receive a caress that brings the gift of stealth</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -80,18 +77,16 @@
             <indent>1</indent>
             <text>If you expend three healing surges, it lasts for 24 hours instead and you gain the bonus to saving throws at all times.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Chaos Armor</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Power flows around you, girding you against the elements and lashing your enemies</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement; Varies</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -130,22 +125,20 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>Equal to 8 + your Constitution modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dark One's Own Luck</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Refusing the result that fate has decreed for you, you invoke the power of your patron in an attempt to rewrite what has been written</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You make an attack roll, skill check, ability check, or a saving throw and dislike the result</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -155,24 +148,23 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>If the triggering roll or check still fails, you regain the use of this power when you take a short rest.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fate's Frayed Thread</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>With one miss, the fates collude against your enemy, heralding its ultimate doom</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 10</range>
+         <section auto="no-opportunity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy within 10 squares of you misses you with an attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>The triggering enemy in the burst</text>
          </section>
          <section>
@@ -184,26 +176,23 @@
             <shade>true</shade>
             <text>Also, until the end of your next turn, the target takes a -2 penalty to attack rolls against you and grants combat advantage to you.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fey Switch</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>You step through the veils of the Feywild to the place where an ally stands and return to the world in that spot, instantly whisking your ally back to the place you started from</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Teleportation</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
-            <indent>1</indent>
             <name>Fey Step:</name> <name-style>bold</name-style>
             <text>If you are an eladrin with the <![CDATA[<i>fey step</i>]]> racial power, using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]>.</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You, and one willing ally</text>
+            <type>Ranged</type> <range>10</range>
+            <target>you, and one willing ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -214,18 +203,16 @@
             <shade>true</shade>
             <text>If one target has a larger space than the other, the smaller target teleports into a position of your choice within the larger target's original space, and the larger target teleports into a position of your choice that fully covers the smaller target's original space.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Iron Aspect of Dispater</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Your skin becomes as hard as iron, making you immovable against your foes' attacks and giving weight to your punches</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Polymorph</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -255,55 +242,43 @@
             <name>Level 26:</name> <name-style>italic</name-style>
             <text><![CDATA[<i>+5 magic club</i>]]>.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lesser Planar Ally</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>The air around you ripples and becomes heavy as you call forth a spirit of the planes to serve you</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Conjuration</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1</range>
             <text>You conjure a Tiny spirit of a planar being in a square adjacent to you. The spirit is an invisible conjuration that lasts until it is dismissed as a free action or until it completes its task, which can take no longer than 1 hour.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>You can command the spirit to attempt one of the following tasks:</text>
          </section>
-      </part>
       <part>
          <part-name>Locate an Object or a Person</part-name>
-         <hide-freqkey>true</hide-freqkey>
-         <hide-actrange>true</hide-actrange>
          <section>
-            <indent>1</indent>
             <text>The spirit can locate a specific object or creature within 5 miles of you that you have seen or touched.</text>
          </section>
          <section>
-            <indent>1</indent>
             <text>When it completes the task, the spirit returns to you and describes the direction, distance, and location of the object or creature.</text>
          </section>
       </part>
       <part>
          <part-name>Explore an Area</part-name>
-         <hide-freqkey>true</hide-freqkey>
-         <hide-actrange>true</hide-actrange>
          <section>
-            <indent>1</indent>
             <text>The spirit can provide a rough description of an area up to 20 squares on a side, including obvious physical features.</text>
          </section>
          <section>
-            <indent>1</indent>
             <text>The spirit cannot open doors or containers, or breach physical or magical barriers, so it cannot explore any area that a Tiny creature couldn't reach. It cannot notice anything that requires a Perception check with a DC higher 10 + one-third your level to detect.</text>
          </section>
          <section>
-            <indent>1</indent>
             <text>When it completes the task, the spirit returns to you and telepathically provides a mental image of the area.</text>
          </section>
       </part>
@@ -313,15 +288,14 @@
       <title>Life Siphon</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>It's not pretty or kind, but sometimes you need to draw power from an ally's pain</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An ally within 10 squares of you takes damage</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -337,18 +311,16 @@
             <name>Infernal Pact:</name> <name-style>bold</name-style>
             <text>You regain hit points equal to one-fourth your level + your Constitution modifier, and this power gains the Healing keyword.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Mercurial Form</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Your form flows and shimmers, allowing you to slip through cracks, escape an enemy's claws, and evade even the most persistent hunter</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Polymorph</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -370,22 +342,20 @@
             <shade>true</shade>
             <text>Your DM might grant you additional benefits based on the circumstances.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Mirror Darkly</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Your shadowy double appears at a distance, letting you split your essence between two points on the battlefield</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Conjuration, Teleportation</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 5</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You conjure a shade in an unoccupied square within range. The shade occupies the same size of space as you do, and lasts until the end of your next turn.</text>
+            <type>Close</type> <range>burst 5</range>
+            <text>You conjure a shade in an unoccupied square within the burst. The shade occupies the same size of space as you do, and lasts until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -409,18 +379,16 @@
             <name>Move Action:</name> <name-style>bold</name-style>
             <text>You and the shade teleport, switching spaces.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Racing Fire of Ulban</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>You move with the swiftness of Ulban, whose burning glory sometimes flashes across the sky in a fiery strak of blue and white</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -431,25 +399,23 @@
             <name>Star Pact:</name> <name-style>bold</name-style>
             <text>You can choose fly your speed instead. If you do not land at the end of this movement, you fall.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Red Leeches of Nihal</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Wriggling scarlet worms writhe suddenly over your foe's wounds before dissolving just as quickly into odious vapor that transports the stolen energy to you</fluff>
-      <part>
          <frequency>Daily</frequency>
-         <keyword>Arcane, Necrotic</keyword>
+         <keyword>Arcane, Healing, Necrotic</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Ranged</type> <range>5</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>A creature within 5 squares of you regains hit points</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You, and the triggering creature</text>
+            <type>Ranged</type> <range>5</range>
+            <target>you, and the triggering creature</target>
          </section>
          <section>
             <shade>true</shade>
@@ -460,21 +426,19 @@
             <shade>true</shade>
             <text>You regain hit points equal to the necrotic damage the target takes + your Charisma modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Rending Fear of Khirad</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>A pale blue flame springs up from your brow as you incant the apocalypses over which Khirad has burned, thus frightening your foe into an admission</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Charm, Fear</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One helpless intelligent creature</text>
+            <type>Melee</type> <range>touch</range>
+            <target>one helpless intelligent creature</target>
          </section>
          <section>
             <shade>true</shade>
@@ -489,18 +453,16 @@
             <shade>true</shade>
             <text>As long as the target remains helpless, you can keep asking it questions, up to a total number of questions equal to 1 + your Intelligence modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Sand Shape</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>You transform your body into sand, allowing you to resist attacks and pass through barriers</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Polymorph</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -531,18 +493,16 @@
             <name>Sustain Minor:</name> <name-style>bold</name-style>
             <text>The effect persists until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shadow Ride</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>Your body flows as liquid darkness, pooling around another creature like a second shadow</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Polymorph</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -556,39 +516,35 @@
             <shade>true</shade>
             <text>At the start of your next turn, you appear in an unoccupied space of your choice adjacent to the target.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shadow Slip</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>They came for your blood, but were left with only shadow</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Teleportation</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy misses you with an attack that only targets you</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You teleport a number of squares equal to one-half your Charisma modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shroud of Black Steel</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>You coat your skin in living steel, blackened and hard yet supple enough to move, making yourself slower but much tougher and more resilient</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -607,18 +563,16 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can end this effect as a minor action.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Spider Climb</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>You bestow on yourself the ability to cling to almost any surface and climb as easily as an insect</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -641,25 +595,24 @@
             <name>Minor Action:</name> <name-style>bold</name-style>
             <text>Until the start of your next turn, the climb speed granted by this power equals your speed.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Unspeakable Bond</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>The injury you sustain vanishes only to reappear on a nearby ally, and with it comes a cold anger that makes your ally a more dangerous combatant</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 5</range>
+         <section auto="no-opportunity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You take damage</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One willing ally in the burst</text>
+            <type>target</type> <range>5</range>
+            <target>one willing ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -670,14 +623,12 @@
             <shade>true</shade>
             <text>After the triggering effect has been resolved, the target gains a +2 power bonus to attack rolls and damage rolls until the end of his or her next turn. The bonus to damage rolls increases to +5 against the source of the triggering damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Walk Through Darkness</title>
       <class>Warlock</class> <category>Utility</category> <level>6</level>
       <fluff>As you move, your body becomes shadow, slipping through foes and barriers with equal ease</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Move</action> <subaction>Action</subaction>
@@ -687,7 +638,6 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You shift up to 10 squares. During this shift, you are phasing and insubstantial.</text>
          </section>
-      </part>
    </power>
 
 </catalog>
