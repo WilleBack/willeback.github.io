@@ -7,14 +7,13 @@
       <title>Adaptive Stratagem</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>Your companion has the ability and the will, and you provide the plan and the motivation</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally in the burst</text>
+            <type>Close</type> <range>burst 10</range>
+            <target>One ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -22,28 +21,26 @@
             <text>Until the end of your next turn, the target ally gains his or her choice of one of the following two benefits:</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; A power bonus to damage rolls equal to your Intelligence modifier or your Wisdom modifier.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>A power bonus to damage rolls equal to your [Intelligence or Wisdom] modifier.</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; A power bonus to saving throws equal to your Wisdom modifier or your Charisma modifier.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>A power bonus to saving throws equal to your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Aid the Injured</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>Your presence is both a comfort and an inspiration to an ally</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Healing, Martial</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You or one ally</text>
+            <type>Melee</type> <range>1</range>
+            <target>You, or one ally adjacent to you</target>
          </section>
          <section>
             <shade>true</shade>
@@ -54,25 +51,23 @@
             <shade>true</shade>
             <text>If the target ally is prone, he or she can stand up without spending an action.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Covering Maneuver</title>
       <class>Warlord</class> <category>Utility</category>
       <fluff>Responding to your expertise, one ally steps in to cover another's recovery</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Special</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You or an ally in your <![CDATA[<i>warlord's aura</i> uses <i>second wind</i>]]></text>
+            <text>You use your <![CDATA[<i>second wind</i>, or an ally in your <i>warlord's aura</i> uses his or her <i>second wind</i>]]></text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering character, and one other ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+            <type>Close</type> <range>special</range>
+            <target>the triggering character, and one other ally in your <![CDATA[<i>warlord's aura</i>]]></target>
          </section>
          <section>
             <shade>true</shade>
@@ -83,81 +78,75 @@
             <shade>true</shade>
             <text>Until the start of his or her next turn, the triggering character has a +2 power bonus to all defenses against the marked enemy.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Crescendo of Violence</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>When one of your allies delivers a telling blow on a foe, you offer encouragement to help your friend keep fighting</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Martial</keyword>
          <action>Opportunity</action> <subaction>Reaction</subaction>
-         <type>Special</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An ally in your <![CDATA[<i>warlord's aura</i>]]> scores a critical hit</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering ally</text>
+            <type>Close</type> <range>special</range>
+            <target>the triggering ally</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target gains temporary hit points equal to your Wisdom modifier or your Charisma modifier.</text>
+            <text>The target gains temporary hit points equal to your [Wisdom or Charisma] modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 11:</name> <name-style>italic</name-style>
-            <text>Equal to 5 + your Wisdom modifier or your Charisma modifier.</text>
+            <text>Equal to 5 + your [Wisdom or Charisma] modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name> <name-style>italic</name-style>
-            <text>Equal to 10 + your Wisdom modifier or your Charisma modifier.</text>
+            <text>Equal to 10 + your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Cunning Adjustment</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>You spot an opening that can be seized to gain an advantage</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Special</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You hit an enemy with a melee attack, or the target ally of your <![CDATA[<i>tactician's command</i>]]> hits an enemy with a melee attack</text>
+            <text>On your turn, you hit an enemy with a melee attack, or the target ally of your <![CDATA[<i>tactician's command</i>]]> hits an enemy with a melee attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You if you are adjacent to the triggering ally, or an ally adjacent to the triggering character</text>
+            <type>Special</type>
+            <target>you if you are adjacent to the triggering ally, or an ally adjacent to the triggering character</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target can shift 3 squares as a free reaction, and gains combat advantage against the enemy that was hit by the triggering attack. The combat advantage lasts until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Encouraging Boost</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>You shout words of encouragement, giving your ally a necessary boost</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Healing, Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Special</type>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+            <type>Close</type> <range>special</range>
+            <target>one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
          </section>
          <section>
             <shade>true</shade>
@@ -166,103 +155,94 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>If you have hit an enemy with an attack this turn, the target regains additional hit points equal to your Wisdom modifier or your Charisma modifier.</text>
+            <text>If you have hit an enemy with an attack this turn, the target regains additional hit points equal to your [Wisdom or Charisma] modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 11:</name> <name-style>italic</name-style>
-            <text>Equal to 4 + your Wisdom modifier or your Charisma modifier.</text>
+            <text>Equal to 4 + your [Wisdom or Charisma] modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name> <name-style>italic</name-style>
-            <text>Equal to 8 + your Wisdom modifier or your Charisma modifier.</text>
+            <text>Equal to 8 + your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Flash of Insight</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>Your weapon slips past a foe's guard, allowing you to adjust your attack and throw the creature off balance</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Special</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You hit an enemy with a Weapon attack</text>
+            <text>On your turn, you hit an enemy with a Weapon attack</text>
          </section>
+         <section auto="special"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You either knock the triggering enemy prone, or push it a number of squares equal to your Intelligence modifier or your Wisdom modifier.</text>
+            <text>You either knock the triggering enemy prone, or push it a number of squares equal to your [Intelligence or Wisdom] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Hasty Alert</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>Your shout warns comrades of imminent danger in time for them to react</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 10</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>A surprise round begins, and you are conscious</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You and each ally in the burst</text>
+            <type>Close</type> <range>burst 10</range>
+            <target>you and each ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Each target is not surprised, and gainst a bonus to AC and Reflex until the end of his or her next turn. The bonus equals your Wisdom modifier or your Charisma modifier.</text>
+            <text>Each target is not surprised, and gainst a bonus to AC and Reflex until the end of his or her next turn. The bonus equals your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Heroic Example</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>On the brink of exhaustion, you still manage to rally your allies</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be bloodied</text>
+            <text>You must be bloodied.</text>
          </section>
-         <section>
+         <section auto="personal"/>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of the encounter, allies in your <![CDATA[<i>warlord's aura</i>]]> gain a bonus to damage rolls while you are bloodied. The bonus equals your Intelligence modifier or your Wisdom modifier.</text>
+            <text>Until the end of the encounter, allies in your <![CDATA[<i>warlord's aura</i>]]> gain a bonus to damage rolls while you are bloodied. The bonus equals your [Intelligence or Wisdom] modifier.</text>
          </section>
-         <section>
-            <text>You gain temporary hit points equal to your level + your Wisdom modifier or your Charisma modifier.</text>
+         <section shade="">
+            <text>You gain temporary hit points equal to your level + your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Inspired Belligerence</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>You lead your allies to use an enemy's defensive openings to deliver more punishment</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 5</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One enemy in the burst granting combat advantage to you or an ally</text>
+            <type>Close</type> <range>burst 5</range>
+            <target>one enemy in the burst granting combat advantage to you or an ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -289,71 +269,65 @@
             <name>Tactical Presence:</name> <name-style>bold</name-style>
             <text>Allies also gain a bonus to damage rolls with attacks only targeting the target when they have the combat advantage. The bonus equals your Intelligence modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Knight's Move</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>With a sharp wave of your arm, you direct one of your allies to a more tactically advantageous position</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally in the burst</text>
+            <type>Close</type> <range>burst 10</range>
+            <target>one ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target can take a move action as a free reaction.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Martial Cascade</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>Your daring attack inspires an ally to follow your lead</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 10</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You hit an enemy with an attack</text>
+            <text>On your turn, you hit an enemy with an attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>Each ally in the burst who can see you</text>
+            <type>Close</type> <range>burst 10</range>
+            <target>Each ally in the burst who can see you</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of your next turn, the targets gain a +2 power bonus to attack rolls they make against the triggering enemy during any extra action they gain by spending an action point.</text>
+            <text>Until the end of your next turn, the targets gain a +2 power bonus to attack rolls they make against the triggering enemy, but only for attacks made using an extra action gained by spending an action point.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>If your triggering attack was a critical hit or you made the attack using an action gained by spending an action point, the targets also gain a +2 power bonus to damage rolls.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Motivated Recovery</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>At your encouragement, an injured ally exploits an opportunity to shine</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Special</type>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One bloodied ally in the burst</text>
+            <type>Special</type>
+            <target>one bloodied ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -362,107 +336,98 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>The target also gains a power bonus to the next attack roll he or she makes before the end of the encounter. The bonus equals your Wisdom modifier or your Charisma modifier.</text>
+            <text>After using his or her <![CDATA[<i>second wind</i>]]>, the target gains a power bonus to the next attack roll he or she makes before the end of the encounter. The bonus equals your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Repositioning Command</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>With a single word, your allies shift to more advantageus positions</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Special</type>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You and each ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+            <type>Close</type> <range>special</range>
+            <target>you and each ally in your <![CDATA[<i>warlord's aura</i>]]></target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Each target can shift 2 squares.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Rub Some Dirt On It</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>With a wisecrack, you give your comrade a little courage despite his or her wounds</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You if you're bloodied, or one bloodied ally</text>
+            <type>Melee</type> <range>touch</range>
+            <target>you if you're bloodied, or one bloodied ally</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target gains temporary hit points equal to 5 + your Wisdom modifier or your Charisma modifier.</text>
+            <text>The target gains temporary hit points equal to 5 + your [Wisdom or Charisma] modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 11:</name> <name-style>italic</name-style>
-            <text>Equal to 10 + your Wisdom modifier or your Charisma modifier.</text>
+            <text>Equal to 10 + your [Wisdom or Charisma] modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name> <name-style>italic</name-style>
-            <text>Equal to 15 + your Wisdom modifier or your Charisma modifier.</text>
+            <text>Equal to 15 + your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shake It Off</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>You offer strong words of encouragement to offset a debilitating effect</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You, or one ally in the burst</text>
+            <type>Close</type> <range>burst 10</range>
+            <target>you, or one ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target makes a saving throw, and has a power bonus to the roll equal to your Wisdom modifier or your Charisma modifier.</text>
+            <text>The target makes a saving throw, and has a power bonus to the roll equal to your [Wisdom or Charisma] modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Spur to Action</title>
       <class>Warlord</class> <category>Utility</category> <level>2</level>
       <fluff>Sensing your enemies' advantage, you whisper quick orders that spur your allies to action</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 10</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>Initiative is rolled</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You and each ally in the burst</text>
+            <type>Close</type> <range>burst 10</range>
+            <target>you and each ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Each target can choose to reroll his or her initiative, but must then use the second result.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

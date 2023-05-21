@@ -436,9 +436,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:if test="type">
-		<i><xsl:value-of select="type" /></i><xsl:text> </xsl:text><xsl:value-of select="range" disable-output-escaping="yes"/>
+		<i><xsl:value-of select="type" /></i>
+		<xsl:if test="range">
+			<xsl:text> </xsl:text><xsl:value-of select="range" disable-output-escaping="yes"/>
+		</xsl:if>
 		<xsl:if test="type2">
-			<xsl:text> or </xsl:text><i><xsl:value-of select="type2"/></i><xsl:text> </xsl:text><xsl:value-of select="range2" disable-output-escaping="yes"/>
+			<xsl:text> or </xsl:text><i><xsl:value-of select="type2"/></i>
+			<xsl:if test="range2">
+				<xsl:text> </xsl:text><xsl:value-of select="range2" disable-output-escaping="yes"/>
+			</xsl:if>
 		</xsl:if>
 		<xsl:if test="target">
 		   <xsl:text> (</xsl:text><xsl:value-of select="target" disable-output-escaping="yes"/><xsl:text>)</xsl:text>

@@ -2,103 +2,96 @@
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
 	<collection>Warlord Lvl 1 Encounter Attack Exploits</collection>
-	
+
 	<power>
-		<title>Nimble Footwork</title>
+		<title>Arrow Marks the Spot</title>
 		<class>Warlord</class> <category>Attack</category> <level>1</level>
-		<fluff>You step to one side, allowing an ally to slip closer</fluff>
-		<part>
+		<fluff>You fire a shot that divert's your foes attention, giving your ally the chance to attack</fluff>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
-			<action>Move</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 5</range>
+			<action>Minor</action> <subaction>Action</subaction>
 			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>You and one ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must have made a ranged attack this turn.</text>
 			</section>
 			<section>
-				<indent>1</indent>
-				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
-				<text>You and two allies</text>
+				<name>Target:</name> <name-style>bold</name-style>
+				<type>Close</type> <range>special</range>
+				<target>one ally in your <![CDATA[<i>warlord's aura</i>]]>, and one enemy you have made a ranged attack against this turn</target>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>You shift a number of squares equal to one-half your Intelligence modifier or one-half your Wisdom modifier.</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<text>The target ally gainst a bonus to damage equal to your Intelligence modifier or Wisdom modifier on his or her first melee attack against any enemy you were adjacent to before the shift. The attack must come before the end of your next turn.</text>
-			</section>
-		</part>
-	</power>
-	<power>
-		<title>Vengeance is Mine</title>
-		<class>Warlord</class> <category>Attack</category> <level>1</level>
-		<fluff>You respond to an enemy's attack with a riposte, and call for an ally to join you against the offender</fluff>
-		<part>
-			<frequency>Encounter</frequency>
-			<keyword>Martial</keyword>
-			<action>Immediate</action>
-				<subaction>Reaction</subaction>
-			<type>Close</type> <range>burst 5</range>
-			<section>
-				<indent>1</indent>
-				<name>Tactical Presence:</name> <name-style>bold</name-style>
-				<text>You can use this power as an immediate interrupt</text>
-			</section>
-			<section>
-				<name>Trigger:</name> <name-style>bold</name-style>
-				<text>An enemy hits you</text>
-			</section>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>You and one ally in your <![CDATA[<i>warlord's aura</i>]]></text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<name>Effect:</name> <name-style>bold</name-style>
-				<text>You make a <![CDATA[<i>basic attack</i>]]> against the triggering enemy, and the target ally can make a <![CDATA[<i>basic attack</i>]]> against the triggering enemy as a free reaction.</text>
+				<text>The target ally either charges or makes a <![CDATA[<i>melee basic attack</i>]]> attack against the target enemy. He or she deals additional damage on the attack equal to your [Intelligence or Wisdom] modifier.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Inspiring Presence:</name> <name-style>bold</name-style>
-				<text>The target ally gains a bonus to the damage roll of his or her attack equal to your Charisma modifier.</text>
+				<text>If either you or the target ally bloodied the target enemy, the target ally gains temporary hit points equal to your Charisma modifier.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
-				<text>Before making the attack, the target ally can either move a number of squares equal to your Intelligence modifier, or shift a number of squares equal to one-half your Intelligence modifier.</text>
+				<text>The target ally gains a bonus to all defenses triggered by making a charge attack as part of this power. The bonus equals your Intelligence modifier. </text>
 			</section>
-		</part>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Tactical Presence:</name> <name-style>bold</name-style>
+				<text>The target ally gains a bonus to the attack roll equal to one-half your Intelligence modifier.</text>
+			</section>
+	</power>
+
+	<power>
+		<title>Diabolic Stratagem</title>
+		<class>Warlord</class> <category>Attack</category> <level>1</level>
+		<fluff>A feint draws an opponent's attention and seemingly leaves you defenseless, but it is just a cunning ploy</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Martial, Weapon</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You mark the target until the end of your next turn.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>While it remains marked, it gains combat advantage on attacks that only target you, but its attacks against you trigger <![CDATA[<i>opportunity attack</i>]]> from your allies.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>The target is not aware that its attacks trigger <![CDATA[<i>opportunity attacks</i>]]> before at least one has been made against it.</text>
+			</section>
 	</power>
 
 	<power>
 		<title>Hammer and Anvil</title>
 		<class>Warlord</class> <category>Attack</category> <level>1</level>
 		<fluff>You press hard on an enemy, encouraging a nearby ally to do the same, even harder</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 5</range>
 			<section>
-				<shade>true</shade>
 				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must have made an attack this turn</text>
+				<text>You must have made an attack this turn.</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
+				<type>Close</type> <range>special</range>
 				<text>One ally in your <![CDATA[<i>warlord's aura</i>]]></text>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>The target makes a <![CDATA[<i>basic attack</i>]]> against a creature that you have attacked this turn. The attack deals extra damage equal to your Intelligence modifier or your Wisdom modifier.</text>
+				<text>The target makes a <![CDATA[<i>basic attack</i>]]> against a creature that you have attacked this turn as a free reaction. The attack deals extra damage equal to your [Intelligence or Wisdom] modifier.</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>If your attack against the enemy was a critical, the ally also gains a +1 bonus to the attack roll.</text>
+				<text>If your attack against the enemy was a critical, the ally also gains a +2 bonus to the attack roll.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
@@ -108,28 +101,69 @@
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
-				<text>The target can shift a number of squares equal to one-half your Intelligence modifier as a free interrupt either before or after making the attack.</text>
+				<text>The target can shift a number of squares equal to one-half your Intelligence modifier either before or after making the attack.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Tactical Presence:</name> <name-style>bold</name-style>
 				<text>The target gains a +2 bonus to the attack roll, or +4 if your attack was a critical hit.</text>
 			</section>
-		</part>
+	</power>
+
+	<power>
+		<title>Inspired Offensive</title>
+		<class>Warlord</class> <category>Attack</category> <level>1</level>
+		<fluff>Your eyes meet your ally's as he or she looks to you for inspiration, and the message is clear: 'We fight!'</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Immediate</action> <subaction>Reaction</subaction>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>An ally uses the Draw Inspiration action of your <![CDATA[<i>warlord's aura</i>]]></text>
+			</section>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<type>Close</type> <range>special</range>
+				<target>the triggering ally</target>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The triggering ally's first attack before the end of his or her current turn deals an additional +1[W] damage (or +1d8 if it is not a Weapon attack).</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Inspiring Presence:</name> <name-style>bold</name-style>
+				<text>Choose one defense. The ally also gains a power bonus to that defense equal to your Charisma modifier until the end of his or her next turn.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Resourceful Presence:</name> <name-style>bold</name-style>
+				<text>The ally gains a bonus to all defenses equal to one-half your Wisdom modifier until the end of his or her next turn.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
+				<text>The ally also gains a +2 bonus to speed, and gains a bonus to all defenses against attacks triggered by movement equal to your Intelligence modifier. These bonuses last until the end of his or her next turn.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Tactical Presence:</name> <name-style>bold</name-style>
+				<text>The ally's first attack before the end of his or her current turn also gains a bonus to all attack rolls equal to one-half your Intelligence modifier.</text>
+			</section>
 	</power>
 
 	<power>
 		<title>Leaf on the Wind</title>
 		<class>Warlord</class> <category>Attack</category> <level>1</level>
 		<fluff>As if your enemy were a leaf on the wind, you commands blow it before your allies</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 5</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+				<type>Close</type> <range>special</range>
+				<target>one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -154,38 +188,133 @@
 				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
 				<text>The target can push or increase the push by a number of squares equal to one-half your Intelligence modifier, and increases the number of squares it can shift by one-half your Intelligence modifier.</text>
 			</section>
-		</part>
 	</power>
+
+	<power>
+		<title>Myrmidon Formation</title>
+		<class>Warlord</class> <category>Attack</category> <level>1</level>
+		<fluff>Knowing that regrouping increases morale, you call your allies to gather together</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<section auto="personal"/>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>Until the end of your next turn, your <![CDATA[<i>warlord's aura</i>]]> gains the following benefits:</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent> <bullet/>
+				<text>When adjacent to you or an ally, you and allies in the aura gain a +2 power bonus to AC. This increases to +3 when adjacent to you and another ally or two allies.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent> <bullet/>
+				<text>You and allies in the aura gain a +1 bonus to attack rolls when attacking an enemy threatened by an ally.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent> <bullet/>
+				<text>The first melee damage roll against an enemy that has been hit by you or an ally's ranged attack deals additional damage equal to one-half your [Intelligence or Wisdom] modifier.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent> <bullet/>
+				<name>Inspiring Presence:</name> <name-style>bold</name-style>
+				<text>The power bonus to AC also applies to Will</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent> <bullet/>
+				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
+				<text>You and allies also gain a bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]> while adjacent to you or another ally.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent> <bullet/>
+				<name>Tactical Presence:</name> <name-style>bold</name-style>
+				<text>The attack bonus equals one-half your Intelligence modifier.</text>
+			</section>
+	</power>
+
+	<power>
+		<title>Nimble Footwork</title>
+		<class>Warlord</class> <category>Attack</category> <level>1</level>
+		<fluff>You step to one side, allowing an ally to slip closer</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Move</action> <subaction>Action</subaction>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<type>Close</type> <range>special</range>
+				<target>you and one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
+				<text>you and two allies</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You shift a number of squares equal to one-half your [Intelligence or Wisdom] modifier (minimum 1 square).</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>The target ally gainst a bonus to damage equal to your [Intelligence or Wisdom] modifier (minimum +2) on his or her first melee attack against any enemy you were adjacent to before the shift. The attack must come before the end of your next turn.</text>
+			</section>
+	</power>
+
+		<power>
+			<title>Overwhelming Trap</title>
+			<class>Warlord</class> <category>Attack</category> <level>1</level>
+			<fluff>You keep the order to spring the trap ready, allowing your ally to spring into action on a moment's notice</fluff>
+				<frequency>Encounter</frequency>
+				<keyword>Martial</keyword>
+				<action>Immediate</action> <subaction>Interrupt</subaction>
+				<section>
+					<name>Trigger:</name> <name-style>bold</name-style>
+					<text>An ally in your <![CDATA[<i>warlord's aura</i> makes a <i>melee basic attack</i>]]></text>
+				</section>
+				<section>
+					<name>Target:</name> <name-style>bold</name-style>
+					<type>Close</type> <range>special</range>
+					<target>the triggering ally</target>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>The target uses one of his or her melee at-will attack powers in place of the <![CDATA[<i>melee basic attack</i>]]>.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>If the attack hits, the target of that attack is also dazed until the end of the triggering ally's next turn.</text>
+				</section>
+		</power>
 
 	<power>
 		<title>Powerful Warning</title>
 		<class>Warlord</class> <category>Attack</category> <level>1</level>
 		<fluff>Your watchful eyes notice a flaw in an enemy's swing</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
 			<action>Immediate</action> <subaction>Interrupt</subaction>
-			<type>Close</type> <range>burst 5</range>
 			<section>
 				<name>Trigger:</name> <name-style>bold</name-style>
 				<text>An enemy in your <![CDATA[<i>warlord's aura</i>]]> makes an attack</text>
 			</section>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>The targets of the triggering attack</text>
+				<type>Close</type> <range>special</range>
+				<target>the targets of the triggering attack</target>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>The targets add one-half your Wisdom modifier or one-half your Charisma modifier to their AC and Reflex against the triggering attack.</text>
+				<text>The targets add one-half your [Wisdom or Charisma] modifier to their AC and Reflex against the triggering attack.</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>Targets that are still hit by the attack gain a +2 bonus to their first attack roll against the triggering enemy before the end of their next turn.</text>
+				<text>Targets that are hit by the triggering attack gain a +2 bonus to their first attack roll against the triggering enemy before the end of their next turn.</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>If at least one target was critically hit by the attack, choose one ally in your <![CDATA[<i>warlord's aura</i>]]>. That ally can make a <![CDATA[<i>basic attack</i>]]> against the triggering enemy as an opportunity reaction.</text>
+				<text>After the triggering attack has been resolved, choose one ally in your <![CDATA[<i>warlord's aura</i>]]>. That ally can make a <![CDATA[<i>basic attack</i>]]> against the triggering enemy as an opportunity reaction. He or she gains a bonus to the damage roll equal to twice the number of allies (including you) hit by the triggering attack.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
@@ -194,7 +323,7 @@
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<text>If the triggering attack was a critical hit, the chosen ally's attack deals additional damage equal to your Charisma modifier.</text>
+				<text>If the triggering attack was a critical hit against at least one target, the chosen ally's attack deals additional damage equal to your Charisma modifier.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
@@ -211,99 +340,140 @@
 				<name>Tactical Presence:</name> <name-style>bold</name-style>
 				<text>Targets that are hit instead gain a bonus equal to your Intelligence modifier on the first attack roll against the triggering enemy.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
-		<title>Myrmidon Formation</title>
+		<title>Provocative Order</title>
 		<class>Warlord</class> <category>Attack</category> <level>1</level>
-		<fluff>Knowing that regrouping increases morale, you call your allies to gather together</fluff>
-		<part>
+		<fluff>You prompt an ally to take the fight to the enemy</fluff>
 			<frequency>Encounter</frequency>
 			<keyword>Martial</keyword>
-			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<action>Standard</action> <subaction>Action</subaction>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<type>Close</type> <range>burst 10</range>
+				<target>one enemy in the burst, and one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
+			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>Until the end of your next turn, your <![CDATA[<i>warlord's aura</i>]]> gains the following benefits:</text>
+				<text>The target ally makes a charge against the target enemy, and deals +1[W] damage on the attack.</text>
+			</section>
+	</power>
+
+		<power>
+			<title>Seize the Upper Hand</title>
+			<class>Warlord</class> <category>Attack</category> <level>1</level>
+			<fluff>You press your advantage against a foe, or force it to concentrate on its advantage against you at the cost of its defense</fluff>
+				<frequency>Encounter</frequency>
+				<keyword>Martial</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<section auto="personal"/>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name> <name-style>bold</name-style>
+					<text>Until the end of your next turn, your <![CDATA[<i>warlord's aura</i>]]> gains the following benefits:</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>When you make an attack against an enemy and have combat advantage on the attack, allies in the aura deal extra damage against that enemy equal to one-half your [Intelligence or Wisdom] modifier.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>When an enemy makes an attack against you and it has combat advantage on the attack, allies in the aura deal additional damage against that enemy equal to one-half your [Wisdom or Charisma] modifier. This bonus lasts until the start of the enemy's next turn. </text>
+				</section>
+		</power>
+
+	<power>
+		<title>Shielded Assault</title>
+		<class>Warlord</class> <category>Attack</category> <level>1</level>
+		<fluff>You shield yourself and nearby allies, giving one of them a chance for a telling blow</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Minor</action> <subaction>Action</subaction>
+			<section>
+				<name>Requirement:</name> <name-style>bold</name-style>
+				<text>You must be using a shield.</text>
+			</section>
+			<section auto="personal"/>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You gain a +2 power bones to AC until the end of your next turn. You lose this bonus if you stop using a shield. </text>
 			</section>
 			<section>
-				<shade>true</shade> <indent>1</indent>
-				<text>&#9658; When adjacent to you or an ally, you and allies in the aura gain a +2 power bonus to AC. This increases to +3 when adjacent to you and another ally or two allies.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<text>&#9658; You and allies in the aura gain a +1 bonus to attack rolls when attacking an enemy threatened by an ally.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<text>&#9658; The first melee damage roll against an enemy that has been hit by you or an ally's ranged attack deals additional damage equal to one-half your Intelligence modifier or one-half your Wisdom modifier.</text>
+				<shade>true</shade>
+				<text>While you have this bonus, allies adjacent to you have a +2 bonus to AC.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Inspiring Presence:</name> <name-style>bold</name-style>
-				<text>The power bonus to AC also applies to Will</text>
+				<text>Allies instead gain a bonus to AC equal to your Charisma modifier.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Resourceful Presence:</name> <name-style>bold</name-style>
+				<text>Allies instead gain a bonus to all defenses equal to one-half your Wisdom modifier.</text>
+			</section>
+			<section>
+				<name>Tactician's Command:</name> <name-style>bold</name-style>
+				<text>If you use your <![CDATA[<i>tactician's command</i>]]> on the same turn as you use this power and the target ally is adjacent to you, the target ally's melee attack deals +1[W] damage, or +1d8 if it is not a Weapon attack.</text>
+			</section>
+	</power>
+
+	<power>
+		<title>Vengeance is Mine</title>
+		<class>Warlord</class> <category>Attack</category> <level>1</level>
+		<fluff>You respond to an enemy's attack with a riposte, and call for an ally to join you against the offender</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Martial</keyword>
+			<action>Immediate</action>
+				<subaction>Reaction</subaction>
+			<section>
+				<name>Tactical Presence:</name> <name-style>bold</name-style>
+				<text>You can use this power as an immediate interrupt.</text>
+			</section>
+			<section>
+				<name>Trigger:</name> <name-style>bold</name-style>
+				<text>An enemy hits you, or hits an ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+			</section>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<type>Close</type> <range>special</range>
+				<target>you (if the triggering enemy hit an ally), or one ally in your <![CDATA[<i>warlord's aura</i>]]> (if the triggering enemy hit you)</target>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>The target makes a <![CDATA[<i>basic attack</i>]]> against the triggering enemy (as a free interrupt, if the target is an ally).</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Inspiring Presence:</name> <name-style>bold</name-style>
+				<text>The target gains a bonus to the damage roll of his or her attack equal to your Charisma modifier.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Skirmishing Presence:</name> <name-style>bold</name-style>
-				<text>You an allies also gain a bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]> while adjacent to you or another ally.</text>
+				<text>Before making the attack, the target can either move a number of squares equal to your Intelligence modifier, or shift a number of squares equal to one-half your Intelligence modifier.</text>
 			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<name>Tactical Presence:</name> <name-style>bold</name-style>
-				<text>The attack bonus equals one-half your Intelligence modifier.</text>
-			</section>
-		</part>
 	</power>
-
-		<power>
-			<title>Overwhelming Trap</title>
-			<class>Warlord</class> <category>Attack</category> <level>1</level>
-			<fluff>You keep the order to spring the trap ready, allowing your ally to spring into action on a moment's notice</fluff>
-			<part>
-				<frequency>Encounter</frequency>
-				<keyword>Martial</keyword>
-				<action>Immediate</action> <subaction>Interrupt</subaction>
-				<type>Close</type> <range>burst 5</range>
-				<section>
-					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>An ally in the burst makes a <![CDATA[<i>melee basic attack</i>]]></text>
-				</section>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>The triggering ally</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>The target uses one of his or her melee at-will attack powers in place of the <![CDATA[<i>melee basic attack</i>]]>.</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<text>If the attack hits, the target of that attack is also dazed until the end of the triggering ally's next turn.</text>
-				</section>
-			</part>
-		</power>
 
 		<power>
 			<title>Warlord's Favour</title>
 			<class>Warlord</class> <category>Attack</category> <level>1</level>
 			<fluff>With a precise offense, you leave an enemy open for a comrade's blow</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Martial</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Close</type> <range>burst 5</range>
 				<section>
-					<shade>true</shade>
 					<name>Requirement:</name> <name-style>bold</name-style>
-					<text>You must have made an attack this turn</text>
+					<text>You must have made an attack this turn.</text>
 				</section>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>One ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+					<type>Close</type> <range>special</range>
+					<target>one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -338,207 +508,6 @@
 					<name>Tactical Presence:</name> <name-style>bold</name-style>
 					<text>The bonus to attack rolls equals your Intelligence modifier.</text>
 				</section>
-			</part>
 		</power>
-
-		<power>
-			<title>Diabolic Stratagem</title>
-			<class>Warlord</class> <category>Attack</category> <level>1</level>
-			<fluff>A feint draws an opponent's attention and seemingly leaves you defenseless, but it is just a cunning ploy</fluff>
-			<part>
-				<frequency>Encounter</frequency>
-				<keyword>Martial, Weapon</keyword>
-				<action>Minor</action> <subaction>Action</subaction>
-				<type>Melee</type> <range>weapon</range>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>One creature</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>You mark the target until the end of your next turn.</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<text>While it remains marked, it gains combat advantage on attacks that only target you, but its attacks against you trigger <![CDATA[<i>opportunity attack</i>]]> from your allies.</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<text>The target is not aware that its attacks trigger <![CDATA[<i>opportunity attacks</i>]]> before at least one has been made against it.</text>
-				</section>
-			</part>
-		</power>
-
-		<power>
-			<title>Arrow Marks the Spot</title>
-			<class>Warlord</class> <category>Attack</category> <level>1</level>
-			<fluff>You fire a shot that divert's your foes attention, giving your ally the chance to attack</fluff>
-			<part>
-				<frequency>Encounter</frequency>
-				<keyword>Martial</keyword>
-				<action>Minor</action> <subaction>Action</subaction>
-				<type>Close</type> <range>burst 5</range>
-				<section>
-					<shade>true</shade>
-					<name>Requirement:</name> <name-style>bold</name-style>
-					<text>You must have made a ranged attack this turn</text>
-				</section>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>One ally in your <![CDATA[<i>warlord's aura</i>]]>, and one enemy you have made a ranged attack against this turn</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>The target ally either charges or makes a <![CDATA[<i>melee basic attack</i>]]> attack against the target enemy, and deals additional damage equal to your Intelligence modifier or your Wisdom modifier.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Inspiring Presence:</name> <name-style>bold</name-style>
-					<text>If either you or the target ally bloodied the target enemy, the target ally gains temporary hit points equal to your Charisma modifier.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Skirmishing Presence:</name> <name-style>bold</name-style>
-					<text>The target ally gains a bonus to all defenses triggered by making a charge attack as part of this power. The bonus equals your Intelligence modifier. </text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Tactical Presence:</name> <name-style>bold</name-style>
-					<text>The target ally gains a bonus to the attack roll equal to one-half your Intelligence modifier.</text>
-				</section>
-			</part>
-		</power>
-
-		<power>
-			<title>Seize the Upper Hand</title>
-			<class>Warlord</class> <category>Attack</category> <level>1</level>
-			<fluff>You press your advantage against a foe, or force it to concentrate on its advantage against you at the cost of its defense</fluff>
-			<part>
-				<frequency>Encounter</frequency>
-				<keyword>Martial</keyword>
-				<action>Minor</action> <subaction>Action</subaction>
-				<type>Personal</type>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>Until the end of your next turn, your <![CDATA[<i>warlord's aura</i>]]> gains the following benefits:</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; When you make an attack against an enemy and have combat advantage on the attack, allies in the aura deal extra damage against that enemy equal to one-half your Intelligence modifier or one-half your Wisdom modifier.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; When an enemy makes an attack against you and it has combat advantage on the attack, allies in the aura deal additional damage against that enemy equal to one-half your Wisdom modifier or one-half your Charisma modifier. This bonus lasts until the start of the enemy's next turn. </text>
-				</section>
-			</part>
-		</power>
-
-		<power>
-			<title>Provocative Order</title>
-			<class>Warlord</class> <category>Attack</category> <level>1</level>
-			<fluff>You prompt an ally to take the fight to the enemy</fluff>
-			<part>
-				<frequency>Encounter</frequency>
-				<keyword>Martial</keyword>
-				<action>Standard</action> <subaction>Action</subaction>
-				<type>Close</type> <range>burst 10</range>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>One enemy in the burst, and one ally in your <![CDATA[<i>warlord's aura</i>]]></text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>The target ally makes a charge against the target enemy, and deals +1[W] damage on the attack.</text>
-				</section>
-			</part>
-		</power>
-
-		<power>
-			<title>Inspired Offensive</title>
-			<class>Warlord</class> <category>Attack</category> <level>1</level>
-			<fluff>Your eyes meet your ally's as he or she looks to you for inspiration, and the message is clear: 'We fight!'</fluff>
-			<part>
-				<frequency>Encounter</frequency>
-				<keyword>Martial</keyword>
-				<action>Immediate</action> <subaction>Reaction</subaction>
-				<type>Close</type> <range>burst 5</range>
-				<section>
-					<name>Trigger:</name> <name-style>bold</name-style>
-					<text>An ally uses the Draw Inspiration action of your <![CDATA[<i>warlord's aura</i>]]></text>
-				</section>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>The triggering ally</text>
-				</section>
-				<section>
-					<shade>true</shade>
-					<name>Effect:</name> <name-style>bold</name-style>
-					<text>The triggering ally's next attack before the end of his or her current turn deals an additional +1[W] damage (or +1d8 if it is not a Weapon attack).</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Inspiring Presence:</name> <name-style>bold</name-style>
-					<text>Choose one defense. The ally also gains a power bonus to that defense equal to your Charisma modifier until the end of his or her next turn.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Resourceful Presence:</name> <name-style>bold</name-style>
-					<text>The ally gains a bonus to all defenses equal to one-half your Wisdom modifier until the end of his or her next turn.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Skirmishing Presence:</name> <name-style>bold</name-style>
-					<text>The ally also gains a +2 bonus to speed, and gains a bonus to all defenses against attacks triggered by movement equal to your Intelligence modifier. These bonuses last until his or her next turn.</text>
-				</section>
-				<section>
-					<shade>true</shade> <indent>1</indent>
-					<name>Tactical Presence:</name> <name-style>bold</name-style>
-					<text>The ally's next attack before the end of his or her current turn also gains a bonus to all attack rolls equal to one-half your Intelligence modifier.</text>
-				</section>
-			</part>
-		</power>
-
-	<power>
-		<title>Shielded Assault</title>
-		<class>Warlord</class> <category>Attack</category> <level>1</level>
-		<fluff>You shield yourself and nearby allies, giving one of them a chance for a telling blow</fluff>
-		<part>
-			<frequency>Encounter</frequency>
-			<keyword>Martial</keyword>
-			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
-			<section>
-				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must be using a shield</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<name>Effect:</name> <name-style>bold</name-style>
-				<text>You gain a +2 power bones to AC until the end of your next turn. You lose this bonus if you stop using a shield. </text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<text>While you have this bonus, allies adjacent to you have a +2 bonus to AC.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<name>Inspiring Presence:</name> <name-style>bold</name-style>
-				<text>Allies instead gain a bonus to AC equal to your Charisma modifier.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<name>Resourceful Presence:</name> <name-style>bold</name-style>
-				<text>Allies instead gain a bonus to all defenses equal to one-half your Wisdom modifier.</text>
-			</section>
-			<section>
-				<name>Tactician's Command:</name> <name-style>bold</name-style>
-				<text>If you use your <![CDATA[<i>tactician's command</i>]]> on the same turn as you use this power and the target ally is adjacent to you, the target ally's melee attack deals +1[W] damage, or +1d8 if it is not a Weapon attack.</text>
-			</section>
-		</part>
-	</power>
 
 </catalog>
