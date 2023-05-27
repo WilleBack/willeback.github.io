@@ -7,35 +7,32 @@
       <title>Arcane Bolt</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>An arrow of force appears next to you, waiting for your gesture that will send it on an unerring path toward an enemy</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Force, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>15</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
+            <type>Ranged</type> <range>15</range>
+            <target>one creature</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target takes force damage equal to 3 + your Intelligence modifier + your implement's enhancement bonus. If the target is within 10 squares, the damage increases by +3. If the target is within 5 squares, the damage increases by an additional +3.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Blissful Ignorance</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>A tangle of soothing magic distracts your enemies, leaving them vulnerable as they chase after pleasant dreams</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Charm, Enchantment</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>each creature in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -54,24 +51,19 @@
             <shade>true</shade>
             <text>If a target was not aware of you when you use this power, it is not aware of being affected.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Call the Night Winds</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>Howling night winds spiral around you before striking to chill all in their way</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Evocation, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 5</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 5</range>
+            <target>each creature in the blast</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -86,30 +78,25 @@
          <section>
             <text>The zone is heavily obscured to creatures other than you, and any enemy that starts its turn in the zone is slowed until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Chill Claws</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>Skeletal hands appear around your targets, ripping into them with icy claws and sapping their will to fight</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Conjuration, Implement, Necromancy</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One or two creatures</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one or two creatures</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d8 + Intelligence modifier cold damage.</text>
+            <text>1d10 + Intelligence modifier cold damage.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -118,97 +105,82 @@
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You conjure skeletal claws in each target's space until the end of your next turn. The claws move with the target, remaining in its space.</text>
+            <text>You conjure skeletal claws in each target's space until the end of your next turn. Each claw moves with the corresponding target, remaining in its space.</text>
          </section>
          <section>
-            <text>While the claws occupy the target's space, it takes a -2 penalty to attack rolls.</text>
+            <text>While the claw occupies the target's space, the target takes a -2 penalty to attack rolls. This increases to a -4 penalty for triggered attack rolls.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Cinderfall</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>A thousand motes of fire momentarily linger in the air before streaking toward a single foe that has managed to avoid them</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d8 + Intelligence modifier fire damage.</text>
+            <text>2d6 + Intelligence modifier fire damage.</text>
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>One target you missed in the burst takes fire damage equal to your Consitution modifier + your implement's enhancement bonus. For each additional target you missed, you deal an additional +1 fire damage.</text>
+            <text>One target you missed in the burst takes fire damage equal to your Constitution modifier + your implement's enhancement bonus. For each additional target you missed, you deal an additional +2 fire damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Color Spray</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>A brilliant blast of flashing colors springs from your outstretched fingers, knocking nearby enemies senseless</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Implement, Radiant</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the blast</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 3</range>
+            <target>each creature in the blast</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d6 + Intelligence modifier radiant damage, and the target is dazed until the end of your next turn.</text>
+            <text>1d4 + Intelligence modifier radiant damage, and the target is dazed until the end of your next turn.</text>
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Radiant damage equal to your Intelligence modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Cordon of Bones</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>Bones spring up from the ground and tear from your dying enemies to form a jagged cordon</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Necromancy, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
             <indent>1</indent>
-            <text>+2 bonus to the attack roll against a bloodied creature with bonus</text>
+            <text>+2 bonus to the attack roll against a bloodied creature that has bones</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d6 + Intelligence modifier damage. An additional +1d6 damage against a bloodied creature with bones.</text>
+            <text>1d6 + Intelligence modifier damage. An additional +1d6 damage against a bloodied creature that has bones.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -224,24 +196,19 @@
          <section>
             <text>Any creature that enters the zone or falls prone in the zone takes damage equal to your Wisdom modifier + your implement's enhancement bonus. A creature reduced to 0 hit points or less by this damage is instantly killed. The damage increases by 2 for each creature killed by the initial attack or this damage. A creature can only take this damage once per turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Ebony Razors</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>You hurl blinding shadows, then solidify them into warding shards of psychic energy</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Nethermancy, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 4</range>
-         <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the blast</text>
-         </section>
          <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 4</range>
+            <target>each creature in the blast</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -251,7 +218,8 @@
          </section>
          <section>
             <name>Secondary Target:</name> <name-style>bold</name-style>
-            <text>You or an ally adjacent to you</text>
+            <type>Close</type> <range>special</range>
+            <target>you or an ally adjacent to you</target>
          </section>
          <section>
             <shade>true</shade>
@@ -259,31 +227,26 @@
             <text>Until the end of your next turn, the secondary target has the following benefits:</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; The target has concealment.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>Concealment against the primary targets.</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; When an adjacent enemy attacks the target, after the attack has been resolved that enemy takes psychic damage equal to your Wisdom modifier + your implement's enhancement bonus + 2 for each creature you missed with the primary attack.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>When an adjacent enemy attacks the target, after the attack has been resolved that enemy takes psychic damage. The psychic damage equals your Wisdom modifier + your implement's enhancement bonus + 2 for each creature you missed with the primary attack.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fire Shroud</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>With a subtle gesture, you wreathe nearby enemies in flames</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 3</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -295,50 +258,46 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>If the target is not adjacent to you or any of your allies, fire damage equal to your Intelligence modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Grim Shadow</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>Reaching into the Shadowfell, you cast a tangible, looming shadow that strikes fear into the living it covers</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fear, Implement, Necrotic, Nethermancy</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the blast</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 3</range>
+            <target>each creature in the blast</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d6 + Intelligence modifier necrotic damage, and if the target is living, it takes a -2 penalty to attack rolls until the end of your next turn.</text>
+            <text>2d6 + Intelligence modifier necrotic damage</text>
+         </section>
+         <section shade="">
+            <text>If the target is living, it takes a -2 penalty to attack rolls until the end of your next turn.</text>
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Each target takes a -2 penalty to Will until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Hypnotic Pattern</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>A swirling pattern of colors appears before your foes, causing their eyes to glaze over as the pattern enthralls them and lures them closer</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Conjuration, Illusion, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You conjure a swirling pattern of colors and lights in an unoccupied square within range until the end of your next turn. The swirling pattern does not occupy its square.</text>
          </section>
          <section>
@@ -349,23 +308,19 @@
             <shade>true</shade>
             <text>While the swirling pattern exists, you can use the Hypnotic Draw attack at-will, using the swirling pattern's square as the origin square.</text>
          </section>
-      </part>
       <part>
          <part-name>Hypnotic Draw</part-name>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Illusion, Implement</keyword>
          <action>Opportunity</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 3</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>A creature begins its turn within 3 squares of the swirling pattern</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering creature within the burst</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 3</range>
+            <target>the triggering creature within the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -389,17 +344,13 @@
       <title>Icy Rays</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>You fire two bolts of brilliant blue-white energy that freeze your enemies in place for a short time</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Evocation, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>7/15</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One or two creatures</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>7/15</range>
+            <target>one or two creatures</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -415,24 +366,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target is slowed until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Maze of Mirrors</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>You envelop your enemies in an illusory labyrinth of mirrors, which conceals the world around them</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Illusion, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -446,26 +392,28 @@
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
-            <text>The target is slowed until the end of your next turn.</text>
+            <text>The target is distracted by the mirrors until the end of your next turn.</text>
          </section>
-      </part>
+         <section>
+            <text>While distracted, the target is slowed and takes a -2 penalty to attack rolls.</text>
+         </section>
    </power>
 
    <power>
       <title>Melting Pool</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>You create an extradimensional pool of acid beneath your enemies' feet</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Evocation, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
             <text>Each creature in the burst</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -481,21 +429,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The floor in the burst is permanently reduced to difficult terrain.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Radiant Pillar</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>You conjure a cylinder of light that illuminates the battlefield, searing the eyes of your foes</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Implement, Radiant, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
             <text>The burst creates a zone of bright light until the end of your next turn. Squares within 2 squares of zone are dimly lit.</text>
          </section>
          <section>
@@ -506,24 +452,19 @@
             <shade>true</shade>
             <text>If a creature vulnerable to radiant damage starts its turn within the zone, it takes radiant damage equal to twice its vulnerability.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shock Beetle Swarm</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>A sudden mass of insects limned with lightning crawls over your foes, energy arcing between your enemies as the swarm feasts on their flesh</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Conjuration, Evocation, Implement, Lightning</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -538,24 +479,19 @@
          <section>
             <text>Each enemy that starts its turn in or adjacent to at least 1 square containing a shock beetle takes lightning damage equal to your Constitution modifier + your implement' enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shock Sphere</title>
       <class>Wizard</class> <category>Attack</category> <level>3</level>
       <fluff>You hurl a crackling orb of lightning that explodes at a point you designate, engulfing all nearby creatures in its electric embrace</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Implement, Lightning</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -567,7 +503,6 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

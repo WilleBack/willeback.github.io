@@ -2,22 +2,18 @@
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
    <collection>Wizard Lvl 1 Daily Attack Spells</collection>
-   
+
    <power>
       <title>Acid Arrow</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You call out an arcane word and fire an arrow of green, glowing liquid that burst against your foe and sends out a spray of sizzling acid</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Acid, Arcane, Evocation, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10/20</range>
-         <section>
-            <name>Primary Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10/20</range>
+            <target>one creature</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -43,19 +39,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You make the secondary attack.</text>
          </section>
-      </part>
       <part>
          <part-name>Secondary Attack</part-name>
          <frequency>Automatic</frequency>
          <keyword>Acid, Arcane, Evocation, Implement</keyword>
          <action>Nonaction</action>
-         <type>Area</type> <range>burst 1 centered on the primary target</range>
          <section>
             <name>Secondary Target:</name> <name-style>bold</name-style>
             <text>Each creature in the burst other than the primary target</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 centered on the primary target</range>
+            <target>each creature in the burst other than the primary target</target>
             <text>Intelligence vs Reflex</text>
          </section>
          <section>
@@ -74,17 +70,13 @@
       <title>Bewitching Charm</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You chant the twisting words of the bewitching charm, lulling your foes into a waking dream</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Charm, Enchantment, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -111,24 +103,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target cannot make <![CDATA[<i>opportunity attacks</i>]]> until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Charm of Forbiddance</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>Your voice tremulous, you invoke the charm of forbiddance on your enemy, tormenting its mind with each attack it makes against you or your allies</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Charm, Enchantment, Implement, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -153,21 +140,19 @@
             <shade>true</shade>
             <text>While under the charm, the target takes psychic damage equal to your Charisma modifier + your implement's enhancement bonus each time it hits or misses you or one of your allies. Each additional ally that the target hits or misses with the same attack beyond the first increases the damage by 2, and the target takes the damage after the action has been resolved.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Flaming Sphere</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You conjure a rolling ball of fire and control where it goes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Conjuration, Evocation, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You conjure a Medium flaming sphere in an unoccupied square within range. The sphere occupies its square, and it lasts until the end of your next turn. When the sphere appears, you immediately make the Scorch Attack without spending an action.</text>
          </section>
          <section>
@@ -179,23 +164,19 @@
             <name>Move Action:</name> <name-style>bold</name-style>
             <text>You move the sphere up to 6 squares.</text>
          </section>
-         <section>
+         <section shade="" indent="1">
             <name>Sustain Minor:</name> <name-style>bold</name-style>
             <text>The sphere persist until the end of your next turn.</text>
          </section>
-      </part>
       <part>
          <part-name>Scorch Attack</part-name>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Evocation, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 1 from the sphere's square</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature adjacent to the sphere</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 1 from the sphere's square</range>
+            <target>one creature adjacent to the sphere</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -214,17 +195,13 @@
       <title>Fountain of Flame</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You weave a fiery pillar that spins like a top and, with each revolution, it douses your enemies with searing heat</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Evocation, Fire, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -245,24 +222,19 @@
             <shade>true</shade>
             <text>Any enemy that enters the zone or ends its turn there takes fire damage equal to your Constitution modifier + your implement's enhancement bonus. An enemy can take this damage only once per turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Freezing Cloud</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You launch an icy pellet from your hand that explodes in a cloud of icy mist</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Cold, Evocation, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -293,21 +265,19 @@
             <name>Sustain Minor:</name> <name-style>bold</name-style>
             <text>The zone persists until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Grease</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>Slippery oil floods the ground under your foes, sending them tumbling down or sliding around</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Transmutation, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
             <text>The burst creates a zone of slick grease on all surfaces until the end of the encounter.</text>
          </section>
          <section>
@@ -318,23 +288,19 @@
             <shade>true</shade>
             <text>While the zone remains, you can use the Grease Attack action, using any square in the zone as the origin square.</text>
          </section>
-      </part>
       <part>
          <part-name>Grease Attack</part-name>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Implement</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 1</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>A creature enters the zone</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering creature in the burst</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 1</range>
+            <target>the triggering creature in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -356,17 +322,13 @@
       <title>Horrid Whispers</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>Your enemies are seemingly beset by dreadful noises and, desperate to find the source, their offense becomes distracted</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Illusion, Implement, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -390,24 +352,19 @@
          <section>
             <text>While it is beset, the target is slowed and takes a -2 penalty to all attack rolls.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Phantom Chasm</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>Your enemies shriek in terror as, at least in their mind's eye, a bottomless pit opens beneath their feet</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Illusion, Implement, Psychic, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -424,28 +381,26 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The burst creates a zone of an illusory pit until the end of the encounter.</text>
          </section>
+         <section shade="">
+            <text>Enemies will evoid entering the zone by walking, though they might jump or fly over it.</text>
+         </section>
          <section>
             <shade>true</shade>
-            <text>Any enemy that enters the zone falls prone.</text>
+            <text>Any enemy that enters the zone while on the ground falls prone, and the zone is now difficult terrain for that enemy instead of something it avoids.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Ray of Fatigue</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>A pale gray beam leaps from your fingertip and drains strength from your foe</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement, Necromancy, Necrotic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>15</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>15</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -466,24 +421,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage, and the target is weakened until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Rolling Thunder</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>Elemental thunder tumbles through your foes and knocks them about</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Conjuration, Evocation, Implement, Thunder</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One or two creatures</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one or two creatures</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -498,31 +448,34 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You conjure a thunderball in 1 square within each target's space until the end of your next turn.</text>
+            <text>You conjure a thunderball in 1 square within each target's space until the end of your next turn. A thunderball does not occupy a square, and can be moved to an enemy's space.</text>
          </section>
          <section>
             <shade>true</shade>
-            <text>While a thunderball remains, you can use the Thunder Snap Attack, using either thunderball as the point of origin.</text>
+            <text>While a thunderball remains, you can use the Thunder Snap attack, using either thunderball as the point of origin, and the following action:</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Sustain Minor:</name> <name-style>bold</name-style>
             <text>Each thunderball persists until the end of your next turn.</text>
          </section>
-      </part>
+         <section shade="" indent="1">
+            <name>Sustain Move:</name>
+            <text>You move one or both thunderballs up to a total of 7 squares, split however you want. Each thunderball persists until the end of your next turn.</text>
+         </section>
       <part>
-         <part-name>Thunder Snap Attack</part-name>
+         <part-name>Thunder Snap</part-name>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Conjuration, Evocation, Implement, Thunder</keyword>
          <action>Opportunity</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 1</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>A creature moves out of the thunderball's square</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering creature</text>
+            <type>Close</type> <range>burst 1</range>
+            <target>the triggering creature</target>
          </section>
          <section>
             <shade>true</shade>
@@ -540,17 +493,13 @@
       <title>Sleep</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You exert your will against your foes, seeking to overwhelm them with a tide of magical weariness</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Charm, Enchantment, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 15 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 15 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -581,24 +530,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target is slowed (save ends).</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Slimy Transmutation</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>A billowing cloud of greenish fog surrounds your foe and, when the fog dissipates, your enemy is gone and an ugly toad stands in his place</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement, Polymorph, Transmutation</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -615,11 +559,8 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target turns into a Tiny toad until the end of its next turn.</text>
          </section>
-      </part>
       <part>
          <part-name>Tiny Toad Form</part-name>
-         <hide-freqkey>true</hide-freqkey>
-         <hide-actrange>true</hide-actrange>
          <section>
             <shade>true</shade> <indent>1</indent>
             <text>As a toad, the target is dazed, and the only actions it can take are walk and step. It takes a -2 penalty to Fortitude, and melee attacks against it can score a critical hit on a natural roll of 19 or 20.</text>
@@ -635,61 +576,46 @@
       <title>Spirit Rend</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You weave a dire spell that tears at your enemies' spirit and holds the undead at bay</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement, Necrotic, Nethermancy</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Non-undead:</name> <name-style>bold</name-style>
+            <name>Hit (non-undead):</name> <name-style>bold</name-style>
             <text>3d6 + Intelligence modifier necrotic damage, and the target is immobilized (save ends).</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Undead:</name> <name-style>bold</name-style>
+            <shade>true</shade>
+            <name>Hit (undead):</name> <name-style>bold</name-style>
             <text>The target takes a free reaction to move its speed to a square as far away from you as it can, and is dazed (save ends).</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-         </section>
-         <section>
-            <indent>1</indent>
-            <name>Non-undead:</name> <name-style>bold</name-style>
+            <name>Miss (non-undead):</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
          <section>
-            <indent>1</indent>
-            <name>Undead:</name> <name-style>bold</name-style>
+            <name>Miss (undead):</name> <name-style>bold</name-style>
             <text>The target grants combat advantage and cannot take triggered actions until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Summon Dretch</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>A nauseating stench and puff of brimstone herald the arrival of a loathsome, drooling dretch</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement, Summoning</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You summon a Small dretch in an unoccupied space within range.</text>
          </section>
          <section>
@@ -700,21 +626,19 @@
             <shade>true</shade>
             <text>If the dretch is reduced to 0 hit points or less, it disappears and you lose a healing surge.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Summon Dust Devil</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>Loose objects skitter about as the air whips around, coalescing into a whirling elemental</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement, Summoning</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You summon a Small dust devil in an unoccupied space within range.</text>
          </section>
          <section>
@@ -725,21 +649,19 @@
             <shade>true</shade>
             <text>If the dust devil is reduced to 0 hit points or less, it disappears and you lose a healing surge.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Summon Fire Warrior</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>A soldier of flame strides through a planar veil, lifting a shimmering weapon above its head as it moves to attack</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Fire, Implement, Summoning</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You summon a Medium fire warrior in an unoccupied space within range.</text>
          </section>
          <section>
@@ -750,21 +672,19 @@
             <shade>true</shade>
             <text>If the fire warrior is reduced to 0 hit points or less, it disappears and you lose a healing surge.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Summon Shambling Cadavers</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>With a small motion, you call up rotting cadavers to rise from the ground and start shuffling forward with their arms stretched towards your foes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement, Necromancy, Summoning</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You summon three Medium shambling cadavers in unoccupied spaces within range.</text>
          </section>
          <section>
@@ -779,24 +699,19 @@
             <shade>true</shade>
             <text>If a shambling cadaver is reduced to 0 hit points or less, it disappears and you lose a healing surge.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Watery Sphere</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>A single water droplet expands to overtake your enemies, trapping them inside an enormous watery sphere</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Implement, Transmutation, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -819,7 +734,7 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>The zone is difficult terrain, and it grants partial cover to creatures on opposite sides of it.</text>
+            <text>The zone is difficult terrain, and it grants partial cover to creatures on opposite sides of it or for ranged and melee attacks from inside the zone to outside of it.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -840,21 +755,19 @@
             <name>Sustain Minor:</name> <name-style>bold</name-style>
             <text>The zone persists until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Wind Blade</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>The moaning wind becomes a shrill whistle as you turn it into a blade perfect for slashing through your foes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Conjuration, Force, Implement, Transmutation</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5</range>
             <text>You conjure a blade of solid wind in an unoccupied square within range. The blade occupies its square, and lasts until the end of your next turn.</text>
          </section>
          <section>
@@ -875,19 +788,15 @@
             <name>Sustain Move:</name> <name-style>bold</name-style>
             <text>You move the blade to a square within 5 squares of you. The blade persists until the end of your next turn.</text>
          </section>
-      </part>
       <part>
          <part-name>Wind Slash</part-name>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Conjuration, Force, Implement, Transmutation</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1 from the blade's square</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1 from the blade's square</range>
+            <target>one creature</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -906,21 +815,18 @@
       <title>Wizard's Fury</title>
       <class>Wizard</class> <category>Attack</category> <level>1</level>
       <fluff>You begin to fling force bolts with a flick of your wrist</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Force</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must know the <![CDATA[<i>force projectile</i> or <i>magic missile</i>]]> first-level at-will attack power.</text>
          </section>
-         <section>
+         <section auto="personal"/>
+         <section shade="">
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of encounter, you can use your <![CDATA[<i>force projectile</i> or your <i>magic missile</i>]]> power as a minor action once per turn.</text>
+            <text>Until the end of encounter, you can use either your <![CDATA[<i>force projectile</i> or your <i>magic missile</i>]]> power as a minor action once per turn.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

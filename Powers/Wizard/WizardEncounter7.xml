@@ -7,14 +7,13 @@
       <title>Binding Ooze</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>Your foe is covered in acidic, jellylike mass that continues to eat at it when the foe tries to attack</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Conjuration, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
          </section>
          <section>
             <shade>true</shade>
@@ -29,19 +28,15 @@
             <shade>true</shade>
             <text>If the target has vulnerable acid or other weakness to acid, it takes one-half this damage at the start of its turn.</text>
          </section>
-      </part>
       <part>
          <part-name>Ooze Cover</part-name>
          <frequency>Automatic</frequency>
          <keyword>Acid, Arcane, Implement</keyword>
          <action>Nonaction</action>
-         <type>Close</type> <range>burst special</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>The creature covered by the ooze</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst special</range>
+            <target>the creature covered by the ooze</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -60,22 +55,18 @@
       <title>Charm of the Defender</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You weave a skein of deceitful magic, tricking your foe to become a hero to its enemies</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Charm, Enchantment, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One enemy</text>
-         </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You slide the target up to 3 squares. You can resolve the rest of the power against the target even if you slide it outside the power's range.</text>
+            <text>Before resolving the attack, you slide the target up to 3 squares. You can resolve the rest of the power against the target even if you slide it outside the power's range.</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one enemy</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -85,30 +76,29 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>While deceived, the target is immobilized. When an enemy starts its turn adjacent to the deceived target, the target must make a <![CDATA[<i>melee basic attack</i>]]> against that enemy. It has a bonus to the attack roll and damage roll equal to your implement's enhancement bonus.</text>
+            <text>While deceived, the target is immobilized. When an enemy starts its turn adjacent to the deceived target, the target must make a <![CDATA[<i>melee basic attack</i>]]> against that enemy as a free interrupt. It has a bonus to the attack roll and damage roll equal to your implement's enhancement bonus.</text>
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target is slowed until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Concussive Echo</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>A focused blast of thunder slams into your foe, and the energy of the blast is stored in your enemy's body so that it is released in a concussive burst</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Implement, Thunder</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
             <text>One creature</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -118,30 +108,25 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>The first time the target makes an attack before the end of your next turn, it deals thunder damage to itself and each enemy within 3 squares of it before the attack is resolved. The thunder damage equals 3 + your Constitution modifier + your implement's enhancement bonus.</text>
+            <text>The first time the target makes an attack before the end of your next turn, it deals thunder damage to itself and each creature within a number of squares of it before the attack is resolved. The thunder damage equals 3 + your Constitution modifier + your implement's enhancement bonus, and you choose the number of squares between 1 and 3.</text>
          </section>
          <section>
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage, and the target only deals thunder damage to itself the first time it makes an attack before the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Corrosive Mist</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>A mist of suspended acid droplets consumes your chosen foes</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Evocation, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -162,24 +147,19 @@
             <shade>true</shade>
             <text>Each creature that enters the zone or ends its turn in the zone takes acid damage equal to 2 + your Constitution modifier + your implement's enhancement bonus. A creature can take this damage only once per turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Enemies Abound</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You weave a veil of illusion over the eyes of your enemies, causing them to view their allies as threats</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Illusion, Implement, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -192,31 +172,26 @@
             <text>Until the end of your next turn, the following two effects apply:</text>
          </section>
          <section>
-            <indent>1</indent>
-            <text>&#9658; You and allies can treat each target as an ally for the purposes of flanking.</text>
+            <indent>1</indent> <bullet/>
+            <text>You and your allies can treat each target as an ally for the purposes of flanking.</text>
          </section>
          <section>
-            <indent>1</indent>
-            <text>&#9658; The target does not count as flanking you or your allies for other enemies, though it can still flank you with an enemy that is not a target.</text>
+            <indent>1</indent> <bullet/>
+            <text>The target does not count as flanking you or your allies for other enemies, though it can still flank you with an enemy that is not a target.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fire Burst</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You send a fiery red bead streaking toward your foes, then make it burst into a great ball of magical flame</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Fire, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 15 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 15 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -228,24 +203,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fire Sea Travel</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You open a window into the Fire Sea, scorching nearby enemies before stepping through to appear a distance away</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Fire, Implement, Teleport</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 1</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 1</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -262,25 +232,20 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You teleport 5 squares.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Ghoul Strike</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You make a slashing motion against an enemy, causing darkness to bind it and filling the air around it with a charnel stench</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Nethermancy, Necrotic, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>5</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>5</range2>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -301,24 +266,19 @@
             <shade>true</shade>
             <text>Any creature other than you grants combat advantage while in the zone, and takes necrotic damage if it ends its turn in the zone. The necrotic damage equals 2 + your Wisdom modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lightning Bolt</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>Brilliant strokes of blue-white lightning erupt from your outstretched hand</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Implement, Lightning</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10/20</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One, two, or three creatures</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10/20</range>
+            <target>one, two, or three creatures</target>
             <text>Intelligence vs. Reflex</text>
          </section>
          <section>
@@ -334,24 +294,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Murderous Twin</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You conjure a twisted, shadowy twin of your enemy, a murderous vestige that wreaks havoc on itself and its allies</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Conjuration, Implement, Necromancy, Psychic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -367,32 +322,32 @@
             <text>The target and its allies take a -2 penalty to attack rolls while adjacent to the twin.</text>
          </section>
          <section>
-            <text>While the twin remains, you can use the Twin Stalker attack once, using the twin as the point of origin and the same target.</text>
+            <text>While the twin remains, you can use the Twin Stalker attack once, using the twin as the point of origin.</text>
          </section>
-      </part>
       <part>
          <part-name>Twin Stalker</part-name>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Necromancy, Psychic, Teleportation</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Melee</type> <range>1 from the twin's space</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>The target either leaves a square adjacent to the twin or makes an attack</text>
+            <text>The primary target either leaves a square adjacent to the twin or makes an attack</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The twin teleports to a space adjacent to the target.</text>
+            <text>The twin teleports to a space adjacent to the primary target.</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1 from the twin's space</range>
+            <target>the primary target</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>Wisdom modifier + Intelligence modifier + your implement's enhancement bonus psychic damage.</text>
+            <text>3 + Wisdom modifier + Intelligence modifier + your implement's enhancement bonus psychic damage.</text>
          </section>
       </part>
    </power>
@@ -401,58 +356,63 @@
       <title>Phantom Foes</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>Spectral warriors swirl around everyone in an area, causing them to lash out in a blind panic</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fear, Illusion</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>Each creature in the burst</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Each target is slowed until the end of your next turn.</text>
          </section>
-         <section>
-            <shade>true</shade>
-            <text>The first time a target makes an attack before the end of your next turn, you can use a free interrupt to force it to make a saving throw. If it fails the saving throw, you can change the target of that attack to a different creature within range of that attack.</text>
+         <section shade="">
+            <text>The first time a target makes an attack before the end of your next, one of the following effects apply:</text>
          </section>
-      </part>
+         <section indent="1">
+            <shade>true</shade> <bullet/>
+            <text>If the attack is a melee or ranged attack, you can use an opportunity interrupt to force it to make a saving throw.</text>
+         </section>
+         <section shade="" indent="1">
+            <text>If it fails the saving throw, you can change the target of that attack to a different valid target within range of that attack. If the attack targets more than one creature, you can only change one.</text>
+         </section>
+         <section shade="" indent="1"> <bullet/>
+            <text>If the attack is an area or close attack, you can use an immediate interrupt to force it to make a saving throw with a +2 bonus.</text>
+         </section>
+         <section shade="" indent="1">
+            <text>If it fails the saving throw, you can change the targeted area to a different valid area. If the attack selects a number of creatures to target, you choose which ones in the area are affected.</text>
+         </section>
    </power>
 
    <power>
       <title>Puckish Sprite</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You call forth a mischievous fey creature, aglow with fairy light and as meddlesome as a satyr</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Conjuration, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You conjure a puckish sprite in an unoccupied square adjacent to the target. The sprite occupies its square and lasts until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>Enemies adjacent to the sprite grant combat advantage to you and your allies. When the sprite appears, you make the Surprise Sprite Strike attack, using the sprite as the origin square.</text>
          </section>
-      </part>
       <part>
          <part-name>Surprise Sprite Strike</part-name>
          <frequency>Automatic</frequency>
-         <keyword>Arcane, Implement, Radiant</keyword>
+         <keyword>Arcane, Charm, Implement, Radiant</keyword>
          <action>Nonaction</action>
-         <type>Melee</type> <range>1 from the sprite's space</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>1 from the sprite's space</range>
+            <target>one creature</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -467,23 +427,19 @@
       <title>Repelling Sphere</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You repulse your enemies with an expanding sphere of force</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Force, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
-         <section>
-            <indent>3</indent>
-            <name>Active Familiar:</name> <name-style>bold</name-style>
-            <text>You can use your active familiar as the origin square for this attack.</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 3</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Fortitude</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <name>Active Familiar:</name> <name-style>bold</name-style>
+            <text>You can use your active familiar as the origin square for this attack.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -494,24 +450,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Intelligence modifier + your implement's enhancement bonus force damage, and you push the target 1 square.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Spectral Ram</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You seize your foe with unseen magical force and bash it against the ceiling and walls before hurling it to the ground</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Force, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>7/15</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>7/15</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -523,24 +474,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>You push the target up to 3 squares.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Thunder Cage</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>Your foe is rucked by thunderous noise, and an ominous rumble begins at your enemy's slightest movement</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Implement, Thunder</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -557,24 +503,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>If the target leaves the space it is currently occupying before the end of your next turn, it takes thunder damage equal to 5 + your Constitution modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Twist of Space</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You bend and fold the fabric of space, scattering your enemies across the battlefield</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Teleportation</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Will</text>
          </section>
          <section>
@@ -586,24 +527,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>You teleport the target half the distance.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Vile Vermin</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>The ground seems to burst upward as a surge of centipedes, beetles, rats, and snakes work their way to cover your foe</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Conjuration, Implement, Poison</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -618,24 +554,23 @@
          <section>
             <text>While the vermin remain, each enemy that ends its turn adjacent to the target takes poison damage equal to 3 + your Constitution modifier + your implement's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Winter's Wrath</title>
       <class>Wizard</class> <category>Attack</category> <level>7</level>
       <fluff>You raise your hand, and an icy blizzard rains down mercilessly upon an area you designate</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Evocation, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
             <text>Each creature in the burst</text>
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
+            <target>each creature in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -656,6 +591,5 @@
             <shade>true</shade>
             <text>The zone is lightly obscured. Each creature that enters the zone or ends its turn there takes cold damage equal to 2 + your Constitution modifier + your implement's enhancement bonus. A creature can only take this damage once each turn.</text>
          </section>
-      </part>
    </power>
 </catalog>

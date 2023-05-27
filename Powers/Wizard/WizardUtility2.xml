@@ -7,19 +7,18 @@
       <title>Charm of Protection</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>The instant before a blow connects, your spell interposes a spectral object in its path</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Nethermancy</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You are hit by an attack</text>
          </section>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You gain a +2 power bonus to all defenses against the attack.</text>
+            <text>You gain a +2 power bonus to all defenses against the triggering attack.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -35,43 +34,39 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>By 8 + your Wisdom modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Daunting Presence</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>Shadows deepen around you, your voice deepens to a rumbe, and you appear to grow larger as you confront those foolish enough to dispute your wishes</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fear</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, you gain the following benefits:</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; You are considered trained in the Intimidate skill. If you are already trained, you instead gain a +2 power bonus to checks with it.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>You are considered trained in the Intimidate skill. If you are already trained, you instead gain a +2 power bonus to checks with it.</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; Creatures adjacent to you take a -2 penalty to all attack rolls with attacks that target you.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>Creatures adjacent to you take a -2 penalty to all attack rolls with attacks that target you.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Expeditious Retreat</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>Your form blurs as you hastily withdraw from the battlefield</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -79,28 +74,33 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>If you are slowed, you can still shift up to 5 squares.</text>
+            <text>If you are slowed or prevented from shifting, you can still shift up to 5 squares.</text>
          </section>
-      </part>
+         <section>
+            <name>Special:</name>
+            <text>You can choose to use this power as an encounter power.</text>
+         </section>
+         <section>
+            <text>If you do, you instead shift up to 4 squares, or up to 2 squares if you are slowed or prevented from shifting.</text>
+         </section>
    </power>
 
    <power>
       <title>Familiar Harrier</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You send your familiar in to keep your opponent off balance</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Teleportation</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Special</type>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have the Arcane Familiar feat, or have a familiar from some other source</text>
          </section>
+         <section auto="no-opportunity"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>Your familiar must be active</text>
+            <name>Target:</name>
+            <type>Ranged</type> <range>10</range>
+            <target>Your active familiar</target>
          </section>
          <section>
             <shade>true</shade>
@@ -111,46 +111,50 @@
             <shade>true</shade>
             <text>Until the end of your next turn, your familiar can flank with you or your allies. When an attack hits a creature flanked by the familiar, that creature cannot shift until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Feather Fall</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You or a creature you choose falls gently, like a feather</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You fall, or a creature within 10 squares of you falls</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering creature</text>
+            <type>Personal</type>
+            <type2>Ranged</type2> <range2>10</range2>
+            <target>You, or the triggering creature</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target takes no damage from the fall, and consequently does not fall prone at the end of it.</text>
          </section>
-      </part>
+         <section>
+            <name>Special:</name>
+            <text>You can choose to use this power as an encounter power.</text>
+         </section>
+         <section>
+            <text>If you do, the power is only personal and it halves the damage you take from the fall. You also do not fall prone at the end of the fall, even if you take damage.</text>
+         </section>
    </power>
 
    <power>
       <title>Flare</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>Multicolored sparks, sizzles, and sparks erupt from a seed of fire you throw and prodive a momentary distraction</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Evocation, Zone</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 10 squares</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>Each creature in the burst</text>
+            <type>Area</type> <range>burst 1 within 10 squares</range>
+            <target>each creature in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -165,18 +169,16 @@
             <shade>true</shade>
             <text>Attacks within or through the zone treat the target as having partial concealment. A creature that does not use sight is immune to this effect.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Float</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You rise a few inches above the ground and glide over minor hindrances</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -186,43 +188,39 @@
             <shade>true</shade>
             <text>While floating, you ignore movement penalties and restrictions due to terrain, do not set off pressure-sensitive traps, and cannot be detected with tremorsense. You also gain a +2 power bonus to Stealth checks.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Glib Tongue</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You weave magic into your words, defusing a dangerous situation through the fine art of diplomacy</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Enchantment</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, you gain the following benefits:</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; You gain a +2 power bonus to Diplomacy checks, and Bluff checks.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>You gain a +2 power bonus to Diplomacy checks, and Bluff checks.</text>
          </section>
          <section>
-            <shade>true</shade> <indent>1</indent>
-            <text>&#9658; You gain a +1 power bonus to attack rolls with powers that have the Charm keyword.</text>
+            <shade>true</shade> <indent>1</indent> <bullet/>
+            <text>You gain a +1 power bonus to attack rolls with powers that have the Charm keyword.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Guardian Blades</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>Three spectral blades appear around you, floating in a ring that wards away your foes</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Conjuration, Force, Implement</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -232,72 +230,65 @@
             <shade>true</shade>
             <text>While the blades remain, any enemy adjacent to you that makes an attack takes force damage equal to your Intelligence modifier + your implement's enhancement bonus. No enemy can take this damage more than once per turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Herbal Healing</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>Using a mix of herbal lore and witchcraft, you work a spell that binds some wounds</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Healing</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have training in the Heal skill.</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
+            <type>Melee</type> <range>touch</range>
+            <target>one creature</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target can make a saving throw. The target can then use his or her <![CDATA[<i>second wind</i>]]> as a free reaction.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Jump</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You or another creature you choose can suddenly leap great distances</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You or one creature</text>
+            <type>Ranged</type> <range>10</range>
+            <target>You or one creature</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target makes an Athletics check to jump, with a +5 power bonus on the check. He or she is considered to have a running start and can move as far as the check allows.</text>
+            <text>The target makes an Athletics check to jump as a free reaction, with a +5 power bonus on the check. He or she is considered to have a running start and can move as far as the check allows.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lifetaker</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You crook your finger and snatch a soul as it struggles free from its body - it screams as you draw forth its energy</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Necromancy</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Ranged</type> <range>5</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>A nonminion living creature drops to 0 hit points or less within 5 squares of you</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You or one ally</text>
+            <type>Ranged</type> <range>5</range>
+            <target>you or one ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -308,40 +299,35 @@
             <shade>true</shade>
             <text>The target either gains temporary hit points equal to his or her healing surge value, or regains one healing surge, target's choice.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Memory to Mist</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>Your magic settles into a creature's mind, causing it to forget what it just witnessed</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Enchantment</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>2</range>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must use this power outside of combat.</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
+            <type>Ranged</type> <range>2</range>
+            <target>one creature</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target forgets everything that happened in the past 10 minutes and for the next 1 minute.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Mystical Debris</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You transmute an area to make it harder to move through</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Arcane, Transmutation</keyword>
          <action>Minor</action> <subaction>Action</subaction>
@@ -349,6 +335,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>1 square within 5 squares</range>
             <text>The area becomes difficult terrain until the end of the encounter. While at least one square is affected, you can use the following action: </text>
          </section>
          <section>
@@ -360,21 +347,19 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>The maximum number of squares you can have under this effect is equal to your Intelligence modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Phantasmal Terrain</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You make already treacherous terrain even more difficult for your enemies to traverse</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Illusion, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 2 within 10 squares</range>
             <text>The burst creates a zone of obfuscated terrain until the end of the encounter.</text>
          </section>
          <section>
@@ -389,35 +374,31 @@
             <shade>true</shade>
             <text>Finally, enemies have a -2 penalty to saving throws to avoid being forcibly moved into hazardous terrain in the zone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Protection from Missiles</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>A wave of your hand calls forth a protective wind to disperse arrows and other missiles headed your way</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Zone</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 2</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 2</range>
             <text>The burst creates a zone protective winds that lasts until the end of the encounter.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>While in the zone, you and your allies have a +4 power bonus to all defenses against ranged attacks with the Weapon keyword, and a +2 power bonus to all defenses against area attacks with the Weapon keyword.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shield</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You throw up your hand, and a shield of arcane energy springs into existence, protecting you against imminent attacks</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
@@ -431,21 +412,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You gain a +4 power bonus to AC and Reflex until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Simple Animation</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>At your command, an ordinary object springs to life and moves where you bid</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Transmutation</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One Medium or smaller object that is not fastened in place or held by a creature</text>
+            <type>Ranged</type> <range>10</range>
+            <target>one Medium or smaller object that is not fastened in place or held by a creature</target>
          </section>
          <section>
             <shade>true</shade>
@@ -462,21 +441,19 @@
             <name>Sustain Move:</name> <name-style>bold</name-style>
             <text>The animation persists until the end of your next turn, and you slide the target up to 5 squares.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Spectral Image</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>You make a complex illusion of a creature or an object to fool your enemies</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Illusion</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text>You create an illusion of a creature or an object of Medium size in an unoccupied square within range.</text>
          </section>
          <section>
@@ -491,21 +468,19 @@
             <shade>true</shade>
             <text>An Insight check (DC 15 + one-half your level + your Intelligence modifier) allows a creature to determine that the image is an illusion.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Summon Shadow Serpent</title>
       <class>Wizard</class> <category>Utility</category> <level>2</level>
       <fluff>Shadows flicker at your feet, swirl before you, and coalesce into the form of a black serpent</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Summoning</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
             <text> You summon a Small shadow serpent in an unoccupied space within range.</text>
          </section>
          <section>
@@ -516,7 +491,6 @@
             <shade>true</shade>
             <text>If the shadow serpent is reduced to 0 hit points or less, it disappears and you lose a healing surge.</text>
          </section>
-      </part>
    </power>
 
 </catalog>
