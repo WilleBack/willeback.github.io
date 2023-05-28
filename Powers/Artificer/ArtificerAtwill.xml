@@ -9,25 +9,16 @@
 		<category>Attack</category>
 		<level>1</level>
 		<fluff>When your infused weapon strikes an enemy, the weapon unleashes a force that rattles the foe </fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Force, Weapon</keyword>
 		<action>Standard</action>
 			<subaction>Action</subaction>
-		<type>Melee</type>
-		<range>weapon</range>
-		<type2>Ranged</type2>
-		<range2>weapon </range2>
 		<section>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>One creature </text>
-		</section>
-		<section>
-			<shade> </shade>
 			<name-style>bold</name-style>
 			<name>Attack:</name>
+		<type>Melee</type> <range>weapon</range>
+		<type2>Ranged</type2> <range2>weapon</range2>
+		<target>one creature</target>
 			<text>Intelligence vs. AC</text>
 		</section>
 		<section>
@@ -48,34 +39,25 @@
 			<name>Effect:</name>
 			<text>The next ally to attack the target before the end of your next turn gains a +2 power bonus to the attack roll. </text>
 		</section>
-		</part>
 	</power>
+
 	<power> <!-- Corrosive Brand -->
 		<title>Corrosive Brand</title>
 		<class>Artificer</class>
 		<category>Attack</category>
 		<level>1</level>
 		<fluff>You imbue your weapon with arcane energy that eats at your enemy's defenses, with your allies' attacks increasing the effect</fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Acid, Arcane, Weapon</keyword>
 		<action>Standard</action>
 			<subaction>Action</subaction>
-		<type>Melee</type>
-		<range>weapon</range>
-		<type2>Ranged</type2>
-		<range2>weapon </range2>
 		<section>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>One creature </text>
-		</section>
-		<section>
-			<shade> </shade>
 			<name-style>bold</name-style>
 			<name>Attack:</name>
-			<text>Intelligence vs. AC</text>
+		<type>Melee</type>
+		<range>weapon</range> <type2>Ranged</type2>
+		<range2>weapon </range2> <text>Intelligence vs. AC</text>
+		<target>one creature</target>
 		</section>
 		<section>
 			<shade>true</shade>
@@ -93,33 +75,25 @@
 		<section>
 			<name-style>bold</name-style>
 			<name>Effect:</name>
-			<text>Each time an ally hits the target, the target suffers a cumulative -1 penalty to AC, to a maximum penalty equal to your Constitution modifier (minimum 1). This lasts until the end of your next turn. </text>
+			<text>Each time an ally hits the target, the target suffers a cumulative -1 penalty to AC, to a maximum penalty equal to your Constitution modifier (minimum 1). This penalty lasts until the end of your next turn. </text>
 		</section>
-		</part>
 	</power>
+
 	<power> <!-- Ethereal Chill -->
 		<title>Ethereal Chill</title>
 		<class>Artificer</class>
 		<category>Attack</category>
 		<level>1</level>
 		<fluff>You align your spell with the sigils you wove over your ally's armor, causing them to radiate an unnatural cold </fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Cold, Implement</keyword>
 		<action>Standard</action>
 			<subaction>Action</subaction>
-		<type>Area</type>
-		<range>burst 1 centered on an ally within 5 squares</range>
 		<section>
-			<shade> </shade>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>Creatures in the burst other than the center ally</text>
-		</section>
-		<section>
-			<shade> </shade>
 			<name-style>bold</name-style>
 			<name>Attack:</name>
+		<type>Area</type> <range>burst 1 centered on an ally within 5 squares</range>
+		<target>Each creature in the burst other than the center ally</target>
 			<text>Intelligence vs. Fortitude</text>
 		</section>
 		<section>
@@ -133,7 +107,7 @@
 			<indent>1</indent>
 			<name-style>italic</name-style>
 			<name>Level 21:</name>
-			<text>1d6 + Intelligence modifier cold damage.</text>
+			<text>3 + your Intelligence modifier + your implement's enhancement bonus cold damage.</text>
 		</section>
 		<section>
 			<name-style>bold</name-style>
@@ -152,26 +126,79 @@
 			<name>Level 21:</name>
 			<text>6 + your Wisdom modifier.</text>
 		</section>
-		</part>
 	</power>
+
+	<power>
+		<title>Forceful Repulsion</title>
+		<class>Artificer</class><category>Attack</category><level>1</level>
+		<fluff>You trace the sigils you have inscribed on your gear to unleash the stored energy, pushing an enemy away or an ally forward</fluff>
+			<frequency>At-Will</frequency>
+			<keyword>Arcane, Force</keyword>
+			<action>Standard</action><subaction>Action</subaction>
+			<section>
+				<name>Target:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>touch</range>
+				<target>one creature</target>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name> <name-style>bold</name-style>
+				<text>You push the target up to 4 squares. </text>
+			</section>
+			<section shade="" indent="1">
+				<name style="italic">Level 11:</name>
+				<text>Up to 5 squares.</text>
+			</section>
+			<section shade="" indent="1">
+				<name style="italic">Level 21:</name>
+				<text>Up to 6 squares.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Ally target:</name> <name-style>bold</name-style>
+				<text>An ally can fly during the push, and if he or she ends the push next to an enemy, can make a <![CDATA[<i>melee basic attack</i>]]> against that enemy as a free reaction.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<text>If the ally did not not end the push on a surface he or she can stand on, he or she falls.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Enemy target:</name> <name-style>bold</name-style>
+				<text>If you cannot push an enemy further because of blocking terrain, the enemy takes force damage equal to your Intelligence modifier. For each square of push beyond the first you were prevented from forcing on the target, increase the force damage by +1.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<indent>1</indent>
+				<name-style>italic</name-style>
+				<name>Level 11:</name>
+				<text>2 + Intelligence modifier force damage.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<indent>1</indent>
+				<name-style>italic</name-style>
+				<name>Level 21:</name>
+				<text>4 + Intelligence modifier force damage, and increase the force damage by +2 per prevented square beyond first.</text>
+			</section>
+	</power>
+
 	<power>
 		<title>Magic Weapon</title>
 		<class>Artificer</class>
 		<category>Attack</category>
 		<level>1</level>
 		<fluff>Your touch imbues a chosen weapon or implement with a temporary arcane charge</fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane</keyword>
 		<action>Standard</action>
 			<subaction>Action</subaction>
-		<type>Melee</type>
-		<range>touch</range>
 		<section>
-			<shade> </shade>
 			<name-style>bold</name-style>
 			<name>Target:</name>
-			<text>One weapon or implement</text>
+		<type>Melee</type>
+		<range>touch</range>
+			<target>one weapon or implement</target>
 		</section>
 		<section>
 			<shade>true</shade>
@@ -190,26 +217,21 @@
 			<name>Level 21:</name>
 			<text>+2 power bonus to attack rolls, +2d8 damage on a critical hit and a +2d8 damage bonus.  </text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Numbing Cold</title>
 		<class>Artificer</class><category>Attack</category><level>1</level>
 		<fluff>You enchant your weapon so that when it hits, your foe becomes too numb from the cold to react quickly</fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Cold, Weapon</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Melee</type><range>weapon</range>
-		<type2>Ranged</type2><range2>weapon</range2>
-		<section>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name-style>bold</name-style>
 			<name>Attack:</name>
+			<type>Melee</type><range>weapon</range>
+			<type2>Ranged</type2><range2>weapon</range2>
+			<target>one creature</target>
 			<text>Intelligence vs. AC</text>
 		</section>
 		<section>
@@ -230,84 +252,27 @@
 			<name>Miss:</name>
 			<text>The target takes a penalty to the first triggered attack roll it makes before the end of your next turn. The penalty equals your Constitution modifier.</text>
 		</section>
-		</part>
 	</power>
-	<power>
-		<title>Repulsor Push</title>
-		<class>Artificer</class><category>Attack</category><level>1</level>
-		<fluff>You trace the sigils you have inscribed on your gear to unleash the stored energy, pushing an enemy away or an ally forward</fluff>
-		<part>
-			<frequency>At-Will</frequency>
-			<keyword>Arcane, Force</keyword>
-			<action>Standard</action><subaction>Action</subaction>
-			<type>Melee</type> <range>touch</range>
-			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>One creature</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<name>Effect:</name> <name-style>bold</name-style>
-				<text>You push the target up to 4 squares. </text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<name>Ally target:</name> <name-style>bold</name-style>
-				<text>An ally can fly during the push, and if he or she ends the push next to an enemy, can make a <![CDATA[<i>melee basic attack</i>]]> against that enemy as a free reaction.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<text>If the ally did not not end the push on a surface he or she can stand on, he or she falls.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<name>Enemy target:</name> <name-style>bold</name-style>
-				<text>If you cannot push an enemy further because of blocking terrain, the enemy takes force damage equal to your Intelligence modifier.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<text>For each square of push beyond the first you were prevented from forcing on the target, increase the force damage by +1.</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<indent>1</indent>
-				<name-style>italic</name-style>
-				<name>Level 11:</name>
-				<text>Push up to 5 squares, and 2 + Intelligence modifier force damage.</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<indent>1</indent>
-				<name-style>italic</name-style>
-				<name>Level 21:</name>
-				<text>Push up to 6 squares, 3 + Intelligence modifier force damage, and increase force damage by +2 per square.</text>
-			</section>
-		</part>
-	</power>
+
 	<power>
 		<title>Static Shock</title>
 		<class>Artificer</class><category>Attack</category><level>1</level>
 		<fluff>You imbue your opponent with a crackling arcane charge, hindering the potency of its next attack</fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Implement, Lightning</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>5</range>
-		<section>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name-style>bold</name-style>
 			<name>Attack:</name>
+			<type>Ranged</type><range>5</range>
+			<target>one creature</target>
 			<text>Intelligence vs. Fortitude</text>
 		</section>
 		<section>
 			<shade>true</shade>
 			<name-style>bold</name-style>
 			<name>Hit:</name>
-			<text>1d8 + Intelligence modifier lightning damage, and the next attack the target makes before the end of your next turn takes a penalty equal to your Wisdom modifier on the attack roll.</text>
+			<text>1d8 + Intelligence modifier lightning damage, and the first attack the target makes before the end of your next turn takes a penalty equal to your Wisdom modifier on the attack roll.</text>
 		</section>
 		<section>
 			<shade>true</shade>
@@ -321,44 +286,38 @@
 			<name>Miss:</name>
 			<text>Half the penalty.</text>
 		</section>
-		</part>
 	</power>
+
 	<power>
 		<title>Thundering Armor</title>
 		<class>Artificer</class><category>Attack</category><level>1</level>
 		<fluff>Thunder ripples outward from your implement, coalescing around you or an ally before focusing its might on a nearby enemy</fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Personal</type>
-		<type2>Ranged</type2><range2>5</range2>
 		<section>
 			<name-style>bold</name-style>
+			<type>Personal</type>
+			<type2>Ranged</type2><range2>5</range2>
 			<name>Primary Target:</name>
-			<text>You or one ally</text>
+			<target>you, or one ally</target>
 		</section>
 		<section>
 			<shade>true</shade>
 			<name-style>bold</name-style>
 			<name>Effect:</name>
-			<text>The primary target gains a +1 power bonus to AC until the end of your next turn, and you make a secondary attack.</text>
+			<text>The primary target gains a +1 power bonus to AC until the end of your next turn, and you make the secondary attack.</text>
 		</section>
-		</part>
 		<part>
 		<part-name>Secondary Attack</part-name>
 		<frequency>Automatic</frequency>
 		<keyword>Arcane, Implement, Thunder</keyword>
 		<action>Nonaction</action>
-		<type>Close</type><range>burst 1 from the primary target's space</range>
-		<section>
-			<name-style>bold</name-style>
-			<name>Secondary Target:</name>
-			<text>One creature adjacent to the primary target</text>
-		</section>
 		<section>
 			<name-style>bold</name-style>
 			<name>Secondary Attack:</name>
+			<type>Close</type><range>burst 1 from the primary target's space</range>
+			<target>one creature adjacent to the primary target</target>
 			<text>Intelligence vs. Fortitude</text>
 		</section>
 		<section>
@@ -372,27 +331,23 @@
 			<indent>1</indent>
 			<name-style>italic</name-style>
 			<name>Level 21:</name>
-			<text>2d8 + Intelligence modifier thunder damage.</text>
+			<text>2d8 + Intelligence modifier thunder damage, and push up to 2 squares.</text>
 		</section>
 		</part>
 	</power>
+
 	<power>
 		<title>Unbalancing Force</title>
 		<class>Artificer</class><category>Attack</category><level>1</level>
 		<fluff>You point your implement and blast a foe so that it reels from your ally's followup</fluff>
-		<part>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Force, Implement</keyword>
 		<action>Standard</action><subaction>Action</subaction>
-		<type>Ranged</type><range>5</range>
-		<section>
-			<name-style>bold</name-style>
-			<name>Target:</name>
-			<text>One creature</text>
-		</section>
 		<section>
 			<name-style>bold</name-style>
 			<name>Attack:</name>
+			<type>Ranged</type><range>5</range>
+			<target>one creature</target>
 			<text>Intelligence vs. Fortitude</text>
 		</section>
 		<section>
@@ -406,13 +361,16 @@
 			<indent>1</indent>
 			<name-style>italic</name-style>
 			<name>Level 21:</name>
-			<text>2d8 + Intelligence modifier force damage.</text>
+			<text>2d8 + Intelligence modifier force damage, and push up to 2 squares.</text>
 		</section>
 		<section>
 			<name-style>bold</name-style>
 			<name>Effect:</name>
-			<text>The next ally that attacks the target gains combat advantage for the attack, and pushes the target 1 square on a hit.</text>
+			<text>The next ally that attacks the target gains combat advantage for the attack, and pushes the target 1 square on a hit. If the ally's attack already pushes the target, increase the push by 1 square instead.</text>
 		</section>
-		</part>
+		<section indent="1">
+			<name style="italic">Level 21:</name>
+			<text>Push up to 2 squares.</text>
+		</section>
 	</power>
 </catalog>

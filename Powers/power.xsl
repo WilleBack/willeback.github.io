@@ -19,9 +19,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			.power {
 				margin:0.2cm;
-				width:calc(100% - 1.2em);
+				width:calc(100% - 1.25em);
 				float:left;
-				break-inside:avoid;
+				page-break-inside:avoid;
 			}
 
 			.header {
@@ -35,11 +35,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				margin:0.3em;
 				vertical-align:middle;
 				width:100%;
-				break-inside:avoid;
 			}
 
 			.title {
-				width:calc(100% - 1.8em);
+				width:calc(100% - 1.9em);
 				float:left;
 				font-size:1.2em;
 				text-indent:-1em;
@@ -261,10 +260,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:template>
 
 <xsl:template match="part">
-	<div id="part" style="width:100%; box-sizing:border-box; float:left; border-top: 0.5em solid white; break-inside:avoid;">
+	<div id="part" style="width:100%; box-sizing:border-box; float:left; border-top: 0.5em solid white;">
 		<xsl:if test="name or part-name or frequency">
 			<div class="header" style=" background:linear-gradient(to right, #D6D6C2, #ebebe0); color:black;">
-				<div class="titlebox">
+				<div class="titlebox" style="width: calc(100% - 1em);">
 			      <xsl:if test="name or part-name">
 						<div class="title">
 							<span class="titletext"><i><xsl:value-of select="name"/><xsl:value-of select="part-name"/></i></span>
@@ -427,6 +426,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:when>
 		<xsl:when test="name/@vestige">
 			<b><i>Eyes of the Vestige</i> Augment:</b>&#160;
+		</xsl:when>
+		<xsl:when test="keyword">
+			<xsl:text>This power gains the </xsl:text>
+			<b><span class="keyword" style="float:none;"><xsl:value-of select="keyword"/></span></b>
+			<xsl:text> keyword</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:if test="name">

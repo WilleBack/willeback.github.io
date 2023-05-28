@@ -2,45 +2,42 @@
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
    <collection>Artificer Lvl 2 Utility Spells</collection>
-   
+
    <power>
      <title>Arcane Anchor</title>
      <class>Artificer</class> <category>Utility</category> <level>2</level>
      <fluff>You trigger latent enchantments placed on yourself or an ally to resist being pushed around the battlefield</fluff>
-     <part>
         <frequency>Encounter</frequency>
         <keyword>Arcane</keyword>
         <action>Immediate</action> <subaction>Interrupt</subaction>
-        <type>Close</type> <range>burst 5</range>
-        <type2>Close</type2> <range2>burst 10</range2>
         <section>
            <name>Trigger:</name> <name-style>bold</name-style>
            <text>You or at least one ally you can see within 10 squares of you is pushed, pulled, or slid</text>
         </section>
         <section>
            <name>Target:</name> <name-style>bold</name-style>
-           <text>You and each triggering ally in the burst if you use this power as a burst 5, or one triggering ally if you use this power as a burst 10</text>
+           <type>Close</type> <range>burst 5</range>
+           <type2>Close</type2> <range2>burst 10</range2>
+           <text>You and each triggering ally in the burst if you use this power as a burst 5; one triggering ally if you use this power as a burst 10</text>
         </section>
         <section>
            <shade>true</shade>
            <name>Effect:</name> <name-style>bold</name-style>
            <text>The push, pull, or slide is negated for the target.</text>
         </section>
-     </part>
   </power>
 
   <power>
      <title>Swift Mender</title>
      <class>Artificer</class> <category>Utility</category> <level>2</level>
      <fluff>You empower a tiny construct to zoom to an ally's aid</fluff>
-     <part>
         <frequency>Encounter</frequency>
         <keyword>Arcane</keyword>
         <action>Minor</action> <subaction>Action</subaction>
-        <type>Ranged</type> <range>5</range>
         <section>
            <name>Target:</name> <name-style>bold</name-style>
-           <text>One ally</text>
+           <type>Ranged</type> <range>5</range>
+           <target>one ally</target>
         </section>
         <section>
            <shade>true</shade>
@@ -51,21 +48,19 @@
            <shade>true</shade>
            <text>If the effect effect is ongoing damage, the target can roll twice and use either result.</text>
         </section>
-     </part>
   </power>
 
   <power>
      <title>Arcane Springboard</title>
      <class>Artificer</class> <category>Utility</category> <level>2</level>
      <fluff>Infusing a small square of prepared cloth with arcane energy, you create a bouncy surface that launches allies who step on it</fluff>
-     <part>
         <frequency>Encounter</frequency>
         <keyword>Arcane, Conjuration</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Ranged</type> <range>10</range>
         <section>
            <shade>true</shade>
            <name>Effect:</name> <name-style>bold</name-style>
+           <type>Ranged</type> <range>10</range>
            <text>You conjure an arcane springboard in a square in range. The springboard does not occupy its square and lasts until the end of your next turn.</text>
         </section>
         <section>
@@ -77,21 +72,19 @@
            <name>Sustain Minor:</name> <name-style>bold</name-style>
            <text>The springboard persists until the end of your next turn. If you or an ally is currently occupying the springboard's space, you can choose to make that character jump as if he or she had entered the springboard's space.</text>
         </section>
-     </part>
   </power>
 
   <power>
      <title>Bolster Armor</title>
      <class>Artificer</class> <category>Utility</category> <level>2</level>
      <fluff>You touch an armor, causing it to briefly glow as you enhance its defences</fluff>
-     <part>
         <frequency>Daily</frequency>
         <keyword>Arcane</keyword>
         <action>Minor</action> <subaction>Action</subaction>
-        <type>Melee</type> <range>touch</range>
         <section>
            <name>Target:</name> <name-style>bold</name-style>
-           <text>You or one ally</text>
+           <type>Melee</type> <range>touch</range>
+           <target>you or one ally</target>
         </section>
         <section>
            <shade>true</shade>
@@ -103,46 +96,43 @@
            <name>Free Interrupt:</name> <name-style>bold</name-style>
            <text><![CDATA[<i>Trigger:</i>]]> The target is hit by an attack; The target gains a +4 bonus to AC against the triggering attack. After the attack has been resolved, this effect ends.</text>
         </section>
-     </part>
   </power>
 
   <power>
      <title>Reinforced Minion</title>
      <class>Artificer</class> <category>Utility</category> <level>2</level>
      <fluff>You send energy to bolster one of your artifices, helping it to evade an attack that might have otherwise damaged it</fluff>
-     <part>
         <frequency>Encounter</frequency>
         <keyword>Arcane</keyword>
         <action>Immediate</action> <subaction>Interrupt</subaction>
-        <type>Close</type> <range>burst 5</range>
+        <section auto="no-opportunity"/>
         <section>
            <name>Trigger:</name> <name-style>bold</name-style>
-           <text>One of your summoned creatures within 5 squares of you is hit by an attack</text>
+           <text>Your summoned creatures within 5 squares of you is hit by an attack</text>
         </section>
         <section>
            <name>Target:</name> <name-style>bold</name-style>
-           <text>The triggering summoned creature</text>
+           <type>Ranged</type> <range>5</range>
+           <target>the triggering summoned creature</target>
         </section>
         <section>
            <shade>true</shade>
            <name>Effect:</name> <name-style>bold</name-style>
            <text>The triggering attack misses the target.</text>
         </section>
-     </part>
   </power>
 
   <power>
      <title>Reinforcing Compound</title>
      <class>Artificer</class> <category>Utility</category> <level>2</level>
      <fluff>You infuse a comrade with a reinforcing mixture that they can share forward</fluff>
-     <part>
         <frequency>Daily</frequency>
         <keyword>Arcane</keyword>
         <action>Minor</action> <subaction>Action</subaction>
-        <type>Ranged</type> <range>5</range>
         <section>
            <name>Target:</name> <name-style>bold</name-style>
-           <text>You or one ally</text>
+           <type>Ranged</type> <range>5</range>
+           <target>you or one ally</target>
         </section>
         <section>
            <shade>true</shade>
@@ -154,21 +144,19 @@
            <name>Minor Action:</name> <name-style>bold</name-style>
            <text>The target transfers any number of the temporary hit points on him or her to an ally within 5 squares.</text>
         </section>
-     </part>
   </power>
 
   <power>
      <title>Shadowy Figurine</title>
      <class>Artificer</class> <category>Utility</category> <level>2</level>
      <fluff>Your magic creates an ebon figurine cloaked in shadow, with tendrils of shadow stretching from it to envelop you and your allies in obscurity</fluff>
-     <part>
         <frequency>Daily</frequency>
         <keyword>Arcane, Conjuration</keyword>
         <action>Minor</action> <subaction>Action</subaction>
-        <type>Ranged</type> <range>10</range>
         <section>
            <shade>true</shade>
            <name>Effect:</name> <name-style>bold</name-style>
+           <type>Ranged</type> <range>10</range>
            <text>You conjure a shadowy figurine in a square in range. The figurine does not occupy its space and remains until the end of your next turn.</text>
         </section>
         <section>
@@ -184,6 +172,5 @@
            <name>Sustain Minor:</name> <name-style>bold</name-style>
            <text>The figurine persists until the end of your next turn, and you can move it up to 5 squares.</text>
         </section>
-     </part>
   </power>
 </catalog>

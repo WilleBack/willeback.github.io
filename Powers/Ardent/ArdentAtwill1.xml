@@ -23,12 +23,24 @@
          </section>
          <section>
             <augment>1</augment>
+	         <name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+	         <text>Charisma vs. AC</text>
+         </section>
+			<section>
             <shade>true</shade>
             <name>Hit:</name>
             <text>1[W] + Charisma modifier damage, and the target takes a -2 penalty to all defenses until the start of your next turn.</text>
          </section>
          <section>
             <augment>2</augment>
+            <name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Charisma vs. AC</text>
+         </section>
+         <section>
             <shade>true</shade>
             <name>Hit:</name>
             <text>2[W] + Charisma modifier damage, and the target takes a penalty to all defenses until the start of your next turn. The penalty equals 1 + one-half your Constitution modifier (minimum -2 penalty).</text>
@@ -73,8 +85,18 @@
          </section>
          <section>
             <augment>1</augment>
-            <indent>1</indent>
-            <text>The power gains the Healing keyword</text>
+            <keyword>Healing</keyword>
+         </section>
+         <section>
+            <name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Charisma vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name>
+            <text>1[W] + Charisma modifier damage.</text>
          </section>
          <section>
             <name>Effect:</name>
@@ -92,8 +114,13 @@
          </section>
          <section>
             <augment>2</augment>
-            <indent>1</indent>
-            <text>The power gains the Healing keyword</text>
+            <keyword>Healing</keyword>
+         </section>
+         <section>
+            <name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Charisma vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
@@ -130,11 +157,28 @@
          </section>
          <section>
             <augment>1</augment>
+				<name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Charisma vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name>
+            <text>1[W] + Charisma modifier damage.</text>
+         </section>
+			<section>
             <name>Effect:</name>
             <text>You or one ally within 5 squares of you can make a saving throw against one effect that a save can end. If the effect has the Charm or Fear keyword, the saving throw gains a power bonus equal to your Wisdom modifier.</text>
          </section>
          <section>
             <augment>2</augment>
+				<name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Charisma vs. AC</text>
+         </section>
+         <section>
 				<shade>true</shade>
             <name>Hit:</name>
             <text>2[W] + Charisma modifier damage.</text>
@@ -165,12 +209,24 @@
 			</section>
 			<section>
 				<augment>1</augment>
+					<name>Attack:</name>
+					<type>Melee</type> <range>weapon</range>
+					<target>one creature</target>
+					<text>Charisma vs. Will</text>
+				</section>
+			<section>
 				<shade>true</shade>
 				<name>Hit:</name>
 				<text>1[W] damage, and the target cannot take opportunity actions or immediate actions until the end of your next turn.</text>
 			</section>
 			<section>
 				<augment>2</augment>
+					<name>Attack:</name>
+					<type>Melee</type> <range>weapon</range>
+					<target>one creature</target>
+					<text>Charisma vs. Will</text>
+			</section>
+			<section>
 				<shade>true</shade>
 				<name>Hit:</name>
 				<text>1[W] damage, and the target is dazed until the end of your next turn.</text>
@@ -206,11 +262,28 @@
 			</section>
 			<section>
 				<augment>1</augment>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<type>Melee</type> <range>weapon</range>
+					<target>one creature</target>
+					<text>Charisma vs. AC</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<name>Hit:</name> <name-style>bold</name-style>
+					<text>1[W] + Charisma modifier damage, and the target cannot shift until the end of your next turn.</text>
+				</section>
+				<section>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>Until the end of your next turn, you can communicate with the target via telepathy 5 and the target takes a -2 penalty to attack rolls with attacks that include you as a target.</text>
 			</section>
 			<section>
 				<augment>2</augment>
+					<name>Attack:</name> <name-style>bold</name-style>
+					<type>Melee</type> <range>weapon</range>
+					<target>one creature</target>
+					<text>Charisma vs. AC</text>
+				</section>
+				<section>
 				<shade>true</shade>
 				<name>Hit:</name> <name-style>bold</name-style>
 				<text>2[W] + Charisma modifier damage, and the target cannot shift until the end of your next turn.</text>
@@ -228,7 +301,6 @@
 		<title>Ire Strike</title>
 		<class>Ardent</class> <category>Attack</category> <level>1</level>
 		<fluff>You feel anger rising within you, and you empower a nearby ally to strike</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Augmentable, Psionic</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
@@ -261,13 +333,12 @@
 				<name>Effect:</name> <name-style>bold</name-style>
 				<type>Close</type> <range>burst 5</range>
 				<target>one enemy adjacent to tyou, and one ally in the burst</target>
-				<text>The target ally can use a free reaction to shift to a square adjacent to the target enemy, and then make a <![CDATA[<i>melee basic attack</i>]]> against it. The attack deals +1d8 extra damage.</text>
+				<text>The target ally can use a free reaction to shift up 5 squares to a space adjacent to the target enemy, and then make a <![CDATA[<i>melee basic attack</i>]]> against it. The attack deals +1d8 extra damage.</text>
 			</section>
 			<section>
 				<shade>true</shade>
 				<text>If the attack hits, the target has vulnerable all until the end of your next turn. The vulnerable equals 3 + one-half your Constitution modifier.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
@@ -294,6 +365,12 @@
 			</section>
 			<section>
 				<augment>1</augment>
+				<name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Charisma vs. AC</text>
+			</section>
+			<section>
 				<shade>true</shade>
 				<name>Hit:</name>
 				<text>1[W] + Charisma modifier damage.</text>
@@ -308,6 +385,12 @@
 			</section>
 			<section>
 				<augment>2</augment>
+				<name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Charisma vs. AC</text>
+			</section>
+			<section>
 				<shade>true</shade>
 				<name>Hit:</name>
 				<text>2[W] + Charisma modifier damage.</text>
@@ -350,6 +433,12 @@
 			</section>
 			<section>
 				<augment>1</augment>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Charisma vs. AC</text>
+			</section>
+			<section>
 				<shade>true</shade>
 				<name>Hit:</name>
 				<text>1[W] + Charisma modifier damage, and the target cannot benefit from concealment or invisibility until the start of your next turn.</text>
@@ -359,13 +448,20 @@
 				<text>One ally adjacent to either you or the target gains a +2 power bonus to attack rolls against the target until the start of your next turn.</text>
 			</section>
 			<section>
+				<name>Miss:</name>
+				<text>One ally adjacent to either you or the target gains a +1 power bonus to his or her first attack roll against the target before the start of your next turn.</text>
+			</section>
+			<section>
 				<augment>2</augment>
+				<name>Attack:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Charisma vs. AC</text>
+			</section>
+			<section>
 				<shade>true</shade>
 				<name>Hit:</name>
 				<text>1[W] + Charisma modifier damage.</text>
-			</section>
-			<section>
-				<text>No Miss entry</text>
 			</section>
 			<section>
 				<name>Effect:</name>
@@ -400,11 +496,28 @@
 			</section>
 			<section>
 				<augment>1</augment>
+				<name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Charisma vs. AC</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name>
+				<text>1[W] + Charisma modifier damage.</text>
+			</section>
+			<section>
 				<name>Effect:</name>
 				<text>One ally within 5 squares of you gains a +1 power bonus to all defenses, and a power bonus to Will equal to your Wisdom modifier. These bonuses last until the end of your next turn.</text>
 			</section>
 			<section>
 				<augment>2</augment>
+				<name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Charisma vs. AC</text>
+			</section>
+			<section>
 				<shade>true</shade>
 				<name>Hit:</name>
 				<text>2[W] + Charisma modifier damage.</text>
@@ -439,6 +552,17 @@
 			</section>
 			<section>
 				<augment>1</augment>
+				<name>Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Charisma vs. Will</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name>
+				<text>1[W] + Charisma modifier damage.</text>
+			</section>
+			<section>
 				<name>Effect:</name>
 				<text>Until the start of your next turn, the target is slowed and takes a -2 penalty to attack rolls and damage rolls with triggered attacks, such as <![CDATA[<i>opportunity attacks</i>]]>.</text>
 			</section>
@@ -448,6 +572,11 @@
 				<type>Close</type> <range>burst 2</range>
 				<target>Each enemy in the burst</target>
 				<text>Charisma vs. Will</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name>
+				<text>1[W] + Charisma modifier damage.</text>
 			</section>
 			<section>
 				<name>Effect:</name>

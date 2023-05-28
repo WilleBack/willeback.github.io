@@ -2,17 +2,14 @@
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
    <collection>Artificer Lvl 1 Encounter Attack Spells</collection>
-   
+
    <power> <!-- Burning Weapons -->
       <title>Burning Weapons</title>
       <class>Artificer</class> <category>Attack</category> <level>1</level>
       <fluff>Flames dance across the weapons that you and comrades wield</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <type2>Ranged</type2> <range2>weapon </range2>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -20,6 +17,8 @@
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <type2>Ranged</type2> <range2>weapon </range2>
             <text>One creature</text>
          </section>
          <section>
@@ -35,24 +34,19 @@
             <shade>true</shade>
             <text>You add the bonus from the effect to this damage roll.</text>
          </section>
-      </part>
    </power>
 
    <power> <!-- Drain Speed -->
       <title>Drain Speed</title>
       <class>Artificer</class> <category>Attack</category> <level>1</level>
       <fluff>You bind the quickness of your enemy to the enchantments you placed on your ally, transferring speed from one to the other</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Necrotic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One enemy, and one ally within 5 squares of the enemy</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one enemy, and one ally within 5 squares of the enemy</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -62,26 +56,21 @@
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of your next turn, the target enemy is slowed. As long as the enemy is slowed, the target ally gains a +2 power bonus speed. </text>
+            <text>Until the end of your next turn, the target enemy is slowed. As long as the enemy remains slowed, the target ally gains a +2 power bonus speed. </text>
          </section>
-      </part>
    </power>
 
    <power> <!-- Halo of Thorns -->
       <title>Halo of Thorns</title>
       <class>Artificer</class> <category>Attack</category> <level>1</level>
       <fluff>You enchant your ammunition with poisoning magic, then transfer that enchantment on one of your allies close to the target</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Poison, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -93,21 +82,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Choose one ally within 5 squares of the target. Until the end of your next turn, any creature that hits that ally with a melee attack takes poison damage equal to your Constitution modifier + your weapon's enhancement bonus. </text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Ice Shard Traps</title>
       <class>Artificer</class> <category>Attack</category> <level>1</level>
       <fluff>You spread invisible patches of ice on the battlefield, creating traps that erupt into a hail of crystals when enemies stumble into them</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Conjuration, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 5</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>Two unoccupied squares in the burst</text>
+            <type>Close</type> <range>burst 5</range>
+            <target>Two unoccupied squares in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -127,20 +114,19 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can take 5 minutes to use this power. If you do, you target five squares instead of two, and the traps lasts for 1 hour or until you recover this power.</text>
          </section>
-      </part>
       <part>
          <part-name>Shard Blast</part-name>
          <frequency>At-Will</frequency>
-         <keyword>Aracne, Cold</keyword>
+         <keyword>Arcane, Cold</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>blast 1</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>A creature enter's the ice shard trap's square</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering creature</text>
+            <type>Close</type> <range>blast 1</range>
+            <target>the triggering creature</target>
          </section>
          <section>
             <shade>true</shade>
@@ -162,18 +148,14 @@
       <title>Scouring Weapon</title>
       <class>Artificer</class> <category>Attack</category> <level>1</level>
       <fluff>You infuse your weapon with acid, momentarily corroding your opponent's defense</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <type2>Ranged</type2> <range2>weapon</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <type2>Ranged</type2> <range2>weapon</range2>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -185,24 +167,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>One-half the penalty to AC.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shielding Cube</title>
       <class>Artificer</class> <category>Attack</category> <level>7</level>
       <fluff>You direct a minute cube covered in runes into the fray, and though the cube is small, it contains the force that bashes foes and shields allies</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Force, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 1 within 5 squares</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy in the burst</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Area</type> <range>burst 1 within 5 squares</range>
+            <target>each enemy in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -223,24 +200,19 @@
             <shade>true</shade>
             <text>You and each ally in the zone gain a power bonus to AC. The bonus equals one-half your Wisdom modifier (minimum +1 bonus).</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Spike Wire</title>
       <class>Artificer</class> <category>Attack</category> <level>7</level>
       <fluff>You create a bundle of barbed wire that bites into your enemy's flesh, digging deeper and deeper</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Force, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5/10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5/10</range>
+            <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
@@ -257,24 +229,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, the target takes additional damage each time it is hit. The additional damage equals your Wisdom modifier when the target is hit with a Weapon attack (or other physical attack at the DM's discretion) or half this amount otherwise.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Weakening Frost</title>
       <class>Artificer</class> <category>Attack</category> <level>1</level>
       <fluff>The strike of your frost-covered weapon makes your foe weak for a moment</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
@@ -286,7 +253,6 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target is weakened for the first attack it makes before the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
 </catalog>
