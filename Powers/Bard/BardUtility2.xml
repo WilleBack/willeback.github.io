@@ -7,39 +7,33 @@
       <title>Bardic Lore</title>
       <class>Bard</class> <category>Utility</category> <level>2</level>
       <fluff>Using your magic to sharpen your momery, you recall an important piece of information that you picked up in a story or a song you heard in your travels</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The first time you make an Arcana check, Dungeoneering check, History check, Nature check, or Religion check to recall knowledge, instead of rolling, you treat your roll as 20 instead of rolling.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Beguiling Ballad</title>
       <class>Bard</class> <category>Utility</category> <level>2</level>
       <fluff>Just as your foe thinks victory is assured, you weave a curtain of fey magic that makes it think its enemy was never there</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane, Illusion, Teleportation</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <indent>1</indent>
-            <text>Using this power does not triger <![CDATA[<i>opportunity attacks</i>]]></text>
-         </section>
+         <section auto="no-opportunity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy in range hits an ally with an attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy and the triggering ally</text>
+	         <type>Ranged</type> <range>10</range>
+            <target>the triggering enemy and the triggering ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -50,21 +44,19 @@
             <shade>true</shade>
             <text>The target ally can teleport 5 squares as a free reaction.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Canon of Avoidance</title>
       <class>Bard</class> <category>Utility</category> <level>2</level>
       <fluff>Your song of protecting trips from ally to ally, cloaking each one in a magical shield</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally</text>
+	         <type>Ranged</type> <range>10</range>
+            <target>one ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -76,21 +68,19 @@
             <name>Sustain Minor:</name> <name-style>bold</name-style>
             <text>The effect persists. When you sustain the effect, you can choose to transfer it to another ally within 10 squares of you.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Clockwork Precision</title>
       <class>Bard</class> <category>Utility</category> <level>2</level>
       <fluff>You hum a simple tune of unity, allowing you and your allies to better work together</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 10</range>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You and each ally in the burst.</text>
+	         <type>Close</type> <range>burst 10</range>
+            <target>you and each ally in the burst.</target>
          </section>
          <section>
             <shade>true</shade>
@@ -101,21 +91,19 @@
             <shade>true</shade>
             <text>When a target <![CDATA[<i>aids another</i>, <i>aids attack</i>, or <i>aids defense</i>]]>, he or she grants a +3 bonus instead of a +2 bonus.</text>
          </section>
-      </part>
    </power>
 
 	<power>
 		<title>Concerted Effort</title>
 		<class>Bard</class> <category>Utility</category> <level>2</level>
 		<fluff>Your magic hums around your allies, growing in power as they redouble their efforts toward the task at hand</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 10</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>You and each ally in the burst</text>
+				<type>Close</type> <range>burst 10</range>
+				<target>you and each ally in the burst</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -126,21 +114,19 @@
 				<shade>true</shade>
 				<text>Whenever a target hits with at least one attack during his or her turn, the bonus increases by 1 after that character's turn has ended.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Hunter's Tune</title>
 		<class>Bard</class> <category>Utility</category> <level>2</level>
 		<fluff>You shape the flow of sound, containing and creating an area of silence</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>10</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One ally</text>
+				<type>Ranged</type> <range>10</range>
+				<target>one ally</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -156,21 +142,19 @@
 				<shade>true</shade> <indent>1</indent>
 				<text>If you use this power outside of combat, you can sustain it for up to 1 hour.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Inspire Competence</title>
 		<class>Bard</class> <category>Utility</category> <level>2</level>
 		<fluff>Your magic channels the skill of ancient experts to help with the task at hand</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Arcane</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 5</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>You and each ally in the burst</text>
+				<type>Close</type> <range>burst 5</range>
+				<target>you and each ally in the burst</target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -181,39 +165,35 @@
 				<shade>true</shade>
 				<text>Each target gains a +2 power bonus to the first check he or she makes using the chosen skill.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Moment of Escape</title>
 		<class>Bard</class> <category>Utility</category> <level>2</level>
 		<fluff>You distract your enemies with a quick refrain, giving your embattled ally a chance to get away</fluff>
-		<part>
 			<frequency>Encounter</frequency>
 			<keyword>Arcane</keyword>
 			<action>Move</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>10</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>One ally</text>
+				<type>Ranged</type> <range>10</range>
+				<target>one ally</target>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>You slide the target 4 squares.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Song of Courage</title>
 		<class>Bard</class> <category>Utility</category> <level>2</level>
 		<fluff>Your magic creates shouts of encouragement, making it seem as though an entire army were cheering on your allies</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane, Aura</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Personal</type>
+			<section auto="personal"/>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
@@ -228,27 +208,24 @@
 				<name>Sustain Minor:</name> <name-style>bold</name-style>
 				<text>The aura persists until the end of your next turn.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Words of Protective Fate</title>
 		<class>Bard</class> <category>Utility</category> <level>2</level>
 		<fluff>Your voice shields your allies against misfortune, turning otherwise deadly blows into less damaging strikes</fluff>
-		<part>
 			<frequency>Daily</frequency>
 			<keyword>Arcane</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
-			<type>Close</type> <range>burst 10</range>
 			<section>
 				<name>Target:</name> <name-style>bold</name-style>
-				<text>You and each ally in the burst</text>
+				<type>Close</type> <range>burst 10</range>
+				<target>you and each ally in the burst</target>
 			</section>
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
 				<text>Until the end of the encounter, whenever a critical hit is scored on the target, you roll a d20. If you roll a 10 or higher, the attack is a hit but not a critical hit.</text>
 			</section>
-		</part>
 	</power>
 </catalog>

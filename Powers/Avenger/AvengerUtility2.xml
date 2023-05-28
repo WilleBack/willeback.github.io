@@ -7,15 +7,14 @@
       <title>Avenger's Resolve</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>For a few moments, your faith infuses you with supernatural toughness</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy other than your oath target hits you</text>
          </section>
+			<section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -31,39 +30,35 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>Resist 15 all.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Blessing of Vengeance</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>With the death of your foe, your god grants you a boon</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Divine, Healing</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>Your oath target is reduced to 0 hit points or fewer</text>
          </section>
+			<section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You regain a number of hit points equal to your level + your Wisdom modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Distracting Flare</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>Divine light surrounds you, providing a distraction while you slip away unseen</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Move</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -73,39 +68,34 @@
             <shade>true</shade>
             <text>If you spend another action to continue the movement, the invisibility lasts until the end of that movement instead.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Enduring Spirit</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>The strength of your spirit shines most brightly in adversity</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be bloodied.</text>
          </section>
+			<section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You gain a +4 power bonus to all defenses until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Holy Blessing</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>Kissing your holy symbol, you immediately consider your next prey and how best to attack</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Special</type>
          <section>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have the <![CDATA[<i>oath of enmity</i>]]> class power.</text>
@@ -114,8 +104,10 @@
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>Your oath target is reduced to 0 hit points or fewer</text>
          </section>
+			<section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
+				<type>Ranged</type> <range>10</range>
             <text>One enemy other than your oath target</text>
          </section>
          <section>
@@ -123,109 +115,94 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You use your <![CDATA[<i>oath of enmity</i>]]> class power on the target as part of this action, and the target grants combat advantage to you until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Loyal Sanction</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>You bless your comrade's efforts to aid you in the defeat of your chosen foe</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
-         <section>
-            <indent>1</indent>
-            <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-         </section>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally you can see</text>
+	         <type>Ranged</type> <range>5</range>
+            <target>one ally you can see</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, the target gains a power bonus to damage rolls against your oath target equal to your Dexterity modifier or your Intelligence modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Refocus Enmity</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>After searching your soul, you realize who your true foe is and swear an oath against it</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
-         <section>
-            <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-         </section>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One create you can see</text>
+	         <type>Ranged</type> <range>10</range>
+            <target>one creature you can see</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target becomes your oath target, replacing your current oath target.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Resonant Escape</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>A quick prayer as you dodge calls forth divine power, which carries you a short distance away</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Teleportation</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy hits or misses you with a melee attack</text>
          </section>
+			<section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You teleport a number of squares equal to 1 + your Intelligence modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Righteous Pursuit</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>Try as your enemy might, there's no escaping your wrath</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Personal</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>Your oath target ends its turn in a space not adjacent to you</text>
          </section>
+			<section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You shift a number of squares equal to 1 + your Dexterity modifier and must end this movement as close to your oath target as possible.</text>
+            <text>You shift a number of squares equal to 1 + your Dexterity modifier and must end this movement adjacent to your oath target, or as close to your oath target as possible.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Silver Shadow</title>
       <class>Avenger</class> <category>Utility</category> <level>2</level>
       <fluff>You cloak yourself in astral mist, which guards you from harm</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+			<section auto="personal"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -235,6 +212,5 @@
             <shade>true</shade>
             <text>While you have these temporary hit points, you also have concealment.</text>
          </section>
-      </part>
    </power>
 </catalog>

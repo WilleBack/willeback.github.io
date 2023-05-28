@@ -8,24 +8,17 @@
       <title>Blade in the Back</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You step into your foe's shadow and instantly appear behind it, giving it no time to readjust</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Shadow, Teleportation, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>melee</type> <range>weapon</range>
          <section>
-            <shade>true</shade>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must have the <![CDATA[<i>shadow step</i>]]> Assassin class power.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature you are adjacent to</text>
-         </section>
-         <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You teleport up to 3 squares to another space adjacent to the target.</text>
+            <text>Before resolving the attack, you teleport up to 3 squares to another space adjacent to the target.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -33,6 +26,8 @@
          </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>melee</type> <range>weapon</range>
+            <target>one creature you are adjacent to you</target>
             <text>Dexterity vs. AC</text>
          </section>
          <section>
@@ -54,24 +49,19 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>Equal to 2 + your Dexterity modifier + your weapon's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Executioner's Noose</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You gather shadows in the form of a noose, cast it around your foe's neck, and pull</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Force, Implement, Shadow</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5/10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5/10</range>
+            <target>one creature</target>
             <text>Dexterity vs. Fortitude</text>
          </section>
          <section>
@@ -82,7 +72,7 @@
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Critical:</name> <name-style>bold</name-style>
-            <text>The target must succeed on a saving throw or you knock it prone.</text>
+            <text>You can knock the target prone unless it succeeds on a saving throw.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -97,24 +87,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>You pull the target half the distance.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Frightful Flickers</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You cause shadowy flickers to cover your victim's eyes, causing it to panic when it can't see clearly</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Fear, Implement, Psychic, Shadow</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5</range>
+            <target>one creature</target>
             <text>Dexterity vs. Will</text>
          </section>
          <section>
@@ -140,33 +125,28 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>If you have concealment from the target or it is unaware of your presence, it takes one-half the penalty to triggered attack rolls.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Inescapable Blade</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You stop several feet away from you foe and slash with your weapon, and your weapon's shadow closes the distance, not slowed down by physical obstacles</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Shadow, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon +1 reach</range>
-         <section>
-            <indent>1</indent>
-            <text>If the target has at least two of your shrouds on it, you increase the reach by an additional +1, or by an additional +2 if the target has four of your shrouds on it</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon +1 reach</range>
+            <target>one creature</target>
             <text>Dexterity vs. AC</text>
          </section>
          <section>
             <indent>1</indent>
             <text>This attack ignores cover and superior cover</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <text>If the target has at least two of your shrouds on it, you increase the reach by an additional +1, or by an additional +2 if the target has four of your shrouds on it</text>
          </section>
          <section>
             <shade>true</shade>
@@ -182,33 +162,27 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can use this power in place of a <![CDATA[<i>melee basic attack</i> when making an <i>opportunity attack</i>]]>. This does not allow you to trigger <![CDATA[<i>opportunity attacks</i>]]> further away than you normally could.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lashing Shrouds</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You direct your shrouds outward from the foe they cover, lashing at the life force of another</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Implement, Necrotic, Shadow</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>2, using the creature your shrouds are on as the point of origin</range>
          <section>
-            <indent>1</indent>
             <text>Using this power provokes <![CDATA[<i>opportunity attacks</i>]]> as if you had used a ranged attack</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature within 2 squares of the creature your shrouds are on</text>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>2, using the creature your shrouds are on as the point of origin</range>
+            <target>one creature within 2 squares of the creature your shrouds are on</target>
+            <text>Dexterity vs. Reflex</text>
          </section>
          <section>
             <indent>1</indent>
             <text>If you have at least 3 of your shrouds on the creature used as the point of origin, you can target two creatures within 2 squares of that creature</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <text>Dexterity vs. Reflex</text>
          </section>
          <section>
             <shade>true</shade>
@@ -229,25 +203,20 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shadow Storm</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>Your tie to the Shadowfell call on the living shadows around your foe, causing them to claw at it at your beck and call</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Implement, Shadow</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
-         <type2>Ranged</type2> <range2>3/6</range2>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>touch</range>
+            <type2>Ranged</type2> <range2>3/6</range2>
+            <target>one creature</target>
             <text>Dexterity vs. Reflex</text>
          </section>
          <section>
@@ -268,30 +237,24 @@
             <name>Special:</name> <name-style>bold</name-style>
             <text>This power counts as a <![CDATA[<i>basic attack</i>]]>.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shard of Darkness</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You swing your weapon and a shard of darkness in crude replication of it shoots towards your foe</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Force, Shadow, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>4/8</range>
-         <type2>Ranged</type2> <range2>weapon +2/+4 if your weapon can be thrown</range2>
          <section>
-            <shade>true</shade>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be wielding a melee weapon.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature you have your shrouds on</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>4/8</range>
+            <type2>Ranged</type2> <range2>weapon +2/+4 if your weapon can be thrown</range2>
+            <target>one creature you have your shrouds on</target>
             <text>Dexterity vs. AC</text>
          </section>
          <section>
@@ -308,24 +271,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>You can use this power as a <![CDATA[<i>ranged basic attack</i>]]>.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Twisting Shades</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>As your weapon makes contact, the shrouds you have placed on your victim twist tighter, digging cruelly to its flesh</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Shadow, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Dexterity vs. AC</text>
          </section>
          <section>
@@ -351,7 +309,6 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>Equal to twice your number of shrouds + your weapon's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
 </catalog>
