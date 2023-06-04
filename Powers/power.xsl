@@ -188,33 +188,44 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="power">
 
-	<div class="power">
-		<xsl:choose>
-			<xsl:when test="frequency = 'At-Will' or (not(frequency) and part[1]/frequency='At-Will')">
+	<xsl:choose>
+		<xsl:when test="frequency = 'At-Will' or (not(frequency) and part[1]/frequency='At-Will')">
+			<div class="power" style="border: 0.3em solid #619869; border-radius: 0.3em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#619869</xsl:with-param>
 				</xsl:call-template>
-			</xsl:when>
-			<xsl:when test="frequency = 'Encounter' or (not(frequency) and part[1]/frequency='Encounter')">
+
+					<xsl:apply-templates select="section"/>
+
+					<xsl:apply-templates select="part" />
+			</div>
+		</xsl:when>
+		<xsl:when test="frequency = 'Encounter' or (not(frequency) and part[1]/frequency='Encounter')">
+			<div class="power" style="border: 0.3em solid #961334; border-radius: 0.3em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#961334</xsl:with-param>
 				</xsl:call-template>
-			</xsl:when>
-			<xsl:when test="frequency = 'Daily' or (not(frequency) and part[1]/frequency='Daily')">
+
+					<xsl:apply-templates select="section"/>
+
+					<xsl:apply-templates select="part" />
+			</div>
+		</xsl:when>
+		<xsl:when test="frequency = 'Daily' or (not(frequency) and part[1]/frequency='Daily')">
+			<div class="power" style="border: 0.3em solid #4d4d4f; border-radius: 0.3em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#4d4d4f</xsl:with-param>
 				</xsl:call-template>
-			</xsl:when>
-			<xsl:otherwise>
+
+					<xsl:apply-templates select="section"/>
+
+					<xsl:apply-templates select="part" />
+			</div>
+		</xsl:when>
+		<xsl:otherwise>
 				<xsl:call-template name="createheader"/>
-			</xsl:otherwise>
-		</xsl:choose>
-
-		<xsl:apply-templates select="section"/>
-
-		<xsl:apply-templates select="part" />
-
-	</div>
+		</xsl:otherwise>
+	</xsl:choose>
 
 </xsl:template>
 

@@ -7,17 +7,13 @@
       <title>Bull's Strength</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>You slam your foe back as if it were a puny goblin; by enhancing your strength further, you can reach enemies farther away or even swat multiple foes</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Psionic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -31,36 +27,49 @@
          </section>
          <section>
             <augment>1</augment>
-            <name>Melee</name> <name-style>bold</name-style>
-            <text>weapon +1 reach</text>
+				<name>Attack:</name>
+            <type>Melee</type> <range>weapon +1 reach</range>
+				<target>one creature</target>
+            <text>Constitution vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Constitution modifier damage, and you push the target 2 squares.</text>
+         </section>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>You push the target half the distance.</text>
          </section>
          <section>
             <augment>2</augment>
-            <name>Close</name> <name-style>bold</name-style>
-            <text>blast 3</text>
+				<name>Attack:</name>
+            <type>Close</type> <range>blast 3</range>
+				<target>each enemy you can see in the blast</target>
+            <text>Constitution vs. Fortitude</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy you can see in the blast</text>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Constitution modifier damage, and you push the target 2 squares.</text>
          </section>
-      </part>
+         <section>
+            <name>Miss:</name> <name-style>bold</name-style>
+            <text>Damage equal to your Constitution modifier + your weapon's enhancement bonus, and you push the target half the distance.</text>
+         </section>
    </power>
 
    <power>
       <title>Concussive Spike</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>Your weapons shimmers with force as you bring it crashing down, clobbering your foes and driving some back</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Force, Psionic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 3</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature you can see in the blast</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Close</type> <range>blast 3</range>
+				<target>one creature you can see in the blast</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -74,8 +83,15 @@
          </section>
          <section>
             <augment>1</augment>
-            <name>Close</name> <name-style>bold</name-style>
-            <text>burst 3</text>
+				<name>Attack:</name> <name-style>bold</name-style>
+	         <type>Close</type> <range>burst 3</range>
+				<target>one creature you can see in the burst</target>
+            <text>Constitution vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Constutition modifier force damage.</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
@@ -83,10 +99,16 @@
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You push one enemy in the burst other than the target. The push is a number of squares equal to 1 + your Charisma modifier (minimum 2 squares), or one-half this amount if your attack hit but was not a critical hit.</text>
+            <text>You push one enemy in the burst other than the target a number of squares equal to 1 + your Charisma modifier (minimum 2 squares).</text>
          </section>
          <section>
             <augment>2</augment>
+				<name>Attack:</name> <name-style>bold</name-style>
+	         <type>Close</type> <range>blast 3</range>
+				<target>one creature you can see in the blast</target>
+            <text>Constitution vs. AC</text>
+         </section>
+			<section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>2[W] + Constitution modifier force damage.</text>
@@ -98,26 +120,21 @@
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>You psuh each enemy in the blast other than the target. The pis a number of squares equal to 1 + your Charisma modifier (minimum 2 squares), or one-half this amount if your attack hit but was not a critical hit.</text>
+            <text>You push each enemy in the blast other than the target. The push is a number of squares equal to 1 + your Charisma modifier (minimum 2 squares), or one-half this amount if your attack hit but was not a critical hit.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Conductive Defense</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>Your attack surrounds a foe with a shroud of crackling lightning, threatening retribution for strikes against your allies</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Lightning, Psionic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature adjacent to you</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>1</range>
+				<target>one creature adjacent to you</target>
             <text>Constitution vs. Reflex</text>
          </section>
          <section>
@@ -131,11 +148,28 @@
          </section>
          <section>
             <augment>1</augment>
+	         <name>Attack:</name> <name-style>bold</name-style>
+		      <type>Melee</type> <range>1</range>
+				<target>one creature adjacent to you</target>
+	         <text>Constitution vs. Reflex</text>
+	      </section>
+	      <section>
+	         <shade>true</shade>
+	         <name>Hit:</name> <name-style>bold</name-style>
+	         <text>1[W] + Constitution modifier lightning damage.</text>
+	      </section>
+	      <section>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the start of your next turn, the target takes lightning damage whenever it hits one of your allies, after the hit has been resolved, or whenever it shifts to a square adjacent to one of your allies, maximum of once per movement. The lightning damage equals your Constitution modifier + your weapon's enhancement bonus, or half this amount if it is not marked by you.</text>
          </section>
          <section>
             <augment>2</augment>
+	         <name>Attack:</name> <name-style>bold</name-style>
+		      <type>Melee</type> <range>1</range>
+			   <target>one creature adjacent to you</target>
+	         <text>Constitution vs. Reflex</text>
+	      </section>
+	      <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>2[W] + Constitution modifier lightning damage.</text>
@@ -144,24 +178,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the start of your next turn, the target takes lightning damage whenever it hits or misses one of your allies, after the hit or miss has been resolved. The lightning damage equals your Constitution modifier + your weapon's enhancement bonus.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Demon Dance</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>As you slash your enemy, you implant the image of howling demons into its mind, distracting the foe from making attacks</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Fear, Psionic, Psychic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -175,6 +204,12 @@
          </section>
          <section>
             <augment>1</augment>
+	         <name>Attack:</name> <name-style>bold</name-style>
+		      <type>Melee</type> <range>weapon</range>
+			   <target>one creature</target>
+	         <text>Constitution vs. AC</text>
+	      </section>
+	      <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Constitution modifier psychic damage, and the target is distracted by images of demons until the end of your next turn.</text>
@@ -185,6 +220,13 @@
          </section>
          <section>
             <augment>2</augment>
+	         <augment>1</augment>
+		      <name>Attack:</name> <name-style>bold</name-style>
+			   <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+		      <text>Constitution vs. AC</text>
+		   </section>
+		   <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>2[W] + Constitution modifier psychic damage, and the target is distracted by images of demons until the end of your next turn.</text>
@@ -197,14 +239,12 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target takes a -5 penalty to attack rolls with <![CDATA[<i>opportunity attacks</i>]]> and a -2 penalty to other triggered attack rolls. These penalties last until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Iron Fist</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>You change the density of your hand and arm to that of iron, allowing you to ward off your foe's attacks</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Psionic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
@@ -214,11 +254,9 @@
             <text>Until the end of your next turn, you gain resist all equal to your Wisdom modifier.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -233,34 +271,50 @@
             <text>Until the end of your next turn, you gain resist all equal to your Wisdom modifier and resist fire equal to 5 + your Wisdom modifier.</text>
          </section>
          <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Constitution vs. AC</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name> <name-style>bold</name-style>
+            <text>1[W] + Constitution modifier damage.</text>
+         </section>
+         <section>
             <augment>2</augment>
             <shade>true</shade>
+            <name>Effect:</name> <name-style>bold</name-style>
+            <text>Until the end of your next turn, you gain resist all equal to your Wisdom modifier and resist fire equal to 5 + your Wisdom modifier.</text>
+         </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Constitution vs. AC</text>
+         </section>
+         <section shade="">
             <name>Hit:</name> <name-style>bold</name-style>
             <text>2[W] + Constitution modifier damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Renewed Focus</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>By the power of your mind, you shrug off effects that would keep you away from your foes</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Psionic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You are no longer marked or slowed.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -270,13 +324,20 @@
          </section>
          <section>
             <augment>1</augment>
+	         <shade>true</shade>
+	         <name>Effect:</name> <name-style>bold</name-style>
+	         <text>You are no longer marked or slowed.</text>
+	      </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Constitution vs. AC</text>
+         </section>
+	      <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Constitution modifier damage, and you are no longer immobilized, and cannot be marked or slowed until the end of your next turn.</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <text>This effect is added below the hit line.</text>
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -285,12 +346,19 @@
          <section>
             <augment>2</augment>
             <shade>true</shade>
+	         <name>Effect:</name> <name-style>bold</name-style>
+	         <text>You are no longer marked or slowed.</text>
+	      </section>
+         <section>
+            <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Constitution vs. AC</text>
+         </section>
+	      <section>
+            <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>2[W] + Constitution modifier damage, and you cannot be immobilized, marked, or slowed until the end of your next turn.</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <text>This effect is added below the hit line.</text>
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -299,24 +367,19 @@
          <section>
             <text>Allies within 5 squares of you are no longer marked or slowed, and cannot be slowed or marked before the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Twisted Eye</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>You flood the mind of your foe with psionic energy, befuddling its vision and distorting its perception of nearby threats and, by increasing the flood to a torrent, you can blind the foe completely</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Psionic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -337,6 +400,21 @@
          </section>
          <section>
             <augment>1</augment>
+	            <name>Attack:</name> <name-style>bold</name-style>
+		         <type>Melee</type> <range>weapon</range>
+					<target>one creature</target>
+	            <text>Constitution vs. AC</text>
+	         </section>
+	         <section>
+	            <shade>true</shade>
+	            <name>Hit:</name> <name-style>bold</name-style>
+	            <text>1[W] + Consitution modifier damage.</text>
+	         </section>
+	         <section>
+	            <shade>true</shade>
+	            <text>Until the end of your next turn, the target takes a penalty to attack rolls equal to the number of your allies adjacent to it. The penalty lasts until the end of your next turn.</text>
+	         </section>
+	         <section>
             <name>Special:</name> <name-style>bold</name-style>
             <text>You can use this augmented version in place of a <![CDATA[<i>melee basic attack</i> when making an <i>opportunity attack</i>]]>.</text>
          </section>
@@ -345,28 +423,29 @@
          </section>
          <section>
             <augment>2</augment>
+	            <name>Attack:</name> <name-style>bold</name-style>
+		         <type>Melee</type> <range>weapon</range>
+					<target>one creature</target>
+	            <text>Constitution vs. AC</text>
+	         </section>
+	         <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Constitution modifier damage, and the target is blinded until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Vicious Cobra Strike</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>In your foe's mind, your weapon takes the form of a hissing serpent, its strike hindering that enemy's attacks against you</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Psionic, Psychic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One or two creatures</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one or two creatures</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -380,6 +459,12 @@
          </section>
          <section>
             <augment>1</augment>
+	         <name>Attack:</name> <name-style>bold</name-style>
+		      <type>Melee</type> <range>weapon</range>
+			   <target>one or two creatures</target>
+	         <text>Constitution vs. AC</text>
+	      </section>
+	      <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>Constitution modifier + your weapon's enhancement bonus psychic damage, and you mark the target and one enemy adjacent to it until the end of your next turn.</text>
@@ -390,36 +475,29 @@
          </section>
          <section>
             <augment>2</augment>
-            <name>Close</name> <name-style>bold</name-style>
-            <text>weapon burst</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each enemy you can see in the burst</text>
-         </section>
+	         <name>Attack:</name> <name-style>bold</name-style>
+		      <type>Close</type> <range>weapon burst</range>
+			   <target>each enemy you can see in the burst</target>
+	         <text>Constitution vs. AC</text>
+	      </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
             <text>1[W] + Constitution modifier psychic damage, and the target is marked until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>World-Slipping Advance</title>
       <class>Battlemind</class> <category>Attack</category> <level>1</level>
       <fluff>You slip unfettered across the battlefield to gain an advantageous position.</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Augmentable, Psionic, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
             <text>Constitution vs. AC</text>
          </section>
          <section>
@@ -432,9 +510,14 @@
             <text>You can use this power unaugmented in place of a <![CDATA[<i>melee basic attack</i>]]>.</text>
          </section>
          <section>
-            <augment>1</augment>
-            <indent>1</indent>
-            <text>The power gains the Teleportation keyword</text>
+				<augment>1</augment>
+				<keyword>Teleportation</keyword>
+			</section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Constitution vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
@@ -443,8 +526,13 @@
          </section>
          <section>
             <augment>2</augment>
-            <indent>1</indent>
-            <text>The power gains the Teleportation keyword</text>
+            <keyword>Teleportation</keyword>
+         </section>
+			<section>
+				<name>Attack:</name> <name-style>bold</name-style>
+	         <type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
+            <text>Constitution vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
@@ -455,6 +543,5 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You teleport to a space adjacent to the target.</text>
          </section>
-      </part>
    </power>
 </catalog>
