@@ -7,12 +7,10 @@
 		<title>All-Encompassing Nature</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Your view of nature is broader than most, expanding your knowledge</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Primal</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
-         <section shade="true">
+         <section>
             <name style="bold">Prerequisite:</name>
             <text>You must have training in Nature.</text>
          </section>
@@ -20,46 +18,43 @@
             <name style="bold">Trigger:</name>
             <text>You make a knowledge check using Arcana, Dungeoneering, or Religion</text>
          </section>
+			<section auto="personal"/>
          <section shade="true">
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You use your Nature check modifier for the triggering check instead of the original check modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Barkskin</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>A protective layer of tree bark covers an ally's body or armor</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5</range>
-         <section auto="no-opportunity" indent="1" />
+         <section auto="no-opportunity"/>
          <section>
             <name style="bold">Target:</name>
-            <text>You or one ally</text>
+	         <type>Ranged</type> <range>5</range>
+            <target>you or one ally</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>The target gains a power bonus to AC until the end of your next turn. The bonus equals your Constitution modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bear's Strength</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Primal energy surges through your ally, granting him or her the strength of a wild beast</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
             <name style="bold">Target:</name>
-            <text>You or one ally</text>
+	         <type>Melee</type> <range>touch</range>
+            <target>you or one ally</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
@@ -77,21 +72,19 @@
             <name style="bullet" />
             <text>The target's Strength increases by 5 for the purposes of determining carrying capacity.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Cat's Grace</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>You imbue an ally with the quick reflexes and agility of a jungle cat</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
             <name style="bold">Target:</name>
-            <text>You or one ally</text>
+	         <type>Melee</type> <range>touch</range>
+            <target>you or one ally</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
@@ -105,18 +98,16 @@
             <name style="bullet" />
             <text>+2 power bonus to Initiative checks, Dexterity-based skill checks, and Dexterity ability checks.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Dust Eddy</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>You surround yourself with a violent swirl of wind that fills the air with dust and debris</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Aura, Beast Form, Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You activate an Aura 1 (Primal) until the end of your next turn. The aura immediately ends if you leave beast form.</text>
@@ -127,21 +118,19 @@
          <section shade="true">
             <text>Any enemy that ends its turn in the aura is blinded until the end of its next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Elk's Fortitude</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>You imbue an ally with the endurance and steadfast determination of an elk</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
             <name style="bold">Target:</name>
-            <text>You or one ally</text>
+	         <type>Melee</type> <range>touch</range>
+            <target>you or one ally</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
@@ -159,19 +148,16 @@
             <name style="bullet" />
             <text>+2 power bonus to Endurance checks and Constitution ability checks.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Ferocious Transformation</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>In response to an enemy's attack, you transform into a beast</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Primal</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
-         <section shade="true">
+         <section>
             <name style="bold">Prerequisite:</name>
             <text>You must have the <![CDATA[<i>wild shape</i>]]> class power.</text>
          </section>
@@ -179,6 +165,7 @@
             <name style="bold">Trigger:</name>
             <text>An enemy hits you with an attack while you aren't in beast form</text>
          </section>
+			<section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You use your <![CDATA[<i>wild shape</i>]]> class power to change into beast form.</text>
@@ -202,18 +189,16 @@
             <name style="bold">Pouncing Form feat:</name>
             <text>If you did not shift immediately, you can now shift a number of squares equal to 1 + your Dexterity modifier instead.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Fleet Pursuit</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Your limbs propel you forward with the speed of the cheetah</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Beast Form, Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>Until the end of the encounter, you gain a power bonus to speed equal to 1 + one-half your Dexterity modifier while you are in beast form.</text>
@@ -222,18 +207,16 @@
             <name style="bold">Special:</name>
             <text>If you use this power outside of combat, the effects lasts for 2 hours. If the effects have lasted for more than five minutes and combat starts, the power ends at the start of your first turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Form of the Skittering Sneak</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>You adopt the form of tiny animal that wouldn't draw a second glance from most observers</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Polymorph, Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You assume the form of the skittering sneak until you take an extended rest or until you end the form as a free action.</text>
@@ -241,18 +224,16 @@
          <section shade="true">
             <text>While in this form, your look like your choice of a Tiny natural beast or fey beast, such as a mouse, a house cat, a large spider, or the fey equivalent of one. You size is Tiny and you gain a +5 bonus to Stealth checks, but you cannot attack, manipulate objects, or use any magic item powers. Also, your gear becomes part of the form and is inaccessible.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Form of the Sprinting Elk</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Your form shifts as you assume the guise of a great elk and quickly bound away</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Polymorph, Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You assume the form of the sprinting elk until you take an extended rest or until you end the form as a free action.</text>
@@ -260,40 +241,36 @@
          <section shade="true">
             <text>While in this form, you gain a +4 bonus to speed, but you cannot attack, manipulate objects, or use any magic item powers. Also, your gear becomes part of the form and is inaccessible.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lesser Restoration</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Motes of green energy suffuse your ally, letting him or her draw strength from the essence of the world</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Healing, Primal</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name style="bold">Target:</name>
-            <text>You or one ally</text>
+	         <type>Ranged</type> <range>10</range>
+            <target>you or one ally</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>The target can make a saving throw to end an effect that a save can end, and can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Obscuring Mist</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>A thick fog coalesces from nowhere, hiding your allies</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Primal, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section shade="true">
             <name style="bold">Effect:</name>
+	         <type>Area</type> <range>burst 2 within 10 squares</range>
             <text>The burst creates a zone of thick fog until the end of your next turn.</text>
          </section>
          <section shade="true">
@@ -310,42 +287,38 @@
             <name style="bold">Sustain Free:</name>
             <text>The burst's size is halved, and it persist until the end of your next turn. You cannot continue sustaining the zone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Resist Energy</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Magical energy washes around you, but your primal magic protects you and those close to you</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Primal</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 1</range>
          <section>
             <name style="bold">Trigger:</name>
             <text>You take cold, fire, lightning, or thunder damage</text>
          </section>
          <section>
             <name style="bold">Target:</name>
-            <text>You and each ally in the burst</text>
+	         <type>Close</type> <range>burst 1</range>
+            <target>you and each ally in the burst</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>Each target gains resit 5 to the triggering damage type or types until the end of his or her next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Seed of Healing</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Primal power threads through you, coalescing into a golden seed ripe with healing magic</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Healing, Primal</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You spend a healing surge to create a gold seed. The seed is the size of an acorn, and lasts until it is eaten or until the end of your next extended rest, whichever comes first.</text>
@@ -357,44 +330,40 @@
             <name style="bold">Minor Action:</name>
             <text>The creature retrieves and eats the seed, and regains a number of hit points equal to 10 + your healing surge value.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Sudden Bite</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>When your foe drops its guard, you change into a beast to strike</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Primal</keyword>
          <action>Opportunity</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
-         <section shade="true">
+         <section>
             <name style="bold">Prerequisite:</name>
-            <text>You must have the <![CDATA[<i>wild shape</i>]]> class power.</text>
+            <text>You must have the <![CDATA[<i>wild shape</i>]]> class power, and a Beast Form attack power you can use to make an <![CDATA[<i>opportunity attack</i>]]>.</text>
          </section>
          <section>
             <name style="bold">Trigger:</name>
             <text>An enemy provokes an <![CDATA[<i>opportunity attack</i>]]> from you while you aren't in beast form</text>
          </section>
+			<section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You use your <![CDATA[<i>wild shape</i>]]> class power to change into beast form, and then make the <![CDATA[<i>opportunity attack</i>]]>.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Verdant Growth</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Plants erupt to hide your allies and block your enemies' sight</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Primal, Zone</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Area</type> <range>burst 2 within 10 squares</range>
          <section shade="true">
             <name style="bold">Effect:</name>
+	         <type>Area</type> <range>burst 2 within 10 squares</range>
             <text>The burst creates a zone of thick plants that lasts until the end of your next turn.</text>
          </section>
          <section shade="true">
@@ -403,22 +372,20 @@
          <section shade="true">
             <text>For your enemies, the zone is heavily obscured and blocks sight beyond three squares.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Warding Wind</title>
       <class>Druid</class> <category>Utility</category> <level>2</level>
       <fluff>Winds howl around you, shielding you from harm and hurling your attacker away</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Primal</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
             <name style="bold">Trigger:</name>
             <text>An enemy hits you with a melee attack</text>
          </section>
+			<section auto="personal"/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You gain a +2 power bonus to all defenses until the start of the triggering enemy's next turn.</text>
@@ -426,6 +393,5 @@
          <section shade="true">
             <text>If the triggering attack missed you, you can slide the triggering enemy 2 squares.</text>
          </section>
-      </part>
    </power>
 </catalog>

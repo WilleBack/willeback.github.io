@@ -19,9 +19,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			.power {
 				margin:0.2cm;
-				width:calc(100% - 1.25em);
+				width:calc(100% - 1em);
 				float:left;
-				page-break-inside:avoid;
+				break-inside:avoid;
 			}
 
 			.header {
@@ -34,11 +34,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 				margin:0.3em;
 				vertical-align:middle;
-				width:100%;
+				width:calc(100% - 0.1em);
 			}
 
 			.title {
-				width:calc(100% - 1.9em);
+				width:calc(100% - 2em);
 				float:left;
 				font-size:1.2em;
 				text-indent:-1em;
@@ -60,7 +60,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			.freqact {
-				width:100%;
+				width:calc(100% - 0.09em);
 				font-size:1.05em;
 				margin:0.2em;
 				margin-top:0em;
@@ -70,7 +70,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.fluff {
 				font-family:MentorSansStd-Light;
 				background:linear-gradient(to right, #D6D6C2, #ebebe0);
-				width:100%;
+				width:calc(100% - 0.1em);
 				box-sizing:border-box;
 				padding:0.3em;
 				float:left;
@@ -85,7 +85,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			.section {
-				width:100%;
+				width:calc(100% - 0.1em);
 				box-sizing:border-box;
 				padding:0.2em 0.3em;
 				text-indent:-1em;
@@ -162,7 +162,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			@media print {
 				.container {
 					column-count: 2;
-					column-gap:0.3em;
+					column-gap:0.2em;
 					margin:0cm;
 				}
 
@@ -171,7 +171,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		</style>
 	</head>
-	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
+	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9.5pt;margin:0cm; ">
 		<xsl:if test="collection">
 			<div id="collection-header" style="font-family:DnDLolth; width:100%; box-sizing:border-box; padding:0.2em; font-size:1.4em; font-variant:small-caps;">
 				<b><xsl:value-of select="collection" /></b>
@@ -190,7 +190,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:choose>
 		<xsl:when test="frequency = 'At-Will' or (not(frequency) and part[1]/frequency='At-Will')">
-			<div class="power" style="border: 0.3em solid #619869; border-radius: 0.3em;">
+			<div class="power" style="border: 0.25em solid #619869; border-radius: 0.2em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#619869</xsl:with-param>
 				</xsl:call-template>
@@ -201,7 +201,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:when>
 		<xsl:when test="frequency = 'Encounter' or (not(frequency) and part[1]/frequency='Encounter')">
-			<div class="power" style="border: 0.3em solid #961334; border-radius: 0.3em;">
+			<div class="power" style="border: 0.25em solid #961334; border-radius: 0.2em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#961334</xsl:with-param>
 				</xsl:call-template>
@@ -212,7 +212,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:when>
 		<xsl:when test="frequency = 'Daily' or (not(frequency) and part[1]/frequency='Daily')">
-			<div class="power" style="border: 0.3em solid #4d4d4f; border-radius: 0.3em;">
+			<div class="power" style="border: 0.25em solid #4d4d4f; border-radius: 0.2em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#4d4d4f</xsl:with-param>
 				</xsl:call-template>
