@@ -7,27 +7,24 @@
 		<title>Astral Speech</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You speak with such compelling conviction that others find it difficult to refure your beliefs and claims</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Divin</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section personal=""/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You gain a +4 power bonus to Diplomacy checks until the end of the encounter.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bless Weapon</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You recite an ancient prayer to imbue your weapon with the power of pure faith</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Divine, Radiant</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
+         <section personal=""/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>Choose one weapon you are wielding. You gain the following benefits with the chosen weapon until the end of the encounter:</text>
@@ -44,46 +41,42 @@
             <name style="bullet" />
             <text>Against a creature vulnerable to radiant damage, you can score a critical hit on a natural roll of 18 to 20.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Call of Challenge</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You brandish your weapon and demand that all foes nearby face you in battle</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
          <section>
             <name style="bold">Target:</name>
-            <text>Each enemy in the burst</text>
+	         <type>Close</type> <range>burst 3</range>
+            <target>each enemy in the burst</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>Each target is subject to your Divince Sanction until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Kord's Strength</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>Kord answers your shouted prayer with strength and power, causing you to excel in acts of physical might</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
-         <section shade="true">
+         <section>
             <name style="bold">Prerequisite:</name>
             <text>You must worship Kord.</text>
          </section>
          <section>
             <name style="bold">Trigger:</name>
-            <text>You would make an Athletics checks or an Endurance check.</text>
+            <text>You would make an Athletics checks or an Endurance check</text>
          </section>
+         <section personal=""/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You gain a +5 power bonus to the triggering check.</text>
@@ -99,62 +92,56 @@
             <name style="bullet" />
             <text>When you hit with a melee attack, the target is subject to your Divine Sanction until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Martyr's Blessing</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You step into an attack made against an adjacent ally to save your comrade</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 1</range>
          <section>
             <name style="bold">Trigger:</name>
-            <text>An adjacent ally is hit by a melee or ranged attack</text>
+            <text>An ally adjacent to you is hit by a melee or ranged attack</text>
          </section>
+			<section special=""/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>The triggering attack is resolved against you instead of the triggering ally.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Restore Vitality</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You lay your hands upon an ally, invoking divine power to restore a comrade to health and remove hindering effects</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Divine, Healing</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
+         <action>Standard</action> <subaction>Action</subaction>
          <section>
             <name style="bold">Target:</name>
-            <text>One adjacent creature</text>
+	         <type>Melee</type> <range>1</range>
+            <target>one adjacent creature</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>The target regains hit points equal to his or her healing surge value, and can make a saving throw against an effect that a save can end.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Reward of Vice</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>Vice buoys your heart, and you revel in the power it provides</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
             <name style="bold">Prerequisite:</name>
             <text>You must worship an evil or chaotic evil deity.</text>
          </section>
+			<section personal=""/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You gain 5 temporary hit points and can make a saving throw against an effect that a save can end.</text>
@@ -170,66 +157,59 @@
          <section shade="true">
             <text>You also gain a +2 power bonus to all defenses until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Reward of Virtue</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You gird yourself in your high ideals and face the enemy with renewed determination</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
             <name style="bold">Prerequisite:</name>
             <text>You must worship a good or lawful good deity.</text>
          </section>
+			<section personal=""/>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You expend a healing surge to gain temporary hit points equal to your healing surge value + your level.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Sacred Circle</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You trace a circle around you with your hand, and it quickly expands into a wide circle of faintly glowing runes that glows brightly and protects you and your close allies</fluff>
-      <part>
          <frequency>Daily</frequency>
          <keyword>Divine, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
          <section shade="true">
             <name style="bold">Effect:</name>
+	         <type>Close</type> <range>burst 3</range>
             <text>The burst creates a zone of protective runes until the end of the encounter.</text>
          </section>
          <section shade="true">
             <text>You and your allies gain a +1 power bonus to AC while within the zone.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Touch of Grace</title>
       <class>Paladin</class> <category>Utility</category> <level>2</level>
       <fluff>You take onto yourself the suffering of your ally</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>touch</range>
          <section>
             <name style="bold">Target:</name>
-            <text>One ally</text>
+	         <type>Melee</type> <range>touch</range>
+            <target>One ally</target>
          </section>
          <section shade="true">
             <name style="bold">Effect:</name>
             <text>You transfer one effect that a save can end from the target to yourself.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

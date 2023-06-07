@@ -7,17 +7,13 @@
       <title>Dazzling Flare</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Painfully bright light flashes from your holy symbol</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Implement, Radiant</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>5/10</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>5/10</range>
+            <target>one creature</target>
             <text>Charisma vs. Reflex</text>
          </section>
          <section>
@@ -29,24 +25,19 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>One-half the penalty to attack rolls.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Divine Rush</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You drive your foe back with a mighty attack and follow it to prevent its escape</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -65,27 +56,21 @@
          <section>
             <text>For each square you push the target, you must shift to the closest space adjacent to the target.</text>
          </section>
-         <section>
-            <shade>true</shade>
-            <name>Special:</name> <name-style>bold</name-style>
-            <text>This power can be used in place of a <![CDATA[<i>melee basic attack</i>]]> on a charge.</text>
-         </section>
-      </part>
+         <section shade="" auto="charge-special"/>
    </power>
 
    <power>
       <title>Dread Smite</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>The dark coldness at the heart of each vice makes your strike all the more crippling</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Cold, Divine, Necrotic</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Special</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You target an enemy with an at-will Weapon attack power</text>
+            <text>You target an enemy with an at-will Weapon attack</text>
          </section>
+         <section auto="special"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -99,28 +84,20 @@
             <shade>true</shade>
             <text>If the triggering attack hits, the target is also weakened (save ends).</text>
          </section>
-         <section>
-            <name>Special:</name> <name-style>bold</name-style>
-            <text><![CDATA[<i>Dread smite</i>]]> can be chosen at all levels where you gain an encounter attack, allowing you to use it more than once per encounter. You cannot use more than one <![CDATA[<i>dread smite</i>]]> on a given attack, and you should keep track separately of different levels of the power that deal increased damage.</text>
-         </section>
-      </part>
+         <section auto="dreadsmite"/>
    </power>
 
    <power>
       <title>Fearsome Smite</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>When you strike a foe with your weapon, the fierce blow causes it to shudder and second-guess its tactics</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Fear, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
@@ -132,67 +109,54 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage, and one-half the penalty.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Guardian Light</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>As you attack, a faint glow emanates from your weapon to envelope you and bolster your defenses for a time</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Radiant; Implement or Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <type2>Ranged</type2> <range2>5</range2>
-         <section>
-            <name>Special:</name> <name-style>bold</name-style>
-            <text>You make this attack as either a melee Weapon attack, or a ranged Implement attack.</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
+         <section auto="weapon-implement"/>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. AC (weapon), or</text>
          </section>
          <section>
-            <indent>1</indent>
+            <type>Ranged</type> <range>5</range>
+            <target>one creature</target>
             <text>Charisma vs. Will (implement)</text>
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] + Charisma modifier radiant damage as a Weapon attack, or 1d6 + Charisma modifier radiant damage as an Implement attack.</text>
+            <text>1[W] + Charisma modifier radiant damage (Weapon) or 1d6 + Charisma modifier radiant damage (Implement).</text>
          </section>
          <section>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the end of your next turn, you gain a bonus to Fortitude, Reflex and Will equal to your Wisdom modifier.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Heedless Fury</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You lay into your foe without regard for your own safety</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You take a -5 penalty to all defenses until the end of your next turn.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. AC</text>
          </section>
          <section>
@@ -204,22 +168,20 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Half damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Holy Smite</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Your weapon fills with divine radiant energy, which burst forth as you strike your enemy</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Radiant</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <type>Special</type>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You target an enemy with an at-will Weapon attack.</text>
+            <text>You target an enemy with an at-will Weapon attack</text>
          </section>
+         <section auto="special"/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -229,28 +191,20 @@
             <shade>true</shade>
             <text>If the triggering attack hits, the target is also dazed until the end of your next turn.</text>
          </section>
-         <section>
-            <name>Special:</name> <name-style>bold</name-style>
-            <text><![CDATA[<i>holy smite</i>]]> can be chosen at all levels where you gain an encounter attack, allowing you to use it more than once per encounter. You cannot use more than one <![CDATA[<i>holy smite</i>]]> on a given attack, and you should keep track separately of different levels of the power that deal increased damage.</text>
-         </section>
-      </part>
+         <section auto="holysmite"/>
    </power>
 
    <power>
       <title>Piercing Smite</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Silvery spikes cover your weapon, punching through your foe's armor</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. Reflex</text>
          </section>
          <section>
@@ -262,24 +216,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You subject the target to your Divine Sanction until the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Radiant Smite</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Your weapon glows with a pearly luminescence, causing your enemies to shrink from its pure light</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Radiant, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. AC</text>
          </section>
          <section>
@@ -291,24 +240,19 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>Until the start of your next turn, enemies must spend an additional square of movement for each square they willingly move closer to you.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shielding Smite</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>A translucent golden shield forms in front of a nearby ally as you attack with your weapon</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. AC</text>
          </section>
          <section>
@@ -324,29 +268,25 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>Choose one ally within 5 squares of you. The chosen ally gains a power bonus to AC and Reflex equal to one-half your Wisdom modifier until the end of your next turn.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Stolen Life</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Your faith-fueled attack strikes home, channeling your foe's pain into healing</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Healing, Necrotic; Implement or Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <type2>Ranged</type2> <range2>5</range2>
-         <section>
-            <name>Special:</name> <name-style>bold</name-style>
-            <text>You make this attack as either a melee Weapon attack, or a ranged Implement attack.</text>
-         </section>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
+         <section auto="weapon-implement"/>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
+            <text>Charisma vs. Fortitude</text>
+         </section>
+         <section>
+            <type>Ranged</type> <range>5</range>
+            <target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
@@ -358,24 +298,19 @@
             <shade>true</shade>
             <text>You or an ally within 5 squares of you regains hit points equal to 2 + your Wisdom modifier or equal to the damage the enemy took, whichever is less.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Valorous Smite</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You cry out as you strike, daring close by enemies to face you</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One creature</text>
-         </section>
          <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Melee</type> <range>weapon</range>
+            <target>one creature</target>
             <text>Charisma vs. AC</text>
          </section>
          <section>
@@ -387,7 +322,6 @@
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You subject each enemy within 3 squares of you to your Divine Sanction until the start of your next turn.</text>
          </section>
-      </part>
    </power>
 
 </catalog>

@@ -7,28 +7,25 @@
       <title>Blazing Brand</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Your attack burns your god's symbol onto the enemy, a beacon to your companions</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Fire, Reliable; Implement or Weapon</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Melee</type> <range>weapon</range>
-        <type2>Ranged</type2> <range2>5</range2>
-        <section>
-          <name>Special:</name> <name-style>bold</name-style>
-          <text>You make this attack as either a melee Weapon attack or a ranged Implement attack.</text>
-        </section>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
-        </section>
+        <section auto="weapon-implement"/>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
-          <text>Charisma vs. Fortitude</text>
+          <type>Melee</type> <range>weapon</range>
+          <target>one creature</target>
+          <text>Charisma vs. Fortitude (weapon), or</text>
+       </section>
+       <section>
+          <type>Ranged</type> <range>5</range>
+          <target>one creature</target>
+          <text>Charisma vs. Fortitude (implement)</text>
         </section>
         <section>
           <shade>true</shade>
           <name>Hit:</name> <name-style>bold</name-style>
-          <text>2[W] + Charisma modifier fire damage as a Weapon attack, or 2d8 + Charisma modifier fire damage as an Implement attack, and the target is branded (save ends).</text>
+          <text>2[W] + Charisma modifier fire damage (Weapon) or 2d8 + Charisma modifier fire damage (Implement), and the target is branded (save ends).</text>
         </section>
         <section>
           <shade>true</shade>
@@ -41,18 +38,15 @@
         <section>
           <text>If you use this power against the same target before the end of your next turn, you gain combat advantage on the attack.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>Blood of the Mighty</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You draw on your own life force to deal a decisive blow</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Reliable, Weapon</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Melee</type> <range>weapon</range>
         <section>
           <shade>true</shade>
           <name>Effect:</name> <name-style>bold</name-style>
@@ -63,11 +57,9 @@
           <text>If this damage reduces your hit points to 0 or fewer, you do not become unconscious from the dying condition before this attack has been resolved.</text>
         </section>
         <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
-        </section>
-        <section>
           <name>Attack:</name> <name-style>bold</name-style>
+          <type>Melee</type> <range>weapon</range>
+          <target>one creature</target>
           <text>Charisma vs. AC</text>
         </section>
         <section>
@@ -82,24 +74,19 @@
         <section>
           <text>You immediately regain the use of this power.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>Driving Blades</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Such is the ferocity of your attack, your enemy falls back with each strike</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Weapon</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Melee</type> <range>weapon</range>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
-        </section>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
+          <type>Melee</type> <range>weapon</range>
+          <target>one creature</target>
           <text>Charisma vs. AC</text>
         </section>
         <section>
@@ -111,6 +98,10 @@
           <shade>true</shade>
           <text>While wounded, the target takes ongoing 5 damage, and each time you hit it with a melee attack, you can push the target 1 square and shift 1 square into the space it vacated.</text>
         </section>
+        <section shade="" indent="1">
+           <name style="italic">Aftereffect:</name>
+           <text>Ongoing 5 damage (save ends).</text>
+        </section>
         <section>
           <name>Miss:</name> <name-style>bold</name-style>
           <text>Half damage, and you push the target 1 square.</text>
@@ -120,24 +111,19 @@
           <name>Special:</name> <name-style>bold</name-style>
           <text>You can use this attack in place of a <![CDATA[<i>melee basic attack</i>]]> when you charge.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>Frost of Letherna</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Ice and frost swirl around you, expanding quickly into a whirling blizzard that makes it difficult for your enemies to flee</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Cold, Divine, Implement, Zone</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Close</type> <range>burst 2</range>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>Each enemy in the burst</text>
-        </section>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
+          <type>Close</type> <range>burst 2</range>
+          <target>each enemy in the burst</target>
           <text>Charisma vs. Fortitude</text>
         </section>
         <section>
@@ -163,24 +149,19 @@
           <name>Sustain Minor:</name> <name-style>bold</name-style>
           <text>The zone persists until the end of your next turn.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>Glorious Charge</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You wade into battle and urge your allies to greater heights</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Healing, Weapon</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Melee</type> <range>weapon</range>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
-        </section>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
+          <type>Melee</type> <range>weapon</range>
+          <target>one creature</target>
           <text>Charisma vs. AC</text>
         </section>
         <section>
@@ -190,37 +171,33 @@
         </section>
         <section>
           <name>Effect:</name> <name-style>bold</name-style>
-          <text>Each ally within 5 squares of you regains hit points equal to one-half your level + your Wisdom modifier.</text>
+          <text>Each ally within 5 squares of you regains hit points equal to one-third your level + your Wisdom modifier.</text>
         </section>
         <section>
           <shade>true</shade>
           <name>Special:</name> <name-style>bold</name-style>
           <text>You can use this attack in place of a <![CDATA[<i>melee basic attack</i>]]> when you charge.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>Majestic Halo</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You shine with divine radiance that sears your enemies and commands their respect</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Radiant; Implement or Weapon</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Melee</type> <range>weapon</range>
-        <type2>Ranged</type2> <range2>5</range2>
-        <section>
-          <name>Special:</name> <name-style>bold</name-style>
-          <text>You make this attack as either a melee Weapon attack or a ranged Implement attack.</text>
-        </section>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
-        </section>
+        <section auto="weapon-implement"/>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
-          <text>Charisma vs. Will</text>
+          <type>Melee</type> <range>weapon</range>
+          <target>one creature</target>
+          <text>Charisma vs. Will (weapon), or</text>
+       </section>
+       <section>
+          <type>Ranged</type> <range>5</range>
+          <target>one creature</target>
+          <text>Charisma vs. Will (implement)</text>
         </section>
         <section>
           <shade>true</shade>
@@ -236,28 +213,22 @@
           <name>Effect:</name> <name-style>bold</name-style>
           <text>Until the end of the encounter, any enemy that starts its turn adjacent to you is subject to your divine sanction until the end of its current turn.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>On Pain of Death</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You invoke a prayer that wracks your foe with terrible pain and causes further pain whenever it attacks</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Implement</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Ranged</type> <range>5</range>
         <section>
-          <indent>1</indent>
-          <text>Using this power does not trigger an <![CDATA[<i>opportunity attack</i>]]> for using a ranged attack from the target.</text>
-        </section>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
+          <text>Using this power does not trigger an <![CDATA[<i>opportunity attack</i>]]> from the target for using a ranged attack.</text>
         </section>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
+          <type>Ranged</type> <range>5</range>
+          <target>one creature</target>
           <text>Charisma vs. Will</text>
         </section>
         <section>
@@ -278,24 +249,19 @@
           <shade>true</shade>
           <text>While compelled, once per round when it makes any attack, the target takes damage. The damage equals 3 + your Charisma modifier + your implement's enhancement bonus, or half this amount if your attack was a miss.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>Paladin's Judgement</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>Your melee attack punishes your enemy and heals an ally</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Healing, Weapon</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Melee</type> <range>weapon</range>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
-        </section>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
+          <type>Melee</type> <range>weapon</range>
+          <target>one creature</target>
           <text>Charisma vs. Will</text>
         </section>
         <section>
@@ -307,24 +273,19 @@
           <name>Effect:</name> <name-style>bold</name-style>
           <text>One ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
         </section>
-      </part>
     </power>
 
     <power>
       <title>Radiant Delirium</title>
       <class>Paladin</class> <category>Attack</category> <level>1</level>
       <fluff>You engulf your enemy in searing ribbons of radiance</fluff>
-      <part>
         <frequency>Daily</frequency>
         <keyword>Divine, Implement, Radiant</keyword>
         <action>Standard</action> <subaction>Action</subaction>
-        <type>Ranged</type> <range>5/10</range>
-        <section>
-          <name>Target:</name> <name-style>bold</name-style>
-          <text>One creature</text>
-        </section>
         <section>
           <name>Attack:</name> <name-style>bold</name-style>
+          <type>Ranged</type> <range>5/10</range>
+          <target>one creature</target>
           <text>Charisma vs. Reflex</text>
         </section>
         <section>
@@ -341,7 +302,6 @@
           <name>Effect:</name> <name-style>bold</name-style>
           <text>The target is dazed until the end of your next turn.</text>
         </section>
-      </part>
     </power>
 
   </catalog>

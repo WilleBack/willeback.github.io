@@ -415,14 +415,30 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<b>Effect:&#160;</b>
 		You charge and use this attack in place of a <i>melee basic attack</i>. If an effect allows you to charge, you can use this power.
 	</xsl:if>
+	<xsl:if test="@auto='charge-special'">
+		<b>Special:&#160;</b>
+		When charging, you can use this power in place of a <i>melee basic attack</i>.
+	</xsl:if>
 	<xsl:if test="@auto='powerstrike'">
 		<b>Special:&#160;</b>
 		<i>Power strike</i> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one <i>power strike</i> per triggering attack.
 	</xsl:if>
-	<xsl:if test="@auto='personal'">
+	<xsl:if test="@auto='dreadsmite'">
+		<b>Special:&#160;</b>
+		<i>Dread smite</i> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one <i>dread smite</i> per triggering attack.
+	</xsl:if>
+	<xsl:if test="@auto='holysmite'">
+		<b>Special:&#160;</b>
+		<i>Holy smite</i> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one <i>holy smite</i> per triggering attack.
+	</xsl:if>
+	<xsl:if test="@auto='weapon-implement'">
+		<b>Special:&#160;</b>
+		You make this attack as either a melee Weapon attack or a ranged Implement attack.
+	</xsl:if>
+	<xsl:if test="@auto='personal' or @personal">
 		<b>Personal</b>
 	</xsl:if>
-	<xsl:if test="@auto='special'">
+	<xsl:if test="@auto='special' or @special">
 		<b>Special</b>
 	</xsl:if>
 	<xsl:choose>
