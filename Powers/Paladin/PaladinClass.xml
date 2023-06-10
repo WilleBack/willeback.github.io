@@ -73,44 +73,31 @@
          <title>Divine Mettle</title>
          <class>Paladin</class> <category>Utility</category>
          <fluff>Your unswerving faith in your cause empowers a nearby creature to resist a debilitating affliction</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>10</range>
-            <section>
-               <indent>1</indent>
-               <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-            </section>
-            <section>
-               <name>Channel Divinity:</name> <name-style>bold</name-style>
-               <text>You can only use one Channel Divinity power per encounter.</text>
-            </section>
+            <section auto="no-opportunity"/>
+            <section auto="channeldivinity"/>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
+               <type>Ranged</type> <range>10</range>
+               <target>one creature</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The target makes a saving throw against one effect that a save can end. It has a bonus to the roll equal to your Wisdom modifier.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Divine Strength</title>
          <class>Paladin</class> <category>Utility</category>
          <fluff>You call upon divine strength to lay low your enemies</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Channel Divinity:</name> <name-style>bold</name-style>
-               <text>You can only use one Channel Divinity power per encounter.</text>
-            </section>
+            <section auto="channeldivinity"/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -126,7 +113,6 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>Equals 4 + your Strength modifier.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -142,18 +128,14 @@
          <title>Divine Challenge</title>
          <class>Paladin</class> <category>Utility</category>
          <fluff>You boldly confront a nearby enemy, searing it with divine light if it ignores your challenge</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>5</range>
-            <section>
-               <indent>1</indent>
-               <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-            </section>
+            <section auto="no-opportunity"/>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature that can see you</text>
+               <type>Ranged</type> <range>5</range>
+               <target>one creature that can see you</target>
             </section>
             <section>
                <shade>true</shade>
@@ -168,7 +150,6 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>You can use this power only once per turn.</text>
             </section>
-         </part>
       </power>
 
    </feature>
@@ -189,14 +170,13 @@
             <title>Ardent Vow</title>
             <class>Paladin</class> <category>Utility</category>
             <fluff>You reach toward your foe and draw on unwavering faith and inner strength, so your next strike is filled with divine fury</fluff>
-            <part>
                <frequency>At-Will</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Melee</type> <range>touch</range>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One creature</text>
+                  <type>Melee</type> <range>touch</range>
+                  <target>one creature</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -221,7 +201,6 @@
                   <name>Special:</name> <name-style>bold</name-style>
                   <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -235,19 +214,17 @@
             <title>Lay on Hands</title>
             <class>Paladin</class> <category>Utility</category>
             <fluff>Your divine touch instantly heals wounds</fluff>
-            <part>
                <frequency>At-Will</frequency>
                <keyword>Divine, Healing</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Melee</type> <range>touch</range>
                <section>
-                  <shade>true</shade>
                   <name>Requirement:</name> <name-style>bold</name-style>
                   <text>You must have at least one healing surge remaining.</text>
                </section>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One creature</text>
+                  <type>Melee</type> <range>touch</range>
+                  <target>one creature</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -258,7 +235,6 @@
                   <name>Special:</name> <name-style>bold</name-style>
                   <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -272,14 +248,13 @@
             <title>Virtue's Touch</title>
             <class>Paladin</class> <category>Utility</category>
             <fluff>Your gentle touch removes affliction</fluff>
-            <part>
                <frequency>At-Will</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Melee</type> <range>touch</range>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One creature</text>
+                  <type>Melee</type> <range>touch</range>
+                  <target>one creature</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -298,7 +273,6 @@
                   <name>Special:</name> <name-style>bold</name-style>
                   <text>You can use this power a number of times per day equal to your Wisdom modifier (minimum once), but only once per round.</text>
                </section>
-            </part>
          </power>
       </subfeature>
    </feature>

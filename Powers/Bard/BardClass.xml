@@ -117,24 +117,23 @@
          <title>Majestic Word</title>
          <class>Bard</class> <category>Utility</category>
          <fluff>You utter words laden with preternatural inspiration, restoring your ally's stamina and making wounds seem insignificant.</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Healing</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
-            <section>
-               <indent>4</indent>
-               <name>Level 11:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Close</b>]]> burst 10</text>
-            </section>
-            <section>
-               <indent>4</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Close</b>]]> burst 15</text>
-            </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>You or one ally in the burst</text>
+               <type>Close</type> <range>burst 5</range>
+               <target>You or one ally in the burst</target>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text><![CDATA[<i>Close</i>]]> burst 10</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text><![CDATA[<i>Close</i>]]> burst 15</text>
             </section>
             <section>
                <shade>true</shade>
@@ -179,7 +178,6 @@
                <name>Level 16:</name> <name-style>italic</name-style>
                <text>Three times per encounter.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -212,17 +210,15 @@
          <title>Words of Friendship</title>
          <class>Bard</class> <category>Utility</category>
          <fluff>You infuse your words with arcane power, turning even the simplest speech into a compelling oration</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Charm</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You gain a +5 power bonus to the first Diplomacy check you make before the end of your next turn.</text>
             </section>
-         </part>
       </power>
    </feature>
 </class>

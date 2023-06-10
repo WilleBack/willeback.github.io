@@ -58,14 +58,13 @@
          <title>Battlemind's Demand</title>
          <class>Battlemind</class> <category>Utility</category>
          <fluff>You draw your foe's concentration, taunting the foe to strike you</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Augmentable, Psionic</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 3</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature you can see in the burst</text>
+               <type>Close</type> <range>burst 3</range>
+               <target>One creature you can see in the burst</target>
             </section>
             <section>
                <shade>true</shade>
@@ -77,22 +76,20 @@
                <name>Target:</name> <name-style>bold</name-style>
                <text>One or two creatures in the burst</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Blurred Step</title>
          <class>Battlemind</class> <category>Utility</category>
          <fluff>You bend reality with the power of your mind, flashing across the space an enemy tried to create between you</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Psionic</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An enemy adjacent to you and marked by you shifts</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -102,42 +99,39 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>You can use this power only once per turn.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Mind Spike</title>
          <class>Battlemind</class> <category>Attack</category>
          <fluff>Your force your enemy to feel the pain that it inflicts on your friend</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Force, Psionic, Psychic</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Melee</type> <range>3</range>
-            <section>
-               <indent>4</indent>
-               <name>Level 11:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Melee </b>]]> 4</text>
-            </section>
-            <section>
-               <indent>4</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Melee </b>]]> 5</text>
-            </section>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An enemy within range and marked by you deals damage to your ally with an attack that doesn't include you as a target</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+               <type>Melee</type> <range>3</range>
+               <target>The triggering enemy</target>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text><![CDATA[<i>Melee </i>]]> 4</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text><![CDATA[<i>Melee </i>]]> 5</text>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The target takes force and psychic damage equal to the damage it dealt to the triggering ally.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -174,15 +168,14 @@
             <title>Battle Resilience</title>
             <class>Battlemind</class> <category>Utility</category>
             <fluff>You steel yourself for battle, girding yourself against your foe's initial assault</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Psionic</keyword>
                <action>Free</action> <subaction>Interrupt</subaction>
-               <type>Personal</type>
                <section>
                   <name>Trigger:</name> <name-style>bold</name-style>
                   <text>An attack hits or misses you for the first time during an encounter</text>
                </section>
+               <section personal=""/>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
@@ -198,7 +191,6 @@
                   <name>Level 21:</name> <name-style>italic</name-style>
                   <text>Equal to 8 + your Wisdom modifier.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -213,26 +205,22 @@
             <title>Persistent Harrier</title>
             <class>Battlemind</class> <category>Attack</category>
             <fluff>You slip the bonds of space to strike back at even a distant opponent</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Psionic, Teleportation, Weapon</keyword>
                <action>Immediate</action> <subaction>Reaction</subaction>
-               <type>Melee</type> <range>special</range>
                <section>
                   <name>Trigger:</name> <name-style>bold</name-style>
                   <text>An enemy hits or misses you with an attack for the first time during an encounter</text>
                </section>
                <section>
-                  <name>Target:</name> <name-style>bold</name-style>
-                  <text>The triggering enemy</text>
+                  <name>Attack:</name> <name-style>bold</name-style>
+                  <type>Melee</type> <range>special</range>
+                  <target>The triggering enemy</target>
+                  <text>Constitution vs. AC</text>
                </section>
                <section>
                   <indent>1</indent>
                   <text>You can attack the target regardless of your reach</text>
-               </section>
-               <section>
-                  <name>Attack:</name> <name-style>bold</name-style>
-                  <text>Constitution vs. AC</text>
                </section>
                <section>
                   <shade>true</shade>
@@ -248,7 +236,6 @@
                   <name>Level 21:</name> <name-style>italic</name-style>
                   <text>2[W] + Constitution modifier damage.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -263,15 +250,14 @@
             <title>Speed of Thought</title>
             <class>Battlemind</class> <category>Utility</category>
             <fluff>You move in the blink of an eye, reaching your foes before they can draw their weapons</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Psionic</keyword>
                <action>Free</action> <subaction>Reaction</subaction>
-               <type>Personal</type>
                <section>
                   <name>Trigger:</name> <name-style>bold</name-style>
                   <text>You roll initiative</text>
                </section>
+               <section personal=""/>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
@@ -281,7 +267,6 @@
                   <name>Special:</name> <name-style>bold</name-style>
                   <text>You can use this power even if you're surprised.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -296,25 +281,23 @@
             <title>Wild Focus</title>
             <class>Battlemind</class> <category>Utility</category>
             <fluff>Using a surge of telekinetic power, you yank an enemy toward you, forcing it to fight</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Psionic</keyword>
                <action>Free</action> <subaction>Interrupt</subaction>
-               <type>Close</type> <range>burst 10</range>
                <section>
                   <name>Trigger:</name> <name-style>bold</name-style>
                   <text>An enemy within 10 squares of you starts its first turn during this encounter</text>
                </section>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>The triggering enemy in the burst</text>
+                  <type>Close</type> <range>burst 10</range>
+                  <target>The triggering enemy in the burst</target>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>You pull the target a number of squares equal to your Charisma modifier, and mark it until the end of its next turn.</text>
                </section>
-            </part>
          </power>
       </subfeature>
    </feature>

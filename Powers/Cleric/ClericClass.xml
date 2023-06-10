@@ -58,39 +58,30 @@
             <title>Divine Fortune</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>In the face of peril, you hold true to your faith and receive a special boon</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Free</action> <subaction>Action</subaction>
-               <type>Personal</type>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
+               <section personal=""/>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>You gain a +1 bonus to your next attack roll or saving throw before the end of your next turn.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Healer's Mercy</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>Strength flows out from you to your injured comrades, rekindling their resolve to see the battle to its end</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine, Healing</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Close</type> <range>burst 5</range>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>Each bloodied ally in the burst</text>
+                  <type>Close</type> <range>burst 5</range>
+                  <target>each bloodied ally in the burst</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -101,28 +92,20 @@
                   <shade>true</shade>
                   <text>You are weakened until the end of your next turn.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Smite Undead</title>
             <class>Cleric</class> <category>Attack</category>
             <fluff>You scorch an undead foe with your weapon, driving it back and then binding it in place</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine, Radiant, Weapon</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Melee</type> <range>weapon</range>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
-               <section>
-                  <name>Target:</name> <name-style>bold</name-style>
-                  <text>One undead creature</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Attack:</name> <name-style>bold</name-style>
+                  <type>Melee</type> <range>weapon</range>
+                  <target>one undead creature</target>
                   <text>Wisdom vs. Will</text>
                </section>
                <section>
@@ -159,39 +142,31 @@
                   <name>Miss:</name> <name-style>bold</name-style>
                   <text>Half damage.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Turn Undead</title>
             <class>Cleric</class> <category>Attack</category>
             <fluff>You sear undead foes, push them back, and root them in place</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine, Implement, Radiant</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Close</type> <range>burst 2</range>
-               <section>
-                  <indent>4</indent>
-                  <name>Level 11:</name> <name-style>italic</name-style>
-                  <text><![CDATA[<b>Close</b>]]> burst 3</text>
-               </section>
-               <section>
-                  <indent>4</indent>
-                  <name>Level 21:</name> <name-style>italic</name-style>
-                  <text><![CDATA[<b>Close</b>]]> burst 5</text>
-               </section>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
-               <section>
-                  <name>Target:</name> <name-style>bold</name-style>
-                  <text>Each undead creature in the burst</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Attack:</name> <name-style>bold</name-style>
+                  <type>Close</type> <range>burst 2</range>
+                  <target>each undead creature in the burst</target>
                   <text>Wisdom vs. Will</text>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<i>Close</i>]]> burst 3</text>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<i>Close</i>]]> burst 5</text>
                </section>
                <section>
                   <shade>true</shade>
@@ -212,7 +187,6 @@
                   <name>Miss:</name> <name-style>bold</name-style>
                   <text>Half damage, and pushed half the distance.</text>
                </section>
-            </part>
          </power>
       </subfeature>
    </feature>
@@ -277,24 +251,23 @@
          <title>Healing Word</title>
          <class>Cleric</class> <category>Utility</category>
          <fluff>You utter a soothing prayer that mends wounds of the body and spirit</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Healing</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
-            <section>
-               <indent>4</indent>
-               <name>Level 11:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Close</b>]]> burst 10</text>
-            </section>
-            <section>
-               <indent>4</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Close</b>]]> burst 15</text>
-            </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>You or one ally in the burst</text>
+               <type>Close</type> <range>burst 5</range>
+               <target>You or one ally in the burst</target>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 11:</name> <name-style>italic</name-style>
+               <text><![CDATA[<i>Close</i>]]> burst 10</text>
+            </section>
+            <section>
+               <indent>1</indent>
+               <name>Level 21:</name> <name-style>italic</name-style>
+               <text><![CDATA[<i>Close</i>]]> burst 15</text>
             </section>
             <section>
                <shade>true</shade>
@@ -335,7 +308,6 @@
                <name>Level 16:</name> <name-style>italic</name-style>
                <text>Three times per encounter.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -367,49 +339,43 @@
             <title>Eye of the Vulture</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>Unseen energy lances out from you to your foes, granting you perception of the balance between life and death</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Close</type> <range>burst 3</range>
-               <section>
-                  <indent>4</indent>
-                  <name>Level 11:</name> <name-style>italic</name-style>
-                  <text><![CDATA[<b>Close </b>burst 4]]></text>
-               </section>
-               <section>
-                  <indent>4</indent>
-                  <name>Level 21:</name> <name-style>italic</name-style>
-                  <text><![CDATA[<b>Close </b>burst 5]]></text>
-               </section>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>Each bloodied creature in the burst</text>
+                  <type>Close</type> <range>burst 3</range>
+                  <target>each bloodied creature in the burst</target>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<i>Close </i>burst 4]]></text>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<i>Close </i>burst 5]]></text>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>You learn which targets have current hit point totals lower than you healing surge value.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Stay the Hand of Death</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>When grievous wounds hinder you or an ally, your power bestows a temporary surge of vitality</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Close</type> <range>burst 3</range>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>You or one ally in the burst; the target must be bloodied</text>
+                  <type>Close</type> <range>burst 3</range>
+                  <target>you or one ally in the burst; the target must be bloodied</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -426,7 +392,6 @@
                   <name>Level 21:</name> <name-style>italic</name-style>
                   <text>Equal to 10 + your Wisdom modifier.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -443,40 +408,34 @@
             <title>Stone Speak</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>You reach down to touch the stone beneath you and at your urging, it tells you the tale of this place</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Personal</type>
+               <section personal=""/>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>You make a Perception check with a +5 power bonus to detect secret doors, hidden object, hidden creatures, or to find tracks within 10 squares.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Stone's Resolve</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>For a brief moment, you or a nearby ally become a creature of living rock</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Close</type> <range>burst 2</range>
-               <section>
-                  <indent>4</indent>
-                  <name>Level 21:</name> <name-style>italic</name-style>
-                  <text><![CDATA[<b>Close </b>burst 3]]></text>
-               </section>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>You or one ally in the burst</text>
+                  <type>Close</type> <range>burst 2</range>
+                  <target>you or one ally in the burst</target>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<i>Close </i>burst 3]]></text>
                </section>
                <section>
                   <shade>true</shade>
@@ -493,7 +452,6 @@
                   <name>Level 21:</name> <name-style>italic</name-style>
                   <text>Resist 15 all.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -510,39 +468,33 @@
             <title>Reinforce Life</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>You help an ally's determination vigorate his or her body and soul</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine, Healing</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Ranged</type> <range>5</range>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One ally who has temporary hit points</text>
+                  <type>Ranged</type> <range>5</range>
+                  <target>one ally who has temporary hit points</target>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>The target regains a number of hit points equal to his or her temporary hit points, then loses all temporary hit points.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Life's Blessing</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>With an earnest call to your deity, you release a burst of life energy that energises your allies</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Close</type> <range>burst 3</range>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>Each ally in the burst</text>
+                  <type>Close</type> <range>burst 3</range>
+                  <target>each ally in the burst</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -559,7 +511,6 @@
                   <name>Level 21:</name> <name-style>italic</name-style>
                   <text>+5 bonus.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -576,54 +527,44 @@
             <title>Sudden Inspiration</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>You gain a divine perspective into how a challenge can be surmounted, the thought arriving in the nick of time</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Immediate</action> <subaction>Interrupt</subaction>
-               <type>Ranged</type> <range>10</range>
-               <section>
-                  <indent>1</indent>
-                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-               </section>
+               <section auto="no-opportunity"/>
                <section>
                   <name>Trigger:</name> <name-style>bold</name-style>
                   <text>You or an ally within 10 squares of you fails a skill check</text>
                </section>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>The triggering creature</text>
+                  <type>Ranged</type> <range>10</range>
+                  <target>The triggering creature</target>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>The target gains a power bonus to the triggering check equal to your Wisdom modifier.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Knowledge to Spread</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>Fresh thoughts run through the minds of you and your allies, each idea particular to the task to which you set yourself</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Close</type> <range>burst 3</range>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>You and each ally in the burst</text>
+                  <type>Close</type> <range>burst 3</range>
+                  <target>you and each ally in the burst</target>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>Each target gains a +2 power bonus to the first skill check he or she makes before the end of your next turn.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -640,18 +581,14 @@
             <title>Divine Guard</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>Your prayer brings forth a shielding presence around an ally, protecting him or her from attacks</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Ranged</type> <range>5</range>
-               <section>
-                  <indent>1</indent>
-                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-               </section>
+               <section auto="no-opportunity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>You or one ally</text>
+                  <type>Ranged</type> <range>5</range>
+                  <target>you or one ally</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -659,33 +596,28 @@
                   <text>Until the end of your next turn, the target gains the following benefits:</text>
                </section>
                <section>
-                  <shade>true</shade> <indent>1</indent>
-                  <text>&#9658; +2 power bonus to all defenses.</text>
+                  <shade>true</shade> <indent>1</indent> <bullet/>
+                  <text>+2 power bonus to all defenses.</text>
                </section>
                <section>
-                  <shade>true</shade> <indent>1</indent>
-                  <text>&#9658; When the target is critically hit, it can attempt a saving throw; on a success, the attack is a normal hit instead.</text>
+                  <shade>true</shade> <indent>1</indent> <bullet/>
+                  <text>When the target is critically hit, it can attempt a saving throw; on a success, the attack is a normal hit instead.</text>
                </section>
                <section>
-                  <shade>true</shade> <indent>1</indent>
-                  <text>&#9658; The target takes no damage from missed attacks, though other effects can still apply.</text>
+                  <shade>true</shade> <indent>1</indent> <bullet/>
+                  <text>The target takes no damage from missed attacks, though other effects can still apply.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Protector's Presence</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>The power of your deity pours forth from you, enveloping you and your allies in protective energy</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Aura, Divine</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Personal</type>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can only use one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
+               <section personal=""/>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
@@ -715,7 +647,6 @@
                   <name>Sustain Standard:</name> <name-style>bold</name-style>
                   <text>The aura persists until the end of your next turn.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -732,43 +663,34 @@
             <title>Create Water</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>A cool breeze washes over you as a thick, magical mist fills a vessel with water</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Melee</type> <range>touch</range>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One empty cup, flask, or similar container that can hold up to 1 gallon of liquid</text>
+                  <type>Melee</type> <range>touch</range>
+                  <target>one empty cup, flask, or similar container that can hold up to 1 gallon of liquid</target>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>You cause the container to fill with fresh, potable water.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Storm Surge</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>Crackles of lightning dance along the weapon you bless, ready to unleash a surge of power</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine, Lightning</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Ranged</type> <range>2</range>
-               <section>
-                  <indent>1</indent>
-                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-               </section>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can use only one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="no-opportunity"/>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One weapon</text>
+                  <type>Ranged</type> <range>2</range>
+                  <target>one weapon</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -785,7 +707,6 @@
                   <name>Level 21:</name> <name-style>italic</name-style>
                   <text>Additional 10 lightning damage.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -803,14 +724,13 @@
             <title>Sun's Glow</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>You place an incandescent mote of sunlight upon a nearby object or in a point of space</fluff>
-            <part>
                <frequency>At-Will</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Melee</type> <range>touch</range>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One object or unoccupied space</text>
+                  <type>Melee</type> <range>touch</range>
+                  <target>one object or unoccupied space</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -821,36 +741,27 @@
                   <shade>true</shade>
                   <text>The light lasts 1 hour, until you use this power again, or until you end the light as a free action.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Soothing Light</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>Under the light of the sun, all ills fade; Similarly, your devotion gives your ally the vigor needed to persevere</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Ranged</type> <range>3</range>
-               <section>
-                  <indent>1</indent>
-                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-               </section>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can use only one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="no-opportunity"/>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>You or one ally</text>
+                  <type>Ranged</type> <range>3</range>
+                  <target>you or one ally</target>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>The target makes a saving throw with a +2 power bonus against an effect that a save can end.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -867,51 +778,42 @@
             <title>Inspire Dread</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>You take on a ferocious demeanor, seeming taller and more menacing</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Personal</type>
+               <section personal=""/>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>Choose one of the following two benefits:</text>
                </section>
                <section>
-                  <shade>true</shade> <indent>1</indent>
-                  <text>&#9658; On the first Intimidate check you make before the end of your next turn, you can roll twice and keep the higher roll.</text>
+                  <shade>true</shade> <indent>1</indent> <bullet/>
+                  <text>On the first Intimidate check you make before the end of your next turn, you can roll twice and keep the higher roll.</text>
                </section>
                <section>
-                  <shade>true</shade> <indent>1</indent>
-                  <text>&#9658; On the first Intimidate check you make before the end of your next turn, you gain a +3 power bonus.</text>
+                  <shade>true</shade> <indent>1</indent> <bullet/>
+                  <text>On the first Intimidate check you make before the end of your next turn, you gain a +3 power bonus.</text>
                </section>
                <section>
                   <shade>true</shade>
                   <text>The benefit applies even if making the check takes longer than the end of your next turn, as along as you begin the activity before the end of that turn.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Cruel Inspiration</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>You lash out with a whip of divine energy, sparking pain but fortifying will</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine, Psychic</keyword>
                <action>Minor</action> <subaction>Action</subaction>
-               <type>Range</type> <range>5</range>
-               <section>
-                  <indent>1</indent>
-                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-               </section>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can use only one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="no-opportunity"/>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>You or one ally</text>
+                  <type>Range</type> <range>5</range>
+                  <target>you or one ally</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -922,7 +824,6 @@
                   <shade>true</shade>
                   <text>If the target is not affected by an effected that a save can end, he or she can attempt a save against any one effect currently affecting it, but it does not gain the power bonus.</text>
                </section>
-            </part>
          </power>
       </subfeature>
 
@@ -939,51 +840,39 @@
             <title>True Strike</title>
             <class>Cleric</class> <category>Utility</category> <level>1</level>
             <fluff>A whispered prayer connects your ally with the divine, guiding his or her hands and mind toward the target</fluff>
-            <part>
                <frequency>At-Will</frequency>
                <keyword>Divine</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Ranged</type> <range>5</range>
-               <section>
-                  <indent>1</indent>
-                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-               </section>
+               <section auto="no-opportunity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One ally</text>
+                  <type>Ranged</type> <range>5</range>
+                  <target>one ally</target>
                </section>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
                   <text>The target gains a +4 bonus to the first attack roll it makes against an enemy before the end of your next turn.</text>
                </section>
-            </part>
          </power>
 
          <power>
             <title>Outmaneuver</title>
             <class>Cleric</class> <category>Utility</category>
             <fluff>A brilliant light indicates a pathway for your ally to find the right place to battle your foe</fluff>
-            <part>
                <frequency>Encounter</frequency>
                <keyword>Divine, Teleportation</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Ranged</type> <range>10</range>
-               <section>
-                  <indent>1</indent>
-                  <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-               </section>
+               <section auto="no-opportunity"/>
                <section>
                   <name>Requirement:</name> <name-style>bold</name-style>
                   <text>You must be adjacent to an enemy</text>
                </section>
-               <section>
-                  <name>Channel Divinity:</name> <name-style>bold</name-style>
-                  <text>You can use only one Channel Divinity power per encounter.</text>
-               </section>
+               <section auto="channeldivinity"/>
                <section>
                   <name>Target:</name> <name-style>bold</name-style>
-                  <text>One ally</text>
+                  <type>Ranged</type> <range>10</range>
+                  <target>One ally</target>
                </section>
                <section>
                   <shade>true</shade>
@@ -994,7 +883,6 @@
                   <shade>true</shade>
                   <text>Until the end of your next turn, you and the target gain a +1 bonus to attack rolls against that enemy as long as you both flank it.</text>
                </section>
-            </part>
          </power>
       </subfeature>
    </feature>

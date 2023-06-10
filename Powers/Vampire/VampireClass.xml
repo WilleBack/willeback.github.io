@@ -72,18 +72,17 @@
          <title>Blood Drinker</title>
          <class>Vampire</class> <category>Attack</category> <level>1</level>
          <fluff>When your attack strikes true, you sweep past your foe's defenses to consume the essence of its life</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Shadow</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a Vampire melee at-will attack power</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+					<type>Special</type>
+               <target>the triggering enemy</target>
             </section>
             <section>
                <shade>true</shade>
@@ -100,7 +99,6 @@
                <name>Level 27:</name> <name-style>italic</name-style>
                <text>When you reach 27th level, this power becomes your level 27 encounter attack, and the extra damage increases to +3d12.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -127,28 +125,24 @@
             <title>Dark Beckoning</title>
             <class>Vampire</class> <category>Attack</category> <level>1</level>
             <fluff>Your mesmerizing presence draws your enemies closer</fluff>
-            <part>
                <frequency>At-Will</frequency>
                <keyword>Charm, Implement, Psychic, Shadow</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Ranged</type> <range>5</range>
-               <section>
-                  <indent>4</indent>
-                  <name>Level 11:</name> <name-style>italic</name-style>
-                  <text><![CDATA[<b>Ranged</b>]]> 7</text>
-               </section>
-               <section>
-                  <indent>4</indent>
-                  <name>Level 21:</name> <name-style>italic</name-style>
-                  <text><![CDATA[<b>Ranged</b>]]> 10</text>
-               </section>
-               <section>
-                  <name>Target:</name> <name-style>bold</name-style>
-                  <text>One creature that can see you</text>
-               </section>
                <section>
                   <name>Attack:</name> <name-style>bold</name-style>
+	               <type>Ranged</type> <range>5</range>
+						<target>one creature that can see you</target>
                   <text>Dexterity vs. Will</text>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <name>Level 11:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<i>Ranged</i>]]> 7</text>
+               </section>
+               <section>
+                  <indent>1</indent>
+                  <name>Level 21:</name> <name-style>italic</name-style>
+                  <text><![CDATA[<i>Ranged</i>]]> 10</text>
                </section>
                <section>
                   <shade>true</shade>
@@ -164,7 +158,6 @@
 						<name>Special:</name> <name-style>bold</name-style>
 						<text>If you use this power outside of combat, you can choose to not deal the psychic damage. If you do, the power loses the Psychic keyword, and the target is not aware that you used a power against it. Other creatures are likely to notice that something sinister happened, though.</text>
 					</section>
-            </part>
          </power>
       </subfeature>
 
@@ -179,11 +172,9 @@
             <title>Hungry Pounce</title>
             <class>Vampire</class> <category>Attack</category> <level>1</level>
             <fluff>Like the beast within you, you crouch low as you move in for a powerful strike at your foe</fluff>
-            <part>
                <frequency>At-Will</frequency>
                <keyword>Implement, Shadow</keyword>
                <action>Standard</action> <subaction>Action</subaction>
-               <type>Melee</type> <range>1</range>
                <section>
                   <shade>true</shade>
                   <name>Effect:</name> <name-style>bold</name-style>
@@ -195,11 +186,9 @@
                   <text>Shift 3 squares.</text>
                </section>
                <section>
-                  <name>Target:</name> <name-style>bold</name-style>
-                  <text>One creature</text>
-               </section>
-               <section>
                   <name>Attack:</name> <name-style>bold</name-style>
+	               <type>Melee</type> <range>1</range>
+						<target>one creature</target>
                   <text>Dexterity vs. Reflex</text>
                </section>
                <section>
@@ -221,7 +210,6 @@
                   <name>Special:</name> <name-style>bold</name-style>
                   <text>You can use this power in place of a <![CDATA[<i>melee basic attack</i>]]> when you charge. If you do, you can choose to either move your speed +2 or shift your speed as part of the charge instead of the normal movement effect for this power.</text>
                </section>
-            </part>
          </power>
       </subfeature>
    </feature>
@@ -241,17 +229,13 @@
          <title>Taste of Life</title>
          <class>Vampire</class> <category>Attack</category> <level>1</level>
          <fluff>Your dread touch burns your foe with dark power, even as your own energy is temporarily restored</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Implement, Necrotic, Shadow</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+	            <type>Melee</type> <range>touch</range>
+					<target>one creature</target>
                <text>Dexterity vs. Fortitude</text>
             </section>
             <section>
@@ -273,24 +257,19 @@
                <shade>true</shade>
                <text>If the target is grabbed by you, or restrained, stunned or unconscious, you gain an additional 5 temporary hit points.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Vampire Claws</title>
          <class>Vampire</class> <category>Attack</category> <level>1</level>
          <fluff>You use the full force of your undead strength to drive your foe around</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Implement, Shadow</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+	            <type>Melee</type> <range>touch</range>
+					<target>one creature</target>
                <text>Dexterity vs. Reflex</text>
             </section>
             <section>
@@ -307,7 +286,6 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>You can use this power as a <![CDATA[<i>melee basic attack</i>]]>.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -320,17 +298,13 @@
          <title>Swarm of Shadows</title>
          <class>Vampire</class> <category>Attack</category> <level>1</level>
          <fluff>Your body becomes a swarm of batlike shadows that let you harry your enemies, then fade from sight</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Implement, Shadow, Teleportation</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>blast 3</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>Each enemy in the blast</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+	            <type>Close</type> <range>blast 3</range>
+					<target>each enemy in the blast</target>
                <text>Dexterity vs. Fortitude</text>
             </section>
             <section>
@@ -351,7 +325,6 @@
                <shade>true</shade>
                <text>If you are not adjacent to any enemies, you can make a Stealth check to hide as part of this teleportation. You must still meet all other requirements for hiding.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -363,18 +336,14 @@
          <title>Charming Gaze</title>
          <class>Vampire</class> <category>Utility</category> <level>2</level>
          <fluff>Your compelling demeanor throws your prey off its guard, lulling it into a false sense of security</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Charm, Shadow</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>5</range>
-            <section>
-               <indent>1</indent>
-               <text>Using this power does not provoke <![CDATA[<i>opportunity attacks</i>]]></text>
-            </section>
+            <section auto="no-opportunity"/>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature that can see you</text>
+	            <type>Ranged</type> <range>5</range>
+               <target>one creature that can see you</target>
             </section>
             <section>
                <shade>true</shade>
@@ -389,25 +358,20 @@
                <shade>true</shade>
                <text>If you used this power outside of combat, the target is not aware of the effect.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Hunter's Gaze</title>
          <class>Vampire</class> <category>Utility</category> <level>2</level>
          <fluff>As you focus on your foe, your predatory presence leaves it open to attack</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Fear, Shadow</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>5</range>
-            <section>
-               <indent>1</indent>
-               <text>Using this power does not provoke <![CDATA[<i>opportunity attacks</i>]]></text>
-            </section>
+            <section auto="no-opportunity"/>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature that can see you</text>
+	            <type>Ranged</type> <range>5</range>
+               <target>one creature that can see you</target>
             </section>
             <section>
                <shade>true</shade>
@@ -418,7 +382,6 @@
                <shade>true</shade>
                <text>In addition, you gain a +4 bonus to the first Intimidate check you make against the target before the end of the encounter.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -431,21 +394,17 @@
          <title>Feral Assault</title>
          <class>Vampire</class> <category>Attack</category> <level>3</level>
          <fluff>You howl like a beast as you strike, your hunger and fury driving you to make a brutal attack</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Implement, Shadow</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
             <section>
                <name>Blood is Life</name> <name-style>bold</name-style>
                <text>You can expend a healing surge to either target two creatures or to deal an extra +2d6 damage.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+	            <type>Melee</type> <range>touch</range>
+					<target>one creature</target>
                <text>Dexterity vs. Reflex</text>
             </section>
             <section>
@@ -462,7 +421,6 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>2 + your Dexterity modifier + your implement's enhancement bonus damage if you expended a healing surge.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -475,11 +433,10 @@
          <title>Strength of Blood</title>
          <class>Vampire</class> <category>Utility</category>
          <fluff>You draw on the life force you have consumed to grant yourself a sudden burst of strength</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Shadow</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -490,7 +447,6 @@
                <name>Blood is Life:</name> <name-style>bold</name-style>
                <text>You can expend a healing surge to to increase the power bonus to +10.</text>
             </section>
-         </part>
       </power>
    </feature>
 
@@ -503,17 +459,13 @@
 			<title>Unfettered Hunger</title>
 			<class>Vampire</class> <category>Attack</category> <level>5</level>
 			<fluff>Your eyes turn red with fure, your fangs lengthen, and you rage like a beast as you allow your hunger to seize control</fluff>
-			<part>
 				<frequency>Daily</frequency>
 				<keyword>Implement, Shadow</keyword>
 				<action>Standard</action> <subaction>Action</subaction>
-				<type>Close</type> <range>burst 1</range>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>Each creature in the burst</text>
-				</section>
 				<section>
 					<name>Attack:</name> <name-style>bold</name-style>
+					<type>Close</type> <range>burst 1</range>
+					<target>each creature in the burst</target>
 					<text>Dexterity vs. Reflex</text>
 				</section>
 				<section>
@@ -536,22 +488,21 @@
 					<text>Until the end of the encounter, you gain the following effects:</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; +2 power bonus to attack rolls.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>+2 power bonus to attack rolls.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; +5 power bonus to damage rolls.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>+5 power bonus to damage rolls.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; You can shift up to your speed as a move action.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>You can shift up to your speed as a move action.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; You cannot spend healing surges to regain hit points.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>You cannot spend healing surges to regain hit points.</text>
 				</section>
-			</part>
 		</power>
 	</feature>
 
@@ -564,11 +515,10 @@
 			<title>Form of the Bat</title>
 			<class>Vampire</class> <category>Utility</category> <level>6</level>
 			<fluff>Your body becomes a cloud of pure shadow that shrinks and coalesces into the form of a fluttering bat</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Polymorph, Shadow</keyword>
 				<action>Standard</action> <subaction>Action</subaction>
-				<type>Personal</type>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
@@ -578,7 +528,6 @@
 					<shade>true</shade>
 					<text>While in this form, you have a speed of 2 and a fly speed of 8, and you cannot make attacks. You can only hold or manipulate some objects, as ruled by your DM.</text>
 				</section>
-			</part>
 		</power>
 	</feature>
 
@@ -591,18 +540,17 @@
 			<title>Blood Drinker</title>
 			<class>Vampire</class> <category>Attack</category> <level>7</level>
 			<fluff>When your attack strikes true, you sweep past your foe's defenses to consume the essence of its life</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Shadow</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a Vampire melee at-will attack power</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+					<type>Special</type>
+               <target>the triggering enemy</target>
             </section>
             <section>
                <shade>true</shade>
@@ -614,7 +562,6 @@
                <name>Level 23:</name> <name-style>italic</name-style>
                <text>When you reach 23rd level, this power becomes your level 23 encounter attack power, and the extra damage increases to +3d10.</text>
             </section>
-         </part>
       </power>
    </feature>
 

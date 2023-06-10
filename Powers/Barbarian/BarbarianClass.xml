@@ -11,7 +11,7 @@
 	<keyability>Constitution</keyability>
 	<keyability>Dexterity</keyability>
 	<keyability>Charisma</keyability>
-	
+
 	<proficiency>
 		<type>Armor</type>
 		<name>Cloth</name>
@@ -23,49 +23,48 @@
 		<name>Simple melee</name>
 		<name>Military melee</name>
 	</proficiency>
-	
+
 	<defense>
 		<name>Fortitude</name>
 		<value>+2</value>
 	</defense>
-	
+
 	<hpbase>15</hpbase>
 	<hpgain>6</hpgain>
 	<surgebase>9</surgebase>
-	
+
 	<skills>
 		<trained>Endurance, Intimidate or Nature</trained>
 		<number>3</number>
 	</skills>
-	
+
 	<fluff>Savage barbarians charge from foe to foe and seldom feel the pain of an enemy's strike. For their foes, the moments of greatest terror come when savages call upon primal forces to lend power to their raging spirits. </fluff>
 	<fluff>Their rages, although temporary, give a barbarian incredible powers, a combination of skill, willpower, and a legacy of ancient tribal rituals. As the barbarian becomes more experienced, the rages transcend mortal limitations, manifesting directly as waves of elemental power of gifting supernatural recuperative powers. </fluff>
-	
+
 	<feature>
 		<name>Feral Might</name>
 		<benefit>Savages connect with the natural world in a variety of ways, ranging from becoming hardened from physical punishment to imposing their sheer willpower to shape their fate.</benefit>
 		<benefit>Choose Rageblood Vigor, Thaneborn Triumph, Thunderborn Wrath or Whirling Frenzy to represent your connection to the primal energies.</benefit>
-		
+
 		<subfeature>
 			<name>Rageblood Vigor</name>
 			<benefit>Rageblood barbarians can withstand a great deal of punishment, especially when in the throes of rage.</benefit>
 			<benefit>While you are not wearing heavy armor, you can use Constitution instead of Dexterity or Intelligence to determine your AC.</benefit>
 			<benefit>Whenever your attack reduces an enemy to 0 hit points or less, you gain resist against all damage equal to your Constitution modifier until the end of your next turn. This increases to 4 + your Constitution modifier at 11th level, and to 8 + your Constitution modifier at 21st level. You gain an additional 5 points of resist if you are raging.</benefit>
 			<benefit>You gain the <![CDATA[<i>swift charge</i>]]> power.</benefit>
-			
+
 			<power>
 				<title>Swift Charge</title>
 				<class>Barbarian</class> <category>Attack</category>
 				<fluff>As your foe falls, you rush toward your next victim</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Primal</keyword>
 					<action>Free</action> <subaction>Reaction</subaction>
-					<type>Personal</type>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>Your attack reduces an enemy to 0 hit points or less</text>
 					</section>
+					<section personal=""/>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
@@ -85,34 +84,32 @@
 						<name>Level 21:</name> <name-style>italic</name-style>
 						<text>Three times per encounter.</text>
 					</section>
-				</part>
 			</power>
-			
+
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Thaneborn Triumph</name>
 			<benefit>Primal energy fuels the rages of Thaneborn barbarians, powering their already imposing presences that draws allies to them just as surely as it fills their foes with fear.</benefit>
 			<benefit>While you are not wearing heavy armor, you can use Charisma instead of Dexterity or Intelligence to determine your AC.</benefit>
 			<benefit>Whenever your attack bloodies an enemy, the next attack roll against that enemy by you or an ally gains a bonus equal to one-half your Charisma modifier. This bonus increases to your Charisma modifier if you are raging.</benefit>
 			<benefit>You gain the <![CDATA[<i>roar of triumph</i>]]> power.</benefit>
-			
+
 			<power>
 				<title>Roar of Triumph</title>
 				<class>Barbarian</class> <category>Attack</category>
 				<fluff>Your howl of victory shakes your enemies to the core as they realize your blood thirst is not yet quenched</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Fear, Primal</keyword>
 					<action>Free</action> <subaction>Reaction</subaction>
-					<type>Close</type> <range>burst 5</range>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>Your attack reduces an enemy to 0 hit points or less</text>
 					</section>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
-						<text>Each enemy in the burst</text>
+						<type>Close</type> <range>burst 5</range>
+						<target>Each enemy in the burst</target>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -133,34 +130,32 @@
 						<name>Level 21:</name> <name-style>italic</name-style>
 						<text>Three times per encounter.</text>
 					</section>
-				</part>
 			</power>
-			
+
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Thunderborn Wrath</name>
 			<benefit>While some barbarians can be mistaken for mere warriors bereft of primal power when they are not raging, that is not the case with Thunderborn barbarians. They have endeared primal spirits of thunder that circle around them with the low rumble of thunder that explodes into booming roars over their enemies.</benefit>
 			<benefit>While you are not wearing heavy armor, you can use Constitution instead of Dexterity or Intelligence to determine your AC.</benefit>
 			<benefit>Once per round, when your attack bloodies an enemy, each enemy adjacent to you takes thunder damage equal to your Constitution modifier. This increases to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution at 21st level. The damage increases by +5 if you are raging.</benefit>
 			<benefit>You gain the <![CDATA[<i>war cry</i>]]> power.</benefit>
-			
+
 			<power>
 				<title>War Cry</title>
 				<class>Barbarian</class> <category>Attack</category>
 				<fluff>Your potent victory cry sends nearby enemies reeling in terror</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Fear, Primal</keyword>
 					<action>Free</action> <subaction>reaction</subaction>
-					<type>Close</type> <range>blast 3</range>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>Your attack reduces an enemy to 0 hit points or less</text>
 					</section>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
-						<text>Each enemy in the blast</text>
+						<type>Close</type> <range>blast 3</range>
+						<target>each enemy in the blast</target>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -186,28 +181,25 @@
 						<name>Level 21:</name> <name-style>italic</name-style>
 						<text>Three times per encounter.</text>
 					</section>
-				</part>
 			</power>
-		
+
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Whirling Frenzy</name>
 			<benefit>Some barbarians rely on speed and and startling force to slay their enemies, thriving to be able to cut down entire groups of enemies in the blink of an eye with supreme speed and agility combined with great strength.</benefit>
 			<benefit>While you are not wearing heavy armor, you gain a +2 bonus to all defenses against attacks triggered by your movement.</benefit>
 			<benefit>You can wield a one-handed weapon in your off hand, even if it does not have the off-hand property. </benefit>
 			<benefit>While you are not wearing heavy armor, each time your attack bloodies an enemy, you can use a free reaction to shift 2 squares and choose one enemy adjacent to you after the shift. The chosen enemy grants combat advantage to you until the end of your next turn. If you are raging, you can shift a number of squares equal 1 + your Dexterity modifier and each enemy adjacent to you after the shift grants combat advantage to you until the end of your next turn.</benefit>
-			<benefit>You gain the <![CDATA[<i>whirling lunge</i>]]> power.</benefit> 
-			
+			<benefit>You gain the <![CDATA[<i>whirling lunge</i>]]> power.</benefit>
+
 			<power>
 				<title>Whirling Lunge</title>
 				<class>Barbarian</class> <category>Attack</category>
 				<fluff>Striking down one foe, you whirl deeper into enemy ranks</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Primal, Weapon</keyword>
 					<action>Free</action> <subaction>Reaction</subaction>
-					<type>Melee</type> <range>weapon (off hand)</range>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>Your attack reduces an enemy to 0 hit points or less</text>
@@ -219,7 +211,8 @@
 					</section>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
-						<text>One enemy in range that you can see</text>
+						<type>Melee</type> <range>weapon (off hand)</range>
+						<target>One enemy in range that you can see</target>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -245,81 +238,80 @@
 						<name>Level 21:</name> <name-style>italic</name-style>
 						<text>Three times per encounter.</text>
 					</section>
-				</part>
 			</power>
-			
+
 		</subfeature>
-		
+
 	</feature>
-	
+
 	<feature>
 		<name>Primal Agility</name>
 		<benefit>Spending much of their training in the wilds, savages have learned to react quickly to danger, for that is the only way to stay alive.</benefit>
-		<benefit>While you are not wearing heavy armor, you gain a +1 bonus to Reflex. This bonus increases to +2 at 11th level, and to +3 at 21st level.</benefit>
-		
+		<benefit>While you are not wearing heavy armor, you gain a +2 bonus to Reflex.</benefit>
+
 	</feature>
-	
+
 	<feature>
 		<name>Savage Rage</name>
 		<benefit>When the savages' unbridled rage overtakes them, they become beacons of the spirit world, and their rage sounds like a gong calling to the primal spirits that a drawn to strong emotion. The spirits are able to inhabit the savage during his or her rage, lending energy and enabling incredible, even supernatural, feats.</benefit>
 		<benefit>When you use a Barbarian power with the Rage keyword, you enter a Rage and gain the benefits listed below before resolving the power. The Rage lasts until the end of the encounter, or until you are knocked unconscious. You can also enter the Rage by using a minor action while you are bloodied.</benefit>
-		<benefit>&#9658; You take a -2 penalty to all defenses.</benefit>
-		<benefit>&#9658; When you make an attack that uses Strength for the attack roll and has the Weapon keyword, you deal +1[W] damage. This bonus increases to +2[W] at 21st level.</benefit>
+		<benefit>&#9658; You take a -2 penalty to AC and Reflex.</benefit>
+		<benefit>&#9658; Your Barbarian attacks and <![CDATA[<i>melee basic attack</i>]]> deal +2 damage per [W], or half this for multiattacks. This increases to +3 at 21st level</benefit>
 		<benefit>&#9658; Your Barbarian at-will attacks and some of your other powers have additional or increased effects while you are raging.</benefit>
 		<benefit>&#9658; You gain the benefits of the Rage power you used to enter the Rage, if any.</benefit>
 		<benefit>&#9658; If you are already raging and use a Rage power, you either change your Rage before resolving the power or gain a different benefit, as defined in the power.</benefit>
-			
+
 	</feature>
-	
+
 	<feature>
 		<name>Wilderness Knacks</name>
 		<benefit>Barbarians are experts in outdoor survival, and as primal adepts have learned several tricks and techniques to aid in surviving in the wilds.</benefit>
 		<benefit>You gain your choice of two of the following abilities:</benefit>
-		
+
 		<subfeature>
 			<name>Ambush Expertise</name>
 			<benefit>You gain a +2 bonus to Stealth checks.</benefit>
 			<benefit>If you are trained in Stealth, each ally within 10 squares of you gains the bonus instead of you when you are hiding as a group or you are providing a distraction for them to hide.</benefit>
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Beast Empathy</name>
 			<benefit>You gain a +2 bonus to Bluff, Diplomacy, and Intimidate checks against beasts.</benefit>
 			<benefit>Also, you can communicate simple concepts and commands to such creatures, though they are under no compulsion to obey you.</benefit>
 			<benefit>In addition, you can read a beast's body language and vocalization enough to understand basic messages from it with a successful Insight check (DC determined by the DM).</benefit>
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Desert Nomad</name>
 			<benefit>While you are wearing cloth armor or no armor and not using a shield, you gain a +2 bonus to AC, and a +1 bonus to Reflex.</benefit>
 			<benefit>You can choose this knack a second time. If you do, you also gain resist fire equal to one-half your level (minimum 1).</benefit>
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Frozen Land Wanderer</name>
 			<benefit>You gain a +2 bonus to all defenses against Cold attacks, and a +2 bonus to saving throws against Cold effects.</benefit>
 			<benefit>You can choose this knack a second time. If you do, you also gain resist cold equal to one-half your level (minimum 1).</benefit>
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Mountain Guide</name>
 			<benefit>You gain a +2 bonus to Athletics checks to climb and jump.</benefit>
 			<benefit>If you are trained in Athletics, you can choose to not gain the bonus to instead reduce the DC of any climb check that covers the same route that you successfully climb. This reduction applies until the end of the encounter, and an ally must either see or hear you when you make your climb check to gain this benefit. The reduction to the DC equals 2, and increases to 3 starting at 11th level, and to 4 starting at 21st level. </benefit>
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Persistent Hunter</name>
 			<benefit>You gain a +1 bonus to your exploration speed.</benefit>
 			<benefit>If you are trained in Diplomacy, your allies also gain a +1 bonus to exploration speed.</benefit>
 			<benefit>If you are trained in Nature, you and your allies gain a +5 bonus to the hourly Endurance checks made when traveling more than 10 hours in a day. This bonus decreases to +2 after you fail one of these checks.</benefit>
 		</subfeature>
-		
+
 		<subfeature>
 			<name>Wilderness Tracker</name>
 			<benefit>During a short rest, you can make a Perception check (DC determined by the DM) to inspect the area around you, up to 10 squares on a side.</benefit>
 			<benefit>If your check succeeds, you determine the number and nature of the creatures that have moved through the area in the past 24 hours. You ascertain when and where they entered the area, as well as when and where they left.</benefit>
 		</subfeature>
-		
+
 	</feature>
-	
+
 </class>

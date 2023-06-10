@@ -11,7 +11,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<title><xsl:value-of select="class/name" /> - <xsl:value-of select="class/subname" /></title>
 		<style>
 			.container {
-
+				width:100%;
 				padding-top:1em;
 				box-sizing:border-box;
 				float:left;

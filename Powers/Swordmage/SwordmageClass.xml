@@ -55,24 +55,23 @@
 			<title>Arcane Aegis</title>
 			<class>Swordmage</class> <category>Utility</category>
 			<fluff>You create an arcane link between yourself and a foe</fluff>
-			<part>
 				<frequency>At-Will</frequency>
 				<keyword>Arcane</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Close</type> <range>burst 2</range>
-				<section>
-					<indent>4</indent>
-					<name>Level 11:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Close</b>]]> burst 3</text>
-				</section>
-				<section>
-					<indent>4</indent>
-					<name>Level 21:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Close</b>]]> burst 5</text>
-				</section>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>One creature you can see in the burst</text>
+					<type>Close</type> <range>burst 2</range>
+					<target>one creature you can see in the burst</target>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Close</i>]]> burst 3</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Close</i>]]> burst 5</text>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -87,7 +86,6 @@
 					<shade>true</shade>
 					<text>If a marked creature makes an attack that doesn't include you as a target, it takes a -2 penalty to attack rolls with that attack.</text>
 				</section>
-			</part>
 		</power>
 
 		<subfeature>
@@ -101,15 +99,14 @@
 				<title>Aegis of Assault</title>
 				<class>Swordmage</class> <category>Attack</category>
 				<fluff>Your aegis allows you to instantly respond the the marked foe's attack with a counterassault</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Teleportation</keyword>
 					<action>Immediate</action> <subaction>Reaction</subaction>
-					<type>Personal</type>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include you as a target and is within 10 squares of you</text>
 					</section>
+					<section personal=""/>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
@@ -119,7 +116,6 @@
 						<shade>true</shade>
 						<text>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy. If you make the attack using your bonded weapon, the attack deals additional damage equal to your Strength modifier.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -135,18 +131,17 @@
 				<title>Aegis of Ensnarement</title>
 				<class>Swordmage</class> <category>Attack</category>
 				<fluff>Your aegis allows you to draw to draw the enemy back to you</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Teleportation</keyword>
 					<action>Immediate</action> <subaction>Reaction</subaction>
-					<type>Close</type> <range>burst 10</range>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include you as a target and is within 10 squares of you</text>
 					</section>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
-						<text>The triggering enemy</text>
+						<type>Close</type> <range>burst 10</range>
+						<target>the triggering enemy</target>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -157,7 +152,6 @@
 						<shade>true</shade>
 						<text>The target grants combat advantage to all creatures until the start of its next turn.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -173,21 +167,19 @@
 				<title>Aegis of Shielding</title>
 				<class>Swordmage</class> <category>Utility</category>
 				<fluff>Your aegis allows you blunt the foe's attacks against your allies</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane</keyword>
 					<action>Immediate</action> <subaction>Interrupt</subaction>
-					<type>Special</type>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>The enemy marked by your <![CDATA[<i>arcane aegis</i>]]> makes an attack that doesn't include you as a target and is within 10 squares of you</text>
 					</section>
+					<section special=""/>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
 						<text>You reduce the damage dealt by the triggering attack against any one target of the attack. The reduction equals one-half your level + your Constitution modifier.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
