@@ -814,23 +814,20 @@
       <title>Aggressive Familiar</title>
       <class>Feat</class> <category>Utility</category> <level>16</level>
       <fluff>As you use an arcane power, your familiar explodes, damaging creatures you hit</fluff>
-      <part>
       <frequency>Daily</frequency>
       <keyword>Arcane</keyword>
       <action>Free</action> <subaction>Action</subaction>
-      <type>Personal</type>
       <section>
-         <shade>true</shade>
-         <name>Requirement:</name> <name-style>bold</name-style>
+         <name>Requirement:</name>
          <text>Your familiar must be in its active state</text>
       </section>
-      <section>
-         <name>Effect:</name> <name-style>bold</name-style>
+      <section shade="">
+         <name>Effect:</name>
          <text>Your familiar is destroyed, and you gain a +5 power bonus to damage rolls against creatures that were adjacent to your familiar. The bonus lasts until the end of the current turn.</text>
       </section>
-      </part>
-   </power>
+      </power>
    </feat>
+   
    <feat>
       <title>Aggressive Leadership</title>
       <tier>Epic</tier>
@@ -1997,17 +1994,16 @@
       <title>Argent Falcon</title>
       <class>Feat</class> <category>Utility</category> <level>6</level>
       <fluff>Your familiar briefly transforms into a silver falcon, and shines with pure moonlight</fluff>
-      <part>
       <frequency>Encounter</frequency>
       <keyword>Divine</keyword>
       <action>Minor</action> <subaction>Action</subaction>
-      <type>Personal</type>
+      <section personal=""/>
       <section>
          <shade>true</shade>
-         <name>Effect:</name> <name-style>bold</name-style>
+         <name>Effect:</name>
          <text>Until the end of your next turn, your familiar sheds bright light in its space and each square within 3 squares of it. Enemies within the light grant combat advantage.</text>
       </section>
-      </part>
+      
    </power>
    </feat>
    <feat>
@@ -2447,25 +2443,24 @@
          <title>Balm of the Cultivator</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Your enemy's attack releases healing energy within you, which you use to aid your friend</fluff>
-         <part>
          <frequency>Encounter</frequency>
          <keyword>Healing</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 5</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy damages you with an attack</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally in the burst</text>
+            <name>Target:</name>
+            <type>Close</type> <range>burst 5</range>
+            <target>one ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
          </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -2493,18 +2488,17 @@
          <title>Fury of the Elements</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You channel elemental power used against you and unleash its fury against your foes</fluff>
-         <part>
          <frequency>Encounter</frequency>
          <keyword>Varies</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
+            <name>Trigger:</name>
             <text>You take cold, fire, lightning, or thunder damage</text>
          </section>
+         <section personal=""/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>You take half damage from the triggering attack, and this power has the keyword or keywords for the triggering attack's damage type or types.</text>
          </section>
          <section>
@@ -2516,7 +2510,7 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>2d6 extra damage.</text>
          </section>
-         </part>
+         
       </power>
    </feat>
    <feat>
@@ -2675,32 +2669,28 @@
          <title>Astral Splendor</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You take on an imperious aspect, and silvery light -that of your astral soul- shines from your eyes, mouth, and heart</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Divine, Stance</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
+               <name>Requirement:</name>
                <text>You must not be bloodied.</text>
             </section>
-            <section>
+         <section personal=""/>
+            <section shade="">
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You enter the Astral Splendor stance.</text>
             </section>
-            <section>
+            <section shade="">
                <text>While you remain in the stance, enemies take a -2 penalty to attack rolls made against you.</text>
             </section>
-            <section>
+            <section shade="">
                <text>Also, you shed bright light within 6 squares, and dim light within a further 3 squares.</text>
             </section>
             <section>
-               <shade>true</shade>
                <name>Special:</name> <name-style>bold</name-style>
                <text>This stance immediately ends if you become bloodied.</text>
             </section>
-         </part>
       </power>
    </feat>
 
@@ -3607,18 +3597,17 @@
          <title>Battle Trample</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You incite your mount to stamp, read, and kick unpredictably, with any foe that remains too close taking damage and being driven back</fluff>
-         <part>
          <frequency>Encounter</frequency>
          <keyword>Mounted</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>1</range>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>A mount you are riding and that has a trample power</text>
+            <name>Target:</name>
+            <type>Melee</type> <range>1</range>
+            <target>a mount you are riding and that has a trample power</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>Until the start of your next turn, any enemy that ends its turn adjacent to the target takes 3 damage, and is pushed 1 square from the target. The effect ends if you are no longer riding the target.</text>
          </section>
          <section>
@@ -3631,7 +3620,7 @@
             <name>Mount Level 21:</name> <name-style>italic</name-style>
             <text>9 damage, and pushed 2 squares.</text>
          </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -4499,15 +4488,14 @@
          <title>Initiate's Warding</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You have studied the warding techniques of swordmages, but cannot reach the reliability expected of them</fluff>
-         <part>
          <frequency>Daily</frequency>
          <keyword>Arcane</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Personal</type>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
+            <name>Requirement:</name>
             <text>You must be wielding a light blade or a heavy blade</text>
          </section>
+         <section personal=""/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -4517,7 +4505,7 @@
             <shade>true</shade>
             <text>You lose the bonus if you are no longer wielding a light blade or heavy blade, and regain it when you again wield one. The effect immediately ends if you fall unconscious.</text>
          </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -4579,25 +4567,20 @@
          <title>Initiate's Oath</title>
          <class>Avenger</class> <category>Utility</category>
          <fluff>You focus your wrath on a single foe, giving an attack against it extraordinary accuracy</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>10</range>
+            <section auto="no-opportunity"/>
             <section>
-               <indent>1</indent>
-               <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-            </section>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One enemy you can see in the burst</text>
+               <name>Target:</name>
+               <type>Ranged</type> <range>10</range>
+               <target>one enemy you can see in range</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The target becomes your oath target until you hit the target or until the target drops to 0 hit points or fewer, whichever comes first.</text>
             </section>
-         </part>
       </power>
    </feat>
 
@@ -5593,22 +5576,17 @@
          <title>Stinging Shot</title>
          <class>Blowgun</class> <category>Attack</category> <level>3</level>
          <fluff>The needle lodges in a sensitive area, jolting your prey with pain</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>action</subaction>
-            <type>Ranged</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
+               <name>Requirement:</name>
                <text>You must be wielding a blowgun</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Dexterity vs. Reflex</text>
             </section>
             <section>
@@ -5625,46 +5603,40 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>The target grants combat advantage until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Uncanny Blowgun Aim</title>
          <class>Blowgun</class> <category>Utility</category> <level>6</level>
          <fluff>You breathe precisely, taking in your target and carefully lining up the needle's trajectory</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Move</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>Your next attack with a blowgun gain a +2 bonus to the attack roll. If the attack imparts an effect that a save can end, the target takes a -3 penalty to its first saving throw against it.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Crippling Needle</title>
          <class>Blowgun</class> <category>Attack</category> <level>9</level>
          <fluff>Your needle lodges in a key pressure point, causing your target to stiffen and momentarily fail to act</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a blowgun</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
-               <name>Attack:</name> <name-style>bold</name-style>
+               <name>Attack:</name>
+               <type>Ranged</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Dexterity vs. AC</text>
             </section>
             <section>
@@ -5686,7 +5658,7 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>Half damage, and the target is dazed (save ends).</text>
             </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -5833,14 +5805,13 @@
          <title>Bog Hunter's Poison</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You carefully apply to a weapon a poison that you extracted from local flora and fauna during a rest</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Poison</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One weapon</text>
+               <type>Melee</type> <range>touch</range>
+               <target>one weapon</target>
             </section>
             <section>
                <shade>true</shade>
@@ -5862,7 +5833,7 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>The initial ongoing damage increases to 15, and the maximum to 35.</text>
             </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -5890,22 +5861,17 @@
          <title>Bogtangle Dart</title>
          <class>Feat</class> <category>Attack</category> <level>1</level>
          <fluff>An enemy struck by your dart feels a spreading numbness as the venom does its work</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Poison, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a blowgun</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Dexterity or Wisdom vs. AC</text>
             </section>
             <section>
@@ -5922,7 +5888,7 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>2[W] poison damage.</text>
             </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -5948,22 +5914,17 @@
          <title>Binding Bola</title>
          <class>Bola</class> <category>Attack</category> <level>3</level>
          <fluff>The weights entwine the cords around your target, wrapping it so tightly that it cannot maintain its momentum</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a bola</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Dexterity vs. Reflex</text>
             </section>
             <section>
@@ -5981,20 +5942,17 @@
                <name>Level 17:</name> <name-style>italic</name-style>
                <text>If you know this power as an encounter attack power of 17th level or higher, the damage increases to 4[W] + Dexterity.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Bola Recovery</title>
          <class>Bola</class> <category>Utility</category> <level>6</level>
          <fluff>With the bola back in hand, you ready it for another precise throw</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
                <name>Prerequisite:</name> <name-style>bold</name-style>
                <text>You must know the <![CDATA[<i>binding bola</i>]]> power</text>
             </section>
@@ -6002,34 +5960,30 @@
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a bola</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You regain the use of your <![CDATA[<i>binding bola</i>]]> power.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Felling Bola</title>
          <class>Bola</class> <category>Attack</category> <level>9</level>
          <fluff>Such is the force of your throw, that your foe is knocked down it finds too painful stand back up again</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a bola</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Dexterity vs. Reflex</text>
             </section>
             <section>
@@ -6053,7 +6007,7 @@
             <section>
                <text>The target cannot stand from prone until the end of its next turn.</text>
             </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -6577,15 +6531,14 @@
          <title>Death's Messenger</title>
          <class>Bravo</class> <category>Attack</category> <level>3</level>
          <fluff>Your prey has an appointment with death, and your attack reminds it of the fact</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Fear</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You target your prey with an at-will melee or ranged attack</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -6600,21 +6553,20 @@
                <name>Level 17:</name> <name-style>italic</name-style>
                <text>If you know this power as an encounter attack power of 17th level or higher, the additional damage increases to +2[W], or +2d8 if the attack is not a Weapon attack.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Brutal Instincts</title>
          <class>Bravo</class> <category>Utility</category> <level>6</level>
          <fluff>With your defiant snarl, the advantage your foes had evaporates, giving you an opening</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <action>Opportunity</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>Any creatures flank you, or your prey gains combat advantage against you</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -6624,22 +6576,21 @@
                <shade>true</shade>
                <text>If your prey was among those who triggered this power, you gain combat advantage against your prey until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Bravo's Finish</title>
          <class>Bravo</class> <category>Attack</category> <level>9</level>
          <fluff>If your vicious assault doesn't bring your prey down, it is rattled to its core</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Fear</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit your prey with an at-will attack</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -6655,7 +6606,7 @@
                <name>Level 25:</name> <name-style>italic</name-style>
                <text>If you know this power as a daily attack power of 25th level or higher, the triggering attack deals +4[W] damage, or +4d8 damage if it is not a Weapon attack.</text>
             </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -7533,25 +7484,24 @@
          <title>Ghost Sound</title>
          <class>Gnoll</class> <category>Utility</category>
          <fluff>With a wink, you create an illusory sound that emanates from a distant location</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Arcane, Illusion</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>10</range>
-            <section>
-               <indent>2</indent>
-               <name>Level 11:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Ranged</b>]]> 15</text>
-            </section>
-            <section>
-               <indent>2</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Ranged</b>]]> 20</text>
-            </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>10</range>
                <text>One object or unoccupied square</text>
             </section>
+         <section>
+            <indent>1</indent>
+            <name>Level 11:</name> <name-style>italic</name-style>
+            <text><![CDATA[<b>Ranged</b>]]> 15</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text><![CDATA[<b>Ranged</b>]]> 20</text>
+         </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -7561,7 +7511,7 @@
                <shade>true</shade>
                <text>You can produce nonvocal sounds such as the ringing of a sword blow, jingling armor, or scraping stone. If you produce a whisper, you can make it quiet enough that only creatures adjacent to the target can hear the words.</text>
             </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -8836,24 +8786,20 @@
          <title>Command Undead</title>
          <class>Feat</class> <category>Attack</category>
          <fluff>You compel an undead creature to become your slave for a moment</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Channel Divnity, Divine, Implement</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
-            <section>
-               <indent>2</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text><![CDATA[<b>Close</b>]]> burst 10</text>
-            </section>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One undead creature in the burst</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Close</type> <range>burst 5</range>
+               <target>one undead creature in the burst</target>
                <text>Wisdom vs. Will</text>
             </section>
+         <section>
+            <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text><![CDATA[<b>Close</b>]]> burst 10</text>
+         </section>
             <section>
                <shade>true</shade>
                <name>Hit:</name> <name-style>bold</name-style>
@@ -8881,7 +8827,7 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>The target is dazed until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -10636,11 +10582,9 @@
          <title>Sudden Retaliation</title>
          <class>Cutthroat</class> <category>Attack</category> <level>3</level>
          <fluff>Faster than the eye can follow, you retaliate against those attacking you or your allies</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Fear, Martial</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Prerequisite:</name> <name-style>bold</name-style>
                <text>You must have training in the Intimidate skill</text>
@@ -10649,35 +10593,31 @@
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An enemy targets you or an ally</text>
             </section>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
-            </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>You make an at-will melee or ranged attack against the target. On a hit, the target takes a -2 penalty to attack rolls until the start of its next turn.</text>
+               <text>You make an at-will melee or ranged attack against the triggering enemy. On a hit, the enemy takes a -2 penalty to attack rolls until the start of its next turn.</text>
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
                <name>Level 17:</name> <name-style>italic</name-style>
                <text>If you know this power as an encounter attack power of 17th level or higher, the attack you make deals an additional +1[W] damage, or an additional +1d8 if it is not a Weapon attack.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Cutthroat's Scrutiny</title>
          <class>Cutthroat</class> <category>Utility</category> <level>6</level>
          <fluff>Studying your opponent, you search for a weakness you can take advantage of</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>sight</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature you can see</text>
+               <type>Ranged</type> <range>sight</range>
+               <target>one creature you can see</target>
             </section>
             <section>
                <shade>true</shade>
@@ -10688,22 +10628,21 @@
                <shade>true</shade>
                <text>Until the end of the encounter, while you have combat advantage against the target, you can score a critical hit against it on a natural roll of 19 or 20.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Quick Kill</title>
          <class>Cutthroat</class> <category>Attack</category> <level>9</level>
          <fluff>You slip from the shadows unseen, striking before the enemy knows what happened</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Martial</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit with a creature that cannot sense your current location with an at-will melee or ranged attack</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -10714,7 +10653,7 @@
                <name>Level 25:</name> <name-style>italic</name-style>
                <text>If you know this power as a daily attack power of 25th level or higher, the triggering attack deals an additional +6[W] or +6d8 damage instead.</text>
             </section>
-         </part>
+         
       </power>
 
    </feat>
@@ -12716,20 +12655,19 @@
          <title>Destructive Power</title>
          <class>Feat</class> <category>Utility</category> <level>6</level>
          <fluff>By funneling greater power into your attack, you ensure its effect is not wasted</fluff>
-         <part>
             <frequency>Daily</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You roll a 1 on any damage die when you hit with an area or close attack, or a daily attack</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You reroll any result of 1 on a d4 or d6 damage die until the die roll is something other than 1, or reroll any result of 1 or 2 on another damage die until the die roll is something other than 1 or 2.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -12935,11 +12873,10 @@
          <title>Diabolic Transformation</title>
          <class>Racial</class> <category>Utility</category>
          <fluff>You roar with infernal fury as the hellish blood that flows through your veins reveals its true power in the blink of an eye, transforming you into a brutish fiend</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Divine, Polymorph</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -12950,16 +12887,16 @@
                <text>While you are in this form, you gain the following benefits:</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; Your fire resistance increases by 5.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>Your fire resistance increases by 5.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; The bonus to attack rolls from your Bloodhunt racial trait increases to +2.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>The bonus to attack rolls from your Bloodhunt racial trait increases to +2.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You gain a +2 power bonus to damage rolls.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You gain a +2 power bonus to damage rolls.</text>
             </section>
             <section>
                <shade>true</shade> <indent>2</indent>
@@ -12972,8 +12909,8 @@
                <text>+4 power bonus.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You gain regeneration 2, or regeneration 3 if you were bloodied when you used this power.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You gain regeneration 2, or regeneration 3 if you were bloodied when you used this power.</text>
             </section>
             <section>
                <shade>true</shade> <indent>2</indent>
@@ -12989,17 +12926,17 @@
                <shade>true</shade>
                <text>While you are in this form, you can use the Black Wrath of Hell attack once.</text>
             </section>
-         </part>
+         
          <part>
             <part-name>Black Wrath of Hell</part-name>
             <frequency>Encounter</frequency>
             <keyword>Divine, Fear</keyword>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with an attack</text>
             </section>
+            <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -13741,29 +13678,26 @@
          <title>Divine Fate</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>A great power has plans for you and turns chance in your favor</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Close</type> <range>burst 10</range>
-            <section>
-               <name>Channel Divnity</name> <name-style>bold</name-style>
-               <text>You can only use one Channel Divinity power per encounter.</text>
-            </section>
+         <section auto="no-opportunity"/>
+            <section auto="channeldivinity"/>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
-               <text>You or an ally within 10 squares of you fails a skill check, an ability check, or a saving throw</text>
+               <text>you or an ally within 10 squares of you fails a skill check, an ability check, or a saving throw</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering creature in the burst</text>
+               <type>Ranged</type> <range>10</range>
+               <target>The triggering creature in the burst</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The target rerolls the triggering check or saving throw, and uses the higher result.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -14028,17 +13962,13 @@
          <title>Dominating Gaze</title>
          <class>Vampiric</class> <category>Attack</category> <level>15</level>
          <fluff>The authority in your piercing gaze demands utter submission</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Charm, Shadow</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>5</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>5</range>
+               <target>one creature</target>
                <text>Ability +4 vs. Will</text>
             </section>
             <section>
@@ -14060,7 +13990,7 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>The target is dazed (save ends).</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -14953,15 +14883,14 @@
          <title>Dragonborn Zeal</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Your wounds occasionally make you relentless</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Healing</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>Your hit points drop to 0 or fewer</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -14971,7 +14900,7 @@
                <shade>true</shade>
                <text>Until the end end of your next turn, you gain a bonus to attack rolls and damage rolls against the enemy that reduced your hit points to 0 or fewer. The bonus equals one-half your Charisma modifier.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -15246,22 +15175,18 @@
          <title>Drow Ecclesiastic</title>
          <class>Feat</class> <category>Attack</category>
          <fluff>Lolth punishes those who escape her wiles</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Poison</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Close</type> <range>burst 5</range>
-            <section>
-               <name>Channel Divinity:</name> <name-style>bold</name-style>
-               <text>You can only use one Channel Divinity power per encounter</text>
-            </section>
+            <section auto="channeldivinity"/>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An enemy within 5 squares of you succeeds in a saving throw to end a condition or effect</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy in the burst</text>
+               <type>Close</type> <range>burst 5</range>
+               <target>the triggering enemy in the burst</target>
             </section>
             <section>
                <shade>true</shade>
@@ -15278,7 +15203,7 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>Ongoing 15 poison damage.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -16298,15 +16223,14 @@
          <title>Elan Resilience</title>
          <class>Elan</class> <category>Utility</category>
          <fluff>Psionic energy flares around you, limiting the effect of an attack</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Psionic</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You take damage.</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -16322,7 +16246,7 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>By 6 + your Intelligence modifier.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -16681,26 +16605,24 @@
          <title>Elemental Conduit</title>
          <class>Elemental Companion</class> <category>Utility</category>
          <fluff>Chaos from your elemental companion twists space so that the two of you can swap positions</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Elemental, Teleportation</keyword>
             <action>Move</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 10</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>Your elemental companion must be in active mode.</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>You, and your elemental companion in the burst</text>
+               <type>Close</type> <range>burst 10</range>
+               <target>you, and your elemental companion in the burst</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>Each target teleports, swapping positions.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -17049,25 +16971,24 @@
          <title>Elemental Vengeance</title>
          <class>Elemental Companion</class> <category>Utility</category>
          <fluff>A burst of scintillating color erupts from your destroyed companion, distracting your enemies</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Elemental</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Close</type> <range>burst 1, using your Elemental Companion's last space as the point of origin</range>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>Your active elemental companion is destroyed</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>Each enemy in the burst</text>
+               <type>Close</type> <range>burst 1, using your Elemental Companion's last space as the point of origin</range>
+               <target>each enemy in the burst</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>Each target grants combat advantage until the end of its next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -17865,36 +17786,33 @@
          <title>Enlarge Familiar</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Suddenly, what seemed a harmless pet rears up to threaten your enemy</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Teleportation</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Special</type>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>Your familiar must be in its active mode.</text>
             </section>
-            <section>
+            <section shade="">
                <name>Effect:</name> <name-style>bold</name-style>
                <text>Until the start of your next turn, your familiar gains the following benefits:</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; Its size becomes Small.</text>
+            <section shade="">
+               <indent>1</indent> <bullet/>
+               <text>Its size becomes Small.</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; It has hit points equal to your healing surge value.</text>
+            <section shade="">
+               <indent>1</indent> <bullet/>
+               <text>It has hit points equal to your healing surge value.</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; It can flank enemies, though it cannot otherwise make attacks.</text>
+            <section shade="">
+               <indent>1</indent> <bullet/>
+               <text>It can flank enemies, though it cannot otherwise make attacks.</text>
             </section>
-            <section>
+            <section shade="">
                <text>When this effect ends, the familiar teleports to your space and enters passive mode.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -18773,18 +18691,17 @@
          <title>Explosive Power</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Your attack explodes outward in a silent wave of energy, pushing creatures away from your attack's point of origin</fluff>
-         <part>
             <frequency>Daily</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You use an attack power that is a close blast, close burst, or area burst</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer in the blast or burst.</text>
+               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer inside the blast or burst.</text>
             </section>
             <section>
                <shade>true</shade>
@@ -18794,7 +18711,7 @@
                <shade>true</shade>
                <text>You can resolve the rest of the power against these creatures even if they are outside of the power's blast or burst.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -19141,7 +19058,7 @@
       <group>Support</group>
       <benefit>Your <![CDATA[<i>fade away</i> racial power is a close burst 5 instead of personal, and it gains the following altered and new rules text:<br />
          <b>Trigger:</b> You or an ally within 5 squares of you takes damage<br />
-         <b>Target:</b> The triggering creature<br />
+         <b>Target:</b> <i>Close</i> burst 5 (the triggering creature)<br />
          <b>Effect:</b> The target is invisible until he or she attacks, or until the end of his or her next turn, whichever comes first.]]></benefit>
    </feat>
 
@@ -21427,10 +21344,9 @@
          <title>Deft Diver</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You move through the water like a fish and can make the most cumbersome weapons deadly underwater</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <action>Move</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -21440,7 +21356,7 @@
                <shade>true</shade>
                <text>Until the end of your next turn, you take no penalties to attack rolls during aquatic combat for using a weapon other than a Spear or a Crossbow.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -21470,23 +21386,18 @@
          <title>Net Snare</title>
          <class>Feat</class> <category>Attack</category>
          <fluff>You catch an enemy in your net and maneuver it into position</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
-            <type2>Ranged</type2> <range2>weapon</range2>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a net.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <type2>Ranged</type2> <range2>weapon</range2>
+               <target>one creature</target>
                <text>Your highest ability vs. AC</text>
             </section>
             <section>
@@ -21498,7 +21409,7 @@
                <shade>true</shade>
                <text>If you used this power as a melee attack, you slide the target 1 square. If you used it has a ranged attack, you pull the target 1 square.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -21708,15 +21619,14 @@
          <title>Elemental Legacy</title>
          <class>Forgeborn</class> <category>Attack</category>
          <fluff>You allow the elemental energy in your soul to swell forth and scour your foes</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Elemental; Acid, Cold, Fire, Lightning or Thunder</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with an attack</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -21732,7 +21642,7 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>9 extra damage.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -21915,15 +21825,14 @@
          <title>Unbalanced Mind</title>
          <class>Foulborn</class> <category>Utility</category>
          <fluff>Your connection to the Far Realm unleashes psychic pain in response to attack</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Aura, Psionic, Psychic</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You take damage</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -21943,7 +21852,7 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>15 psychic damage.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -22274,18 +22183,17 @@
          <title>Furious Demand</title>
          <class>Feat</class> <category>Utility</category> <level>2</level>
          <fluff>Your soul burns with anger, causing your foe to quail in fear at the expression on your face</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Arcane, Fear</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You succeed on an Intimidate check or hit with an attack</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The creature you intimidated or hit</text>
+               <type>Special</type>
+               <target>the creature you intimidated or hit</target>
             </section>
             <section>
                <shade>true</shade>
@@ -22301,7 +22209,7 @@
                <shade>true</shade>
                <text>Also, you gain a +2 bonus to all Intimidate checks until the end of the encounter.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -22448,22 +22356,17 @@
          <title>Choking Grab</title>
          <class>Garrote</class> <category>Attack</category> <level>3</level>
          <fluff>You slip your garrote over your enemy's neck and draw the cord tight</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a garrote.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature you have combat advantage against</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature you have combat advantage against</target>
                <text>Chosen Ability vs. Reflex</text>
             </section>
             <section>
@@ -22485,20 +22388,17 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>When you gain this power, choose whether you use Strength or Dexterity for the attack roll.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Body Shield</title>
          <class>Garrote</class> <category>Utility</category> <level>6</level>
          <fluff>Your choking hold with the garrote allows you to manipulate your adversary into harm's way</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a garrote, and grabbing a creature with it.</text>
             </section>
@@ -22506,34 +22406,30 @@
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You are targeted by a melee or ranged attack by a creature other than the creature you are grabbing</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The creature you are grabbing becomes the target for the triggering attack instead of you.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Strangler's Hold</title>
          <class>Garrote</class> <category>Attack</category> <level>9</level>
          <fluff>With expert skill, you loop the garrote around your victim and draw tight, closing off air and sending your enemy into unconsciousness</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Martial, Reliable, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a garrote.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature you have combat advantage against</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature you have combat advantage against</target>
                <text>Chosen Ability vs. Reflex</text>
             </section>
             <section>
@@ -22586,7 +22482,7 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>When you gain this power, choose whether you use Strength or Dexterity for the attack roll.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -22630,14 +22526,13 @@
          <title>Gaze of Ruin</title>
          <class>Tiefling</class> <category>Utility</category>
          <fluff>Your gaze causes foodstuff to become inedible, a wooden door to rot, armor to grow brittle, or a weapon to rust</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>10</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One object</text>
+               <type>Ranged</type> <range>10</range>
+               <target>one object</target>
             </section>
             <section>
                <shade>true</shade>
@@ -22662,7 +22557,7 @@
                <shade>true</shade>
                <text>If the target is armor, a creature wearing it takes a -2 penalty to AC while it has this vulnerable.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -23727,22 +23622,17 @@
          <title>Gouge Sweep</title>
          <class>Gouge</class> <category>Attack</category> <level>3</level>
          <fluff>You swing your gouge in an arc, thrusting it a couple foes to knock them aside</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a gouge</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One or two creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one or two creatures</target>
                <text>Strength vs. AC</text>
             </section>
             <section>
@@ -23755,50 +23645,44 @@
                <name>Level 17:</name> <name-style>italic</name-style>
                <text>If you know this power as an encounter power of level 17 or higher, the damage increases to 3[W] + Strength modifier and you slide the target up to 3 squares.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Gouge Press</title>
          <class>Gouge</class> <category>Utility</category> <level>6</level>
          <fluff>When an enemy staggers under your gouge assault, you adroitly follow</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a gouge</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You shift 3 squares to a square adjacent to the enemy.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Gouge Pin</title>
          <class>Gouge</class> <category>Attack</category> <level>9</level>
          <fluff>With driving force, you push your enemy down and pin it to the ground with your gouge</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a gouge.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Strength vs. AC</text>
             </section>
             <section>
@@ -23828,7 +23712,7 @@
                <shade>true</shade>
                <text>When you push, pull, or slide the target while it is grabbed by you, the grab does not end as a result of that forced movement, and you can shift your speed to a square adjacent to the target. The grab still ends if you cannot end the shift adjacent to the target.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -24747,22 +24631,17 @@
          <title>Gythka Claw Swoop</title>
          <class>Gythka</class> <category>Attack</category> <level>3</level>
          <fluff>Using the off-hand end of your gythka as a distraction, you swipe at your enemy and then dart around to deliver a more precise blow with the main end</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a gythka.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Strength vs. AC (off-hand end)</text>
             </section>
             <section>
@@ -24781,6 +24660,8 @@
             </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>same target</target>
                <text>Strength vs. AC (main end)</text>
             </section>
             <section>
@@ -24797,50 +24678,44 @@
                <name>Effect:</name> <name-style>bold</name-style>
                <text>If you did not shift the full distance before, you can shift the rest of the distance.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Gythka Parry</title>
          <class>Gythka</class> <category>Utility</category> <level>6</level>
          <fluff>After delivering a blow, you move to a defensive position and adjust your grip to place your gythka between yourself and your enemy</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a gythka</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You shift up to one-half your speed, and gain a +2 power bonus to AC and Reflex against the triggering enemy until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Gythka Arc Slam</title>
          <class>Gythka</class> <category>Attack</category> <level>9</level>
          <fluff>You punch your gythka into your enemy, causing it to double over in pain, and then heft the weapon up, ready to bring it crashing down if your foe tries to stand</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Martial, Reliable, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a gythka.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
-               <name>Attack:</name> <name-style>bold</name-style>
+               <name>Primary Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Strength vs. AC (main end)</text>
             </section>
             <section>
@@ -24864,19 +24739,20 @@
             <section>
                <text>You regain the use of this power at the start of your next turn.</text>
             </section>
-         </part>
+         
          <part>
             <part-name>Gythka Arc</part-name>
             <frequency>Encounter</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>The target stands up while you are wielding a gythka</text>
             </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>the same target</target>
                <text>Strength vs. AC (off-hand end)</text>
             </section>
             <section>
@@ -25465,13 +25341,10 @@
          <title>Black Blade of Despair</title>
          <class>Haunting Shade</class> <category>Attack</category> <level>3</level>
          <fluff>Your form blurs, becoming a thing of smoke and darkness, and where your blade falls, death surely follows</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Cold, Necrotic, Shadow, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding either a Heavy Blade or a Light Blade.</text>
             </section>
@@ -25480,11 +25353,9 @@
                <text>You become insubstantial until the end of your next turn.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Ability vs. Reflex</text>
             </section>
             <section>
@@ -25497,46 +25368,40 @@
                <name>Level 17:</name> <name-style>italic</name-style>
                <text>If you know this power as an encounter attack power of 17th level or higher, the damage increases to 2[W] + Ability modifier plus 2d6 cold and necrotic damage.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Shade Stride</title>
          <class>Haunting Shade</class> <category>Utility</category> <level>6</level>
          <fluff>You melt into the gloom and reappear some distance away from where you were</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Shadow, Teleportation</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You teleport 10 squares to a space containing dim light or darkness.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Gathering of Shadows</title>
          <class>Haunting Shade</class> <category>Attack</category> <level>9</level>
          <fluff>Dark duplicates of your weapon crawl across the ground, piercing your foes' shadows and leaving them reeling in pain before the darkness wraps around you</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Cold, Illusion, Necrotic, Shadow, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 2</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding either a Heavy Blade or a Light Blade.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>Each enemy in the burst</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Close</type> <range>burst 2</range>
+               <target>each enemy in the burst</target>
                <text>Ability vs. Fortitude</text>
             </section>
             <section>
@@ -25560,7 +25425,7 @@
             <section>
                <text>Until the end of the encounter, dim light grants you total concealment instead just concealment.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -26458,21 +26323,17 @@
          <title>Webs of Darkness</title>
          <class>Drow</class> <category>Attack</category>
          <fluff>Inky tendrils of solidified darkness leap from your fingertip and bind your enemies</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>blast 3</range>
             <section>
                <name>Lolthtouched:</name> <name-style>bold</name-style>
                <text>You can only use one Lolthtouched power per encounter.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>Each creature in the blast</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Close</type> <range>blast 3</range>
+               <target>each creature in the blast</target>
                <text>Ability +4 vs. Reflex</text>
             </section>
             <section>
@@ -26493,7 +26354,7 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>When you gain this power, choose Intelligence, Wisdom, or Charisma. You use the chosen ability for the attack roll.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -28630,20 +28491,17 @@
          <title>Improved Tome of Readiness</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You page through your tome to find a spell more appropriate to the current situation</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Implement</keyword>
             <action>Free</action> <subaction>Action</subaction>
-            <type>Special</type>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a tome implement.</text>
             </section>
             <section>
-               <name>Requirement:</name> <name-style>bold</name-style>
-               <text>You must have at least one unexpended wizard daily attack of your improved tome spell's level or higher.</text>
+               <text>You must also have at least one unexpended wizard daily attack of your improved tome spell's level or higher.</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -28653,7 +28511,7 @@
                <shade>true</shade>
                <text>If you have not used your improved tome spell before the end of the encounter, it is automatically expended and you regain the power you expended to gain use of it as part of your next short rest.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -29176,18 +29034,14 @@
          <title>Infernal Captain's Curse</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Drawing on the powers of hell, you curse an enemy to become weak against follow up attacks from your allies</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>sight</range>
-            <section>
-               <indent>2</indent>
-               <text>Using this power does not trigger <![CDATA[<i>opportunity attacks</i>]]></text>
-            </section>
+            <section auto="no-opportunity"/>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>Nearest enemy you can see</text>
+               <type>Ranged</type> <range>sight</range>
+               <target>nearest enemy you can see</target>
             </section>
             <section>
                <shade>true</shade>
@@ -29198,7 +29052,7 @@
                <shade>true</shade>
                <text>When you hit a creature under your captain's curse with an attack, choose one ally you can see. The target grants combat advantage to the chosen ally for the next attack he or she makes against the target.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -31065,21 +30919,20 @@
          <title>Demonic Aggression</title>
          <class>Shadar-Kai</class> <category>Utility</category>
          <fluff>Once your ire is raised, your demonic heritage rages out of control</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Shadow, Teleportation</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An enemy within 3 squares of you damages you with an attack</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You teleport to an unoccupied space adjacent to the triggering enemy. You gain combat advantage against that enemy until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -31810,18 +31663,17 @@
          <title>Punitive Radiance</title>
          <class>Class</class> <category>Attack</category>
          <fluff>The punishment you levy on the unrighteous is visible from miles away</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Radiant</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a divine attack</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+               <type>Special</type>
+               <target>the triggering enemy</target>
             </section>
             <section>
                <shade>true</shade>
@@ -31837,7 +31689,7 @@
                <shade>true</shade>
                <text>While surrounded by radiance, the target grants combat advantage and cannot benefit from invisibility, concealment, or total concealment.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -32906,11 +32758,10 @@
          <title>Mantle of Misfortune</title>
          <class>Tiefling</class> <category>Utility</category>
          <fluff>While the enemy remains near you, its feet slip, it drops things, and nothing goes right</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Aura</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -32920,7 +32771,7 @@
                <shade>true</shade>
                <text>Enemies in the aura take a -2 penalty to attack rolls. Whenever an enemy in the aura misses with an attack, you can slide that enemy 1 square as a free reaction.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -33940,21 +33791,20 @@
          <title>Honed Through Memory</title>
          <class>Martial Class</class> <category>Utility</category>
          <fluff>When you miss an enemy with an attack, you commit your error to memory and call upon it to strike true</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You miss a creature with a melee or ranged attack roll</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You gain a +3 power bonus martial attack rolls against the triggering creature until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -35494,11 +35344,9 @@
          <title>Nature's Roots</title>
          <class>Wilden</class> <category>Utility</category>
          <fluff>At your command, roots and other vegetation rises up in an area to hinder your foes while letting your and your allies pass</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Primal, Zone</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Area</type> <range>burst 1 within 5 squares</range>
             <section>
                <name>Nature's Aspect:</name> <name-style>bold</name-style>
                <text>You can expend this power in place of your current Nature's Aspect racial power.</text>
@@ -35506,13 +35354,14 @@
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>You create a zone of hindering vegetation until the end of your next turn.</text>
+               <type>Area</type> <range>burst 1 within 5 squares</range>
+               <text>The burst creates a zone of hindering vegetation until the end of your next turn.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>The zone difficult terraint for your enemies.</text>
+               <text>The zone difficult is terraint for your enemies.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -35732,21 +35581,17 @@
          <title>Net Sweep</title>
          <class>Net</class> <category>Attack</category> <level>3</level>
          <fluff>You sweep your net around, smashing your foes and battering down their weapons</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>weapon burst</range>
             <section>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a net.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>Each creature in the burst</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Close</type> <range>weapon burst</range>
+               <target>each creature in the burst</target>
                <text>Strength vs. Fortitude</text>
             </section>
             <section>
@@ -35768,49 +35613,44 @@
                <shade>true</shade>
                <text>While battered, the target is slowed and takes a -2 penalty to attack rolls.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Net Shield</title>
          <class>Net</class> <category>Utility</category> <level>6</level>
          <fluff>You sping your net around to foil your enemies' attacks</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a net.</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>Until the start of your next turn or until you are not longer wielding a net, you gain a +2 power bonus to AC and Reflex defense.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Net Trap</title>
          <class>Net</class> <category>Attack</category> <level>9</level>
          <fluff>You fling the net so that it falls over yuour enemy and, the more the foe struggles, the tighter the net's grasp becomes</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Martial, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon +4 reach</range>
             <section>
                <name>Requirements:</name> <name-style>bold</name-style>
                <text>You must be wielding a net.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon +4 reach</range>
+               <target>one creature</target>
                <text>Strength vs. Reflex</text>
             </section>
             <section>
@@ -35844,7 +35684,7 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>Half damage, and the target is caught in the net until the end of its next turn or until it escapes, whichever comes first.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -36098,17 +35938,13 @@
          <title>Righteous Judgement</title>
          <class>Bahamut</class> <category>Attack</category>
          <fluff>You whisper a bitter prayer, condemning your enemy to Bahamut's judgement</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Implement</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>5</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>5</range>
+               <target>one creature</target>
                <text>Ability vs. Will</text>
             </section>
             <section>
@@ -36117,12 +35953,12 @@
                <text>Both of the following benefits can be used once before the end of your next turn:</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; If the target willingly moves, one ally within 5 squares of you can shift 2 squares as an immediate reaction.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>If the target willingly moves, one ally within 5 squares of you can shift 2 squares as an immediate reaction.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; If the target makes an attack, one ally within 5 squares of you gains a +2 power bonus to attack rolls and a +2 power bonus to damage rolls against the target until the end of his or her next turn.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>If the target makes an attack, one ally within 5 squares of you gains a +2 power bonus to attack rolls and a +2 power bonus to damage rolls against the target until the end of his or her next turn.</text>
             </section>
             <section>
                <shade>true</shade> <indent>2</indent>
@@ -36134,25 +35970,24 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>+4 power bonus to damage rolls.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Hand of Justice</title>
          <class>Bahamut</class> <category>Attack</category> <level>3</level>
          <fluff>A divine draconic claw appears and punishes your enemy for attacking a friend</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Healing, Implement</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Ranged</type> <range>10</range>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An enemy within range that you can see hits an ally with an attack</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+               <type>Ranged</type> <range>10</range>
+               <target>the triggering enemy</target>
             </section>
             <section>
                <shade>true</shade>
@@ -36164,46 +35999,44 @@
                <name>Level 17:</name> <name-style>italic</name-style>
                <text>If you know this power as an encounter attack power of 17th level or higher, the damage increases to 9 + your ability modifier + your implement's enhancement bonus.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Righteous Savior</title>
          <class>Bahamut</class> <category>Utility</category> <level>6</level>
          <fluff>You rush to your endangered ally's side to lend divine aid where it's most needed</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An ally within 5 squares of you is hit by an attack</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You shift up to 5 squares to a space adjacent to the triggering ally, and the ally gains a +2 bonus to all defenses until the start of the currently acting creature's next turn.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Shining Purpose</title>
          <class>Bahamut</class> <category>Attack</category> <level>9</level>
          <fluff>Your vision reveals a path towards victory, allowing an ally to shrug off injuries and and seize the moment</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Divine, Healing, Radiant</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Close</type> <range>burst 4</range>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One ally you can see in the burst</text>
+               <type>Close</type> <range>burst 4</range>
+               <target>one ally you can see in the burst</target>
             </section>
             <section>
                <shade>true</shade>
@@ -36215,7 +36048,7 @@
                <name>Level 25:</name> <name-style>italic</name-style>
                <text>If you know this power as a daily attack power of 25th level or higher, the ally's attack dealsan extra +4d10 radiant damage.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -36263,15 +36096,11 @@
          <title>Oath of Urgency</title>
          <class>Channel Divinity</class> <category>Utility</category>
          <fluff>You utter a prayer of need, calling upon your god to turn their eye upon a new foe</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Channel Divinity</name> <name-style>bold</name-style>
-               <text>You can use only one Channel Divinity power per encounter.</text>
-            </section>
+            <section auto="channeldivinity"/>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -36281,7 +36110,7 @@
                <shade>true</shade>
                <text>You regain your <![CDATA[<i>oath of enmity</i>]]> class power and must use it as a free reaction.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -37811,17 +37640,13 @@
          <title>Bahamut's Shield</title>
          <class>>Bahamut</class> <category>Attack</category>
          <fluff>You invoke the Platinum Dragon to shield yourself and others from harm</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Ability vs. AC</text>
             </section>
             <section>
@@ -37838,24 +37663,20 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>The target takes a -2 penalty to attack rolls with the first attack it makes before the start of your next turn.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Dragon's Rebuke</title>
          <class>Bahamut</class> <category>Attack</category> <level>3</level>
          <fluff>Your strike awakens the dragon within you, giving you the drive to punish your foe should it fail to give your god his proper due</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Ability vs. AC</text>
             </section>
             <section>
@@ -37882,25 +37703,24 @@
                <name>Level 17:</name> <name-style>italic</name-style>
                <text>If you know this power as an encounter attack power of 17th level or higher, the maximum distance you can push the target increases to 4 squares.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Zealous Fury</title>
          <class>Bahamut</class> <category>Utility</category> <level>6</level>
          <fluff>When an enemy dishonors you by attacking an ally, you intercede to ensure your enemy does not make the same mistake twice</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Divine, Healing</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Ranged</type> <range>10</range>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An ally within 10 squares of you is hit by an enemy's attack</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering ally</text>
+               <type>Ranged</type> <range>10</range>
+               <target>the triggering ally</target>
             </section>
             <section>
                <shade>true</shade>
@@ -37911,24 +37731,20 @@
                <shade>true</shade>
                <text>You teleport adjacent to the triggering enemy, and mark that enemy (save ends).</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Righteous Intolerance</title>
          <class>Bahamut</class> <category>Attack</category> <level>9</level>
          <fluff>Filled with righteous fury, you unleash divine wrath to penetrate your opponent's defenses</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Divine, Radiant, Weapon</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>weapon</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>weapon</range>
+               <target>one creature</target>
                <text>Ability vs. AC</text>
             </section>
             <section>
@@ -37959,7 +37775,7 @@
                <name>Aftereffect:</name> <name-style>italic</name-style>
                <text>The target is dazed until the end of its next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -38096,15 +37912,14 @@
          <title>Improvised Poison</title>
          <class>Poisoner</class> <category>Attack</category> <level>3</level>
          <fluff>In your experience with toxins, there's always something on hand to make an attack venomous</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Poison</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You use an at-will melee or at-will ranged attack on your turn</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -38118,42 +37933,40 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>If the triggering attack misses all targets, you regain the use of this power at the start of your next turn.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Potent Poison</title>
          <class>Poisoner</class> <category>Utility</category> <level>6</level>
          <fluff>Your poisons have an insidious effectiveness</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You miss an attack roll with a Poison power</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You reroll the triggering attack roll.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Progressive Poison</title>
          <class>Poisoner</class> <category>Attack</category> <level>9</level>
          <fluff>You imbue your attack with a withering poison that diminishes your foe more the longer the poison acts</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Poison</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You use an at-will melee or at-will ranged attack</text>
             </section>
+         <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -38191,7 +38004,7 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>If the triggering attack misses all targets, you regain the use of this power at the start of your next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -38816,7 +38629,7 @@
       <group>Power Enhancement</group>
       <group>Teamwork</group>
       <benefit>When you use your <![CDATA[<i>preserver's rebuke</i>]]> Channel Divinity power, you can choose to make the power have a range or special instead of personal, and the following fields instead of the normal effect:</benefit>
-      <benefit><![CDATA[<b>Target:</b> The triggering ally]]></benefit>
+      <benefit><![CDATA[<b>Target:</b> <i>Special</i> (the triggering ally)]]></benefit>
       <benefit><![CDATA[<b>Effect:</b> The triggering ally makes a <i>basic attack</i>]]> against the triggering enemy as a free reaction.</benefit>
       <benefit>If you have the Preserver's Fury feat, the vulnerable applies if the triggering ally's attack hits, and lasts until the end of the triggering enemy's next turn.</benefit>
    </feat>
@@ -40740,22 +40553,17 @@
          <title>Radiant Touch</title>
          <class>Paladin</class> <category>Attack</category>
          <fluff>You transform your divine healing into radiant energy to damage an undead</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Implement, Radiant</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must have uses of your <![CDATA[<i>lay on hands</i>]]> class power available.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One undead creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>touch</range>
+               <target>one undead creature</target>
                <text>Charisma vs. Fortitude</text>
             </section>
             <section>
@@ -40767,7 +40575,7 @@
                <shade>true</shade>
                <text>This counts as a use of your <![CDATA[<i>lay on hands</i>]]> class power.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -41370,8 +41178,8 @@
       <group>Triggered</group>
       <benefit>You can use your <![CDATA[<i>healing word</i>]]> class power as an immediate reaction with the following trigger and target:</benefit>
       <benefit><![CDATA[<b>Trigger:</b>]]> An ally within 5 squares of you drops to 0 hit points or fewer</benefit>
-      <benefit><![CDATA[<b>Target:</b>]]> The triggering ally</benefit>
-      <benefit>If you have the Supreme Healer feat, you can target another ally that took damage from the same source.</benefit>
+      <benefit><![CDATA[<b>Target:</b> <i>Close</i>]]> burst 5 (the triggering ally)</benefit>
+      <benefit>If you have the Supreme Healer feat, you can also target another ally that took damage from the same source.</benefit>
    </feat>
 
    <feat>
@@ -42882,23 +42690,22 @@
          <title>Righteous Rage</title>
          <class>Channel Divinity</class> <category>Utility</category>
          <fluff>Your god guides your arm and lends weight to your strike</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section auto="channeldivinity" />
+         <section personal=""/>
             <section shade="true">
                <name style="bold">Effect:</name>
                <text>The first time before the end of your next turn that you hit with a Weapon attack, you gain one of the following benefits:</text>
             </section>
-            <section shade="true" indent="1">
-               <text>&#9658; If the attack is a critical hit, you automatically get the maximum result for any critical damage. If your weapon does not have an enchantment, you still deal +3 critical damage.</text>
+            <section shade="true" indent="1"> <bullet/>
+               <text>If the attack is a critical hit, you automatically get the maximum result for any critical damage. If your weapon does not have an enchantment, you still deal +3 critical damage.</text>
             </section>
-            <section shade="true" indent="1">
-               <text>&#9658; If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
+            <section shade="true" indent="1"> <bullet/>
+               <text>If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -43777,11 +43584,9 @@
          <title>Shadow Coffin</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You trap your kill in a small object, which keeps the body out of sight until you are ready to release it</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Shadow</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Melee</type> <range>1</range>
             <section>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You cannot already have a corpse trapped by this power</text>
@@ -43792,7 +43597,8 @@
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering creature's corpse</text>
+               <type>Melee</type> <range>1</range>
+               <target>the triggering creature's corpse</target>
             </section>
             <section>
                <shade>true</shade>
@@ -43803,7 +43609,7 @@
                <shade>true</shade>
                <text>The target remains trapped until you release it or until the object is destroyed. To release the target into an adjacent square, you must hold the object and concentrate for 1 minute.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -44121,17 +43927,13 @@
          <title>Blood Drain</title>
          <class>Vampiric</class> <category>Attack</category>
          <fluff>Vigor rushes through your body as you drain life energy from your victim</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Healing, Shadow</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One living creature you have grabbed</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>touch</range>
+               <target>one living creature you have grabbed</target>
                <text>Ability +2 vs. Fortitude</text>
             </section>
             <section>
@@ -44164,34 +43966,33 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>3d6 + Ability modifier damage.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Mist Form</title>
          <class>Vampiric</class> <category>Utility</category> <level>6</level>
          <fluff>Your form dissolves into an eerie, billowing mist</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Polymorph, Shadow</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You turn into a cloud of mist, and gain the following effects:</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You become insubstantial.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You become insubstantial.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You gain a fly speed of 8 (hover), and when you squeeze, you can fit through any opening that allows air to pass through. Squares of daylight are difficult terrain for you.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You gain a fly speed of 8 (hover), and when you squeeze, you can fit through any opening that allows air to pass through. Squares of daylight are difficult terrain for you.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You cannot make any attacks while in this form.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You cannot make any attacks while in this form.</text>
             </section>
             <section>
                <shade>true</shade>
@@ -44202,22 +44003,21 @@
                <name>Sustain Minor:</name> <name-style>bold</name-style>
                <text>Your mist form persists until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
 
       <power>
          <title>Bloodied Regeneration</title>
          <class>Vampiric</class> <category>Utility</category> <level>10</level>
          <fluff>Your wounds call to your immortal blood, which surges to repair your body</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Healing, Shadow</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be bloodied</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -44227,7 +44027,7 @@
                <shade>true</shade>
                <text>This regeneration is suppressed until the end of your next turn if you take radiant damage.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -44270,17 +44070,13 @@
          <title>Evil Eye of the Vistani</title>
          <class>Vistani</class> <category>Attack</category>
          <fluff>You cast a baleful look upon your enemy, forcing it to cower before you</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Charm</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>10</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature that can see you</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>10</range>
+               <target>one creature that can see you</target>
                <text>Chosen ability +2 vs. Will</text>
             </section>
             <section>
@@ -44302,7 +44098,7 @@
                <shade>true</shade>
                <text>While affected, the target grants combat advantage to you and cannot willingly move closer to you.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -44441,21 +44237,20 @@
          <title>Winter's Shroud</title>
          <class>Winterkin</class> <category>Utility</category>
          <fluff>When an enemy's attack falls, snow swirls around you to whisk you to safety</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Teleportation</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>An enemy damage you with an attack</text>
             </section>
+         <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You teleport 3 squares and gain concealment until the start of the triggering enemy's next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 
@@ -44547,21 +44342,20 @@
          <title>Paladin's Wrath</title>
          <class>Tiefling</class> <category>Utility</category>
          <fluff>You stand against your foes, unleashing a howling battle cry that seems to howl from the depths of Hell</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Keyword</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>Each enemy in the burst</text>
+               <type>Close</type> <range>burst 5</range>
+               <target>each enemy in the burst</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The target is subject to your Divine Sanction until the end of your next turn.</text>
             </section>
-         </part>
+         
       </power>
    </feat>
 

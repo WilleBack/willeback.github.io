@@ -2,8 +2,9 @@
 
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:import href="../Powers/power.xsl" />
 
-<xsl:template match="/">
+<xsl:template match="/catalog">
 	<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,13 +16,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 			.feat {
-				margin:0.2cm;
-				width:98%;
-				float:left;
-				page-break-inside:avoid;
-			}
-
-			.power {
 				margin:0.2cm;
 				width:98%;
 				float:left;
@@ -164,14 +158,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<div class="listcontainer">
 		<div class="groupholder">
 			<div class="grouptitle">Feat Groups</div>
-			<xsl:for-each select="catalog/list">
+			<xsl:for-each select="list">
 				<xsl:call-template name="listgroup" />
 			</xsl:for-each>
 		</div>
 
 		<div class="groupholder">
 			<div class="grouptitle">Special Feat Categories</div>
-			<xsl:for-each select="catalog/category">
+			<xsl:for-each select="category">
 				<xsl:call-template name="listcategory" />
 			</xsl:for-each>
 		</div>
@@ -179,14 +173,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="groupholder">
 			<div class="grouptitle">Class Feats</div>
 
-			<xsl:for-each select="catalog/class">
+			<xsl:for-each select="class">
 				<xsl:call-template name="listprereq" />
 			</xsl:for-each>
 
 			<xsl:if test="count(//catalog/feat[prereq/name='any arcane' and tier='Heroic'])>0">
 				<div class="list">
 					<div class="groupname">Any arcane class - Heroic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any arcane' and tier='Heroic']">
+					<xsl:for-each select="feat[prereq/name='any arcane' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -195,7 +189,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any arcane' and tier='Paragon'])>0">
 				<div class="list">
 					<div class="groupname">Any arcane class - Paragon</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any arcane' and tier='Paragon']">
+					<xsl:for-each select="feat[prereq/name='any arcane' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -204,7 +198,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any arcane' and tier='Epic'])>0">
 				<div class="list">
 					<div class="groupname">Any arcane class - Epic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any arcane' and tier='Epic']">
+					<xsl:for-each select="feat[prereq/name='any arcane' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -213,7 +207,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Heroic'])>0">
 				<div class="list">
 					<div class="groupname">Any divine class - Heroic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any divine' and tier='Heroic']">
+					<xsl:for-each select="feat[prereq/name='any divine' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -222,7 +216,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Paragon'])>0">
 				<div class="list">
 					<div class="groupname">Any divine class - Paragon</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any divine' and tier='Paragon']">
+					<xsl:for-each select="feat[prereq/name='any divine' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -231,7 +225,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any divine' and tier='Epic'])>0">
 				<div class="list">
 					<div class="groupname">Any divine class - Epic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any divine' and tier='Epic']">
+					<xsl:for-each select="feat[prereq/name='any divine' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -240,7 +234,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Heroic'])>0">
 				<div class="list">
 					<div class="groupname">Any martial class - Heroic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any martial' and tier='Heroic']">
+					<xsl:for-each select="feat[prereq/name='any martial' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -249,7 +243,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Paragon'])>0">
 				<div class="list">
 					<div class="groupname">Any martial class - Paragon</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any martial' and tier='Paragon']">
+					<xsl:for-each select="feat[prereq/name='any martial' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -258,7 +252,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any martial' and tier='Epic'])>0">
 				<div class="list">
 					<div class="groupname">Any martial class - Epic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any martial' and tier='Epic']">
+					<xsl:for-each select="feat[prereq/name='any martial' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -267,7 +261,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Heroic'])>0">
 				<div class="list">
 					<div class="groupname">Any primal class - Heroic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any primal' and tier='Heroic']">
+					<xsl:for-each select="feat[prereq/name='any primal' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -276,7 +270,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Paragon'])>0">
 				<div class="list">
 					<div class="groupname">Any primal class - Paragon</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any primal' and tier='Paragon']">
+					<xsl:for-each select="feat[prereq/name='any primal' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -285,7 +279,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any primal' and tier='Epic'])>0">
 				<div class="list">
 					<div class="groupname">Any primal class - Epic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any primal' and tier='Epic']">
+					<xsl:for-each select="feat[prereq/name='any primal' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -294,7 +288,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Heroic'])>0">
 				<div class="list">
 					<div class="groupname">Any psionic class - Heroic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any psionic' and tier='Heroic']">
+					<xsl:for-each select="feat[prereq/name='any psionic' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -303,7 +297,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Paragon'])>0">
 				<div class="list">
 					<div class="groupname">Any psionic class - Paragon</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any psionic' and tier='Paragon']">
+					<xsl:for-each select="feat[prereq/name='any psionic' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -312,7 +306,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any psionic' and tier='Epic'])>0">
 				<div class="list">
 					<div class="groupname">Any psionic class - Epic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any psionic' and tier='Epic']">
+					<xsl:for-each select="feat[prereq/name='any psionic' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -321,7 +315,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any shadow' and tier='Heroic'])>0">
 				<div class="list">
 					<div class="groupname">Any shadow class - Heroic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any shadow' and tier='Heroic']">
+					<xsl:for-each select="feat[prereq/name='any shadow' and tier='Heroic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -330,7 +324,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any shadow' and tier='Paragon'])>0">
 				<div class="list">
 					<div class="groupname">Any shadow class - Paragon</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any shadow' and tier='Paragon']">
+					<xsl:for-each select="feat[prereq/name='any shadow' and tier='Paragon']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -339,7 +333,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:if test="count(//catalog/feat[prereq/name='any shadow' and tier='Epic'])>0">
 				<div class="list">
 					<div class="groupname">Any shadow class - Epic</div>
-					<xsl:for-each select="catalog/feat[prereq/name='any shadow' and tier='Epic']">
+					<xsl:for-each select="feat[prereq/name='any shadow' and tier='Epic']">
 						<xsl:call-template name="line" />
 					</xsl:for-each>
 				</div>
@@ -350,7 +344,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div class="groupholder">
 			<div class="grouptitle">Racial Feats</div>
 
-			<xsl:for-each select="catalog/race">
+			<xsl:for-each select="race">
 				<xsl:call-template name="listprereq" />
 			</xsl:for-each>
 		</div>
@@ -359,14 +353,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<div id="headstuff" style="width:100%; float:left; padding-left:1pt;">
 		<div class="grouptitle">Feat descriptions</div>
-		<xsl:text>Total number of feats: </xsl:text> <xsl:value-of select="count(catalog/feat)" /> <xsl:text> (</xsl:text><xsl:value-of select="count(catalog/feat[tier='Heroic'])" /> <xsl:text> heroic, </xsl:text> <xsl:value-of select="count(catalog/feat[tier='Paragon'])" /> <xsl:text> paragon, </xsl:text> <xsl:value-of select="count(catalog/feat[tier='Epic'])" /> <xsl:text> epic)</xsl:text>
+		<xsl:text>Total number of feats: </xsl:text> <xsl:value-of select="count(feat)" /> <xsl:text> (</xsl:text><xsl:value-of select="count(feat[tier='Heroic'])" /> <xsl:text> heroic, </xsl:text> <xsl:value-of select="count(feat[tier='Paragon'])" /> <xsl:text> paragon, </xsl:text> <xsl:value-of select="count(feat[tier='Epic'])" /> <xsl:text> epic)</xsl:text>
 	</div>
 
 	<div class="container">
 
-		<xsl:apply-templates match="feat">
-			<xsl:sort select="title" />
-		</xsl:apply-templates>
+		<xsl:apply-templates select="feat" />
 
 	</div>
 	</body>
@@ -505,10 +497,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</xsl:if>
 		</div> <!-- content -->
-
-		<xsl:for-each select="power">
-			<xsl:call-template name="power" />
-		</xsl:for-each>
+		
+			<xsl:apply-templates select="power" />
+		
 	</div> <!-- feat -->
 
 </xsl:template>
@@ -520,213 +511,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.1em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; max-width:60%;"><xsl:value-of select="title"/></div>
 		<div id="tier" style="width: 20%; float:right; text-align:right; font-size: 0.8em; margin:0.5em;"><xsl:value-of select="tier"/></div>
 	</div>
-
-</xsl:template>
-
-<xsl:template name="power">
-
-	<div class="power">
-		<xsl:choose>
-			<xsl:when test="part[1]/frequency = 'At-Will'">
-				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">#619869</xsl:with-param>
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:when test="part[1]/frequency = 'Encounter'">
-				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">#961334</xsl:with-param>
-				</xsl:call-template>
-			</xsl:when>
-			<xsl:when test="part[1]/frequency = 'Daily'">
-				<xsl:call-template name="createheader">
-					<xsl:with-param name="bgcolor">#4d4d4f</xsl:with-param>
-				</xsl:call-template>
-			</xsl:when>
-		</xsl:choose>
-
-
-		<div id="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
-			<i><xsl:value-of select="fluff"/></i>
-		</div>
-
-		<xsl:apply-templates select="part" />
-
-	</div>
-
-</xsl:template>
-
-<xsl:template name="createheader">
-	<xsl:param name="bgcolor">Purple</xsl:param>
-
-	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);">
-			<xsl:value-of select="title"/>
-		</div>
-		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">
-			<xsl:value-of select="class"/><br />
-			<xsl:value-of select="category"/>
-			<xsl:if test="level">
-				<xsl:text> </xsl:text><xsl:value-of select="level"/>
-			</xsl:if>
-		</div>
-	</div>
-
-</xsl:template>
-
-<xsl:template match="part">
-	<div id="part" style="width:100%; box-sizing:border-box; float:left;">
-		<xsl:if test="part-name != ''">
-			<div id="part-name" style="width:100%; padding:0.2em; font-variant:small-caps; font-size:1.1em; float:left;">
-				<i><b><xsl:value-of select="part-name"/></b></i>
-			</div>
-		</xsl:if>
-
-		<xsl:if test="not(hide-freqkey = 'true')">
-			<div id="freqkey" style="width:100%; box-sizing:border-box;  padding:0.2em; float:left; font-size:10pt; font-weight:bold;">
-				<div id="frequency" style="width:5.9em; float:left;">
-					<xsl:value-of select="frequency"/>
-				</div>
-				<xsl:if test="keyword">
-					<div id="blob" style="width: 1.2em; float: left; text-align:center;">
-						&#x25C6;
-					</div>
-					<div id="keywords" style="width:calc(100% - 7.1em); float:left;">
-						<xsl:value-of select="keyword"/>
-					</div>
-				</xsl:if>
-			</div>
-		</xsl:if>
-
-		<xsl:if test="not(hide-actrange = 'true')">
-			<div id="actrange" style="width:100%; box-sizing:border-box;  padding:0.2em; float:left;">
-				<div id="action" style="width:12.2em; float:left; ">
-					<b><xsl:value-of select="action"/></b> <xsl:text> </xsl:text>
-					<xsl:value-of select="subaction"/>
-				</div>
-				<div id="type" style="width:calc(100% - 12.2em); box-sizing:border-box; text-indent: -1em; padding-left:1em; float:left;">
-					<b><xsl:value-of select="type"/>&#160;</b>
-					<xsl:value-of select="range"/>
-					<xsl:if test="type2">
-						 or <p style="text-indent:-1em; margin-top:0em; margin-bottom:0em;">
-								<b><xsl:value-of select="type2"/>&#160;</b>
-								<xsl:value-of select="range2"/>
-							</p>
-					</xsl:if>
-				</div>
-			</div>
-		</xsl:if>
-
-		<xsl:apply-templates select="section" />
-
-	</div>
-
-</xsl:template>
-
-<xsl:template match="section">
-	<xsl:if test="augment">
-		<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1em; float:left; font-size:1.05em; font-variant:small-caps;">
-			<b>Augment <xsl:value-of select="augment" /></b>
-		</div>
-	</xsl:if>
-
-	<xsl:choose>
-		<xsl:when test="shade or @shade ='true'">
-			<xsl:choose>
-				<xsl:when test="indent='1' or @indent='1'">
-					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='2' or @indent='2'">
-					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='3' or @indent='3'">
-					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='4' or @indent='4'">
-					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="shadesection" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:choose>
-				<xsl:when test="indent='1' or @indent='1'">
-					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='2' or @indent='2'">
-					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='3' or @indent='3'">
-					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:when test="indent='4' or @indent='4'">
-					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
-					</xsl:call-template>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:call-template name="clearsection" />
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:otherwise>
-	</xsl:choose>
-
-</xsl:template>
-
-<xsl:template name="shadesection">
-	 <xsl:param name="leftindent">1.2em</xsl:param>
-
-	<div style="width:100%; background:linear-gradient(to right, #D6D6C2, #ebebe0); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:call-template name="sectioncontent" />
-	</div>
-</xsl:template>
-
-<xsl:template name="clearsection">
-	 <xsl:param name="leftindent">1.2em</xsl:param>
-
-	<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:{$leftindent}; float:left;">
-		<xsl:call-template name="sectioncontent" />
-	</div>
-</xsl:template>
-
-<xsl:template name="sectioncontent">
-	<xsl:if test="@auto='channeldivinity'">
-		<b>Channel Divinity:&#160;</b>
-		You can only use one Channel Divinity power per encounter.
-	</xsl:if>
-	<xsl:if test="@auto='no-opportunity'">
-		<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
-	</xsl:if>
-	<xsl:choose>
-		<xsl:when test="name-style='bold' or name/@style='bold'">
-			<b><xsl:value-of select="name"/>&#160;</b>
-		</xsl:when>
-		<xsl:when test="name-style='italic' or name/@style='italic'">
-			<i><xsl:value-of select="name"/>&#160;</i>
-		</xsl:when>
-		<xsl:when test="name/@style='bullet' or bullet">
-			&#9658;<xsl:text> </xsl:text>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:value-of select="name"/>
-		</xsl:otherwise>
-	</xsl:choose>
-	<xsl:value-of select="text" disable-output-escaping="yes" />
 
 </xsl:template>
 
