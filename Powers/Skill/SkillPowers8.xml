@@ -9,62 +9,55 @@
          <title>Drop and Roll</title>
          <class>Acrobatics</class> <category>Utility</category> <level>8</level>
          <fluff>You fall off a ledge, but your training allows you to dash forward after landing safely</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Skill</keyword>
             <action>Opportunity</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>You fall and take no damage from the fall</text>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You shift up to 3 squares.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Familiar Footing</title>
          <class>Acrobatics</class> <category>Utility</category> <level>6</level>
          <fluff>You are comfortable maneuvering around precarious terrain</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Until the end of the encounter, you ignore difficult terrain.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Rapid Escape</title>
          <class>Acrobatics</class> <category>Utility</category> <level>8</level>
          <fluff>You suddenly slip from your enemy's grasp, leaving it breafly vulnerable to your attacks</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
+               <name>Requirement:</name>
                <text>You must be grabbed.</text>
             </section>
-            <section>
-               <name>Effect:</name> <name-style>bold</name-style>
+            <section personal=""/>
+            <section shade="">
+               <name>Effect:</name>
                <text>You make an Acrobatics check to escape.</text>
             </section>
-            <section>
+            <section shade="">
                <text>If the check succeeds and a creature was grabbing you, the creature grants combat advantage to you until the end of your current turn.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -75,82 +68,72 @@
          <title>Incredible Stride</title>
          <class>Athletics</class> <category>Utility</category> <level>8</level>
          <fluff>You move with amazing swiftness</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill, Stance</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You assume the Incredible Stride stance.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>Until the stance ends, you gain a +4 power bonus to speed.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Rapid Escape</title>
          <class>Athletics</class> <category>Utility</category> <level>8</level>
          <fluff>You suddenly push away from your enemy's grasp, leaving it breafly vulnerable to your attacks</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
+               <name>Requirement:</name>
                <text>You must be grabbed.</text>
             </section>
-            <section>
-               <name>Effect:</name> <name-style>bold</name-style>
+            <section personal=""/>
+            <section shade="">
+               <name>Effect:</name>
                <text>You make an Athletics check to escape.</text>
             </section>
-            <section>
+            <section shade="">
                <text>If the check succeeds and a creature was grabbing you, the creature grants combat advantage to you until the end of your current turn.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Strength Against Strength</title>
          <class>Athletics</class> <category>Utility</category> <level>8</level>
          <fluff>You dramatically flourish your weapon after a failure to hit your foe, hoping the sweep it off its feet</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Melee</type> <range>touch</range>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>You miss an enemy with a melee attack</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
-            </section>
-            <section>
-               <name>Check:</name> <name-style>bold</name-style>
+               <name>Check:</name>
+               <type>Melee</type> <range>touch</range>
+               <target>the triggering enemy</target>
                <text>Athletics vs. Fortitude</text>
             </section>
             <section>
                <shade>true</shade>
-               <name>Success:</name> <name-style>bold</name-style>
+               <name>Success:</name>
                <text>Choose one of the following two effects:</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You knock the target prone.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You knock the target prone.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You slide the target 1 square.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You slide the target 1 square.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -161,54 +144,49 @@
          <title>Improvisational Ritualist</title>
          <class>Bluff</class> <category>Utility</category> <level>8</level>
          <fluff>As you perform a ritual, you intersperse made up words and improvise components, using odds and ends at hand</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Part of Ritual</action>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
+               <name>Requirement:</name>
                <text>You use this power as part of casting a ritual of one-half your level or lower</text>
             </section>
-            <section>
-               <name>Effect:</name> <name-style>bold</name-style>
+            <section personal=""/>
+            <section shade="">
+               <name>Effect:</name>
                <text>Choose one of the following two benefits:</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; You need to expend only half of the ritual's gold piece component cost, though any focus item must still meet the minimum cost.</text>
+            <section shade="">
+               <indent>1</indent> <bullet/>
+               <text>You need to expend only half of the ritual's gold piece component cost, though any focus item must still meet the minimum cost.</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; You can use your Bluff check modifier in place of any other skill check modifier the ritual.</text>
+            <section shade="">
+               <indent>1</indent> <bullet/>
+               <text>You can use your Bluff check modifier in place of any other skill check modifier the ritual.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Stall Tactics</title>
          <class>Bluff</class> <category>Utility</category> <level>8</level>
          <fluff>Your fast-talking causes your enemies to hesitate for a crucial moment</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Ranged</type> <range>sight</range>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>Initiative is rolled</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>Each enemy that can see and hear you</text>
+               <type>Ranged</type> <range>sight</range>
+               <target>each enemy that can see and hear you</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Each target's initiative is reduced by 10.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -219,69 +197,67 @@
          <title>Befriend</title>
          <class>Diplomacy</class> <category>Utility</category> <level>8</level>
          <fluff>You know the right things to say to make people like you</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
+            <section auto="no-opportunity"/>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One nonhostile creature in the burst that has Intelligence 5 or higher</text>
+               <name>Target:</name>
+               <type>Ranged</type> <range>5</range>
+               <target>one nonhostile creature in range that has Intelligence 5 or higher</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Until the end of the encounter, you gain a +4 power bonus to Diplomacy checks against the target, and a +2 power bonus to Bluff checks against the target.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Cry for Mercy</title>
          <class>Diplomacy</class> <category>Utility</category> <level>8</level>
          <fluff>With pleading words and gestures, you discourage your enemies from striking down the wounded</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
+            <section auto="no-opportunity"/>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>You or one ally in the burst; the target must be bloodied</text>
+               <name>Target:</name>
+               <type>Ranged</type> <range>5</range>
+               <target>you, or one ally in range; the target must be bloodied</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Until the end of your next turn or until the target is no longer bloodied, the target's movement does not provoke <![CDATA[<i>opportunity attacks</i>]]>, and the target gains a +4 power bonus to all defenses.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>If the target makes an attack before the effect ends, his or her movement again provokes and the power bonus to defenses becomes +2 instead.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Noble Sacrifice</title>
          <class>Diplomacy</class> <category>Utility</category> <level>8</level>
          <fluff>You demand an enemy face you to distract it from your wounded friend, who is inspired by your sacrifice</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Charm, Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Close</type> <range>burst 3</range>
+            <section auto="no-opportunity"/>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
-               <text>An enemy within 3 squares of you makes a melee attack against a bloodied ally adjacent to you</text>
+               <name>Trigger:</name>
+               <text>An enemy makes a melee attack against a bloodied ally adjacent to you</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy in the burst</text>
+               <name>Target:</name>
+               <type>Special</type>
+               <text>The triggering enemy in range</text>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>The target makes the triggering attack against you instead of the ally.</text>
+               <name>Effect:</name>
+               <text>The target the triggering attack against you instead of the ally. This happens even if you would normally be outside of the attack's reach.</text>
             </section>
             <section>
                <shade>true</shade>
@@ -297,7 +273,6 @@
                <name>Level 21:</name> <name-style>italic</name-style>
                <text>9 + your Charisma modifier temporary hit points.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -308,110 +283,99 @@
          <title>Immersed in Darkness</title>
          <class>Dungeoneering</class> <category>Utility</category> <level>8</level>
          <fluff>You know how to stay concealed, even from creatures that can see in the dark</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
+               <name>Requirement:</name>
                <text>You must be in dim light or darkness.</text>
             </section>
+            <section personal=""/>
             <section>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You become invisible until the start of your next turn, until you attack, or until you enter bright light, whichever comes first.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Insane Logic</title>
          <class>Dungeoneering</class> <category>Utility</category> <level>8</level>
          <fluff>You abandon conventions of the world's natural laws to break through an aberrant creature's defenses</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Choose one aberrant creature that you can see within 5 squares of you.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>You make a Dungeoneering check to determine that creature's resistances and vulnerabilities. On success, in addition to the normal result, your attacks ignore the creature's resistances until the end of the encounter.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Spider Dodge</title>
          <class>Dungeoneering</class> <category>Utility</category> <level>8</level>
          <fluff>With your back against a wall, you trick your enemy into misjudging and striking the wall as you duck out of the way</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>An enemy hits you with a melee attack when you are adjacent to blocking terrain</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You gain a bonus to all defenses against the triggering attack equal to 1 + one-half your Dexterity modifier.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>The Lightest of Tremors</title>
          <class>Dungeoneering</class> <category>Utility</category> <level>8</level>
          <fluff>You can navigate in complete darkness by feeling the tremors in the ground</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You gain tremorsense 5 until the end of your next turn.</text>
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
-               <name>Sustain Minor:</name> <name-style>bold</name-style>
+               <name>Sustain Minor:</name>
                <text>The tremorsense persists until the end of your next turn.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Trap Sense</title>
          <class>Dungeoneering</class> <category>Utility</category> <level>8</level>
          <fluff>As the trap springs, your experience in dealing with such hazards lets you step aside and leave a foe at the trap's mercy</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>A trap or hazard makes an attack against you</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You gain a +4 power bonus to all defenses against the triggering attack.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>If the attack was a melee or a ranged attack and it misses you, the trap rerolls the attack against an enemy adjacent to you.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -422,77 +386,64 @@
          <title>Prepare for the Pain</title>
          <class>Endurance</class> <category>Utility</category> <level>8</level>
          <fluff>Your body recalls all the pain and suffering it has already endured, preparing take on even more</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You spend a healing surge to gain the following benefits until the end of the encounter:</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You cannot be weakened.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You cannot be weakened.</text>
             </section>
             <section>
-               <shade>true</shade> <indent>1</indent>
-               <text>&#9658; You gain resist 10 to all damage.</text>
+               <shade>true</shade> <indent>1</indent> <bullet/>
+               <text>You gain resist 10 to all damage.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Reactive Resurgence</title>
          <class>Endurance</class> <category>Utility</category> <level>8</level>
          <fluff>The attack was well placed, but you choose not to let it affect you</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Healing, Skill</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>You become bloodied</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You spend a healing surge to regain hit points equal to your healing surge value.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Steeled Against It</title>
          <class>Endurance</class> <category>Utility</category> <level>8</level>
          <fluff>Once stung by your enemy's attack, you harden your body and mind against such future pain</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
-               <text>You take damage of a specific type or combination of types</text>
+               <name>Trigger:</name>
+               <text>You take damage that has one or more damage types</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>You gain resist 5 against the triggering damage type or types until the end of the encounter. If you already have resistance to that damage type or types, that resistance instead increases by 5 until the end if the encounter.</text>
+               <name>Effect:</name>
+               <text>You gain resist against the triggering damage type or types until the end of the encounter. The resist equals one-half your level.</text>
             </section>
-            <section>
-               <shade>true</shade> <indent>1</indent>
-               <name>Level 11:</name> <name-style>italic</name-style>
-               <text>Gain resist 10 or increase by 5.</text>
+            <section shade="">
+               <text>If you already have resistance to that damage type or types, that resistance instead increases by 5 until the end if the encounter.</text>
             </section>
-            <section>
-               <shade>true</shade> <indent>1</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text>Gain resist 15 or increase by 10.</text>
-            </section>
-         </part>
       </power>
    </category>
 
@@ -503,19 +454,17 @@
          <title>Plague Doctor</title>
          <class>Heal</class> <category>Utility</category> <level>8</level>
          <fluff>You have gathered extensive knowledge regarding all manner of disease and how to treat them</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Skill</keyword>
-            <action>Special</action>
-            <type>Melee</type> <range>touch</range>
+            <action>Extended</action> <subaction>Action</subaction>
             <section>
-               <shade>true</shade>
-               <name>Requirement:</name> <name-style>bold</name-style>
+               <name>Requirement:</name>
                <text>You use this power as part of the Treat Disease use of the Heal skill</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature infected by a disease</text>
+               <name>Target:</name>
+               <type>Melee</type> <range>touch</range>
+               <target>one creature infected by a disease</target>
             </section>
             <section>
                <indent>1</indent>
@@ -536,63 +485,58 @@
                <shade>true</shade>
                <text>You also count as automatically succeeding on <![CDATA[<i>aid another</i>]]> for the Endurance check (or other check) the target makes against the disease.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Spot Weakness</title>
          <class>Heal</class> <category>Utility</category> <level>8</level>
          <fluff>You pinpoint a weakness and direct your next attack toward it</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>sight</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
+               <type>Ranged</type> <range>sight</range>
+               <target>one creature</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You gain a +4 power bonus to the first damage roll you make against the target before the end of your next turn.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Time Out</title>
          <class>Heal</class> <category>Utility</category> <level>8</level>
          <fluff>You grant your comrade a moment of respite</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>1</range>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One ally adjacent to you</text>
+               <name>Target:</name>
+               <type>Melee</type> <range>1</range>
+               <target>one ally adjacent to you</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>The target regains the use of his or her <![CDATA[<i>second wind</i>]]>.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>If the target has not expended his or her <![CDATA[<i>second wind</i>]]>, he or she instead regains additional hit points equal to your Wisdom modifier if he or she uses it before the end of his or her next turn.</text>
+               <text>If the target has not expended his or her <![CDATA[<i>second wind</i>]]>, he or she instead regains additional hit points equal to 1d6 + your Wisdom modifier if he or she uses it before the end of his or her next turn.</text>
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
                <name>Level 11:</name> <name-style>italic</name-style>
-               <text>Equal to 1d6 + your Wisdom modifier.</text>
+               <text>Equal to 2d6 + your Wisdom modifier.</text>
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
                <name>Level 21:</name> <name-style>italic</name-style>
-               <text>Equal to 2d8 + your Wisdom modifier.</text>
+               <text>Equal to 3d8 + your Wisdom modifier.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -603,46 +547,42 @@
          <title>Lessons in History</title>
          <class>History</class> <category>Utility</category> <level>8</level>
          <fluff>As you watch your allies, you focus and draw upon past lessons to offer a few pointers to each</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>Each ally in the burst</text>
+               <name>Target:</name>
+               <type>Close</type> <range>burst 5</range>
+               <target>each ally in the burst</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You spend a healing surge to allow each target to regain one expended encounter utility power of level 10 or lower.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Tactician's Measure</title>
          <class>History</class> <category>Utility</category> <level>8</level>
          <fluff>The enemies' movements are similar to those used in a skirmish you once studied, so you know how to outmaneuver one of them</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Melee</type> <range>1</range>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>An enemy enters a square adjacent to either you or to an ally adjacent to you</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>You or the ally, whichever the enemy moved adjacent to</text>
+               <name>Target:</name>
+               <type>Melee</type> <range>1</range>
+               <target>you or the ally, whichever the triggering enemy moved adjacent to</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>The target shifts 1 square, and gains a +2 bonus to all defenses against the triggering enemy until the end of the triggering enemy's next turn.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -653,42 +593,38 @@
          <title>Insightful Comment</title>
          <class>Insight</class> <category>Utility</category> <level>8</level>
          <fluff>You assess the situation and offer words of advice that guide the conversation in a fruitful direction</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>You and each ally in the burst</text>
+               <name>Target:</name>
+               <type>Close</type> <range>burst 5</range>
+               <target>you and each ally in the burst</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Until the end of your next turn, each target gains a power bonus to Bluff checks, Diplomacy checks, and Intimidate checks. The bonus equals one-half your Wisdom modifier.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Prescient Defense</title>
          <class>Insight</class> <category>Utility</category> <level>8</level>
          <fluff>You anticipate your foe's attack and ably defend yourself</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>You are hit by a creature; you must be aware of the creature, though you don't necessarily need to see it</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You gain a +2 bonus to all defenses against the triggering attack.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -699,46 +635,42 @@
          <title>Snap Out of It!</title>
          <class>Intimidate</class> <category>Utility</category> <level>8</level>
          <fluff>A smack across the face brings your ally back to his or her senses</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One ally; the target must be subject to a dazing, dominating or stunning effect that a save can end, or any Charm or Fear effect</text>
+               <name>Target:</name>
+               <type>Melee</type> <range>touch</range>
+               <target>one ally; the target must be subject to a dazing, dominating or stunning effect that a save can end, or any Charm or Fear effect</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>The target makes a saving throw against one qualifying effect.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Stall Tactics</title>
          <class>Intimidate</class> <category>Utility</category> <level>8</level>
          <fluff>Your fearsome words cause your enemies to hesitate for a crucial moment</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Ranged</type> <range>sight</range>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>Initiative is rolled</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>Each enemy that can see and hear you</text>
+               <name>Target:</name>
+               <type>Ranged</type> <range>sight</range>
+               <target>each enemy that can see and hear you</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Each target's initiative is reduced by 10.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -749,42 +681,38 @@
          <title>Healing Herbs</title>
          <class>Nature</class> <category>Utility</category> <level>8</level>
          <fluff>You aid a wounded companion by applying a poultice of healing herbs</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Healing, Skill</keyword>
             <action>Short</action> <subaction>Rest</subaction>
-            <type>Melee</type> <range>touch</range>
             <section>
-               <name>Targe:</name> <name-style>bold</name-style>
-               <text>One ally; the target cannot perform actions as part of the rest</text>
+               <name>Targe:</name>
+               <type>Melee</type> <range>touch</range>
+               <target>one ally; the target cannot perform actions as part of the rest</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You make a Nature check. The target regains hit points equal to one-half the result of your check.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Spot the Path</title>
          <class>Nature</class> <category>Utility</category> <level>8</level>
          <fluff>Having walked miles of broken trails, you know how to find the safest way through the most treacherous terrain</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>You and each ally in the burst</text>
+               <name>Target:</name>
+               <type>Close</type> <range>burst 5</range>
+               <target>you and each ally in the burst</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Each target ignores difficult terrain until the end of your next turn.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -795,84 +723,76 @@
          <title>Focused Sight</title>
          <class>Perception</class> <category>Utility</category> <level>8</level>
          <fluff>The noise of battle grows faint, and the flash of blade and spell fades away as you focus all your senses on your target</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>10</range>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
+               <name>Target:</name>
+               <type>Ranged</type> <range>10</range>
+               <target>one creature</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Until the end of your next turn, you do not take penalties to attack rolls against the target because of any cover, superior cover, concealment or total concealment the target might have.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Perfect Sight</title>
          <class>Perception</class> <category>Utility</category> <level>8</level>
          <fluff>Enemies might hide, but once your find a trace of them, there's no escaping you</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Until the end of your next turn, you gain your choice of either blindsight 5 or blindsense 10.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Spot Weakness</title>
          <class>Perception</class> <category>Utility</category> <level>8</level>
          <fluff>You pinpoint a weakness and direct your next attack toward it</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>sight</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
+               <type>Ranged</type> <range>sight</range>
+               <target>one creature</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You gain a +4 power bonus to the first damage roll you make against the target before the end of your next turn.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Uncanny Instincts</title>
          <class>Perception</class> <category>Utility</category> <level>8</level>
          <fluff>Your keen senses guide your and your friend's reactions</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Close</type> <range>burst 5</range>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>You would roll initiative</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>You and one ally in the burst who can hear or see you; neither target can have rolled initiative yet</text>
+               <name>Target:</name>
+               <type>Close</type> <range>burst 5</range>
+               <target>you and one ally in the burst who can hear or see you; neither target can have rolled initiative yet</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>Each target uses your passive Perception in place of making an initiative check. You choose which of you acts first.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -883,22 +803,21 @@
          <title>Assurance of Prophecy</title>
          <class>Religion</class> <category>Utility</category> <level>8</level>
          <fluff>You call out verses of prophecy, and the knowledge is on your side renews your ally's vigor</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
-            <type>Close</type> <range>burst 5</range>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>An ally within 5 squares of you spends a healing surge</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering ally</text>
+               <type>Special</type>
+               <target>the triggering ally</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>The target gains 3d6 temporary hit points.</text>
             </section>
             <section>
@@ -909,40 +828,39 @@
             <section>
                <shade>true</shade> <indent>1</indent>
                <name>Level 21:</name> <name-style>italic</name-style>
-               <text>3d12 temporary hit points.</text>
+               <text>4d10 temporary hit points.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Conviction</title>
          <class>Religion</class> <category>Utility</category> <level>8</level>
          <fluff>You whisper a prayer for aid to overcome hardship</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>You gain a +5 bonus to the first saving throw you make before the start of your next turn.</text>
+               <name>Effect:</name>
+               <text>You can roll twice when making the first saving throw before the start of your next turn. </text>
             </section>
-         </part>
+            <section shade="">
+            <text>If the effect has has the Charm of Fear keyword, you also gain a +2 bonus to the saving throw.</text>
+         </section>
       </power>
 
       <power>
          <title>Recitation</title>
          <class>Religion</class> <category>Utility</category> <level>6</level>
          <fluff>You echo your allies' prayers to give them strength</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Aura, Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You activate an Aura 1 that lasts until the end of your next turn.</text>
             </section>
             <section>
@@ -951,10 +869,9 @@
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
-               <name>Sustain Minor:</name> <name-style>bold</name-style>
+               <name>Sustain Minor:</name>
                <text>The aura persists until the end of your next turn.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -965,67 +882,60 @@
          <title>Crowd Cover</title>
          <class>Stealth</class> <category>Utility</category> <level>8</level>
          <fluff>You keep enemies between you and their companion, using them as a shield</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>An enemy makes a ranged attack roll against you</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Enemies adjacent to you and in the attack's way grant cover to you against the triggering attack.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>If the triggering attack misses, the attacker rerolls it against one enemy of its choice that granted cover to you against it.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Immersed in Darkness</title>
          <class>Stealth</class> <category>Utility</category> <level>8</level>
          <fluff>You know how to stay concealed, even from creatures that can see in the dark</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be in dim light or darkness.</text>
             </section>
-            <section>
+            <section personal=""/>
+            <section shade="">
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You become invisible until the start of your next turn, until you attack, or until you enter bright light, whichever comes first.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Persistent Tail</title>
          <class>Stealth</class> <category>Utility</category> <level>8</level>
          <fluff>You follow your prey unseen, waiting for the best time to strike</fluff>
-         <part>
             <frequency>At-Will</frequency>
             <keyword>Skill</keyword>
             <action>Move</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Choose one creature you can see and that you have cover or concealment against.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>The first time the target moves before the start of your next turn, you can move your speed as an opportunity reaction. If you end the move with cover or concealment against the target, you can make a Stealth check to become hidden and don't take -5 penalty for moving more than 2 squares.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -1036,42 +946,38 @@
          <title>Crowd Cover</title>
          <class>Streetwise</class> <category>Utility</category> <level>8</level>
          <fluff>You keep enemies between you and their companion, using them as a shield</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>An enemy makes a ranged attack roll against you</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>Enemies adjacent to you and in the attack's way grant cover to you against the triggering attack.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>If the triggering attack misses, the attacker rerolls it against one enemy of its choice that granted cover to you against it.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Navigate Crowds</title>
          <class>Streetwise</class> <category>Utility</category> <level>8</level>
          <fluff>A life spent in the city trained you to maneuver through crowds</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Move</action> <subaction>Action</subaction>
-            <type>Personal</type>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
-               <text>You shift your speed. During this movement, you can move through enemies' spaces.</text>
+               <name>Effect:</name>
+               <text>You shift a number of squares equal to 1 + one-half your speed. During this movement, you can move through enemies' spaces.</text>
             </section>
-         </part>
       </power>
    </category>
 
@@ -1082,50 +988,46 @@
          <title>Disruptive Stunt</title>
          <class>Thievery</class> <category>Utility</category> <level>8</level>
          <fluff>With a flurry of taps, shoves, and nudges, you push past your foe, leaving it flustered</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Move</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>1</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature adjacent to you</text>
+               <type>Melee</type> <range>1</range>
+               <target>one creature adjacent to you</target>
             </section>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You move your speed through the target's space to a square adjacent to it. This movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> from the target.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>In addition, the target takes a -2 penalty to all attack rolls until the start of your next turn.</text>
             </section>
-         </part>
       </power>
 
       <power>
          <title>Trap Sense</title>
          <class>Thievery</class> <category>Utility</category> <level>8</level>
          <fluff>As the trap springs, your experience in dealing with such hazards lets you step aside and leave a foe at the trap's mercy</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
-               <name>Trigger:</name> <name-style>bold</name-style>
+               <name>Trigger:</name>
                <text>A trap or hazard makes an attack against you</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
-               <name>Effect:</name> <name-style>bold</name-style>
+               <name>Effect:</name>
                <text>You gain a +4 power bonus to all defenses against the triggering attack.</text>
             </section>
             <section>
                <shade>true</shade>
                <text>If the attack was a melee or a ranged attack and it misses you, the trap rerolls the attack against an enemy adjacent to you.</text>
             </section>
-         </part>
       </power>
    </category>
 
