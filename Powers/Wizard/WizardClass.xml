@@ -63,13 +63,10 @@
 				<title>Orb of Deception</title>
 				<class>Wizard</class> <category>Implement Utility</category>
 				<fluff>You see a flaw in the reflection of your spell in your implement, and move to counter it</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Arcane, Implement</keyword>
 					<action>Free</action> <subaction>Interrupt</subaction>
-					<type>Special</type>
 					<section>
-						<shade>true</shade>
 						<name>Requirement:</name> <name-style>bold</name-style>
 						<text>You must be wielding an orb implement</text>
 					</section>
@@ -78,7 +75,8 @@
 						<text>You miss an enemy with a Wizard Illusion or Enchantment power</text>
 					</section>
 					<section>
-						<name>Target:</name> <name-style>bold</name-style>
+						<name>Target:</name>
+						<type>Special</type>
 						<text>One creature within 3 squares of the missed target that is not a target of the triggering attack</text>
 					</section>
 					<section>
@@ -86,7 +84,6 @@
 						<name>Effect:</name> <name-style>bold</name-style>
 						<text>You repeat the triggering attack against the target, with a bonus to the attack roll equal to your Charisma modifier.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -100,18 +97,16 @@
 				<title>Orb of Imposition</title>
 				<class>Wizard</class> <category>Implement Utility</category>
 				<fluff>You tether your spell to your implement, forcing it to last longer</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Arcane, Implement</keyword>
 					<action>Free</action> <subaction>Action</subaction>
-					<type>Special</type>
 					<section>
-						<shade>true</shade>
 						<name>Requirement:</name> <name-style>bold</name-style>
 						<text>You must be wielding an orb implement</text>
 					</section>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
+						<type>Special</type>
 						<text>One of your active effects</text>
 					</section>
 					<section>
@@ -120,14 +115,13 @@
 						<text>You can apply one of the following effects to the target:</text>
 					</section>
 					<section>
-						<shade>true</shade> <indent>1</indent>
-						<text>&#9658; If the target lasts until a successful saving throw, the next saving throw against it takes a penalty equal to your Wisdom modifier.</text>
+						<shade>true</shade> <indent>1</indent> <bullet/>
+						<text>If the target lasts until a successful saving throw, the next saving throw against it takes a penalty equal to your Wisdom modifier.</text>
 					</section>
 					<section>
-						<shade>true</shade> <indent>1</indent>
-						<text>&#9658; If the target is from a 1st-level at-will attack and would end at the end of your current turn, it instead ends at the end of your next turn.</text>
+						<shade>true</shade> <indent>1</indent> <bullet/>
+						<text>If the target is from a 1st-level at-will attack and would end at the end of your current turn, it instead ends at the end of your next turn.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -141,13 +135,10 @@
 				<title>Staff of Defense</title>
 				<class>Wizard</class> <category>Implement Utility</category>
 				<fluff>You release the abjurative power of your staff just as an attack is about to hit you</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Arcane, Implement</keyword>
 					<action>Immediate</action> <subaction>Interrupt</subaction>
-					<type>Personal</type>
 					<section>
-						<shade>true</shade>
 						<name>Requirement:</name> <name-style>bold</name-style>
 						<text>You must be wielding a staff implement</text>
 					</section>
@@ -155,12 +146,12 @@
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>An attack hits you</text>
 					</section>
+					<section personal=""/>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
 						<text>You gain a bonus to all defenses against the triggering attack equal to your Constitution modifier.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -174,13 +165,10 @@
 				<title>Tome of Binding</title>
 				<class>Wizard</class> <category>Implement Utility</category>
 				<fluff>Flipping through your tome, you locate the information needed for a more deadly summon</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Arcane, Implement</keyword>
 					<action>Free</action> <subaction>Interrupt</subaction>
-					<type>Special</type>
 					<section>
-						<shade>true</shade>
 						<name>Requirement:</name> <name-style>bold</name-style>
 						<text>You must be wielding a tome implement</text>
 					</section>
@@ -188,12 +176,12 @@
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>You use an arcane Summoning power</text>
 					</section>
+					<section special=""/>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
 						<text>All creatures summoned by the triggering power gain a bonus to damage rolls equal to your Constitution modifier.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -208,19 +196,15 @@
 				<title>Tome of Readiness</title>
 				<class>Wizard</class> <category>Implement Utility</category>
 				<fluff>You quickly open your tome to the right page to take advantage of a specialized spell</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Arcane, Implement</keyword>
 					<action>Free</action> <subaction>Action</subaction>
-					<type>Personal</type>
 					<section>
-						<shade>true</shade>
 						<name>Requirement:</name> <name-style>bold</name-style>
 						<text>You must be wielding a tome implement</text>
 					</section>
 					<section>
-						<name>Requirement:</name> <name-style>bold</name-style>
-						<text>You must have at least one unexpended wizard encounter attack of your tome spell's level or higher</text>
+						<text>You must also have at least one unexpended wizard encounter attack of your tome spell's level or higher</text>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -231,7 +215,6 @@
 						<shade>true</shade>
 						<text>If you have not used your tome spell before the end of the encounter, it is automatically expended.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -245,13 +228,10 @@
 				<title>Wand of Accuracy</title>
 				<class>Wizard</class> <category>Implement utility</category>
 				<fluff>You use your wand to gain pinpoint accuracy with a spell</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Arcane, Implement</keyword>
 					<action>Free</action> <subaction>Interrupt</subaction>
-					<type>Special</type>
 					<section>
-						<shade>true</shade>
 						<name>Requirement:</name> <name-style>bold</name-style>
 						<text>You must be wielding a wand implement</text>
 					</section>
@@ -259,12 +239,12 @@
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>You make an attack roll with an Arcane attack</text>
 					</section>
+					<section personal=""/>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
 						<text>You gain a bonus to the triggering attack roll equal to your Dexterity modifier.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -303,45 +283,42 @@
 			<title>Chameleon's Mask</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You pull strands of shadown, blending your colors and sounds with your surroundings to help you hide from your enemy's sight and hearing</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Arcane, Illusion</keyword>
 				<action>Free</action> <subaction>Interrupt</subaction>
-				<type>Personal</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>You make a Stealth check</text>
 				</section>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>You are considered trained in Stealth for the triggering check. If you are already trained in Stealth, you can instead roll twice and take the higher result.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Disrupt Undead</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>A simple gesture causes the darkness powering and protecting an undead creature to briefly unravel</fluff>
-			<part>
 				<frequency>At-Will</frequency>
 				<keyword>Arcane, Necromancy</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Ranged</type> <range>5</range>
-				<section>
-					<indent>4</indent>
-					<name>Level 11:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Ranged</b>]]> 7</text>
-				</section>
-				<section>
-					<indent>4</indent>
-					<name>Level 21:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Ranged</b>]]> 10</text>
-				</section>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>One undead creature</text>
+					<type>Ranged</type> <range>5</range>
+					<target>one undead creature</target>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Ranged</i>]]> 7</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Ranged</i>]]> 10</text>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -358,31 +335,29 @@
 					<name>Level 21:</name> <name-style>italic</name-style>
 					<text>Reduced by 15.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Ghost Sound</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>With a wink, you create an illusory sound that emanates from a distant location</fluff>
-			<part>
 				<frequency>At-Will</frequency>
 				<keyword>Arcane, Illusion</keyword>
 				<action>Standard</action> <subaction>Action</subaction>
-				<type>Ranged</type> <range>10</range>
-				<section>
-					<indent>4</indent>
-					<name>Level 11:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Ranged</b>]]> 15</text>
-				</section>
-				<section>
-					<indent>4</indent>
-					<name>Level 21:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Ranged</b>]]> 20</text>
-				</section>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>One object or unoccupied square</text>
+					<type>Ranged</type> <range>10</range>
+					<target>One object or unoccupied square</target>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Ranged</i>]]> 15</text>
+				</section>
+				<section>
+					<indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Ranged</i>]]> 20</text>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -393,21 +368,19 @@
 					<shade>true</shade>
 					<text>You can produce nonvocal sounds such as the ringing of a sword blow, jingling armor, or scraping stone. If you produce a whisper, you can make it quiet enough that only creatures adjacent to the target can hear the words.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Light</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>With a wave of your hand, you cause a bright light to appear on the tip of your staff, upon some other object, or in a nearby space</fluff>
-			<part>
 				<frequency>At-Will</frequency>
 				<keyword>Arcane</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Ranged</type> <range>5</range>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>One object or unoccupied space</text>
+					<type>Ranged</type> <range>5</range>
+					<target>one object or unoccupied space</target>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -428,32 +401,30 @@
 					<shade>true</shade>
 					<text>The light fills the target's space and all squares within 4 squares of it with bright light, and dim light for further 2 squares. You can put out the light as a free action. </text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Mage Hand</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You gesture toward an object nearby, and a spectral floating hand lifts the object into the air and moves it where you wish</fluff>
-			<part>
 				<frequency>At-Will</frequency>
 				<keyword>Arcane, Conjuration</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Ranged</type> <range>5</range>
-				<section>
-					<indent>4</indent>
-					<name>Level 11:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Ranged</b>]]> 7</text>
-				</section>
-				<section>
-					<indent>4</indent>
-					<name>Level 21:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Ranged</b>]]> 10</text>
-				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
+					<type>Ranged</type> <range>5</range>
 					<text>You conjure a spectral, floating hand in an unoccupied square within range. The hand lasts until the end of your next turn or until you use this power again.</text>
+				</section>
+				<section shade="">
+					<indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Ranged</i>]]> 7</text>
+				</section>
+				<section shade="">
+					<indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text><![CDATA[<i>Ranged</i>]]> 10</text>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -488,50 +459,48 @@
 					<name>Free Action:</name> <name-style>bold</name-style>
 					<text>The hand drops the object it is holding.</text>
 				</section>
-				<section>
+				<section shade="" indent="1">
 					<name>Sustain Minor:</name> <name-style>bold</name-style>
 					<text>The hand persists until the end of your next turn.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Prestidigitation</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You perform an amusing magical trick, such as creating a dancing wisp of light, freshening a wilting flower, making a coin invisible, or warming a cold drink</fluff>
-			<part>
 				<frequency>At-Will</frequency>
 				<keyword>Arcane</keyword>
 				<action>Standard</action> <subaction>Action</subaction>
-				<type>Ranged</type> <range>2</range>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
+					<type>Ranged</type> <range>2</range>
 					<text>You accomplish one of the following effects in range:</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Change the color of all items in 1 cubic foot until the stroke of midnight.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Change the color of all items in 1 cubic foot until the stroke of midnight.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Create a brief, harmless sensory effect, such as a shower of sparks, a puff of wind, faint music, or a strong odor.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Create a brief, harmless sensory effect, such as a shower of sparks, a puff of wind, faint music, or a strong odor.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Clean or soil all items in 1 cubic foot.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Clean or soil all items in 1 cubic foot.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Instantly light (or snuff out) a candle, torch, or a small campfire.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Instantly light (or snuff out) a candle, torch, or a small campfire.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Chill, warm, or flavor up to 1 pound of nonliving material for up to 1 hour.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Chill, warm, or flavor up to 1 pound of nonliving material for up to 1 hour.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Make a small mark or symbol appear on a surface for up to 1 hour.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Make a small mark or symbol appear on a surface for up to 1 hour.</text>
 				</section>
 				<section>
 					<shade>true</shade> <indent>2</indent>
@@ -544,12 +513,12 @@
 					<text>Up to 8 hours.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Produce out of nothingness a small item or image that exists until the end of your next turn.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Produce out of nothingness a small item or image that exists until the end of your next turn.</text>
 				</section>
 				<section>
-					<shade>true</shade> <indent>1</indent>
-					<text>&#9658; Make a small, handheld item invisible until the end of your next turn.</text>
+					<shade>true</shade> <indent>1</indent> <bullet/>
+					<text>Make a small, handheld item invisible until the end of your next turn.</text>
 				</section>
 				<section>
 					<name>Special:</name> <name-style>bold</name-style>
@@ -568,18 +537,16 @@
 					<name>Level 21:</name> <name-style>italic</name-style>
 					<text>Up to four effects.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Spook</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You gather shadows to yourself, so that when you speak, your words drip with menace</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Arcane, Nethermancy</keyword>
 				<action>Free</action> <subaction>Action</subaction>
-				<type>Personal</type>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
@@ -589,39 +556,35 @@
 					<shade>true</shade>
 					<text>You must either make the check or start the action for making the check on this turn.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Spring Step</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You enhance the target's musculature, giving it greater leaping power</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Arcane, Transmutation</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Ranged</type> <range>5</range>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>You or one ally</text>
+					<type>Ranged</type> <range>5</range>
+					<target>you or one ally</target>
 				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>The target is considered trained in the next Athletics check to jump or he or she makes before the start of your next turn. If the target is already trained in Athletics, he or she can roll twice and take the higher result.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Suggestion</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You weave arcane power through your words, infusing each phrase with persuasive magic</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Arcane, Enchantment</keyword>
 				<action>Free</action> <subaction>Action</subaction>
-				<type>Personal</type>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
@@ -631,35 +594,31 @@
 					<shade>true</shade>
 					<text>You must either make the check or start the action for making the check on this turn.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Water Stride</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You stride across a liquid surface as if it were solid ground</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Arcane</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Personal</type>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>Until the end of your next turn, you can treat liquid surfaces as if they were solid ground but difficult terrain.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Whispering Wind</title>
 			<class>Wizard</class> <category>Utility</category>
 			<fluff>You speak a message to the wind and let it carry your words to an audience you choose</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Arcane</keyword>
 				<action>Standard</action> <subaction>Action</subaction>
-				<type>Personal</type>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
@@ -683,7 +642,6 @@
 					<name>Special:</name> <name-style>bold</name-style>
 					<text>You cannot regain the use of this power before the message has been delivered.</text>
 				</section>
-			</part>
 		</power>
 
 	</feature>
@@ -705,14 +663,13 @@
 				<title>Conjurer's Barrier</title>
 				<class>Wizard</class> <category>Utility</category>
 				<fluff>You bring forth a barrier to impede your enemies' movement</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Conjuration, Implement, Zone</keyword>
 					<action>Minor</action> <subaction>Action</subaction>
-					<type>Area</type> <range>wall 2 within 10 squares</range>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
+						<type>Area</type> <range>wall 2 within 10 squares</range>
 						<text>Choose either physical barrier or damaging barrier:</text>
 					</section>
 					<section>
@@ -742,7 +699,6 @@
 					<section>
 						<text>You can only have one <![CDATA[<i>conjurer's barrier</i>]]> in existence at once. If you use this power again while the previous barrier still exists, the previous one immediately ends.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -760,29 +716,32 @@
 				<title>Enchanter's Mind Trick</title>
 				<class>Wizard</class> <category>Utility</category>
 				<fluff>You cloud an enemy's thinking, making an ally seem more imposing in its mind</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Charm, Enchantment</keyword>
 					<action>Minor</action> <subaction>Action</subaction>
-					<type>Ranged</type> <range>10</range>
 					<section>
-						<name>Target:</name> <name-style>bold</name-style>
-						<text>You or one ally, and one enemy who can see you or the chosen ally</text>
+						<name>Friendly Target:</name> <name-style>bold</name-style>
+						<type>Ranged</type> <range>10</range>
+						<target>you or one ally</target>
+					</section>
+					<section>
+						<name>Enemy Target:</name>
+						<type>Ranged</type> <range>10</range>
+						<target>one enemy who can see the friendly target</target>
 					</section>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
-						<text>The target enemy takes a -2 penalty to attack rolls against the target ally until the end of the encounter.</text>
+						<text>The target enemy takes a -2 penalty to attack rolls against the friendly target until the end of the encounter.</text>
 					</section>
 					<section>
 						<shade>true</shade>
-						<text>If the target ally scores a critical hit or bloodies the target enemy, the penalty increases to -4 until the end of the ally's next turn.</text>
+						<text>If friendly target scores a critical hit or bloodies the target enemy, the penalty increases to -4 until the end of the ally's next turn.</text>
 					</section>
 					<section>
 						<name>Special:</name> <name-style>bold</name-style>
 						<text>You can only have one <![CDATA[<i>enchanter's mind trick</i>]]> in effect at once. The previous effect immediately ends if you use this power again.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -800,18 +759,17 @@
 				<title>Evoker's Aim</title>
 				<class>Wizard</class> <category>Utility</category>
 				<fluff>You know how to manipulate your spell to catch an enemy that seemed beyond its effects</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Evocation</keyword>
 					<action>Free</action> <subaction>Interrupt</subaction>
-					<type>Special</type>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>You use an area burst, close blast or close burst power that targets either all creatures or all enemies in the area</text>
 					</section>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
-						<text>One creature adjacent to the triggering power's area</text>
+						<type>Special</type>
+						<target>one creature adjacent to the triggering power's area</target>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -822,7 +780,6 @@
 						<shade>true</shade>
 						<text>This does not increase the power's actual area to include the target's space.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -840,35 +797,34 @@
 				<title>Illusionist's Ally</title>
 				<class>Wizard</class> <category>Utility</category>
 				<fluff>You create a simple illusory warrior to distract your foes</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Illusion</keyword>
 					<action>Minor</action> <subaction>Action</subaction>
-					<type>Ranged</type> <range>10</range>
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
+						<type>Ranged</type> <range>10</range>
 						<text>You create an illusion of a warrior in a square within range. The illusion lasts until the end of the encounter. It has the following effects: </text>
 					</section>
 					<section>
-						<shade>true</shade> <indent>1</indent>
-						<text>&#9658; The illusion counts as an ally for you and your allies for the purposes of flanking, but not for other purposes.</text>
+						<shade>true</shade> <indent>1</indent> <bullet/>
+						<text>The illusion counts as an ally for you and your allies for the purposes of flanking, but not for other purposes.</text>
 					</section>
 					<section>
-						<shade>true</shade> <indent>1</indent>
-						<text>&#9658; The illusion does not occupy its space, but an enemy must succeed at a saving throw to voluntarily enter the illusion's space.</text>
+						<shade>true</shade> <indent>1</indent> <bullet/>
+						<text>The illusion does not occupy its space, but an enemy must succeed at a saving throw to voluntarily enter the illusion's space.</text>
 					</section>
 					<section>
-						<shade>true</shade> <indent>1</indent>
-						<text>&#9658; You and your allies have concealment against ranged attacks that pass through the illusion's space.</text>
+						<shade>true</shade> <indent>1</indent> <bullet/>
+						<text>You and your allies have concealment against ranged attacks that pass through the illusion's space.</text>
 					</section>
 					<section>
-						<shade>true</shade> <indent>1</indent>
-						<text>&#9658; The illusion can be attacked, and uses your defenses, not counting any temporary modifiers affecting you. An attack against the illusion's Will automatically hits it.</text>
+						<shade>true</shade> <indent>1</indent> <bullet/>
+						<text>The illusion can be attacked, and uses your defenses, not counting any temporary modifiers affecting you. An attack against the illusion's Will automatically hits it.</text>
 					</section>
 					<section>
-						<shade>true</shade> <indent>1</indent>
-						<text>&#9658; When an attack hits it, the illusion immediately ends. This does not count as a creature being killed or hit by the attack.</text>
+						<shade>true</shade> <indent>1</indent> <bullet/>
+						<text>When an attack hits it, the illusion immediately ends. This does not count as a creature being killed or hit by the attack.</text>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -883,7 +839,6 @@
 						<name>Special:</name> <name-style>bold</name-style>
 						<text>You can only have one <![CDATA[<i>illusionist's ally</i>]]> in existence at once. If you use this power again while the previous ally still exists, the previous one immediately ends.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -902,11 +857,9 @@
 				<title>Necromancer's Conduit</title>
 				<class>Wizard</class> <category>Utility</category>
 				<fluff>You use a dying creature's last breath as a conduit for your necromantic spells</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Necromancy</keyword>
 					<action>Free</action> <subaction>Reaction</subaction>
-					<type>Ranged</type> <range>10</range>
 					<section>
 						<name>Trigger:</name> <name-style>bold</name-style>
 						<text>An undead summoned by you or a living creature dies within range</text>
@@ -917,18 +870,17 @@
 					<section>
 						<shade>true</shade>
 						<name>Effect:</name> <name-style>bold</name-style>
+						<type>Ranged</type> <range>10</range>
 						<text>Until the end of your next turn, you can use the space that the triggering creature occupied as the origin for your ranged, area and close Necromancy powers. Close bursts used this way also affect the origin space.</text>
 					</section>
-					<section>
+					<section shade="" indent="1">
 						<name>Sustain Minor:</name> <name-style>bold</name-style>
 						<text>The effect persists until the end of your next turn.</text>
 					</section>
 					<section>
-						<shade>true</shade>
 						<name>Special:</name> <name-style>bold</name-style>
 						<text>You can have more than one conduit active at once. You can sustain as many conduits as a single action as you wish, though you cannot resume sustaining one that has already expired.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -946,14 +898,13 @@
 				<title>Nethermancer's Seal</title>
 				<class>Wizard</class> <category>Utility</category>
 				<fluff>You place a dark seal on your enemy's spirit, making it less aggressive</fluff>
-				<part>
 					<frequency>At-Will</frequency>
 					<keyword>Arcane, Nethermancy</keyword>
 					<action>Minor</action> <subaction>Action</subaction>
-					<type>Close</type> <range>burst 10</range>
 					<section>
 						<name>Target:</name> <name-style>bold</name-style>
-						<text>One creature in the burst</text>
+						<type>Close</type> <range>burst 10</range>
+						<target>one creature in the burst</target>
 					</section>
 					<section>
 						<shade>true</shade>
@@ -978,7 +929,6 @@
 						<name>Level 21:</name> <name-style>italic</name-style>
 						<text>You can have three seals. When you use this power, you choose which previous effect ends if the use would exceed your limit.</text>
 					</section>
-				</part>
 			</power>
 
 		</subfeature>

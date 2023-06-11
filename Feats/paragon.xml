@@ -337,23 +337,20 @@
       <title>Aggressive Familiar</title>
       <class>Feat</class> <category>Utility</category> <level>16</level>
       <fluff>As you use an arcane power, your familiar explodes, damaging creatures you hit</fluff>
-      <part>
       <frequency>Daily</frequency>
       <keyword>Arcane</keyword>
       <action>Free</action> <subaction>Action</subaction>
-      <type>Personal</type>
       <section>
-         <shade>true</shade>
-         <name>Requirement:</name> <name-style>bold</name-style>
+         <name>Requirement:</name>
          <text>Your familiar must be in its active state</text>
       </section>
-      <section>
-         <name>Effect:</name> <name-style>bold</name-style>
+      <section shade="">
+         <name>Effect:</name>
          <text>Your familiar is destroyed, and you gain a +5 power bonus to damage rolls against creatures that were adjacent to your familiar. The bonus lasts until the end of the current turn.</text>
       </section>
-      </part>
-   </power>
+      </power>
    </feat>
+
    <feat>
       <title>Agile Athlete</title>
       <tier>Paragon</tier>
@@ -852,25 +849,24 @@
          <title>Balm of the Cultivator</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Your enemy's attack releases healing energy within you, which you use to aid your friend</fluff>
-         <part>
          <frequency>Encounter</frequency>
          <keyword>Healing</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 5</range>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy damages you with an attack</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally in the burst</text>
+            <name>Target:</name>
+            <type>Close</type> <range>burst 5</range>
+            <target>one ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
          </section>
-         </part>
+
       </power>
    </feat>
 
@@ -898,18 +894,17 @@
          <title>Fury of the Elements</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You channel elemental power used against you and unleash its fury against your foes</fluff>
-         <part>
          <frequency>Encounter</frequency>
          <keyword>Varies</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
          <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
+            <name>Trigger:</name>
             <text>You take cold, fire, lightning, or thunder damage</text>
          </section>
+         <section personal="" />
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>You take half damage from the triggering attack, and this power has the keyword or keywords for the triggering attack's damage type or types.</text>
          </section>
          <section>
@@ -921,7 +916,7 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>2d6 extra damage.</text>
          </section>
-         </part>
+
       </power>
    </feat>
    <feat>
@@ -3553,17 +3548,13 @@
          <title>Dominating Gaze</title>
          <class>Vampiric</class> <category>Attack</category> <level>15</level>
          <fluff>The authority in your piercing gaze demands utter submission</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Charm, Shadow</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>5</range>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One creature</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>5</range>
+               <target>one creature</target>
                <text>Ability +4 vs. Will</text>
             </section>
             <section>
@@ -3585,7 +3576,7 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>The target is dazed (save ends).</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -3876,15 +3867,14 @@
          <title>Dragonborn Zeal</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Your wounds occasionally make you relentless</fluff>
-         <part>
             <frequency>Daily</frequency>
             <keyword>Healing</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>Your hit points drop to 0 or fewer</text>
             </section>
+         <section personal="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -3894,7 +3884,7 @@
                <shade>true</shade>
                <text>Until the end end of your next turn, you gain a bonus to attack rolls and damage rolls against the enemy that reduced your hit points to 0 or fewer. The bonus equals one-half your Charisma modifier.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -4575,36 +4565,33 @@
          <title>Enlarge Familiar</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Suddenly, what seemed a harmless pet rears up to threaten your enemy</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Teleportation</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Special</type>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>Your familiar must be in its active mode.</text>
             </section>
-            <section>
+            <section shade="">
                <name>Effect:</name> <name-style>bold</name-style>
                <text>Until the start of your next turn, your familiar gains the following benefits:</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; Its size becomes Small.</text>
+            <section shade="">
+               <indent>1</indent> <bullet />
+               <text>Its size becomes Small.</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; It has hit points equal to your healing surge value.</text>
+            <section shade="">
+               <indent>1</indent> <bullet />
+               <text>It has hit points equal to your healing surge value.</text>
             </section>
-            <section>
-               <indent>1</indent>
-               <text>&#9658; It can flank enemies, though it cannot otherwise make attacks.</text>
+            <section shade="">
+               <indent>1</indent> <bullet />
+               <text>It can flank enemies, though it cannot otherwise make attacks.</text>
             </section>
-            <section>
+            <section shade="">
                <text>When this effect ends, the familiar teleports to your space and enters passive mode.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -4817,18 +4804,17 @@
          <title>Explosive Power</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Your attack explodes outward in a silent wave of energy, pushing creatures away from your attack's point of origin</fluff>
-         <part>
             <frequency>Daily</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You use an attack power that is a close blast, close burst, or area burst</text>
             </section>
+         <section special="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer in the blast or burst.</text>
+               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer inside the blast or burst.</text>
             </section>
             <section>
                <shade>true</shade>
@@ -4838,7 +4824,7 @@
                <shade>true</shade>
                <text>You can resolve the rest of the power against these creatures even if they are outside of the power's blast or burst.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -5010,7 +4996,7 @@
       <group>Support</group>
       <benefit>Your &lt;i&gt;fade away&lt;/i&gt; racial power is a close burst 5 instead of personal, and it gains the following altered and new rules text:&lt;br /&gt;
          &lt;b&gt;Trigger:&lt;/b&gt; You or an ally within 5 squares of you takes damage&lt;br /&gt;
-         &lt;b&gt;Target:&lt;/b&gt; The triggering creature&lt;br /&gt;
+         &lt;b&gt;Target:&lt;/b&gt; &lt;i&gt;Close&lt;/i&gt; burst 5 (the triggering creature)&lt;br /&gt;
          &lt;b&gt;Effect:&lt;/b&gt; The target is invisible until he or she attacks, or until the end of his or her next turn, whichever comes first.</benefit>
    </feat>
 
@@ -6545,21 +6531,17 @@
          <title>Webs of Darkness</title>
          <class>Drow</class> <category>Attack</category>
          <fluff>Inky tendrils of solidified darkness leap from your fingertip and bind your enemies</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>blast 3</range>
             <section>
                <name>Lolthtouched:</name> <name-style>bold</name-style>
                <text>You can only use one Lolthtouched power per encounter.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>Each creature in the blast</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Close</type> <range>blast 3</range>
+               <target>each creature in the blast</target>
                <text>Ability +4 vs. Reflex</text>
             </section>
             <section>
@@ -6580,7 +6562,7 @@
                <name>Special:</name> <name-style>bold</name-style>
                <text>When you gain this power, choose Intelligence, Wisdom, or Charisma. You use the chosen ability for the attack roll.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -7209,20 +7191,17 @@
          <title>Improved Tome of Readiness</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You page through your tome to find a spell more appropriate to the current situation</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane, Implement</keyword>
             <action>Free</action> <subaction>Action</subaction>
-            <type>Special</type>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must be wielding a tome implement.</text>
             </section>
             <section>
-               <name>Requirement:</name> <name-style>bold</name-style>
-               <text>You must have at least one unexpended wizard daily attack of your improved tome spell's level or higher.</text>
+               <text>You must also have at least one unexpended wizard daily attack of your improved tome spell's level or higher.</text>
             </section>
+         <section personal="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -7232,7 +7211,7 @@
                <shade>true</shade>
                <text>If you have not used your improved tome spell before the end of the encounter, it is automatically expended and you regain the power you expended to gain use of it as part of your next short rest.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -7782,18 +7761,17 @@
          <title>Punitive Radiance</title>
          <class>Class</class> <category>Attack</category>
          <fluff>The punishment you levy on the unrighteous is visible from miles away</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Radiant</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a divine attack</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+               <type>Special</type>
+               <target>the triggering enemy</target>
             </section>
             <section>
                <shade>true</shade>
@@ -7809,7 +7787,7 @@
                <shade>true</shade>
                <text>While surrounded by radiance, the target grants combat advantage and cannot benefit from invisibility, concealment, or total concealment.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -8148,21 +8126,20 @@
          <title>Honed Through Memory</title>
          <class>Martial Class</class> <category>Utility</category>
          <fluff>When you miss an enemy with an attack, you commit your error to memory and call upon it to strike true</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You miss a creature with a melee or ranged attack roll</text>
             </section>
+         <section personal="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You gain a +3 power bonus martial attack rolls against the triggering creature until the end of your next turn.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -10100,6 +10077,69 @@
       <group>Extra Attack</group>
       <benefit>Once per round when you are raging and score a critical hit with a Barbarian attack power, you can make a &lt;i&gt;melee basic attack&lt;/i&gt; as a free reaction.</benefit>
       <benefit>If you are wielding more than one weapon, you must make the &lt;i&gt;melee basic attack&lt;/i&gt; with the same weapon you scored the critical hit with.</benefit>
+   </feat>
+
+   <feat>
+      <title>Saving Grace</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <benefit>When you succeed on a saving throw, you can choose to not end the effect you saved against.</benefit>
+      <benefit>If you do, choose an ally within 5 squares of you. The chosen ally can make a saving throw against an effec that a save can end, and gains a bonus to the saving throw equal to your Wisdom modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Scattering Swarm</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Primal Swarm</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Shapechange</group>
+      <group>Triggered</group>
+      <benefit>While you are in beast form, if you take damage from an area or close attack, you can shift 2 squares as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Scimitar Dance</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>17</value>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Miss Mitigation</group>
+      <group>Weapon Specialization</group>
+      <benefit>If you miss with a melee attack with a scimitar, falchion or double scimitar you have proficiency with and wouldn't otherwise deal damage on the miss, you deal damage to the target equal to your Dexterity modifier + your weapon's enhancement bonus.</benefit>
+      <benefit>This damage increases to 2 + your Dexterity modifier + your weapon's enhancement bonus at 21st level.</benefit>
    </feat>
 
    <feat>

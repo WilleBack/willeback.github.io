@@ -52,20 +52,18 @@
 			<title>Second Chance</title>
 			<class>Halfling</class> <category>Utility</category>
 			<fluff>Luck and small size combine to work in your favor as you dodge your enemy's attack</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<action>Immediate</action> <subaction>Interrupt</subaction>
-                <type>Special</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>You are hit by an attack</text>
 				</section>
+				<section special=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>The attacker must reroll the triggering attack roll and use the new result if it is lower.</text>
 				</section>
-			</part>
 		</power>
 	</feature>
 
@@ -122,75 +120,67 @@
 			<title>Happy Feet</title>
 			<class>Halfling</class> <category>Utility</category> <level>2</level>
 			<fluff>It's hard to keep your feet under control, and sometimes they feel as if they move of their own accord</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<action>Opportunity</action> <subaction>Reaction</subaction>
-				<type>Personal</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>A creature you can see starts its turn</text>
 				</section>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>You shift up to 2 squares.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Minor Threat</title>
 			<class>Halfling</class> <category>Utility</category> <level>6</level>
 			<fluff>Clearly you're no threat to your enemies, injured as you are and doing your best to seem small and harmless</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Personal</type>
 				<section>
-					<shade>true</shade>
 					<name>Requirement:</name> <name-style>bold</name-style>
 					<text>You must be bloodied.</text>
 				</section>
-				<section>
+				<section personal=""/>
+				<section shade="">
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>Until you are no longer bloodied, you have a +2 power bonus to all defenses and to Stealth checks.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Pay Your Debts</title>
 			<class>Halfling</class> <category>Utility</category> <level>10</level>
 			<fluff>You acknowledge an ally's assistance by making a feint to keep your enemy off balance</fluff>
-			<part>
 				<frequency>At-Will</frequency>
 				<keyword>Martial</keyword>
 				<action>Immediate</action> <subaction>Reaction</subaction>
-				<type>Special</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>An enemy flanked by you moves out of the flanked position</text>
 				</section>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>One ally who was also flanking the triggering enemy</text>
+					<type>Special</type>
+					<target>one ally who was also flanking the triggering enemy</target>
 				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>The target gains combat advantage against the enemy until the start of the enemy's next turn.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Underfoot Hustle</title>
 			<class>Halfling</class> <category>Utility</category> <level>16</level>
 			<fluff>You roll between your enemy's legs and spring up on the other side</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<action>Move</action> <subaction>Action</subaction>
-				<type>Personal</type>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
@@ -200,7 +190,6 @@
 					<shade>true</shade>
 					<text>Enemies whose space you move through during this move grant combat advantage to you until the end of your next turn.</text>
 				</section>
-			</part>
 		</power>
 	</feature>
 

@@ -18,18 +18,14 @@
       <title>Bane's Instructive Stratagem</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>Bane shows the clear path to victory to your allies, and punishes those who do not follow it</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Minor</action> <subaction>Action</subaction>
-         <type>Close</type> <range>burst 3</range>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter</text>
-         </section>
+         <section auto="channeldivinity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>Each ally in the burst</text>
+            <type>Close</type> <range>burst 3</range>
+            <target>each ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -50,26 +46,21 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>6 extra damage damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bane's Tactics</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>Your training and the strength of Bane allow you to strike with skill like no other</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
-         <type>Personal</type>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter</text>
-         </section>
+         <section auto="channeldivinity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You make an <![CDATA[<i>opportunity attack</i>]]></text>
          </section>
+         <section personal=""/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -79,29 +70,24 @@
             <shade>true</shade>
             <text>You can only target the creature that triggered the <![CDATA[<i>opportunity attack</i>]]>, even if the power could normally target more than one creature.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Bane's Tyrannical Transference</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>You call on Bane to transfer a hindrance to another - someone better suited to endure its consequences</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 5</range>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter</text>
-         </section>
+         <section auto="channeldivinity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You or an ally in the burst becomes dazed, immobilized, stunned, or slowed</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You, or an ally in the burst</text>
+            <type>Close</type> <range>burst 5</range>
+            <target>you, or an ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -112,6 +98,5 @@
             <shade>true</shade>
             <text>This power does not affect any damage that might accompany the effect.</text>
          </section>
-      </part>
    </power>
 </deity>

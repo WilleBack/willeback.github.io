@@ -691,24 +691,20 @@
          <title>Command Undead</title>
          <class>Feat</class> <category>Attack</category>
          <fluff>You compel an undead creature to become your slave for a moment</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Channel Divnity, Divine, Implement</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
-            <section>
-               <indent>2</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text>&lt;b&gt;Close&lt;/b&gt; burst 10</text>
-            </section>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One undead creature in the burst</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Close</type> <range>burst 5</range>
+               <target>one undead creature in the burst</target>
                <text>Wisdom vs. Will</text>
             </section>
+         <section>
+            <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>&lt;b&gt;Close&lt;/b&gt; burst 10</text>
+         </section>
             <section>
                <shade>true</shade>
                <name>Hit:</name> <name-style>bold</name-style>
@@ -736,7 +732,7 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>The target is dazed until the end of your next turn.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -2278,18 +2274,17 @@
          <title>Punitive Radiance</title>
          <class>Class</class> <category>Attack</category>
          <fluff>The punishment you levy on the unrighteous is visible from miles away</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Radiant</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a divine attack</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+               <type>Special</type>
+               <target>the triggering enemy</target>
             </section>
             <section>
                <shade>true</shade>
@@ -2305,7 +2300,7 @@
                <shade>true</shade>
                <text>While surrounded by radiance, the target grants combat advantage and cannot benefit from invisibility, concealment, or total concealment.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -2917,22 +2912,17 @@
          <title>Radiant Touch</title>
          <class>Paladin</class> <category>Attack</category>
          <fluff>You transform your divine healing into radiant energy to damage an undead</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Implement, Radiant</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Melee</type> <range>touch</range>
             <section>
-               <shade>true</shade>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You must have uses of your &lt;i&gt;lay on hands&lt;/i&gt; class power available.</text>
             </section>
             <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One undead creature</text>
-            </section>
-            <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Melee</type> <range>touch</range>
+               <target>one undead creature</target>
                <text>Charisma vs. Fortitude</text>
             </section>
             <section>
@@ -2944,7 +2934,7 @@
                <shade>true</shade>
                <text>This counts as a use of your &lt;i&gt;lay on hands&lt;/i&gt; class power.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -3096,24 +3086,43 @@
          <title>Righteous Rage</title>
          <class>Channel Divinity</class> <category>Utility</category>
          <fluff>Your god guides your arm and lends weight to your strike</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section auto="channeldivinity" />
+         <section personal="" />
             <section shade="true">
                <name style="bold">Effect:</name>
                <text>The first time before the end of your next turn that you hit with a Weapon attack, you gain one of the following benefits:</text>
             </section>
-            <section shade="true" indent="1">
-               <text>&#9658; If the attack is a critical hit, you automatically get the maximum result for any critical damage. If your weapon does not have an enchantment, you still deal +3 critical damage.</text>
+            <section shade="true" indent="1"> <bullet />
+               <text>If the attack is a critical hit, you automatically get the maximum result for any critical damage. If your weapon does not have an enchantment, you still deal +3 critical damage.</text>
             </section>
-            <section shade="true" indent="1">
-               <text>&#9658; If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
+            <section shade="true" indent="1"> <bullet />
+               <text>If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
             </section>
-         </part>
+
       </power>
+   </feat>
+
+   <feat>
+      <title>Saving Grace</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <benefit>When you succeed on a saving throw, you can choose to not end the effect you saved against.</benefit>
+      <benefit>If you do, choose an ally within 5 squares of you. The chosen ally can make a saving throw against an effec that a save can end, and gains a bonus to the saving throw equal to your Wisdom modifier.</benefit>
    </feat>
 
    <feat>
@@ -3191,21 +3200,20 @@
          <title>Paladin's Wrath</title>
          <class>Tiefling</class> <category>Utility</category>
          <fluff>You stand against your foes, unleashing a howling battle cry that seems to howl from the depths of Hell</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Keyword</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>Each enemy in the burst</text>
+               <type>Close</type> <range>burst 5</range>
+               <target>each enemy in the burst</target>
             </section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>The target is subject to your Divine Sanction until the end of your next turn.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 

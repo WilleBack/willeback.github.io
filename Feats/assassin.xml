@@ -730,20 +730,19 @@
          <title>Destructive Power</title>
          <class>Feat</class> <category>Utility</category> <level>6</level>
          <fluff>By funneling greater power into your attack, you ensure its effect is not wasted</fluff>
-         <part>
             <frequency>Daily</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You roll a 1 on any damage die when you hit with an area or close attack, or a daily attack</text>
             </section>
+         <section special="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You reroll any result of 1 on a d4 or d6 damage die until the die roll is something other than 1, or reroll any result of 1 or 2 on another damage die until the die roll is something other than 1 or 2.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -2120,6 +2119,33 @@
    </feat>
 
    <feat>
+      <title>Scion of Hidden Fury</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Half-orc</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>furious assault</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Assassin</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Assassin's Shroud</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Miss Mitigation</group>
+      <group>Racial</group>
+      <benefit>When you miss a target but deal damage from your shrouds, you can trigger your &lt;i&gt;furious assault&lt;/i&gt; racial power. This counts as a non-Weapon attack for the power, even if the original attack is a Weapon attack.</benefit>
+   </feat>
+
+   <feat>
       <title>Shadow Coffin</title>
       <tier>Heroic</tier>
       <prereq>
@@ -2135,11 +2161,9 @@
          <title>Shadow Coffin</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>You trap your kill in a small object, which keeps the body out of sight until you are ready to release it</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Shadow</keyword>
             <action>Free</action> <subaction>Reaction</subaction>
-            <type>Melee</type> <range>1</range>
             <section>
                <name>Requirement:</name> <name-style>bold</name-style>
                <text>You cannot already have a corpse trapped by this power</text>
@@ -2150,7 +2174,8 @@
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering creature's corpse</text>
+               <type>Melee</type> <range>1</range>
+               <target>the triggering creature's corpse</target>
             </section>
             <section>
                <shade>true</shade>
@@ -2161,7 +2186,7 @@
                <shade>true</shade>
                <text>The target remains trapped until you release it or until the object is destroyed. To release the target into an adjacent square, you must hold the object and concentrate for 1 minute.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 

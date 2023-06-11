@@ -404,20 +404,19 @@
          <title>Destructive Power</title>
          <class>Feat</class> <category>Utility</category> <level>6</level>
          <fluff>By funneling greater power into your attack, you ensure its effect is not wasted</fluff>
-         <part>
             <frequency>Daily</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You roll a 1 on any damage die when you hit with an area or close attack, or a daily attack</text>
             </section>
+         <section special="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You reroll any result of 1 on a d4 or d6 damage die until the die roll is something other than 1, or reroll any result of 1 or 2 on another damage die until the die roll is something other than 1 or 2.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -525,18 +524,17 @@
          <title>Explosive Power</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Your attack explodes outward in a silent wave of energy, pushing creatures away from your attack's point of origin</fluff>
-         <part>
             <frequency>Daily</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You use an attack power that is a close blast, close burst, or area burst</text>
             </section>
+         <section special="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer in the blast or burst.</text>
+               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer inside the blast or burst.</text>
             </section>
             <section>
                <shade>true</shade>
@@ -546,7 +544,7 @@
                <shade>true</shade>
                <text>You can resolve the rest of the power against these creatures even if they are outside of the power's blast or burst.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -1391,6 +1389,29 @@
       <group>Power Enhancement</group>
       <group>Shapechange</group>
       <benefit>When you hit a target with your &lt;i&gt;grasping claws&lt;/i&gt; at-will attack power, you can choose to immobilize the target until the end of your next turn instead of slowing it. This effect immediately ends if you are no longer adjacent to the target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Scattering Swarm</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Primal Swarm</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Shapechange</group>
+      <group>Triggered</group>
+      <benefit>While you are in beast form, if you take damage from an area or close attack, you can shift 2 squares as a free reaction.</benefit>
    </feat>
 
    </catalog>

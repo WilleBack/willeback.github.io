@@ -18,18 +18,13 @@
       <title>Drow Ecclesiastic</title>
       <class>Channel Divinity</class> <category>Attack</category>
       <fluff>Lolth punishes those who escape her wiles</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Poison</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Ranged</type> <range>5</range>
+         <section auto="channeldivinity"/>
          <section>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must be drow.</text>
-         </section>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter.</text>
          </section>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
@@ -37,7 +32,8 @@
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering enemy</text>
+            <type>Ranged</type> <range>5</range>
+            <target>the triggering enemy</target>
          </section>
          <section>
             <shade>true</shade>
@@ -54,18 +50,15 @@
             <name>Level 21:</name> <name-style>italic</name-style>
             <text>Ongoing 15 poison damage.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Lolth's Cruel Sacrifice</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>You channel the goddess' blessing to save you from danger at an ally's expense</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Healing, Teleportation</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <type>Close</type> <range>burst 3</range>
          <section>
             <name>Channel Divinity:</name> <name-style>bold</name-style>
             <text>You can only use one Channel Divinity power per encounter.</text>
@@ -76,7 +69,8 @@
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>One ally in the burst</text>
+            <type>Close</type> <range>burst 3</range>
+            <target>one ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
@@ -87,18 +81,15 @@
             <shade>true</shade>
             <text>You or one ally adjacent to you (other than the target) can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Spider Charmer</title>
       <class>Channel Divinity</class> <category>Attack</category>
       <fluff>You draw upon Lolth's ability to command spiders and drow</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Charm, Divine, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must be drow and at least 11th level.</text>
@@ -108,11 +99,9 @@
             <text>You can only use one Channel Divinity power per encounter.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>One spider or drow</text>
-         </section>
-         <section>
             <name>Attack:</name> <name-style>bold</name-style>
+            <type>Ranged</type> <range>10</range>
+            <target>one spider or drow</target>
             <text>Intelligence, Wisdom, or Charisma vs. Will</text>
          </section>
          <section>
@@ -124,6 +113,5 @@
             <name>Miss:</name> <name-style>bold</name-style>
             <text>The target cannot flank until the end of your next turn, and it grants combat advantage for the first attack made against it before the end of your next turn.</text>
          </section>
-      </part>
    </power>
 </deity>

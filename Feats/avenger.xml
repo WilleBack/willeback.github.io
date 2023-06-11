@@ -761,24 +761,20 @@
          <title>Command Undead</title>
          <class>Feat</class> <category>Attack</category>
          <fluff>You compel an undead creature to become your slave for a moment</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Channel Divnity, Divine, Implement</keyword>
             <action>Standard</action> <subaction>Action</subaction>
-            <type>Close</type> <range>burst 5</range>
-            <section>
-               <indent>2</indent>
-               <name>Level 21:</name> <name-style>italic</name-style>
-               <text>&lt;b&gt;Close&lt;/b&gt; burst 10</text>
-            </section>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <text>One undead creature in the burst</text>
-            </section>
             <section>
                <name>Attack:</name> <name-style>bold</name-style>
+               <type>Close</type> <range>burst 5</range>
+               <target>one undead creature in the burst</target>
                <text>Wisdom vs. Will</text>
             </section>
+         <section>
+            <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text>&lt;b&gt;Close&lt;/b&gt; burst 10</text>
+         </section>
             <section>
                <shade>true</shade>
                <name>Hit:</name> <name-style>bold</name-style>
@@ -806,7 +802,7 @@
                <name>Miss:</name> <name-style>bold</name-style>
                <text>The target is dazed until the end of your next turn.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -1169,20 +1165,19 @@
          <title>Destructive Power</title>
          <class>Feat</class> <category>Utility</category> <level>6</level>
          <fluff>By funneling greater power into your attack, you ensure its effect is not wasted</fluff>
-         <part>
             <frequency>Daily</frequency>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You roll a 1 on any damage die when you hit with an area or close attack, or a daily attack</text>
             </section>
+         <section special="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You reroll any result of 1 on a d4 or d6 damage die until the die roll is something other than 1, or reroll any result of 1 or 2 on another damage die until the die roll is something other than 1 or 2.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -2689,18 +2684,17 @@
          <title>Punitive Radiance</title>
          <class>Class</class> <category>Attack</category>
          <fluff>The punishment you levy on the unrighteous is visible from miles away</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine, Radiant</keyword>
             <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <type>Special</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You hit an enemy with a divine attack</text>
             </section>
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>The triggering enemy</text>
+               <type>Special</type>
+               <target>the triggering enemy</target>
             </section>
             <section>
                <shade>true</shade>
@@ -2716,7 +2710,7 @@
                <shade>true</shade>
                <text>While surrounded by radiance, the target grants combat advantage and cannot benefit from invisibility, concealment, or total concealment.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -2915,15 +2909,11 @@
          <title>Oath of Urgency</title>
          <class>Channel Divinity</class> <category>Utility</category>
          <fluff>You utter a prayer of need, calling upon your god to turn their eye upon a new foe</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
-            <section>
-               <name>Channel Divinity</name> <name-style>bold</name-style>
-               <text>You can use only one Channel Divinity power per encounter.</text>
-            </section>
+            <section auto="channeldivinity" />
+         <section personal="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -2933,7 +2923,7 @@
                <shade>true</shade>
                <text>You regain your &lt;i&gt;oath of enmity&lt;/i&gt; class power and must use it as a free reaction.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -3380,23 +3370,22 @@
          <title>Righteous Rage</title>
          <class>Channel Divinity</class> <category>Utility</category>
          <fluff>Your god guides your arm and lends weight to your strike</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Divine</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Personal</type>
             <section auto="channeldivinity" />
+         <section personal="" />
             <section shade="true">
                <name style="bold">Effect:</name>
                <text>The first time before the end of your next turn that you hit with a Weapon attack, you gain one of the following benefits:</text>
             </section>
-            <section shade="true" indent="1">
-               <text>&#9658; If the attack is a critical hit, you automatically get the maximum result for any critical damage. If your weapon does not have an enchantment, you still deal +3 critical damage.</text>
+            <section shade="true" indent="1"> <bullet />
+               <text>If the attack is a critical hit, you automatically get the maximum result for any critical damage. If your weapon does not have an enchantment, you still deal +3 critical damage.</text>
             </section>
-            <section shade="true" indent="1">
-               <text>&#9658; If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
+            <section shade="true" indent="1"> <bullet />
+               <text>If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -3423,6 +3412,26 @@
       <group>Class</group>
       <group>Mobility</group>
       <benefit>Whenever you shift, you can choose to increase the maximum distance by 1 square. If you do, you grant combat advantage until the start of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Saving Grace</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <group>Class</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <group>Triggered</group>
+      <benefit>When you succeed on a saving throw, you can choose to not end the effect you saved against.</benefit>
+      <benefit>If you do, choose an ally within 5 squares of you. The chosen ally can make a saving throw against an effec that a save can end, and gains a bonus to the saving throw equal to your Wisdom modifier.</benefit>
    </feat>
 
    <feat>

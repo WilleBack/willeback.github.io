@@ -17,47 +17,37 @@
       <title>In Death, Life</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>Your powers of death revitalize your body</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Healing</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 3</range>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter.</text>
-         </section>
+         <section auto="channeldivinity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You bloody an enemy or reduce an enemy to 0 hit points or fewer</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You or one ally in the burst</text>
+            <type>Close</type> <range>burst 3</range>
+            <target>you or one ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>You spend a healing surge to allow the target to regain hit points equal to his or her healing surge value.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Pervasive Gloom</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>Night falls where you stand</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Zone</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 1</range>
+         <section auto="channeldivinity"/>
          <section>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must be shadar-kai.</text>
-         </section>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter.</text>
          </section>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
@@ -66,24 +56,22 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>burst 1</range>
             <text>The burst creates a zone of shadows until the start of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>Squares within the zone are heavily obstructed.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Raven Queen's Blessing</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>The Raven Queen grants a boon to those who send the dead on their way</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Healing</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Ranged</type> <range>10</range>
          <section>
             <name>Channel Divinity:</name> <name-style>bold</name-style>
             <text>You can only use one Channel Divinity power per encounter.</text>
@@ -94,46 +82,42 @@
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>You, or an ally within 5 squares of the enemy</text>
+            <type>Ranged</type> <range>10</range>
+            <target>you, or an ally within 5 squares of the enemy</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Raven Queen's Judgement</title>
       <class>Channel Divinity</class> <category>Attack</category>
       <fluff>The undead exist in defiance of the Raven Queen's will, so you create a blast of utter cold to bring the abominations a clean death</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Cold, Divine, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Close</type> <range>blast 5</range>
-         <section>
-            <indent>4</indent>
-            <name>Level 11:</name> <name-style>italic</name-style>
-            <text><![CDATA[<b>Close</b>]]> blast 7</text>
-         </section>
-         <section>
-            <indent>4</indent>
-            <name>Level 21:</name> <name-style>italic</name-style>
-            <text><![CDATA[<b>Close</b>]]> blast 10</text>
-         </section>
          <section>
             <name>Channel Divinity:</name> <name-style>bold</name-style>
             <text>You can only use one Channel Divinity power per encounter.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <text>Each undead creature in the blast</text>
+            <name>Attack:</name> <name-style>bold</name-style>
+            <type>Close</type> <range>blast 5</range>
+            <target>each undead creature in the blast</target>
+            <text>Ability vs. Will</text>
          </section>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <text>Ability vs. Will</text>
+            <indent>1</indent>
+            <name>Level 11:</name> <name-style>italic</name-style>
+            <text><![CDATA[<i>Close</i>]]> blast 7</text>
+         </section>
+         <section>
+            <indent>1</indent>
+            <name>Level 21:</name> <name-style>italic</name-style>
+            <text><![CDATA[<i>Close</i>]]> blast 10</text>
          </section>
          <section>
             <shade>true</shade>
@@ -174,25 +158,19 @@
             <name>Special:</name> <name-style>italic</name-style>
             <text>When you gain this power, choose Intelligence, Wisdom or Charisma. You use the chosen ability for the attack roll and damage roll.</text>
          </section>
-      </part>
    </power>
 
    <power>
       <title>Shadow Legacy</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>You extend the ancient covenant between your people and the Raven Queen to an ally in danger</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Teleportation</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
-         <type>Ranged</type> <range>10</range>
+         <section auto="channeldivinity"/>
          <section>
             <name>Prerequisite:</name> <name-style>bold</name-style>
             <text>You must be shadar-kai.</text>
-         </section>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter.</text>
          </section>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
@@ -200,13 +178,13 @@
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering ally</text>
+            <type>Ranged</type> <range>10</range>
+            <target>the triggering ally</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target either teleports 3 squares, or gains insubstantial until the start of the acting creature's next turn.</text>
          </section>
-      </part>
    </power>
 </deity>

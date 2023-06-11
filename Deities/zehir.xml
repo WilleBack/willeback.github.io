@@ -18,22 +18,18 @@
       <title>Zehir's Dark Blessing</title>
       <class>Channel Divinity</class> <category>Utility</category>
       <fluff>An ally's attack becomes an offering to Zehir, and darkness cloaks him or her, granting vigor</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 5</range>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter.</text>
-         </section>
+         <section auto="channeldivinity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An ally within 5 squares of you drops a creature to 0 hit points or fewer; the creature must be granting combat advantage to the ally</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering ally in the burst</text>
+            <type>Close</type> <range>burst 5</range>
+            <target>the triggering ally in the burst</target>
          </section>
          <section>
             <shade>true</shade>

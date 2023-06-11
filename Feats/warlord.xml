@@ -2456,18 +2456,14 @@
          <title>Infernal Captain's Curse</title>
          <class>Feat</class> <category>Utility</category>
          <fluff>Drawing on the powers of hell, you curse an enemy to become weak against follow up attacks from your allies</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Arcane</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <type>Ranged</type> <range>sight</range>
-            <section>
-               <indent>2</indent>
-               <text>Using this power does not trigger &lt;i&gt;opportunity attacks&lt;/i&gt;</text>
-            </section>
+            <section auto="no-opportunity" />
             <section>
                <name>Target:</name> <name-style>bold</name-style>
-               <text>Nearest enemy you can see</text>
+               <type>Ranged</type> <range>sight</range>
+               <target>nearest enemy you can see</target>
             </section>
             <section>
                <shade>true</shade>
@@ -2478,7 +2474,7 @@
                <shade>true</shade>
                <text>When you hit a creature under your captain's curse with an attack, choose one ally you can see. The target grants combat advantage to the chosen ally for the next attack he or she makes against the target.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -3217,21 +3213,20 @@
          <title>Honed Through Memory</title>
          <class>Martial Class</class> <category>Utility</category>
          <fluff>When you miss an enemy with an attack, you commit your error to memory and call upon it to strike true</fluff>
-         <part>
             <frequency>Encounter</frequency>
             <keyword>Martial</keyword>
             <action>Free</action> <subaction>Interrupt</subaction>
-            <type>Personal</type>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
                <text>You miss a creature with a melee or ranged attack roll</text>
             </section>
+         <section personal="" />
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
                <text>You gain a +3 power bonus martial attack rolls against the triggering creature until the end of your next turn.</text>
             </section>
-         </part>
+
       </power>
    </feat>
 
@@ -4058,6 +4053,25 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <benefit>Your &lt;i&gt;earthshock&lt;/i&gt; racial power deals additional damage equal to your Strength modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Saving Inspiration</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Saving Throws</group>
+      <benefit>When you or an ally uses the Draw Inspiration action of your &lt;i&gt;warlord's aura&lt;/i&gt; class power, that character can choose to not regain the additional dice of hit points.</benefit>
+      <benefit>If the character does, he or she can make a saving throw against an effect that a save can end, and gains a bonus to the saving throw equal to the number of dice.</benefit>
    </feat>
 
    <feat>

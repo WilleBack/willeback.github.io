@@ -49,28 +49,14 @@
 			<title>Dragon Breath</title>
 			<class>Dragpnborn</class> <category>Attack</category>
 			<fluff>With a roar, you release the power of your draconic kin to engulf your foes</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Varies</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Close</type> <range>blast 3</range>
-				<section>
-					<name>Target:</name> <name-style>bold</name-style>
-					<text>Each creature in the blast</text>
-				</section>
 				<section>
 					<name>Attack:</name> <name-style>bold</name-style>
-					<text>Ability +2 vs. Reflex</text>
-				</section>
-				<section>
-					<indent>1</indent>
-					<name>Level 11:</name> <name-style>italic</name-style>
-					<text>Ability +4</text>
-				</section>
-				<section>
-					<indent>1</indent>
-					<name>Level 21:</name> <name-style>italic</name-style>
-					<text>Ability +6</text>
+					<type>Close</type> <range>blast 3</range>
+					<target>each creature in the blast</target>
+					<text>Inherent Ability vs. Reflex</text>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -94,40 +80,32 @@
 				<section>
 					<text>Also, choose one of the following damage types: acid, cold, fire, lightning, or poison. Your <![CDATA[<i>dragon breath</i>]]> deals damage of the chosen type, and has the corresponding keyword.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Dragonfear</title>
 			<class>Dragonborn</class> <category>Attack</category>
 			<fluff>Your presence causes your enemies to quake and tremble</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<keyword>Fear</keyword>
 				<action>Minor</action> <subaction>Action</subaction>
-				<type>Close</type> <range>burst 5</range>
-				<section>
-					<indent>4</indent>
-					<name>Level 21:</name> <name-style>italic</name-style>
-					<text><![CDATA[<b>Close</b>]]> burst 10</text>
-				</section>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
 					<text>Each enemy in the burst</text>
 				</section>
 				<section>
 					<name>Attack:</name> <name-style>bold</name-style>
-					<text>Ability +2 vs. Will</text>
+					<type>Close</type> <range>burst 5</range>
+					<text>Inherent Ability vs. Will</text>
 				</section>
-				<section>
-					<indent>1</indent>
-					<name>Level 11:</name> <name-style>italic</name-style>
-					<text>Ability +4</text>
+				<section indent="1">
+					<name style="italic">Level 11:</name>
+					<text><![CDATA[<i>Close</i>]]> burst 7</text>
 				</section>
 				<section>
 					<indent>1</indent>
 					<name>Level 21:</name> <name-style>italic</name-style>
-					<text>Ability +6</text>
+					<text><![CDATA[<i>Close</i>]]> burst 10</text>
 				</section>
 				<section>
 					<shade>true</shade>
@@ -142,7 +120,6 @@
 					<name>Special:</name> <name-style>bold</name-style>
 					<text>When you gain this power, choose Strength or Charisma. You use the chosen ability for attack rolls.</text>
 				</section>
-			</part>
 		</power>
 	</feature>
 
@@ -199,13 +176,10 @@
 			<title>Baleful Glance</title>
 			<class>Dragonborn</class> <category>Utility</category> <level>2</level>
 			<fluff>You single out an enemy, holding the foe's gaze with your menacing stare</fluff>
-			<part>
 				<frequency>Daily</frequency>
 				<keyword>Fear</keyword>
 				<action>Nonaction</action> <subaction>Reaction</subaction>
-				<type>Special</type>
 				<section>
-					<shade>true</shade>
 					<name>Prerequisite:</name> <name-style>bold</name-style>
 					<text>You must have the <![CDATA[<i>dragonfear</i>]]> racial power.</text>
 				</section>
@@ -219,26 +193,23 @@
 				</section>
 				<section>
 					<name>Target:</name> <name-style>bold</name-style>
-					<text>The triggering enemy</text>
+					<type>Special</type>
+					<target>The triggering enemy</target>
 				</section>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>The target is dazed (save ends).</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Breath Retaliation</title>
 			<class>Dragonborn</class> <category>Utility</category> <level>2</level>
 			<fluff>When your blood is drawn, the draconic energies inside you are eager to come forth</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<action>Immediate</action> <subaction>Reaction</subaction>
-				<type>Personal</type>
 				<section>
-					<shade>true</shade>
 					<name>Prerequisite:</name> <name-style>bold</name-style>
 					<text>You must have the <![CDATA[<i>dragon breath</i>]]> racial power.</text>
 				</section>
@@ -250,48 +221,45 @@
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>You become bloodied</text>
 				</section>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>You use your <![CDATA[<i>dragon breath</i>]]> racial power without spending an action.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Dragon's Dive</title>
 			<class>Dragonborn</class> <category>Utility</category> <level>6</level>
 			<fluff>You set your sights on your foe and dive through the fray, heedless of the threats</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<action>Nonaction</action> <subaction>Interrupt</subaction>
-				<type>Personal</type>
 				<section>
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>You make a charge attack</text>
 				</section>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
-					<text>Your movement made as part of the triggering charge attack does not provoke <![CDATA[<i>opportunity attacks</i>]]>.</text>
+					<text>You gain a +4 bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]> triggered by your charge attack.</text>
 				</section>
 				<section>
 					<shade>true</shade>
 					<text>If you jump down as part of the triggering attack, you gain resist against the fall damage equal to your level.</text>
 				</section>
-			</part>
 		</power>
+	</feature>
 
+	<feature>
 		<power>
 			<title>Arkhosian Resilience</title>
 			<class>Dragonborn</class> <category>Utility</category> <level>10</level>
 			<fluff>You call forth the draconic power inside you to shield you from harm</fluff>
-			<part>
 				<frequency>Daily</frequency>
 				<action>Immediate</action> <subaction>Interrupt</subaction>
-				<type>Personal</type>
 				<section>
-					<shade>true</shade>
 					<name>Prerequisite:</name> <name-style>bold</name-style>
 					<text>You must have the <![CDATA[<i>dragon breath</i> racial power or the <i>dragonfear</i>]]> racial power.</text>
 				</section>
@@ -299,24 +267,21 @@
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>You take damage of a type that matches the type of damage you chose for your <![CDATA[<i>dragon breath</i>]]> racial power, or you take psychic damage if you have the <![CDATA[<i>dragonfear</i>]]> racial power</text>
 				</section>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>You gain resist against the triggering damage type until the end of the encounter. The resist equals 5 + one-half your level.</text>
 				</section>
-			</part>
 		</power>
 
 		<power>
 			<title>Triumphant Roar</title>
 			<class>Dragonborn</class> <category>Utility</category> <level>16</level>
 			<fluff>Your success gives you such enthusiasm that you loose a roar that brings forth the draconic power within you</fluff>
-			<part>
 				<frequency>Encounter</frequency>
 				<action>Free</action> <subaction>Reaction</subaction>
-				<type>Personal</type>
 				<section>
-					<shade>true</shade>
 					<name>Prerequisite:</name> <name-style>bold</name-style>
 					<text>You must have the <![CDATA[<i>dragon breath</i> racial power or the <i>dragonfear</i>]]> racial power.</text>
 				</section>
@@ -324,12 +289,12 @@
 					<name>Trigger:</name> <name-style>bold</name-style>
 					<text>You either bloody a nonminion enemy or reduce a nonminion enemy to 0 hit points or less</text>
 				</section>
+				<section personal=""/>
 				<section>
 					<shade>true</shade>
 					<name>Effect:</name> <name-style>bold</name-style>
 					<text>You use your <![CDATA[<i>dragon breath</i> racial power or your <i>dragonfear</i>]]> racial power, even if that power is already expended.</text>
 				</section>
-			</part>
 		</power>
 	</feature>
 

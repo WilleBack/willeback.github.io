@@ -106,20 +106,17 @@
 				<title>Battlefront Shift</title>
 				<class>Warlord</class> <category>Utility </category>
 				<fluff>As combat breaks out, you give a quick call, urging an ally to move or spurring yourself to take action</fluff>
-				<part>
 				<frequency>Encounter</frequency>
 				<keyword>Martial</keyword>
 				<action>Nonaction</action> <subaction>Interrupt</subaction>
-				<type>Close </type> <range>burst 5</range>
 				<section>
-					<name-style>bold</name-style>
 					<name>Trigger:</name>
 					<text>You roll initiative</text>
 				</section>
 				<section>
-					<name-style>bold</name-style>
 					<name>Target:</name>
-					<text>You or one one ally in the burst</text>
+					<type>Close </type> <range>burst 5</range>
+					<target>you or one one ally in the burst</target>
 				</section>
 				<section>
 					<indent>1</indent>
@@ -139,7 +136,6 @@
 					<name>Effect:</name>
 					<text>The target shifts half his or her speed. </text>
 				</section>
-				</part>
 			</power>
 
 		</subfeature>
@@ -174,15 +170,13 @@
 			<title>Tactician's Command</title>
 			<class>Warlord</class> <category>Utility</category>
 			<fluff>You eye the battle vigilantly, and at the right moment point out an opportunity to an ally</fluff>
-			<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial</keyword>
 			<action>Standard </action> <subaction>Action</subaction>
-			<type>Close </type> <range>burst 10</range>
 			<section>
-				<name-style>bold</name-style>
 				<name>Target:</name>
-				<text>One enemy you can see in the burst, and one ally in your <![CDATA[<i>warlord's aura</i>]]></text>
+				<type>Close </type> <range>burst 10</range>
+				<target>One enemy you can see in the burst, and one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -190,7 +184,6 @@
 				<name>Effect:</name>
 				<text>The target ally makes a <![CDATA[<i>melee basic attack</i>]]> or a <![CDATA[<i>ranged basic attack</i>]]> against the target enemy as a free reaction.</text>
 			</section>
-			</part>
 		</power>
 
 	</feature>
@@ -204,14 +197,12 @@
 				<title>Warlord's Aura</title>
 				<class>Warlord</class> <category>Utility </category>
 				<fluff>Your very presence encourages your allies to press on, allowing them to call forth the strength to battle on a little longer</fluff>
-				<part>
 					<frequency>Encounter</frequency>
 					<keyword>Aura, Martial</keyword>
 					<action>Minor</action> <subaction>Action</subaction>
-					<type>Personal</type>
+					<section personal=""/>
 					<section>
 						<shade>true</shade>
-						<name-style>bold</name-style>
 						<name>Effect:</name>
 						<text>You activate an aura 5 that lasts until the end of the encounter. If the aura ends prematurely for any reason, you can reactivate it during the encounter as a minor action.</text>
 					</section>
@@ -221,32 +212,30 @@
 					</section>
 					<section>
 						<shade>true</shade>
-						<text>In addition, the Draw Inspiration action, below, can be used twice during the encounter, as long as your aura is active.</text>
+						<text>In addition, the Draw Inspiration action can be used twice during the encounter, as long as your aura is active.</text>
 					</section>
 					<section>
 						<shade>true</shade> <indent>1</indent>
 						<name>Level 16:</name> <name-style>italic</name-style>
 						<text>Three times during the encounter.</text>
 					</section>
-				</part>
 				<part>
 					<part-name>Draw Inspiration</part-name>
 					<frequency>Special</frequency>
 					<keyword>Healing, Martial</keyword>
 					<action>Minor</action> <subaction>Action</subaction>
-					<type>Personal</type>
-					<type2>Close</type2> <range2>burst 5</range2>
 					<section>
 						<name>Special:</name> <name-style>bold</name-style>
-						<text>An ally in your <![CDATA[<i>warlord's aura</i>]]> can use this action as a personal power.</text>
+						<text>An ally in your <![CDATA[<i>warlord's aura</i>]]> can use this action as a <![CDATA[<i>personal</i>]]> power.</text>
 					</section>
 					<section>
-						<text>You can use it as a personal power, or as a close burst with the following target:</text>
+						<text>You can use it as a <![CDATA[<i>personal</i>]]> power, or as a <![CDATA[<i>Close</i>]]> power with the following target:</text>
 					</section>
 					<section>
 						<indent>1</indent>
-						<name>Target:</name> <name-style>bold</name-style>
-						<text>One dying ally in the burst</text>
+						<name>Target:</name>
+						<type>Close</type> <range>burst 5</range>
+						<target>one dying ally in the burst</target>
 					</section>
 					<section>
 						<shade>true</shade>

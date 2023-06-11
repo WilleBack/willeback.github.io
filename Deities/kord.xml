@@ -17,28 +17,23 @@
       <title>Kord's Favor</title>
       <class>Class</class> <category>Utility</category>
       <fluff>Kord favors a strong hit in combat with healing</fluff>
-      <part>
          <frequency>Encounter</frequency>
          <keyword>Divine, Healing</keyword>
          <action>Free</action> <subaction>Reaction</subaction>
-         <type>Close</type> <range>burst 5</range>
-         <section>
-            <name>Channel Divinity:</name> <name-style>bold</name-style>
-            <text>You can only use one Channel Divinity power per encounter.</text>
-         </section>
+         <section auto="channeldivinity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>You or an ally within 5 squares of you scores a critical hit with a melee attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <text>The triggering character</text>
+            <type>Close</type> <range>burst 5</range>
+            <target>the triggering character</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
             <text>The target can spend a healing surge to regain hit point equal to his or her healing surge value.</text>
          </section>
-      </part>
    </power>
 </deity>
