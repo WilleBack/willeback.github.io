@@ -193,6 +193,12 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("heroic.html", pretty_print=True)
 
+source_doc = etree.parse("heroicgen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("heroicgen.html", pretty_print=True)
+
 # Paragon tier
 source_doc = etree.parse("paragon.xml")
 output_doc = xslt_transformer(source_doc)
@@ -200,12 +206,24 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("paragon.html", pretty_print=True)
 
+source_doc = etree.parse("paragongen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("paragongen.html", pretty_print=True)
+
 # Epic tier
 source_doc = etree.parse("epic.xml")
 output_doc = xslt_transformer(source_doc)
 
 print(str(output_doc))
 output_doc.write("epic.html", pretty_print=True)
+
+source_doc = etree.parse("epicgen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("epicgen.html", pretty_print=True)
 
 # Full file
 source_doc = etree.parse("description.xml")

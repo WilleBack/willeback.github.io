@@ -65,6 +65,21 @@ for item in collate:
 # Save file
 heroicTree.write("heroic.xml")
 
+# Remove class feats
+for feat in heroicRoot.findall(".feat[group='Class']"):
+    heroicRoot.remove(feat)
+
+# Remove class combination feats
+for feat in heroicRoot.findall(".feat[group='Class Combination']"):
+    heroicRoot.remove(feat)
+
+# Remove racial feats
+for feat in heroicRoot.findall(".feat[group='Racial']"):
+    heroicRoot.remove(feat)
+
+# Save file
+heroicTree.write("heroicgen.xml")
+
 ## Paragon tier ##
 ##################
 paragonTree = ET.parse('paragon.xml')
@@ -83,6 +98,21 @@ for item in collate:
 # Save file
 paragonTree.write("paragon.xml")
 
+# Remove class feats
+for feat in paragonRoot.findall(".feat[group='Class']"):
+    paragonRoot.remove(feat)
+
+# Remove class feats
+for feat in paragonRoot.findall(".feat[group='Class Combination']"):
+    paragonRoot.remove(feat)
+
+# Remove racial feats
+for feat in paragonRoot.findall(".feat[group='Racial']"):
+    paragonRoot.remove(feat)
+
+# Save file
+paragonTree.write("paragongen.xml")
+
 ## Epic tier ##
 ###############
 epicTree = ET.parse('epic.xml')
@@ -100,6 +130,21 @@ for item in collate:
 
 # Save file
 epicTree.write("epic.xml")
+
+# Remove class feats
+for feat in epicRoot.findall(".feat[group='Class']"):
+    epicRoot.remove(feat)
+
+# Remove class combination feats
+for feat in epicRoot.findall(".feat[group='Class Combination']"):
+    epicRoot.remove(feat)
+
+# Remove racial feats
+for feat in epicRoot.findall(".feat[group='Racial']"):
+    epicRoot.remove(feat)
+
+# Save file
+epicTree.write("epicgen.xml")
 
 ## Ardent ##
 ############

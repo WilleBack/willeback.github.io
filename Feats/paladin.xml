@@ -1222,6 +1222,57 @@
    </feat>
 
    <feat>
+      <title>Divine Fate</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Revenant</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Channel Divinity</name>
+      </prereq>
+      <group>Channel Divinity</group>
+      <group>Class</group>
+      <group>Power Repertoire</group>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <group>Skill Enhancement</group>
+      <group>Support</group>
+      <benefit>You gain the &lt;i&gt;divine fate&lt;/i&gt; Channel Divinity power.</benefit>
+
+      <power>
+         <title>Divine Fate</title>
+         <class>Feat</class> <category>Utility</category>
+         <fluff>A great power has plans for you and turns chance in your favor</fluff>
+            <frequency>Encounter</frequency>
+            <keyword>Divine</keyword>
+            <action>Free</action> <subaction>Interrupt</subaction>
+         <section auto="no-opportunity" />
+            <section auto="channeldivinity" />
+            <section>
+               <name>Trigger:</name> <name-style>bold</name-style>
+               <text>you or an ally within 10 squares of you fails a skill check, an ability check, or a saving throw</text>
+            </section>
+            <section>
+               <name>Target:</name> <name-style>bold</name-style>
+               <type>Ranged</type> <range>10</range>
+               <target>The triggering creature in the burst</target>
+            </section>
+            <section>
+               <shade>true</shade>
+               <name>Effect:</name> <name-style>bold</name-style>
+               <text>The target rerolls the triggering check or saving throw, and uses the higher result.</text>
+            </section>
+
+      </power>
+   </feat>
+
+   <feat>
       <title>Divine Health</title>
       <tier>Epic</tier>
       <prereq>
@@ -1885,6 +1936,7 @@
          <type>feat</type>
          <name>Mounted Combat</name>
       </prereq>
+      <group>Class</group>
       <group>Damage Bonus</group>
       <group>Defense</group>
       <group>Mounted Combat</group>
