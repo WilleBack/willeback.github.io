@@ -331,34 +331,34 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:if test="@auto='channeldivinity'">
 		<b>Channel Divinity:&#160;</b>
-		You can only use one Channel Divinity power per encounter.
+		<xsl:text>One Channel Divinity power per encounter.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='no-opportunity'">
-		Using this power does not trigger <i>opportunity attacks</i>
+		<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
 	</xsl:if>
 	<xsl:if test="@auto='charge-effect'">
 		<b>Effect:&#160;</b>
-		You charge and use this attack in place of a <i>melee basic attack</i>. If an effect allows you to charge, you can use this power.
+		<xsl:text>You charge and use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. If an effect allows you to charge, you can use this power.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='charge-special'">
 		<b>Special:&#160;</b>
-		When charging, you can use this power in place of a <i>melee basic attack</i>.
+		<xsl:text>When charging, you can use this power in place of a </xsl:text><i>melee basic attack</i><xsl:text>.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='powerstrike'">
 		<b>Special:&#160;</b>
-		<i>Power strike</i> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one <i>power strike</i> per triggering attack.
+		<i>Power strike</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>power strike</i><xsl:text> per triggering attack.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='dreadsmite'">
 		<b>Special:&#160;</b>
-		<i>Dread smite</i> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one <i>dread smite</i> per triggering attack.
+		<i>Dread smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>dread smite</i><xsl:text> per triggering attack.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='holysmite'">
 		<b>Special:&#160;</b>
-		<i>Holy smite</i> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one <i>holy smite</i> per triggering attack.
+		<i>Holy smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>holy smite</i><xsl:text> per triggering attack.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='weapon-implement'">
 		<b>Special:&#160;</b>
-		You make this attack as either a melee Weapon attack or a ranged Implement attack.
+		<xsl:text>You make this attack as either a melee Weapon attack or a ranged Implement attack.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='personal' or @personal">
 		<b>Personal</b>
