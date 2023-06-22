@@ -206,7 +206,7 @@
          <name>Attack Power</name>
          <frequency>Encounter</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this a Light blade</line>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using a Light blade</line>
          <line><name>Effect</name>The triggering enemy takes ongoing 2 damage (save ends). If the triggering attack already deals ongoing damage, increase that damage by this value instead.</line>
          <line indent="1"><name>Level 14</name>Ongoing 4 damage.</line>
          <line indent="1"><name>Level 24</name>Ongoing 6 damage.</line>
@@ -239,6 +239,73 @@
    </item>
    
    <item>
+      <title>Gauntlets of Blood</title>
+      <category>Common</category>
+      <fluff>The blood of wounded foes streams along the joints of these rusty-looking gauntlets</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a +3 item bonus to damage rolls against bloodied targets.</line>
+         <line indent="1"><name>Level 14</name>+5 item bonus.</line>
+         <line indent="1"><name>Level 24</name>+8 item bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Giantkind Gloves</title>
+      <category>Rare</category>
+      <fluff>The leather of these gloves was harvested from beasts of giant size</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Weapon</keyword>
+         <frequency>At-Will</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You pick up an unattended object that weighs 30 lb. or less, then make the following ranged Weapon attack using the object as the weapon:</line>
+         <line><name>Attack</name>Ranged 6/12 (one creature); Strength +2 vs. AC</line>
+         <line indent="1"><name>Level 14</name>Ranged 8/16; Strength +4</line>
+         <line indent="1"><name>Level 24</name>Ranged 10/20; Strength +6</line>
+         <line><name>Hit</name>2d6 + Strength modifier damage.</line>
+         <line indent="1"><name>Level 14</name>2d8 + Strength modifier damage.</line>
+         <line indent="1"><name>Level 24</name>3d8 + Strength modifier damage.</line>
+         <line>Your DM might determine that an item is so fragile or light that it deals half damage instead.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit with a melee attack, or the at-will attack power of these gloves</line>
+         <line><name>Effect</name>Upi gaom a +2 power bonus to damage rolls with the triggering attack.</line>
+         <line indent="1"><name>Level 14</name>+4 power bonus.</line>
+         <line indent="1"><name>Level 24</name>+6 power bonus.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Gloves of Piercing</title>
       <category>Uncommon</category>
       <fluff>These enchanted gloves can be activated to ignore an opponent's resistances for a short time</fluff>
@@ -262,6 +329,139 @@
          <line><name>Effect</name>Ranged sight (one creature); Until the end of the encounter, you ignore any resistance of 10 or lower that the target has.</line>
          <line indent="1"><name>Level 13</name>resistance 15 or lower</line>
          <line indent="1"><name>Level 23</name>resistance 20 or lower</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Hedge Wizard's Gloves</title>
+      <category>Common</category>
+      <fluff>With a wave of these patched gloves, you can perform magic tricks</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Mage Hand</name>
+         <keyword>Arcane</keyword> <keyword>Conjuration</keyword>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line indent="1"><name>Level 14</name>This power is an at-will power instead of encounter power.</line>
+         <line><name>Effect</name>Ranged 5; You conjure a spectral, floating hand in an unoccupied square within range. The hand lasts until the end of your next turn or until you use this power again.</line>
+         <line indent="1"><name>Level 14</name>Ranged 7.</line>
+         <line>If you conjure the hand into a square adjacent to yourself and are holding an object when you use this power, the hand can move the object into a pack, a pouch, a sheath, or a similar container and simultaneously move any one object carried or worn anywhere on your body into your hand.</line>
+         <line>While the hand persists, you can take the following actions:</line>
+         <line indent="1"><![CDATA[<b>Minor Action:</b>]]> The hand picks up or manipulates an object weighing 20 pounds or less. It can hold only one object at a time.</line>
+         <line indent="2"><name>Level 14</name>14 pounds or less.</line>
+         <line indent="1"><![CDATA[<b>Move Action:</b>]]> The hand moves up to 5 squares in any direction, carrying the object it holds.</line>
+         <line indent="1"><![CDATA[<b>Free Action:</b>]]> The hand drops the object it is holding.</line>
+         <line indent="1"><name>Sustain Minor</name>The hand persists until the end of your next turn.</line>
+      </block>
+      <block>
+         <name>Prestidigitation</name>
+         <keyword>Arcane</keyword>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line indent="1"><name>Level 14</name>This power is an at-will power instead of encounter power.</line>
+         <line><name>Effect</name>Ranged 2; You accomplish one of the following effects in range:</line>
+         <line indent="1"><bullet />Change the color of all items</line>
+         <line indent="1"><bullet />Create a brief, harmless sensory effect, such as a shower of sparks, a puff of wind, faint music, or a strong odor.</line>
+         <line indent="1"><bullet />Clean or soil all items in 1 cubic foot.</line>
+         <line indent="1"><bullet />Instantly light (or snuff out) a candle, torch, or a small campfire.</line>
+         <line indent="1"><bullet />Chill, warm, or flavor up to 1 pound of nonliving matter for up to 1 hour.</line>
+         <line indent="1"><bullet />Make a small mark or symbol appear on a surface for up to 1 hour.</line>
+         <line indent="2"><name>Level 14</name>Up to 4 hours.</line>
+         <line indent="1"><bullet />Produce out of nothingness a small item or image that exists until the end of your next turn.</line>
+         <line indent="1"><bullet />Make a small, handheld item invisible until the end of your next turn.</line>
+         <line><name>Special</name>Nothing you create with this cantrip can deal damage, serve as a weapon or tool, or hinder another creature's actions. This cantrip cannot duplicate the effect of any other power.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Poisoner's Gloves</title>
+      <category>Common</category>
+      <fluff>You can store a nasty surprise in these plain-looking gloves to envenom a weapon at a moment's notice</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You store one dose of a poison in these gloves. The poison must be one that can be applied to a weapon.</line>
+         <line>The gloves can hold only one dose of poison at a time.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>The gloves must have a poison stored.</line>
+         <line><name>Effect</name>Melee touch (one weapon you're holding); You apply the stored poison to the target weapon. This consumes the poison.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Stern Handler's Wraps</title>
+      <category>Common</category>
+      <fluff>Beasts of all kinds shy away from the wearer of these plain-looking wraps, which glimmer with small, magical shards</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a +3 item bonus to Intimidate checks and Nature checks against animals.</line>
+         <line indent="1"><name>Level 14</name>+6 item bonus.</line>
+         <line indent="1"><name>Level 24</name>+10 item bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Twice-Clawed Gauntlets</title>
+      <category>Common</category>
+      <fluff>The ritual which creates these hide gauntlets merges the claws of a second predator to the paws of a base creature</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a +2 item bonus to damage rolls while raging.</line>
+         <line indent="1"><name>Level 14</name>+4 item bonus.</line>
+         <line indent="1"><name>Level 24</name>+6 item bonus.</line>
+         <line>This bonus is halved for multitarget attacks.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Primal</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must be raging.</line>
+         <line><name>Effect</name>Until the end of the encounter or until you are no longer raging, you gain a +4 bonus to attack rolls with Rage powers.</line>
       </block>
    </item>
    

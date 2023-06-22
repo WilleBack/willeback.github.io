@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="item.xsl"?>
 <catalog>
+   <collection>Waist slot items</collection>
+   
    <list selection="1" />
    <list selection="2" />
    <list selection="3" />
@@ -77,8 +79,8 @@
       <block>
          <name>Property</name>
          <line>Heal checks made to aid you gain a +2 item bonus.</line>
-         <line indent="1"><![CDATA[<i>Level 11:</i>]]> +4 item bonus</line>
-         <line indent="1"><![CDATA[<i>Level 21:</i>]]> +6 item bonus</line>
+         <line indent="1"><![CDATA[<i>Level 11:</i>]]> +5 item bonus</line>
+         <line indent="1"><![CDATA[<i>Level 21:</i>]]> +10 item bonus</line>
       </block>
    </item>
 
@@ -215,6 +217,38 @@
          <name>Property</name>
          <line>When you drop to 0 hit points or less while raging, you can reroll your first failed death save with a +2 bonus.</line>
          <line indent="1"><![CDATA[<i>Level 12:</i>]]> +4 bonus, and you do not drop out of rage if you do not want to</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Viper Belt</title>
+      <category>Common</category>
+      <fluff>This snakeskin belt provides protection against poison</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Waist Slot</type>
+      <block>
+         <name>Property</name>
+         <line>You gain resist 5 poison.</line>
+         <line indent="1"><name>Level 14</name>Resist 10 poison.</line>
+         <line indent="1"><name>Level 24</name>Resist 15 poison.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make a saving throw against a Poison effect and dislike the resutl</line>
+         <line><name>Effect</name>You gain a +2 power bonus to the triggering saving throw.</line>
       </block>
    </item>
 

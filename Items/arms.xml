@@ -439,6 +439,7 @@
       <block>
          <name>Property</name>
          <line>You do not sink beneath the surface of any liquid, unless you choose to do so.</line>
+         <line>You can move across calm liquid as if it were solid ground. Rough or stormy liquid counts as difficult terrain. When moving across the surface of a liquid, you are in contact with it as you would be in contact with the ground. If the liquid is moving, you move with it as if the ground moved beneath you.</line>
          <line>You also gain a +2 bonus to Athletics checks to swim, and to Endurance checks to swim for an extended period of time.</line>
          <line>Finally, you can swim at your speed when swimming on the surface of the water.</line>
       </block>
@@ -509,6 +510,34 @@
          <line><name>Effect</name>The triggering creature reverts to its natural form, and can't use Polymorph powers (save ends).</line>
       </block>
    </item>
+   
+   <item>
+      <title>Mountain Shield</title>
+      <category>Common</category>
+      <fluff>Inlaid with Dwarven runes and images of mountains, this shield keeps your allies from being pulled into dangerous situations</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Heavy shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You activate an Aura 1 until the end of your next turn.</line>
+         <line indent="1"><name>Level 14</name>Aura 2.</line>
+         <line indent="1"><name>Level 24</name>Aura 3.</line>
+         <line>Allies in the aura cannot be pushed, pulled, or slid unless they want to. An ally pushed, pulled, or slid into the aura can choose to negate any remaining forced movement.</line>
+      </block>
+   </item>
 
    <item>
       <title>Phylactery of Action</title>
@@ -542,6 +571,39 @@
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>You and each ally within 5 squares gain temporary hit points equal to the number of healing surges you have remaining. These temporary hit points last until the end of the encounter.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Ranging Defender Shield</title>
+      <category>Common</category>
+      <fluff>You protect a comrade in danger by extending this shields's defenses to that ally</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Close burst 5 (one ally in the burst); Until the end of your next turn, the target gains the bonus to defenses you gain from this shield, and you lose them.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Close burst 5 (one bloodied ally in the burst); The target gains resist 5 all until he or she is no longer bloodied or until the end of the encounter, whichever comes first.</line>
+         <line indent="1"><name>Level 14</name>Resist 10 all.</line>
+         <line indent="1"><name>Level 24</name>Resist 15 all.</line>
       </block>
    </item>
 
@@ -597,6 +659,27 @@
          <line indent="1"><name>Level 22</name>Resist 10</line>
       </block>
    </item>
+   
+   <item>
+      <title>Shield of Eyes</title>
+      <category>Common</category>
+      <fluff>This multifaceted shield keeps you aware of lurking threats</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Property</name>
+         <line>You gain an item bonus to AC against <![CDATA[<i>opportunity attacks</i>]]>. The bonus equals the shield bonus to AC you gain from this shield.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You cannot be flanked until the end of your next turn.</line>
+      </block>
+   </item>
 
    <item>
       <title>Shield of the Guardian</title>
@@ -649,6 +732,51 @@
          <line><name>Effect</name>Close burst 1 (you and one ally adjacent to you); Each target gains resist 10 all until the end of your next turn.</line>
          <line indent="1"><name>Level 13</name>Resist 15 all.</line>
          <line indent="1"><name>Level 23</name>Resist 20 all.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Shield of Silver Light</title>
+      <category>Common</category>
+      <fluff>This polished shield gleams with moonlight, even in the middle of the day</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>The shield sheds light in a 5-square radius, and dim light for a further 2 squares. You can end this effect by using this power again.</line>
+         <line>While the shield sheds light, you and allies in the bright light treat your weapons (including ammunition, thrown weapons, and the like)as being silvered. This can have special effects against certain creatures.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Shield of Speed and Evasion</title>
+      <category>Uncommon</category>
+      <fluff>A serious strike that slides past this shield can fortify your ability to return the favor</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An attacker scores a critical hit against your AC or Reflex</line>
+         <line><name>Effect</name>You regain the use of an expended encounter power of your choice. The chosen power must be of a level equal to or lower than the level of this shield.</line>
+         <line>You can expend your action point to instead regain the use of an expended daily power.</line>
       </block>
    </item>
 

@@ -56,7 +56,7 @@
       <fluff>This comfortable bed speeds your rest but is too large to cart around in the dungeon</fluff>
       <level>
          <value>4</value>
-         <price>840</price>
+         <price>420</price>
       </level>
       <type>Wondrous Item</type> <subtype>Furniture</subtype>
       <block>
@@ -105,7 +105,7 @@
    </item>
    
    <item>
-      <title>Bridle of Conjuration</title>
+      <title>Bridle of Summoning</title>
       <category>Common</category>
       <fluff>This simple leather bridle conjures a magical mount for your use</fluff>
       <level>
@@ -118,7 +118,7 @@
          <keyword>Summoning</keyword>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><name>Effect</name>You conjure a riding horse in a space adjacent to you. Unlike most summons, this one does not use your statistics and lacks the usual summon traits. The horse does not have its attack, and you do not lose a healing surge if the horse is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the horse to spend one..</line>
+         <line><name>Effect</name>You summon a riding horse in a space adjacent to you. Unlike most summons, this one does not use your statistics and lacks the usual summon traits. The horse does not have its attack, and you do not lose a healing surge if the horse is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the horse to spend one.</line>
          <line>The bridle transforms into the mount's tack and saddle, and the horse serves you, obeying you spoken commands.</line>
          <line>The horse disappears after 12 hours or if it is reduced to 0 hit points or fewer.</line>
       </block>
@@ -412,6 +412,64 @@
          <line indent="1"><name>Level 23 or 28</name>+3 or +4 power bonus.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Friend's Gift</title>
+      <category>Common</category>
+      <fluff>Your companion wears this crimson badge on its chest as a sign of friendship</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Companion Item</subtype>
+      <block>
+         <name>Property</name>
+         <keyword>Healing</keyword>
+         <line>Your companion regains an additional 5 hit points when it spends a healing surge to regain hit points, uses its <![CDATA[<i<second wind</i>]]>, or you spend a healing surge to allow it to regain hit points.</line>
+         <line indent="1"><name>Level 14</name>Additional 10 hit points.</line>
+         <line indent="1"><name>Level 24</name>Additional 15 hit points.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Ghost Bridle</title>
+      <category>Common</category>
+      <fluff>This bridle gives a mount a phantasmal appearance and the ability to slip through solid objects</fluff>
+      <level>
+         <value>4</value>
+         <price>420</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>10,500</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>262,500</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Mount item</subtype>
+      <block>
+         <name>Property</name>
+         <line>The mount gains resist 10 necrotic.</line>
+         <line indent="1"><name>Level 14</name>Resist 15.</line>
+         <line indent="1"><name>Level 24</name>Resist 20.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>The mount gains phasing until the end of your next turn.</line>
+         <line>If you are riding the mount when you use this power, you also gain phasing, but lose it if you are no longer riding the mount.</line>
+      </block>
+   </item>
 
    <item>
       <title>Glowing Globe</title>
@@ -441,6 +499,30 @@
          <line><name>Special</name>The globe is destroyed.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Guardian's Whistle</title>
+      <category>Common</category>
+      <fluff>This tin whistle is covered with runes that look like they have been crudely scratched into its surface</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Teleportation</keyword>
+         <frequency>Daily</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <line><name>Requirement:</name>You are holding the whistle in your hand.</line>
+         <line indent="1"><name>Leve 14</name>You can draw the whistle, use it, and put it away as part of the same action. You still need a free hand, though.</line>
+         <line><name>Effect</name>Close burst 10 (one ally in the burst); You teleport the target to a space adjacent to you.</line>
+      </block>
+   </item>
 
    <item>
       <title>Harp of Deeper Slumber</title>
@@ -466,7 +548,7 @@
          <line><name>Effect</name>Close burst 20 (each creature in the burst); Each target takes a -10 penalty to Perception checks until the end of your next turn.</line>
          <line indent="1"><name>Level 13</name>-15 penalty, and an aftereffect of -5 penalty until the end of your following turn.</line>
          <line indent="1"><name>Level 23</name>-15 penalty, and an aftereffect of -10 penalty until the end of your next turn.</line>
-         <line>An unconscious creature takes the penalty until it is no longer unconscious.</line>
+         <line>An unconscious creature takes the penalty until it is no longer unconscious, and is not aware that it was affected by this power..</line>
       </block>
    </item>
 
@@ -476,11 +558,11 @@
       <fluff>These thin steel horseshoes grant your mount increased speed</fluff>
       <level>
          <value>3</value>
-         <price>680</price>
+         <price>340</price>
       </level>
       <level>
          <value>13</value>
-         <price>17,000</price>
+         <price>7,500</price>
       </level>
       <type>Wondrous Item</type> <subtype>Mount item</subtype>
       <block>
@@ -589,6 +671,32 @@
          <line>Creating a ritual scroll using this item fills it with text, but takes half the usual time. Once the ritual is performed, the piece of Ioun's parchment turns blank and can be reused.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Life Shroud</title>
+      <category>Common</category>
+      <fluff>This clean linen wrap protects a corpse from the ravages of time and the blashphemies of necromancers</fluff>
+      <level>
+         <value>4</value>
+         <price>40</price>
+      </level>
+      <level>
+         <value>9</value>
+         <price>160</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>800</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Consumable</subtype>
+      <block>
+         <name>Property</name>
+         <line>While wrapped in this shroud, a corpse does not decay, can't be touched by an undead creature unless that undead is at least 5 levels higher than the shroud. and can't become undead.</line>
+         <line>Once wrapped around a body, the magic in the shroud dissipates after 90 days.</line>
+         <line indent="1"><name>Level 9</name>After a year and a day.</line>
+         <line indent="1"><name>Level 14</name>After five years.</line>
+      </block>
+   </item>
 
    <item>
       <title>Magical Musician</title>
@@ -631,12 +739,22 @@
       <fluff>This coat contains rows of faceted crystals that protect against wide-ranging attacks</fluff>
       <level>
          <value>2</value>
-         <price>520</price>
+         <price>260</price>
+      </level>
+      <level>
+         <value>12</value>
+         <price>6,500</price>
+      </level>
+      <level>
+         <value>22</value>
+         <price>162,500</price>
       </level>
       <type>Wondrous Item</type> <subtype>Mount barding</subtype>
       <block>
          <name>Property</name>
          <line>A mount wearing this caparison gains a +1 item bonus to Fortitude, Reflex, and Will.</line>
+         <line indent="1"><name>Level 12</name>+2 item bonus.</line>
+         <line indent="1"><name>Level 22</name>+3 item bonus.</line>
       </block>
       <block>
          <name>Utility Power</name>
@@ -662,6 +780,44 @@
          <line>You can attune this deck of cards to yourself by shedding six drops of blood on it during a short rest.</line>
          <line>From that point forward, whenever you draw or deal a card from this deck, it is of a suit and value of your choice. Anyone else who interacts with the deck finds it to be a normal deck of whatever game it is designed for.</line>
          <line>Only one creature can be attuned to the deck at a time.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Nail of Sealing</title>
+      <category>Common</category>
+      <fluff>This thick iron nail is adorned with warding symbols and can hold shut any portal or container</fluff>
+      <level>
+         <value>4</value>
+         <price>40</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Consumable</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You push this nail into a door, chest, or other closable object, and it magically sinks into the material of that object and seals it shut.</line>
+         <line>This has the same effects as if you had you performed the <![CDATA[<i>arcane lock</i>]]> ritual on the object, and the DC for Thievery checks or Strength checks made to open the target is set at 25. If you want to allow other creatures to pass normally, you can only choose the password option and must speak the password when you use the nail.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Onyx Dog</title>
+      <category>Common</category>
+      <fluff>This figurine, sculpted of reflective onyx, depicts a barking dog</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Summoning</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You summon a Medium onyx dog in a space adjacent to you. Unlike most summons, this one does not use your statistics and you do not lose a healing surge if the horse is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the dog to spend one.</line>
+         <line>When activating this item, you can expend a healing surge to give the onyx dog temporary hit points equal to your healing surge value.</line>
+         <line>The dog disappears after 8 hours or if it is reduced to 0 hit points or fewer.</line>
       </block>
    </item>
 
@@ -763,6 +919,24 @@
          <line>The effect lasts until the target is no longer dying or until the shroud is removed (a standard action), whichever comes first.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Silence-Warded Room</title>
+      <category>Common</category>
+      <fluff>This lush chamber offers privacy for your conversations</fluff>
+      <level>
+         <value>4</value>
+         <price>420</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Structure</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Free</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You speak the command word to activate this effect. You can use this power again to end the effect.</line>
+         <line>While the effect is active, creatures outside of the room attempting to liston to something in the room take a -10 penalty to their Perception checks and passive Perception to do so.</line>
+      </block>
+   </item>
 
    <item>
       <title>Silent Tool</title>
@@ -775,7 +949,7 @@
       <type>Wondrous Item</type>
       <block>
          <name>Property</name>
-         <line>When used to do the work it was designed for, a silent tool makes practically no noise. For example, a silent crowbar could aid attempts to open a locked door without alerting the sleeping monster on the other side, while a silent grppling hook has less chance of being heard by nearby guards.</line>
+         <line>When used to do the work it was designed for, a silent tool makes practically no noise. For example, a silent crowbar could aid attempts to open a locked door without alerting the sleeping monster on the other side, while a silent grappling hook has less chance of being heard by nearby guards.</line>
          <line>You gain a +5 item bonus to Stealth checks related to using the tool.</line>
          <line>Any individual mundane tool -a woodcutter's axe, a crowbar, a hammer, a shovel, and so on- can be made silent. Weapons, clothing, jewelry, or other mundane objects cannot.</line>
       </block>
@@ -863,6 +1037,35 @@
          <line>You can command this globe as a free action. It can be commanded to shed either bright light or dim light, or shed no light. It can shed light either 5 or 10 squares in all directions.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Tattoo of Arcane Blood</title>
+      <category>Common</category>
+      <fluff>Rods, orbs, they of Ioun, and other images symbolic of magic are used for this tattoo</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>525,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Arcane</keyword> <keyword>Force</keyword>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An enemy bloodies you</line>
+         <line><name>Effect</name>The triggering enemy takes force damage equal to your Constitution modifier.</line>
+         <line indent="1"><name>Level 14 or 19</name>Equal to 2 + your Constitution modifier.</line>
+         <line indent="1"><name>Level 24 or 29</name>Equal to 5 + your Constitution modifier.</line>
+      </block>
+   </item>
 
    <item>
       <title>Tattoo of Vengeance</title>
@@ -948,32 +1151,57 @@
    </item>
    
    <item>
+      <title>Wheely Sled</title>
+      <category>Rare</category>
+      <fluff>This sheet of solid metal sits on four wheels and is long enough for one person to lie down on, with a number of levers and switches accessible from the side</fluff>
+      <level>
+         <value>4</value>
+         <price>840</price>
+      </level>
+      <type>Wondrous Item</type>
+      <headline auto="losttech"/>
+      <block>
+         <name>Malfunction</name>
+         <line>When this sled's power malfunctions, you move 5 squares in a random direction and fall prone in a square adjacent to the sled.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must be lying on the sled.</line>
+         <line><name>Effect</name>Roll a d20.</line>
+         <line>On a result of 2 - 20, you move up to 10 squares over the ground. You ignore difficult terrain during this move.</line>
+         <line>On a result of 1, the sled malfunctions.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Window of Deception</title>
       <category>Common</category>
       <fluff>A glance through this fine glass window reveals whatever you desire</fluff>
       <level>
          <value>3</value>
-         <price>680</price>
+         <price>340</price>
       </level>
       <level>
          <value>8</value>
-         <price>3,400</price>
+         <price>1,700</price>
       </level>
       <level>
          <value>13</value>
-         <price>17,000</price>
+         <price>8,500</price>
       </level>
       <level>
          <value>18</value>
-         <price>85,000</price>
+         <price>42,500</price>
       </level>
       <level>
          <value>23</value>
-         <price>425,000</price>
+         <price>212,500</price>
       </level>
       <level>
          <value>28</value>
-         <price>2,125,000</price>
+         <price>1,062,500</price>
       </level>
       <type>Wondrous Item</type> <subtype>Structure</subtype>
       <block>

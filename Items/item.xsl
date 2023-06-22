@@ -12,7 +12,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:if>
 		<style>
 			.container {
-
+				width: 100%;
 				box-sizing:border-box;
 				float:left;
 			}
@@ -20,16 +20,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			.item {
 				background:linear-gradient(to right, #f8e9d5, #fcf4eb);
 				margin:0.2cm;
-				width:97%;
+				width:calc(100% - 1.2em);
 				float:left;
-				page-break-inside:avoid;
+				break-inside:avoid;
 			}
 
 			.pricetable {
 				box-sizing:border-box;
 				width: 100%;
 				column-count: 2;
-				column-gap:.3em;
+				column-gap:.2em;
 			}
 
 			.priceline {
@@ -37,7 +37,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				box-sizing:border-box;
 				float:left;
 				page-break-inside:avoid;
-				margin:0.2em;
+				margin:0.25em;
 			}
 
 			.line {
@@ -132,37 +132,37 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			@media only screen and (min-width:1000px) {
 				.container {
 					column-count: 3;
-					column-gap:0.5em;
+					column-gap:0.4em;
 				}
 
 				.listcontainer {
 					column-count: 2;
-					column-gap:0.5em;
+					column-gap:0.4em;
 				}
 			}
 
 			@media only screen and (min-width:1300px) {
 				.container {
 					column-count: 4;
-					column-gap:0.6em;
+					column-gap:0.4em;
 				}
 
 			}
 			@page {
 				size: auto;
-				margin: 0.85cm 0.7cm 1.1cm;
+				margin: 0.7cm 0.6cm 0.9cm;
 			}
 
 			@media print {
 				.container {
 					column-count: 2;
-					column-gap:0.6em;
+					column-gap:0.4em;
 					margin:0cm;
 				}
 
 				.listcontainer {
 					column-count: 2;
-					column-gap:0.6em;
+					column-gap:0.5em;
 					margin:0cm;
 				}
 
@@ -277,10 +277,53 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<b>Enhancement Bonus: </b><xsl:text>Fortitude, Reflex, and Will</xsl:text>
 					</div>
 				</xsl:when>
+				<xsl:when test="@crit='d4'">
+					<div class="line">
+						<b>Critical: </b><xsl:text>+1d4 </xsl:text>
+						<xsl:if test="text()">
+							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+						</xsl:if>
+						<xsl:text>damage per plus</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="@crit='d6'">
+					<div class="line">
+						<b>Critical: </b><xsl:text>+1d6 </xsl:text>
+						<xsl:if test="text()">
+							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+						</xsl:if>
+						<xsl:text>damage per plus</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="@crit='d8'">
+					<div class="line">
+						<b>Critical: </b><xsl:text>+1d8 </xsl:text>
+						<xsl:if test="text()">
+							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+						</xsl:if>
+						<xsl:text>damage per plus</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="@crit='d10'">
+					<div class="line">
+						<b>Critical: </b><xsl:text>+1d10 </xsl:text>
+						<xsl:if test="text()">
+							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+						</xsl:if>
+						<xsl:text>damage per plus</xsl:text>
+					</div>
+				</xsl:when>
 				<xsl:otherwise>
 					<div class="line">
 						<b><xsl:value-of select="name" /> <xsl:text>: </xsl:text></b>
-						<xsl:value-of select="text" disable-output-escaping="yes" />
+						<xsl:choose>
+							<xsl:when test="text">
+								<xsl:value-of select="text" disable-output-escaping="yes" />
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="text()" disable-output-escaping="yes" />
+							</xsl:otherwise>
+						</xsl:choose>
 					</div>
 				</xsl:otherwise>
 			</xsl:choose>
@@ -346,6 +389,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:choose>
 		<xsl:when test="@auto='bard'">
 			<xsl:text>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</xsl:text>
+		</xsl:when>
+		<xsl:when test="@auto='weapliment'">
+			<xsl:text>If you are </xsl:text>
+			<xsl:value-of select="text()" disable-output-escaping="yes"/>
+			<xsl:text> who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</xsl:text>
+		</xsl:when>
+		<xsl:when test="@auto='crit'">
+			<xsl:text>When you score a critical hit using this weapon, </xsl:text>
+			<xsl:value-of select="text()" disable-output-escaping="yes"/>
+		</xsl:when>
+		<xsl:when test="@auto='critimpl'">
+			<xsl:text>When you score a critical hit using this implement, </xsl:text>
+			<xsl:value-of select="text()" disable-output-escaping="yes"/>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>

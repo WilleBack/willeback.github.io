@@ -782,6 +782,53 @@
          <line>You are considered bloodied for all purposes until the end of your next turn.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Blade of Arcane Bonds</title>
+      <category>Common</category>
+      <fluff>Attacks with this blade bind your enemy to you</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with an attack using this blade</line>
+         <line><name>Effect</name>The triggering enemy is marked by you (save ends).</line>
+      </block>
+   </item>
 
    <item>
       <title>Bloodclaw Weapon</title>
@@ -1673,6 +1720,57 @@
       <block>
          <name>Property</name>
          <line>Increase the weapon's normal range by 5 squares and the long range by 10 squares.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Divine Medic's Weapon</title>
+      <category>Common</category>
+      <fluff>A divine warrior of any kind can use this weapon to bring victory in the name of his or her deity</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 radiant damage per plus</headline>
+      <block>
+         <name>Property</name>
+         <keyword>Divine</keyword> <keyword>Healing</keyword>
+         <line>When you use a Channel Divinity power during combat, one ally within 10 squares of you regains a number of hit points equal to three times this weapon's enhancement bonus.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You can use one additional Channel Divinity power during this encounter.</line>
       </block>
    </item>
 
@@ -2988,6 +3086,56 @@
          <line>Your Weapon attacks with this weapon gain an item bonus to damage rolls against a creature larger than you. The item bonus equals this weapon's plus.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Goring Weapon</title>
+      <category>Uncommon</category>
+      <fluff>Scored and scratched as it is, this weapon is more than serviceable</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Pick</subtype> <subtype>Spear</subtype>
+      <headline auto="attackenh" />
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with a melee Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy is immobilized until the start of your next turn or until it is no longer within your reach. While this effect lasts, you cannot make attacks using this weapon, and cannot willingly move so that the triggering enemy is no longer within your reach, unless you drop the weapon, in which case the effect also ends.</line>
+         <line>If you or the triggering enemy is pushed, pulled or slid so that it is no longer within your reach, the enemy takes damage equal to twice this weapon's enhancement bonus and the effect immediately ends.</line>
+      </block>
+   </item>
 
    <item>
       <title>Great Hunger Weapon</title>
@@ -3093,10 +3241,11 @@
          <name>Attack Power</name>
          <keyword>Fire</keyword> <keyword>Primal</keyword>
          <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>You hit an enemy with your <![CDATA[<i>warden's fury</i>]]> class power using this weapon</line>
-         <line><name>Effect</name>The triggering enemy takes ongoing fire (save ends) damage equal to 2 + your Strength modifier.</line>
-         <line indent="1"><name>Level 13 or 18</name>Equal to 6 + your Strength modifier.</line>
-         <line indent="1"><name>Level 23 or 28</name>Equal to 10 + your Strength modifier.</line>
+         <line><name>Effect</name>The triggering enemy takes ongoing fire damage (save ends). The ongoing damage equals 2 + your Strength modifier.</line>
+         <line indent="1"><name>Level 13 or 18</name>Equals 6 + your Strength modifier.</line>
+         <line indent="1"><name>Level 23 or 28</name>Equals 10 + your Strength modifier.</line>
       </block>
    </item>
 
@@ -3200,6 +3349,52 @@
          <line>When you assume a guardian form, pick one defense other than AC. You gain a +2 bonus to that defense while you are in that guardian form.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Hammer of Victory</title>
+      <category>Common</category>
+      <fluff>This hammer's striking head is carved with an intricate scene depicting dwarven warriors cleaving through a menacing goblin horde</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Hammer</subtype>
+      <headline auto="attackenh" />
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 thunder damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Whenever you reduce an enemy to 0 or fewer hit points with a Weapon attack using this weapon, all enemies adjacent to you are knocked prone.</line>
+      </block>
+   </item>
 
    <item>
       <title>Harmonic Songblade</title>
@@ -3253,6 +3448,52 @@
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>Close burst 5 (one ally in the burst); The target ally gains a +2 power bonus to attack rolls and all defenses until the start of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Harmony Blade</title>
+      <category>Common</category>
+      <fluff>Though you wield it as your primary weapon, this blade lends its power to your off-hand attacks</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype>
+      <headline auto="attackenh" />
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, and you can make a <![CDATA[<i>melee basic attack</i>]]> with your off-hand weapon</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>When you hit an enemy with both this weapon and your off-hand weapon during the same turn, that enemy takes a -2 penalty to attack rolls against you until the end of your next turn.</line>
       </block>
    </item>
 
@@ -3594,6 +3835,55 @@
          <line><name>Special</name>If you are wielding a Hyrsam fiddlestick in your other hand and miss the triggering attack roll even with the reroll, you regain the use of this power when you take a short rest.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Impaler's Pick</title>
+      <category>Common</category>
+      <fluff>This barbed weapon can leave a short-lived magical replica of itself in your enemy to keep it pinned down</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Pick</subtype>
+      <headline auto="attackenh" />
+      <headline>
+         <name>Critical</name>
+         <text>+1d8 damage per plus</text>
+      </headline>
+      <block>
+         <name>Critical</name>
+         <line>When you score a critical hit with this pick, the target is restrained by a magical duplicate of this weapon (save ends).</line>
+         <line indent="1"><name>Aftereffect</name>15 damage.</line>
+         <line indent="2"><name>Level 14 or 19</name>20 damage.</line>
+         <line indent="2"><name>Level 24 or 29</name>25 damage.</line>
+      </block>
+   </item>
 
    <item>
       <title>Inertial Weapon</title>
@@ -3815,6 +4105,107 @@
          <line><name>Effect</name>Close burst 1 (each ally in the burst); Each target gains a power bonus to damage rolls until the end of your next turn. The bonus equals this weapon's enhancement bonus.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Intensifying Weapon</title>
+      <category>Common</category>
+      <fluff>This weapon blazes with inner power that enhances lasting wounds</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline auto="attackenh" />
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d10 damage per plus with an attack that deals ongoing damage</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>When you hit with an attack using this weapon and the attack deals ongoing damage, you increase the ongoing damage by twice the plus of this weapon.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Lifestealer Weapon</title>
+      <category>Uncommon</category>
+      <fluff>When you strike your enemy, a small measure of your foe's life force is absorbed by this weapon and directed into you</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline auto="attackenh"/>
+      <headline>
+         <name>Critical</name>
+         <text>+1d10 necrotics damage per plus</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>Whenever you kill an enemy with an attack using this weapon, you gain temporary hit points equal to 3 + twice this weapon's enhancement bonus.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Healing</keyword> <keyword>Necrotic</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with an attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy takes additional necrotic damage equal to 1 + twice this weapon's enhancement bonus.</line>
+         <line>You regain a number of hit points equal to the damage the target takes from this necrotic damage. If you scored a critical hit, you also count the necrotic critical damage for this purpose.</line>
+      </block>
+   </item>
 
    <item>
       <title>Ki Weapon</title>
@@ -3863,6 +4254,66 @@
          <name>Property</name>
          <line>Once per turn, when you use your Flurry of Blows power, it deals 2 extra damage to its targets.</line>
          <line indent="1"><name>Level 18, 23 or 28</name>3 extra damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Knockback Weapon</title>
+      <category>Common</category>
+      <fluff>This massive hammer can push your enemies back or know them down -hard</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Hammer</subtype> <subtype>Mace</subtype>
+      <headline auto="attackenh"/>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Critical</name>
+         <line>When you score a critical hit with this weapon, you push the target up to a number of squares equal to this weapon's enhancement bonus.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <line>When you push a target with a Weapon attack using this weapon, you can push the target 1 additional square. This does not apply to the critical effect of this weapon.</line>
+         <line indent="1"><name>Level 14 or 19</name>Up to 2 additional squares</line>
+         <line indent="1"><name>Level 24 or 29</name>Up to 3 additional squares</line>
+         <line>Also, when you slide a target with a Weapon attack using this weapon, you can choose to push it instead, gaining the above additional distance.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You push a target with a Weapon power using this weapon, including if the push comes from the critical effect of this weapon</line>
+         <line><name>Effect</name>You knock the target prone at the end of the push.</line>
       </block>
    </item>
 
@@ -3916,6 +4367,60 @@
          <line><name>Trigger</name>You make an attack roll using this blade and dislike the result</line>
          <line><name>Effect</name>Reroll the triggering attack roll and use the second result, even if it is lower.</line>
          <line indent="1"><name>Level 23 or 28</name>Use whichever roll you wish.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Lullaby Bludgeon</title>
+      <category>Common</category>
+      <fluff>With a swing of this weapon, your enemy becomes lethargic, moving slower until finally collapsing into a snoring heap</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Flail</subtype> <subtype>Hammer</subtype> <subtype>Mace</subtype> <subtype>Staff</subtype>
+      <headline auto="attackenh"/>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus</text>
+      </headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Sleep</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit with a Weapon attack using this weapon</line>
+         <line><name>Attack</name> Special (triggering enemy); item's level + 6 vs. Will</line>
+         <line><name>Hit</name>The target is slowed (save ends).</line>
+         <line indent="1"><name>Crit</name>The target takes a -5 penalty to its first saving throw against this effect.</line>
+         <line indent="1"><name>First Failed Save</name>The target becomes unconscious instead (save ends).</line>
+         <line indent="2"><name>Aftereffect</name>The target is slowed until the end of its next turn.</line>
       </block>
    </item>
 
@@ -4134,6 +4639,194 @@
          <name>Critical</name>
          <text>+1d6 damage per plus</text>
       </headline>
+   </item>
+   
+   <item>
+      <title>Master's Blade</title>
+      <category>Common</category>
+      <fluff>Seemingly impossible feats are possible for master warriors, and for those who wield this perfectly designed weapon</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline auto="attackenh"/>
+      <headline>
+         <name>Critical</name>
+         <text>+1d6 damage per plus, or +1d8 damage per plus with at-will attacks while you have an active Stance</text>
+      </headline>
+      <block>
+         <name>Property</name>
+         <line>While you have an active Stance, you gain a +1 bonus to attack rolls with <![CDATA[<i>melee basic attacks</i>]]> and at-will Weapon attacks you make with this weapon.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Until the end of the encounter, while you wield this weapon, you can have two Stances active at the same time. If you stop wielding this weapon while you have two Stances active, you choose which Stance ends.</line>
+      </block>
+      
+   </item>
+   
+   <item>
+      <title>Maw of the Guardian</title>
+      <category>Common</category>
+      <fluff>Engraved with the primal rune of the Devourer, this weapon increases your damage while you're in a guardian form</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 damage per plus, of +1d8 damage per plus while you are in Guardian Form</headline>
+      <block>
+         <name>Property</name>
+         <line>You gain an item bonus to damage rolls with this weapon while you are in Guardian Form. This bonus equals 1 + one-half your Constitution modifier.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Oathblade</title>
+      <category>Common</category>
+      <fluff>This fine steel weapon strikes deadly blows against the foe you swear to vanquish</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 damage per plus, or +1d10 damage per plus against a target marked by you</headline>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>The next attack you make against a creature marked by you deals additional damage. The additional damage equals 1d6 damage per plus of this weapon.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Opportunistic Weapon</title>
+      <category>Common</category>
+      <fluff>An enemy quickly regrets turning its back tot he wielder of this weapon</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 damage per plus, or +1d12 damage per plus with <![CDATA[<i>opportunity attacks</i>]]></headline>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make an <![CDATA[<i>opportunity attack</i>]]> against an enemy</line>
+         <line><name>Effect</name>You make two <![CDATA[<i>opportunity attacks</i>]]> against the triggering enemy instead.</line>
+         <line><name>Special</name>You can instead use this power when an enemy provokes an <![CDATA[<i>opportunity attack</i>]]> from you, but you are unable to act outside of your own turn, such as if you are dazed. In such case, you only make the one <![CDATA[<i>opportunity attack</i>]]> instead of two.</line>
+      </block>
    </item>
 
    <item>
@@ -4902,6 +5595,51 @@
          <text>+1d6 damage per plus, and the target is knocked prone</text>
       </headline>
    </item>
+   
+   <item>
+      <title>Rending Axe</title>
+      <category>Common</category>
+      <fluff>When this axe scores a devastating strike, you can continue your assault</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Axe</subtype>
+      <headline auto="attackenh"/>
+      <headline>
+         <name>Critical</name>+1d6 damage per plus
+      </headline>
+      <block>
+         <name>Critical</name>
+         <line auto="crit">you can make a <![CDATA[<i>melee basic attack</i>]]> against the same target as a free reaction.</line>
+      </block>
+   </item>
 
    <item>
       <title>Reproachful Weapon</title>
@@ -5006,6 +5744,52 @@
          <line><name>Effect</name>The triggering enemy is dazed until the end of your next turn.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Retributive Weapon</title>
+      <category>Common</category>
+      <fluff>Spirits of mighty warriors bound to this weapon become enraged when you're attacked, adding their strength to your attack to knock and enemy away</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Bow</subtype> <subtype>Spear</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 damage per plus, or +1d8 damage per plus while you are bloodied</headline>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An enemy within your reach hits you with a melee attack or close attack</line>
+         <line><name>Effect</name>Make a <![CDATA[<i>ranged basic attack</i>]]> against the triggering enemy using this weapon. This attack does not provoke <![CDATA[<i>opportunity attacks</i>]]>, and you push the target 2 squares on a hit.</line>
+      </block>
+   </item>
 
    <item>
       <title>Rhythm Blade</title>
@@ -5108,6 +5892,114 @@
          <line><name>Effect</name>The triggering attack deals an extra +1d4 damage. If the target has the Reptile keyword, the extra damage is +1d12 instead.</line>
          <line indent="1"><name>Level 13 or 18</name>+2d4 extra damage, or +2d12 if the target has the Reptile keyword.</line>
          <line indent="1"><name>Level 23 or 28</name>+3d4 extra damage, or +3d12 if the target has the Reptile keyword.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Scepter of Bane</title>
+      <category>Rare</category>
+      <fluff>This powerful scepter, tipped with the symbol of the Lord of Tyrants, is both a vicious weapon and a powerful implement</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Mace</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d10 damage per plus as a weapon, or +1d8 damage per plus as a holy symbol</headline>
+      <block>
+         <name>Property</name>
+         <line>If you worship Bane and have proficiency with holy symbol implements, you can choose to treat this scepter as a holy symbol implement.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Charm</keyword> <keyword>Divine</keyword>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You score a critical hit against an enemy with an attack using this scepter</line>
+         <line><name>Effect</name>You do not deal the additonal critical damage from this scepter. Instead, after the triggering attack has been resolved, you dominate the triggering enemy until the end of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Screaming Bow</title>
+      <category>Uncommon</category>
+      <fluff>What begins as a low moan rises to an earsplitting shriek as the arrow or bolt seeks out its mark</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Bow</subtype> <subtype>Crossbow</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 thunder damage per plus</headline>
+      <block>
+         <name>Property</name>
+         <keyword>Thunder</keyword>
+         <line>All damage dealt by Weapon attacks using this weapon is thunder damage, and the attack gains the Thunder keyword, unless the attack already has a damage type.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy gains vulnerable 5 thunder (save ends).</line>
+         <line indent="1"><name>Level 14 or 19</name>Vulnerable 10 thunder.</line>
+         <line indent="1"><name>Level 24 or 29</name>Vulnerable 15 thunder.</line>
+         <line>Each creature adjacent to the triggering creature is assaulted by the scream until the end of your next turn.</line>
+         <line>While assaulted, each creature is deafened and has vulnerable 2 thunder.</line>
+         <line indent="1"><name>Level 14 or 19</name>Vulnerable 4 thunder.</line>
+         <line indent="1"><name>Level 24 or 29</name>Vulnerable 6 thunder.</line>
       </block>
    </item>
 
@@ -5219,6 +6111,49 @@
          <action>Free</action> <subaction>Reaction</subaction>
          <line><name>Trigger</name>An allied beast or summoned creature hits an enemy that it is flanking with you</line>
          <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy with this weapon.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Shielding Blade</title>
+      <category>Common</category>
+      <fluff>This sword's broad crossguard is larger and thicker than normal, but a few practice swipes show that it still perfectly balanced</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 damage per plus</headline>
+      <block>
+         <name>Property</name>
+         <line>You gain a +1 shield bonus to AC.</line>
       </block>
    </item>
 
@@ -5395,6 +6330,65 @@
          <line><name>Effect</name>You are invisible to the triggering enemy until the end of your next turn.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Spear of Lightning Shard</title>
+      <category>Rare</category>
+      <fluff>Created from a shard of the legendary spear of a storm giant lord Myrdroon, this spear looses devastating lightning</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Spear</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8">lightning</headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Lightning</keyword>
+         <frequency>At-Will</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You make a <![CDATA[<i>melee basic attack</i>]]> using this spear. The attack has +1 reach and all damage is lightning damage, and the attack gains the Lightning keyword.</line>
+         <line>If the spear can be thrown, you can choose to make a <![CDATA[<i>ranged basic attack</i>]]> instead, with a +2 increase to the normal range and a +4 increase to the long range.</line>
+         <line>You cannot use attacks that have a damage type other than lightning for this attack, even if that attack counts as a <![CDATA[<i>basic attack</i>]]>.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Lightning</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this spear</line>
+         <line><name>Effect</name>You push the triggering enemy 2 squares.</line>
+         <line>The triggering enemy and each creature adjacent to it takes 1d8 lightning damage.</line>
+         <line indent="1"><name>Level 14 or 19</name>2d8 lightning damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>3d8 lightning damage.</line>
+      </block>
+   </item>
 
    <item>
       <title>Staggering Weapon</title>
@@ -5437,18 +6431,74 @@
       </headline>
       <headline>
          <name>Critical</name>
-         <text>+1d6 damage per plus, and the target is knocked prone</text>
+         <text>+1d6 damage per plus</text>
       </headline>
       <block>
+         <name>Critical</name>
+         <line>When you score a critical hit using this weapon, you knock the target prone.</line>
+      </block>
+      <block>
          <name>Property</name>
-         <line>When you use a Weapon power that slides the target, you can add this weapon's enhancement bonus to the number of squares the target slides.</line>
+         <line>When you use a Weapon power that slides the target, you can add slide the target 1 additional square.</line>
+         <line indent="1"><name>Level 14 or 19</name>Up to 2 additional squares.</line>
+         <line indent="1"><name>Level 24 or 29</name>Up to 3 additional squares.</line>
       </block>
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>You hit with a Weapon attack using this weapon</line>
-         <line><name>Effect</name>Slide the target a number of squares equal to the weapon's enhancement bonus.</line>
+         <line><name>Effect</name>Slide the target a number of squares equal to this weapon's enhancement bonus. The additional distance from this weapon's property does not apply.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Stormbiter Blade</title>
+      <category>Common</category>
+      <fluff>Glistening with electric-blue eldritch energy, this weapon's blade packs a stormy punch</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 thunder and lightning damage per plus</headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Lightning</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Lightning attack or Thunder attack using this blade</line>
+         <line><name>Effect</name>You knock the triggering enemy prone, and it becomes storm-wracked (save ends).</line>
+         <line>While storm-wracked, the target is deafened and takes ongoing 5 lightning damage.</line>
+         <line indent="1"><name>Level 14 or 19</name>Ongoing 10 lightning damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>Ongoing 15 lightning damage.</line>
       </block>
    </item>
 
@@ -5550,6 +6600,122 @@
          <name>Item Bonus</name>
          <text>Damage rolls against enemies that grant you combat advantage</text>
       </headline>
+   </item>
+   
+   <item>
+      <title>Sunblade</title>
+      <category>Rare</category>
+      <fluff>This heavy golden sword attacks with the power and intensity of the sun, burning nearby enemies</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 radiant damage per plus</headline>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>The blade sheds dim light in a 2-square radius, bright ligth in a 10-square radius and dim light for a further 10 squares, bright light in a 20-square radius and dim light for a further 10 squares, or stops shedding light.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Radiant</keyword>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Your Weapon attacks with this weapon that deal untyped damage deal cold damage instead. The attacks gain the Cold keyword.</line>
+         <line>If a Weapon attack you make already has a damage type, the type is changed to cold and the corresponding keyword is replaced with Cold.</line>
+         <line>Using this power again ends the effect.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Radiant</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Attack</name>Close burst 1 (each enemy in the burst); Item's level +4 vs. Reflex</line>
+         <line indent="1"><name>Level 24 or 29</name>Clost burst 2</line>
+         <line><name>Hit</name>2d8 + this weapon's enhancement bonus radiant damage.</line>
+         <line indent="1"><name>Level 14 or 19</name>3d8 + this weapon's enhancement bonus radiant damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>4d8 + this weapon's enhancement bonus radiant damage.</line>
+         <line><name>Miss</name>3 radiant damage.</line>
+         <line indent="1"><name>Level 14 or 19</name>6 radiant damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>10 radiant damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Suppression Weapon</title>
+      <category>Common</category>
+      <fluff>On your command, this weapon creates a shimmering field of energy around your foe that contains your enemies attacks</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any ranged</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 damage per plus</headline>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a ranged Weapon attack using this weapon</line>
+         <line><name>Effect</name>Until the end of your next turn, the triggering enemy is suppressed.</line>
+         <line>While suppresed, the triggering enemy and any enemy within 3 squares of it do not have line of effect with ranged attacks and area attacks more than 3 squares away from the triggering enemy.</line>
+         <line>This does not prevent melee attack or close attacks, or stop other enemies from from moving more than 3 squares away from the triggering enemy to make ranged attack or area attacks without issue.</line>
+      </block>
    </item>
 
    <item>
@@ -5662,6 +6828,147 @@
    </item>
    
    <item>
+      <title>Temblor Weapon</title>
+      <category>Common</category>
+      <fluff>You send a shockwave of primal energy through the ground that shakes the firmament</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Hammer</subtype> <subtype>Mace</subtype>
+      <headline auto="attackenh"/>
+      <headline auto="critd6"/>
+      <block>
+         <name>Property</name>
+         <line>You can choose to use this weapon to <![CDATA[<i>bull rush</i>. If you do, <i>bull rush</i>]]> gains the Weapon keyword, and you add this weapon's proficiency bonus to the attack roll.</line>
+         <line>When you use this weapon to <![CDATA[<i>bull rush</i>]]>, you use this weapon's enhancement bonus instead of the inherent bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Terror Weapon</title>
+      <category>Common</category>
+      <fluff>The bite of this weapon sends waves of fear through its target</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Axe</subtype> <subtype>Hammer</subtype> <subtype>Heavy blade</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fear</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy takes a -2 penalty to all defenses (save ends).</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Thunderburst Shot</title>
+      <category>Common</category>
+      <fluff>Suddenly, the projectile from your weapon explodes in a burst of violent sound</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any ranged</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6">thunder</headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Thunder</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>The first <![CDATA[<i>ranged basic attack</i>]]> you make before the end of your next turn has the following benefits:</line>
+         <line indent="1"><bullet/>The attack deals thunder damage instead of any other damage types it might deal, and gains the Thunder keyword and loses any other damage keywords it might have.</line>
+         <line indent="1"><bullet/>The attack becomes an area burst 1 within weapon range, and is made against Fortitude.</line>
+         <line indent="2"><name>Level 14 or 19</name>Area burst 2.</line>
+         <line indent="2"><name>Level 24 or 29</name>Area burst 3.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Thunder Weapon</title>
       <category>Common</category>
       <fluff>You can unleash a clap of thunder when this weapon hits, carrying your foe away on a wave of deadly sound</fluff>
@@ -5713,6 +7020,108 @@
          <line indent="1"><name>Level 13 or 18</name>2d8 + this weapon's enhancement bonus thunder damage.</line>
          <line indent="1"><name>Level 23 or 28</name>3d8 + this weapon's enhancement bonus thunder damage, and you must push it 2 squares.</line>
          <line>If you have abilities that increase thunder damage specifically, you can apply them to this damage roll.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Tidal Hammer</title>
+      <category>Common</category>
+      <fluff>With a head carved to resemble a watery fist, this potent weapon reveals its power each time you manifest elemental energy</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Hammer</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d4 damage per plus, and you knock the target prone</headline>
+      <block>
+         <name>Property</name>
+         <keyword>Elemental</keyword>
+         <line>Whenever you hit one or more targets with an Acid, Cold, Fire, Lightning, or Thunder attack using this hammer, you can shift 1 square.</line>
+         <line indent="1"><name>Level 14 or 19</name>Shift up to 2 squares.</line>
+         <line indent="1"><name>Level 24 or 29</name>Shift up to 3 squares.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Elemental</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You use your <![CDATA[<i>second wind</i>]]></line>
+         <line><name>Effect</name>Close burst 5 (one creature); You pull the target up to 4 squares.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Tooth of Chaos</title>
+      <category>Uncommon</category>
+      <fluff>This dagger seems to change shape in your hand, becoming precisely what you need to strike your enemy</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Light blade</subtype>
+      <headline><name>Requirement</name>This enhancement can only be placed on a dagger, katar, kukri, or parrying dagger.</headline>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a sorcerer attack using this dagger</line>
+         <line><name>Effect</name>Once before the end of the encounter, when you hit the triggering creature with a sorcerer attack, you can treat the attack roll as your choice of even or odd instead of what the roll was.</line>
       </block>
    </item>
 
@@ -5813,6 +7222,116 @@
          <name>Properties</name>
          <line><bullet />If you are a Shaman who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</line>
          <line><bullet />If you have proficiency with this weapon and use it as an implement for a power that has a range of Melee spirit, you can choose to use a square in your own space as the origin square of that power.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Tuning Songblade</title>
+      <category>Common</category>
+      <fluff>As your blade strikes the enemy, it rings out with a perfect note that echoes</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6">thunder</headline>
+      <block>
+         <name>Properties</name>
+         <line auot="bard"><bullet></bullet></line>
+         <line><bullet/>When you hit an enemy with this weapon, that enemy takes a -2 penalty to the first saving throw it makes against ongoing thunder damage before the end of the encounter.</line>
+         <line indent="1"><name>Level 14 or 19</name>-3 penalty.</line>
+         <line indent="1"><name>Level 24 or 29</name>-4 penalty.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Arcane</keyword> <subaction>Thunder</subaction>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy wit a Weapon attack using this blade</line>
+         <line><name>Effect</name>The triggering enemy takes ongoing 5 thunder damage (save ends).</line>
+         <line indent="1"><name>Level 14 or 19</name>Ongoing 10 thunder damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>Ongoing 15 thunder damage.</line>
+         <line>While the triggering enemy is taking this ongoing thunder damage, you gain a +2 item bonus to all attack rolls using this blade against it.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Unraveling Weapon</title>
+      <category>Uncommon</category>
+      <fluff>Ancient oaths carved into this weapon flare with crimson light when you call on them, overcoming your enemy's protections</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Bow</subtype> <subtype>Spear</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Properties</name>
+         <line>An unraveling weapon has the following properties:</line>
+         <line><bullet/>Whenever you bloody an enemy with a seeker ranged attack using this weapon, you can shift 1 square as a free reaction.</line>
+         <line><bullet/>A seeker treats this as a common weapon when creating it.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Primal</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with a seeker attack</line>
+         <line><name>Effect</name>The triggering attack ignores any immunities and resistances the enemy has.</line>
       </block>
    </item>
 
@@ -6032,6 +7551,68 @@
          <name>Critical</name>
          <text>+1d8 damage per plus, and you can choose to reroll any or all of your critical damage dice, but you must use the second result of each die</text>
       </headline>
+   </item>
+   
+   <item>
+      <title>Vigilant Blade</title>
+      <category>Uncommon</category>
+      <fluff>Set with the symbol of an upright gauntlet with an unblinking eye in its palm, this blade bursts into burning white light in the hands of one sword to bring justice to the wicked</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Heavy blade</subtype> <subtype>Light blade</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8">fire and radiant</headline>
+      <block>
+         <name>Property</name>
+         <line auto="weapliment">an Avenger or Paladin</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>The blade sheds bright light in a 4-square radius and dim light for a further 4 squares.</line>
+         <line>Using this power again ends the effect.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An enemy adjacent to you targets an ally adjacent to you with an attack</line>
+         <line indent="1"><name>Level 14 or 19</name>An enemy within 2 squares of you.</line>
+         <line indent="1"><name>Level 24 or 29</name>An enemy within 2 squares of you, and an ally within 2 squares of you.</line>
+         <line><name>Effect</name>You and the triggering ally shift, switching places.</line>
+         <line>You gain combat advantage agains the triggering enemy until the end of your next turn and, if the triggering attack did not target you, you become the target instead of the triggering ally.</line>
+      </block>
    </item>
 
    <item>
@@ -6264,6 +7845,53 @@
    </item>
    
    <item>
+      <title>Way-Leader Spear</title>
+      <category>Uncommon</category>
+      <fluff>You strike your foe, designating it as prey for allies you suddently teleport right next to it</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Spear</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Teleportation</keyword>
+         <frequency>Encounter</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must have hit an enemy with a Weapon attack using this spear during your current turn.</line>
+         <line><name>Effect</name>Close burst 5 (one or two allies in the burst); You teleport each target to a space adjacent to an enemy that satisfies the requirement for this power.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Weapon of Accuracy</title>
       <category>Common</category>
       <fluff>When you attack, it almost feels like this weapon or its projectiles are pulled towards the target</fluff>
@@ -6311,6 +7939,58 @@
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>You gain a +2 power bonus to the first attack roll you make with this weapon before the end of the encounter.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Weapon of Defense</title>
+      <category>Uncommon</category>
+      <fluff>Each of your enemy's blows finds ready opposition in this parrying weapon</fluff>
+      <level>
+         <value>4</value>
+         <bonus>+1</bonus>
+         <price>840</price>
+      </level>
+      <level>
+         <value>9</value>
+         <bonus>+2</bonus>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>14</value>
+         <bonus>+3</bonus>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>19</value>
+         <bonus>+4</bonus>
+         <price>105,000</price>
+      </level>
+      <level>
+         <value>24</value>
+         <bonus>+5</bonus>
+         <price>525,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <bonus>+6</bonus>
+         <price>2,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Property</name>
+         <line>You gain resist 1 all while you wield this weapon, or resist 2 all if the weapon has the Defensive weapon trait.</line>
+         <line indent="1"><name>Level 14 or 19</name>Resist 2 all, or resist 3 all, respectively.</line>
+         <line indent="1"><name>Level 24 or 29</name>Resist 3 all, or resist 5 all, respectively.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You take damage from a melee attack</line>
+         <line><name>Effect</name>You take only half of the triggering damage.</line>
       </block>
    </item>
 
