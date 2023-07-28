@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../power.xsl"?>
+<catalog>
+   <collection>Swordmage Lvl 6 Utility Spells</collection>
+
+   <power>
+      <title>Clap of Thunder</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>Raising your blade, you send out a clap of thunder that sends your foes sprawling as noise cascades over them</fluff>
+      <keyword>Arcane</keyword> <keyword>Implement</keyword> <keyword>Thunder</keyword>
+      <section>
+         <name>Attack:</name>
+         <type>Close</type> <range>burst 1</range>
+         <type2>Close</type2> <range2>blast 2</range2>
+         <target>Each creature in the burst or blast</target>
+         <text>Intelligence vs. Fortitude</text>
+      </section>
+      <section shade="">
+         <name>Hit:</name>
+         <text>3d6 + Intelligence modifier thunder damage, and you knock the target prone.</text>
+      </section>
+      <section>
+         <name>Miss:</name>
+         <text>Half damage if the target is marked by your <![CDATA[<i>arcane aegis</i>]]> class power.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Dazing Rebuke</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Immediate</action> <subaction>Reaction</subaction>
+      <fluff>Your sword swing unleashes a barrage of nettling darts of force that punish a foe for attacking your allies</fluff>
+      <keyword>Arcane</keyword> <keyword>Force</keyword> <keyword>Implement</keyword>
+      <section>
+         <name>Aegis of Shielding:</name>
+         <text>You can use this power as an immediate interrupt. The target can finish the triggering attack on a hit, even though it becomes dazed and might be out of actions.</text>
+      </section>
+      <section>
+         <name>Trigger:</name>
+         <text>An enemy within 5 squares of you hits or misses an ally</text>
+      </section>
+      <section>
+         <name>Attack:</name>
+         <type>Ranged</type> <range>5</range>
+         <target>the triggering enemy</target>
+         <text>Intelligence vs. Will</text>
+      </section>
+      <section shade="">
+         <name>Hit:</name>
+         <text>1d8 + Intelligence modifier force damage, and the target is dazed until the start of the currently acting creature's next turn.</text>
+      </section>
+      <section shade="" indent="1">
+         <name>Aegis of Shielding:</name>
+         <text>The target also takes a penalty to all damage rolls while it remains dazed. The penalty equals 3 + your Constitution modifier.</text>
+      </section>
+      <section>
+         <name>Miss:</name>
+         <text>If the target is marked by you, it takes force damage equal to your Intelligence modifier + your implement's enhancement bonus, and cannot make <![CDATA[<i>opportunity attacks</i>]]> until the start of the currently acting creature's next turn.</text>
+      </section>
+      <section indent="1">
+         <name>Aegis of Shielding:</name>
+         <text>The target takes half the penalty to damage rolls. If the target is marked by you, it cannot make any triggered attacks instead of only <![CDATA[<i>opportunity attacks</i>]]>.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Echoes of Sword Magic</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Free</action> <subaction>Action</subaction>
+      <fluff>You tap into the magic of your failed strike to unleash a mighty barrage of thunder</fluff>
+      <keyword>Arcane</keyword> <keyword>Implement</keyword> <keyword>Thunder</keyword>
+      <section>
+         <name>Requirement:</name>
+         <text>You must have used a swordmage attack power this turn and missed all targets with it.</text>
+      </section>
+      <section>
+         <name>Attack:</name>
+         <type>Close</type> <range>blast 3</range>
+         <target>each creature in the burst</target>
+         <text>Intelligence vs. Fortitude</text>
+      </section>
+      <section shade="">
+         <name>Hit:</name>
+         <text>2d8 + Intelligence modifier thunder damage.</text>
+      </section>
+      <section shade="">
+         <text>The target is marked by your <![CDATA[<i>arcane aegis</i>]]> until the end of your next turn. This does not remove the mark from any previous target.</text>
+      </section>
+      <section>
+         <name>Miss:</name>
+         <text>If you used a swordmage Lightning attack power this turn, you deal thunder damage equal to your 2 + your Intelligence modifier + your implement's enhancement bonus.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Electrified Lash</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>You point your sword into the air, and cruel talons of white lightning reach out toward your foes</fluff>
+      <keyword>Arcane</keyword> <keyword>Implement</keyword> <keyword>Lightning</keyword>
+      <section>
+         <name>Attack:</name>
+         <type>Close</type> <range>burst 2</range>
+         <target>each enemy in the burst</target>
+         <text>Intelligence vs. Reflex</text>
+      </section>
+      <section shade="">
+         <name>Hit:</name>
+         <text>3d6 + Intelligence modifier lightning damage.</text>
+      </section>
+      <section>
+         <name>Miss:</name>
+         <text>If the target is marked by you, it takes lightning damage equal to 2 + your Intelligence modifier + your implement's enhancement bonus.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Evoker's Summons</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>You violoently summon a foe to your side</fluff>
+      <keyword>Arcane</keyword> <keyword>Force</keyword> <keyword>Implement</keyword> <keyword>Teleportation</keyword>
+      <section>
+         <name>Attack:</name>
+         <type>Close</type> <range>burst 3</range>
+         <target>each enemy in the burst</target>
+         <text>Intelligence vs. Will</text>
+      </section>
+      <section shade="">
+         <name>Hit:</name>
+         <text>2d6 + Intelligence modifier force damage, and you teleport the target to a space adjacent to you. If there is not enough space adjacent to you, you teleport the target as close to you as possible instead.</text>
+      </section>
+      <section>
+         <name>Miss:</name>
+         <text>You teleport the target 1 square towards you, as if you had pulled it.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Fettering Aegis</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Immediate</action> <subaction>Interrupt</subaction>
+      <fluff>The magic of your aegis creates an invisiblew tether between you and your enemy, preventing it from escaping</fluff>
+      <keyword>Arcane</keyword> <keyword>Force</keyword> <keyword>Implement</keyword>
+      <section>
+         <name>Trigger:</name>
+         <text>An enemy that you can see and that is marked by your <![CDATA[<i>arcane aegis</i>]]> willingly moves away from you</text>
+      </section>
+      <section>
+         <name>Attack:</name>
+         <type>Ranged</type> <range>10</range>
+         <target>the triggering enemy</target>
+         <text>Intelligence vs. Fortitude</text>
+      </section>
+      <section shade="">
+         <name>Hit:</name>
+         <text>2d8 + Intelligence modifier force damage, and you pull the target up to 8 squares. You must pull the target to a space adjacent to you if you can.</text>
+      </section>
+      <section shade="">
+         <text>The target stops moving, though it can resume moving if it has further actions remaining.</text>
+      </section>
+      <section shade="" indent="1">
+         <name>Aegis of Ensnarement:</name>
+         <text>The target is immobilized until the end of its next turn.</text>
+      </section>
+      <section>
+         <name>Miss:</name>
+         <text>You pull the target half the distance, and it can resume moving after the pull.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Flamewall Strike</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>With a mighty sweep of your blade, dancing tongues of arcane fire rise from the ground at the feet of your foes</fluff>
+      <keyword>Arcane</keyword> <keyword>Fire</keyword> <keyword>Implement</keyword> <keyword>Zone</keyword>
+      <section auto="no-opportunity"/>
+      <section shade="">
+         <name>Effect:</name>
+         <type>Area</type> <range>wall 5 within 1 square</range>
+         <text>The wall creates a zone of leaping flames until the end of your next turn. The origin square of the wall does not need to be within 1 square as long as at least one square is. The wall is 1 square high.</text>
+      </section>
+      <section shade="">
+         <text>Any creature that enters the wall's space or ends its turn there takes fire damage equal to 2 + your Intelligence modifier + your implement's enhancement bonus. A creature can take this damage only once per turn.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Rejuvenating Strike</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>Your attack draws life from your foe's injury and instills you with renewed energy</fluff>
+      <keyword>Arcane</keyword>
+      <section>
+         <name>Attack:</name>
+         <type>Melee</type> <range>weapon</range>
+         <target>one creature</target>
+         <text>Intelligence vs. AC and Fortitude</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <text>Make one attack roll and compare it to both</text>
+      </section>
+      <section shade="">
+         <name>Hit (AC):</name>
+         <text>3[W] + Intelligence modifier damage.</text>
+      </section>
+      <section>
+         <name>Hit: (Fortitude):</name>
+         <text>You can expend a healing surge to regain hit points equal to your healing surge value.</text>
+      </section>
+      <section shade="">
+         <name>Miss:</name>
+         <text>You can expend a healing surge to regain hit points equal to half your healing surge value.</text>
+      </section>
+      <section>
+         <name>Effect:</name>
+         <text>If you expended a healing surge, you gain a benefit depending on your Arcane Aegis class feature choice:</text>
+      </section>
+      <section indent="1">
+         <name>Aegis of Assault:</name>
+         <text>The attack you make as part of your <![CDATA[<i>aegis of assault</i>]]> class power deals additional damage until the end of your next turn. The additional damage equals one-half the number of healing surges you have expended (minimum +1).</text>
+      </section>
+      <section indent="1">
+         <name>Aegis of Ensnarement:</name>
+         <text>You gain a bonus to attack rolls against the target for attacks the target triggers by willingly moving before the end of your next turn. The bonus equals one-half the number of healing surges you have expended (minimum +1).</text>
+      </section>
+      <section indent="1">
+         <name>Aegis of Shielding:</name>
+         <text>Your <![CDATA[<i>aegis of shielding</i>]]> class power reduces additional damage until the end of your next turn. The additional reduction equals one-half the number of healing surges you ahve expended (minimum 1).</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Shatterblade</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>In the blink of an eye, your bonded weapon shatters into thousands of fragments that cut into your foes, and the weapon the reforms in your hand</fluff>
+      <keyword>Arcane</keyword> <keyword>Weapon</keyword>
+      <section>
+         <name>Requirement:</name>
+         <text>You must make this attack using your bonded weapon.</text>
+      </section>
+      <section>
+         <name>Attack:</name>
+         <type>Melee</type> <range>weapon</range>
+         <target>one creature</target>
+         <text>Intelligence vs. AC and Reflex</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <text>Make one attack roll and compare it to both</text>
+      </section>
+      <section shade="">
+         <name>Hit (AC):</name>
+         <text>3[W] + Intelligence modifier damage.</text>
+      </section>
+      <section>
+         <name>Hit (Reflex):</name>
+         <text>Each creature adjacent to the target (other than you) takes damage equal to 2 + your Intelligence modifier + your weapon's enhancement bonus.</text>
+      </section>
+      <section shade="">
+         <name>Miss (Both):</name>
+         <text>2 + your Intelligence modifier + your weapon's enhancement bonus damage.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Spikes of Agony</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>Your strike leaves shards of pure force piercing your enemy's flesh, rending it if it moves</fluff>
+      <keyword>Arcane</keyword> <keyword>Force</keyword> <keyword>Weapon</keyword>
+      <section>
+         <name>Attack:</name>
+         <type>Melee</type> <range>weapon</range>
+         <target>one creature</target>
+         <text>Intelligence vs. AC and Fortitude</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <text>Make one attack roll and compare it to both</text>
+      </section>
+      <section shade="">
+         <name>Hit (AC):</name>
+         <text>3[W] force damage, or 3[W] + Intelligence modifier force damage if you also hit the target's Fortitude defense.</text>
+      </section>
+      <section>
+         <name>Hit (Fortitude):</name>
+         <text>2 + your Intelligence modifier + your weapon's enhancement bonus force damage if you didn't hit the target's AC.</text>
+      </section>
+      <section>
+         <text>The first time the target moves before the start of your next turn, it takes force damage equal to 5 + your [Strength or Constitution] modifier + your weapon's enhancement bonus, or half this amount if the movement was forced movement.</text>
+      </section>
+      <section shade="">
+         <name>Miss (Fortitude):</name>
+         <text>The first time the target willingly moves before the start of your next turn, it takes half the force damage.</text>
+      </section>
+      <section>
+         <name>Special (Aegis of Assault):</name>
+         <text>When you use your <![CDATA[<i>aegis of assault</i>]]> class power, you can use this attack in place of the <![CDATA[<i>melee basic attack</i>]]>.</text>
+      </section>
+      <section>
+         <text>If you do, the damage when you hit AC is reduced by -1[W] and the force damage from movement happens the first time the target moves before the start of the currently acting creature's next turn.</text>
+      </section>
+   </power>
+
+   <power>
+      <title>Watchful Strike</title>
+      <class>Swordmage</class> <category>Attack</category> <level>7</level>
+      <frequency>Encounter</frequency>
+      <action>Standard</action> <subaction>Action</subaction>
+      <fluff>As you strike your foe, you palce another foe under your aegis</fluff>
+      <keyword>Arcane</keyword> <keyword>Weapon</keyword>
+      <section>
+         <name>Prerequisite:</name>
+         <text>You must have the <![CDATA[<i>arcane aegis</i>]]> class power.</text>
+      </section>
+      <section>
+         <name>Attack:</name>
+         <type>Melee</type> <range>weapon</range>
+         <target>one creature</target>
+         <text>Intelligence vs. AC</text>
+      </section>
+      <section shade="">
+         <name>Hit:</name>
+         <text>3[W] + Intelligence modifier damage.</text>
+      </section>
+      <section>
+         <name>Miss:</name>
+         <text>2 + your Intelligence modifier + your weapon's enhancement bonus damage if the target is marked by you.</text>
+      </section>
+      <section shade="">
+         <name>Effect:</name>
+         <text>Choose one enemy within 5 squares of you other than the target. If the target is marked by your <![CDATA[<i>arcane aegis</i>]]>, you can choose one enemy within 10 squares instead.</text>
+      </section>
+      <section shade="">
+         <text>The chosen enemy is marked by your <![CDATA[<i>arcane aegis</i>]]> until the end of your next turn.</text>
+      </section>
+   </power>
+
+</catalog>
