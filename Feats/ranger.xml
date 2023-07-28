@@ -782,6 +782,7 @@
          <type>class</type>
          <name>any martial</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Combat Advantage</group>
       <group>Ongoing Damage</group>
@@ -796,10 +797,11 @@
          <type>class</type>
          <name>any martial</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Weapon Specialization</group>
-      <benefit>You gain a +2 bonus to damage rolls with &lt;i&gt;melee basic attacks&lt;/i&gt; made with a mace.</benefit>
+      <benefit>You gain a +2 bonus to damage rolls with &lt;i&gt;melee basic attacks&lt;/i&gt; made with the mace simple weapon.</benefit>
       <benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
 
@@ -966,6 +968,7 @@
          <name>a light blade</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Weapon Specialization</group>
       <benefit>Whenever you make a &lt;i&gt;basic attack&lt;/i&gt; using a light blade you are proficient with, you can choose to make the attack against Reflex instead of AC.</benefit>
@@ -1235,6 +1238,7 @@
          <type>class</type>
          <name>Monk</name>
       </prereq>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Damage Bonus</group>
       <benefit>Your &lt;i&gt;basic attacks&lt;/i&gt; against enemies at full hit points deal additional damage equal to your Intelligence modifier.</benefit>
@@ -1355,6 +1359,7 @@
          <name>any one-handed pick</name>
       </prereq>
       <group>Attack Bonus</group>
+      <group>Basic Attack</group>
       <group>Class</group>
       <group>Skill Enhancement</group>
       <group>Weapon Specialization</group>
@@ -2424,7 +2429,7 @@
       <group>Basic Attack</group>
       <group>Class</group>
       <group>Weapon Specialization</group>
-      <benefit>When you use a Spear to make a &lt;i&gt;melee basic attack&lt;/i&gt;, you can choose to make the attack against Reflex instead of AC.</benefit>
+      <benefit>When you use a Spear to make a &lt;i&gt;melee basic attack&lt;/i&gt; on your turn, you can choose to make the attack against Reflex instead of AC.</benefit>
    </feat>
 
    <feat>
@@ -2481,8 +2486,8 @@
       <group>Damage Bonus</group>
       <group>Power Enhancement</group>
       <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;infernal wrath&lt;/i&gt; racial power, if the next attack you make is a &lt;i&gt;basic attack&lt;/i&gt; or a Martial, Weapon power, it deals +1[W] extra damage.</benefit>
-      <benefit>The extra damage increases to +2[W] at 11th level, and to +3[W] at 21st level.</benefit>
+      <benefit>When you use your &lt;i&gt;infernal wrath&lt;/i&gt; racial power, if the next attack you make is a &lt;i&gt;basic attack&lt;/i&gt; or a Martial Weapon power, the attack deals +1[W] extra damage.</benefit>
+      <benefit>The extra damage increases to +2[W] at 21st level.</benefit>
    </feat>
 
    <feat>
@@ -2673,7 +2678,7 @@
       <group>Class</group>
       <group>Forced Movement</group>
       <group>Weapon Specialization</group>
-      <benefit>Whenever you hit with a &lt;i&gt;melee basic attack&lt;/i&gt; using a Flail you have proficiency with, you can slide the target 1 square.</benefit>
+      <benefit>Whenever you hit with a &lt;i&gt;melee basic attack&lt;/i&gt; on your turn using a Flail you have proficiency with, you can slide the target 1 square.</benefit>
    </feat>
 
    <feat>
@@ -4080,6 +4085,95 @@
       <group>Support</group>
       <benefit>You gain training in Streetwise.</benefit>
       <benefit>Also, whenever you spend a healing surge and your beast companion is adjacent to you, it regains a number of hit points equal to one-half your healing surge value. This is in addition to whatever benefit you gain from spending the healing surge.</benefit>
+   </feat>
+
+   <feat>
+      <title>Second Shot</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Hunter's Quarry</name>
+      </prereq>
+      <group>Class</group>
+      <benefit>When you designate a creature as your quarry, you can designate the second-nearest enemy instead of the nearest enemy.</benefit>
+   </feat>
+
+   <feat>
+      <title>Seeking Power</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>level</type>
+         <name>6th</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Controller</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Striker</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Power Repertoire</group>
+      <benefit>You can exchange any 6th-level or higher utility power you know for &lt;i&gt;seeking power&lt;/i&gt;.</benefit>
+
+      <power>
+         <title>Seeking Power</title>
+         <class>Feat</class> <category>Utility</category>
+         <fluff>Infusing your attack with greater power reduces the risk that intervening obstructions can foil it</fluff>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <section personal="" />
+         <section shade="">
+            <name>Effect:</name>
+            <text>The first ranged attack roll you make before the end of your next turn ignores all concealment and cover.</text>
+         </section>
+         <section shade="">
+            <text>If the attack misses, you regain the use of this power at the start of your next turn.</text>
+         </section>
+      </power>
+   </feat>
+
+   <feat>
+      <title>Shadar-kai Beast</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shadar-kai</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shadow jaunt</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Beast Mastery</name>
+      </prereq>
+      <group>Animal Companion</group>
+      <group>Class</group>
+      <group>Dying</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Shadow Nature</group>
+      <group>Skill Enhancement</group>
+      <group>Stealth</group>
+      <group>Teleportation</group>
+      <benefit>Your beast companion gains the shadow origin istead of the natural origin.</benefit>
+      <benefit>Also, your beast companion gains a +2 bonus to death saving throws and saving throws against effects that knock it unconscious.</benefit>
+      <benefit>Also, your beast companion gains a +2 racial bonus to Stealth checks.</benefit>
+      <benefit>In addition, when you use your &lt;i&gt;shadow jaunt&lt;/i&gt; racial power, your beast companion can teleport the same distance that you teleport. You can choose to have the beast companion become insubstantial at the end of the teleportation instead of yourself.</benefit>
    </feat>
 
    <feat>
