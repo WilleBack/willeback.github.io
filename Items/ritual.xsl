@@ -185,7 +185,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
       <div class="container">
 
-           <xsl:apply-templates match="ritual" />
+           <xsl:apply-templates select="ritual" />
 
 
       </div> <!-- container -->
