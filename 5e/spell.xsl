@@ -119,6 +119,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
+
+			<xsl:if test="heighten">
+				<p style="padding:0.2em 0.3em; text-indent:1em; margin:0;">
+					<b>At Higher Levels. </b>
+					<xsl:value-of select="heighten" disable-output-escaping="yes"/>
+				</p>
+			</xsl:if>
 			
 		</div>
 	
