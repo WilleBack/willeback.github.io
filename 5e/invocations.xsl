@@ -122,6 +122,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:choose>
 			</xsl:for-each>
 
+			<xsl:if test="heighten">
+				<p style="padding:0.2em 0.3em; text-indent:1em; margin:0;">
+					<b>At Higher Levels. </b>
+					<xsl:value-of select="heighten" disable-output-escaping="yes"/>
+				</p>
+			</xsl:if>
+
 		</div>
 
 	</div>
@@ -131,19 +138,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="createheader">
 	<xsl:param name="bgcolor">Purple</xsl:param>
 
-	<div id="header" style="width:100%; float:left; font-size:1.2em; font-variant: small-caps; ">
-		<div id="title" style="float:left; margin:0.2em; vertical-align:middle; font-weight:bold; letter-spacing:1px; width:calc(100% - 1.5em);">
-			<xsl:value-of select="title"/>
-		</div>
-
+	<div id="header" style="width:100%; float:left; font-size:1.2em; font-variant: small-caps; margin:0.2em; font-weight:bold; letter-spacing:1px; ">
+		<xsl:value-of select="title"/>
 	</div>
 	<xsl:if test="level or prereq">
-      <div id="info" style="width:100%; float:left; padding: 0.2em 0.4em;">
-         <div style="width:calc(100% - 1.3em); float:left; padding-left:1em; text-indent:-1em;"><b>Prerequisite: </b><i>
-			   <xsl:if test="level"><xsl:value-of select="level" /><xsl:text> level</xsl:text>
-				   <xsl:if test="prereq" >
-					   <xsl:text>, </xsl:text>
-				   </xsl:if>
+		<div id="info" style="width:100%; float:left; padding: 0.2em 0.4em;">
+			<div style="width:calc(100% - 1.4em); float:left; padding-left:1em; text-indent:-1em;">
+				<b>Prerequisite: </b><i>
+				<xsl:if test="level"><xsl:value-of select="level" /><xsl:text> level</xsl:text>
+					<xsl:if test="prereq" >
+						<xsl:text>, </xsl:text>
+					</xsl:if>
 				</xsl:if>
 				<xsl:for-each select="prereq">
 					<xsl:value-of select="." disable-output-escaping="yes" />
@@ -151,7 +156,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:text>, </xsl:text>
 					</xsl:if>
 				</xsl:for-each></i>
-		   </div>
+			</div>
 		</div>
 	</xsl:if>
 
