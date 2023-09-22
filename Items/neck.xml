@@ -176,6 +176,52 @@
          <line indent="1"><name>Level 23 or 28</name>resist 15</line>
       </block>
    </item>
+   
+   <item>
+      <title>Amulet of Life</title>
+      <category>Common</category>
+      <fluff>Crafted in orum, and in the shape of a stylized sun, this amulet flares with amber light whenever it's used</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Neck Slot</type>
+      <headline auto="neckenh"/>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Healing</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You spend a healing surge</line>
+         <line><name>Effect</name>You spend a healing surge to regain hit points equal to your healing surge value.</line>
+      </block>
+   </item>
 
    <item>
       <title>Amulet of Mental Resolve</title>
@@ -353,6 +399,112 @@
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>You fail a saving throw</line>
          <line><name>Effect</name>You reroll the saving throw, using the second result even if it is lower.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Amulet of Psychic Interference</title>
+      <category>Common</category>
+      <fluff>A shrunken head carved from bone hangs from a rough twine, and animates and cackles madly when you call upon its power</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Neck Slot</type>
+      <headline auto="neckenh"/>
+      <block>
+         <name>Property</name>
+         <line>You can choose to make the savings throw against a Charm, Fear, or Psychic effect at the start of your turn instead of at the end of your turn. If you fail the saving throw, you do not get to attempt it again at the end of your turn.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Psychic</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An enemy you can see hits or misses you with an attack that has the Charm, Fear, or Psychic keyword</line>
+         <line><name>Effect</name>The triggering enemy takes 10 psychic damage.</line>
+         <line indent="1"><name>Level 15 or 20</name>15 psychic damage.</line>
+         <line indent="1"><name>Level 25 ot 30</name>20 psychic damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Amulet of Seduction</title>
+      <category>Common</category>
+      <fluff>Supposedly containing the tears of a succubus, this glittering golden amulet can turn a foe's heart toward you and against itself</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <tye>Neck Slot</tye>
+      <headline auto="neckenh"/>
+      <headline><name>Item Bonus</name>Bluff checks and Diplomacy checks</headline>
+      <block>
+         <name>Property</name>
+         <line>When you impose a Charm effect that a save can end, the target takes a -2 penalty to the first saving throw it makes against that effect.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Charm</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Attack</name>Close burst 1 (one creature in the burst); Charisma + this amulet's enhancement bonus vs. Will</line>
+         <line><name>Hit</name>The target is under your charm (save ends).</line>
+         <line>While under your charm, the target cannot attack you, and must take the following action whenever it is able to:</line>
+         <line indent="1"><![CDATA[<b>Immediate Interrupt:</b><i> Requirement:</i> The charmed target is adjacent to you; <i>Trigger:</i>]]> You are the target of a melee attack or ranged attack; The triggering attack targets the charmed target instead of you.</line>
+         <line>If the charmed target takes damage, this effect immediately ends.</line>
       </block>
    </item>
 
@@ -606,6 +758,52 @@
    </item>
    
    <item>
+      <title>Cape of the Mountebank</title>
+      <category>Uncommon</category>
+      <fluff>With a flourish of this silk-hemmed garment, you transport further away from danger</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Neck Slot</type>
+      <headline auto="neckenh"/>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Teleportation</keyword>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An enemy hits you with an attack</line>
+         <line><name>Effect</name>You teleport up to a number of squares equal to 2 + twice this cape's enhancement bonus, and gain combat advantage against the triggering enemy until the end of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Cloak of Distortion</title>
       <category>Common</category>
       <fluff>This cloak roils about you like the rippling air of a scorching desert</fluff>
@@ -648,6 +846,64 @@
          <name>Item Bonus</name>
          <text>Aöö defenses against ranged attacks from more than 5 squares away</text>
       </headline>
+   </item>
+   
+   <item>
+      <title>Cloak of Poison</title>
+      <category>Common</category>
+      <fluff>This heavy cloak feels oily and has a faint chemical smell</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Neck Slot</type>
+      <headline auto="neckenh"/>
+      <block>
+         <name>Property</name>
+         <keyword>Poison</keyword>
+         <line>When you make an attack roll or a saving throw, on a natural roll of 1, you take ongoing 10 poison damage (save ends).</line>
+         <line indent="1"><name>Level 15 or 20</name>Ongoing 15 poison damage.</line>
+         <line indent="1"><name>Level 25 or 30</name>Ongoing 20 poison damage.</line>
+         <line>You can end this ongoing damage as a minor action by taking off this cloak and putting it back on. This disrupts the protection granted by the cloak, giving you a -1 penalty to Fortitude, Reflex, and Will.</line>
+         <line indent="1"><name>Level 20 or 25</name>-2 penalty.</line>
+         <line indent="1"><name>Level 30</name>-3 penalty.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Poison</keyword>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An adjacent enemy hits you with a melee attack</line>
+         <line><name>Effect</name>Melee 1 (the triggering enemy); The target takes ongoing 5 poison damage (save ends).</line>
+         <line indent="1"><name>Level 15 or 20</name>Ongoing 10 poison damage.</line>
+         <line indent="1"><name>Level 25 or 30</name>Ongoing 15 poison damage.</line>
+      </block>
    </item>
 
    <item>

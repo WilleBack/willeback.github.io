@@ -52,7 +52,7 @@
          <keyword>Healing</keyword>
          <frequency>Consumable</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You do not need to eat or drink for a day.</line>
+         <line><name>Effect</name>You do not need to eat or drink for a day.</line>
          <line>You also gain a +3 power bonus to Endurance checks, and regain an extra 2 hit points whenever you spend a healing surge to regain hit points.</line>
       </block>
    </item>
@@ -132,6 +132,64 @@
          <line>Also, if you make Endurance checks against a disease of the potion's level or lower during your next extended rest, you gain a +5 power bonus to the first check.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Elixir of Aptitude</title>
+      <category>Common</category>
+      <fluff>This sweet amber broth enhances your innate talents</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>25,000</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Choose one skill.</line>
+         <line>You gain a +1 power bonus to checks using chosen skill for 1 hour.</line>
+         <line indent="1"><name>Level 15</name>+3 power bonus.</line>
+         <line indent="1"><name>Level 25</name>+5 power bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Elixir of Clairvoyance</title>
+      <category>Common</category>
+      <fluff>As you consume this elixir, a haze of ghostly images fills your sight, focusing finally on the single vision you seek</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>25,000</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Choose 1 square within 2 squares of you. You do not need line of sight or line of effect to the square, but it must be a place already known to you or clearly definied (for example, a square on the other side of a door that you can see).</line>
+         <line indent="1"><name>Level 15</name>Within 5 squares of you.</line>
+         <line indent="1"><name>Level 25</name>Within 10 squares of you.</line>
+         <line>Until the end of your next turn, you see as if you were standing in the chosen square. Your perception is with your normal senses, and you can make Perception checks to notice things normally. You are blind for most purposes relating to your actual location.</line>
+         <line indent="1"><name>Sustain Minor</name>The effect persists until the end of your next turn, and you can choose another square within the same range. You can use information gained through this effect to choose the square (such as moving deeper into a room after first perceiving it at the door).</line>
+         <line indent="2"><name>Level 25</name>You can sustain this effect for up to 1 hour.</line>
+      </block>
+   </item>
 
    <item>
       <title>Elixir of Dragon Breath</title>
@@ -194,12 +252,12 @@
          <name>Utility Power</name>
          <frequency>Consumable</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You can use the following action once before the end of the encounter:</line>
+         <line><name>Effect</name>You can use the following action once before the end of the encounter:</line>
          <line indent="1"><![CDATA[<b>Free Interrupt:</b> <i>Trigger:</i>]]> An attack hits your Fortitude defense; Your Fortitude defense becomes 25 against the triggering attack.</line>
-         <line indent="2"><![CDATA[<i>Level 13:</i>]]> Becomes 30.</line>
-         <line indent="2"><![CDATA[<i>Level 18:</i>]]> Becomes 35.</line>
-         <line indent="2"><![CDATA[<i>Level 23:</i>]]> Becomes 40.</line>
-         <line indent="2"><![CDATA[<i>Level 28:</i>]]> Becomes 45.</line>
+         <line indent="2"><name>Level 13</name>Becomes 30.</line>
+         <line indent="2"><name>Level 18</name>Becomes 35.</line>
+         <line indent="2"><name>Level 23</name>Becomes 40.</line>
+         <line indent="2"><name>Level 28</name>Becomes 45.</line>
       </block>
    </item>
 
@@ -232,12 +290,12 @@
          <name>Utility Power</name>
          <frequency>Consumable</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You can use the following action once before the end of the encounter:</line>
+         <line><name>Effect</name>You can use the following action once before the end of the encounter:</line>
          <line indent="1"><![CDATA[<b>Free Interrupt:</b> <i>Trigger:</i>]]> An attack hits your Reflex defense; Your Reflex defense becomes 25 against the triggering attack.</line>
-         <line indent="2"><![CDATA[<i>Level 13:</i>]]> Becomes 30.</line>
-         <line indent="2"><![CDATA[<i>Level 18:</i>]]> Becomes 35.</line>
-         <line indent="2"><![CDATA[<i>Level 23:</i>]]> Becomes 40.</line>
-         <line indent="2"><![CDATA[<i>Level 28:</i>]]> Becomes 45.</line>
+         <line indent="2"><name>Level 13</name>Becomes 30.</line>
+         <line indent="2"><name>Level 18</name>Becomes 35.</line>
+         <line indent="2"><name>Level 23</name>Becomes 40.</line>
+         <line indent="2"><name>Level 28</name>Becomes 45.</line>
       </block>
    </item>
 
@@ -254,8 +312,33 @@
          <name>Utility Power</name>
          <frequency>Consumable</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You gain a +2 power bonus to speed for 1 hour.</line>
+         <line><name>Effect</name>You gain a +2 power bonus to speed for 1 hour.</line>
       </block>
+   </item>
+   
+   <item>
+      <title>Elixir of Treasure Finding</title>
+      <category>Common</category>
+      <fluff>A hint of exotic spices fills your senses as you drink this draught, which produces a faint tingling in the back of your mind when treasure is close by</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>25,000</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <frequency>Consumable</frequency>
+      <action>Minor</action> <subaction>Action</subaction>
+      <line><name>Effect</name>Until the end of your next turn, you gain an innate sense of direction to the nearest treasure worth at least 100 gp and within 10 squares of you. You can ignore treasure you know about carried by you and your allies.</line>
+      <line indent="1"><name>Level 15</name>Within 20 squares.</line>
+      <line indent="1"><name>Level 25</name>Within 40 squares.</line>
+      <line>This sense functions through any intervening barrier except special magical wards, or barriers lined entire with lead. You are not aware of the distance to the treasure, nor do you gain any hint of the route or any physical features at its location.</line>
    </item>
 
    <item>
@@ -275,8 +358,8 @@
          <name>Utility Power</name>
          <frequency>Consumable</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You can breath underwater for 1 hour.</line>
-         <line indent="1"><![CDATA[<i>Level 18:</i>]]> For 24 hours.</line>
+         <line><name>Effect</name>You can breath underwater for 1 hour.</line>
+         <line indent="1"><name>Level 18</name>For 24 hours.</line>
       </block>
    </item>
 
@@ -309,12 +392,12 @@
          <name>Utility Power</name>
          <frequency>Consumable</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> You can use the following action once before the end of the encounter:</line>
+         <line><name>Effect</name>You can use the following action once before the end of the encounter:</line>
          <line indent="1"><![CDATA[<b>Free Interrupt:</b> <i>Trigger:</i>]]> An attack hits your Will defense; Your Will defense becomes 25 against the triggering attack.</line>
-         <line indent="2"><![CDATA[<i>Level 13:</i>]]> Becomes 30.</line>
-         <line indent="2"><![CDATA[<i>Level 18:</i>]]> Becomes 35.</line>
-         <line indent="2"><![CDATA[<i>Level 23:</i>]]> Becomes 40.</line>
-         <line indent="2"><![CDATA[<i>Level 28:</i>]]> Becomes 45.</line>
+         <line indent="2"><name>Level 13</name>Becomes 30.</line>
+         <line indent="2"><name>Level 18</name>Becomes 35.</line>
+         <line indent="2"><name>Level 23</name>Becomes 40.</line>
+         <line indent="2"><name>Level 28</name>Becomes 45.</line>
       </block>
    </item>
 
@@ -347,10 +430,48 @@
          <keyword>Fire</keyword>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Attack:</i>]]> Close blast 3 (each creature in the blast); Item's level +4 vs. Reflex</line>
-         <line><![CDATA[<i>Hit:</i>]]> 1d6 + your Constitution modifier fire damage.</line>
-         <line indent="1"><![CDATA[<i>Level 13:</i>]]> 2d6 + your Constitution modifier fire damage.</line>
-         <line indent="1"><![CDATA[<i>Level 23:</i>]]> 3d6 + your Constitution modifier fire damage.</line>
+         <line><name>Attack</name>Close blast 3 (each creature in the blast); Item's level +4 vs. Reflex</line>
+         <line><name>Hit</name>1d6 + your Constitution modifier fire damage.</line>
+         <line indent="1"><name>Level 13</name>2d6 + your Constitution modifier fire damage.</line>
+         <line indent="1"><name>Level 23</name>3d6 + your Constitution modifier fire damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Potion of Clarity</title>
+      <category>Common</category>
+      <fluff>This cool draught hones your physical and mental acuity at a critical moment, allowing you to strike true</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>10</value>
+         <price>200</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <price>125,000</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You can use the following action once before the end of the encounter:</line>
+         <line indent="1"><![CDATA[<b>Free Interrupt:</b> <i>Trigger:</i>]]> You make an attack roll for an encounter attack or a daily attack, and the attack's level is equal to or lower than this potion's level; You reroll the triggering attack roll and use the second result, even if it is lower.</line>
       </block>
    </item>
 
@@ -381,11 +502,30 @@
          <action>Minor</action> <subaction>Action</subaction>
          <line><![CDATA[<i>Effect:</i>]]> You drink the potion.</line>
          <line indent="1"><![CDATA[<u>If you have at least one healing surge:</u>]]> you must spend one to regain 1d8+5 hit points.</line>
-         <line indent="2"><![CDATA[<i>Level 11:</i>]]> 2d8+10 hit points.</line>
-         <line indent="2"><![CDATA[<i>Level 21:</i>]]> 3d8+20 hit points.</line>
+         <line indent="2"><name>Level 11</name>2d8+10 hit points.</line>
+         <line indent="2"><name>Level 21</name>3d8+20 hit points.</line>
          <line indent="1"><![CDATA[<u>If you are bloodied and don't have any healing surges:</u>]]> you regain the above amount of hit points.</line>
          <line indent="1"><![CDATA[<u>If neither of the above things is true:</u>]]> there is no effect.</line>
       </block>
+   </item>
+   
+   <item>
+      <title>Potion of Delusion</title>
+      <category>Common</category>
+      <fluff>You feel a surge of energy, though your wounds do not heal</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You expend a healing surge to gain 15 temporary hit points. You must shift 1 square towards an enemy.</line>
+         <line><name>DM Note</name>Consider lowering level and adding leveled versions.</line>
+      </block>
+      
    </item>
 
    <item>
@@ -418,15 +558,37 @@
          <keyword>Illusion</keyword>
          <frequency>Consumable</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><![CDATA[<i>Effect:</i>]]> Your appearance is altered through an illusion, causing you to appear as an eladrin of your gender for 1 hour. You can dismiss the illusion as a free action on your turn.</line>
-         <line indent="1"><![CDATA[<i>Level 7:</i>]]> 24 hours.</line>
-         <line indent="1"><![CDATA[<i>Level 12:</i>]]> A week.</line>
-         <line indent="1"><![CDATA[<i>Level 17:</i>]]> A month.</line>
-         <line indent="1"><![CDATA[<i>Level 22:</i>]]> A year and a day.</line>
+         <line><name>Effect</name>Your appearance is altered through an illusion, causing you to appear as an eladrin of your gender for 1 hour. You can dismiss the illusion as a free action on your turn.</line>
+         <line indent="1"><name>Level 7</name>24 hours.</line>
+         <line indent="1"><name>Level 12</name>A week.</line>
+         <line indent="1"><name>Level 17</name>A month.</line>
+         <line indent="1"><name>Level 22</name>A year and a day.</line>
          <line>Your eladrin guise is not of any particular eladrin, and it shares some of your general features. Thus, if your nose is particularly long or wide for a member of your race, your guise has an eladrin nose of greater size as well.</line>
          <line>If you have a particularly distinctive feature, such as a facial scar or discolored eye, this too is revealed in your eladrin guise.</line>
          <line>You retain your attire, mannerisms, voice, and speech patterns.</line>
          <line>You gain a +5 power bonus to Bluff checks to pass yourself as the creature you appear as, although the bonus is reduced to +2 if you must speak.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Potion of Elven Fleetness</title>
+      <category>Common</category>
+      <fluff>Smelling of red fruit and tasting somewhat alcoholic, this wine-like potion offers its drinker the power to move easily through difficult terrain</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Potion</name>
+         <frequency>Consumable</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Until the end of the encounter, you ignore difficult terrain when you shift. You cannot ignore difficult terrain that is the result of powers or other abilities.</line>
+         <line indent="1"><name>Level 15</name>You can ignore all difficult terrain.</line>
       </block>
    </item>
 
@@ -456,6 +618,25 @@
          <action>Short</action> <subaction>Rest</subaction>
          <line><![CDATA[<i>Effect:</i>]]> For the next hour, you can speak with and be understood by any fey beasts and you speak, read and write Sylvan. You also gain a +2 power bonus to Bluff checks, Diplomacy checks, and Intimidate checks against fey beasts.</line>
          <line indent="1"><![CDATA[<i>Level 13:</i>]]> For the next 8 hours, and a +4 power bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Potion of Friendship</title>
+      <category>Common</category>
+      <fluff>This lucid pink liquid smells of roses, and bubbles lightly when uncorked</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Charm</keyword>
+         <frequency>Consumable</frequency>
+         <action>Minor Action</action>
+         <line><name>Effect</name>You become friendly toward the first person you see after drinking this potion. This attitude lasts for 1 hour or until the person does something that would make you unfriendly, whichever comes first.</line>
+         <line>While you have this friendly attitude, you suffer a -5 penalty to Insight checks and Passive Insight against the person.</line>
       </block>
    </item>
 
@@ -533,6 +714,46 @@
          <line indent="1"><name>Level 14</name>Resist 10.</line>
          <line indent="1"><name>Level 24</name>Resist 15.</line>
          <line>Only one <![CDATA[<i>potion of resistance</i>]]> can be affecting you at once. If you drink a second one, the previous one's effects end.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Potion of Spectral Form</title>
+      <category>Common</category>
+      <fluff>This thin liquid briefly transforms you into a spectral apparition</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You become insubstantial until the end of your next turn. Force and psychic damage ignores this insubstantial.</line>
+         <line>While you are insubstantial, you gain phasing and your attacks deal half damage unless the attack has the Force or Psychic keyword.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Potion of Unfailing Spirit</title>
+      <category>Common</category>
+      <fluff>This lavender-scented potion helps keep the spirit alive within you</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <type>Consumable</type> <subtype>Potion</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You expend a healing surge to gain a +4 power bonus to death saving throws until the end of the encounter.</line>
+         <line indent="1"><name>Level 15</name>+8 power bonus.</line>
       </block>
    </item>
    

@@ -51,6 +51,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			.listcontainer {
 				box-sizing:border-box;
+				width:100%;
 				float:left;
 
 			}
@@ -206,7 +207,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 		<xsl:choose>
-			<xsl:when test="count(level)>1">
+			<xsl:when test="count(level)>1 or type='Alchemical'">
 				<div class="pricetable">
 					<xsl:for-each select="level">
 						<div class="priceline">
@@ -216,18 +217,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 					</xsl:for-each>
 				</div>
-				<div class="line">
-					<b><xsl:value-of select="type" /></b>
-					<xsl:if test="subtype">
-						<b><xsl:text>: </xsl:text></b>
-						<xsl:for-each select="subtype">
-							<xsl:value-of select="." disable-output-escaping="yes"/>
-							<xsl:if test="position()!=last()">
-								<xsl:text>, </xsl:text>
-							</xsl:if>
-						</xsl:for-each>
-					</xsl:if>
-				</div>
+				<xsl:if test="type!='Alchemical'">
+					<div class="line">
+						<b><xsl:value-of select="type" /></b>
+						<xsl:if test="subtype">
+							<b><xsl:text>: </xsl:text></b>
+							<xsl:for-each select="subtype">
+								<xsl:value-of select="." disable-output-escaping="yes"/>
+								<xsl:if test="position()!=last()">
+									<xsl:text>, </xsl:text>
+								</xsl:if>
+							</xsl:for-each>
+						</xsl:if>
+					</div>
+				</xsl:if>
+				
 			</xsl:when>
 			<xsl:otherwise>
 				<div class="pricetable">
@@ -250,84 +254,48 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:otherwise>
 		</xsl:choose>
 
-		<xsl:for-each select="headline">
-			<xsl:choose>
-				<xsl:when test="@auto='attached'">
+		<xsl:choose>
+			<xsl:when test="type='Alchemical'">
+				<div class="pricetable">
 					<div class="line">
-						<b>Attached Component: </b><xsl:text>You must have the Living Construct racial trait to use this item.</xsl:text>
-					</div>
-				</xsl:when>
-				<xsl:when test="@auto='losttech'">
-					<div class="line">
-						<b>Lost Technology: </b><xsl:text>This item is created using lost technology. Each time the item's power is used, there is a chance the item malfunctions or even detonates.</xsl:text>
-					</div>
-				</xsl:when>
-				<xsl:when test="@auto='attackenh'">
-					<div class="line">
-						<b>Enhancement Bonus: </b><xsl:text>Attack rolls and damage rolls</xsl:text>
-					</div>
-				</xsl:when>
-				<xsl:when test="@auto='armorenh'">
-					<div class="line">
-						<b>Enhancement Bonus: </b><xsl:text>AC</xsl:text>
-					</div>
-				</xsl:when>
-				<xsl:when test="@auto='neckenh'">
-					<div class="line">
-						<b>Enhancement Bonus: </b><xsl:text>Fortitude, Reflex, and Will</xsl:text>
-					</div>
-				</xsl:when>
-				<xsl:when test="@crit='d4'">
-					<div class="line">
-						<b>Critical: </b><xsl:text>+1d4 </xsl:text>
-						<xsl:if test="text()">
-							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+						<b><xsl:value-of select="type" /></b>
+						<xsl:if test="subtype">
+							<b><xsl:text>: </xsl:text></b>
+							<xsl:for-each select="subtype">
+								<xsl:value-of select="." disable-output-escaping="yes"/>
+								<xsl:if test="position()!=last()">
+									<xsl:text>, </xsl:text>
+								</xsl:if>
+							</xsl:for-each>
 						</xsl:if>
-						<xsl:text>damage per plus</xsl:text>
 					</div>
-				</xsl:when>
-				<xsl:when test="@crit='d6'">
 					<div class="line">
-						<b>Critical: </b><xsl:text>+1d6 </xsl:text>
-						<xsl:if test="text()">
-							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
-						</xsl:if>
-						<xsl:text>damage per plus</xsl:text>
+						<b><xsl:value-of select="headline[1]/name" disable-output-escaping="yes"/>: </b>
+						<xsl:value-of select="headline[1]/text()" disable-output-escaping="yes"/>
+						<xsl:value-of select="headline[1]/text" disable-output-escaping="yes"/>
 					</div>
-				</xsl:when>
-				<xsl:when test="@crit='d8'">
 					<div class="line">
-						<b>Critical: </b><xsl:text>+1d8 </xsl:text>
-						<xsl:if test="text()">
-							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
-						</xsl:if>
-						<xsl:text>damage per plus</xsl:text>
+						<b><xsl:value-of select="headline[2]/name" disable-output-escaping="yes"/>: </b>
+						<xsl:value-of select="headline[2]/text()" disable-output-escaping="yes"/>
+						<xsl:value-of select="headline[2]/text" disable-output-escaping="yes"/>
 					</div>
-				</xsl:when>
-				<xsl:when test="@crit='d10'">
 					<div class="line">
-						<b>Critical: </b><xsl:text>+1d10 </xsl:text>
-						<xsl:if test="text()">
-							<xsl:value-of select="text()"/><xsl:text> </xsl:text>
-						</xsl:if>
-						<xsl:text>damage per plus</xsl:text>
+						<b><xsl:value-of select="headline[3]/name" disable-output-escaping="yes"/>: </b>
+						<xsl:value-of select="headline[3]/text()" disable-output-escaping="yes"/>
+						<xsl:value-of select="headline[3]/text" disable-output-escaping="yes"/>
 					</div>
-				</xsl:when>
-				<xsl:otherwise>
-					<div class="line">
-						<b><xsl:value-of select="name" /> <xsl:text>: </xsl:text></b>
-						<xsl:choose>
-							<xsl:when test="text">
-								<xsl:value-of select="text" disable-output-escaping="yes" />
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="text()" disable-output-escaping="yes" />
-							</xsl:otherwise>
-						</xsl:choose>
-					</div>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:for-each>
+				</div>
+				<xsl:for-each select="headline[position()>3]">
+					<xsl:call-template name="headline-content"/>
+				</xsl:for-each>
+				
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:for-each select="headline">
+					<xsl:call-template name="headline-content"/>
+				</xsl:for-each>
+			</xsl:otherwise>
+		</xsl:choose>
 
 		<xsl:for-each select="block">
 			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
@@ -348,9 +316,41 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div id="blob" style="width: 1.2em; float: left; text-align:center; ">
 						<xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
 					</div>
-					<div style="float:left; max-width:21em; "><b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;<xsl:value-of select="subaction" /><xsl:text>)</xsl:text></div>
+					<div style="float:left; max-width:21em; ">
+						<b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;<xsl:value-of select="subaction" /><xsl:text>)</xsl:text>
+						<xsl:if test="note">
+							<xsl:text> </xsl:text><xsl:value-of select="note" disable-output-escaping="yes"/>
+						</xsl:if>
+					</div>
 				</xsl:if>
 			</div>
+			<xsl:choose>
+				<xsl:when test="spellbook">
+					<div class="line">
+						<xsl:text>This tome contains two wizard daily </xsl:text>
+						<xsl:value-of select="spellbook"/>
+						<xsl:text> attack powers, chosen when it was created. Both powers must be of a level equal to or lower than that of the tome. If the tome's level is incresed, one or both powers can be exchanged for new ones.</xsl:text>
+					</div>
+					<div class="line" style="padding-left:2.3em;">
+						<i><xsl:text>Level </xsl:text><xsl:value-of select="levels"/>: </i>
+						<xsl:text>Three </xsl:text>
+						<xsl:value-of select="spellbook"/>
+						<xsl:text> attack powers, one of which can be an encounter power.</xsl:text>
+					</div>
+					<div class="line">
+						<xsl:text>If you have the wizard class feature Arcane Spellbook, these spells count as being in your spellbook.</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="bookpower">
+					<div class="line"><i>Requirement: </i>You must have implement proficiency with this tome.</div>
+					<div class="line"><i>Effect: </i>Choose a power contained in this tome, and expend an unused arcane daily attack power of an equal or higher level.</div>
+					<div class="line">You gain the use of the chosen power during this encounter. The power is lost if not used before the end of the encounter.</div>
+				</xsl:when>
+				<xsl:when test="poison-fooddrink">
+					<div class="line"><i>Effect: </i>Melee touch (one item of food or drink); You apply the poison to the target. The poison retains potency until the end of the encounter.</div>
+					<div class="line">When a creature consumes the target food or drink while the poison retains potency, you make the following attack against that creature:</div>
+				</xsl:when>
+			</xsl:choose>
 			<xsl:for-each select="line">
 				<xsl:choose>
 					<xsl:when test="@indent='1'">
@@ -370,6 +370,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
+			<xsl:if test="poison-fooddrink">
+				<div class="line"><i>Special: </i>If you want to apply the poison without being noticed, attempt a Thievery check against any observing creature's Passive Perception.</div>
+			</xsl:if>
 		</xsl:for-each>
 
 	</div>
@@ -390,6 +393,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="@auto='bard'">
 			<xsl:text>If you are a Bard who has proficiency with this weapon, you also have proficiency in this weapon as an implement.</xsl:text>
 		</xsl:when>
+		<xsl:when test="@auto='bardinstrument'">
+			<xsl:text>If you are a Bard, you can use this instrument as an implement for Bard powers.</xsl:text>
+		</xsl:when>
 		<xsl:when test="@auto='weapliment'">
 			<xsl:text>If you are </xsl:text>
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>
@@ -399,21 +405,134 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:text>When you score a critical hit using this weapon, </xsl:text>
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>
 		</xsl:when>
-		<xsl:when test="@auto='critimpl'">
-			<xsl:text>When you score a critical hit using this implement, </xsl:text>
+		<xsl:when test="@auto='critweap'">
+			<xsl:text>When you score a critical hit with a Weapon attack using this weapon, </xsl:text>
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>
+		</xsl:when>
+		<xsl:when test="@auto='critimpl'">
+			<xsl:text>When you score a critical hit with an Implement attack using this implement, </xsl:text>
+			<xsl:value-of select="text()" disable-output-escaping="yes"/>
+		</xsl:when>
+		<xsl:when test="@auto='no-opportunity'">
+			<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
+		</xsl:when>
+		<xsl:when test="@auto='ammo'">
+			<xsl:text>When using this ammunition, you use the listed attack bonus instead of your own. You add your weapon's proficiency bonus to attack, but not its enhancement bonus or other modifiers.</xsl:text>
+		</xsl:when>
+		<xsl:when test="@auto='short-surge'">
+			<i>Special: </i>
+			<xsl:text>As part of a short rest, you can expend a healing surge to recharge this power.</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>
 		</xsl:otherwise>
 	</xsl:choose>
 </xsl:template>
+	
+	<xsl:template name="headline-content">
+		<xsl:choose>
+			<xsl:when test="@auto='attached'">
+				<div class="line">
+					<b>Attached Component: </b><xsl:text>You must have the Living Construct racial trait to use this item.</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@auto='ammo'">
+				<div class="line">
+					<b>Ammunition: </b><xsl:text>If you know this formula, you can also create </xsl:text><i><xsl:value-of select="text()" /></i>.
+				</div>
+			</xsl:when>
+			<xsl:when test="@auto='losttech'">
+				<div class="line">
+					<b>Lost Technology: </b><xsl:text>This item is created using lost technology. Each time the item's power is used, there is a chance the item malfunctions or even detonates.</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@auto='attackenh'">
+				<div class="line">
+					<b>Enhancement Bonus: </b><xsl:text>Attack rolls and damage rolls</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@auto='armorenh'">
+				<div class="line">
+					<b>Enhancement Bonus: </b><xsl:text>AC</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@auto='neckenh'">
+				<div class="line">
+					<b>Enhancement Bonus: </b><xsl:text>Fortitude, Reflex, and Will</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@itemdamage">
+				<div class="line">
+					<b>Item Bonus: </b>
+					<xsl:text>Damage rolls with </xsl:text>
+					<xsl:value-of select="text()" disable-output-escaping="yes"/>
+					<xsl:text> powers using this </xsl:text>
+					<xsl:value-of select="@itemdamage" disable-output-escaping="yes"/>
+				</div>
+			</xsl:when>
+			<xsl:when test="@itembonus">
+				<div class="line">
+					<b>Item Bonus: </b>
+					<xsl:value-of select="text()" disable-output-escaping="yes"/>
+				</div>
+			</xsl:when>
+			<xsl:when test="@crit='d4'">
+				<div class="line">
+					<b>Critical: </b><xsl:text>+1d4 </xsl:text>
+					<xsl:if test="text()">
+						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+					</xsl:if>
+					<xsl:text>damage per plus</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@crit='d6'">
+				<div class="line">
+					<b>Critical: </b><xsl:text>+1d6 </xsl:text>
+					<xsl:if test="text()">
+						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+					</xsl:if>
+					<xsl:text>damage per plus</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@crit='d8'">
+				<div class="line">
+					<b>Critical: </b><xsl:text>+1d8 </xsl:text>
+					<xsl:if test="text()">
+						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+					</xsl:if>
+					<xsl:text>damage per plus</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:when test="@crit='d10'">
+				<div class="line">
+					<b>Critical: </b><xsl:text>+1d10 </xsl:text>
+					<xsl:if test="text()">
+						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+					</xsl:if>
+					<xsl:text>damage per plus</xsl:text>
+				</div>
+			</xsl:when>
+			<xsl:otherwise>
+				<div class="line">
+					<b><xsl:value-of select="name" /> <xsl:text>: </xsl:text></b>
+					<xsl:choose>
+						<xsl:when test="text">
+							<xsl:value-of select="text" disable-output-escaping="yes" />
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="text()" disable-output-escaping="yes" />
+						</xsl:otherwise>
+					</xsl:choose>
+				</div>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 
 <xsl:template name="createheader">
 	<xsl:param name="bgcolor">Purple</xsl:param>
 
 	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9em);">
+		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9.5em);">
 			<xsl:value-of select="title"/>
 		</div>
 		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">

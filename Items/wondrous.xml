@@ -51,6 +51,21 @@
    </item>
    
    <item>
+      <title>Bag of Holding</title>
+      <category>Common</category>
+      <fluff>This item appears to be a simple sack of brown canvas</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>This bag can hold up to 200 pounds in weight or 20 cubic feet in volume, but it always weighs only 1 pound.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Bed of Rapid Resting</title>
       <category>Common</category>
       <fluff>This comfortable bed speeds your rest but is too large to cart around in the dungeon</fluff>
@@ -105,6 +120,29 @@
    </item>
    
    <item>
+      <title>Bridle of Rapid Action</title>
+      <category>Common</category>
+      <fluff>This fine leather bridle lets you and your mount react more quickly to danger</fluff>
+      <level>
+         <value>5</value>
+         <price>500</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>12,500</price>
+      </level>
+      <type>Mount item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You roll initiative while riding the mount wearing this bridle</line>
+         <line><name>Effect</name>The mount rolls initiative using your initiative modifier. If its check result is higher than yours, you can use the mount's result in place of yours.</line>
+         <line indent="1"><name>Level 15</name>This power is an encounter power instead.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Bridle of Summoning</title>
       <category>Common</category>
       <fluff>This simple leather bridle conjures a magical mount for your use</fluff>
@@ -121,6 +159,22 @@
          <line><name>Effect</name>You summon a riding horse in a space adjacent to you. Unlike most summons, this one does not use your statistics and lacks the usual summon traits. The horse does not have its attack, and you do not lose a healing surge if the horse is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the horse to spend one.</line>
          <line>The bridle transforms into the mount's tack and saddle, and the horse serves you, obeying you spoken commands.</line>
          <line>The horse disappears after 12 hours or if it is reduced to 0 hit points or fewer.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Cask of Liquid Gold</title>
+      <category>Common</category>
+      <fluff>This cask contains a never-ending supply of dwarven ale</fluff>
+      <level>
+         <value>3</value>
+         <price>680</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>At the start of each day, the cask fills to its full volume with dwarven ale.</line>
+         <line>Any ale taken from the cask evaporates if it has not been consumed when the cask refills.</line>
       </block>
    </item>
    
@@ -142,6 +196,58 @@
          <line>The chime can be fooled by creatures in disguise or hiding. It makes active Perception checks, and has a Perception check modifier of +10.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Chime of Opening</title>
+      <category>Common</category>
+      <fluff>When struck, this chime rings out with a magical tone that opens locks</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,0000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Ranged 5 (one locked door, chest, gate, or other object); The chime makes Thievery checks to open any locks and disable any traps on the target.</line>
+         <line>The chime makes one check on each of your turns for up to 1 minute, starting on the turn you use this power, with a +10 Thievery check modifier.</line>
+         <line indent="1"><name>Level 15</name>+17 Thievery check modifier.</line>
+         <line indent="1"><name>Level 25</name>+24 Thievery check modifier.</line>
+         <line>The DM makes these checks, and if the results would not be obvious (such as when disabling a hidden trap), you do not know the result of the checks. When the chime fails a check, it starts making checks against the next lock or trap, if there are any. The chime can end up opening or disabling only some or none of all locks and traps on the target.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Coin of Good Luck</title>
+      <category>Common</category>
+      <fluff>This shiny gold coin can mean the difference between life and death, brilliant success and utter failure</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>When flipped, this coin always lands tails up.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make an attack roll, skill check, or saving throw and dislike the result</line>
+         <line><name>Effect</name>You gain a +1 bonus to the triggering attack roll, skill check, or saving throw.</line>
+         <line><name>Special</name>You cannot use the utility power of another <![CDATA[<i>coin of good luck</i>]]> until you have finished an extended rest.</line>
+      </block>
+   </item>
 
    <item>
       <title>Collapsible Campfire</title>
@@ -156,6 +262,47 @@
          <name>Property</name>
          <line>As part of taking a short rest or extended rest, you can unfold this box to reveal a magical campfire. The fire can be refolded into a box as part of ending the rest.</line>
          <line>This fire is warm, comfortable, and cannot be doused by any action beyond refolding the box.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Companion's Defender</title>
+      <category>Common</category>
+      <fluff>This belt is contructed from woven bones and enhances a companion's defensive ability while adjacent to you</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Companion Item</subtype>
+      <block>
+         <name>Property</name>
+         <line>While adjacent to you, your companion gains a +1 item bonus to all defenses.</line>
+         <line indent="1"><name>Level 15</name>+2 item bonus while adjacent to you, and a +1 item bonus at other times.</line>
+         <line indent="1"><name>Level 25</name>+3 item bonus while adjacent to you, and a +1 item bonus at other times.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Deepfarer's Pouch</title>
+      <category>Common</category>
+      <fluff>This oilskin pouch holds more than it should, including a small breathing tube that extends from the inside</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>This belt pouch contains 1 hour's worth of air, which remains fresh indefinitely.</line>
+         <line>Once the air in the pouch, you can refresh the supply by exposing the open pouch to any supply of breathable air during a short rest.</line>
       </block>
    </item>
 
@@ -281,6 +428,22 @@
          <line>After an extended rest, you open the basket, creating enough food and water to feed five Medium or Small creatures (or one Large creature) for 24 hours.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Faerie Field Catalog</title>
+      <category>Common</category>
+      <fluff>From boggles to brownies, nixies to nymphs, this volume keenly details the fey, giving you access to obscure knowledge</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>You can make monster knowledge checks regarding fey creatures even if you don't have training in the Arcana skill.</line>
+         <line>If you do have training in the Arcana skill, you instead gain a +2 bonus to monster knowledge checks regarding fey creatures.</line>
+      </block>
+   </item>
 
    <item>
       <title>Familiar's Baldric</title>
@@ -330,6 +493,28 @@
          <line>When you spend an action point to take an extra action, you gain 5 temporary hit points after resolving that action. These temporary hit points last until the end of the encounter.</line>
          <line indent="1"><name>Level 14</name>10 temporary hit points.</line>
          <line indent="1"><name>Level 24</name>15 temporary hit points.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Flagon of Ale Procurement</title>
+      <category>Common</category>
+      <fluff>Sought by brewers and barflies, this ornate flagon is not one you can take away from a dwarf</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>You know the rough distance to the nearest alcoholic bewerage.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>For five minutes, you know the direction and distance to the nearest source of water within 30 squares of you, or the nearest alcoholic beverage within 60 squares of you.</line>
+         <line indent="1"><![CDATA[<b>Dwarf:</b>]]> You can choose to instead know the direction and distance to ingredients for alcoholic beverages within 60 squares of you.</line>
       </block>
    </item>
 
@@ -398,9 +583,11 @@
          <price>2,125,000</price>
       </level>
       <type>Wondrous Item</type>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
       <block>
          <name>Property</name>
-         <line>If you are a Bard, you can use this instrument as an implement for Bard powers.</line>
+         <line auto="bardinstrument"/>
       </block>
       <block>
          <name>Utility Power</name>
@@ -410,6 +597,7 @@
          <line><name>Effect</name>One ally who remained within 20 squares of you during the rest and could hear you gains a +1 power bonus to Weapon damage rolls until the end of his or her next rest. This increases to a +2 power bonus if you have the Song of Rest class feature.</line>
          <line indent="1"><name>Level 13 or 18</name>+2 or +3 power bonus.</line>
          <line indent="1"><name>Level 23 or 28</name>+3 or +4 power bonus.</line>
+         <line>You must continue wielding this instrument for the ally to gain this bonus.</line>
       </block>
    </item>
    
@@ -607,10 +795,7 @@
          <price>2,125,000</price>
       </level>
       <type>Wondrous Item</type>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>Attack rolls and damage rolls</text>
-      </headline>
+      <headline auto="attackenh"/>
       <headline>
          <name>Critical</name>
          <text>+1d6 damage per plus, or +1d8 damage per plus if you are wielding the Hyrsam fiddlestick in your other hand</text>
@@ -618,7 +803,7 @@
       <block>
          <name>Properties</name>
          <line>The Hyrsam fiddle has the following properties:</line>
-         <line><bullet />If you are a Bard, you can use this instrument as an implement for Bard powers.</line>
+         <line auto="bardinstrument"><bullet /></line>
          <line><bullet />When you wield a Hyrsam fiddle in one hand and a Hyrsam fiddlestick in the other, you gain a +1 shield bonus to your AC and Reflex.</line>
       </block>
       <block>
@@ -655,6 +840,25 @@
          <line indent="1"><name>Level 21</name>Resist 15.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Instant Campsite</title>
+      <category>Common</category>
+      <fluff>This tightly packed satchel expands into a complete campsite that can automatically pack up again</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You open this satchel and it magically expands into a complete campsite.</line>
+         <line>The campsite includes a campfire and four two-person tents with bedrolls. The campfire requires no fuel and lasts up to 12 hours, or until the campsite is packed into the satchel once more, whichever comes first.</line>
+         <line>Packing the campsite into the satchel is a standard action. The tents and bedrolls unceremoniously eject any creatures inside them when the campsite is packed.</line>
+      </block>
+   </item>
 
    <item>
       <title>Ioun's Parchment</title>
@@ -669,6 +873,22 @@
          <name>Property</name>
          <line>This material can be written on like paper or parchment, and the writing can't be erased until the parchment's owner wills it blank. It is flexible enough to roll.</line>
          <line>Creating a ritual scroll using this item fills it with text, but takes half the usual time. Once the ritual is performed, the piece of Ioun's parchment turns blank and can be reused.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Lamp of Discerning</title>
+      <category>Common</category>
+      <fluff>This plain-looking lantern grants those in its light the ability to see through deception</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>When lit, this lantern sheds bright light in a 10-square radius and dim light for a further 10 squares, like a normal lantern, but never needs refilling.</line>
+         <line>You and allies within the bright light gain a +1 power bonus to Insight checks and Perception checks.</line>
       </block>
    </item>
    
@@ -695,6 +915,61 @@
          <line>Once wrapped around a body, the magic in the shroud dissipates after 90 days.</line>
          <line indent="1"><name>Level 9</name>After a year and a day.</line>
          <line indent="1"><name>Level 14</name>After five years.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Mac-Fuirmidh Cittern</title>
+      <category>Common</category>
+      <fluff>The music of this magic lute lingers in the mind, providing vigor long after its tones have ceased</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Property</name>
+         <line auto="bardinstrument"/>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Healing</keyword>
+         <frequency>Daily</frequency>
+         <action>Short</action> <subaction>Rest</subaction>
+         <line><name>Effect</name>At the end of the rest, choose yourself or an ally who remained within 20 squares of you during the rest.</line>
+         <line>Until the end of the chosen character's next rest, he or she regain 2 additional hit points when he or she spends a healing surge to regain hit points.</line>
+         <line indent="1"><name>Level 15 or 20</name>3 additional hit points.</line>
+         <line indent="1"><name>Level 25 or 30</name>4 additional hit points.</line>
+         <line indent="1"><name>Song of Rest</name>Increase the additional hit points regained by 1.</line>
+         <line indent="2"><name>Level 20, 25 or 30</name>Increase by 2.</line>
       </block>
    </item>
 
@@ -802,6 +1077,42 @@
    </item>
    
    <item>
+      <title>Monocle of Comprehension</title>
+      <category>Common</category>
+      <fluff>Using this monocle as part of your ritual, you share the comprehensive magic with your allies</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>You can use this item as an optional focus for the <![CDATA[<i>comprehend language</i>]]> ritual.</line>
+         <line>If you do, this monocle splits into up to 8 duplicate monocles for the duration of the ritual. Any creature holding one of the monocles gains the same comprehension granted you by the ritual as long as it keeps holding the monocle.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Obsidian Steed</title>
+      <category>Common</category>
+      <fluff>This figurine of dark volcanic glass can become a sleek riding horse</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Summoning</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You summon a Large obsidian steed in a space adjacent to you. Unlike most summons, this one does not use your statistics and you do not lose a healing surge if the obsidian steed is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the steed to spend one.</line>
+         <line>When activating this item, you can expend a healing surge to give the obsidian steed temporary hit points equal to your healing surge value.</line>
+         <line>The steed disappears after 8 hours or if it is reduced to 0 hit points or fewer.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Onyx Dog</title>
       <category>Common</category>
       <fluff>This figurine, sculpted of reflective onyx, depicts a barking dog</fluff>
@@ -815,9 +1126,33 @@
          <keyword>Summoning</keyword>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
-         <line><name>Effect</name>You summon a Medium onyx dog in a space adjacent to you. Unlike most summons, this one does not use your statistics and you do not lose a healing surge if the horse is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the dog to spend one.</line>
+         <line><name>Effect</name>You summon a Medium onyx dog in a space adjacent to you. Unlike most summons, this one does not use your statistics and you do not lose a healing surge if the onyx dog is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the dog to spend one.</line>
          <line>When activating this item, you can expend a healing surge to give the onyx dog temporary hit points equal to your healing surge value.</line>
          <line>The dog disappears after 8 hours or if it is reduced to 0 hit points or fewer.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Portrait of Holding</title>
+      <category>Common</category>
+      <fluff>This painting conceals a secure extradimensional space</fluff>
+      <level>
+         <value>5</value>
+         <price>500</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>The painting has a hidden extradimensional space that can hold up to 5 cubic feet of material up to 100 pounds.</line>
+         <line>The portrait always weights 1 pound, regardless of what it contains.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must look exactly like the creature depicted by the portrait.</line>
+         <line><name>Effect</name>The portrait canvas vanishes, providing access to the extradimensional space. Retrieving an item is a minor action, as usual.</line>
+         <line>Using this power again ends the effect.</line>
       </block>
    </item>
 
@@ -846,6 +1181,49 @@
          <line>If you are raging when you use your <![CDATA[<i>second wind</i>]]>, you also gain a +1 bonus to attack rolls until you hit, or until the end of your next turn, whichever comes first.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Pouch of Platinum</title>
+      <category>Uncommon</category>
+      <fluff>This platinum-embossed leather pouch can convert gems and goins into platinum pieces</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>Nonmagical gemstones and coins of any denomination placed into the pouch are converted to an equal value of platinum pieces. Coins or gems that cannot be evenly converted to platinum pieces are unaffected.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Power Jewel</title>
+      <category>Rare</category>
+      <fluff>Magical energy pulses within this stunning-red jewel, allowing you to regain some of your expended power</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must have finished an encounter without using your action point.</line>
+         <line><name>Effect</name>You regain the use of an expended encounter power of 3rd level or lower.</line>
+         <line indent="1"><name>Level 15</name>13th level or lower.</line>
+         <line indent="1"><name>Level 25</name>23rd level or lower.</line>
+      </block>
+   </item>
 
    <item>
       <title>Restfull Bedroll</title>
@@ -871,6 +1249,39 @@
          <line indent="1"><name>Level 21</name>3d8 temporary hit points, and two additional healing surges for the day</line>
       </block>
    </item>
+   
+   <item>
+      <title>Ruby Scabbard</title>
+      <category>Common</category>
+      <fluff>Blood-red rubies adorn this scabbard, their magic granting your blade extra sharpness</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>This scabbard resizes to fit any Light blade or Heavy blade. You can attune a blade to the scabbard as part of your daily preparations.</line>
+         <line>An attuned blade can be drawn from this scabbard as part of the same action used to make an attack with that weapon.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Trigger</name>You make a Weapon attack with a blade attuned to this scabbard</line>
+         <line><name>Effect</name>You gain a +2 power bonus to damage with the triggering attack. This increases to a +3 power bonus if you draw the weapon from the scabbard as part of the attack.</line>
+         <line indent="1"><name>Level 15</name>+4 power bonus or +6 power bonus, respectively.</line>
+         <line indent="1"><name>Level 25</name>+6 power bonus or +9 power bonus, respectively.</line>
+      </block>
+   </item>
 
    <item>
       <title>Saddle of Strength</title>
@@ -889,6 +1300,51 @@
          <name>Property</name>
          <line>The mount's carrying capacity increases by 50 percent in all categories (normal load, heavy load, and maximum drag).</line>
          <line indent="1"><name>Level 13</name>By 100 percent.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Scroll of Protection</title>
+      <category>Uncommon</category>
+      <fluff>You read words of power from this scroll that repel your enemies and prevent them from attacking</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>10</value>
+         <price>200</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <price>125,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Consumable</subtype>
+      <block>
+         <name>Special</name>
+         <line>When this item is created, the creator chooses one of the following kinds of creatures:</line>
+         <line indent="1">angels, demons; devils; dragons; elementals with the air, earth, fire, or water keyword; undead</line>
+         <line>The aura created by this scroll's power affects creatures of the chosen kind whose level is equal to or lower than this scroll's level.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Aura</keyword>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You activate an Aura 2 until the end of the encounter or until you make an attack, whichever comes first.</line>
+         <line>Affected creatures take a -4 penalty to all attack rolls against targets inside the aura, and cannot enter the aura willingly. If an affected creature starts its turn in the aura, its first action must be to leave the aura by the shortest route possible, unless no route exists.</line>
       </block>
    </item>
 
@@ -952,6 +1408,27 @@
          <line>When used to do the work it was designed for, a silent tool makes practically no noise. For example, a silent crowbar could aid attempts to open a locked door without alerting the sleeping monster on the other side, while a silent grappling hook has less chance of being heard by nearby guards.</line>
          <line>You gain a +5 item bonus to Stealth checks related to using the tool.</line>
          <line>Any individual mundane tool -a woodcutter's axe, a crowbar, a hammer, a shovel, and so on- can be made silent. Weapons, clothing, jewelry, or other mundane objects cannot.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Solitaire (Quartz Lens)</title>
+      <category>Uncommon</category>
+      <fluff>This clouded crystal supplements your powers with the energy of the sun</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Varies</keyword>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You score a critical hit on your turn</line>
+         <line><name>Effect</name>Choose either fire damage or radiant damage. This power gains the corresponding keyword.</line>
+         <line>The triggering hit deals the chosen type of damage in addition to its normal damage type or types, and gains the corresponding keyword for that hit.</line>
+         <line><name>Special</name>You can only use one <![CDATA[<i>solitaire</i>]]> in a given encounter.</line>
       </block>
    </item>
 
@@ -1041,7 +1518,7 @@
    <item>
       <title>Tattoo of Arcane Blood</title>
       <category>Common</category>
-      <fluff>Rods, orbs, they of Ioun, and other images symbolic of magic are used for this tattoo</fluff>
+      <fluff>Rods, orbs, the eye of Ioun, and other images symbolic of magic are used for this tattoo</fluff>
       <level>
          <value>4</value>
          <price>840</price>
@@ -1091,6 +1568,84 @@
          <line indent="1"><![CDATA[<i>Level 25:</i>]]> +9 item bonus</line>
       </block>
    </item>
+   
+   <item>
+      <title>Tempest Fan</title>
+      <category>Uncommon</category>
+      <fluff>The tines of this metal fan resemble lightning, augmented with ripples of electricity</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <headline auto="attackenh"/>
+      <headline crit="d6">lightning</headline>
+      <block>
+         <name>Property</name>
+         <line>If you are a Wizard, you can use this fan as an implement for Wizard powers.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Arcane</keyword> <keyword>Lightning</keyword> <keyword>Teleportation</keyword>
+         <frequency>Daily</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Close burst 1 (you, or one ally in the burst); The target teleports up to 5 squares, and then must activate the burst effect as a nonaction reaction.</line>
+         <line indent="1"><name>Level 15 or 20</name>Teleports up to 10 squares.</line>
+         <line indent="1"><name>Level 25 or 30</name>Teleports up to 15 squares.</line>
+         <line><name>Burst Effect</name>Close burst 3 (each enemy in the burst); Each target takes 1d6 lightning damage.</line>
+         <line indent="1"><name>Level 15 or 20</name>2d8 lightning damage.</line>
+         <line indent="1"><name>Level 25 or 30</name>3d12 lightning damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Unreadable Ink</title>
+      <category>Common</category>
+      <fluff>You look at a blank folio, seeing the hidden message there wihile others see nothing</fluff>
+      <level>
+         <value>3</value>
+         <price>30</price>
+      </level>
+      <level>
+         <value>8</value>
+         <price>125</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Consumable</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You activate the ink. It remains active for 1 hour, after which any unused ink dries and becomes unusable. While the ink is activate, you can use it to write a message up to one page long (250 words) to a specific recipient you must concentrate on while writing.</line>
+         <line indent="1"><name>Level 8</name>For 8 hours, and either up to 40 pages (10,000 words) or one page with up to 10 recipients.</line>
+         <line>Once the ink is no longer active, all the writing disappears, and only the chosen recipient can see it. The message's recipient need not be able to read the inscription, or even be literate. The recipient magically understands the full message as soon as he or she touches whatever material it was scribed upon.</line>
+      </block>
+   </item>
 
    <item>
       <title>Vistani Tambourine</title>
@@ -1127,17 +1682,11 @@
          <price>1,625,000</price>
       </level>
       <type>Wondrous Item</type>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>Attack rolls and damage rolls</text>
-      </headline>
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus</text>
-      </headline>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
       <block>
          <name>Property</name>
-         <line>If you are a bard, you can use this instrument as an implement for Bard powers.</line>
+         <line auto="bardinstrument"/>
       </block>
       <block>
          <name>Utility Power</name>

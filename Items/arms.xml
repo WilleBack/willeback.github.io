@@ -35,6 +35,50 @@
    <list selection="30" />
    
    <item>
+      <title>Alchemical Launcher</title>
+      <category>Common</category>
+      <fluff>This spring-loaded armpiece fires alchemical items with great accuracy while allowing you to better keep your guard up</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <headline auto="attached"/>
+      <block>
+         <name>Property</name>
+         <line>You gain a +1 item bonus to attack rolls with consumable alchemical attack powers, and a +4 bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]> triggered by making an alchemical attack.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bashing Shield</title>
+      <category>Common</category>
+      <fluff>This stout shield can be used to force your opponent back</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an adjacent enemy with a melee attack</line>
+         <line><name>Effect</name>Melee 1 (the triggering enemy); You push the target uo to 1d4 squares.</line>
+         <line indent="1"><name>Level 15</name>Up to 2d4 squares.</line>
+         <line indent="1"><name>Level 25</name>Up to 3d4 squares.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Battleaid Shield</title>
       <category>Common</category>
       <fluff>Covered in Dwarven and Draconic runes, this shield aids badly wounded allies</fluff>
@@ -152,6 +196,31 @@
          <line indent="1"><![CDATA[<span style="font-variant:small-caps;"><b>Augment 1:</b></span>]]> Until you make an attack or until the end of your next turn, whichever lasts longer.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Bracers of Brachiation</title>
+      <category>Common</category>
+      <fluff>You seemlessly negotiate through the forest canopy of a wilderness as if on foot</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a climb speed equal to half your ground speed, and you can swing through the trees of a forest at your climb speed, during which time you do not leave tracks on the ground.</line>
+         <line indent="1"><name>Level 15</name>Climb speed equal to your ground speed.</line>
+         <line indent="1"><name>Level 25</name>Climb speed equal to your ground speed +4.</line>
+      </block>
+   </item>
 
    <item>
       <title>Bracers of Enforced Regret</title>
@@ -253,16 +322,72 @@
    </item>
    
    <item>
-      <title>Counterstrike Guards</title>
+      <title>Breach Bracers</title>
       <category>Common</category>
+      <fluff>These spiked arm guards rander enemies more vulnerable to attacks</fluff>
+      <level>
+         <value>5</value>
+         <price>1.000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>On your turn, you hit an enemy with a melee attack</line>
+         <line><name>Effect</name>The triggering enemy gains vulnerable 5 all for the first attack that his it before the end of your next turn</line>
+         <line indent="1"><name>Level 15</name>Vulnerable 10 all.</line>
+         <line indent="1"><name>Level 25</name>Vulnerable 15 all.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Cold Iron Shield</title>
+      <category>Common</category>
+      <fluff>Using this heavy iron shield, you can protect an ally's mind</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Heavy shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>An ally adjacent to you is hit by an attack against his or her Will</line>
+         <line><name>Effect</name>Melee 1 (the triggering ally); The target gains a +4 power bonus to Will against the triggering attack.</line>
+         <line indent="1"><name>Level 15</name>+4 power bonus to Will until the start of the acting creature's next turn.</line>
+         <line indent="1"><name>Level 25</name>Close burst 1 (each ally in the burst); Each target gains a +4 power bonus to Will until the start of the acting creature's next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Counterstrike Guards</title>
+      <category>Uncommon</category>
       <fluff>A set of twin forearm shields small enough not to hinder you, these guards improve your strikes against off-balance foes</fluff>
       <level>
          <value>4</value>
          <price>840</price>
       </level>
       <level>
-         <value>14</value>
-         <price>21,000</price>
+         <value>24</value>
+         <price>525,000</price>
       </level>
       <type>Arms Slot</type>
       <block>
@@ -272,6 +397,34 @@
          <line><name>Trigger</name>An enemy misses you with a melee attack</line>
          <line><name>Effect</name>Make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</line>
          <line indent="1"><name>Level 14</name>This power is an encounter power instead.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Couters of Second Chances</title>
+      <category>Common</category>
+      <fluff>As you swing past your opponent, these armored elbow guards sparkle with energy, bringing your weapon back in line</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You miss an enemy with a melee attack</line>
+         <line><name>Effect</name>You reroll the triggering attack roll, using the second result, even if it is lower</line>
+         <line indent="1"><name>Level 15</name>You gain a +2 bonus to the reroll.</line>
+         <line indent="1"><name>Level 25</name>If your rerolled attack roll is a miss, you can make a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy as a free reaction.</line>
       </block>
    </item>
 
@@ -297,6 +450,34 @@
          <line>You gain a +1 item bonus to AC during the surprise round, and the first nonsurprise round of each encounter.</line>
          <line indent="1"><name>Level 12</name>+2 item bonus</line>
          <line indent="1"><name>Level 22</name>+3 item bonus</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Direbeast Shield</title>
+      <category>Common</category>
+      <fluff>Covered in bear hides and marked with a wolf's head, this shield lends the stamina of wild beasts to allies</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>An ally adjacent to you is hit by an attack against his or her Fortitude</line>
+         <line><name>Effect</name>Melee 1 (the triggering ally); The target gains a +4 power bonus to Fortitude against the triggering attack.</line>
+         <line indent="1"><name>Level 15</name>+4 power bonus to Fortitude until the start of the acting creature's next turn.</line>
+         <line indent="1"><name>Level 25</name>Close burst 1 (each ally in the burst); Each target gains a +4 power bonus to Fortitude until the start of the acting creature's next turn.</line>
       </block>
    </item>
 
@@ -777,6 +958,58 @@
          <line><name>Trigger</name>An attacker scores a critical hit against your AC or Reflex</line>
          <line><name>Effect</name>You regain the use of an expended encounter power of your choice. The chosen power must be of a level equal to or lower than the level of this shield.</line>
          <line>You can expend your action point to instead regain the use of an expended daily power.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Shimmering Light</title>
+      <category>Common</category>
+      <fluff>The thin by seemingly impervious layer of enchanted cloth stretched over the surface of this shield warns against danger</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>An ally adjacent to you is hit by an attack against his or her Reflex</line>
+         <line><name>Effect</name>Melee 1 (the triggering ally); The target gains a +4 power bonus to Reflex against the triggering attack.</line>
+         <line indent="1"><name>Level 15</name>+4 power bonus to Reflex until the start of the acting creature's next turn.</line>
+         <line indent="1"><name>Level 25</name>Close burst 1 (each ally in the burst); Each target gains a +4 power bonus to Reflex until the start of the acting creature's next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Stonewall Shield</title>
+      <category>Common</category>
+      <fluff>Favored by the dwarves, this shield can create a temporary barrier much like a wall</fluff>
+      <level>
+         <value>13</value>
+         <price>17,000</price>
+      </level>
+      <level>
+         <value>23</value>
+         <price>425,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Conjuration</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Area wall 3 within 5 squares or Close wall 5; You create a wall of stone that is up to 2 squares high and lasts for 1 hour. The wall occupies its squares, and you cannot create the wall in occupied squares. If you use the Close version, it is enough that one square of the wall is adjacent to you, but it does not have to be the origin square of the wall.</line>
+         <line indent="1"><name>Level 23</name>Area wall 5 within 10 squares or Close wall 10.</line>
+         <line>A square of the wall has AC 5, Fortitude 10, Reflex 5, and 40 hit points. A DC 35 <![CDATA[<i>break open</i>]]> action can also destroy a square.</line>
+         <line indent="1"><name>Level 23</name>80 hit points.</line>
       </block>
    </item>
 
