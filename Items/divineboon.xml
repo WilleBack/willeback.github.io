@@ -518,6 +518,66 @@
          <line><name>Effect</name>You gain a item bonus to melee damage rolls until the end of the encounter. The bonus equals the bonus you gain to Athletics checks from this boon.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Kord's Relentlessness</title>
+      <category>Rare</category>
+      <fluff>Kord marks you, who have have survived deadly combat through strength and fortitude alone, rendering you even more indomitable in battle</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Divine Boon</type>
+      <headline><name>Item Bonus</name>Endurance checks</headline>
+      <block>
+         <name>Properties</name>
+         <line>This divine boon has the following properties:</line>
+         <line><bullet/>You gain a +2 item bonus to death saving throws.</line>
+         <line><bullet/>When you use your <![CDATA[<i>second wind</i>]]>, you gain an item bonus to the first melee damage roll you make before the end of your next turn. The item bonus equals this boon's bonus.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You spend a healing surge while you are prone</line>
+         <line><name>Effect</name>You stand from prone without spending an action.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword> <keyword>Healing</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You succeed on a saving throw</line>
+         <line><name>Effect</name>You regain a number of hit points equal to this boon's level.</line>
+      </block>
+   </item>
 
    <item>
       <title>Lolth's Fickle Favor</title>
@@ -711,7 +771,7 @@
          <bonus>+6</bonus>
          <price>2,125,000</price>
       </level>
-      <type>Divine Boon</type>
+      <type>Primal Blessing</type>
       <block>
          <name>Property</name>
          <line>When you use your <![CDATA[<i>second wind</i>]]>, you can make a saving throw against one effect that a save can end. You gain an item bonus to this saving throw equal to this boon's bonus.</line>
@@ -890,6 +950,52 @@
    </item>
    
    <item>
+      <title>Tiamat's Insatiable Greed</title>
+      <category>Rare</category>
+      <fluff>Tiamat commands her followers to let no slight go unpunished and to take what they want</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>125,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>625,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>3,125,000</price>
+      </level>
+      <type>Divine Boon</type>
+      <headline itembonus="">Damage rolls against any creature that has damaged you since the end of your previous turn</headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Choose one ally you can see.</line>
+         <line>The chosen ally must choose one unexpended daily magic item power. That power is expended with no effect, and you regain the use of an expended daily magic item power for a magic item of the same level or lower.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Torog's Inescapable Suffering</title>
       <category>Rare</category>
       <fluff>Torog instructs his servants to embrace their agony, for only through pain can one unite the mortal and the divine</fluff>
@@ -969,7 +1075,39 @@
          <frequency>Daily</frequency>
          <action>Immediate</action> <subaction>Reaction</subaction>
          <line><name>Trigger</name>You become slowed, immobilized or restrained</line>
-         <line><![CDATA[<i>Effect:</i>]]>You teleport a number of squares equal to 1 + this boon's bonus, and are no longer slowed, immobilized or restrained.</line>
+         <line><name>Effect</name>You teleport a number of squares equal to 1 + this boon's bonus, and are no longer slowed, immobilized or restrained.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Verdant Presence</title>
+      <category>Rare</category>
+      <fluff>The power of the Forest Father flows through you, causing the land to flourish in your presence and with his blessing, you can bind your enemies with his abundant growth</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Primal Blessing</type>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Primal</keyword> <keyword>Zone</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Close burst 1; The burst creates a zone of primal growth until the end of the encounter.</line>
+         <line indent="1"><name>Level 15</name>Close burst 2.</line>
+         <line indent="1"><name>Level 25</name>Close burst 3.</line>
+         <line>The zone is difficult terrain to creatures other than you. Once on each of your turns while the zone persists, you can make the following attack as a minor action:</line>
+         <line indent="1"><name>Attack</name>Close burst special (one creature in the zone); blessing's level +5 vs. Reflex</line>
+         <line indent="1"><name>Hit</name>The target is immobilized until the start of your next turn.</line>
+         <line indent="1"><name>Miss (Level 25)</name>The target is slowed until the start of your next turn.</line>
       </block>
    </item>
 

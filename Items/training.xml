@@ -33,8 +33,8 @@
    <list selection="28" />
    <list selection="29" />
    <list selection="30" />
-
-  <item>
+   
+   <item>
       <title>Aggressive Training</title>
       <category>Uncommon</category>
       <fluff>Your tactics are legendary for their devastating nature</fluff>
@@ -203,6 +203,30 @@
    </item>
    
    <item>
+      <title>Combined Awareness</title>
+      <category>Uncommon</category>
+      <fluff>Your companion's guttural growl alerts you to danger</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Grandmaster Training</type>
+      <headline><name>Prerequisite</name>You must have an animal companion feature</headline>
+      <block>
+         <name>Property</name>
+         <line>While you are within 5 squares of your animal companion, you gain a +2 bonus to Perception checks.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Requirement</name>You must be within 5 squares of your animal companion</line>
+         <line><name>Trigger</name>You would make an initiative check</line>
+         <line><name>Effect</name>You roll twice on the triggering initiative check and use the higher result.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Crimson Determination</title>
       <category>Uncommon</category>
       <fluff>You show no quarter to your enemies in their weakness</fluff>
@@ -273,6 +297,39 @@
          <action>Nonaction</action> <subaction>Action</subaction>
          <line><name>Trigger</name>You roll a 1 on an attack roll, ability check, skill check, or saving throw</line>
          <line><name>Effect</name>You reroll the triggering roll or check until the result is something other than a 1.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>False Weakness</title>
+      <category>Uncommon</category>
+      <fluff>Even after many encounters, you still have the look of a stranger to battle, allowing you to give the false impression that you're easy prey</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Glory Boon</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a +3 item bonus to Bluff checks to appear weak or unthreatening.</line>
+         <line indent="1"><name>Level 15</name>+6 item bonus.</line>
+         <line indent="1"><name>Level 25</name>+10 item bonus.</line>
+         <line>You lose this bonus against enemies who have seen you hit with an at-will attack, or make an encounter attack or daily attack.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You make your first attack in an encounter</line>
+         <line><name>Effect</name>Close burst 5 (one creature who can see you); The target is marked by you (save ends).</line>
       </block>
    </item>
    
@@ -625,7 +682,7 @@
       </level>
       <type>Grandmaster Training</type>
       <headline>
-         <name>Requirement</name>
+         <name>Prerequisite</name>
          <text>You must have an animal companion feature</text>
       </headline>
       <block>
@@ -647,8 +704,38 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Move</action> <subaction>Action</subaction>
-         <line><name>Effect</name>Until the end of y next turn, your reach increases by 1 for all melee attacks you make.</line>
+         <line><name>Effect</name>Until the end of your next turn, your reach increases by 1 for all melee attacks you make.</line>
          <line>You move up to your speed, or shift up to half your speed.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Subduing Aegis Technique</title>
+      <category>Uncommon</category>
+      <fluff>This technique enhances your ability to bring fugitives back alive</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>625,000</price>
+      </level>
+      <type>Grandmaster Training</type>
+      <headline><name>Prerequisite</name>You must have the <![CDATA[<i>aegis of ensnarement</i> and <i>arcane aegis</i>]]> class powers.</headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>On your turn, you reduce an enemy marked by your <![CDATA[<i>arcane aegis</i>]]> class power to 10 hit points or fewer</line>
+         <line indent="1"><name>Level 15</name>To 15 hit points or fewer</line>
+         <line indent="1"><name>Level 25</name>To 20 hit points or fewer</line>
+         <line><name>Effect</name>You reduce to the triggering creature to 0 hit points instead, and knock it unconscious.</line>
       </block>
    </item>
 

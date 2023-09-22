@@ -35,6 +35,51 @@
    <list selection="30" />
 
    <item>
+      <title>Acidic Fire Ammunition</title>
+      <category>Uncommon</category>
+      <fluff>Green flames burn and spread boiling acid in all directions from where this ammunition hits</fluff>
+      <level>
+         <value>6</value>
+         <price>75</price>
+      </level>
+      <level>
+         <value>11</value>
+         <price>350</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>21</value>
+         <price>9,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>45,000</price>
+      </level>
+      <type>Ammunition</type>
+      <block>
+         <name>Property</name>
+         <line auto="ammo"/>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Acid</keyword> <keyword>Fire</keyword>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Attack</name>Area burst 1 within weapon range (each creature in the burst); Item's level +2 vs. Reflex</line>
+         <line><name>Hit</name>1d6 fire damage, and ongoing 5 acid damage (save ends).</line>
+         <line indent="1"><name>Level 10</name>2d6 fire damage, and ongoing 5 acid damage.</line>
+         <line indent="1"><name>Level 15</name>3d6 fire damage, and ongoing 5 acid damage.</line>
+         <line indent="1"><name>Level 20</name>3d6 fire damage, and ongoing 10 acid damage.</line>
+         <line indent="1"><name>Level 25</name>5d6 fire damage, and ongoing 10 acid damage.</line>
+         <line indent="1"><name>Level 30</name>4d6 fire damage, and ongoing 15 acid damage.</line>
+         <line><name>Miss</name>Half damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Acid Ammunition</title>
       <category>Common</category>
       <fluff>When it hits, the container in this ammunition releases a spray of acid</fluff>
@@ -126,6 +171,145 @@
          <name>Property</name>
          <line>When you hit an enemy with an attack using this ammunition, you mark that enemy until the end of your next turn.</line>
          <line>While marked by you in this manner, whenever the enemy makes an attack that doesn't include you as a target, the ammunition strikes the target again for 1d6 damage per plus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bending Ammunition</title>
+      <category>Common</category>
+      <fluff>Whisper a direction to this warped ammunition, and it bends around obstacles</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>50</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>200</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>125,000</price>
+      </level>
+      <type>Ammunition</type>
+      <headline auto="attackenh"/>
+      <block>
+         <name>Property</name>
+         <line>You count as having line of effect to the target of your attack as long as you have line of effect to any square adjacent to it, but it gains the benefit of cover if you do not have line of effect to it.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Biting Ammunition</title>
+      <category>Common</category>
+      <fluff>This missile takes flight as a winged, venomous snake</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>50</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>200</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>125,000</price>
+      </level>
+      <type>Ammunition</type>
+      <headline auto="attackenh"/>
+      <headline><name>Requirement</name>This ammunition can only be created for Bows and Crossbows</headline>
+      <block>
+         <name>Property</name>
+         <line>When you hit an enemy with an attack using this ammunition, that enemy also takes ongoing 5 poison damage (save ends).</line>
+         <line indent="1"><name>Aftereffect</name>5 poison damage.</line>
+         <line indent="1"><name>Level 15</name>Ongoing 10 poison damage.</line>
+         <line indent="1"><name>Level 20</name>Ongoing 10 poison damage; 10 poison damage.</line>
+         <line indent="1"><name>Level 25</name>Ongoing 15 poison damage; 10 poison damage.</line>
+         <line indent="1"><name>Level 30</name>Ongoing 15 poison damage; 15 poison damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Clinging Fire Ammunition</title>
+      <category>Common</category>
+      <fluff>The thick substance stored in this ammunition sears the target with ongoing flames</fluff>
+      <level>
+         <value>4</value>
+         <price>160</price>
+      </level>
+      <level>
+         <value>9</value>
+         <price>320</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>1,600</price>
+      </level>
+      <level>
+         <value>19</value>
+         <price>9,400</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>42,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <price>210,000</price>
+      </level>
+      <type>Ammunition</type>
+      <block>
+         <name>Proeprty</name>
+         <line auto="ammo"/>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fire</keyword>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Attack</name>Ranged weapon (one creature); Item's level +2 vs. Reflex</line>
+         <line><name>Hit</name> The target takes ongoing 10 fire damage (save ends).</line>
+         <line indent="1"><name>Crit</name>The target takes a -5 penalty to its first save against this ongoing damage.</line>
+         <line indent="1"><name>Aftereffect</name>Ongoing 5 fire damage (save ends).</line>
+         <line indent="1"><name>Level 13 or 18</name>Ongoing 15 fire damage; Ongoing 10 fire damage.</line>
+         <line indent="1"><name>Level 23 or 28</name>Ongoing 20 fire damage; ongoing 10 fire damage.</line>
+         <line><name>Miss</name>The target takes ongoing 5 fire damage (save ends).</line>
+         <line indent="1"><name>Level 18, 23 or 28</name>Ongoing 10 fire damage.</line>
       </block>
    </item>
 
@@ -411,6 +595,49 @@
          <line>When you hit an enemy with an attack using this ammunition, each ally that can see that enemy gains a +1 item bonus to attack rolls against it until her or she hits it, or until the end of the encounter, whichever comes first.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Shadowshaft Ammunition</title>
+      <category>Common</category>
+      <fluff>A dark haze trails behind this ammunition as you fire it, exploding in a burst of clinging shadow upon impact</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>50</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>200</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>125,000</price>
+      </level>
+      <type>Ammunition</type>
+      <headline auto="attackenh"/>
+      <block>
+         <name>Property</name>
+         <line>After making an attack using this ammunition, whether that attack was a hit or miss, it creates a zone of shadows in a burst 1 centered on the target until the end of the encounter.</line>
+         <line>The zone is heavily obscured.</line>
+      </block>
+   </item>
 
    <item>
       <title>Shock Ammunition</title>
@@ -459,6 +686,49 @@
          <line indent="1"><name>Level 29</name>7d6 lightning damage.</line>
          <line><name>Effect</name>The target takes a -2 penalty to all attack rolls until the end of its next turn.</line>
          <line indent="1"><![CDATA[<i>Level 19, 24, or 29:</i>]]> -2 penalty to all attack rolls (save ends).</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Sliver-Strike Ammunition</title>
+      <category>Common</category>
+      <fluff>When it strikes, this ammunition splits, spraying nearby creatures with shards of steel</fluff>
+      <level>
+         <value>5</value>
+         <bonus>+1</bonus>
+         <price>50</price>
+      </level>
+      <level>
+         <value>10</value>
+         <bonus>+2</bonus>
+         <price>200</price>
+      </level>
+      <level>
+         <value>15</value>
+         <bonus>+3</bonus>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <bonus>+4</bonus>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <bonus>+5</bonus>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <bonus>+6</bonus>
+         <price>125,000</price>
+      </level>
+      <type>Ammunition</type>
+      <headline auto="attackenh"/>
+      <block>
+         <name>Property</name>
+         <line>When you hit an enemy with an attack using this ammunition, each creature other than the target in a burst 2 centered on the target takes damage equal to 3 + twice this ammunition's enhancement bonus.</line>
+         <line>If you make an attack that deals have damage on a miss, you also deal half of this damage on a miss.</line>
       </block>
    </item>
 
@@ -594,6 +864,99 @@
          <line><name>Hit</name> The target is immobilized until the end of your next turn.</line>
          <line indent="1"><name>Aftereffect</name>The target is slowed until the end of your next turn.</line>
          <line><name>Miss</name>The target is slowed until the end of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Tethering Ammunition</title>
+      <category>Common</category>
+      <fluff>You fire this ammunition at an enemy, and one side sticks to the creature while other bonds with the ground</fluff>
+      <level>
+         <value>4</value>
+         <price>40</price>
+      </level>
+      <level>
+         <value>9</value>
+         <price>160</price>
+      </level>
+      <level>
+         <value>14</value>
+         <price>800</price>
+      </level>
+      <level>
+         <value>19</value>
+         <price>4,200</price>
+      </level>
+      <level>
+         <value>24</value>
+         <price>21,000</price>
+      </level>
+      <level>
+         <value>29</value>
+         <price>105,000</price>
+      </level>
+      <type>Ammunition</type>
+      <block>
+         <name>Property</name>
+         <line auto="ammo"/>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Attack</name>Ranged weapon (one creature); item's level +2 vs. Reflex</line>
+         <line><name>Hit</name> The target cannot move more than 3 squares from the space it occupies when it is hit (save ends).</line>
+         <line indent="1"><name>Crit</name>The target takes a -5 penalty to its saving throws against this effect.</line>
+         <line>The target has a -5 penalty to save against this effect on any turn that it did not move at least 2 squares.</line>
+         <line><name>Miss</name>The target treats all squares beyond 3 squares from the space it occupies when missed as difficult terrain until the end of its next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Thunder ammunition</title>
+      <category>Common</category>
+      <fluff>On impact, the clay sphere of this ammunition unleashes a clap of thunder that can deafen creatures and knock them back</fluff>
+      <level>
+         <value>5</value>
+         <price>50</price>
+      </level>
+      <level>
+         <value>10</value>
+         <price>200</price>
+      </level>
+      <level>
+         <value>15</value>
+         <price>1,000</price>
+      </level>
+      <level>
+         <value>20</value>
+         <price>5,000</price>
+      </level>
+      <level>
+         <value>25</value>
+         <price>25,000</price>
+      </level>
+      <level>
+         <value>30</value>
+         <price>125,000</price>
+      </level>
+      <type>Ammunition</type>
+      <block>
+         <name>Property</name>
+         <line auto="ammo"/>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Thunder</keyword>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Attack</name>Area burst 1 within weapon range (each creature in the burst); Item's level +2 vs. Fortitude</line>
+         <line><name>Hit</name>1d6 thunder damage, and the target is pushed 1 square from the center of the burst, and deafened (save ends).</line>
+         <line indent="1"><name>Level 10</name>2d6 thunder damage.</line>
+         <line indent="1"><name>Level 15</name>4d6 thunder damage.</line>
+         <line indent="1"><name>Level 20</name>5d6 thunder damage, and pushed at least 1 square and up to 2 squares.</line>
+         <line indent="1"><name>Level 25</name>6d6 thunder damage, and pushed at least 1 square and up to 2 squares.</line>
+         <line indent="1"><name>Level 30</name>7d6 thunder damage, and pushed at least 1 square and up to 2 squares.</line>
       </block>
    </item>
 
