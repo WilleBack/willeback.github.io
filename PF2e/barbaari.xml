@@ -25,6 +25,38 @@
    </rule>
 
    <rule>
+      <title>Cat Fall</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Acrobatics</prereq>
+
+      <line>Your catlike aerial acrobatics allow you to cushion your falls. Treat falls as 10 feet shorter.</line>
+      <line>If you're an expert in Acrobatics, treat falls as 25 feet shorter. If you're a master in Acrobatics, treat them as 50 feet shorter. If you're legendary in Acrobatics, you always land on your feet and don't take damage, regardless of the distance of the fall.</line>
+   </rule>
+
+   <rule>
+      <title>Falling</title>
+
+      <line>When you fall more than 5 feet, you take bludgeoning damage equal to half the distance you fell when you land. Treat falls longer than 1,500 feet as though they were 1,500 feet (750 damage). If you take any damage from a fall, you land prone. You fall about 500 feet in the first round of falling and about 1,500 feet each round thereafter.</line>
+      <line>You can Grab an Edge as a reaction to reduce the damage from some falls. In addition, if you fall into water, snow, or another relatively soft substance, you can treat the fall as though it were 20 feet shorter, or 30 feet shorter if you intentionally dove in. The effective reduction can't be greater than the depth (so when falling into 10-foot-deep water, you treat the fall as 10 feet shorter).</line>
+   </rule>
+
+   <rule>
+      <title>Grab an Edge</title>
+      <action>R</action>
+      <trait>Manipulate</trait>
+      <trigger>You fall from  or past an edge or handhold</trigger>
+      <requirements>You hands are not tied behind your back or otherwise restrained</requirements>
+
+      <line>When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can them Climb up using Athletics.</line>
+      <line results="">
+         <critsuccess>You grab the edge or handhold, whether or not you have a hand free, typically by using a suitable held item to catch yourself (catching a battle axe on a ledge, for example). You still take damage from the distance fallen so far, but you treat the fall as though it were 30 feet shorter.</critsuccess>
+         <success>If you have at least one hand free, you grab the edge or handhold, stopping your fall. You still take damage from the distance fallen so far, but you treat the fall as though it were 20 feet shorter. If you have no hands free, you continue to fall as if you had failed the check.</success>
+         <critfail>You continue to fall, and if you've fallen 20 feet or more before you use this reaction, you take 10 bludgeoning damage from the impact for every 20 feet fallen.</critfail>
+      </line>
+   </rule>
+
+   <rule>
       <title>Impressive Performance</title>
       <type>Feat</type>
       <level>1</level>
@@ -45,49 +77,6 @@
          <success>The target's attitude toward you improves by one step (such as from indifferent to friendly).</success>
          <critfail>The target's attitude toward you decreases by one step (such as from indifferent to unfriendly).</critfail>
       </line>
-   </rule>
-
-   <rule>
-      <title>Rage</title>
-      <action>1</action>
-      <trait>Barbarian</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Mental</trait>
-      <requirement>You aren't fatigued or raging.</requirement>
-
-      <line>You tap into your inner fury and begin raging. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall unconscious, whichever comes first. You can voluntarily stop raging. While you are raging:</line>
-      <line list="">
-         <entry>You deal 2 additional damage with melee Strikes. This additional damage is halved if your weapon or unarmed attack is agile.</entry>
-         <entry>You take a -1 penalty to AC.</entry>
-         <entry>You can't use actions with the concentrate trait unless they also have the rage trait. You can Seek while raging.</entry>
-      </line>
-      <line>After you stop raging, you lose any remaining temporary Hit Points from Rage, and you can't Rage again for 1 minute.</line>
-   </rule>
-
-   <rule>
-      <title>Draconic Rage (White Dragon)</title>
-
-      <line>When you you Rage, you can increase the additional damage from 2 to 4 and change it to cold damage instead of the damage type of your weapon or unarmed attack. If you do this, your Rage action gains the arcane, cold, and evocation traits.</line>
-   </rule>
-
-   <rule>
-      <title>Anathema</title>
-
-      <line>Whenever you perform any of the following acts, you lose the Draconic Rage until you spend 1 day of downtime re-centering yourself, though you keep all of your other barbarian abilities.</line>
-      <line list="">
-         <entry>You let a personal insult against you slide.</entry>
-         <entry>You fail to defeat a white dragon you come across.</entry>
-      </line>
-   </rule>
-
-   <rule>
-      <title>Sudden Charge</title>
-      <type>Feat</type> <level>1</level>
-      <action>2</action>
-      <trait>Barbarian</trait> <trait>Flourish</trait>
-      <trait>Open</trait>
-
-      <line>With a quick sprint, you dash up to your foe and swing.</line>
-      <line>Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy.</line>
-      <line>You can use Sudden Charge while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</line>
    </rule>
 
    <rule>
@@ -116,5 +105,57 @@
          <critsuccess>The target becomes frightened 2.</critsuccess>
          <success>The target becomes frightened 1.</success>
       </line>
+   </rule>
+
+   <rule>
+      <title>Anathema</title>
+
+      <line>Whenever you perform any of the following acts, you lose the Draconic Rage until you spend 1 day of downtime re-centering yourself, though you keep all of your other barbarian abilities.</line>
+      <line list="">
+         <entry>You let a personal insult against you slide.</entry>
+         <entry>You fail to defeat a white dragon you come across.</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Rage</title>
+      <action>1</action>
+      <trait>Barbarian</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Mental</trait>
+      <requirement>You aren't fatigued or raging.</requirement>
+
+      <line>You tap into your inner fury and begin raging. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall unconscious, whichever comes first. You can voluntarily stop raging. While you are raging:</line>
+      <line list="">
+         <entry>You deal 2 additional damage with melee Strikes. This additional damage is halved if your weapon or unarmed attack is agile.</entry>
+         <entry>You take a -1 penalty to AC.</entry>
+         <entry>You can't use actions with the concentrate trait unless they also have the rage trait. You can Seek while raging.</entry>
+      </line>
+      <line>After you stop raging, you lose any remaining temporary Hit Points from Rage, and you can't Rage again for 1 minute.</line>
+   </rule>
+
+   <rule>
+      <title>Draconic Rage (White Dragon)</title>
+
+      <line>When you you Rage, you can increase the additional damage from 2 to 4 and change it to cold damage instead of the damage type of your weapon or unarmed attack. If you do this, your Rage action gains the arcane, cold, and evocation traits.</line>
+   </rule>
+
+   <rule>
+      <title>Sudden Charge</title>
+      <type>Feat</type> <level>1</level>
+      <action>2</action>
+      <trait>Barbarian</trait> <trait>Flourish</trait>
+      <trait>Open</trait>
+
+      <line>With a quick sprint, you dash up to your foe and swing.</line>
+      <line>Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy.</line>
+      <line>You can use Sudden Charge while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</line>
+   </rule>
+
+   <rule>
+      <title>Furious Finish</title>
+      <type>Feat</type> <level>2</level>
+      <action>1</action>
+      <trait>Barbarian</trait> <trait>Rage</trait>
+
+      <line>Desperate to finish the fight, you pour all your rage into one final blow. Make a Strike. If it hits, you gain a circumstance bonus to damage equal to the number of rounds remaining in your Rage (maximum 10). After this Strike, your Rage immediately ends, and you are fatigued until you rest for at least 10 minutes.</line>
    </rule>
 </catalog>

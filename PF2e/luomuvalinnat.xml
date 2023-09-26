@@ -3,9 +3,10 @@
 <catalog>
 
    <rule>
+      <category>Otherworldly Magic</category>
       <title>Prestidigitation</title>
       <type>Cantrip</type> <level>1</level>
-      <trait>Cantrip</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Evocation</trait>
       <cast action="2">somatic, verbal</cast>
       <range>10 feet</range> <targets>1 object (cook, lift, or tidy only)</targets>
       <duration>sustained</duration>
@@ -22,6 +23,7 @@
    </rule>
 
    <rule>
+      <category>Druid Cantrips</category>
       <title>Acid Splash</title>
       <type>Cantrip</type> <level>1</level>
       <trait>Acid</trait> <trait>Attack</trait> <trait>Cantrip</trait> <trait>Evocation</trait> <trait>Primal</trait>
@@ -29,6 +31,11 @@
       <range>30 feet</range> <targets>1 creature</targets>
 
       <line>You splash a glob of acid that splatters on your target and nearby creatures. Make a ranged spell attack against your target's AC. If you hit, you deal 1d6 acid damage plus 1 splash acid damage. On a critical success, the target also takes 1 persistent acid damage.</line>
+
+      <heighten value="3rd">The initial damage increases to 1d6 + your spellcasting ability modifier, and the persistent damage increases to 2.</heighten>
+      <heighten value="5th">The initial damage increases to 2d6 + your spellcasting ability modifier, the persistent damage increases to 3, and the splash damage increases to 2.</heighten>
+      <heighten value="7th">The initial damage increases to 3d6 + your spellcasting ability modifier, the persistent damage increases to 4, and the splash damage increases to 3.</heighten>
+      <heighten value="9th">The initial damage increases to 3d6 + your spellcasting ability modifier, the persistent damage increases to 5, and the splash damage increases to 4.</heighten>
    </rule>
 
    <rule>
@@ -40,6 +47,22 @@
 
       <line>You send out a pulse that registers the presence of magic. You receive no information beyond the rpesence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies.</line>
       <line>You detect illusion magic only if that magic's effect has a lower level than the level of your <![CDATA[<i>detect magic</i>]]> spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an <![CDATA[<i>invisibility potion</i>]]>) typically are detected normally.</line>
+
+      <heighten value="3rd">You learn the school of magic for the highest-level effect within range that the spell detects. If multiple effects are equally strong, the GM determines which you learn.</heighten>
+      <heighten value="4th">As 3rd level, but you also pinpoint the source of the highest-level magic. Like for an imprecise sense, you don't learn the exact location, but you can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</heighten>
+   </rule>
+
+   <rule>
+      <title>Disrupt Undead</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 undead creature</targets>
+      <save>Fortitude</save>
+
+      <line>You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 for 1 round.</line>
+
+      <heighten value="+1">The damage increases by 1d6.</heighten>
    </rule>
 
    <rule>
@@ -51,16 +74,8 @@
       <save>basic Reflex</save>
 
       <line>An arc of lightning leaps from one target to another. You deal electricity damage equal to 1d4 plus your spellcasting ability modifier.</line>
-   </rule>
 
-   <rule>
-      <title>Gouging Claw</title>
-      <type>Cantrip</type> <level>1</level>
-      <trait>Attack</trait> <trait>Cantrip</trait> <trait>Morph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>touch</range> <targets>1 creature</targets>
-
-      <line>You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. If you hit, you deal your choice of slashing or piercing damage equal to 1d6 plus your spellcasting ability modifier. On a critical success, you deal double damage plus 1d4 persistent bleed damage.</line>
+      <heighten value="+1">The damage increases by 1d4.</heighten>
    </rule>
 
    <rule>
@@ -78,6 +93,44 @@
          <fail>The creature takes full damage and is pushed 5 feet away from you.</fail>
          <critfail>The creature takes double damage and is pushed 10 feet away from you.</critfail>
       </line>
+
+      <heighten value="+2">The damage increases by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Gouging Claw</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Attack</trait> <trait>Cantrip</trait> <trait>Morph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <targets>1 creature</targets>
+
+      <line>You temporarily morph your limb into a clawed appendage. Make a melee spell attack roll against your target's AC. If you hit, you deal your choice of slashing or piercing damage equal to 1d6 plus your spellcasting ability modifier. On a critical success, you deal double damage plus 1d4 persistent bleed damage.</line>
+
+      <heighten value="+1">The damage increases by 1d6 and the persistent bleed damage on a critical increases by 1d4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Guidance</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Divination</trait> <trait>Primal</trait>
+      <cast action="1">verbal</cast>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <duration>Until the start of your next turn</duration>
+
+      <line>You ask for divine guidance, granting the target a +1 status bonus to one attack roll, Perception check, saving throw, or skill check the target attempts before the duration ends. The target chooses which roll to use the bonus on before rolling. If the target uses the bonus, the spell ends. Either way, the target is then temporarily immune for 1 hour.</line>
+   </rule>
+
+   <rule>
+      <title>Light</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Evocation</trait> <trait>Light</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <targets>1 object of 1 Bulk or less, either unattended or possessed by you or a willing ally</targets>
+      <duration>until the net time you make your daily preparation</duration>
+
+      <line>The object glows, casting bright light in a 20-foot radius (and dim light for the next 20 feet) like a torch. If you cast this spell again on a second object, the <![CDATA[<i>light</i>]]> spell on the first object ends.</line>
+
+      <heighten value="4th">The objects sheds bright light in a 60-foot radius (and dim light for the next 60 feet).</heighten>
    </rule>
 
    <rule>
@@ -92,6 +145,21 @@
          <critsuccess>The target takes double damage, and 1d4 persistent fire damage.</critsuccess>
          <success>The target takes full damage.</success>
       </line>
+
+      <heighten value="+1">Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Rousing Splash</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Primal</trait> <trait>Water</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>60 feet</range> <targets>1 creature</targets>
+
+      <line>You cause a splash of cold water to descend on an ally's head, granting some temporary vigor. The target gains 1d4 temporary Hit Points, which last for 1 minute. The target is then temporarily immune to the temporary Hit Points from <![CDATA[<i>rousing splash</i>]]> for 10 minutes.</line>
+      <line>The target can also attempt an immediate flat check to recover from a single source of persistent acid or fire damage, with the DC reduction from appropriate assistance.</line>
+
+      <heighten value="+1">The amount of temporary Hit Points granted increases by 1d4.</heighten>
    </rule>
 
    <rule>
@@ -104,6 +172,8 @@
 
       <line>You evoke a jumble of rocks in the area. The scattering rocks deal bludgeoning damage equal to 1d4 + your spellcasting ability modifier to creatures in the area, with a basic Reflex save. The ground in the area becomes difficult terrain for the duration. A creature can Interact to clear a square of this scree.</line>
       <line>If you cast this spell again, any previous scree you have scattered ends.</line>
+
+      <heighten value="+1">The damage increases by 1d4.</heighten>
    </rule>
 
    <rule>
@@ -129,9 +199,13 @@
          <success>The target takes a -10-foot circumstance penalty to Speed for 1 round. It can attempt to Escape against your spell DC to remove the penalty.</success>
          <fail>The target is unaffected.</fail>
       </line>
+
+      <heighten value="2nd">The effects last for 2 rounds.</heighten>
+      <heighten value="4th">The effects last for 1 minute.</heighten>
    </rule>
 
    <rule>
+      <category>1st-level Druid Spells</category>
       <title>Briny Bolt</title>
       <type>Spell</type> <level>1</level>
       <trait>Attack</trait> <trait>Evocation</trait> <trait>Primal</trait> <trait>Water</trait>
@@ -143,6 +217,8 @@
          <critsuccess>The creatures takes 4d6 bludgeoning damage and is blinded for 1 round and dazzled for 1 minute as salt water sprays into its eyes. The creature can use an Interact action to rub its eyes and end the blinded condition, but not the dazzled condition.</critsuccess>
          <success>The creatures takes 2d6 bludgeoning damage and in blinded for 1 round. The creature can spend an Interact action wiping the salt water from its eyes to end the blinded condition.</success>
       </line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
    </rule>
 
    <rule>
@@ -155,6 +231,21 @@
 
       <line>You release a quick burst of wind that batters your living opponents without causing them lasting harm, while also blowing undead away. The wind deals 2d4 bludgeoning damage, which is nonlethal against living creatures. Against undead, the winds are more vicious, and the spell loses the nonlethal trait against such creatures.</line>
       <line>Each creature in the area must attempt a basic Reflex save. On a failure, undead creatures are also knocked back 5 feet (or 10 feet on a critical failure).</line>
+
+      <heighten value="+1">The damage increases by 2d4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Burning Hands</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Evocation</trait> <trait>Fire</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>15-foot cone</area>
+      <save> basic Reflex</save>
+
+      <line>Gouts of flame rush from your hands. You deal 2d6 fire damage to creatures in the area.</line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
    </rule>
 
    <rule>
@@ -169,6 +260,8 @@
       <line action="1" traits="somatic">The spell has a range of touch.</line>
       <line action="2" traits="somatic, verbal">The spell has a range of 30 feet. If you're healing a living creature, increase the Hit Points restored by 8.</line>
       <line action="3" traits="material, somatic, verbal">You disperse positive energy in a 30-foot emanation. This targets all living and undead creatures in the emanation.</line>
+
+      <heighten value="+1">The amount of damage or healing increases by 1d8, and the extra healing for the 2-action version increases by 8.</heighten>
    </rule>
 
    <rule>
@@ -181,6 +274,8 @@
 
       <line>You call forth a ladder or staircase to help you reach greater heights. The ladder or staircase appears in a space you designate and either stands freely or connects to a nearby wall if possible. You decide the height of the ladder or staircase when casting the spell, up to a maximum height of 40 feet. The ladder or staircase is locked in place and magically supported, allowing you to ascend even if it's in an open area.</line>
       <line>The conjured ladder is simple in design and made of wood. The staircase is a spiral staircase made of wood. While both are supported and have no risk of falling, they can be damaged and destroyed as normal. The staircase is typically easier to ascend, though it's less discreet than a ladder and could possibly draw more attention. You can Dismiss the spell.</line>
+
+      <heighten value="+1">The maximum height increases by 40 feet.</heighten>
    </rule>
 
    <rule>
@@ -195,6 +290,8 @@
          <critsuccess>The target takes 6d6 bludgeoning damage and is knocked back 10 feet.</critsuccess>
          <success>The target takes 3d6 bludgeoning damage and is knocked back 5 feet.</success>
       </line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
    </rule>
 
    <rule>
@@ -216,6 +313,27 @@
       <range>touch</range> <targets>1 creature</targets>
 
       <line>You shroud your hands in a crackling field of lightning. make a melee spell attack roll against the target's AC. On a hit, the target takes 2d12 electricity damage. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to the your attack roll with <![CDATA[<i>shocking grasp</i>]]>, and the target also takes 1d4 persistent electricity damage on a hit. On a critical hit, double the initial damage, but not the persistent damage.</line>
+
+      <heighten value="+1">The damage increases by 1d12, and the persistent electricity damage increases by 1.</heighten>
+   </rule>
+
+   <rule>
+      <title>Shockwave</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Earth</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>15-foot cone</area>
+      <save>Reflex</save>
+
+      <line>You create a wave of energy that ripples through the earth. Terrestrial creatures in the affected area must attempt a Reflex save to avoid stumbling as the shockwave shakes the ground.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The creature is flat-footed until the start of its next turn.</success>
+         <fail>The creature falls prone.</fail>
+         <critfail>The creature falls prone plus takes 1d6 damage.</critfail>
+      </line>
+
+      <heighten value="+1">The area increases by 5 feet (to a 20-foot cone at 2nd spell level, and so on).</heighten>
    </rule>
 
    <rule>
@@ -233,24 +351,191 @@
          <fail>The target is afflicted with spider venom at stage 1.</fail>
          <critfail>The target is afflicted with spider venom at stage 2.</critfail>
       </line>
-      <line block="">
+      <block>
          <name>Spider Venom</name>
          <part>(poison)</part>
          <part><name>Level</name>1</part>
          <part><name>Maximum Duration</name>4 rounds</part>
          <part linebreak=""><name>Stage 1</name>1d4 poison damage and enfeebled 1 (1 round)</part>
          <part><name>Stage 2</name>1d4 poison damage and enfeebled 2 (1 round)</part>
+      </block>
+   </rule>
+
+   <rule>
+      <category>2nd-level Druid Spells</category>
+      <title>Animal Form</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>1 minute</duration>
+
+      <line>You call upon primal energy to transform yourself into a Medium animal battle form. When you first cast this spell, choose ape, bear, bull, canine, cat, deer, frog, shark, or snake. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form's Size or statistics. While in this form, you gain the Animal trait. You can Dismiss the spell.</line>
+      <line>You gain the following statistics and abilities regardless of which battle form you choose:</line>
+      <line list="">
+         <entry>AC = 16 + your level. Ignore your armor check penalty and Speed reduction.</entry>
+         <entry>5 temporary hit points.</entry>
+         <entry>Low-light vision and imprecise scent 30 feet.</entry>
+         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
+         <entry>Athletics modifier of +9, unless your own modifier is higher.</entry>
+      </line>
+      <line>You also gain specific abilities based on the type of animal you choose:</line>
+      <line list="">
+         <entry name="Ape">Speed 25 feet, climb Speed 20 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fist, <b>Damage </b>]]> 2d6 bludgeoning.</entry>
+         <entry name="Bear">Speed 30 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d8 piercing; <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]> 1d8 slashing.</entry>
+         <entry name="Bull">Speed 30 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> horn, <b>Damage </b>]]>2d8 piercing.</entry>
+         <entry name="Canine">Speed 40 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing.</entry>
+         <entry name="Cat">Speed 40 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 pierching; <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]>1d10 slashing.</entry>
+         <entry name="Deer">Speed 50 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> antler, <b>Damage </b>]]> 2d6 piercing.</entry>
+         <entry name="Frog">Speed 25 feet, swim Speed 25 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 bludgeoning; <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> tongue (reach 15 feet), <b>Damage </b>]]>2d4 bludgeoning.</entry>
+         <entry name="Shark">swim Speed 35 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing; breathe underwater but not in air.</entry>
+         <entry name="Snake">Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fangs, <b>Damage </b>]]>2d4 piercing plus 1d6 poison.</entry>
       </line>
    </rule>
 
    <rule>
-      <title>Summon Animal</title>
-      <type>Spell</type> <level>1</level>
+      <title>Barkskin</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Abjuration</trait> <trait>Plant</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <targets>1 willing creature</targets>
+      <duration>10 minutes</duration>
+
+      <line>The target's skin becomes covered in bark. The target gains resistance 2 to bludgeoning and piercing damage and weakness 3 to fire. After the target takes fire damage, it can Dismiss the spell as a free action triggered by taking the damage; doing so doesn't reduce the fire damage the target was dealt.</line>
+   </rule>
+
+   <rule>
+      <title>Create Food</title>
+      <type>Spell</type> <level>2</level>
       <trait>Conjuration</trait> <trait>Primal</trait>
-      <cast action="3">material, somatic, verbal</cast>
+      <cast>1 hour (somatic, verbal)</cast>
       <range>30 feet</range>
+
+      <line>You create enough food to feed six Medium creatures for a day. This food is bland and unappealing, but it is nourishing. After 1 day, if no one has eaten the food, it decause and becomes inedible. Most Small creatures eat one-quarter as much as a Medium creature (one-sixteenth as much for most Tiny creatures), and most Large creatures eat 10 times as much (100 times as much for Huge creatures and so on).</line>
+   </rule>
+
+   <rule>
+      <title>Enlarge</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 willing creature</targets>
+      <duration>5 minutes</duration>
+
+      <line>Bolstered by magical power, the target grows to size Large. Its equipment grows with it but returns to natural size if removed. The creature is clumsy 1. Its reach increases by 5 feet (or by 10 feet if it started out Tiny), and it gains a +2 status bonus to melee damage. This spell has no effect on a Large or larger creature.</line>
+   </rule>
+
+   <rule>
+      <title>Flaming Sphere</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Evocation</trait> <trait>Fire</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <area>1 5-foot square</area>
+      <save>Reflex</save>
       <duration>sustained up to 1 minute</duration>
 
-      <line>You conjure an animal to fight for you. You summon a common creature that has the animal trait and whose level is -1, such as those below. The creature gains the summoned and minion traits. Immediately when you finish Casting the Spell, the summoned creature uses its 2 actions for that turn.</line>
+      <line>You create a sphere of flame in a square within range. The sphere must be supported by a solid surface, such as a stone floor. The sphere deals 3d6 fire damage to each creature in the square where it first appears; each creature must attempt a basic Reflex save.</line>
+      <line>On subsequent rounds, the first time your Sustain this Spell each round, you can leave the sphere in its square or roll it to another square within range. It deals 3d6 fire damage (basic Reflex save) to each creature in that square.</line>
+      <line>Creatures that succeed at their save against the sphere take no damage (instead of half, as usual).</line>
+   </rule>
+
+   <rule>
+      <title>Fungal Infestation</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Conjuration</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>15-foot cone</area>
+      <save>Fortitude</save>
+
+      <line>Toxic spores swarm over creatures in the area, causing them to erupt in grotesque fungal growths. These noxious growths deal 2d6 persistent poison damage, and each creature must attempt a Fortitude save.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The target takes half the persistent damage.</success>
+         <fail>The target takes the full persistent poison damage. While it is taking this persistent poison damage, it has weakness 1 to fire and weakness 1 to slashing.</fail>
+         <critfail>The target takes double the persistent damage. While it is taking this persistent poison damage, it has weakness 2 to fire and weakness 2 to slashing.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Gentle Breeze</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Air</trait> <trait>Healing</trait> <trait>Positive</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>60 feet</range> <area>40-foot burst</area>
+      <duration>10 minutes</duration>
+
+      <line>A light, soothing breeze flows through the area, making it easier to rest and recover. Medicine checks attempted to benefit living creatures in the area get a +2 status bonus. Any living creature in the area also gets a +2 status bonus to saving throws against afflictions and, if it remains within the area for the full duration, regains 10 Hit Points.</line>
+      <line>In addition, the cool breeze reduces the temperature effects of heat by one step for any creature in the area.</line>
+   </rule>
+
+   <rule>
+      <title>Glitterdust</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <area>10-foot burst</area>
+      <save>Reflex</save>
+
+      <line>Creatures in the area are outlined by glittering dust. Each creature must attempt a Reflex save.</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The target's invisibility is negated for 2 rounds.</success>
+         <fail>The target is dazzled for 1 minute and its invisibility is negated for 1 minute.</fail>
+         <critfail>The target is blinded for 1 round and dazzled for 10 minutes. Its invisibility is negated for 10 minutes.</critfail>
+      </line>
+      <line>If a creature has its invisibility negated by this spell, it is concealed instead of invisible. This applies both if the creature was already invisible and if it benefits from new invisibility effects before the end of the invisibility negation from this spell.</line>
+   </rule>
+
+   <rule>
+      <title>Resist Energy</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Abjuration</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <targets>1 creature</targets>
+      <duration>10 minutes</duration>
+
+      <line>A shield of shimmering elemental energy protects a creature against one type of energy damage. Choose acid, cold, electricity, fire, or sonic damage. The target and its gear gain resistance 5 against the damage type you chose.</line>
+   </rule>
+
+   <rule>
+      <title>Restoration</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Healing</trait> <trait>Necromancy</trait> <trait>Primal</trait>
+      <cast>1 minute (somatic, verbal)</cast>
+      <range>touch</range> <targets>1 creature</targets>
+
+      <line>Restorative magic counters the effects of toxins or conditions that prevent a creature from functioning at its best. When you cast <![CDATA[<i>restoration</i>]]>, choose to either reduce a condition or lessen the effect of a toxin. A creature can benefit from one one <![CDATA[<i>restoration</i>]]> spell each day, and it can't benefit from <![CDATA[<i>restoration</i>]]> more than once to reduce the stage of the same exposure to a given toxin.</line>
+      <line list="">
+         <entry name="Lessen a Toxin">Reduce the stage of one toxin the target suffers from by one stage. This can't reduce the stage below stage 1 or cure the affliction.</entry>
+         <entry name="Reduce a Condition">Reduce the value of the target's clumsy, enfeebled, or stupefied condition by 2. You can instead reduce two of the listed conditions by 1 each.</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Splinter Volley</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Attack</trait> <trait>Evocation</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <cast action="2" to="3">somatic, verbal</cast>
+      <range>60 feet</range> <targets>1 or 2 creatures</targets>
+
+      <line>You launch a volley of splinters at your foes. Make a ranged spell attack roll against a single creature's AC. On a hit, the splinters deal 4d6 piercing damage. The splinters deal double damage on a critical hit and 1 persistent bleed damage.</line>
+      <line>You can spend a third action while casting this spell to fire splinters at two different targets instead of one. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make both spell attack rolls for <![CDATA[<i>splinter volley</i>]]>.</line>
+   </rule>
+
+   <rule>
+      <title>Web</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Conjuration</trait> <trait>Primal</trait>
+      <cast action="3">material, somatic, verbal</cast>
+      <range>30 feet</range> <area>10-foot burst</area>
+      <duration>1 minute</duration>
+
+      <line>You create a sticky web in the area that impedes creatures' movement each time they try to move through it. Squares filled with the web are difficult terrain. Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5, and it automatically fails its saving throws.</line>
+      <line>Each time a creature in the web begins to use a move action or enters the web during a move action, it must attempt an Athletics check or Reflex save against your spell DC to avoid taking a circumstance penalty to its Speeds or becoming immobilized. A creature that gets out of the web ceases to take the circumstance penalty to its Speed from the web.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected, and it doesn't need to attempt further Athletics checks or saving throws against the web this turn. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.</critsuccess>
+         <success>The creature is unaffected during its action. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.</success>
+         <fail>The creature takes a -10-foot circumstance penalty to its Speeds until the start of its next turn.</fail>
+         <critfail>The creature is immobilized until the start of its next turn, after which it takes a -10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape to remove its immobilized condition.</critfail>
+      </line>
    </rule>
 </catalog>

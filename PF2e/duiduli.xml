@@ -36,6 +36,43 @@
    </rule>
 
    <rule>
+      <title>Battle Medicine</title>
+      <type>Feat</type> <level>1</level>
+      <action>1</action>
+      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
+      <prereq>trained in Medicine</prereq>
+      <requirements>You are holding healder's tools, or you are wearing them and have a hand free</requirements>
+
+      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day.</line>
+      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
+   </rule>
+
+   <rule>
+      <title>Treat Wounds</title>
+      <trait>Exploration</trait> <trait>Healing</trait> <trait>Manipulate</trait>
+      <requirements>You are holding healer's tools, or you are wearing them and have a hand free</requirements>
+
+      <line>You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes).</line>
+      <line>The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you're a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you're legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a critical failure remains the same.</line>
+
+      <line results="">
+         <critsuccess>The target regains the second healing value, and its wounded condition is removed.</critsuccess>
+         <success>The target regains the first healing value, and its wounded condition is removed.</success>
+         <critfail>The target takes 1d8 damage.</critfail>
+      </line>
+
+      <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
+
+      <line><![CDATA[<b>Treat Wounds, healing by proficiency</b>]]></line>
+      <line list="">
+         <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
+         <entry>Expert Proficiency (DC 20) - 2d8 + 10 / 4d8 + 10</entry>
+         <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
+         <entry>Legendary Proficiency (DC 40) - 2d8 + 50 / 4d8 + 50</entry>
+      </line>
+   </rule>
+
+   <rule>
       <title>Experienced Tracker</title>
       <type>Feat</type> <level>1</level>
       <trait>General</trait> <trait>Skill</trait>
@@ -85,6 +122,12 @@
    </rule>
 
    <rule>
+      <title>Druidic Language</title>
+
+      <line>You know Druidic, a secret language known only to druids, in addition to any languages you know through your ancestry. Druidic has its own alphabet.</line>
+   </rule>
+
+   <rule>
       <title>Raise a Shield</title>
       <action>1</action>
       <requirement>You are wielding a shield.</requirement>
@@ -100,12 +143,6 @@
       <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
 
       <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
-   </rule>
-
-   <rule>
-      <title>Druidic Language</title>
-
-      <line>You know Druidic, a secret language known only to druids, in addition to any languages you know through your ancestry. Druidic has its own alphabet.</line>
    </rule>
 
    <rule>
@@ -150,6 +187,27 @@
    </rule>
 
    <rule>
+      <title>Reach Spell</title>
+      <action>1</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
+
+      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
+   </rule>
+
+   <rule>
+      <title>Tempest Surge</title>
+      <type>Focus</type> <level>1</level>
+      <uncommon /> <trait>Air</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Evocation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <save>Reflex</save>
+
+      <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage. The Target must attempt a basic Reflex save. On a failure, the target also is clumsy 2 for 1 round and takes 1 persistent electricity damage.</line>
+      <heighten value="+1">The initial damage increases by 1d12, and the persistent electricity damage on a failure increases by 1.</heighten>
+   </rule>
+
+   <rule>
       <title>Cast a Spell</title>
 
       <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
@@ -163,17 +221,5 @@
          <entry>Focus (manipulate); A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
       </line>
       <line><![CDATA[<b>Disrupted and Lost Spells </b>]]> Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
-   </rule>
-
-   <rule>
-      <title>Tempest Surge</title>
-      <type>Focus</type> <level>1</level>
-      <uncommon /> <trait>Air</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Evocation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <targets>1 creature</targets>
-      <save>Reflex</save>
-
-      <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage. The Target must attempt a basic Reflex save. On a failure, the target also is clumsy 2 for 1 round and takes 1 persistent electricity damage.</line>
-      <heighten value="+1">The initial damage increases by 1d12, and the persistent electricity damage on a failure increases by 1.</heighten>
    </rule>
 </catalog>

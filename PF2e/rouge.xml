@@ -24,6 +24,15 @@
    </rule>
 
    <rule>
+      <title>Combat Climber</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Athletics</prereq>
+
+      <line>Your technique allows you to fight as you climb. You're not flat-footed while Climbing and can Climb with a hand occupied. You must still use another hand and both legs to Climb.</line>
+   </rule>
+
+   <rule>
       <title>Pickpocket</title>
       <type>Feat</type> <level>1</level>
       <trait>General</trait> <trait>Skill</trait>
@@ -99,6 +108,34 @@
       <title>Surprise Attack</title>
 
       <line>You spring into combat faster than foes can react. On the first round of combat, if you rolled Deception or Stealth for initiative, creatures that haven't acted are flat-footed to you.</line>
+   </rule>
+
+   <rule>
+      <title>Underhanded Assault</title>
+      <action>2</action>
+      <type>Feat</type> <level>2</level>
+      <trait>Rogue</trait>
+      <prereq>trained in Stealth</prereq>
+
+      <line>You capitalize on the distraction provided by an ally. You Sneak up to a foe adjacent to one of your allies. You can roll against the foe you're Sneaking up on, even if it's currently observing you, as though you were hidden. You take a -2 penalty on your Stealth check.</line>
+      <line>If your Stealth check against the chosen foe succeeds, you can make a melee Strike against that foe at the end of your Sneak.</line>
+   </rule>
+
+   <rule>
+      <title>Sneak</title>
+      <action>1</action>
+      <trait>Move</trait> <trait>Secret</trait>
+
+      <line>You can attempt to move to another place while becoming or staying undetected. Stride up to half your Speed. (You can use Sneak while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type; you must move at half that speed.)</line>
+      <line>If you're undetected by a creature and it's impossible for that creature to observe you (for a typical creature, this includes when you're invisible, the observer is blinded, or you're in darkness and the creature can't see in darkness), for any critical failure you roll on a check to Sneak, you get a failure instead. You also continue to be undetected if you lose cover or greater cover against or are no longer concealed from such a creature.</line>
+      <line>At the end of your movement, the GM rolls your secret Stealth check and compares the result to the Perception DC of each creature you were hidden from or undetected by at the start of your movement. If you have cover from the creature throughout your Stride, you gain the +2 circumstance bonus from cover (or +4 from greater cover) to your Stealth check. Because you're moving, the bonus increase from Taking Cover doesn't apply. You don't get to roll against a creature if, at the end of your movement, you neather are concealed from it nor have cover or greater cover against it. You automatically become observed by such a creature.</line>
+      <line results="">
+         <success>You're undetected by the creature during your movement and remain undetected by the creature at the end of it.<![CDATA[<br/>]]>
+         You become observed as soon as you do anything other than Hide, Sneak, or Step. If you attempt to Strike a creature, the creature remains flat-footed against that attack, and you then become observed. If you do anything else, you become observed just before you actu unless the GM determines otherwise. The GM might allow you to perform a particularly unobtrusive action without being noticed, possibly requiring another Stealth check. If you speak or make a deliberate loud noise, you become hidden instead of undetected.<![CDATA[<br/>]]>
+         If a creature uses Seek and you become hidden to it as a result, you must Sneak if you want to become undetected by that creature again.</success>
+         <fail>A telltale sound or other sign gives your position away, though you still remain unseen. You're hidden from the creature throughout your movement and remain so.</fail>
+         <critfail>You're spotted! You're observed by the creature thoughout your movement and remain so. If you're invisible and were hidden from the creature, instead of being observed you're hidden throughout your movement and remain so.</critfail>
+      </line>
    </rule>
 
    <rule>

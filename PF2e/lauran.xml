@@ -36,10 +36,70 @@
    </rule>
 
    <rule>
+      <title>Intimidating Glare</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Intimidation</prereq>
+
+      <line>You can Demoralize with a mere glare. When you do, Demoralize loses the auditory trait and gains the visual trait, and you don't take a penalty if the creature doesn't understand your language.</line>
+   </rule>
+
+   <rule>
+      <title>Demoralize</title>
+      <action>1</action>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
+
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
+   </rule>
+
+   <rule>
       <title>Singular Expertise</title>
 
       <line>You have particular expertise with guns and crossbows that grants you greater proficiency with them and the ability to deal more damage. You gain a +1 circumstance bonus to damage rolls with firearms and crossbows.</line>
       <line>This intense focus on firearms and crossbows prevents you from reaching the same heights with other weapons. Your proficiency with unarmed attacks and with weapons other than firearms and crossbows can't be higher than trained, even if you gain an ability that would increase your proficiency in one or more other weapons to match your highest weapon proficiency (such as the weapon expertise feats many ancestries have). If you have gunslinger weapon mastery, the limit is expert, and if you have gunslinging legend, the limit is master.</line>
+   </rule>
+
+   <rule>
+      <title>Spring the Trap</title>
+      <action>F</action>
+      <trait>Gunslinger</trait>
+      <trigger>You roll initiative.</trigger>
+
+      <line>You can Interact to draw a combination weapon and set it to melee or ranged mode. On your first turn, your movement and ranged attacks don't trigger reactions that are normally triggered by movement or ranged attacks (such as Attack of Opportunity).</line>
+   </rule>
+
+   <rule>
+      <title>Touch and Go</title>
+      <action>1</action>
+      <trait>Gunslinger</trait>
+      <requirement>You are wielding a combination weapon</requirement>
+
+      <line>Your body's shadows mask your hands' steel. You can Step toward and enemy,  and you can Interact to change your weapon between melee or ranged modes, and you then Interact to reload.</line>
+   </rule>
+
+   <rule>
+      <title>Risky Reload</title>
+      <type>Feat</type> <level>2</level>
+      <action>1</action>
+      <trait>Flourish</trait> <trait>Gunslinger</trait>
+      <requirements>You're wielding a firearm.</requirements>
+
+      <line>You're practiced a technique for rapidly reloading your firearm, but attempting to use this technique is a dangerous gamble with your firearm's functionality. Interact to relead a firearm, them make a Strike with that firearm. If the Strike fails, the firearm misfires.</line>
+   </rule>
+
+   <rule>
+      <title>Misfires</title>
+
+      <line>Firearms that are improperly maintained or subjected to unsual strain can misfire. If you attempt to fire a firearm that was fired the previous day or earlier and hasn't been cleaned since then, roll a DC 5 flat check before making your attack roll. If you fail this misfire check, the weapon misfires and jams, turning the attack into an automatic critical failure.</line>
+      <line>You must use an Interact action to clear the jam before you can reload the weapon and fire again.</line>
+      <line>When you spend an hour cleaning a weapon, you don't need to roll for a misfire until the next day unless an effect says otherwise. You can clear multiple firearms during this hour, up to a reasonable limit as determined by the GM (typically no more than five).</line>
+      <line>Some abilities cause a weapon to misfire as part of their effects. If such a misfire happens as a result of an attack (due to an action that causes a misfire on a failed attack, for example), it retroactively makes the attack a critical failure.</line>
    </rule>
 
    <rule>
@@ -66,24 +126,6 @@
       <prereq>trained in Crafting</prereq>
 
       <line>You can use the Craft activity to create alchemical items. When you select this feat, you immediately add the formulas for four common 1st-level alchemical items to your formula book.</line>
-   </rule>
-
-   <rule>
-      <title>Touch and Go</title>
-      <action>1</action>
-      <trait>Gunslinger</trait>
-      <requirement>You are wielding a combination weapon</requirement>
-
-      <line>Your body's shadows mask your hands' steel. You can Step toward and enemy, you can Interact to change your weapon between melee or ranged modes, and you then Interact to reload.</line>
-   </rule>
-
-   <rule>
-      <title>Spring the Trap</title>
-      <action>F</action>
-      <trait>Gunslinger</trait>
-      <trigger>You roll initiative.</trigger>
-
-      <line>You can Interact to draw a combination weapon and set it to melee or ranged mode. On your first turn, your movement and ranged attacks don't trigger reactions that are normally triggered by movement or ranged attacks (such as Attack of Opportunity).</line>
    </rule>
 
    <rule>

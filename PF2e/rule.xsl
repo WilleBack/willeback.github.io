@@ -136,7 +136,19 @@
          <body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
             <div class="container">
                <xsl:for-each select="rule">
-                  <xsl:call-template name="rule" />
+                  <xsl:choose>
+                     <xsl:when test="category">
+                        <div class="grouping" style="float:left; width:100%; margin:0.05cm; page-break-inside:avoid;">
+                           <div class="grouptitle" style="float:left;">
+                              <xsl:value-of select="category"/>
+                           </div>
+                           <xsl:call-template name="rule"/>
+                        </div>
+                     </xsl:when>
+                     <xsl:otherwise>
+                        <xsl:call-template name="rule" />
+                     </xsl:otherwise>
+                  </xsl:choose>
                </xsl:for-each>
             </div> <!-- container -->
          </body>
@@ -155,10 +167,19 @@
                      <xsl:value-of select="prereq" disable-output-escaping="yes" />
                   </div>
                </xsl:if>
-               <xsl:if test="price">
+               <xsl:if test="price or damage">
                   <div id="price" class="line" style="float: left;">
-                     <b>Price </b>
-                     <xsl:value-of select="price" />
+                     <xsl:if test="price">
+                        <b>Price </b>
+                        <xsl:value-of select="price" />
+                        <xsl:if test="damage">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
+                     </xsl:if>
+                     <xsl:if test="damage">
+                        <b>Damage </b>
+                        <xsl:value-of select="damage" />
+                     </xsl:if>
                   </div>
                </xsl:if>
                <xsl:if test="usage or bulk">
@@ -185,11 +206,11 @@
                <xsl:if test="trigger or cast">
                   <div id="triggercast" class="line" style="float: left;">
                      <xsl:if test="cast">
-                        <b>Cast <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="cast/@action" /> </span></b><xsl:text> </xsl:text>
-                        <xsl:value-of select="cast" disable-output-escaping="yes" />
+                        <b>Cast </b><span style="font-family: 'pfactions'; font-size: 1.35em; text-align: center;"><xsl:value-of select="cast/@action" /> </span><xsl:text> </xsl:text>
                         <xsl:if test="cast/@to">
-                           <xsl:text>to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="cast/@ato" /> </span><xsl:text> </xsl:text>
+                           <xsl:text>to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.4em; text-align: center;"><xsl:value-of select="cast/@to" /> </span><xsl:text> </xsl:text>
                         </xsl:if>
+                        <xsl:value-of select="cast" disable-output-escaping="yes" />
                         <xsl:if test="trigger">
                            <xsl:text>; </xsl:text>
                         </xsl:if>
@@ -238,6 +259,28 @@
                      <xsl:if test="reload">
                         <b>Reload </b>
                         <xsl:value-of select="reload" disable-output-escaping="yes" />
+                     </xsl:if>
+                  </div>
+               </xsl:if>
+               <xsl:if test="weaptype or weapcat or weapgroup">
+                  <div id="weapon" class="line" style="float: left;">
+                     <xsl:if test="weaptype">
+                        <b>Type </b>
+                        <xsl:value-of select="weaptype" />
+                        <xsl:if test="weapcat or weapgroup">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
+                     </xsl:if>
+                     <xsl:if test="weapcat">
+                        <b>Category </b>
+                        <xsl:value-of select="weapcat" />
+                        <xsl:if test="weapgroup">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
+                     </xsl:if>
+                     <xsl:if test="weapgroup">
+                        <b>Group </b>
+                        <xsl:value-of select="weapgroup" />
                      </xsl:if>
                   </div>
                </xsl:if>
@@ -316,7 +359,11 @@
                   <div id="list" class="line" style="float: left; padding-left: 2.2em;">
                      <xsl:for-each select="entry">
                         <div id="listentry" clas="line" style="float: left; width:100%;">
-                           &#9658;<xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes" />
+                           &#9658;<xsl:text> </xsl:text>
+                           <xsl:if test="@name">
+                              <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
+                           </xsl:if>
+                           <xsl:value-of select="." disable-output-escaping="yes" />
                         </div>
                      </xsl:for-each>
                   </div>
