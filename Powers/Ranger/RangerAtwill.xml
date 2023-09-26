@@ -7,17 +7,13 @@
 		<title>Beast Strike</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You guide your companion to attack, taking full advantage of its abilities</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Beast, Martial</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>beast 1</range>
-			<section>
-				<name style="bold">Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Attack:</name>
+				<type>Melee</type> <range>beast 1</range>
+				<target>one creature</target>
 				<text>Beast vs. AC</text>
 			</section>
 			<section indent="1">
@@ -30,11 +26,11 @@
 			</section>
 			<section shade="true">
 				<name style="bold">Hit:</name>
-				<text>1[B] + beast's Strength modifier or Dexterity modifier damage.</text>
+				<text>1[B] + beast's [Strength or Dexterity] modifier damage.</text>
 			</section>
 			<section shade="true" indent="1">
 				<name style="italic">Level 21:</name>
-				<text>2[B] + beast's Strength modifier or Dexterity modifier damage.</text>
+				<text>2[B] + beast's [Strength or Dexterity] modifier damage.</text>
 			</section>
 			<section shade="true" indent="1">
 				<name style="bold">Spider:</name>
@@ -42,11 +38,11 @@
 			</section>
 			<section shade="true" indent="2">
 				<name style="italic">Level 11:</name>
-				<text>The damage equals 2 + your Wisdom modifier, or half that.</text>
+				<text>The damage equals 2 + your Wisdom modifier, or half the total.</text>
 			</section>
 			<section shade="true" indent="2">
 				<name style="italic">Level 21:</name>
-				<text>The damage equals 4 + your Wisdom modifier, or half that.</text>
+				<text>The damage equals 4 + your Wisdom modifier, or half the total.</text>
 			</section>
 			<section shade="true" indent="1">
 				<name style="bold">Wolf:</name>
@@ -58,35 +54,30 @@
 			</section>
 			<section indent="1">
 				<name style="italic">Level 11:</name>
-				<text>The damage equals 2 + your Wisdom modifier.</text>
+				<text>The bonus to damage equals 2 + your Wisdom modifier.</text>
 			</section>
 			<section indent="1">
 				<name style="italic">Level 21:</name>
-				<text>The damage equals 4 + your Wisdom modifier.</text>
+				<text>The bonus to damage equals 4 + your Wisdom modifier.</text>
 			</section>
 			<section>
-				<name style="bold">Special (Boar):</name>
+				<name shade="true" style="bold">Special (Boar):</name>
 				<text>The beast can make this attack in place of a <![CDATA[<i>melee basic attack</i>]]> when charging, and gains a +2 bonus to all defenses against attacks triggered as part of the charge.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Careful Attack</title>
       <class>Ranger</class> <category>Attack</category> <level>1</level>
       <fluff>You study the enemy, looking for a gap in its defenses for you to strike</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
-         <type2>Ranged</type2> <range2>weapon</range2>
-         <section>
-            <name style="bold">Target:</name>
-            <text>One creature</text>
-         </section>
          <section>
             <name style="bold">Attack:</name>
+	         <type>Melee</type> <range>weapon</range>
+				<type2>Ranged</type2> <range2>weapon</range2>
+				<target>one creature</target>
             <text>Dexterity +2 s AC</text>
          </section>
          <section shade="true">
@@ -101,32 +92,27 @@
 				<name style="bold">Miss:</name>
 				<text>If you have combat advantage, you deal half of the minimum damage.</text>
 			</section>
-      </part>
    </power>
 
    <power>
       <title>Circling Strike</title>
       <class>Ranger</class> <category>Atk</category> <level>1</level>
       <fluff>Using the distraction your attack provides, your beat companion finds a better positin</fluff>
-      <part>
          <frequency>At-Will</frequency>
          <keyword>Beast, Martial, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
-         <type>Melee</type> <range>weapon</range>
          <section shade="true">
             <name style="bold">Effect:</name>
-            <text>Your beast companion can shift up to 1 square, or up to 2 squares if it ends the shift adjacent to the target.</text>
+            <text>Before the attack, your beast companion can shift up to 1 square, or up to 2 squares if it ends the shift adjacent to the target.</text>
          </section>
          <section shade="true" indent="1">
             <name style="italic">Level 21:</name>
             <text>Shift up to 2 squares, or up to 3 squares if it ends the shift adjacent to the target.</text>
          </section>
-         <section>
-            <name style="bold">Target:</name>
-            <text>One creature</text>
-         </section>
 			<section>
 				<name style="bold">Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -145,35 +131,29 @@
 				<name style="italic">Level 21:</name>
 				<text>Up to 2 squares, or up to 3 squares if it does not end the shift adjacent to the target.</text>
 			</section>
-      </part>
    </power>
 
 	<power>
 		<title>Combined Assault</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You and your beast companion attack at the same time</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Beast, Martial</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Special</type>
+			<section special=""/>
 			<section shade="true">
 				<name style="bold">Effect:</name>
 				<text>You make the Primary Attack and the Beast Attack in either order.</text>
 			</section>
-		</part>
 		<part>
 			<part-name>Primary Attack</part-name>
 			<frequency>Automatic</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Nonaction</action>
-			<type>Melee</type> <range>weapon</range>
-			<section>
-				<name style="bold">Primary Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Primary Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -190,13 +170,10 @@
 			<frequency>Automatic</frequency>
 			<keyword>Beast, Martial</keyword>
 			<action>Nonaction</action>
-			<type>Melee</type> <range>beast 1</range>
-			<section>
-				<name style="bold">Beast Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Beast Attack:</name>
+				<type>Melee</type> <range>beast 1</range>
+				<target>one creature</target>
 				<text>Beast vs. AC</text>
 			</section>
 			<section shade="true">
@@ -214,18 +191,14 @@
 		<title>Fading Strike</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You launch an attack against your foe and then back away for safety</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
-			<type2>Ranged</type2> <range2>weapon</range2>
-			<section>
-				<name style="bold">Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<type2>Ranged</type2> <range2>weapon</range2>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -248,24 +221,19 @@
 				<name style="bold">Special:</name>
 				<text>You can use this power in place of a <![CDATA[<i>melee basic attack</i> when you make an <i>opportunity attack</i>]]>.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Hit and Run</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You make your attack, then run past your foe to a better position</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
-			<section>
-				<name style="bold">Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -290,25 +258,20 @@
 			<section shade="true">
 				<text>If you add the Beast keyword, the power's effect affects your beast companion instead of you.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Hunter's Teamwork</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You use a nearby ally to gain advantage with your attack</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>weapon</range>
-			<section>
-				<name style="bold">Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Attack:</name>
-				<text>Dexterity</text>
+				<type>Ranged</type> <range>weapon</range>
+				<target>one creature</target>
+				<text>Dexterity vs. AC</text>
 			</section>
 			<section indent="1">
 				<text>If two or more allies are adjacent to the target, you gain combat advantage for this attack</text>
@@ -325,24 +288,19 @@
 				<name style="bold">Miss:</name>
 				<text>If at least two allies are flanking the target, you deal damage equal to your Dexterity modifier + your weapon's enhancement bonus.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Marauder's Rush</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You rush forward, trusting instinct to guide your attack</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
-			<section>
-				<name style="bold">Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -356,22 +314,27 @@
 			<section shade="true">
 				<text>If you were not adjacent to the target at the start of your turn, you deal additional damage equal to 1 + one-half your Strength modifier (minimum +2).</text>
 			</section>
+			<section shade="true" indent="1">
+				<name style="italic">Level 11:</name>
+				<text>Equal to 2 + your Strength modifier.</text>
+			</section>
+			<section shade="true" indent="1">
+				<name style="italic">Level 21:</name>
+				<text>Equal to 4 + your Strength modifier.</text>
+			</section>
 			<section>
 				<name style="bold">Special:</name>
 				<text>You can use this power in place of a <![CDATA[<i>melee basic attack</i>]]> when you charge.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Nimble Strike</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You slink past an enemy's guard to take your shot, or withdraw after one</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>weapon</range>
 			<section shade="true">
 				<name style="bold">Effect:</name>
 				<text>You can shift up to 2 squares.</text>
@@ -381,11 +344,9 @@
 				<text>Shift up to 3 squares.</text>
 			</section>
 			<section>
-				<name style="bold">Target:</name>
-				<text>One creature</text>
-			</section>
-			<section>
 				<name style="bold">Attack:</name>
+				<type>Ranged</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -400,59 +361,57 @@
 				<name style="bold">Effect:</name>
 				<text>If you did not shift the full distance before the attack, you can shift the remaining distance.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Predator Strike</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>Your enemy focuses its attention on you, allowing your beast to attack</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Beast, Martial</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>beast 1</range>
-			<section>
-				<name style="bold">Target:</name>
-				<text>One creature adjacent to you</text>
-			</section>
 			<section>
 				<name style="bold">Attack</name>
+				<type>Melee</type> <range>beast 1</range>
+				<target>one creature adjacent to you</target>
 				<text>Beast vs. AC</text>
 			</section>
 			<section shade="true">
 				<name style="bold">Hit:</name>
-				<text>1[B] + beast's Strength modifier or Dexterity modifier damage.</text>
+				<text>1[B] + beast's [Strength or Dexterity] modifier damage.</text>
 			</section>
 			<section shade="true" indent="1">
 				<name style="italic">Level 21:</name>
-				<text>2[B] + beast's strength modifier or Dexterity modifier damage.</text>
+				<text>2[B] + beast's [Strength or Dexterity] modifier damage.</text>
 			</section>
 			<section shade="true">
 				<text>If you flank the target with your beast, it deals additional damage equal to your Wisdom modifier.</text>
 			</section>
-		</part>
+			<section shade="true" indent="1">
+				<name style="italic">Level 11:</name>
+				<text>Equal to 2 + your Wisdom modifier.</text>
+			</section>
+			<section shade="true" indent="1">
+				<name style="italic">Level 21:</name>
+				<text>Equal to 4 + your Wisdom modifier.</text>
+			</section>
 	</power>
 
 	<power>
 		<title>Shield of Blades</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You defend with one weapon while striking with the other</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
 			<section>
 				<name style="bold">Requirement:</name>
 				<text>You must be wielding two melee weapons</text>
 			</section>
 			<section>
-				<name style="bold">Target:</name>
-				<text>One creature</text>
-			</section>
-			<section>
 				<name style="bold">Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -469,33 +428,28 @@
 			</section>
 			<section indent="1">
 				<name style="bold">Defensive weapon:</name>
-				<text>If at least one weapon has the Defensive trait, you also gain a +2 power bonus to Reflex.</text>
+				<text>If at least one weapon you wield has the Defensive trait, you also gain a +2 power bonus to Reflex.</text>
 			</section>
 			<section>
 				<text>You lose this bonus if you stop wielding two melee weapons.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Throw and Stab</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>You fling your weapon at one foe, and then rush another enemy</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>weapon</range>
 			<section>
 				<name style="bold">Requirement:</name>
 				<text>You must be wielding a thrown weapon and another melee weapon</text>
 			</section>
 			<section>
-				<name style="bold">Primary Target:</name>
-				<text>One creature</text>
-			</section>
-			<section>
 				<name style="bold">Primary Attack:</name>
+				<type>Ranged</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC (thrown weapon)</text>
 			</section>
 			<section shade="true">
@@ -510,29 +464,24 @@
 				<name style="bold">Effect:</name>
 				<text>You move up to your speed and make a <![CDATA[<i>melee basic attack</i>]]> with the melee weapon against a creature other than the primary target.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Twin Strike</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
-		<fluff>IF the first attack doesn't kill it, the second one might</fluff>
-		<part>
+		<fluff>If the first attack doesn't kill it, the second one might</fluff>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Melee</type> <range>weapon</range>
-			<type2>Ranged</type2> <range2>weapon</range2>
 			<section>
 				<name style="bold">Requirement:</name>
 				<text>You must be wielding two melee weapons or a ranged weapon</text>
 			</section>
 			<section>
-				<name style="bold">Primary Target:</name>
-				<text>One creature</text>
-			</section>
-			<section>
 				<name style="bold">Primary Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<type2>Ranged</type2> <range2>weapon</range2>
+				<target>one creature</target>
 				<text>Dexterity vs. AC (main weapon or ranged weapon)</text>
 			</section>
 			<section shade="true">
@@ -544,11 +493,10 @@
 				<text>2[W] damage.</text>
 			</section>
 			<section>
-				<name style="bold">Secondary Target:</name>
-				<text>One creature</text>
-			</section>
-			<section>
 				<name style="bold">Secondary Attack:</name>
+				<type>Melee</type> <range>weapon</range>
+				<type2>Ranged</type2> <range2>weapon</range2>
+				<target>one creature</target>
 				<text>Dexterity vs. AC (off-hand weapon or ranged weapon)</text>
 			</section>
 			<section shade="true">
@@ -559,24 +507,19 @@
 				<name style="italic">Level 21:</name>
 				<text>2[W] damage.</text>
 			</section>
-		</part>
 	</power>
 
 	<power>
 		<title>Warning Shot</title>
 		<class>Ranger</class> <category>Attack</category> <level>1</level>
 		<fluff>One arrow presages another</fluff>
-		<part>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
-			<type>Ranged</type> <range>weapon</range>
-			<section>
-				<name style="bold">Primary Target:</name>
-				<text>One creature</text>
-			</section>
 			<section>
 				<name style="bold">Primary Attack:</name>
+				<type>Ranged</type> <range>weapon</range>
+				<target>one creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">
@@ -591,23 +534,19 @@
 				<name style="bold">Effect:</name>
 				<text>Choose 1 square either in or adjacent to the primary target's space. You can use the Reaction Shot attack until the start of your next turn.</text>
 			</section>
-		</part>
 		<part>
 			<part-name>Reaction Shot</part-name>
 			<frequency>At-Will</frequency>
 			<keyword>Martial, Weapon</keyword>
 			<action>Immediate</action> <subaction>Reaction</subaction>
-			<type>Ranged</type> <range>weapon</range>
 			<section>
 				<name style="bold">Trigger:</name>
 				<text>A creature enters the chosen square</text>
 			</section>
 			<section>
-				<name style="bold">Reaction Target:</name>
-				<text>The triggering creature</text>
-			</section>
-			<section>
 				<name style="bold">Reaction Attack:</name>
+				<type>Ranged</type> <range>weapon</range>
+				<target>the triggering creature</target>
 				<text>Dexterity vs. AC</text>
 			</section>
 			<section shade="true">

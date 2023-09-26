@@ -646,7 +646,9 @@
       <group>Racial</group>
       <group>Size-based</group>
       <benefit>When you make a melee attack, you score a critical hit on a natural roll of 19 or 20 against targets that grant you combat advantage and are at least two sizes larger than you (Large, if you are Small).</benefit>
+      <benefit>If you have an epic feat that allows your attack to always score scritical hits on a natural roll of 19, you instead gain this feat's benefits on a natural roll of 18 to 20.</benefit>
    </feat>
+
    <feat>
       <title>Advantageous Rebuke</title>
       <tier>Heroic</tier>
@@ -2435,12 +2437,12 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <group>Power Recovery</group>
       <group>Racial</group>
-      <benefit>When you use your <![CDATA[<i>memories of a thousand lifetime</i>]]> and the triggering roll still fails, you regain the use of <![CDATA[<i>memories of a thousand lifetimes</i>]]> at the start of your next turn.</benefit>
+      <benefit>When you use your <![CDATA[<i>memory of a thousand lifetime</i>]]> and the triggering roll still fails, you regain the use of <![CDATA[<i>memory of a thousand lifetimes</i>]]> at the start of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -2774,12 +2776,12 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <group>Power Enhancement</group>
       <group>Racial</group>
-      <benefit>When you use your <![CDATA[<i>memories of a thousand lifetimes</i>]]> racial power, you add 1d8 to the triggering roll instead of 1d6.</benefit>
+      <benefit>When you use your <![CDATA[<i>memory of a thousand lifetimes</i>]]> racial power, you add 1d8 to the triggering roll instead of 1d6.</benefit>
    </feat>
    <feat>
       <title>Autohypnosis</title>
@@ -20281,8 +20283,23 @@
          <name>Fey Bond</name>
       </prereq>
       <group>Fey Nature</group>
+      <group>Power Repertoire</group>
       <group>Teleportation</group>
-      <benefit>You can use an at-will move action to teleport 2 squares.</benefit>
+      <benefit>You gain the <![CDATA[<i>fey shift</i>]]> feat power.</benefit>
+
+      <power>
+         <title>Fey Shift</title>
+         <class>Feat</class> <category>Utility</category>
+         <frequency>At-Will</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <fluff>Your fey nature allows you to briefly flicker through the Feywild</fluff>
+         <keyword>Arcane</keyword> <keyword>Teleportation</keyword>
+         <section personal=""/>
+         <section shade="">
+            <name>Effect:</name>
+            <text>You teleport up to 2 squares.</text>
+         </section>
+      </power>
    </feat>
 
    <feat>
@@ -27387,7 +27404,7 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <prereq>
@@ -27401,7 +27418,7 @@
       <group>Attack Bonus</group>
       <group>Power Enhancement</group>
       <group>Racial</group>
-      <benefit>When using your <![CDATA[<i>memories of a thousand lifetimes</i>]]> racial power to modify an attack roll, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
+      <benefit>When using your <![CDATA[<i>memory of a thousand lifetimes</i>]]> racial power to modify an attack roll, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
    </feat>
 
    <feat>
@@ -27413,7 +27430,7 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <prereq>
@@ -27423,7 +27440,7 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <group>Saving Throws</group>
-      <benefit>When using your <![CDATA[<i>memories of a thousand lifetimes</i>]]> racial power to modify a saving throw, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
+      <benefit>When using your <![CDATA[<i>memory of a thousand lifetimes</i>]]> racial power to modify a saving throw, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
    </feat>
 
    <feat>
@@ -27435,13 +27452,13 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <group>Power Enhancement</group>
       <group>Racial</group>
       <group>Skill Enhancement</group>
-      <benefit>When using your <![CDATA[<i>memories of a thousand lifetimes</i>]]> racial power to modify a skill check or ability check, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
+      <benefit>When using your <![CDATA[<i>memory of a thousand lifetimes</i>]]> racial power to modify a skill check or ability check, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
    </feat>
 
    <feat>
@@ -33657,7 +33674,7 @@
       <prereq>
          <type>class</type>
          <name>Fighter</name>
-         <qualifier>or</qualifier>
+         <combine>or</combine>
       </prereq>
       <prereq>
          <type>class</type>
@@ -33916,7 +33933,7 @@
       <group>Power Enhancement</group>
       <group>Triggered</group>
       <benefit>You gain the following benefit with martial at-will attacks while you are bloodied:</benefit>
-      <benefit>&#9658; When you hit an enemy that has attacked you since the end of your next turn, that enemy takes a -2 penalty to Will until the start of your next turn.</benefit>
+      <benefit>&#9658; On your turn, when you hit an enemy that has attacked you since the end of your previous turn, that enemy takes a -2 penalty to Will until the start of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -36130,7 +36147,7 @@
             <section>
                <shade>true</shade> <indent>1</indent>
                <name>Level 25:</name> <name-style>italic</name-style>
-               <text>If you know this power as a daily attack power of 25th level or higher, the ally's attack dealsan extra +4d10 radiant damage.</text>
+               <text>If you know this power as a daily attack power of 25th level or higher, the ally's attack deals an extra +4d10 radiant damage.</text>
             </section>
 
       </power>
@@ -36468,6 +36485,7 @@
       </prereq>
       <group>Class</group>
       <group>Miss Mitigation</group>
+      <group>Opportunity Attacks</group>
       <group>Power Recovery</group>
       <group>Racial</group>
       <benefit>If you use your <![CDATA[<i>elven accuracy</i> racial power to reroll the attack roll for an <i>opportunity attack</i>]]> and still miss, you do not expend the power.</benefit>
@@ -37624,7 +37642,7 @@
    </feat>
 
    <feat>
-      <title>Plaguescrorch Accuracy</title>
+      <title>Plaguescorch Accuracy</title>
       <category>Spellscar</category>
       <tier>Heroic</tier>
       <prereq>
@@ -38310,7 +38328,7 @@
       <benefit><![CDATA[<b>Brutal Axe:</b> When you use your <i>power strike</i>]]> class power with an Axe, you can knock the target of the triggering attack prone.</benefit>
       <benefit><![CDATA[<b>Driving Blade:</b> When you use your <i>power strike</i>]]> class power with a Heavy Blade, you can slide each enemy adjacent to you 1 square after the triggering attack has been resolved. If abilities such as feats or items allow you to increase the distance of forced movement, calculate the increase and halve it for this effect.</benefit>
       <benefit><![CDATA[<b>Hooking Bludgeon:</b> When you use your <i>power strike</i>]]> class power with a Hammer or Mace and the target of the triggering attack is adjacent to you, the target is also immobilized until the end of your next turn or until you are no longer adjacent to it. You also gain combat advantage against the target of the triggering attack until the end of your next turn.</benefit>
-      <benefit><![CDATA[<b>Sweeping Polearm:</b> When you use your <i>power strike</i>]]> class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to 2 + your Wisdom modifier + your Polearm's enhancement bonus.</benefit>
+      <benefit><![CDATA[<b>Sweeping Polearm:</b> When you use your <i>power strike</i>]]> class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to your Wisdom modifier + your Polearm's enhancement bonus + the number of additional [W] of damage your <![CDATA[<i>power strike</i>]]> deals.</benefit>
       <special>You can choose this feat multiple times, and must choose a different specialization benefit each time. If your weapon qualifier for more than one specialization, you only gain the effect of one of your choice.</special>
    </feat>
 
@@ -45010,6 +45028,53 @@
    </feat>
 
    <feat>
+      <title>Shared Channeling</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Deva</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Channel Divinity</name>
+      </prereq>
+      <group>Channel Divinity</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>You can choose to use your personal Channel Divinity powers as <![CDATA[<i>Close</i>]]> burst 5 powers instead, targeting you or an ally in the burst. If such a power has a trigger dependent on your, it can now be triggered by an ally within 5 squares of you, but the triggering ally must also be the target.</benefit>
+      <benefit>Your DM might allow this feat to extend some effects from a non-personal power to al ally in a <![CDATA[<i>Close</i>]]> burst 5.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Danger Sense</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Githyanki</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Githzerai</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Danger Sense</name>
+      </prereq>
+      <group>Initiative</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>Allies within 5 squares of you gain a +2 racial bonus to initiative checks.</benefit>
+   </feat>
+
+   <feat>
       <title>Shared Fortune</title>
       <tier>Paragon</tier>
       <prereq>
@@ -45026,6 +45091,176 @@
       <group>Power Enhancement</group>
       <group>Support</group>
       <benefit>You can use your <![CDATA[<i>divine fortune</i>]]> Channel Divinity power as a close burst 1 instead of personal power. If you do, the power targets you and each ally in the burst.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Healing</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Healing Surge</group>
+      <group>Teamwork</group>
+      <benefit>When you use a divine power that allows an ally to spend a healing surge, you can instead choose yourself or an ally within 5 squares of you to spend the healing surge in the original ally's stead.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Healing Spirit</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>healing spirit</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Power Enhancement</group>
+      <benefit>When you use your <![CDATA[<i>healing spirit</i>]]> class power, you can choose one ally within 2 squares of the target to regain the additional hit points instead of choosing an ally adjacent to your spirit companion.</benefit>
+   </feat>
+
+   <feat>
+      <type>Shared Inspiration</type>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When you or an ally uses the Draw Inspiration action of your <![CDATA[<i>warlord's aura</i>]]>, each ally in the aura gains temporary hit points equal to 10 + your [Wisdom or Charisma] modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Memories</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Deva</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>memory of a thousand lifetimes</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Saving Throw</group>
+      <group>Skill Enhancement</group>
+      <group>Support</group>
+      <benefit>When an ally adjacent to you makes an attack roll, a saving throw, or a skill check, you can expend your <![CDATA[<i>memory of a thousand lifetimes</i>]]> racial power as a free interrupt to add a +1d6 bonus to the triggering roll.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Pact</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Warlock's Curse</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Pact Boon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Kill Effect</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <benefit>You can choose to use your Pact Boon power as a <![CDATA[<i>Close</i>]]> burst 3 power targeting one ally in the burst instead of using it as a personal power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Perseverance</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Human</name>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Leader</name>
+      </prereq>
+      <group>Class</group>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <benefit>When you use a power that allows an ally to make a saving throw, that ally gains a +1 bonus to the saving throw.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Speed</title>
+      <category>Familiar</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <group>Familiar</group>
+      <group>Mobility</group>
+      <benefit>You and your familiar each receive a +1 feat bonus to speed. If your familiar has additional movement modes, it gains this speed to all of them.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Vitality</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>Moradin</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Second Wind</group>
+      <group>Support</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you can choose an ally within 5 squares of you. The chosen ally regains the hit points instead of you.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Warding</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Swordmage Warding</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Support</group>
+      <benefit>While your Swordmage Warding class feature is active, allies adjacent to you have a +1 bonus to AC.</benefit>
    </feat>
 
    <feat>
