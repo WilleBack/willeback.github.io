@@ -12,7 +12,7 @@
                }
 
                .creature {
-               background-image: url("bg.png");
+               background-image= url("bg.png");
                background-repeat: no-repeat;
                margin:0.2cm;
                width:98%;
@@ -169,6 +169,15 @@
                         <xsl:text>, </xsl:text>
                      </xsl:if>
                   </xsl:for-each>
+                  <xsl:if test="langnote">
+                     <xsl:text>; </xsl:text>
+                     <xsl:for-each select="language">
+                        <xsl:value-of select="."/>
+                        <xsl:if test="position()!=last()">
+                           <xsl:text>, </xsl:text>
+                        </xsl:if>
+                     </xsl:for-each>
+                  </xsl:if>
                </div>
             </xsl:if>
             <xsl:if test="skill">
@@ -389,18 +398,21 @@
          </div>
          <div id="active" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; ">
             <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
-               <b>Speed </b> <xsl:value-of select="speed" />
+               <b>Speed </b> <xsl:value-of select="speed" /> <xsl:text> feet</xsl:text>
                <xsl:if test="fly">
-                  <xsl:text>, </xsl:text> <i>fly&#160;</i> <xsl:value-of select="fly" />
+                  <xsl:text>, </xsl:text> <i>fly&#160;</i> <xsl:value-of select="fly" /> <xsl:text> feet</xsl:text>
+                  <xsl:if test="fly/@note">
+                     <xsl:text> </xsl:text><xsl:value-of select="fly/@note"/>
+                  </xsl:if>
                </xsl:if>
                <xsl:if test="climb">
-                  <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" />
+                  <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" /> <xsl:text> feet</xsl:text>
                </xsl:if>
                <xsl:if test="burrow">
-                  <xsl:text>, </xsl:text> <i>burrow&#160;</i> <xsl:value-of select="burrow" />
+                  <xsl:text>, </xsl:text> <i>burrow&#160;</i> <xsl:value-of select="burrow" /> <xsl:text> feet</xsl:text>
                </xsl:if>
                <xsl:if test="swim">
-                  <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
+                  <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" /> <xsl:text> feet</xsl:text>
                </xsl:if>
                <xsl:if test="speedmod">
                   <br />
@@ -490,15 +502,25 @@
                               </xsl:if>
                            </xsl:for-each>
                            <xsl:text>)</xsl:text>
-                           <xsl:if test="line">
+                           <xsl:if test="req or line">
                               <xsl:text> </xsl:text>
                            </xsl:if>
                         </xsl:if>
+                        <xsl:if test="req">
+                           <b>Requirements&#160;</b><xsl:value-of select="req" disable-output-escaping="yes"/>
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
                         <xsl:if test="damage">
-                           <xsl:text>, </xsl:text><b>Damage&#160;</b><xsl:value-of select="damage" disable-output-escaping="yes" />
+                           <xsl:if test="not(req)">
+                              <xsl:text>, </xsl:text>
+                           </xsl:if>
+                           <b>Damage&#160;</b><xsl:value-of select="damage" disable-output-escaping="yes" />
                         </xsl:if>
                         <xsl:if test="effect">
-                           <xsl:text>, </xsl:text><b>Effect&#160;</b><xsl:value-of select="effect" disable-output-escaping="yes" />
+                           <xsl:if test="not(req)">
+                              <xsl:text>, </xsl:text>
+                           </xsl:if>
+                           <b>Effect&#160;</b><xsl:value-of select="effect" disable-output-escaping="yes" />
                         </xsl:if>
                         <xsl:value-of select="line[1]" disable-output-escaping="yes"/>
                         <xsl:for-each select="line[position()>1]">
@@ -519,6 +541,7 @@
             <xsl:value-of select="title"/>
          </div>
          <div id="rolelevel" style="width: 10.5em; float:right; text-align:right; font-size: 1.2em; margin:0.3em; font-weight: bold;">
+            <xsl:value-of select="type"/>
             <xsl:if test="rolestrength">
                <xsl:text> </xsl:text><xsl:value-of select="rolestrength" />
             </xsl:if>

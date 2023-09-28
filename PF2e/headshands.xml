@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+
+   <creature>
+      <title>Crawling Hand</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>NE</alignment> <size>Tiny</size> <trait>Undead</trait>
+
+      <perception>+5</perception>
+      <sense>lifesense 30 feet</sense> <sense>tremorsense (imprecise) 30 feet</sense> <sense>no visual</sense>
+
+      <language>Common</language>
+      <langnote>can't speak any language</langnote>
+
+      <skill><name>Athletics</name><value>+5</value></skill>
+      <skill><name>Stealth</name><value>+6</value></skill>
+      <skill><name>Survival</name><value>+2</value></skill>
+
+      <str>+1</str> <dex>+3</dex> <con>+0</con> <int>-4</int> <wis>+0</wis> <cha>+0</cha>
+
+      <ac>12</ac> <fort>+2</fort> <ref>+5</ref> <will>+2</will>
+      <hp>8</hp>
+      <hpnote>negative healing</hpnote>
+
+      <immune>death effects</immune>
+      <immune>disease</immune>
+      <immune>paralyzed</immune>
+      <immune>poison</immune>
+      <immune>unconscious</immune>
+      <immune>visual</immune>
+
+      <speed>30</speed> <climb>30</climb>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>claw</weapon>
+         <atk>+7</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d4+1 slashing plus Grab</damage>
+      </action>
+      <action auto="grab"/>
+      <action>
+         <name>Grip Throat</name>
+         <line>A creature grabbed by a crawling hand is not immobilized. The hand moves with that creature rather than holding it in place.</line>
+         <line>A Medium or smaller creature that is grabbed by the crawling hand has difficulty speaking and must spend an extra action to perform any action that requires speaking.</line>
+      </action>
+      <action>
+         <name>Mark Quarry</name>
+         <line>A crawling hand can be assigned a quarry by anointing the hand with a drop of the intended quarry's blood. If the hand ever has no quarry, it automatically gains the next creature it damages as its quarry.</line>
+         <line>The hand gains a +1 circumstance bonus to Perception checks when it Seeks its quarry, to Survival checks when it tracks its quarry, and damage rolls when it Strikes its quarry.</line>
+      </action>
+   </creature>
+
+   <creature>
+      <title>Bleeding Severed Head</title>
+      <type>Creature</type> <level>-1</level>
+      <alignment>NE</alignment> <size>Tiny</size> <trait>Mindless</trait> <trait>Undead</trait>
+
+      <perception>+6</perception>
+      <sense>darkvision</sense>
+      <skill><name>Acrobatics</name><value>+6 (+8 to Meneuver in Flight)</value></skill>
+
+      <str>+1</str> <dex>+2</dex> <con>+0</con> <int>-5</int> <wis>+2</wis> <cha>+0</cha>
+
+      <ac>15</ac> <fort>+4</fort> <ref>+6</ref> <will>+4</will>
+      <hp>7</hp>
+      <hpnote>negative healing</hpnote>
+
+      <immune>death effects</immune>
+      <immune>disease</immune>
+      <immune>mental</immune>
+      <immune>paralyzed</immune>
+      <immune>poison</immune>
+      <immune>unconscious</immune>
+
+      <weakness><name>positive</name><value>1</value></weakness>
+
+      <speed>15</speed> <fly>25</fly>
+
+      <action>
+         <name>Melee</name> <action>1</action>
+         <weapon>jaws</weapon>
+         <atk>+6</atk>
+         <trait>agile</trait> <trait>finesse</trait>
+         <damage>1d4+1 piercing plus bleeding</damage>
+      </action>
+      <action>
+         <name>Gnash</name> <action>1</action>
+         <req>The beheaded's previous action was a jaws Strike that dealt damage to its target</req>
+         <effect>The severed head makes a second jaws Strike as it violently shakes itself, trying to rip away a mouthful of flesh. On a success, the target takes an additional 1d4 slashing damage and 1 persistent bleed damage.</effect>
+      </action>
+      <action>
+         <name>Bleeding</name>
+         <line>The beheaded is covered in slimy blood. The target of a successful Strike is splattered with gore and must succeed at a DC 14 Fortitude save or become sickened 1.</line>
+      </action>
+   </creature>
+
+      <creature>
+         <title>Whispering Severed Head</title>
+         <type>Creature</type> <level>-1</level>
+         <alignment>NE</alignment> <size>Tiny</size> <trait>Mindless</trait> <trait>Undead</trait>
+
+         <perception>+6</perception>
+         <sense>darkvision</sense>
+         <skill><name>Acrobatics</name><value>+6 (+8 to Meneuver in Flight)</value></skill>
+
+         <str>+1</str> <dex>+2</dex> <con>+0</con> <int>-5</int> <wis>+2</wis> <cha>+0</cha>
+
+         <ac>15</ac> <fort>+4</fort> <ref>+6</ref> <will>+4</will>
+         <hp>7</hp>
+         <hpnote>negative healing</hpnote>
+
+         <immune>death effects</immune>
+         <immune>disease</immune>
+         <immune>mental</immune>
+         <immune>paralyzed</immune>
+         <immune>poison</immune>
+         <immune>unconscious</immune>
+
+         <weakness><name>positive</name><value>1</value></weakness>
+
+         <speed>15</speed> <fly>25</fly>
+
+         <passive>
+            <name>Whispering</name>
+            <trait>aura</trait> <trait>emotion</trait> <trait>fear</trait> <trait>mental</trait> <trait>necromancy</trait>
+            <line>30 feet. The beheaded constantly whispers twisted incantations in unknown languages secret and foul. Foes that enter of begin their turn in the area must succeed at a DC 14 Will save or be stupefied 1 for 1 round.</line>
+         </passive>
+
+         <action>
+            <name>Melee</name> <action>1</action>
+            <weapon>jaws</weapon>
+            <atk>+6</atk>
+            <trait>agile</trait> <trait>finesse</trait>
+            <damage>1d4+1 piercing</damage>
+         </action>
+         <action>
+            <name>Gnash</name> <action>1</action>
+            <req>The beheaded's previous action was a jaws Strike that dealt damage to its target</req>
+            <effect>The severed head makes a second jaws Strike as it violently shakes itself, trying to rip away a mouthful of flesh. On a success, the target takes an additional 1d4 slashing damage and 1 persistent bleed damage.</effect>
+         </action>
+      </creature>
+</catalog>
