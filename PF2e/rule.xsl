@@ -167,18 +167,25 @@
                      <xsl:value-of select="prereq" disable-output-escaping="yes" />
                   </div>
                </xsl:if>
-               <xsl:if test="price or damage">
+               <xsl:if test="price or damage or cost">
                   <div id="price" class="line" style="float: left;">
                      <xsl:if test="price">
                         <b>Price </b>
                         <xsl:value-of select="price" />
-                        <xsl:if test="damage">
+                        <xsl:if test="damage or cost">
                            <xsl:text>; </xsl:text>
                         </xsl:if>
                      </xsl:if>
                      <xsl:if test="damage">
                         <b>Damage </b>
                         <xsl:value-of select="damage" />
+                        <xsl:if test="cost">
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
+                     </xsl:if>
+                     <xsl:if test="cost">
+                        <b>Cost </b>
+                        <xsl:value-of select="cost" disable-output-escaping="yes" />
                      </xsl:if>
                   </div>
                </xsl:if>
@@ -410,7 +417,7 @@
          </xsl:if>
          <xsl:if test="special">
             <div id="special" class="line" style="float: left;">
-               <xsl:value-of select="special[1]" disable-output-escaping="yes"/>
+               <b>Special: </b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
             </div>
             <xsl:for-each select="special[position()>1]">
                <div id="special" class="line" style="float: left;">
