@@ -12,7 +12,7 @@
                }
 
                .rule {
-               background-image: url("/bg.png");
+               <!-- background-image: url("/bg.png"); -->
                background-repeat: no-repeat;
                margin:0.15cm;
                width:98%;
