@@ -23,6 +23,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				width:calc(100% - 1.2em);
 				float:left;
 				break-inside:avoid;
+				border: 0.25em solid #DA9722;
+				border-radius: 0.2em;
 			}
 
 			.pricetable {
@@ -231,7 +233,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</xsl:if>
 					</div>
 				</xsl:if>
-				
 			</xsl:when>
 			<xsl:otherwise>
 				<div class="pricetable">
@@ -288,7 +289,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:for-each select="headline[position()>3]">
 					<xsl:call-template name="headline-content"/>
 				</xsl:for-each>
-				
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:for-each select="headline">
@@ -317,7 +317,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
 					</div>
 					<div style="float:left; max-width:21em; ">
-						<b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;<xsl:value-of select="subaction" /><xsl:text>)</xsl:text>
+						<b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;
+						<xsl:choose>
+							<xsl:when test="subaction=''">
+								<xsl:text>Action</xsl:text>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="subaction" />
+							</xsl:otherwise>
+						</xsl:choose>
+						<xsl:text>)</xsl:text>
 						<xsl:if test="note">
 							<xsl:text> </xsl:text><xsl:value-of select="note" disable-output-escaping="yes"/>
 						</xsl:if>
@@ -348,7 +357,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:when>
 				<xsl:when test="poison-fooddrink">
 					<div class="line"><i>Effect: </i>Melee touch (one item of food or drink); You apply the poison to the target. The poison retains potency until the end of the encounter.</div>
-					<div class="line">When a creature consumes the target food or drink while the poison retains potency, you make the following attack against that creature:</div>
+					<div class="line">
+						<xsl:text>When a creature consumes the target food or drink while the poison retains potency, you make the following attack against that creature</xsl:text>
+						<xsl:if test="poison-fooddrink!=''">
+							<xsl:text> </xsl:text><xsl:value-of select="poison-fooddrink" disable-output-escaping="yes"/>
+							<xsl:text> later</xsl:text>
+						</xsl:if>
+						<xsl:text>:</xsl:text></div>
 				</xsl:when>
 			</xsl:choose>
 			<xsl:for-each select="line">
@@ -422,6 +437,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="@auto='short-surge'">
 			<i>Special: </i>
 			<xsl:text>As part of a short rest, you can expend a healing surge to recharge this power.</xsl:text>
+		</xsl:when>
+		<xsl:when test="@auto='telepathy'">
+			<xsl:text>You gain telepathy </xsl:text>
+			<xsl:value-of select="text()"/>
+			<xsl:text>, allowing you to communicate with any other creature in your telepathy range that has a language and is within line of sight.</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>

@@ -35,6 +35,21 @@
    <list selection="30" />
    
    <item>
+      <title>Alchemy Gloves</title>
+      <category>Common</category>
+      <fluff>When you use an alchemical item, these gloves charge it with magical power</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a +2 item bonus to attack rolls with alchemical items.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Blackleaf Gloves</title>
       <category>Common</category>
       <fluff>Made from the leaves of an ancient Feywild oak, these well-preserved black gloves increase the utility of your pact boon</fluff>
@@ -61,6 +76,31 @@
          <line indent="1"><name>Level 14</name>Teleport 3 squares.</line>
          <line indent="1"><name>Level 24</name>Teleport 4 squares.</line>
          <line>If you have the <![CDATA[<i>misty step</i>]]> Pact Boon power, you instead either increase the maximum distance of that teleportation, or teleport an ally that was adjacent to the creature that triggered your Pact Boon.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Breaching Strikes Gauntlets</title>
+      <category>Common</category>
+      <fluff>These thick leather gauntlets allow your attacks to bypass even the best resistances</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Property</name>
+         <line>Your Weapon attacks ignore 1 point of resistance the target has, if any.</line>
+         <line indent="1"><name>Level 16</name>2 points of resistance.</line>
+         <line indent="1"><name>Level 26</name>5 points of resistance.</line>
       </block>
    </item>
    
@@ -106,6 +146,38 @@
    </item>
    
    <item>
+      <title>Burning Gauntlets</title>
+      <category>Uncommon</category>
+      <fluff>Made of iron and constantly trailing wisps of smoke, these plated gloves incite your inner pyromaniac</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fire</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make an attack with the Fire keyword</line>
+         <line><name>Effect</name>Until the end of the encounter, your Fire attacks deal +2 additional damage. If you have finished at least one encounter without expending your action point, this increases to +3 additional damage.</line>
+         <line indent="1"><name>Level 16</name>+4 additional damage or +6 additional damage, respectively.</line>
+         <line indent="1"><name>Level 26</name>+6 additional damage or +9 additional damage, respecitively.</line>
+         <line>The first target you hit with the triggering attack also takes ongoing 5 fire damage (save ends).</line>
+         <line indent="1"><name>Level 16</name>Ongoing 10 fire damage.</line>
+         <line indent="1"><name>Level 26</name>Ongoing 15 fire damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Cat Paws</title>
       <category>Common</category>
       <fluff>Furry on the outside, silky on the inside, these gloves sprout claws that make climbing easier</fluff>
@@ -135,6 +207,40 @@
          <line><name>Effect</name>Until the end of your next turn, you do not spend an extra square of movement for each square you climb.</line>
          <line indent="1"><name>Level 15</name>You gain a +2 item bonus to any climb speed you gain from powers you use, or to your ground speed if a power specifically tells you to climb as part of movement.</line>
          <line indent="1"><name>Level 25</name>Until the end of the encounter, and you gain +4 item bonus to any climb speed you gain from powers you use, or to your ground speed if a power specifically tells you to climb as part of movement.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Caustic Gauntlets</title>
+      <category>Uncommon</category>
+      <fluff>These rough leather coverings drip with acid as you attack</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Acid</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make a ranged attack</line>
+         <line><name>Effect</name>Until the end of the encounter, your ranged attacks deal +2 additional acid damage. If you have finished at least one encounter without expending your action point, this increases to +3 additional acid damage.</line>
+         <line indent="1"><name>Level 16</name>+4 additional acid damage or +5 additional acid damage, respectively.</line>
+         <line indent="1"><name>Level 26</name>+6 additional acid damage or +7 additional acid damage, respecitively.</line>
+         <line>Any untyped damage dealt by the triggering attack is acid damage instead, and the attack gains the Acid keyword.</line>
+         <line>If the triggering attack already has a damage type, the type is changed to acid and the corresponding keyword is replaced with Acid.</line>
+         <line>After you hit or miss a target of the triggering attack, each creature adjacent to that target takes 1d8 acid damage.</line>
+         <line indent="1"><name>Level 16</name>2d8 acid damage.</line>
+         <line indent="1"><name>Level 26</name>3d8 acid damage.</line>
       </block>
    </item>
    
@@ -243,6 +349,40 @@
          <line><name>Effect</name>The triggering enemy takes ongoing 2 damage (save ends). If the triggering attack already deals ongoing damage, increase that damage by this value instead.</line>
          <line indent="1"><name>Level 14</name>Ongoing 4 damage.</line>
          <line indent="1"><name>Level 24</name>Ongoing 6 damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Forgemaster's Gloves</title>
+      <category>Common</category>
+      <fluff>These blacksmith's gloves are studden with enchanted gems and emblazoned with a hammer and anvil</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Property</name>
+         <line>You gain resist 5 fire.</line>
+         <line indent="1"><name>Level 16</name>Resist 10 fire.</line>
+         <line indent="1"><name>Level 26</name>Resist 15 fire.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Fire</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>The first time you hit with an attack before the end of the encounter, the target takes 1d6 extra fire damage.</line>
+         <line indent="1"><name>Level 16</name>2d6 extra fire damage.</line>
+         <line indent="1"><name>Level 26</name>3d6 extra fire damage.</line>
       </block>
    </item>
    
@@ -432,6 +572,37 @@
    </item>
    
    <item>
+      <title>Gorilla Gloves</title>
+      <category>Common</category>
+      <fluff>You possess the might to hois opponents above your head and hurl them out of your way</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Attack</name>Melee touch (one creature grabbed by you); Strength +3 vs. Fortitude</line>
+         <line indent="1"><name>Level 16</name>Strength +5</line>
+         <line indent="1"><name>Level 26</name>Strength +8</line>
+         <line><name>Hit</name>You throw the target, pushing it up to 3 squares. The target lands prone and takes 2d6 + Strength modifier damage.</line>
+         <line indent="1"><name>Level 16</name>Push up to 5 squares, and 3d6 + Strength modifier damage.</line>
+         <line indent="1"><name>Level 26</name>Push up to 7 squares, and 4d6 + Strength modifier damage.</line>
+         <line>The target takes half damage if it cannot be knocked prone. If the target negates the forced movement, it is not knocked prone and takes no damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Hedge Wizard's Gloves</title>
       <category>Common</category>
       <fluff>With a wave of these patched gloves, you can perform magic tricks</fluff>
@@ -481,6 +652,68 @@
    </item>
    
    <item>
+      <title>Knifethrower's Gloves</title>
+      <category>Common</category>
+      <fluff>Knives become even more deadly when your hands are wrapped in these fingerless, suede sheaths</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Properties</name>
+         <line>These gloves have the following proterties:</line>
+         <line><bullet/>You can draw a dagger as part of the same standard action used to attack with it.</line>
+         <line><bullet/>When you use a dagger as a throw weapon, the dagger counts as a <![CDATA[<i>+1 magic weapon</i>]]> if it is not magical.</line>
+         <line indent="1"><name>Level 11</name>A <![CDATA[<i>+2 magic weapon</i>]]>.</line>
+         <line indent="1"><name>Level 16</name>A <![CDATA[<i>+3 magic weapon</i>]]>.</line>
+         <line indent="1"><name>Level 21</name>A <![CDATA[<i>+4 magic weapon</i>]]>.</line>
+         <line indent="1"><name>Level 26</name>A <![CDATA[<i>+5 magic weapon</i>]]>.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit with a Weapon attack using a dagger as a thrown weapon</line>
+         <line><name>Effect</name>You gain a +2 power bonus to the damage roll of the triggering attack.</line>
+         <line indent="1"><name>Level 11 or 16</name>+3 power bonus.</line>
+         <line indent="1"><name>Level 21 or 26</name>+4 power bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Life-Draining Gauntlets</title>
+      <category>Common</category>
+      <fluff>The dead flesh of these grisly gauntlets draws strength from your enemies</fluff>
+      <level>
+         <value>6</value>
+         <bonus>+2</bonus>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <bonus>+4</bonus>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <bonus>+6</bonus>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <headline itembonus="">Necrotic damage rolls</headline>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit a creature with an attack and deal necrotic damage to it</line>
+         <line><name>Effect</name>You gain 10 temporary hit points.</line>
+         <line indent="1"><name>Level 16</name>15 temporary hit points.</line>
+         <line indent="1"><name>Level 26</name>20 temporary hit points.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Lion's Claw Gauntlets</title>
       <category>Uncommon</category>
       <fluff>These gauntlets, crafted from a lion's paws, help overcome tough foes when your luck takes a downturn</fluff>
@@ -503,6 +736,34 @@
          <line indent="1"><name>Level 15</name>+2 item bonus.</line>
          <line indent="1"><name>Level 25</name>+3 item bonus.</line>
          <line>You DM might allow this to apply to non-Weapon attacks against Fortitude if they are considered physical.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Luckbender's Gloves</title>
+      <category>Common</category>
+      <fluff>Luck favors the wearer of these gloves, each of which has a golden shamrock stitched on the back</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make a damage roll for a melee attack</line>
+         <line><name>Effect</name>Reroll one damage die of your choice, using the second result even if it is lower.</line>
+         <line indent="1"><name>Level 16</name>Up to two damage dice of your choice.</line>
+         <line indent="1"><name>Level 26</name>Up to three damage dice of your choice.</line>
       </block>
    </item>
    
@@ -547,6 +808,23 @@
    </item>
    
    <item>
+      <title>Reparation Apparatus</title>
+      <category>Common</category>
+      <fluff>This gauntlet-like apparatus enhances your ability to repair constructs</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Properties</name>
+         <line>This apparatus has the following properties:</line>
+         <line><bullet/>When you use a power that allows a construct to spend a healing surge to regain hit points, that construct regains 2d6 additional hit points.</line>
+         <line><bullet/>When you use an encounter power or a daily power that to grant a construct temporary hit points, that construct gains an additional 2d6 temporary hit points.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Resplendent Gloves</title>
       <category>Common</category>
       <fluff>These fine calfskin glaves increase the potency of powers that break a foe's will</fluff>
@@ -555,7 +833,7 @@
          <price>1,000</price>
       </level>
       <level>
-         <value>>15</value>
+         <value>15</value>
          <price>25,000</price>
       </level>
       <level>
@@ -569,6 +847,39 @@
          <line indent="1"><name>Level 15</name>+4 item bonus.</line>
          <line indent="1"><name>Level 25</name>+6 item bonus.</line>
          <line>If the attack has the Illusion keyword, you can choose one target that you hit. The chosen creature grants combat advantage to you until the end of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Shadowfell Gloves</title>
+      <category>Uncommon</category>
+      <fluff>These supple black gloves, woven with Shadowfell thread, are highly prized by wizards and warlocks</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Hands Slot</type>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Necrotic</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make an arcane attack</line>
+         <line><name>Effect</name>Until the end of the encounter, your arcane attacks deal +2 additional necrotic damage. If you have finished at least one encounter without expending your action point, this increases to +3 additional necrotic damage.</line>
+         <line indent="1"><name>Level 16</name>+4 additional necrotic damage or +5 additional necrotic damage, respectively.</line>
+         <line indent="1"><name>Level 26</name>+6 additional necrotic damage or +7 additional necrotic damage, respecitively.</line>
+         <line>Any untyped damage dealt by the triggering attack is necrotic damage instead, and the attack gains the Necrotic keyword.</line>
+         <line>If the triggering attack already has a damage type, the type is changed to necrotic and the corresponding keyword is replaced with Necrotic.</line>
+         <line>One target you hit with the triggering attack becomes weakened until the end of the currently acting creature's next turn.</line>
+         <line indent="1"><name>Level 26</name>Is weakened (save ends) or until the end of the currently acting creature's next turn, whichever lasts longer.</line>
       </block>
    </item>
    

@@ -35,6 +35,38 @@
    <list selection="30" />
 
    <item>
+      <title>Arcane Key</title>
+      <category>Uncommon</category>
+      <fluff>Using this silver key enhances certain rituals</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>This item can be used as an optional focus for the <![CDATA[<i>arcane lock</i> or <i>knock</i>]]> rituals. Doing so allows you to use this item's associated at-will power while you hold this item.</line>
+         <line>When used as an optional focus for the <![CDATA[<i>knock</i>]]> ritual that is used to defeat an <![CDATA[<i>arcane lock</i>]]>, the creator of that ward does not know of the ward being defeated until 5 minutes later.</line>
+         <line>This item can only be the optional focus of one ritual casting at a time. Performing another ritual removes any association this has with a previous casting.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>This item is the optional focus for an <![CDATA[<i>arcane lock</i>]]> ritual.</line>
+         <line><name>Effect</name>You deactivate the associated <![CDATA[<i>arcane lock</i>]]>, no matter how far you are from it, even if y ou are on another plane.</line>
+         <line>You can use this power again to reactivate it.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>This item is the optional focus for a <![CDATA[<i>knock</i>]]> ritual that was cast in the past 5 minutes.</line>
+         <line><name>Effect</name>You relock, reseal, or otherwise restore the target of the associated <![CDATA[<i>knock</i>]]> ritual, up to and including restoring any <![CDATA[<i>arcane lock</i>]]> on the target, preventing the creator of that ward from learning it was defeated.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Backpack of Concealment</title>
       <category>Common</category>
       <fluff>This plain leather backpack is covered with pockets big and small</fluff>
@@ -131,7 +163,7 @@
          <value>15</value>
          <price>12,500</price>
       </level>
-      <type>Mount item</type>
+      <type>Wondrous Item</type> <subtype>Mount item</subtype>
       <block>
          <name>Utility Power</name>
          <frequency>Daily</frequency>
@@ -227,6 +259,25 @@
    </item>
    
    <item>
+      <title>Climber's Rope</title>
+      <category>Common</category>
+      <fluff>When a slope of wall cannot be climbed, the projectile creates an easier path</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Requirement</name>You must be wielding a Bow or Crossbow</line>
+         <line><name>Effect</name>Ranged weapon (one wall, ceiling, or similar surface or a sufficiently have unattended object such as a large statue; the target cannot be at long range); A magic trope trails behind the projectile as you fire it, connecting the target to your position. The rope can support up to 500 pounds at a time.</line>
+         <line>The rope remains in place until the end of the encounter or until you dismiss it as a minor action. The projectile does not automatically return to you, and if fired at a creature, it deals no damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Coin of Good Luck</title>
       <category>Common</category>
       <fluff>This shiny gold coin can mean the difference between life and death, brilliant success and utter failure</fluff>
@@ -287,6 +338,22 @@
          <line>While adjacent to you, your companion gains a +1 item bonus to all defenses.</line>
          <line indent="1"><name>Level 15</name>+2 item bonus while adjacent to you, and a +1 item bonus at other times.</line>
          <line indent="1"><name>Level 25</name>+3 item bonus while adjacent to you, and a +1 item bonus at other times.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Cosmic Cycle Tattoo</title>
+      <category>Common</category>
+      <fluff>The sun, moon, and stars wind around your chest in this tattoo and flare into motion when you use its power</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <keyword>Arcane</keyword>
+         <line>If you have the Cosmic Magic sorcerer class feature and use your <![CDATA[<i>second wind</i>]]>, you can choose to change your cosmic phase to the next higher-numbered phase (or back to the phase of the sun if you are in the phase of the stars).</line>
       </block>
    </item>
    
@@ -366,6 +433,21 @@
          <line>The creator can spend 1 minute to attune any number of individuals to this door. The creator can also spend 5 minutes to unattune any number of individuals, or to give one attuned individual the ability to attune or unattune individuals as if he or she was the creator.</line>
          <line>When a creature other than an attuned individual walks through the door, a shrill alarm sounds and doesn't stop for 1 hour or until that creature leaves through the same door.</line>
          <line>The creator or an individual with the ability to attune others to the door can command the alarm to become silent as a free action while within 20 squares of the door.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Distracting Tattoo</title>
+      <category>Common</category>
+      <fluff>Any small, bright image in a highly visible place is sufficient for the magic of this tattoo</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>When you spend an action point, you can end any mark affecting you.</line>
       </block>
    </item>
 
@@ -472,6 +554,44 @@
    </item>
    
    <item>
+      <title>Final Messenger</title>
+      <category>Common</category>
+      <fluff>This warforged communication device is built to resemble a small winged animal, yet it is an intricate assembly of clockwork pieces</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <headline auto="attached"/>
+      <block>
+         <name>Property</name>
+         <line>This mechanical messenger is stored inside you, and has a speed of 8.</line>
+         <line>When activated, it can function for 8 hours, after which it deactivates. A creature can reactivate the messenger by using 1 minute to make a DC 20 Arcana check. On a success, the creature spends a healing surge to reactivate the messenger for 8 hours.</line>
+         <line>A creature that is not the intended recipient can use 1 minute to make a DC 25 Arcana check to view the messenger's programmed image and hear its message. If the check succeeds against DC 30, the creature also learns the messenger's destination or intended recipient.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You program the messenger with with an image of what you currently see, a statement of up to 25 words, and a destination or message recipient. The messenger retains this information until you use this power again, or until you die.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You activate the messenger, and it leaves your body for its programmed destination or recipient. When it reaches its target, it delivers the programmed image and statement.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You are killed</line>
+         <line><name>Effect</name>The messenger is programmed with the last image you saw while conscious, and the message that you were killed. Choose a destination or intended recipient.</line>
+         <line>You activate the messenger, and it leaves your body for its programmed destination or recipient.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Fireheart Tattoo</title>
       <category>Common</category>
       <fluff>As you call upon its power, flames flare and twist around the heart at the center of this tattoo</fluff>
@@ -545,6 +665,26 @@
          <action>Move</action> <subaction>Action</subaction>
          <line><name>Requirement</name>You must be the last creature to hold the lantern.</line>
          <line><name>Effect</name>You move the lantern up to 10 squares to a square within 10 squares of you.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Flute of the Dancing Satyr</title>
+      <category>Common</category>
+      <fluff>Carved from wood and inscribed with arcane glyphs, this flute can play a tune of speed and elegance</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <line><name>Special</name>If you have the Quick Draw feat, you can use this power as a minor action instead.</line>
+         <line><name>Requirement</name>You must have a hand free to use this power.</line>
+         <line><name>Effect</name>You shift up to 2 squares.</line>
+         <line><name>Effect</name>Close burst 5 (each ally in the burst); Each target can shift up to 1 square as a free reaction.</line>
       </block>
    </item>
 
@@ -685,6 +825,25 @@
          <action>Standard</action> <subaction>Action</subaction>
          <line><name>Effect</name>Close burst 3 (enemies in the burst); The target is blinded until the start of your next turn.</line>
          <line><name>Special</name>The globe is destroyed.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Grey Security Card</title>
+      <category>Rare</category>
+      <fluff>This grey rectangle resembles a heavy leaded pany of colored glass</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <headline auto="losttech"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>Melee touch (one locked door, chest, gate, or other object); Make a Thievery check to open the target object with a +12 check modifier instead of your Thievery check modifier.</line>
+         <line indent="1"><name>Malfunction</name>If you roll a 1 on this check, the clothing and armor that you are wearing falls off you.</line>
       </block>
    </item>
    
@@ -838,6 +997,26 @@
          <line>While ridden, the mount wearing this barding gains resist 5 to all damage.</line>
          <line indent="1"><name>Level 11</name>Resist 10.</line>
          <line indent="1"><name>Level 21</name>Resist 15.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Infinite-use Inkpit</title>
+      <category>Common</category>
+      <fluff>This glass inkwell is stained and battered, as if it has seen much use</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Zone</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You open the inkwell and spill the ink in a close blast 2. The blast creates an extradimensional pit zone until the end of the encounter.</line>
+         <line>The ground of the zone becomes a pit that is 20 feet deep. The pit is extradimensional, and does not create a hole in the floor. The hole appears slow enough that a creature in the zone when it is created does not take falling damage.</line>
+         <line>Climbing out of the pit requires a DC 15 Athletics check. A creature in the pit when the zone ends rises back to the ground safely.</line>
       </block>
    </item>
    
@@ -1007,6 +1186,54 @@
          <line><name>Effect</name>You gain a +2 item bonus to attack rolls with Charm powers until the end of your next turn.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Martyr's Saddle</title>
+      <category>Common</category>
+      <fluff>Those who seek to protect their mounts at any cost favor this saddle</fluff>
+      <level>
+         <value>6</value>
+         <price>900</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>22,500</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>562,500</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Mount item</subtype>
+      <block>
+         <name>Property</name>
+         <line>The mount gains a +1 item bonus to all defenses.</line>
+         <line indent="1"><name>Level 16</name>+2 item bonus.</line>
+         <line indent="1"><name>Level 26</name>+3 item bonus.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Mount</keyword>
+         <frequency>At-Will</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>The mount would take damage; you must be riding the mount</line>
+         <line><name>Effect</name>The mount takes half of the triggering damage, and you take the remainder. The damage you take is typeless, and cannot be reduced or prevented.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Midnight Sixes</title>
+      <category>Common</category>
+      <fluff>This pair of six-sided dice look innocent, but when rolled, they often come up a winnder</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>When you roll one or both of these dice, you can mentally command them to roll any desired result.</line>
+      </block>
+   </item>
 
    <item>
       <title>Mirrored Caparison</title>
@@ -1059,6 +1286,22 @@
    </item>
    
    <item>
+      <title>Monocle of Comprehension</title>
+      <category>Common</category>
+      <fluff>Using this monocle as part of your ritual, you share the comprehensive magic with your allies</fluff>
+      <level>
+         <value>5</value>
+         <price>1,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>You can use this item as an optional focus for the <![CDATA[<i>comprehend language</i>]]> ritual.</line>
+         <line>If you do, this monocle splits into up to 8 duplicate monocles for the duration of the ritual. Any creature holding one of the monocles gains the same comprehension granted you by the ritual as long as it keeps holding the monocle.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Nail of Sealing</title>
       <category>Common</category>
       <fluff>This thick iron nail is adorned with warding symbols and can hold shut any portal or container</fluff>
@@ -1073,22 +1316,6 @@
          <action>Standard</action> <subaction>Action</subaction>
          <line><name>Effect</name>You push this nail into a door, chest, or other closable object, and it magically sinks into the material of that object and seals it shut.</line>
          <line>This has the same effects as if you had you performed the <![CDATA[<i>arcane lock</i>]]> ritual on the object, and the DC for Thievery checks or Strength checks made to open the target is set at 25. If you want to allow other creatures to pass normally, you can only choose the password option and must speak the password when you use the nail.</line>
-      </block>
-   </item>
-   
-   <item>
-      <title>Monocle of Comprehension</title>
-      <category>Common</category>
-      <fluff>Using this monocle as part of your ritual, you share the comprehensive magic with your allies</fluff>
-      <level>
-         <value>5</value>
-         <price>1,000</price>
-      </level>
-      <type>Wondrous Item</type>
-      <block>
-         <name>Property</name>
-         <line>You can use this item as an optional focus for the <![CDATA[<i>comprehend language</i>]]> ritual.</line>
-         <line>If you do, this monocle splits into up to 8 duplicate monocles for the duration of the ritual. Any creature holding one of the monocles gains the same comprehension granted you by the ritual as long as it keeps holding the monocle.</line>
       </block>
    </item>
    
@@ -1129,6 +1356,47 @@
          <line><name>Effect</name>You summon a Medium onyx dog in a space adjacent to you. Unlike most summons, this one does not use your statistics and you do not lose a healing surge if the onyx dog is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the dog to spend one.</line>
          <line>When activating this item, you can expend a healing surge to give the onyx dog temporary hit points equal to your healing surge value.</line>
          <line>The dog disappears after 8 hours or if it is reduced to 0 hit points or fewer.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Opal Carp</title>
+      <category>Common</category>
+      <fluff>This opal lozenge is carved with scales, and can transform into a giant fish</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Summoning</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You summon a Medium opal carp in a space adjacent to you. The carp can only appear in a body of water. Unlike most summons, this one does not use your statistics and you do not lose a healing surge if the opal carp is reduced to 0 hit points or fewer, though you can expend your healing surges when an effect allows the carp to spend one.</line>
+         <line>When activating this item, you can expend a healing surge to give the opal carp temporary hit points equal to your healing surge value.</line>
+         <line>A character riding the carp can breathe water as if it were air, and can speak normally underwater. The carp can carry one Medium or smaller character weighing no more than 300 pounds.</line>
+         <line>The dog disappears after 8 hours or if it is reduced to 0 hit points or fewer. The carp also disappears if more than 300 pounds is placed on it.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Polyglot Gem</title>
+      <category>Common</category>
+      <fluff>This intricately carved gemstone holds the secrets of language within its many facets</fluff>
+      <level>
+         <value>6</value>
+         <price>1,8000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Creation</name>
+         <line>When this gem is created, the creator chooses any one language.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <line>As long as you carry this gem on your person, you can speak, read, and write the language chosen when it was created.</line>
+         <line>If you carry more than one <![CDATA[<i>polyglot gem</i>]]> on your person, none of them function.</line>
       </block>
    </item>
    
@@ -1347,6 +1615,27 @@
          <line>Affected creatures take a -4 penalty to all attack rolls against targets inside the aura, and cannot enter the aura willingly. If an affected creature starts its turn in the aura, its first action must be to leave the aura by the shortest route possible, unless no route exists.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Sending Fork</title>
+      <category>Uncommon</category>
+      <fluff>Speaking your voice into this tuning fork casts it farther across the world when used with magic</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>This item can be used as an optional focus for the <![CDATA[<i>sending</i>]]> ritual. Doing so multiplies the range of the ritual by 10.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>Ranged 10 (one square); You speak a short phrase (no more than twenty-five words) into the fork. Creatures can hear you as though you are in the target square. You do not need line of sight or line of effect to the target square.</line>
+      </block>
+   </item>
 
    <item>
       <title>Shroud of Protection</title>
@@ -1373,6 +1662,31 @@
          <line indent="1"><name>Level 12</name>Resist 35.</line>
          <line indent="1"><name>Level 22</name>Resist 50, and the target gains a +2 item bonus to saving throws, including death saves.</line>
          <line>The effect lasts until the target is no longer dying or until the shroud is removed (a standard action), whichever comes first.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Sigil of Companionship</title>
+      <category>Common</category>
+      <fluff>This medal, which can be strapped to a leg or hung around a neck, signifies the depth of experience you and your companion have working together</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Companion Item</subtype>
+      <block>
+         <name>Property</name>
+         <line>While you flank an enemy with your companion wearing this item, you both gain a +2 item bonus to damage rolls against that enemy.</line>
+         <line indent="1"><name>Level 16</name>+3 item bonus.</line>
+         <line indent="1"><name>Level 26</name>+4 item bonus.</line>
       </block>
    </item>
    
@@ -1409,6 +1723,22 @@
          <line>You gain a +5 item bonus to Stealth checks related to using the tool.</line>
          <line>Any individual mundane tool -a woodcutter's axe, a crowbar, a hammer, a shovel, and so on- can be made silent. Weapons, clothing, jewelry, or other mundane objects cannot.</line>
       </block>
+   </item>
+   
+   <item>
+      <title>Solitaire (Cinnabar)</title>
+      <category>Uncommon</category>
+      <fluff>This jagged red crystal boosts your resilience when you hit your foes hard</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type>
+      <frequency>Encounter</frequency>
+      <action>Free</action> <subaction>Reaction</subaction>
+      <line><name>Trigger</name>You score a critical hit on your turn</line>
+      <line><name>Effect</name>You make a saving throw against an effect that a save can end.</line>
+      <line><name>Special</name>You can only use one <![CDATA[<i>solitaire</i>]]> in a given encounter.</line>
    </item>
    
    <item>
@@ -1543,6 +1873,38 @@
          <line indent="1"><name>Level 24 or 29</name>Equal to 5 + your Constitution modifier.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Tattoo of Bonded Defense</title>
+      <category>Common</category>
+      <fluff>One hero standing before a wounded ally is perfect for these tattoos</fluff>
+      <level>
+         <value>6</value>
+         <price>900</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>The first time you become bloodied during an encounter, each ally who can see you and that also has a <![CDATA[<i>tattoo of bonded defense</i>]]> can shift 1 square towards you as an opportunity reaction.</line>
+         <line>An ally who can see you and that has a <![CDATA[<i>tattoo of bonded escape</i>]]> can shift 1 square away from you as an opportunity reaction.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Tattoo of Bonded Escape</title>
+      <category>Common</category>
+      <fluff>The image of a surly dwarf holding a corridor while allies escape works well for these tattoos</fluff>
+      <level>
+         <value>6</value>
+         <price>900</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>The first time you become bloodied during an encounter, each ally who can see you and that also has a <![CDATA[<i>tattoo of bonded escape</i>]]> can shift 1 square away from you as an opportunity reaction.</line>
+         <line>An ally who can see you and that has a <![CDATA[<i>tattoo of bonded defense</i>]]> can shift 1 square towards you as an opportunity reaction.</line>
+      </block>
+   </item>
 
    <item>
       <title>Tattoo of Vengeance</title>
@@ -1646,6 +2008,24 @@
          <line>Once the ink is no longer active, all the writing disappears, and only the chosen recipient can see it. The message's recipient need not be able to read the inscription, or even be literate. The recipient magically understands the full message as soon as he or she touches whatever material it was scribed upon.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Vision Sands</title>
+      <category>Rare</category>
+      <fluff>This sparkling crystalline sand enhances divinations</fluff>
+      <level>
+         <value>6</value>
+         <price>75</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Consumable</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Special</action> <subaction/>
+         <line><name>Requirement</name>Use this power when you begin casting a divination ritual.</line>
+         <line><name>Effect</name>You gain a +4 bonus to any one skill check made as part of the ritual. You must decide to add this bonus before making the check.</line>
+      </block>
+   </item>
 
    <item>
       <title>Vistani Tambourine</title>
@@ -1696,6 +2076,31 @@
          <line><name>Requirement</name>You must be wielding the tambourine in one hand</line>
          <line><name>Effect</name>Close burst 5 (you and each ally in the burst); Each target can ignore difficult terrain until the end of your next turn.</line>
          <line>You move up to your speed.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Watchful Ruby Eye</title>
+      <category>Uncommon</category>
+      <fluff>This crimson get set in gold and silver enhances your warding rituals</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>16</value>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <price>1,125,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>While grasping this gem, you gain a +3 item bonus to any skill checks made as part of a warding ritual.</line>
+         <line indent="1"><name>Level 16</name>+6 item bonus.</line>
+         <line indent="1"><name>Level 26</name>+10 item bonus.</line>
       </block>
    </item>
    

@@ -170,48 +170,6 @@
          <line indent="1"><name>Level 25 or 30</name>+3 or your Dexterity modifier.</line>
       </block>
    </item>
-
-   <item>
-      <title>Agile Resolve Vestments</title>
-      <category>Common</category>
-      <fluff>These embroidered vestments channel your resolve to imbue you with agility</fluff>
-      <level>
-         <value>2</value>
-         <bonus>+1</bonus>
-         <price>520</price>
-      </level>
-      <level>
-         <value>7</value>
-         <bonus>+2</bonus>
-         <price>2,600</price>
-      </level>
-      <level>
-         <value>12</value>
-         <bonus>+3</bonus>
-         <price>13,000</price>
-      </level>
-      <level>
-         <value>17</value>
-         <bonus>+4</bonus>
-         <price>65,000</price>
-      </level>
-      <level>
-         <value>22</value>
-         <bonus>+5</bonus>
-         <price>325,000</price>
-      </level>
-      <level>
-         <value>27</value>
-         <bonus>+6</bonus>
-         <price>1,625,000</price>
-      </level>
-      <type>Armor</type> <subtype>Cloth</subtype>
-      <headline auto="armorenh" />
-      <block>
-         <name>Property</name>
-         <line>While you are bloodied, you gain a +2 item bonus to Reflex.</line>
-      </block>
-   </item>
    
    <item>
       <title>Alchemical Defense Nodes</title>
@@ -357,10 +315,11 @@
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <line><name>Trigger</name>A creature you have marked with your Aegis of Shielding targets you and at least one of your allies with an attack</line>
-         <line><name>Effect</name>The damage from the triggering attack is reduced by 5 + the armor's enhancement bonus.</line>
-         <line indent="1"><name>Level 12 or 17</name>10 + the armor's enhancement bonus</line>
-         <line indent="1"><name>Level 22 or 27</name>15 + the armor's enhancement bonus</line>
+         <line><name>Requirement</name>You must have the <![CDATA[<i>aegis of shielding</i> and <i>arcane aegis</i>]]> class powers.</line>
+         <line><name>Trigger</name>A creature you have marked with your <![CDATA[<i>arcane aegis</i>]]> targets you and at least one of your allies with an attack</line>
+         <line><name>Effect</name>The damage from the triggering attack is reduced by 5 + this armor's enhancement bonus.</line>
+         <line indent="1"><name>Level 12 or 17</name>10 + this armor's enhancement bonus</line>
+         <line indent="1"><name>Level 22 or 27</name>15 + this armor's enhancement bonus</line>
       </block>
    </item>
    
@@ -2731,6 +2690,50 @@
    </item>
    
    <item>
+      <title>Gambler's Suit</title>
+      <category>Common</category>
+      <fluff>Luck is fickle, and this stylish set of leathers plays both sides of the coin</fluff>
+      <level>
+         <value>6</value>
+         <bonus>+2</bonus>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>11</value>
+         <bonus>+3</bonus>
+         <price>9,000</price>
+      </level>
+      <level>
+         <value>16</value>
+         <bonus>+4</bonus>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>21</value>
+         <bonus>+5</bonus>
+         <price>225,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <bonus>+6</bonus>
+         <price>1,125,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Property</name>
+         <line>When you make at least two saving throws, you can choose to gain a +2 bonus to the first saving throw and take a -2 penalty to the second.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>An enemy hits you with an attack</line>
+         <line><name>Effect</name>The triggering enemy rerolls the triggering attack roll and must use the second result. If the second result is a hit, the attack scores a critical hit.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Genasi Soul Armor</title>
       <category>Uncommon</category>
       <fluff>Elemental energies ripple through this armor, said to contain the life energy of genasi</fluff>
@@ -3148,7 +3151,7 @@
          <action>Immediate</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>An enemy reduces you to 0 hit points or fewer</line>
          <line><name>Effect</name>You cannot become dying or unconscious until this power has been resolved.</line>
-         <line>After the triggering attack has been resolved, you make a <![CDATA[<i>melee basic attack</i>]]> with a bonus to the attack roll and damage roll equal to this armor's plus.</line>
+         <line>After the triggering attack has been resolved, you make a <![CDATA[<i>melee basic attack</i>]]> with a bonus to the attack roll and damage roll equal to this armor's plus. If you make the attack against the triggering enemy, you gain an additional +2 bonus to the attack roll.</line>
       </block>
    </item>
 
@@ -3256,49 +3259,49 @@
          <line><name>Effect</name>The triggering effect immediately ends.</line>
       </block>
    </item>
-
+   
    <item>
-      <title>Indomitable Resolve Vestments</title>
+      <title>Imposter's Armor</title>
       <category>Common</category>
-      <fluff>These embroidered vestments channel your resolve and imbue you with willpower and determination</fluff>
+      <fluff>In the blink of an eye, this metal armor can fade into rags or robes, providing the perfect disguise for any situation</fluff>
       <level>
-         <value>2</value>
-         <bonus>+1</bonus>
-         <price>520</price>
-      </level>
-      <level>
-         <value>7</value>
+         <value>6</value>
          <bonus>+2</bonus>
-         <price>2,600</price>
+         <price>1,800</price>
       </level>
       <level>
-         <value>12</value>
+         <value>11</value>
          <bonus>+3</bonus>
-         <price>13,000</price>
+         <price>9,000</price>
       </level>
       <level>
-         <value>17</value>
+         <value>16</value>
          <bonus>+4</bonus>
-         <price>65,000</price>
+         <price>45,000</price>
       </level>
       <level>
-         <value>22</value>
+         <value>21</value>
          <bonus>+5</bonus>
-         <price>325,000</price>
+         <price>225,000</price>
       </level>
       <level>
-         <value>27</value>
+         <value>26</value>
          <bonus>+6</bonus>
-         <price>1,625,000</price>
+         <price>1,125,000</price>
       </level>
-      <type>Armor</type> <subtype>Cloth</subtype>
-      <headline auto="armorenh" />
+      <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
+      <headline auto="armorenh"/>
       <block>
-         <name>Property</name>
-         <line>While you are bloodied, you gain a +2 item bonus to Will.</line>
+         <name>Utility Power</name>
+         <keyword>Polymorph</keyword>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>This armor transforms into a normal-looking set of clothes. While in this form, the armor counts as cloth armor with the same bonus.</line>
+         <line>You gain a bonus to Bluff checks to disguise your appearance as part of using this power. The bonus equals this armor's enhancement bonus.</line>
+         <line>This effect ends if you remove the armor. You can end the effect as a minor action.</line>
       </block>
    </item>
-
+   
    <item>
       <title>Ironclad Armor</title>
       <category>Common</category>
@@ -4710,6 +4713,132 @@
          <line indent="2"><name>Level 22 or 27</name>2 squares.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Resolve Vestments, Agile</title>
+      <category>Common</category>
+      <fluff>These embroidered vestments channel your resolve to imbue you with agility</fluff>
+      <level>
+         <value>2</value>
+         <bonus>+1</bonus>
+         <price>520</price>
+      </level>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>While you are bloodied, you gain a +2 item bonus to Reflex.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Resolve Vestments, Indomitable</title>
+      <category>Common</category>
+      <fluff>These embroidered vestments channel your resolve and imbue you with willpower and determination</fluff>
+      <level>
+         <value>2</value>
+         <bonus>+1</bonus>
+         <price>520</price>
+      </level>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>While you are bloodied, you gain a +2 item bonus to Will.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Resolve Vestments, Vigorous</title>
+      <category>Common</category>
+      <fluff>These embroided vestments channel your resolve and imbue you with resilience</fluff>
+      <level>
+         <value>2</value>
+         <bonus>+1</bonus>
+         <price>520</price>
+      </level>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype>
+      <headline auto="armorenh" />
+      <block>
+         <name>Property</name>
+         <line>While you are bloodied, you gain a +2 item bonus to Fortitude.</line>
+      </block>
+   </item>
 
    <item>
       <title>Robe of Avoidance</title>
@@ -6045,6 +6174,46 @@
          <line><name>Level 23 or 28</name>10 temporary hit points.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Summoned Armor</title>
+      <category>Common</category>
+      <fluff>One need never worry about being caught unarmored while possessing this extraordinary armor</fluff>
+      <level>
+         <value>6</value>
+         <bonus>+2</bonus>
+         <price>1,800</price>
+      </level>
+      <level>
+         <value>11</value>
+         <bonus>+3</bonus>
+         <price>9,000</price>
+      </level>
+      <level>
+         <value>16</value>
+         <bonus>+4</bonus>
+         <price>45,000</price>
+      </level>
+      <level>
+         <value>21</value>
+         <bonus>+5</bonus>
+         <price>225,000</price>
+      </level>
+      <level>
+         <value>26</value>
+         <bonus>+6</bonus>
+         <price>1,125,000</price>
+      </level>
+      <type>Armor</type> <subtype>Any</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction>Action</subaction>
+         <line><name>Effect</name>You banish this armor to a secure extradimensional location.</line>
+         <line>As long your you are not wearing armor, you can use this power again recall the armor. The armor appears on you as though you had donned it normally.</line>
+      </block>
+   </item>
 
    <item>
       <title>Sylvan Armor</title>
@@ -6321,48 +6490,6 @@
          <action>Free</action> <subaction>Action</subaction>
          <line><name>Requirement</name>You must have an action point available</line>
          <line><name>Effect</name>You spend an action point to regain one encounter power of your choice.</line>
-      </block>
-   </item>
-
-   <item>
-      <title>Vigorous Resolve Vestments</title>
-      <category>Common</category>
-      <fluff>These embroided vestments channel your resolve and imbue you with resilience</fluff>
-      <level>
-         <value>2</value>
-         <bonus>+1</bonus>
-         <price>520</price>
-      </level>
-      <level>
-         <value>7</value>
-         <bonus>+2</bonus>
-         <price>2,600</price>
-      </level>
-      <level>
-         <value>12</value>
-         <bonus>+3</bonus>
-         <price>13,000</price>
-      </level>
-      <level>
-         <value>17</value>
-         <bonus>+4</bonus>
-         <price>65,000</price>
-      </level>
-      <level>
-         <value>22</value>
-         <bonus>+5</bonus>
-         <price>325,000</price>
-      </level>
-      <level>
-         <value>27</value>
-         <bonus>+6</bonus>
-         <price>1,625,000</price>
-      </level>
-      <type>Armor</type> <subtype>Cloth</subtype>
-      <headline auto="armorenh" />
-      <block>
-         <name>Property</name>
-         <line>While you are bloodied, you gain a +2 item bonus to Fortitude.</line>
       </block>
    </item>
    
