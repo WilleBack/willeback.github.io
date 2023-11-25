@@ -139,7 +139,7 @@
                   <xsl:choose>
                      <xsl:when test="category">
                         <div class="grouping" style="float:left; width:100%; margin:0.05cm; page-break-inside:avoid;">
-                           <div class="grouptitle" style="float:left;">
+                           <div class="grouptitle" style="float:left; width: 98%; border-bottom: 0.2em solid #5d0000; font-variant: small-caps; letter-spacing:1px; padding-left: 0.1em;">
                               <xsl:value-of select="category"/>
                            </div>
                            <xsl:call-template name="rule"/>
@@ -159,7 +159,7 @@
       <div class="rule">
          <xsl:call-template name="createheader" />
 
-         <xsl:if test="tradition or cast or range or save or duration or prereq or frequency or trigger or requirement or ammunition or usage or bulk or activate or price">
+         <xsl:if test="tradition or cast or range or area or save or duration or prereq or frequency or trigger or requirement or craft or ammunition or usage or hands or reload or bulk or weaptype or weapcat or group or activate or price or access">
             <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-bottom: 0.1em solid black;">
                <xsl:if test="prereq">
                   <div id="prereq" class="line" style="float: left;">
@@ -291,6 +291,14 @@
                      </xsl:if>
                   </div>
                </xsl:if>
+               <xsl:if test="access">
+                  <div id="access" class="line" style="float: left;">
+                     <xsl:if test="access">
+                        <b>Access </b>
+                        <xsl:value-of select="access" disable-output-escaping="yes" />
+                     </xsl:if>
+                  </div>
+               </xsl:if>
                <xsl:if test="save or duration">
                   <div id="savedura" class="line" style="float: left;">
                      <xsl:if test="save">
@@ -363,6 +371,11 @@
                   </div>
                </xsl:when>
                <xsl:when test="@list">
+                  <xsl:if test="@list!=''">
+                     <div id="listtitle" class="line" style="float: left; width:100%; margin-top: 0.3em;">
+                        <b><xsl:value-of select="@list" /></b>
+                     </div>
+                  </xsl:if>
                   <div id="list" class="line" style="float: left; padding-left: 2.2em;">
                      <xsl:for-each select="entry">
                         <div id="listentry" clas="line" style="float: left; width:100%;">
@@ -417,7 +430,7 @@
          </xsl:if>
          <xsl:if test="special">
             <div id="special" class="line" style="float: left;">
-               <b>Special: </b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
+               <b>Special&#160;</b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
             </div>
             <xsl:for-each select="special[position()>1]">
                <div id="special" class="line" style="float: left;">
@@ -429,7 +442,17 @@
             <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
                <xsl:for-each select="heighten">
                   <div id="heighten" class="line" style="float: left;">
-                     <b>Heightened (<xsl:value-of select="@value" />) </b>
+                     <b>Heightened (<xsl:value-of select="@value" />)&#160;</b>
+                     <xsl:value-of select="." disable-output-escaping="yes" />
+                  </div>
+               </xsl:for-each>
+            </div>
+         </xsl:if>
+         <xsl:if test="levels">
+            <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
+               <xsl:for-each select="levels">
+                  <div id="levels" class="line" style="float: left;">
+                     <b>Level (<xsl:value-of select="@value" />)&#160;</b>
                      <xsl:value-of select="." disable-output-escaping="yes" />
                   </div>
                </xsl:for-each>
@@ -451,6 +474,12 @@
             </span>
             <xsl:if test="action">
                <xsl:text>&#160;</xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action" /></span>
+               <xsl:if test="action/@to">
+                  <xsl:text> to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@to" /></span>
+               </xsl:if>
+               <xsl:if test="action/@or">
+                  <xsl:text> or </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@or" /></span>
+               </xsl:if>
             </xsl:if>
          </div>
       </div>

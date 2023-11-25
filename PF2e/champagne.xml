@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Cooperative Nature</title>
+      <type>Feat</type> <level>1</level>
+      <trait>Human</trait>
+
+      <line>The short human life span lends perspective and has taught you from a young age to set aside differences and work with others to achieve greatness. You gain a +4 circumstance bonus on checks to Aid.</line>
+   </rule>
+
+   <rule>
+      <title>Aid</title> <action>R</action>
+      <trigger>An ally is about to use an action that requires a skill check or attack roll</trigger>
+      <requirement>The ally is willing to accept your aid, and you have prepared to help (see below)</requirement>
+
+      <line>You try to help your ally with a task. To use this reaction, you must first prepare to help, usually by using an action during your turn. You must explain to the GM exactly how you're trying to help, and they determine whether you can Aid your ally.</line>
+      <line>When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 20, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls.</line>
+      <line results="">
+         <critsuccess>You grant your ally a +2 circumstance bonus to the triggering check. If you're a master with the check you attempted, the bonus is +3, and if you're legendary, it is +4.</critsuccess>
+         <success>You grant your ally a +1 circumstance bonus to the triggering check.</success>
+         <critfail>Your ally takes a -1 circumstance penalty to the triggering check.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Champion's Code</title>
+
+      <line>You follow a code of conduct, beginning with the tenets of good, and continuing with the tenets of the paladin cause. Deities also add additional strictures.</line>
+      <line>Tenets are listed in order of importance, starting with the most important. If a situation places two tenets in conflict, you aren't in a no-win situation; instead, follow the more important tenet. For instance, as a paladin, if an evil king asked you if you're hiding refugees so he could execute them, you could lie to him, since the tenet against lying is less important than preventing harm to innocents.</line>
+      <line>Trying to subvert your code by creating a situation that forces a higher tenet to override a lower tenet (for example, promising not to respect authorities and then, to keep your word, disrespecting authorities) is a violation of the champion code.</line>
+      <line>If you stray from your alignment or violate your code of conduct, you lose your focus pool and divine ally until you demonstrate your repentance by conducting an <![CDATA[<i>atone</i>]]> ritual, but you keep any other champion abilities that don't require those class features. If your alignment shifts but is still one allowed by your deity, your GM might let you retrain your caue while still following the same deity.</line>
+   </rule>
+
+   <rule>
+      <title>Tenets</title>
+
+      <line>Below are the tenets of good and the paladin cause.</line>
+      <line list="">
+         <entry>You must never perform acts anathema to your deity or willingly commit an evil act, such as murder, torture, or the casting of an Evil spell.</entry>
+         <entry>You must never knowingly harm an innocent, or allow immediate harm to one through inaction when you know you could reasonably prevent it. This tenet doesn't force you to take action against possible harm to innocents at an indefinite time in the future, or to sacrifice your life to protect them.</entry>
+         <entry>You must act with honor, never taking advantage of others, lying, or cheating.</entry>
+         <entry>You must respect the lawful authority of legitimate leadership wherever you go, and follow its laws.</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Sarenrae, the Dawnflower</title>
+
+      <line>Sarenrae is one of the most popular deities on Golarion by virtue of her association with the life-giving sun and her perpetual offer to help anyone be their best, even when they have made mistakes.</line>
+      <line list="Details">
+         <entry name="Areas of Concern">healing, honesty, redemption, and the sun</entry>
+         <entry name="Domains">fire, healing, sun, truth</entry>
+         <entry name="Edicts">destroy the Spawn of Rovagug, protect your allies, provide aid to the sick and wounded, seek and allow redemption</entry>
+         <entry name="Anathema">create undead, lie, deny a repentant creature an opportunity for redemption, fail to strike down evil</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Retributive Strike</title>
+      <action>R</action>
+      <trait>Champion</trait>
+      <trigger>An enemy damage your ally, and both are within 15 feet of your</trigger>
+
+      <line>You protect your ally and strike your foe. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within your reach, make a melee Strike against it.</line>
+   </rule>
+
+   <rule>
+      <title>Devotion Spells</title>
+
+      <line>Your deity's power grants you special divine spells called devotion spells, which are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you start with a focus pool of 1 Focus Point. You refill your focus pool during your daily preparations, and you regain 1 Focus Point by spending 10 minutes using the Refocus activity to pray to your deity or do service toward their causes.</line>
+      <line>Focus spells are automatically heightened to half your level rounded up. Certain feats can give you more focus spells and increase the size of your focus pool, though your focus pool can never hold more than 3 Focus Points. You gain the <![CDATA[<i>lay on hands</i>]]> devotion spell from your paladin cause, and you are trained in divine spell attack rolls and spell DCs. Your spellcasting ability is Charisma.</line>
+   </rule>
+
+   <rule>
+      <title>Cast a Spell</title>
+
+      <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
+      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity. Such cases will be noted in the spell's stat block (for example, "<![CDATA[<b>Cast </b> <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">R</span>]]> verbal").</line>
+      <line><![CDATA[<b>Long Casting Times </b>]]> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes a mix of the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
+      <line><![CDATA[<b>Spell Components </b>]]> Each spell lists the spell components required to cast it after the action icons or text, such as "<![CDATA[<span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">3</span>]]> material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
+      <line list="">
+         <entry name="Material (manipulate);">A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
+         <entry name="Somatic (manipulate);">A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
+         <entry name="Verbal (concentrate);">A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
+         <entry name="Focus (manipulate);">A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
+      </line>
+      <line><![CDATA[<b>Disrupted and Lost Spells </b>]]> Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
+   </rule>
+
+   <rule>
+      <title>Lay on Hands</title>
+      <type>Focus</type> <level>1</level>
+      <uncommon/> <trait>Champion</trait> <trait>Healing</trait> <trait>Necromancy</trait> <trait>Positive</trait>
+      <cast action="1">somatic</cast>
+      <range>touch</range> <targets>1 willing living creature or 1 undead creature</targets>
+
+      <line>Your hands become infused with positive energy, healing a living creature or damaging an undead creature with a touch. If you use <![CDATA[<i>lay on hands</i>]]> on a willing living target, you restore 6 Hit Points; if the target is one of your allies, they also gain a +2 status bonus to AC for 1 round. Against an undead target, you deal 1d6 positive damage with a basic Fortitude damage; if the target fails, it also takes a -2 status penalty to AC for 1 round.</line>
+
+      <heighten value="+1">The amount of healing increases by 6, and the damage to an undead target increases by 1d6.</heighten>
+   </rule>
+</catalog>
