@@ -1863,8 +1863,23 @@
          <name>Fey Bond</name>
       </prereq>
       <group>Fey Nature</group>
+      <group>Power Repertoire</group>
       <group>Teleportation</group>
-      <benefit>You can use an at-will move action to teleport 2 squares.</benefit>
+      <benefit>You gain the &lt;i&gt;fey shift&lt;/i&gt; feat power.</benefit>
+
+      <power>
+         <title>Fey Shift</title>
+         <class>Feat</class> <category>Utility</category>
+         <frequency>At-Will</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <fluff>Your fey nature allows you to briefly flicker through the Feywild</fluff>
+         <keyword>Arcane</keyword> <keyword>Teleportation</keyword>
+         <section personal="" />
+         <section shade="">
+            <name>Effect:</name>
+            <text>You teleport up to 2 squares.</text>
+         </section>
+      </power>
    </feat>
 
    <feat>
@@ -2453,7 +2468,7 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <prereq>
@@ -2467,7 +2482,7 @@
       <group>Attack Bonus</group>
       <group>Power Enhancement</group>
       <group>Racial</group>
-      <benefit>When using your &lt;i&gt;memories of a thousand lifetimes&lt;/i&gt; racial power to modify an attack roll, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
+      <benefit>When using your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power to modify an attack roll, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
    </feat>
 
    <feat>
@@ -4542,6 +4557,123 @@
       <group>Perception</group>
       <benefit>You ignore concealment, but not total concealment.</benefit>
       <benefit>Also, you only take a -2 penalty from total concealment.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Healing</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <group>Class</group>
+      <group>Healing</group>
+      <group>Healing Surge</group>
+      <group>Teamwork</group>
+      <benefit>When you use a divine power that allows an ally to spend a healing surge, you can instead choose yourself or an ally within 5 squares of you to spend the healing surge in the original ally's stead.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Inspiration</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>warlord's aura</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <group>Temporary Hit Points</group>
+      <benefit>When you or an ally uses the Draw Inspiration action of your &lt;i&gt;warlord's aura&lt;/i&gt;, each ally in the aura gains temporary hit points equal to 10 + your [Wisdom or Charisma] modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Warding</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Swordmage</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Swordmage Warding</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Support</group>
+      <benefit>While your Swordmage Warding class feature is active, allies adjacent to you have a +1 bonus to AC.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shift the Field</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>battlefront shift</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Initiative</group>
+      <group>Mobility</group>
+      <group>Power Enhancement</group>
+      <benefit>Your &lt;i&gt;battlefront shift&lt;/i&gt; class power becomes a &lt;i&gt;Close&lt;/i&gt; burst 10, and targets you and each ally in the burst.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slashing Storm</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>17</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>17</value>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Triggered</group>
+      <benefit>When you hit with an enemy with a melee attack on your turn, you activate an Aura 1 (Martial) until the start of your next turn.</benefit>
+      <benefit>An enemy that ends its turn in the aura takes damage equal to your ability modifier + your weapon's enhancement bonus. The ability modifier depends on the weapon your are wielding:</benefit>
+      <benefit>&lt;i&gt;Axe, Hammer, Mace, Pick:&lt;/b&gt; Constitution modifier.</benefit>
+      <benefit>&lt;i&gt;Flail, Heavy Blade, Light Blade, Unarmed, Spear:&lt;/i&gt; Dexterity modifier.</benefit>
+      <benefit>&lt;i&gt;Polearm, Staff:&lt;/i&gt; Wisdom modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slayer's Shift</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <group>Bloodied Enemy</group>
+      <group>Class</group>
+      <group>Kill Effect</group>
+      <group>Mobility</group>
+      <benefit>When you bloody a creature or reduce a creature to 0 hit points or fewer, you can shift 1 square as a free reaction.</benefit>
+      <benefit>If you have the Whirling Frenzy class feature, you increase the shift from that feature when you bloody a creature instead, and you can shift 2 squares when you reduce a creature to 0 hit points or fewer.</benefit>
    </feat>
 
    <feat>

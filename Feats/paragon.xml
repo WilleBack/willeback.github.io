@@ -315,7 +315,9 @@
       <group>Racial</group>
       <group>Size-based</group>
       <benefit>When you make a melee attack, you score a critical hit on a natural roll of 19 or 20 against targets that grant you combat advantage and are at least two sizes larger than you (Large, if you are Small).</benefit>
+      <benefit>If you have an epic feat that allows your attack to always score scritical hits on a natural roll of 19, you instead gain this feat's benefits on a natural roll of 18 to 20.</benefit>
    </feat>
+
    <feat>
       <title>Aggressive Familiar</title>
       <tier>Paragon</tier>
@@ -819,12 +821,12 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <group>Power Recovery</group>
       <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;memories of a thousand lifetime&lt;/i&gt; and the triggering roll still fails, you regain the use of &lt;i&gt;memories of a thousand lifetimes&lt;/i&gt; at the start of your next turn.</benefit>
+      <benefit>When you use your &lt;i&gt;memory of a thousand lifetime&lt;/i&gt; and the triggering roll still fails, you regain the use of &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; at the start of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -6805,7 +6807,7 @@
       </prereq>
       <prereq>
          <type>power</type>
-         <name>memories of a thousand lifetimes</name>
+         <name>memory of a thousand lifetimes</name>
          <qualifier>racial</qualifier>
       </prereq>
       <prereq>
@@ -6815,7 +6817,7 @@
       <group>Power Enhancement</group>
       <group>Racial</group>
       <group>Saving Throws</group>
-      <benefit>When using your &lt;i&gt;memories of a thousand lifetimes&lt;/i&gt; racial power to modify a saving throw, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
+      <benefit>When using your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power to modify a saving throw, you treat a result that is lower than the average for the die you roll (3 for d6, or 4 for d8) as the average.</benefit>
    </feat>
 
    <feat>
@@ -8791,7 +8793,7 @@
       <benefit>&lt;b&gt;Brutal Axe:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with an Axe, you can knock the target of the triggering attack prone.</benefit>
       <benefit>&lt;b&gt;Driving Blade:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Heavy Blade, you can slide each enemy adjacent to you 1 square after the triggering attack has been resolved. If abilities such as feats or items allow you to increase the distance of forced movement, calculate the increase and halve it for this effect.</benefit>
       <benefit>&lt;b&gt;Hooking Bludgeon:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Hammer or Mace and the target of the triggering attack is adjacent to you, the target is also immobilized until the end of your next turn or until you are no longer adjacent to it. You also gain combat advantage against the target of the triggering attack until the end of your next turn.</benefit>
-      <benefit>&lt;b&gt;Sweeping Polearm:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to 2 + your Wisdom modifier + your Polearm's enhancement bonus.</benefit>
+      <benefit>&lt;b&gt;Sweeping Polearm:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to your Wisdom modifier + your Polearm's enhancement bonus + the number of additional [W] of damage your &lt;i&gt;power strike&lt;/i&gt; deals.</benefit>
       <special>You can choose this feat multiple times, and must choose a different specialization benefit each time. If your weapon qualifier for more than one specialization, you only gain the effect of one of your choice.</special>
    </feat>
 
@@ -9379,7 +9381,7 @@
       </prereq>
       <prereq>
          <type>feat</type>
-         <name>any divine class multiclass feat</name>
+         <name>any divine class multiclass</name>
       </prereq>
       <group>Class Combination</group>
       <group>Damage Bonus</group>
@@ -10208,9 +10210,27 @@
          <name>Wilden</name>
       </prereq>
       <group>Dying</group>
+      <group>Power Repertoire</group>
       <group>Racial</group>
       <group>Teleportation</group>
-      <benefit>Once per day, when you are reduced to 0 hit points or fewer and do not die, you can use a nonaction reaction to teleport to a space adjacent to an ally within 10 squares of you. This action has the Primal and Teleportation keywords.</benefit>
+      <benefit>You gain the &lt;i&gt;secret of escape&lt;/i&gt; racial power.</benefit>
+
+      <power>
+         <title>Secret of Escape</title>
+         <class>Wilden</class> <category>Utility</category>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <fluff>Your inner primal magic transports you to safety when your life is in danger</fluff>
+         <keyword>Primal</keyword> <keyword>Teleportation</keyword>
+         <section>
+            <name>Trigger:</name>
+            <text>You are reduced to 0 hit points or fewer and do not die</text>
+         </section>
+         <section shade="">
+            <name>Effect:</name>
+            <text>You teleport up to 10 squares to a space adjacent to an ally.</text>
+         </section>
+      </power>
    </feat>
 
    <feat>
@@ -10401,6 +10421,53 @@
    </feat>
 
    <feat>
+      <title>Shared Channeling</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Deva</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Channel Divinity</name>
+      </prereq>
+      <group>Channel Divinity</group>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>You can choose to use your personal Channel Divinity powers as &lt;i&gt;Close&lt;/i&gt; burst 5 powers instead, targeting you or an ally in the burst. If such a power has a trigger dependent on your, it can now be triggered by an ally within 5 squares of you, but the triggering ally must also be the target.</benefit>
+      <benefit>Your DM might allow this feat to extend some effects from a non-personal power to al ally in a &lt;i&gt;Close&lt;/i&gt; burst 5.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Danger Sense</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Githyanki</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Githzerai</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Danger Sense</name>
+      </prereq>
+      <group>Initiative</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>Allies within 5 squares of you gain a +2 racial bonus to initiative checks.</benefit>
+   </feat>
+
+   <feat>
       <title>Shared Fortune</title>
       <tier>Paragon</tier>
       <prereq>
@@ -10417,6 +10484,40 @@
       <group>Power Enhancement</group>
       <group>Support</group>
       <benefit>You can use your &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power as a close burst 1 instead of personal power. If you do, the power targets you and each ally in the burst.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shared Pact</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Warlock's Curse</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Pact Boon</name>
+      </prereq>
+      <group>Class</group>
+      <group>Kill Effect</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <benefit>You can choose to use your Pact Boon power as a &lt;i&gt;Ranged&lt;/i&gt; 3 power targeting one ally in the burst instead of using it as a personal power. The power does not trigger &lt;i&gt;opportunity attacks&lt;/i&gt; for using a ranged power when used this way.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Mastery</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>proficiency</type>
+         <name>any shield</name>
+      </prereq>
+      <group>Defense</group>
+      <group>Shield</group>
+      <benefit>When you are using a shield you are proficient with, you also add the bonus it grants to your Reflex to your Fortitude.</benefit>
    </feat>
 
    <feat>
@@ -10439,6 +10540,188 @@
       <group>Defense</group>
       <group>Shield</group>
       <benefit>When using a shield you have proficiency with, you gain a +1 feat bonus to AC and Reflex. This counts as part of the bonus the shield grants you for abilities that reference it, such as the Encouraging Shield feat.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shielding Spirit</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Protector Spirit</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>healing spirit</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <benefit>When you use your &lt;i&gt;healing spirit&lt;/i&gt;, each ally adjacent to your spirit companion gains a +2 power bonus to all defenses until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shocking Flame</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Firesoul Manifestation</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Stormsoul</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Fire Specialization</group>
+      <group>Lightning Specialization</group>
+      <group>Racial</group>
+      <benefit>When your current Elemental Manifestation is either Firesoul or Stormsoul and you haven't expended the racial power granted by your Elemental Manifestation racial trait, your melee attacks deal an extra 2 fire damage or an extra 2 lightning damage, respectively.</benefit>
+      <benefit>This extra damage increases to 4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sibling to the Stars</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Star Pact</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Warlock's Curse</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>any divine class multiclass</name>
+      </prereq>
+      <group>Class</group>
+      <group>Class Combination</group>
+      <group>Radiant Specialization</group>
+      <group>Power Enhancement</group>
+      <benefit>When you deal deal your Warlock's Curse damage, you can choose for that damage to be radiant damage.</benefit>
+      <benefit>Also, if you have the &lt;i&gt;eldritch blast&lt;/i&gt; or &lt;i&gt;eldritch strike&lt;/i&gt; attack power, you can choose for it to deal fire damage and gain the Fire keyword. You can make this choice each time you use the power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sickening Shadows</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Eldritch Pact</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Shadow Walk</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Triggered</group>
+      <benefit>Whenever en enemy misses you with a melee attack while you have concealment from your Shadow Walk class feature, that enemy takes damage. The type and amount of damage depends on your Eldritch Pact.</benefit>
+      <benefit>&lt;i&gt;Dark Pact:&lt;/i&gt; Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus.</benefit>
+      <benefit>&lt;i&gt;Elemental Pact:&lt;/i&gt; Damage equal to your Constitution modifier + your implement's enhancement bonus of the type matching your elemental affinity.</benefit>
+      <benefit>&lt;i&gt;Fey Pact:&lt;/i&gt; Psychic damage equal to your Dexterity modifier + your implement's enhancement bonus.</benefit>
+      <benefit>&lt;i&gt;Infernal Pact:&lt;/i&gt; Fire damage equal to your Constitution modifier + your implement's enhancement bonus.</benefit>
+      <benefit>&lt;i&gt;Sorcerer-King Pact:&lt;/i&gt; Necrotic damage equal to your Intelligence modifier + your implement's enhancement bonus.</benefit>
+      <benefit>&lt;i&gt;Star Pact:&lt;/i&gt; Radiant damage equal to your Intelligence modifier + your implement's enhancement bonus.</benefit>
+      <benefit>&lt;i&gt;Vestige Pact:&lt;/i&gt; Psychic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the Psychic keyword.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sight of the Familiar</title>
+      <category>Familiar</category>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <group>Familiar</group>
+      <group>Perception</group>
+      <benefit>While your familiar is in passive mode, you benefit from its special senses by seeing through its eyes.</benefit>
+      <benefit>Also, when you return your familiar from active mode to passive mode, it can show you one image of what it saw while it was in active mode.</benefit>
+   </feat>
+
+   <feat>
+      <title>Simple Precision</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <benefit>Whenever you hit with a monk at-will attack power or a &lt;i&gt;melee basic attack&lt;/i&gt;, you gain a +1 bonus to attack rolls with monk attacks until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sly Hunter</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any Bow</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +3 bonus to Weapon damage rolls when attacking with any Bow you have proficiency with when the target has no other creatures within 3 squares of it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneaky Gnome</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Gnome</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class</group>
+      <group>Racial</group>
+      <group>Stealth</group>
+      <benefit>Once per encounter, when you attack and deal Sneak Attack to a creature while you are invisible, the invisibility does not end as a result of that attack.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneaky Opportunity</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Opportunity Attacks</group>
+      <group>Weapon Specialization</group>
+      <benefit>Your &lt;i&gt;opportunity attacks&lt;/i&gt; with Light Blades deal an additional +1d6 damage.</benefit>
+      <benefit>This additional damage increases to +2d6 at 21st level.</benefit>
    </feat>
 
    <feat>

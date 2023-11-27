@@ -1248,7 +1248,7 @@
       <benefit>&lt;b&gt;Brutal Axe:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with an Axe, you can knock the target of the triggering attack prone.</benefit>
       <benefit>&lt;b&gt;Driving Blade:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Heavy Blade, you can slide each enemy adjacent to you 1 square after the triggering attack has been resolved. If abilities such as feats or items allow you to increase the distance of forced movement, calculate the increase and halve it for this effect.</benefit>
       <benefit>&lt;b&gt;Hooking Bludgeon:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Hammer or Mace and the target of the triggering attack is adjacent to you, the target is also immobilized until the end of your next turn or until you are no longer adjacent to it. You also gain combat advantage against the target of the triggering attack until the end of your next turn.</benefit>
-      <benefit>&lt;b&gt;Sweeping Polearm:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to 2 + your Wisdom modifier + your Polearm's enhancement bonus.</benefit>
+      <benefit>&lt;b&gt;Sweeping Polearm:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to your Wisdom modifier + your Polearm's enhancement bonus + the number of additional [W] of damage your &lt;i&gt;power strike&lt;/i&gt; deals.</benefit>
       <special>You can choose this feat multiple times, and must choose a different specialization benefit each time. If your weapon qualifier for more than one specialization, you only gain the effect of one of your choice.</special>
    </feat>
 
@@ -1428,6 +1428,18 @@
    </feat>
 
    <feat>
+      <title>Shield Mastery</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>proficiency</type>
+         <name>any shield</name>
+      </prereq>
+      <group>Defense</group>
+      <group>Shield</group>
+      <benefit>When you are using a shield you are proficient with, you also add the bonus it grants to your Reflex to your Fortitude.</benefit>
+   </feat>
+
+   <feat>
       <title>Shield Specialization</title>
       <tier>Paragon</tier>
       <prereq>
@@ -1447,6 +1459,37 @@
       <group>Defense</group>
       <group>Shield</group>
       <benefit>When using a shield you have proficiency with, you gain a +1 feat bonus to AC and Reflex. This counts as part of the bonus the shield grants you for abilities that reference it, such as the Encouraging Shield feat.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sight of the Familiar</title>
+      <category>Familiar</category>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <group>Familiar</group>
+      <group>Perception</group>
+      <benefit>While your familiar is in passive mode, you benefit from its special senses by seeing through its eyes.</benefit>
+      <benefit>Also, when you return your familiar from active mode to passive mode, it can show you one image of what it saw while it was in active mode.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sly Hunter</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any Bow</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +3 bonus to Weapon damage rolls when attacking with any Bow you have proficiency with when the target has no other creatures within 3 squares of it.</benefit>
    </feat>
 
    </catalog>

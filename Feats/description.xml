@@ -8341,6 +8341,63 @@
    </feat>
 
    <feat>
+      <title>Cleanse the Mind</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any divine</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Channel Divinity</name>
+      </prereq>
+      <group>Channel Divinity</group>
+      <group>Class</group>
+      <group>Condition Negation</group>
+      <group>Power Repertoire</group>
+      <group>Support</group>
+      <benefit>You gain the <![CDATA[<i>cleanse the mind</i>]]> Channel Divinity power.</benefit>
+
+      <power>
+         <title>Cleanse the Mind</title>
+         <class>Channel Divinity</class> <category>Utility</category>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction/>
+         <fluff>Those under your care have nothing to fear</fluff>
+         <keyword>Divine</keyword>
+         <section auto="channeldivinity"/>
+         <section>
+            <type>Close</type> <range>burst 3</range>
+            <name>Target:</name>
+            <target>you and each ally in the burst</target>
+         </section>
+         <section indent="1">
+            <name style="italic">Level 11:</name>
+            <text><![CDATA[<i>Close</i>]]> burst 4</text>
+         </section>
+         <section indent="1">
+            <name style="italic">Level 21:</name>
+            <text><![CDATA[<i>Close</i>]]> burst 5</text>
+         </section>
+         <section shade="">
+            <name>Effect:</name>
+            <text>Each target can make a saving throw against a Charm effect, Fear effect, or Psychic effect.</text>
+         </section>
+         <section shade="">
+            <text>A target that succeeds at the saving throw gains temporary hit points equal to your Charisma modifier.</text>
+         </section>
+         <section shade="" indent="1">
+            <name style="italic">Level 11:</name>
+            <text>Equal to 4 + your Charisma modifier.</text>
+         </section>
+         <section shade="" indent="1">
+            <name style="italic">Level 21:</name>
+            <text>Equal to 8 + your Charisma modifier.</text>
+         </section>
+      </power>
+   </feat>
+
+   <feat>
       <title>Cleansing Challenge</title>
       <tier>Heroic</tier>
       <prereq>
@@ -16409,20 +16466,20 @@
       <prereq>
          <type>power</type>
          <name>eldritch blast</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
          <combine>or</combine>
       </prereq>
       <prereq>
          <type>power</type>
          <name>eldritch strike</name>
-         <qualifier>class</qualifier>
+         <qualifier>attack</qualifier>
       </prereq>
       <group>Class</group>
       <group>Damage Bonus</group>
       <group>Fire Specialization</group>
       <group>Power Enhancement</group>
       <group>Racial</group>
-      <benefit>When you use your <![CDATA[<i>eldritch blast</i> or <i>eldritch strike</i>]]> class power, you can choose for it to deal fire damage. If you do, it gains the Fire keyword and gains a +1 bonus to the damage roll.</benefit>
+      <benefit>When you use your <![CDATA[<i>eldritch blast</i> or <i>eldritch strike</i>]]> attack power, you can choose for it to deal fire damage. If you do, it gains the Fire keyword and gains a +1 bonus to the damage roll.</benefit>
       <benefit>The bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
    </feat>
 
@@ -37748,7 +37805,7 @@
 
       <power>
          <title>Bahamut's Shield</title>
-         <class>>Bahamut</class> <category>Attack</category>
+         <class>Bahamut</class> <category>Attack</category>
          <fluff>You invoke the Platinum Dragon to shield yourself and others from harm</fluff>
             <frequency>Encounter</frequency>
             <keyword>Divine, Weapon</keyword>
@@ -40614,7 +40671,7 @@
       </prereq>
       <prereq>
          <type>feat</type>
-         <name>any divine class multiclass feat</name>
+         <name>any divine class multiclass</name>
       </prereq>
       <group>Class Combination</group>
       <group>Damage Bonus</group>
@@ -44185,9 +44242,27 @@
          <name>Wilden</name>
       </prereq>
       <group>Dying</group>
+      <group>Power Repertoire</group>
       <group>Racial</group>
       <group>Teleportation</group>
-      <benefit>Once per day, when you are reduced to 0 hit points or fewer and do not die, you can use a nonaction reaction to teleport to a space adjacent to an ally within 10 squares of you. This action has the Primal and Teleportation keywords.</benefit>
+      <benefit>You gain the <![CDATA[<i>secret of escape</i>]]> racial power.</benefit>
+
+      <power>
+         <title>Secret of Escape</title>
+         <class>Wilden</class> <category>Utility</category>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <fluff>Your inner primal magic transports you to safety when your life is in danger</fluff>
+         <keyword>Primal</keyword> <keyword>Teleportation</keyword>
+         <section>
+            <name>Trigger:</name>
+            <text>You are reduced to 0 hit points or fewer and do not die</text>
+         </section>
+         <section shade="">
+            <name>Effect:</name>
+            <text>You teleport up to 10 squares to a space adjacent to an ally.</text>
+         </section>
+      </power>
    </feat>
 
    <feat>
@@ -45125,7 +45200,7 @@
    </feat>
 
    <feat>
-      <type>Shared Inspiration</type>
+      <title>Shared Inspiration</title>
       <tier>Epic</tier>
       <prereq>
          <type>class</type>
@@ -45188,7 +45263,7 @@
       <group>Kill Effect</group>
       <group>Power Enhancement</group>
       <group>Support</group>
-      <benefit>You can choose to use your Pact Boon power as a <![CDATA[<i>Close</i>]]> burst 3 power targeting one ally in the burst instead of using it as a personal power.</benefit>
+      <benefit>You can choose to use your Pact Boon power as a <![CDATA[<i>Ranged</i>]]> 3 power targeting one ally in the burst instead of using it as a personal power. The power does not trigger <![CDATA[<i>opportunity attacks</i>]]> for using a ranged power when used this way.</benefit>
    </feat>
 
    <feat>
@@ -45242,6 +45317,7 @@
       <group>Healing</group>
       <group>Second Wind</group>
       <group>Support</group>
+      <group>Worship</group>
       <benefit>When you use your <![CDATA[<i>second wind</i>]]>, you can choose an ally within 5 squares of you. The chosen ally regains the hit points instead of you.</benefit>
    </feat>
 
@@ -45260,6 +45336,163 @@
       <group>Defense</group>
       <group>Support</group>
       <benefit>While your Swordmage Warding class feature is active, allies adjacent to you have a +1 bonus to AC.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Defense</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>Ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Shield</group>
+      <benefit>When you hit with a power that requires a shield, you gain a +1 bonus to AC and Reflex until the end of your next turn. This counts as part of the bonus the shield grants you for abilities that reference it, such as the Encouraging Shield feat.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Fighting</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any shield</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Shield</group>
+      <benefit>At the start of your turn, you can choose to forgo the bonus to defenses from a shield you wield.</benefit>
+      <benefit>If you do, you gain a bonus to damage rolls until the start of your next turn. The bonus equals +1 for every two [W] of damage, rounded up.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Finesse</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>proficiency</type>
+         <name>any shield</name>
+      </prereq>
+      <group>Shield</group>
+      <group>Skill Enhancement</group>
+      <benefit>You ignore the check penalty for wielding a shield for all shields you are proficient with.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Mastery</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>proficiency</type>
+         <name>any shield</name>
+      </prereq>
+      <group>Defense</group>
+      <group>Shield</group>
+      <benefit>When you are using a shield you are proficient with, you also add the bonus it grants to your Reflex to your Fortitude.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield of Civilization</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>deity</type>
+         <name>Erathis</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Defender</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+         <combine>with</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Battle Lore</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Resistance</group>
+      <group>Mark Punishment</group>
+      <group>Support</group>
+      <benefit>While adjacent to you, allies adjacent to you gain resist 2 all against attack from enemies marked by you.</benefit>
+      <benefit>This increases to resist 4 at 11th level, and to 8 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield of Shadows</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Drow</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>cloud of darkness</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Defense</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>You gain a +2 bonus to your Reflex defense while you are within the area of your <![CDATA[<i>cloud of darkness</i>]]> racial power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Proficiency (Heavy)</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>light shields</name>
+      </prereq>
+      <group>Proficiency Gain</group>
+      <group>Shield</group>
+      <benefit>You gain proficiency with heavy shields.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Proficiency (Light)</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <group>Proficiency Gain</group>
+      <group>Shield</group>
+      <benefit>You gain proficiency with light shields.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Push</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>enforce challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <group>Mark Punishment</group>
+      <group>Shield</group>
+      <benefit>If you hit an enemy with the attack granted by your <![CDATA[<i>enforce challenge</i>]]> class power, you can push that enemy 1 square as a free reaction to the triggering attack. You must be using a shield you have proficiency with to gain this benefit.</benefit>
    </feat>
 
    <feat>
@@ -45282,6 +45515,185 @@
       <group>Defense</group>
       <group>Shield</group>
       <benefit>When using a shield you have proficiency with, you gain a +1 feat bonus to AC and Reflex. This counts as part of the bonus the shield grants you for abilities that reference it, such as the Encouraging Shield feat.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield the Fallen</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <group>Defense</group>
+      <group>Racial</group>
+      <group>Saving Throws</group>
+      <group>Support</group>
+      <benefit>When you are adjacent to a bloodied, unconscious, or helpless ally, that ally gains a +1 bonus to saving throws and all defenses. This bonus does not stack if the ally is adjacent to more than one character with this feat.</benefit>
+      <benefit>This increases to a +2 bonus if you are using a shield you have proficiency with.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shielded Resurgence</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Healing</group>
+      <group>Second Wind</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>]]> and are using a shield you have proficiency with, you regain additional hit points equal to your Wisdom modifier, the bonus to defenses lasts until the end of your next turn instead of the start.</benefit>
+      <benefit>The additional hit points regained increase to 2 + your Wisdom modifier at 11th level, and to 5 + your Wisdom modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shielding Familiar</title>
+      <category>Familiar</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <prereq>
+         <type>utility power</type>
+         <name>6th-level or higher</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Familiar</group>
+      <group>Power Repertoire</group>
+      <group>Triggered</group>
+      <benefit>You replace one utility power of 6th level or higher with the <![CDATA[<i>shielding familiar</i>]]> feat power.</benefit>
+
+      <power>
+         <title>Shielding Familiar</title>
+         <class>Feat</class> <category>Utility</category>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <fluff>Your familiar leaps to deflect an attack, sacrificing itself to save you</fluff>
+         <keyword>Arcane</keyword>
+         <section>
+            <name>Requirement:</name>
+            <text>Your familiar must be in its passive state.</text>
+         </section>
+         <section>
+            <name>Trigger:</name>
+            <text>You are hit be an attack</text>
+         </section>
+         <section personal=""/>
+         <section shade="">
+            <name>Effect:</name>
+            <text>The triggering attack deals only half damage to you, and your familiar is destroyed.</text>
+         </section>
+      </power>
+   </feat>
+
+   <feat>
+      <title>Shielding Spirit</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Protector Spirit</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>healing spirit</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Power Enhancement</group>
+      <group>Support</group>
+      <benefit>When you use your <![CDATA[<i>healing spirit</i>]]>, each ally adjacent to your spirit companion gains a +2 power bonus to all defenses until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shielding Whirlwind Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Flurry of Blows</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you use your Flurry of Blows power while you are wielding a quarterstaff, you gain cover against ranged attack and area attacks until the end of your next turn or until you are no longer wielding a quarterstaff. You also do not grant combat advantage for being flanked while you have this benefit, though you still count as being flanked for other purposes.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shielding Word</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>healing word</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <prereq>
+         <type>deity</type>
+         <name>a deity with the Protection domain</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Power Enhancement</group>
+      <group>Worship</group>
+      <benefit>The target of your <![CDATA[<i>healing word</i>]]> class power also gain a +2 bonus to AC and Reflex until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shift the Field</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlord</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>battlefront shift</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Initiative</group>
+      <group>Mobility</group>
+      <group>Power Enhancement</group>
+      <benefit>Your <![CDATA[<i>battlefront shift</i>]]> class power becomes a <![CDATA[<i>Close</i>]]> burst 10, and targets you and each ally in the burst.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shifter's Agility</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Shifter</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>longtooth shifting</name>
+         <qualifier>racial</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>razorclaw shifting</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Mobility</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Skill Enhancement</group>
+      <benefit>While you are under the effects of your shifter racial power, you gain a +5 power bonus to Acrobatics checks and Athletics checks.</benefit>
    </feat>
 
    <feat>
@@ -45319,11 +45731,781 @@
    </feat>
 
    <feat>
+      <title>Shifter's Energy</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Artificer</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Arcane Empowerment</name>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Shifter</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>longtooth shifter</name>
+         <qualifier>racial</qualifier>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>razorclaw shifter</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <group>Support</group>
+      <benefit>When you use your shifter racial power, the power's base effect extend to one ally wielding a weapon or implement affected by the Augment Energy use of your Arcane Empowerment class feature. The effect ends on the ally when he or she expends the energy.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shiftier Maneuver</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Kobold</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>shifty maneuver</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Mobility</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>shifty maneuver</i>]]> racial power, one target of the power can shift up to 2 additional squares.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shifting Defense</title>
+      <tier>Heroic</tier>
+      <group>Defense</group>
+      <group>Defense</group>
+      <benefit>When you use the <![CDATA[<i>total defense</i>]]> action, you can also shift 1 square.</benefit>
+      <benefit>This inscreases to shift up to 2 squares at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shifting Spirit</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Githzerai</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Shaman</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Spirit Companion</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <benefit>Whenever you shift, your spirit companion can shift up to the sane number of squares.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shifting Stone</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Dwarf</name>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Stand Your Ground</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Racial</group>
+      <group>Triggered</group>
+      <benefit>When you succeed in a saving throw to avoid being knocked prone, you can shift a number of squares equal to your Wisdom modifier as a free reaction.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shifting Wind</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Second Wind</group>
+      <group>Shapechange</group>
+      <benefit>When you use your <![CDATA[<i>second wind</i>]]> while you are in beast form, you can also shift up to 2 squares.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shocking Flame</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Firesoul Manifestation</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>trait</type>
+         <name>Stormsoul</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Fire Specialization</group>
+      <group>Lightning Specialization</group>
+      <group>Racial</group>
+      <benefit>When your current Elemental Manifestation is either Firesoul or Stormsoul and you haven't expended the racial power granted by your Elemental Manifestation racial trait, your melee attacks deal an extra 2 fire damage or an extra 2 lightning damage, respectively.</benefit>
+      <benefit>This extra damage increases to 4 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sibling to the Stars</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Star Pact</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Warlock's Curse</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>any divine class multiclass</name>
+      </prereq>
+      <group>Class</group>
+      <group>Class Combination</group>
+      <group>Radiant Specialization</group>
+      <group>Power Enhancement</group>
+      <benefit>When you deal deal your Warlock's Curse damage, you can choose for that damage to be radiant damage.</benefit>
+      <benefit>Also, if you have the <![CDATA[<i>eldritch blast</i> or <i>eldritch strike</i>]]> attack power, you can choose for it to deal fire damage and gain the Fire keyword. You can make this choice each time you use the power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sickening Finish</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Intimidate</name>
+      </prereq>
+      <group>Defense</group>
+      <group>Kill Effect</group>
+      <benefit>Whenever you reduce an enemy to 0 hit points or fewer, you gain a +1 bonus to all defenses until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sickening Plague</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Genasi</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>plaguebearer</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <group>Defense Penalty</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When your <![CDATA[<i>plaguebearer</i>]]> racial power, you activate an Aura 1 (Poison) until the end of your next turn.</benefit>
+      <benefit>Enemies in the aura take a -2 penalty to all defenses.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sickening Shadows</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warlock</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Eldritch Pact</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Shadow Walk</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Triggered</group>
+      <benefit>Whenever en enemy misses you with a melee attack while you have concealment from your Shadow Walk class feature, that enemy takes damage. The type and amount of damage depends on your Eldritch Pact.</benefit>
+      <benefit><![CDATA[<i>Dark Pact:</i>]]> Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus.</benefit>
+      <benefit><![CDATA[<i>Elemental Pact:</i>]]> Damage equal to your Constitution modifier + your implement's enhancement bonus of the type matching your elemental affinity.</benefit>
+      <benefit><![CDATA[<i>Fey Pact:</i>]]> Psychic damage equal to your Dexterity modifier + your implement's enhancement bonus.</benefit>
+      <benefit><![CDATA[<i>Infernal Pact:</i>]]> Fire damage equal to your Constitution modifier + your implement's enhancement bonus.</benefit>
+      <benefit><![CDATA[<i>Sorcerer-King Pact:</i>]]> Necrotic damage equal to your Intelligence modifier + your implement's enhancement bonus.</benefit>
+      <benefit><![CDATA[<i>Star Pact:</i>]]> Radiant damage equal to your Intelligence modifier + your implement's enhancement bonus.</benefit>
+      <benefit><![CDATA[<i>Vestige Pact:</i>]]> Psychic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the Psychic keyword.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sideways Defense</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Human</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Combat Challenge</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Support</group>
+      <benefit>While you are able to take actions, allies adjacent to you gain a +1 shield bonus to AC against enemies marked by you.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sight of the Familiar</title>
+      <category>Familiar</category>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <group>Familiar</group>
+      <group>Perception</group>
+      <benefit>While your familiar is in passive mode, you benefit from its special senses by seeing through its eyes.</benefit>
+      <benefit>Also, when you return your familiar from active mode to passive mode, it can show you one image of what it saw while it was in active mode.</benefit>
+   </feat>
+
+   <feat>
+      <title>Silent Shadows</title>
+      <category>Team</category>
+      <tier>Heroic</tier>
+      <benefit>You gain a +2 feat bonus to Stealth checks.</benefit>
+      <benefit>Also, whenever you roll a Stealth check and dislike the result, if you are within 5 squares of a member of your team who has this feat or is trained in Stealth, you can reroll the Stealth check. Your feat bonus increases by +1 for each team member of your team with this feat within 5 squares of you, to a maximum of +5.</benefit>
+   </feat>
+
+   <feat>
+      <title>Silent Shot Phantom</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Silent Shot Student</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Skill Penalty</group>
+      <group>Stealth</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you are attacking with a shortbow or a Crossbow that you have proficiency with, you gain the following benefits:</benefit>
+      <benefit bullet="">Whenever you hit an enemy with a martial attack, that enemy takes a -2 penalty to Perception checks until the end of your next turn.</benefit>
+      <benefit bullet="">If you use a martial encounter attack that allows you to move and you are hidden when you use it, you remain hidden until you attack and can move 1 additional square. You do not take the -5 penalty to your Stealth check if you more than 2 squares.</benefit>
+      <benefit bullet="">If you use a martial encounter attack that allows you to move and you are not hidden when you use it, you can make a Stealth check to hide as part of that movement.</benefit>
+   </feat>
+
+   <feat>
+      <title>Silent Shot Student</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>shortbow</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any crossbow</name>
+      </prereq>
+      <group>Class</group>
+      <group>Skill Enhancement</group>
+      <group>Stealth</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +2 feat bonus to Stealth checks.</benefit>
+      <benefit>Also, when you make a martial ranged at-will with a shortbow or a Crossbow you have proficiency with and you are hidden from the target, you deal +2 additional damage.</benefit>
+      <benefit>This additional damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Silvery Glow</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>deity</type>
+         <name>Sehanine</name>
+      </prereq>
+      <group>Cold Specialization</group>
+      <group>Damage Bonus</group>
+      <group>Radiant Specialization</group>
+      <benefit>You gain a +1 bonus to damage with powers that have the Cold or Radiant keyword.</benefit>
+      <benefit>This bonus increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Simple Precision</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <group>Attack Bonus</group>
+      <group>Class</group>
+      <benefit>Whenever you hit with a monk at-will attack power or a <![CDATA[<i>melee basic attack</i>]]>, you gain a +1 bonus to attack rolls with monk attacks until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Skill Focus</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>chosen skill</name>
+      </prereq>
+      <group>Skill Enhancement</group>
+      <benefit>Choose a skill in which you have training. You gain a +3 feat bonus to checks with the chosen skill.</benefit>
+      <special>You can take this feat multiple times. Each time you select this feat, choose a different skill.</special>
+   </feat>
+
+   <feat>
+      <title>Skill Power</title>
+      <tier>Heroic</tier>
+      <group>Power Repertoire</group>
+      <benefit>You gain a skill power of your level or lower for a skill in which you have training.</benefit>
+      <special>You can take this feat a second time as a paragon feat, and a third time as an epic feat.</special>
+   </feat>
+
+   <feat>
+      <title>Skill Training</title>
+      <tier>Heroic</tier>
+      <group>Skill Training</group>
+      <benefit>You gain training in one skill of your choice, which doesn't need to be on your class skill list.</benefit>
+      <special>You can take this feat more than once. Each time you select this feat, choose a different skill.</special>
+   </feat>
+
+   <feat>
+      <title>Skilled Feint</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <prereq>
+         <type>skill</type>
+         <name>Bluff</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Damage Bonus</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +2 bonus to Bluff checks made to <![CDATA[<i>feint</i>]]>.</benefit>
+      <benefit>Also, when you successfully <![CDATA[<i>feint</i>]]>, you deal an additioan +2 damage for each die of Sneak Attack damage you deal to the target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Skins of the Slain</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>any primal</name>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>hide armor</name>
+      </prereq>
+      <group>Armor</group>
+      <group>Class</group>
+      <group>Fear</group>
+      <group>Skill Enhancement</group>
+      <benefit>While wearing hide armor you have proficiency with, you gain an item bonus to Intimidate checks equal to the hide armor's enhancement bonus (minimum +1 bonus).</benefit>
+   </feat>
+
+   <feat>
+      <title>Skipping Stone Flurry</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Flurry of Blows</name>
+      </prereq>
+      <group>Class</group>
+      <group>Power Enhancement</group>
+      <group>Weapon Specialization</group>
+      <benefit>When you use your Flurry of Blows power and are wielding a loaded Sling, one of the targets can be within 10 squares of you. This counts as a ranged attack that does not provoke <![CDATA[<i>opportunity attacks</i>]]> and uses the ammunition from your Sling.</benefit>
+   </feat>
+
+   <feat>
+      <title>Skirmishing Leader</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Intelligence</name>
+         <value>13</value>
+      </prereq>
+      <group>Action Point</group>
+      <group>Mobility</group>
+      <group>Multiclass Warlord</group>
+      <group>Support</group>
+      <benefit>When an ally within 5 squares of you spends an action point, that ally can use a free interrupt to shift 1 square before or after the effects of the action point have been resolved.</benefit>
+   </feat>
+
+   <feat>
+      <title>Skittering Mouse Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>size</type>
+         <name>Small or smaller</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Size-based</group>
+      <benefit>When you use a monk power to shift 3 or more squares, you can shift through enemies' spaces.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slashing Kama Style</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Monk</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Flurry of Blows</name>
+      </prereq>
+      <group>Class</group>
+      <group>Ongoing Damage</group>
+      <group>Power Enhancement</group>
+      <group>Proficiency Gain</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with the sickle</benefit>
+      <benefit>Also, when you use your Flurry of Blows power and are wielding a sickle, you can choose one of the targets.</benefit>
+      <benefit>If you do, the chosen target instead takes ongoing damage (save ends) equal to the damage you would normally deal to it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slashing Storm</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>17</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>17</value>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Triggered</group>
+      <benefit>When you hit with an enemy with a melee attack on your turn, you activate an Aura 1 (Martial) until the start of your next turn.</benefit>
+      <benefit>An enemy that ends its turn in the aura takes damage equal to your ability modifier + your weapon's enhancement bonus. The ability modifier depends on the weapon your are wielding:</benefit>
+      <benefit><![CDATA[<i>Axe, Hammer, Mace, Pick:</b>]]> Constitution modifier.</benefit>
+      <benefit><![CDATA[<i>Flail, Heavy Blade, Light Blade, Unarmed, Spear:</i>]]> Dexterity modifier.</benefit>
+      <benefit><![CDATA[<i>Polearm, Staff:</i>]]> Wisdom modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slayer's Shift</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <group>Bloodied Enemy</group>
+      <group>Class</group>
+      <group>Kill Effect</group>
+      <group>Mobility</group>
+      <benefit>When you bloody a creature or reduce a creature to 0 hit points or fewer, you can shift 1 square as a free reaction.</benefit>
+      <benefit>If you have the Whirling Frenzy class feature, you increase the shift from that feature when you bloody a creature instead, and you can shift 2 squares when you reduce a creature to 0 hit points or fewer.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slaying Action</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Action Point</group>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <benefit>When you spend an action point to take an extra action and deal your Sneak Attack damage as part of that action, it does not count towards your normal limit of dealing Sneak Attack damage only once per turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sling Expertise</title>
+      <tier>Heroic</tier>
+      <group>Defense</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +4 bonus to all defenses against <![CDATA[<i>opportunity attacks</i>]]> triggered for making a ranged or area attack using a Sling.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slithering Form</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Druid</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>wild shape</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Shapechange</group>
+      <group>Skill Enhancement</group>
+      <benefit>You gain a +2 feat bonus to Acrobatics checks.</benefit>
+      <benefit>Also, while you are in beast form, you do not provoke <![CDATA[<i>opportunity attacks</i>]]> for movement when you crawl.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slow Fall</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Acrobatics</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Skill Enhancement</group>
+      <benefit>When you fall, you reduce the falling damage by your Acrobatics check result instead of one-half your check result.</benefit>
+   </feat>
+
+   <feat>
       <title>Slow the Embrace of Death</title>
       <tier>Heroic</tier>
       <group>Dying</group>
       <group>Saving Throws</group>
       <benefit>You gain a +2 feat bonus to death saving throws. This bonus increases by +1 for each failed death saving throw you have made.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sly Dodge</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>13</value>
+      </prereq>
+      <group>Defense</group>
+      <group>Mobility</group>
+      <group>Multiclass Rogue</group>
+      <group>Skill Training</group>
+      <benefit>You gain training in either the Bluff skill or the Intimidate skill.</benefit>
+      <benefit>Also, once per encounter, when an enemy makes an <![CDATA[<i>opportunity attack</i>]]> against you, you can add your Charisma modifier to your AC against that attack.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sly Hunter</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any Bow</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +3 bonus to Weapon damage rolls when attacking with any Bow you have proficiency with when the target has no other creatures within 3 squares of it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Small Warrior's Defense</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>size</type>
+         <name>Small or smaller</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Size-based</group>
+      <benefit>While you are wielding a Versatile weapon, you gain a +2 shield bonus to AC and Reflex.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneak of Shadow</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>15</value>
+      </prereq>
+      <group>Combat Advantage</group>
+      <group>Damage Bonus</group>
+      <group>Multiclass Rogue</group>
+      <group>Skill Training</group>
+      <benefit>You gain training in the Thievery skill.</benefit>
+      <benefit>Also, once per encounter, you can use the Sneak Attack rogue class feature.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneak Accuracy</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>elven accuracy</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Miss Mitigation</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>If you use your <![CDATA[<i>elven accuracy</i>]]> racial power to reroll an attack against an enemy granting you combat advantage and miss, you regain your <![CDATA[<i>elven accuracy</i>]]> power at the start of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneaky Gnome</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>race</type>
+         <name>Gnome</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class</group>
+      <group>Racial</group>
+      <group>Stealth</group>
+      <benefit>Once per encounter, when you attack and deal Sneak Attack to a creature while you are invisible, the invisibility does not end as a result of that attack.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneaky Opportunity</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Opportunity Attacks</group>
+      <group>Weapon Specialization</group>
+      <benefit>Your <![CDATA[<i>opportunity attacks</i>]]> with Light Blades deal an additional +1d6 damage.</benefit>
+      <benefit>This additional damage increases to +2d6 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneaky Stabber</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Goblin</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Racial</group>
+      <benefit>When you deal Sneak Attack damage to a creature adjacent to you, you can reroll each extra damage die from Sneak Attack that shows a 1 until it shows a different number.</benefit>
    </feat>
 
    <feat>

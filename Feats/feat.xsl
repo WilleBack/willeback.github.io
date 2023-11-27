@@ -473,6 +473,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 			<xsl:for-each select="benefit[position()>1]">
 				<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+					<xsl:if test="@bullet">
+						<xsl:text>&#9658; </xsl:text>
+					</xsl:if>
 					<xsl:value-of select="." disable-output-escaping="yes"/>
 				</div>
 			</xsl:for-each>
@@ -497,9 +500,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</xsl:if>
 		</div> <!-- content -->
-		
+
 			<xsl:apply-templates select="power" />
-		
+
 	</div> <!-- feat -->
 
 </xsl:template>

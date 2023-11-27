@@ -4828,7 +4828,7 @@
             <section>
                <shade>true</shade> <indent>1</indent>
                <name>Level 25:</name> <name-style>italic</name-style>
-               <text>If you know this power as a daily attack power of 25th level or higher, the ally's attack dealsan extra +4d10 radiant damage.</text>
+               <text>If you know this power as a daily attack power of 25th level or higher, the ally's attack deals an extra +4d10 radiant damage.</text>
             </section>
 
       </power>
@@ -4978,7 +4978,7 @@
 
       <power>
          <title>Bahamut's Shield</title>
-         <class>&gt;Bahamut</class> <category>Attack</category>
+         <class>Bahamut</class> <category>Attack</category>
          <fluff>You invoke the Platinum Dragon to shield yourself and others from harm</fluff>
             <frequency>Encounter</frequency>
             <keyword>Divine, Weapon</keyword>
@@ -5791,11 +5791,282 @@
    </feat>
 
    <feat>
+      <title>Shared Speed</title>
+      <category>Familiar</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <group>Familiar</group>
+      <group>Mobility</group>
+      <benefit>You and your familiar each receive a +1 feat bonus to speed. If your familiar has additional movement modes, it gains this speed to all of them.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Fighting</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>any shield</name>
+      </prereq>
+      <group>Damage Bonus</group>
+      <group>Shield</group>
+      <benefit>At the start of your turn, you can choose to forgo the bonus to defenses from a shield you wield.</benefit>
+      <benefit>If you do, you gain a bonus to damage rolls until the start of your next turn. The bonus equals +1 for every two [W] of damage, rounded up.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Finesse</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>proficiency</type>
+         <name>any shield</name>
+      </prereq>
+      <group>Shield</group>
+      <group>Skill Enhancement</group>
+      <benefit>You ignore the check penalty for wielding a shield for all shields you are proficient with.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Proficiency (Heavy)</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>proficiency</type>
+         <name>light shields</name>
+      </prereq>
+      <group>Proficiency Gain</group>
+      <group>Shield</group>
+      <benefit>You gain proficiency with heavy shields.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Proficiency (Light)</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+      </prereq>
+      <group>Proficiency Gain</group>
+      <group>Shield</group>
+      <benefit>You gain proficiency with light shields.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shielding Familiar</title>
+      <category>Familiar</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>feat</type>
+         <name>Arcane Familiar</name>
+      </prereq>
+      <prereq>
+         <type>utility power</type>
+         <name>6th-level or higher</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Familiar</group>
+      <group>Power Repertoire</group>
+      <group>Triggered</group>
+      <benefit>You replace one utility power of 6th level or higher with the &lt;i&gt;shielding familiar&lt;/i&gt; feat power.</benefit>
+
+      <power>
+         <title>Shielding Familiar</title>
+         <class>Feat</class> <category>Utility</category>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <fluff>Your familiar leaps to deflect an attack, sacrificing itself to save you</fluff>
+         <keyword>Arcane</keyword>
+         <section>
+            <name>Requirement:</name>
+            <text>Your familiar must be in its passive state.</text>
+         </section>
+         <section>
+            <name>Trigger:</name>
+            <text>You are hit be an attack</text>
+         </section>
+         <section personal="" />
+         <section shade="">
+            <name>Effect:</name>
+            <text>The triggering attack deals only half damage to you, and your familiar is destroyed.</text>
+         </section>
+      </power>
+   </feat>
+
+   <feat>
+      <title>Shifting Defense</title>
+      <tier>Heroic</tier>
+      <group>Defense</group>
+      <group>Defense</group>
+      <benefit>When you use the &lt;i&gt;total defense&lt;/i&gt; action, you can also shift 1 square.</benefit>
+      <benefit>This inscreases to shift up to 2 squares at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sickening Finish</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Intimidate</name>
+      </prereq>
+      <group>Defense</group>
+      <group>Kill Effect</group>
+      <benefit>Whenever you reduce an enemy to 0 hit points or fewer, you gain a +1 bonus to all defenses until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Silent Shadows</title>
+      <category>Team</category>
+      <tier>Heroic</tier>
+      <benefit>You gain a +2 feat bonus to Stealth checks.</benefit>
+      <benefit>Also, whenever you roll a Stealth check and dislike the result, if you are within 5 squares of a member of your team who has this feat or is trained in Stealth, you can reroll the Stealth check. Your feat bonus increases by +1 for each team member of your team with this feat within 5 squares of you, to a maximum of +5.</benefit>
+   </feat>
+
+   <feat>
+      <title>Silvery Glow</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>deity</type>
+         <name>Sehanine</name>
+      </prereq>
+      <group>Cold Specialization</group>
+      <group>Damage Bonus</group>
+      <group>Radiant Specialization</group>
+      <benefit>You gain a +1 bonus to damage with powers that have the Cold or Radiant keyword.</benefit>
+      <benefit>This bonus increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Skill Focus</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>chosen skill</name>
+      </prereq>
+      <group>Skill Enhancement</group>
+      <benefit>Choose a skill in which you have training. You gain a +3 feat bonus to checks with the chosen skill.</benefit>
+      <special>You can take this feat multiple times. Each time you select this feat, choose a different skill.</special>
+   </feat>
+
+   <feat>
+      <title>Skill Power</title>
+      <tier>Heroic</tier>
+      <group>Power Repertoire</group>
+      <benefit>You gain a skill power of your level or lower for a skill in which you have training.</benefit>
+      <special>You can take this feat a second time as a paragon feat, and a third time as an epic feat.</special>
+   </feat>
+
+   <feat>
+      <title>Skill Training</title>
+      <tier>Heroic</tier>
+      <group>Skill Training</group>
+      <benefit>You gain training in one skill of your choice, which doesn't need to be on your class skill list.</benefit>
+      <special>You can take this feat more than once. Each time you select this feat, choose a different skill.</special>
+   </feat>
+
+   <feat>
+      <title>Skirmishing Leader</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>13</value>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Intelligence</name>
+         <value>13</value>
+      </prereq>
+      <group>Action Point</group>
+      <group>Mobility</group>
+      <group>Multiclass Warlord</group>
+      <group>Support</group>
+      <benefit>When an ally within 5 squares of you spends an action point, that ally can use a free interrupt to shift 1 square before or after the effects of the action point have been resolved.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sling Expertise</title>
+      <tier>Heroic</tier>
+      <group>Defense</group>
+      <group>Weapon Specialization</group>
+      <benefit>You gain a +4 bonus to all defenses against &lt;i&gt;opportunity attacks&lt;/i&gt; triggered for making a ranged or area attack using a Sling.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slow Fall</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>skill</type>
+         <name>Acrobatics</name>
+      </prereq>
+      <group>Damage Resistance</group>
+      <group>Skill Enhancement</group>
+      <benefit>When you fall, you reduce the falling damage by your Acrobatics check result instead of one-half your check result.</benefit>
+   </feat>
+
+   <feat>
       <title>Slow the Embrace of Death</title>
       <tier>Heroic</tier>
       <group>Dying</group>
       <group>Saving Throws</group>
       <benefit>You gain a +2 feat bonus to death saving throws. This bonus increases by +1 for each failed death saving throw you have made.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sly Dodge</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>13</value>
+      </prereq>
+      <group>Defense</group>
+      <group>Mobility</group>
+      <group>Multiclass Rogue</group>
+      <group>Skill Training</group>
+      <benefit>You gain training in either the Bluff skill or the Intimidate skill.</benefit>
+      <benefit>Also, once per encounter, when an enemy makes an &lt;i&gt;opportunity attack&lt;/i&gt; against you, you can add your Charisma modifier to your AC against that attack.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneak of Shadow</title>
+      <category>Multiclass</category>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>15</value>
+      </prereq>
+      <group>Combat Advantage</group>
+      <group>Damage Bonus</group>
+      <group>Multiclass Rogue</group>
+      <group>Skill Training</group>
+      <benefit>You gain training in the Thievery skill.</benefit>
+      <benefit>Also, once per encounter, you can use the Sneak Attack rogue class feature.</benefit>
    </feat>
 
    <feat>

@@ -175,7 +175,9 @@
       <group>Racial</group>
       <group>Size-based</group>
       <benefit>When you make a melee attack, you score a critical hit on a natural roll of 19 or 20 against targets that grant you combat advantage and are at least two sizes larger than you (Large, if you are Small).</benefit>
+      <benefit>If you have an epic feat that allows your attack to always score scritical hits on a natural roll of 19, you instead gain this feat's benefits on a natural roll of 18 to 20.</benefit>
    </feat>
+
    <feat>
       <title>Agile Superiority</title>
       <tier>Heroic</tier>
@@ -3208,7 +3210,7 @@
       <prereq>
          <type>class</type>
          <name>Fighter</name>
-         <qualifier>or</qualifier>
+         <combine>or</combine>
       </prereq>
       <prereq>
          <type>class</type>
@@ -3300,7 +3302,7 @@
       <group>Power Enhancement</group>
       <group>Triggered</group>
       <benefit>You gain the following benefit with martial at-will attacks while you are bloodied:</benefit>
-      <benefit>&#9658; When you hit an enemy that has attacked you since the end of your next turn, that enemy takes a -2 penalty to Will until the start of your next turn.</benefit>
+      <benefit>&#9658; On your turn, when you hit an enemy that has attacked you since the end of your previous turn, that enemy takes a -2 penalty to Will until the start of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -3760,6 +3762,7 @@
       </prereq>
       <group>Class</group>
       <group>Miss Mitigation</group>
+      <group>Opportunity Attacks</group>
       <group>Power Recovery</group>
       <group>Racial</group>
       <benefit>If you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll the attack roll for an &lt;i&gt;opportunity attack&lt;/i&gt; and still miss, you do not expend the power.</benefit>
@@ -4033,7 +4036,7 @@
       <benefit>&lt;b&gt;Brutal Axe:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with an Axe, you can knock the target of the triggering attack prone.</benefit>
       <benefit>&lt;b&gt;Driving Blade:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Heavy Blade, you can slide each enemy adjacent to you 1 square after the triggering attack has been resolved. If abilities such as feats or items allow you to increase the distance of forced movement, calculate the increase and halve it for this effect.</benefit>
       <benefit>&lt;b&gt;Hooking Bludgeon:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Hammer or Mace and the target of the triggering attack is adjacent to you, the target is also immobilized until the end of your next turn or until you are no longer adjacent to it. You also gain combat advantage against the target of the triggering attack until the end of your next turn.</benefit>
-      <benefit>&lt;b&gt;Sweeping Polearm:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to 2 + your Wisdom modifier + your Polearm's enhancement bonus.</benefit>
+      <benefit>&lt;b&gt;Sweeping Polearm:&lt;/b&gt; When you use your &lt;i&gt;power strike&lt;/i&gt; class power with a Polearm, all enemies adjacent to you other than the target of the triggering attack take damage equal to your Wisdom modifier + your Polearm's enhancement bonus + the number of additional [W] of damage your &lt;i&gt;power strike&lt;/i&gt; deals.</benefit>
       <special>You can choose this feat multiple times, and must choose a different specialization benefit each time. If your weapon qualifier for more than one specialization, you only gain the effect of one of your choice.</special>
    </feat>
 
@@ -4464,6 +4467,159 @@
       <group>Triggered</group>
       <benefit>When an ally adjacent to you either becomes bloodied or is reduced to 0 hit points or fewer, you can use a free reaction to slide the ally 1 square and then shift 1 square into the space vacated by the ally.</benefit>
       <benefit>This increases to slide 2 and shift 2, respectively, at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Defense</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>Ability</type>
+         <name>Wisdom</name>
+         <value>13</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Shield</group>
+      <benefit>When you hit with a power that requires a shield, you gain a +1 bonus to AC and Reflex until the end of your next turn. This counts as part of the bonus the shield grants you for abilities that reference it, such as the Encouraging Shield feat.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield Push</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>enforce challenge</name>
+         <qualifier>class</qualifier>
+      </prereq>
+      <group>Class</group>
+      <group>Forced Movement</group>
+      <group>Mark Punishment</group>
+      <group>Shield</group>
+      <benefit>If you hit an enemy with the attack granted by your &lt;i&gt;enforce challenge&lt;/i&gt; class power, you can push that enemy 1 square as a free reaction to the triggering attack. You must be using a shield you have proficiency with to gain this benefit.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shield of Civilization</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>deity</type>
+         <name>Erathis</name>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>role</type>
+         <name>Defender</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Cleric</name>
+         <combine>with</combine>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Battle Lore</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Resistance</group>
+      <group>Mark Punishment</group>
+      <group>Support</group>
+      <benefit>While adjacent to you, allies adjacent to you gain resist 2 all against attack from enemies marked by you.</benefit>
+      <benefit>This increases to resist 4 at 11th level, and to 8 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Shielded Resurgence</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Healing</group>
+      <group>Second Wind</group>
+      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt; and are using a shield you have proficiency with, you regain additional hit points equal to your Wisdom modifier, the bonus to defenses lasts until the end of your next turn instead of the start.</benefit>
+      <benefit>The additional hit points regained increase to 2 + your Wisdom modifier at 11th level, and to 5 + your Wisdom modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sideways Defense</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Human</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Combat Challenge</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Support</group>
+      <benefit>While you are able to take actions, allies adjacent to you gain a +1 shield bonus to AC against enemies marked by you.</benefit>
+   </feat>
+
+   <feat>
+      <title>Slashing Storm</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>17</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>17</value>
+         <combine>;</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+         <combine>or</combine>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Ranger</name>
+      </prereq>
+      <group>Class</group>
+      <group>Damage Bonus</group>
+      <group>Triggered</group>
+      <benefit>When you hit with an enemy with a melee attack on your turn, you activate an Aura 1 (Martial) until the start of your next turn.</benefit>
+      <benefit>An enemy that ends its turn in the aura takes damage equal to your ability modifier + your weapon's enhancement bonus. The ability modifier depends on the weapon your are wielding:</benefit>
+      <benefit>&lt;i&gt;Axe, Hammer, Mace, Pick:&lt;/b&gt; Constitution modifier.</benefit>
+      <benefit>&lt;i&gt;Flail, Heavy Blade, Light Blade, Unarmed, Spear:&lt;/i&gt; Dexterity modifier.</benefit>
+      <benefit>&lt;i&gt;Polearm, Staff:&lt;/i&gt; Wisdom modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Small Warrior's Defense</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>size</type>
+         <name>Small or smaller</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Fighter</name>
+      </prereq>
+      <group>Class</group>
+      <group>Defense</group>
+      <group>Size-based</group>
+      <benefit>While you are wielding a Versatile weapon, you gain a +2 shield bonus to AC and Reflex.</benefit>
    </feat>
 
    <feat>

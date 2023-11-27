@@ -173,7 +173,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div class="freqact" style="width:calc(100% - 0.09em); font-size:1.05em; margin:0.2em; margin-top:0em; float:left;">
 						<b><xsl:value-of select="frequency" /></b>
 						&#x25C6;
-						<b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" />
+						<b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text>
+						<xsl:choose>
+							<xsl:when test="subaction=''">
+								<xsl:text>Action</xsl:text>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:value-of select="subaction" />
+							</xsl:otherwise>
+						</xsl:choose>
 					</div>
 				</xsl:if>
 			</div>

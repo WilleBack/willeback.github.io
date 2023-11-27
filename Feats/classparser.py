@@ -505,7 +505,7 @@ warlordRoot = warlordTree.getroot()
 
 # Empty feats from Warlord file
 for feat in warlordRoot.findall(".feat"):
-    warlordRoot.remove(feat)
+   warlordRoot.remove(feat)
 
 collate = create_feat_file("Warlord", "Leader", "any martial")
 

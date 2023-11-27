@@ -676,8 +676,23 @@
          <name>Fey Bond</name>
       </prereq>
       <group>Fey Nature</group>
+      <group>Power Repertoire</group>
       <group>Teleportation</group>
-      <benefit>You can use an at-will move action to teleport 2 squares.</benefit>
+      <benefit>You gain the &lt;i&gt;fey shift&lt;/i&gt; feat power.</benefit>
+
+      <power>
+         <title>Fey Shift</title>
+         <class>Feat</class> <category>Utility</category>
+         <frequency>At-Will</frequency>
+         <action>Move</action> <subaction>Action</subaction>
+         <fluff>Your fey nature allows you to briefly flicker through the Feywild</fluff>
+         <keyword>Arcane</keyword> <keyword>Teleportation</keyword>
+         <section personal="" />
+         <section shade="">
+            <name>Effect:</name>
+            <text>You teleport up to 2 squares.</text>
+         </section>
+      </power>
    </feat>
 
    <feat>
@@ -977,6 +992,7 @@
       </prereq>
       <group>Class</group>
       <group>Miss Mitigation</group>
+      <group>Opportunity Attacks</group>
       <group>Power Recovery</group>
       <group>Racial</group>
       <benefit>If you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll the attack roll for an &lt;i&gt;opportunity attack&lt;/i&gt; and still miss, you do not expend the power.</benefit>
@@ -1011,7 +1027,7 @@
    </feat>
 
    <feat>
-      <title>Plaguescrorch Accuracy</title>
+      <title>Plaguescorch Accuracy</title>
       <category>Spellscar</category>
       <tier>Heroic</tier>
       <prereq>
@@ -1119,6 +1135,34 @@
       <group>Racial</group>
       <benefit>Whenever you spend a healing surge to regain hit points and you have total concealment, you regain additional hit points equal to your Wisdom modifier.</benefit>
       <benefit>These additional hit points increase to 2 + your Wisdom modifier at 11th level, and to 4 + your Wisdom modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sneak Accuracy</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>race</type>
+         <name>Elf</name>
+      </prereq>
+      <prereq>
+         <type>power</type>
+         <name>elven accuracy</name>
+         <qualifier>racial</qualifier>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Rogue</name>
+      </prereq>
+      <prereq>
+         <type>feature</type>
+         <name>Sneak Attack</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Miss Mitigation</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>If you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll an attack against an enemy granting you combat advantage and miss, you regain your &lt;i&gt;elven accuracy&lt;/i&gt; power at the start of your next turn.</benefit>
    </feat>
 
    </catalog>
