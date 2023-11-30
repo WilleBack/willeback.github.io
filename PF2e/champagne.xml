@@ -25,6 +25,39 @@
    </rule>
 
    <rule>
+      <title>Inoculation</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Healing</trait> <trait>Skill</trait>
+      <prereq>trained in Medicine</prereq>
+
+      <line>You have practiced combating plague, and your patients are less likely to succumb to the same disease again for a time. When you successfully Treat Disease on someone and they fully recover from the disease, they gain a +2 circumstance bonus to saving throws against that same disease for 1 week.</line>
+   </rule>
+
+   <rule>
+      <title>Treat Disease</title>
+      <type>Medicine</type>
+      <trait>Downtime</trait> <trait>Manipulate</trait>
+      <requirement>You are holding healer's tools, or you are wearing them and have a hand free</requirement>
+
+      <line>You spend at least 8 hours caring for a diseased creature. Attempt a Medicine check against the disease's DC. After you attempt to Treat a Disease for a creature, you can't try again until after that creature's next save against the disease.</line>
+      <line results="">
+         <critsuccess>You grant the creature a +4 circumstance bonus to its next saving throw against the disease.</critsuccess>
+         <success>You grant the creature a +2 circumstance bonus to its next saving throw against the disease.</success>
+         <critfail>Your efforts cause the creature to take a -2 circumstance penalty to its next save against the disease.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Shield Block</title>
+      <action>R</action>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+
+      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
+   </rule>
+
+   <rule>
       <title>Champion's Code</title>
 
       <line>You follow a code of conduct, beginning with the tenets of good, and continuing with the tenets of the paladin cause. Deities also add additional strictures.</line>
@@ -61,9 +94,57 @@
       <title>Retributive Strike</title>
       <action>R</action>
       <trait>Champion</trait>
-      <trigger>An enemy damage your ally, and both are within 15 feet of your</trigger>
+      <trigger>An enemy damages your ally, and both are within 15 feet of your</trigger>
 
       <line>You protect your ally and strike your foe. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within your reach, make a melee Strike against it.</line>
+   </rule>
+
+   <rule>
+      <title>Divine Ally (Blade Ally)</title>
+
+      <line>A spirit of battle dwells within your armaments. Select one weapon or <![CDATA[<i>handwraps of mighty blows</i>]]> when you make your daily preparations. In your hands, the item gains the effect of a property rune and you also gain the weapon's critical specialization effect.</line>
+      <line>For a champion following the tenets of good, choose <![CDATA[<i>disrupting</i>, <i>ghost touch</i>, <i>returning</i>, or <i>shifting</i>]]>.</line>
+   </rule>
+
+   <rule>
+      <title>Disrupting Rune</title>
+      <type>Item</type> <level>5</level>
+      <trait>Magical</trait> <trait>Necromancy</trait>
+      <usage>etched onto a melee weapon</usage>
+
+      <line>A <![CDATA[<i>disrupting</i>]]> weapon pulses with positive energy, dealing an extra 1d6 positive damage to undead. On a critical hit, the undead is also enfeebled 1 until the end of your next turn.</line>
+   </rule>
+
+   <rule>
+      <title>Ghost Touch Rune</title>
+      <type>Item</type> <level>4</level>
+      <trait>Magical</trait> <trait>Transmutation</trait>
+      <usage>etched onto a melee weapon</usage>
+
+      <line>The weapon can harm creatures without a physical form. A <![CDATA[<i>ghost touch</i>]]> weapon is particularly effective against incorporeal creatures, which almost always have a specific vulnerability to <![CDATA[<i>ghost touch</i>]]> weapons. Incorporeal creatures can touch, hold, and wield a <![CDATA[<i>ghost touch</i>]]> weapon (unlike most physical objects).</line>
+   </rule>
+
+   <rule>
+      <title>Returning Rune</title>
+      <type>Item</type> <level>3</level>
+      <trait>Evocation</trait> <trait>Magical</trait>
+      <usage>etched onto a thrown weapon</usage>
+
+      <line>When you make a thrown Strike with this weapon, it flies back to your hand after the Strike is complate. If your hands are full when the weapon returns, it falls to the ground in your space.</line>
+   </rule>
+
+   <rule>
+      <title>Shifting</title>
+      <type>Item</type> <level>6</level>
+      <trait>Magical</trait> <trait>Magical</trait>
+      <usage>etched onto a melee weapon</usage>
+
+      <line>With a moment of manipulation, you can shift this weapon into a different weapon with a similar form.</line>
+      <block>
+         <name>Activate</name> <action>1</action>
+         <type>Interact</type>
+         <part><name>Effect</name>The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon's runes and any precious material it's made of apply to the weapon's new shape. Any property runes that can't apply to the new form are suppressed until the weapon takes a shape to which they can apply.</part>
+      </block>
    </rule>
 
    <rule>
@@ -71,6 +152,24 @@
 
       <line>Your deity's power grants you special divine spells called devotion spells, which are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you start with a focus pool of 1 Focus Point. You refill your focus pool during your daily preparations, and you regain 1 Focus Point by spending 10 minutes using the Refocus activity to pray to your deity or do service toward their causes.</line>
       <line>Focus spells are automatically heightened to half your level rounded up. Certain feats can give you more focus spells and increase the size of your focus pool, though your focus pool can never hold more than 3 Focus Points. You gain the <![CDATA[<i>lay on hands</i>]]> devotion spell from your paladin cause, and you are trained in divine spell attack rolls and spell DCs. Your spellcasting ability is Charisma.</line>
+   </rule>
+
+   <rule>
+      <title>Desperate Prayer</title> <action>F</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Champion</trait>
+      <frequency>once per day</frequency>
+      <trigger>You begin your turn and have no Focus Points in your pool</trigger>
+
+      <line>You call out to your deity in a plea for their aid. You instantly recover 1 Focus Point.</line>
+   </rule>
+
+   <rule>
+      <title>Refocus</title>
+      <trait>Concentrate</trait> <trait>Exploration</trait>
+      <requirement>You have a focus pool, and you have spent at least 1 Focus Point since you last regained any Focus Points.</requirement>
+
+      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a good deity can usually Refocus while tending the wounds of their allies, and a wizard of the illusionist school might be able to Refocus while attempting to Identify Magic of the illusion school.</line>
    </rule>
 
    <rule>
@@ -92,12 +191,39 @@
    <rule>
       <title>Lay on Hands</title>
       <type>Focus</type> <level>1</level>
-      <uncommon/> <trait>Champion</trait> <trait>Healing</trait> <trait>Necromancy</trait> <trait>Positive</trait>
+      <uncommon/> <trait>Champion</trait> <trait>Divine</trait> <trait>Healing</trait> <trait>Necromancy</trait> <trait>Positive</trait>
       <cast action="1">somatic</cast>
       <range>touch</range> <targets>1 willing living creature or 1 undead creature</targets>
 
       <line>Your hands become infused with positive energy, healing a living creature or damaging an undead creature with a touch. If you use <![CDATA[<i>lay on hands</i>]]> on a willing living target, you restore 6 Hit Points; if the target is one of your allies, they also gain a +2 status bonus to AC for 1 round. Against an undead target, you deal 1d6 positive damage with a basic Fortitude damage; if the target fails, it also takes a -2 status penalty to AC for 1 round.</line>
 
       <heighten value="+1">The amount of healing increases by 6, and the damage to an undead target increases by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Healer's Blessing</title>
+      <type>Focus</type> <level>1</level>
+      <uncommon/> <trait>Champion</trait> <trait>Divine</trait> <trait>Necromancy</trait>
+      <cast action="1">verbal</cast>
+      <range>30 feet</range> <targets>1 willing living creature</targets>
+      <duration>1 minute</duration>
+
+      <line>Your words bless a creature with an enhanced connection to positive energy. When the target regains Hit Points from a healing spell, it regains 2 additional hit points.</line>
+      <line>The target regains additional Hit Points from <![CDATA[<i>healer's blessing</i>]]> only the first time it regains HP from a given healing spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once.</line>
+      <heighten value="+1">The additional healing increases by 2 HP.</heighten>
+   </rule>
+
+   <rule>
+      <title>Disrupt Undead</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 undead creature</targets>
+      <save>Fortitude</save>
+
+      <line>You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 for 1 round.</line>
+
+      <heighten value="+1">The damage increases by 1d6.</heighten>
+      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate spell.</special>
    </rule>
 </catalog>

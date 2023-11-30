@@ -207,7 +207,7 @@
                <xsl:if test="frequency">
                   <div id="freq" class="line" style="float: left;">
                      <b>Frequency </b>
-                     <xsl:value-of select="prereq" disable-output-escaping="yes" />
+                     <xsl:value-of select="frequency" disable-output-escaping="yes" />
                   </div>
                </xsl:if>
                <xsl:if test="trigger or cast">
