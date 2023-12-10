@@ -115,7 +115,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:choose>
 		<xsl:when test="frequency = 'At-Will' or (not(frequency) and part[1]/frequency='At-Will')">
-			<div class="power" style="margin:0.2cm; width:calc(100% - 1em); float:left; break-inside:avoid; border: 0.25em solid #619869; border-radius: 0.2em;">
+			<div class="power" style="margin:0.3em 0.1em; width:calc(100% - 1em); float:left; break-inside:avoid; border: 0.25em solid #619869; border-radius: 0.2em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#619869</xsl:with-param>
 				</xsl:call-template>
@@ -126,7 +126,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:when>
 		<xsl:when test="frequency = 'Encounter' or (not(frequency) and part[1]/frequency='Encounter')">
-			<div class="power" style="margin:0.2cm; width:calc(100% - 1em); float:left; break-inside:avoid; border: 0.25em solid #961334; border-radius: 0.2em;">
+			<div class="power" style="margin:0.3em 0.1em; width:calc(100% - 1em); float:left; break-inside:avoid; border: 0.25em solid #961334; border-radius: 0.2em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#961334</xsl:with-param>
 				</xsl:call-template>
@@ -137,7 +137,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</xsl:when>
 		<xsl:when test="frequency = 'Daily' or (not(frequency) and part[1]/frequency='Daily')">
-			<div class="power" style="margin:0.2cm; width:calc(100% - 1em); float:left; break-inside:avoid; border: 0.25em solid #4d4d4f; border-radius: 0.2em;">
+			<div class="power" style="margin:0.3em 0.1em; width:calc(100% - 1em); float:left; break-inside:avoid; border: 0.25em solid #4d4d4f; border-radius: 0.2em;">
 				<xsl:call-template name="createheader">
 					<xsl:with-param name="bgcolor">#4d4d4f</xsl:with-param>
 				</xsl:call-template>
@@ -158,19 +158,21 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:param name="bgcolor">Purple</xsl:param>
 
 		<div class="header" style="width:100%; float:left; color:white;background-color:{$bgcolor};">
-			<div class="titlebox" style="float:left; margin:0.3em; vertical-align:middle; width:calc(100% - 0.1em);">
-				<div class="title" style="width:calc(100% - 2em); float:left; font-size:1.2em; text-indent:-1em; margin-left:1.2em;">
-					<div class="classcat" style="float:right; text-align:right; font-size: 0.6em; margin:0.2em; margin-bottom:0em;">
-						<xsl:value-of select="class"/><br />
-						<xsl:value-of select="category"/>
-						<xsl:if test="level">
-							<xsl:text> </xsl:text><xsl:value-of select="level"/>
-						</xsl:if>
-					</div>
+			<div class="titlebox" style="float:left; margin:0.3em; vertical-align:middle; width:calc(100% - 0.25em);">
+				<div class="classcat" style="float:right; text-align:right; font-size: 0.7em; margin:0.4em; margin-top: 0em; margin-bottom:0.2em; max-width:8em;">
+					<xsl:value-of select="class"/><br />
+					<xsl:value-of select="category"/>
+					<xsl:if test="level">
+						<xsl:text> </xsl:text><xsl:value-of select="level"/>
+					</xsl:if>
+				</div>
+				<div class="title" style="width:calc(100% - 7em); float:left; font-size:1.2em; text-indent:-1em; margin-left:1.2em;">
+
 					<span class="titletext" style="font-variant: small-caps; font-weight:bold; letter-spacing:1px;"><xsl:value-of select="title"/></span>
 				</div>
+
 				<xsl:if test="frequency">
-					<div class="freqact" style="width:calc(100% - 0.09em); font-size:1.05em; margin:0.2em; margin-top:0em; float:left;">
+					<div class="freqact" style="width:calc(100% - 7em); font-size:1.05em; margin:0.2em; margin-top:0.1em; float:left;">
 						<b><xsl:value-of select="frequency" /></b>
 						&#x25C6;
 						<b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text>
@@ -352,6 +354,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<b>Special:&#160;</b>
 		<xsl:text>When charging, you can use this power in place of a </xsl:text><i>melee basic attack</i><xsl:text>.</xsl:text>
 	</xsl:if>
+	<xsl:if test="@auto='req-twomelee'">
+		<b>Requirement:&#160;</b>
+		<xsl:text>You must be wielding two melee weapons.</xsl:text>
+	</xsl:if>
+	<xsl:if test="@auto='req-ranger'">
+		<b>Requirement:&#160;</b>
+		<xsl:text>You must be wielding two melee weapons, or a ranged weapon.</xsl:text>
+	</xsl:if>
 	<xsl:if test="@auto='powerstrike'">
 		<b>Special:&#160;</b>
 		<i>Power strike</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>power strike</i><xsl:text> per triggering attack.</xsl:text>
@@ -395,8 +405,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:otherwise>
 			<xsl:if test="name">
 				<b><xsl:value-of select="name" disable-output-escaping="yes"/></b>
+				<xsl:text>&#160;</xsl:text>
 			</xsl:if>
-			<xsl:text>&#160;</xsl:text>
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:if test="type">
