@@ -225,9 +225,27 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("epicgen.html", pretty_print=True)
 
+# Victoria
+source_doc = etree.parse("victoria.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("victoria.html", pretty_print=True)
+
+
 # Full file
 source_doc = etree.parse("description.xml")
+xslt_doc = etree.parse("feat-only.xsl")
+xslt_transformer = etree.XSLT(xslt_doc)
 output_doc = xslt_transformer(source_doc)
 
 print(str(output_doc))
 output_doc.write("featlist.html", pretty_print=True)
+
+## Group list
+xslt_doc = etree.parse("feat-groups.xsl")
+xslt_transformer = etree.XSLT(xslt_doc)
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("featgroups.html", pretty_print=True)

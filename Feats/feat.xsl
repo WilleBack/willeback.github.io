@@ -163,19 +163,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 		</div>
 
-		<div class="groupholder">
-			<div class="grouptitle">Special Feat Categories</div>
-			<xsl:for-each select="category">
-				<xsl:call-template name="listcategory" />
-			</xsl:for-each>
-		</div>
+		<xsl:if test="count(//catalog/feat/category)>0">
+			<div class="groupholder">
+				<div class="grouptitle">Special Feat Categories</div>
+				<xsl:for-each select="category">
+					<xsl:call-template name="listcategory" />
+				</xsl:for-each>
+			</div>
+		</xsl:if>
 
-		<div class="groupholder">
-			<div class="grouptitle">Class Feats</div>
+		<xsl:if test="count(//catalog/feat[group='Class'])>0">
+			<div class="groupholder">
+				<div class="grouptitle">Class Feats</div>
 
-			<xsl:for-each select="class">
-				<xsl:call-template name="listprereq" />
-			</xsl:for-each>
+				<xsl:for-each select="class">
+					<xsl:call-template name="listprereq" />
+				</xsl:for-each>
 
 			<xsl:if test="count(//catalog/feat[prereq/name='any arcane' and tier='Heroic'])>0">
 				<div class="list">
@@ -340,14 +343,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 
 		</div>
+	</xsl:if>
 
-		<div class="groupholder">
+		<xsl:if test="count(//catalog/feat[group='Racial'])>0">
+			<div class="groupholder">
 			<div class="grouptitle">Racial Feats</div>
 
 			<xsl:for-each select="race">
 				<xsl:call-template name="listprereq" />
 			</xsl:for-each>
 		</div>
+	</xsl:if>
 
 	</div> <!-- list container -->
 
@@ -422,9 +428,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:otherwise>
 			</xsl:choose>
 		</div> <!-- categroup -->
-		<div id="featcontent">
+		<div id="featcontent" style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
 			<xsl:if test="prereq">
-				<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+				<div style="width:100%;">
 					<b>Prerequisites: </b>
 					<xsl:for-each select="prereq">
 						<xsl:choose>
@@ -468,11 +474,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 				</div>
 			</xsl:if>
-			<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+			<div style="width:100%;">
 				<b>Benefit: </b><xsl:value-of select="benefit[1]" disable-output-escaping="yes"/>
 			</div>
 			<xsl:for-each select="benefit[position()>1]">
-				<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+				<div style="width:100%;">
 					<xsl:if test="@bullet">
 						<xsl:text>&#9658; </xsl:text>
 					</xsl:if>
@@ -480,17 +486,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 			</xsl:for-each>
 			<xsl:if test="special">
-					<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+					<div style="width:100%;">
 					<b>Special: </b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
 				</div>
 				<xsl:for-each select="special[position()>1]">
-					<div style="width:100%; box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">
+					<div style="width:100%;">
 						<xsl:value-of select="." disable-output-escaping="yes"/>
 					</div>
 				</xsl:for-each>
 			</xsl:if>
 			<xsl:if test="associated">
-				<div style="width:100%; box-sizing:border-box; padding:0.3em; text-indent:-1em; padding-left:1.3em; float:left;background:linear-gradient(to right,WhiteSmoke, WhiteSmoke,Snow);">						<b>Associated Powers: </b>
+				<div style="width:100%;">
+					<b>Associated Powers: </b>
 					<xsl:for-each select="associated">
 						<i><xsl:value-of select="."/></i>
 						<xsl:if test="position()!=last()">

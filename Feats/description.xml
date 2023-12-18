@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="feat.xsl"?>
+<?xml-stylesheet type="text/xsl" href="feat-only.xsl"?>
 <catalog>
    <list selection="Aberration-hunting" />
    <list selection="Acid Specialization" />
@@ -8921,7 +8921,7 @@
    </feat>
 
    <feat>
-      <title>Commander's Memory</title>
+      <title>Commander of a Thousand Lifetimes</title>
       <tier>Paragon</tier>
       <prereq>
          <type>race</type>
@@ -21874,6 +21874,29 @@
    </feat>
 
    <feat>
+      <title>Fortunate Warrior</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>19</value>
+      </prereq>
+      <prereq>
+         <type>race</type>
+         <name>Halfling</name>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>any martial</name>
+      </prereq>
+      <group>Class</group>
+      <group>Combat Advantage</group>
+      <group>Power Enhancement</group>
+      <group>Racial</group>
+      <benefit>When you use your <![CDATA[<i>second chance</i>]]> racial power, you gain combat advantage with martial attack powers against the triggering enemy until the start of the triggering enemy's next turn.</benefit>
+   </feat>
+
+   <feat>
       <title>Fortune's Predator</title>
       <tier>Heroic</tier>
       <prereq>
@@ -21898,29 +21921,6 @@
       <group>Shapechange</group>
       <benefit>When you use your <![CDATA[<i>wild shape</i>]]> class power to change from your beast form to your humanoid form, you can shift 2 squares instead of 1.</benefit>
       <benefit>If you have the Agile Form feat or the Pouncing Form feat, you increase the shift granted by that feat by 1 square.</benefit>
-   </feat>
-
-   <feat>
-      <title>Fortune's Warrior</title>
-      <tier>Epic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>19</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your <![CDATA[<i>second chance</i>]]> racial power, you gain combat advantage with martial attack powers against the triggering enemy until the start of the triggering enemy's next turn.</benefit>
    </feat>
 
    <feat>
@@ -33958,7 +33958,7 @@
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>You gain a +3 power bonus martial attack rolls against the triggering creature until the end of your next turn.</text>
+               <text>You gain a +3 power bonus to martial attack rolls against the triggering creature until the end of your next turn.</text>
             </section>
 
       </power>
@@ -35211,12 +35211,12 @@
       </prereq>
       <prereq>
          <type>proficiency</type>
-         <name>any one-handed Hammer</name>
+         <name>any one-handed Flail</name>
+         <combine>or</combine>
       </prereq>
       <prereq>
          <type>proficiency</type>
-         <name>any one-handed Flail</name>
-         <combine>or</combine>
+         <name>any one-handed Hammer</name>
       </prereq>
       <group>Attack Bonus</group>
       <group>Charge</group>
@@ -40461,8 +40461,7 @@
       <title>Quick Recovery</title>
       <tier>Paragon</tier>
       <group>Healing</group>
-      <benefit>You regain 5 additional hit points for each healing surge you spend at the end of a short rest.</benefit>
-      <benefit>Starting at 21ar level, this additional healing increases to 10 for each healing surge.</benefit>
+      <benefit>You regain additional hit points for each healing surge you spend at the end of a short rest. The additional hit points regained equal one-half your level.</benefit>
    </feat>
 
    <feat>
@@ -40541,6 +40540,23 @@
       <group>Power Enhancement</group>
       <benefit>Choose an arcane at-will attack power that you know that is used as a standard action.</benefit>
       <benefit>Once per encounter, you can use the chosen power as a minor action.</benefit>
+   </feat>
+
+   <feat>
+      <title>Quickening Font</title>
+      <tier>Paragon</tier>
+      <prereq>
+         <type>class</type>
+         <name>Warden</name>
+      </prereq>
+      <prereq>
+         <type>Feature</type>
+         <name>Font of Life</name>
+      </prereq>
+      <group>Class</group>
+      <group>Mobility</group>
+      <group>Triggered</group>
+      <benefit>When you succeed at a save granted by your Font of Life class feature at the start of your turn, you gain +1 speed until the start of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -40695,7 +40711,7 @@
       <group>Damage Bonus</group>
       <group>Healing Surge</group>
       <group>Radiant Specialization</group>
-      <benefit>When you spend a healing surge while you are raging, you can choose to deal additional radiant damage with first melee attack before the end of your next turn. The additional radiant damage equals your Charisma modifier.</benefit>
+      <benefit>When you spend a healing surge while you are raging, you can choose to deal additional radiant damage with first melee attack you make before the end of your next turn. The additional radiant damage equals your Charisma modifier.</benefit>
       <benefit>The additional radiant damage increases to 2 + your Charisma modifier at 11th level, and to 5 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
@@ -40743,7 +40759,6 @@
                <shade>true</shade>
                <text>This counts as a use of your <![CDATA[<i>lay on hands</i>]]> class power.</text>
             </section>
-
       </power>
    </feat>
 
@@ -40782,6 +40797,20 @@
       <group>Healing</group>
       <group>Power Enhancement</group>
       <benefit>When you hit with the charge attack granted by your <![CDATA[<i>swift charge</i>]]> class power, you can use a free reaction to spend a healing surge to regain hit points equal to your healing surge value.</benefit>
+   </feat>
+
+   <feat>
+      <title>Raging Bloodlet</title>
+      <tier>Heroic</tier>
+      <prereq>
+         <type>class</type>
+         <name>Barbarian</name>
+      </prereq>
+      <group>Class</group>
+      <group>Ongoing Damage</group>
+      <benefit>When you hit a target with a Rage power, you can choose to reduce the damage to that target by 1[W] before you roll damage.</benefit>
+      <benefit>If you do, the target takes ongoing 5 damage (save ends). This ongoing damage lacks a type, even if the damage dealt by the Rage power has a type.</benefit>
+      <benefit>Starting at 11th level, you can choose to reduce the damage by 2[W] instead to make the target take ongoing 10 damage, and starting at 21st level, you can choose to reduce the damage by 3[W] instead to make the target take ongoing 15 damage. You can't reduce the Rage power's damage by more than it deals. For example, if a Rage power deals 2[W] damage, you can't reduce the damage by 3[W].</benefit>
    </feat>
 
    <feat>
@@ -42309,7 +42338,7 @@
       <tier>Paragon</tier>
       <group>Power Repertoire</group>
       <benefit>Choose an encounter attack power from your class. The power must be of your level or lower, and one that you don't already have.</benefit>
-      <benefit>When you regain the use of your powers at the end of any rest, you can choose to gain the use of the chosen power instead of regaining the use of an encounter attack power the same level or higher.</benefit>
+      <benefit>When you regain the use of your powers at the end of any rest, you can choose to gain the use of the chosen power instead of regaining the use of an encounter attack power of the same level or higher.</benefit>
       <special>Each time you gain a level, you can exchange the power you chose for this feat for another.</special>
    </feat>
 
@@ -42873,7 +42902,6 @@
             <section shade="true" indent="1"> <bullet/>
                <text>If the attack is not a critical hit, you deal extra damage equal to the critical damage from your weapon's enchantment and the High Crit weapon property. If your weapon does not have an enchantment, you still deal +1d6 extra damage.</text>
             </section>
-
       </power>
    </feat>
 
@@ -44733,7 +44761,6 @@
                <shade>true</shade>
                <text>The target remains trapped until you release it or until the object is destroyed. To release the target into an adjacent square, you must hold the object and concentrate for 1 minute.</text>
             </section>
-
       </power>
    </feat>
 
@@ -44878,7 +44905,7 @@
       </prereq>
       <group>Mobility</group>
       <group>Shadow Nature</group>
-      <benefit>You ignore difficult terrain squares of dim light or darkness.</benefit>
+      <benefit>You ignore difficult terrain in squares of dim light or darkness.</benefit>
    </feat>
 
    <feat>
