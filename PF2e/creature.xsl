@@ -194,10 +194,10 @@
             <div id="stats" class="line" style="float: left;">
                <b>Str </b><xsl:value-of select="str" /><xsl:text>, </xsl:text>
                <b>Dex </b><xsl:value-of select="dex" /><xsl:text>, </xsl:text>
-               <b>Con </b><xsl:value-of select="Con" /><xsl:text>, </xsl:text>
-               <b>Int </b><xsl:value-of select="Int" /><xsl:text>, </xsl:text>
-               <b>Wis </b><xsl:value-of select="Wis" /><xsl:text>, </xsl:text>
-               <b>Cha </b><xsl:value-of select="Cha" />
+               <b>Con </b><xsl:value-of select="con" /><xsl:text>, </xsl:text>
+               <b>Int </b><xsl:value-of select="int" /><xsl:text>, </xsl:text>
+               <b>Wis </b><xsl:value-of select="wis" /><xsl:text>, </xsl:text>
+               <b>Cha </b><xsl:value-of select="cha" />
             </div>
             <xsl:if test="item">
                <div id="items" class="line" style="float:left;">
