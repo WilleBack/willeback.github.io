@@ -239,13 +239,13 @@
                      <xsl:text>, </xsl:text><b>Damage&#160;</b><xsl:value-of select="damage" />
                   </xsl:if>
                   <xsl:if test="line[1]/@name">
-                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/> </b>
+                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                   </xsl:if>
                   <xsl:value-of select="line[1]" disable-output-escaping="yes"/>
                   <xsl:for-each select="line[position()>1]">
                      <br />
                      <xsl:if test="@name">
-                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/> </b>
+                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                      </xsl:if>
                      <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:for-each>
@@ -339,13 +339,13 @@
                      <xsl:text>) </xsl:text>
                   </xsl:if>
                   <xsl:if test="line[1]/@name">
-                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/> </b>
+                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                   </xsl:if>
                   <xsl:value-of select="line[1]" disable-output-escaping="yes"/>
                   <xsl:for-each select="line[position()>1]">
                      <br />
                      <xsl:if test="@name">
-                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/> </b>
+                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                      </xsl:if>
                      <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:for-each>
@@ -402,13 +402,13 @@
                            <xsl:text>) </xsl:text>
                         </xsl:if>
                         <xsl:if test="line[1]/@name">
-                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/> </b>
+                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                   </xsl:if>
                   <xsl:value-of select="line[1]" disable-output-escaping="yes"/>
                   <xsl:for-each select="line[position()>1]">
                      <br />
                      <xsl:if test="@name">
-                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/> </b>
+                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                      </xsl:if>
                      <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:for-each>
@@ -544,13 +544,13 @@
                            <b>Effect&#160;</b><xsl:value-of select="effect" disable-output-escaping="yes" />
                         </xsl:if>
                         <xsl:if test="line[1]/@name">
-                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/> </b>
+                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                   </xsl:if>
                   <xsl:value-of select="line[1]" disable-output-escaping="yes"/>
                   <xsl:for-each select="line[position()>1]">
                      <br />
                      <xsl:if test="@name">
-                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/> </b>
+                        <b><xsl:value-of select="@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
                      </xsl:if>
                      <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:for-each>
