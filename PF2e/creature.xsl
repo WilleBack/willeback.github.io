@@ -214,7 +214,7 @@
                <div id="interaction" class="line" style="float:left;">
                   <b><xsl:value-of select="name" />&#160;</b>
                   <xsl:if test="action">
-                     <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action" /></span>
+                     <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action" /></span><xsl:text> </xsl:text>
                   </xsl:if>
                   <xsl:if test="name='Melee' or name='Ranged'">
                      <xsl:text> </xsl:text><xsl:value-of select="weapon" /><xsl:text>&#160;</xsl:text><xsl:value-of select="atk" />
@@ -236,7 +236,7 @@
                      </xsl:if>
                   </xsl:if>
                   <xsl:if test="name='Melee' or name='Ranged'">
-                     <xsl:text>, </xsl:text><b>Damage&#160;</b><xsl:value-of select="damage" />
+                     <xsl:text>, </xsl:text><b>Damage&#160;</b><xsl:value-of select="damage" /><xsl:text> </xsl:text>
                   </xsl:if>
                   <xsl:if test="line[1]/@name">
                      <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
@@ -390,7 +390,7 @@
                      </xsl:when>
                      <xsl:otherwise>
                         <b><xsl:value-of select="name" />&#160;</b>
-                        <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action" /></span>
+                        <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action" /></span><xsl:text> </xsl:text>
                         <xsl:if test="trait">
                            <xsl:text> (</xsl:text>
                            <xsl:for-each select="trait">
@@ -505,7 +505,7 @@
                      <div id="action" class="line" style="float:left;">
                         <b><xsl:value-of select="name" />&#160;</b>
                         <xsl:if test="action">
-                           <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action" /></span>
+                           <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action" /></span><xsl:text> </xsl:text>
                            <xsl:text> </xsl:text>
                         </xsl:if>
                         <xsl:if test="name='Melee' or name='Ranged'">
