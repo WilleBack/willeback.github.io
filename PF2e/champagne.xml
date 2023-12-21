@@ -48,6 +48,14 @@
    </rule>
 
    <rule>
+      <title>Raise a Shield</title>
+      <action>1</action>
+      <requirement>You are wielding a shield.</requirement>
+
+      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
+   </rule>
+
+   <rule>
       <title>Shield Block</title>
       <action>R</action>
       <type>Feat</type> <level>1</level>
@@ -207,16 +215,18 @@
    </rule>
 
    <rule>
-      <title>Healer's Blessing</title>
+      <title>Fire Ray</title>
       <type>Focus</type> <level>1</level>
-      <uncommon/> <trait>Champion</trait> <trait>Divine</trait> <trait>Necromancy</trait>
-      <cast action="1">verbal</cast>
-      <range>30 feet</range> <targets>1 willing living creature</targets>
-      <duration>1 minute</duration>
+      <uncommon/> <trait>Attack</trait> <trait>Champion</trait> <trait>Divine</trait> <trait>Evocation</trait> <trait>Fire</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>60 feet</range> <targets>1 creature</targets>
 
-      <line>Your words bless a creature with an enhanced connection to positive energy. When the target regains Hit Points from a healing spell, it regains 2 additional hit points.</line>
-      <line>The target regains additional Hit Points from <![CDATA[<i>healer's blessing</i>]]> only the first time it regains HP from a given healing spell, so a spell that heals the creature repeatedly over a duration would restore additional Hit Points only once.</line>
-      <heighten value="+1">The additional healing increases by 2 HP.</heighten>
+      <line>A blazing band of fire arcs through the air. Make a ranged spell attack roll against the target. The ray deals 2d6 fire damage.</line>
+      <line results="">
+         <critsuccess>The ray deals double damage and 1d4 persistent fire damage.</critsuccess>
+         <success>The ray deals full damage.</success>
+      </line>
+      <heighten value="+1">The ray's initial damage increases by 2d6, and the persistent fire damage on a critical success increases by 1d4.</heighten>
    </rule>
 
    <rule>
@@ -230,6 +240,6 @@
       <line>You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 for 1 round.</line>
 
       <heighten value="+1">The damage increases by 1d6.</heighten>
-      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate spell.</special>
+      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate divine spell.</special>
    </rule>
 </catalog>
