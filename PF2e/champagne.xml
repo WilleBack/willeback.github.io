@@ -48,21 +48,40 @@
    </rule>
 
    <rule>
-      <title>Raise a Shield</title>
-      <action>1</action>
-      <requirement>You are wielding a shield.</requirement>
+      <title>Sarenrae, the Dawnflower</title>
 
-      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
+      <line>Sarenrae is one of the most popular deities on Golarion by virtue of her association with the life-giving sun and her perpetual offer to help anyone be their best, even when they have made mistakes.</line>
+      <line list="Details">
+         <entry name="Areas of Concern">healing, honesty, redemption, and the sun</entry>
+         <entry name="Domains">fire, healing, sun, truth</entry>
+         <entry name="Edicts">destroy the Spawn of Rovagug, protect your allies, provide aid to the sick and wounded, seek and allow redemption</entry>
+         <entry name="Anathema">create undead, lie, deny a repentant creature an opportunity for redemption, fail to strike down evil</entry>
+      </line>
    </rule>
 
    <rule>
-      <title>Shield Block</title>
-      <action>R</action>
-      <type>Feat</type> <level>1</level>
-      <trait>General</trait>
-      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+      <title>Treat Wounds</title>
+      <trait>Exploration</trait> <trait>Healing</trait> <trait>Manipulate</trait>
+      <requirements>You are holding healer's tools, or you are wearing them and have a hand free</requirements>
 
-      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
+      <line>You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes).</line>
+      <line>The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you're a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you're legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a critical failure remains the same.</line>
+
+      <line results="">
+         <critsuccess>The target regains the second healing value, and its wounded condition is removed.</critsuccess>
+         <success>The target regains the first healing value, and its wounded condition is removed.</success>
+         <critfail>The target takes 1d8 damage.</critfail>
+      </line>
+
+      <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
+
+      <line><![CDATA[<b>Treat Wounds, healing by proficiency</b>]]></line>
+      <line list="">
+         <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
+         <entry>Expert Proficiency (DC 20) - 2d8 + 10 / 4d8 + 10</entry>
+         <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
+         <entry>Legendary Proficiency (DC 40) - 2d8 + 50 / 4d8 + 50</entry>
+      </line>
    </rule>
 
    <rule>
@@ -87,15 +106,13 @@
    </rule>
 
    <rule>
-      <title>Sarenrae, the Dawnflower</title>
+      <title>Shield Block</title>
+      <action>R</action>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
 
-      <line>Sarenrae is one of the most popular deities on Golarion by virtue of her association with the life-giving sun and her perpetual offer to help anyone be their best, even when they have made mistakes.</line>
-      <line list="Details">
-         <entry name="Areas of Concern">healing, honesty, redemption, and the sun</entry>
-         <entry name="Domains">fire, healing, sun, truth</entry>
-         <entry name="Edicts">destroy the Spawn of Rovagug, protect your allies, provide aid to the sick and wounded, seek and allow redemption</entry>
-         <entry name="Anathema">create undead, lie, deny a repentant creature an opportunity for redemption, fail to strike down evil</entry>
-      </line>
+      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
    </rule>
 
    <rule>
@@ -162,19 +179,25 @@
    </rule>
 
    <rule>
-      <title>Cast a Spell</title>
+      <title>Battle Medicine</title>
+      <type>Feat</type> <level>1</level>
+      <action>1</action>
+      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
+      <prereq>trained in Medicine</prereq>
+      <requirements>You are holding healder's tools, or you are wearing them and have a hand free</requirements>
 
-      <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
-      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity. Such cases will be noted in the spell's stat block (for example, "<![CDATA[<b>Cast </b> <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">R</span>]]> verbal").</line>
-      <line><![CDATA[<b>Long Casting Times </b>]]> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes a mix of the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
-      <line><![CDATA[<b>Spell Components </b>]]> Each spell lists the spell components required to cast it after the action icons or text, such as "<![CDATA[<span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">3</span>]]> material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
-      <line list="">
-         <entry name="Material (manipulate);">A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
-         <entry name="Somatic (manipulate);">A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
-         <entry name="Verbal (concentrate);">A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
-         <entry name="Focus (manipulate);">A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
-      </line>
-      <line><![CDATA[<b>Disrupted and Lost Spells </b>]]> Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
+      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day.</line>
+      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
+   </rule>
+
+   <rule>
+      <title>Aura of Courage</title>
+      <type>Feat</type> <level>4</level>
+      <trait>Champion</trait>
+      <prereq>tenets of good</prereq>
+
+      <line>You stand strong in the face of danger and inspire your allies to do the same. Whenever you become frightened, reduce the condition value by 1 (to a minimum of 0).</line>
+      <line>At the end of your turn, when you would reduce your frightened condition value by 1, you also reduce the value by 1 for all allies within 15 feet.</line>
    </rule>
 
    <rule>
@@ -200,6 +223,22 @@
       <requirement>You have a focus pool, and you have spent at least 1 Focus Point since you last regained any Focus Points.</requirement>
 
       <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a good deity can usually Refocus while tending the wounds of their allies, and a wizard of the illusionist school might be able to Refocus while attempting to Identify Magic of the illusion school.</line>
+   </rule>
+
+   <rule>
+      <title>Cast a Spell</title>
+
+      <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
+      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity. Such cases will be noted in the spell's stat block (for example, "<![CDATA[<b>Cast </b> <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">R</span>]]> verbal").</line>
+      <line><![CDATA[<b>Long Casting Times </b>]]> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes a mix of the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
+      <line><![CDATA[<b>Spell Components </b>]]> Each spell lists the spell components required to cast it after the action icons or text, such as "<![CDATA[<span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">3</span>]]> material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
+      <line list="">
+         <entry name="Material (manipulate);">A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
+         <entry name="Somatic (manipulate);">A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
+         <entry name="Verbal (concentrate);">A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
+         <entry name="Focus (manipulate);">A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
+      </line>
+      <line><![CDATA[<b>Disrupted and Lost Spells </b>]]> Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
    </rule>
 
    <rule>
@@ -242,6 +281,6 @@
       <line>You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 for 1 round.</line>
 
       <heighten value="+1">The damage increases by 1d6.</heighten>
-      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate divine spell.</special>
+      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate spell.</special>
    </rule>
 </catalog>
