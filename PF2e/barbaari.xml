@@ -143,6 +143,76 @@
       <line>Your foes struggle to pass your defenses. You aren't flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your or lower using Surprise Attack. However, they can still help their allies flank.</line>
     </rule>
 
+    <rule>
+      <title>Titan Wrestler</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Athletics</prereq>
+
+      <line>You can attempt to Disarm, Grapple, Shover, or Trip creatures up to two sizes larger than you, or up to three sizes larger than you if you're legendary in Athletics.</line>
+   </rule>
+
+   <rule>
+      <title>Disarm</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand. Your target isn't more than one size larger than you.</requirement>
+
+      <line>You try to knock something out of a creature's grasp. Attempt an Athletics check against the target's Reflex DC.</line>
+      <line results="">
+         <critsuccess>You knock the item out of the target's grasp. It falls to the ground in the target's space.</critsuccess>
+         <success>You weaken your target's grasp on the item. Further attempts to Disarm the target of that item gain a +2 circumstance bonus, and the target takes a -2 circumstance penalty to attacks with the item or other checks requiring a firm graps on the item. The creature can end the effect by Interacting to change its grip on the item; otherwise, it lasts as long as the creature holds the item.</success>
+         <critfail>You lose your balance, and become flat-footed until the start of your next turn.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Trip</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand. Your target isn't more than one size larger than you.</requirement>
+
+      <line>You try to knock a creature to the ground. Attempt an Athletics check against the target's Reflex DC.</line>
+      <line results="">
+         <critsuccess>The target falls and lands prone and takes 1d6 bludgeoning damage. The damage increases to 2d6 if you are a master in Athletics, and to 3d6 if you're legendary.</critsuccess>
+         <success>The target falls and lands prone.</success>
+         <critfail>You lose your balance, and fall prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Grapple</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand or have your target grappled or restrained. Your target isn't more than one size larger than you.</requirement>
+
+      <line>You attempt to grab a creature or object with your free hand. Attempt an Athletics check against the target's Fortitude DC. You can Grapple a target you already have grabbed or restrained without having a hand free.</line>
+      <line results="">
+         <critsuccess>Your target is restrained until the end of your next turn unless you move or your target Escapes.</critsuccess>
+         <success>Your target is grabbed until the end of your next turn unless you move or your target Escapes.</success>
+         <fail>You fail to grab your target. If you already had the target grabbed or restrained using a Grapple, those conditions on that creature or object end.</fail>
+         <critfail>If you already had the target grabbed or restrained, it breaks free. Your target can either grab you, as if it succeed at using the Grapple action against you, or force you to fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Shove</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand. Your target isn't more than one size larger than you.</requirement>
+
+      <line>You push a creature away from you. Attempt an Athletics check against your target's Fortitude DC.</line>
+      <line results="">
+         <critsuccess>You push the target up to 10 feet away from you. You can Stride after it, but you must move the same distance and in the same direction.</critsuccess>
+         <success>You push the target back 5 feet. You can Stride after it, but you must move the same distance and in the same direction.</success>
+         <critfail>You lose your balance, and fall prone.</critfail>
+      </line>
+   </rule>
+
    <rule>
       <title>Sudden Charge</title>
       <type>Feat</type> <level>1</level>
@@ -162,5 +232,15 @@
       <trait>Barbarian</trait> <trait>Rage</trait>
 
       <line>Desperate to finish the fight, you pour all your rage into one final blow. Make a Strike. If it hits, you gain a circumstance bonus to damage equal to the number of rounds remaining in your Rage (maximum 10). After this Strike, your Rage immediately ends, and you are fatigued until you rest for at least 10 minutes.</line>
+   </rule>
+
+   <rule>
+      <title>Swipe</title>
+      <type>Feat</type> <level>4</level>
+      <action>2</action>
+      <trait>Barbarian</trait> <trait>Flourish</trait>
+
+      <line>You make a wide, arcing swing. Make single melee Strike and compare the attack roll result to the ACs of up to two foes, each of whom must be within your melee reach and adjacent to the other. Roll damage only once and apply it to each creature you hit. A Swipe counts as two attacks for your multiple attack penalty.</line>
+      <line>If you're using a weapon with the sweep trait, its modifier applies to all your Swipe attacks.</line>
    </rule>
 </catalog>
