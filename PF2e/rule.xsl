@@ -291,6 +291,14 @@
                      </xsl:if>
                   </div>
                </xsl:if>
+               <xsl:if test="base">
+                  <div id="baseitem" class="line" style="float: left;">
+                     <xsl:if test="base">
+                        <b>Base <xsl:value-of select="base/@item"/> </b>
+                        <xsl:value-of select="base" disable-output-escaping="yes" />
+                     </xsl:if>
+                  </div>
+               </xsl:if>
                <xsl:if test="access">
                   <div id="access" class="line" style="float: left;">
                      <xsl:if test="access">
