@@ -294,7 +294,7 @@
                <xsl:if test="base">
                   <div id="baseitem" class="line" style="float: left;">
                      <xsl:if test="base">
-                        <b>Base <xsl:value-of select="base/@item"/> </b>
+                        <b>Base <xsl:value-of select="base/@item"/><xsl:text> </xsl:text></b>
                         <xsl:value-of select="base" disable-output-escaping="yes" />
                      </xsl:if>
                   </div>
