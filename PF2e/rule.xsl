@@ -215,7 +215,10 @@
                      <xsl:if test="cast">
                         <b>Cast </b><span style="font-family: 'pfactions'; font-size: 1.35em; text-align: center;"><xsl:value-of select="cast/@action" /> </span><xsl:text> </xsl:text>
                         <xsl:if test="cast/@to">
-                           <xsl:text>to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.4em; text-align: center;"><xsl:value-of select="cast/@to" /> </span><xsl:text> </xsl:text>
+                           <xsl:text>to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.35em; margin-top:0em; margin-bottom:0em; text-align: center;"><xsl:value-of select="cast/@to" /> </span><xsl:text> </xsl:text>
+                        </xsl:if>
+                        <xsl:if test="cast/@or">
+                           <xsl:text>or </xsl:text><span style="font-family: 'pfactions'; font-size: 1.35em; text-align: center;"><xsl:value-of select="cast/@or" /> </span><xsl:text> </xsl:text>
                         </xsl:if>
                         <xsl:value-of select="cast" disable-output-escaping="yes" />
                         <xsl:if test="trigger">
