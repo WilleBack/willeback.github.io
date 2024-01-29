@@ -46,7 +46,7 @@
                .line {
                width:100%;
                box-sizing:border-box;
-               padding:0.1em 0.3em;
+               padding:0.1em 0.15em 0.1em 0.3em;
                text-indent:-1em;
                padding-left:1.3em;
                float:left;
@@ -160,7 +160,7 @@
          <xsl:call-template name="createheader" />
 
          <xsl:if test="tradition or cast or range or area or save or duration or prereq or frequency or trigger or requirement or craft or ammunition or usage or hands or reload or bulk or weaptype or weapcat or group or activate or price or access">
-            <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-bottom: 0.1em solid black;">
+            <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; padding-top: 0em; float:left; border-bottom: 0.1em solid black;">
                <xsl:if test="prereq">
                   <div id="prereq" class="line" style="float: left;">
                      <b>Prerequisites </b>
@@ -408,6 +408,9 @@
                </xsl:when>
                <xsl:otherwise>
                   <div id="description" class="line" style="float: left;">
+                     <xsl:if test="@name">
+                        <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
+                     </xsl:if>
                      <xsl:value-of select="." disable-output-escaping="yes"/>
                   </div>
                </xsl:otherwise>
@@ -492,19 +495,19 @@
          </div>
       </div>
       <div>
-         <div id="traits" style="width: 100%; float: left; margin: 0.1em; color: white;">
+         <div id="traits" style="width: 100%; float: left; margin: 0.1em; margin-bottom:0em; color: white;">
             <xsl:if test="uncommon" >
-               <div id="rarity" style="float:left; margin: 0.1em; border: 0.2em solid gold; background-color: #c45500; font-variant: small-caps; padding: 0.3em 0.4em;">
+               <div id="rarity" style="float:left; margin: 0.1em; border: 0.2em solid gold; background-color: #c45500; font-variant: small-caps; padding: 0.3em 0.3em;">
                   <xsl:text>Uncommon</xsl:text>
                </div>
             </xsl:if>
             <xsl:if test="rare" >
-               <div id="rarity" style="float:left; margin: 0.1em; border: 0.2em solid gold; background-color: #0c1466; font-variant: small-caps; padding: 0.3em 0.4em;">
+               <div id="rarity" style="float:left; margin: 0.1em; border: 0.2em solid gold; background-color: #0c1466; font-variant: small-caps; padding: 0.3em 0.3em;">
                   <xsl:text>Rare</xsl:text>
                </div>
             </xsl:if>
             <xsl:for-each select="trait">
-               <div id="trait" style="float:left; margin: 0.1em; border: 0.2em solid gold; background-color: #5d0000; font-variant: small-caps; padding: 0.3em 0.4em;">
+               <div id="trait" style="float:left; margin: 0.1em; border: 0.2em solid gold; background-color: #5d0000; font-variant: small-caps; padding: 0.3em 0.3em;">
                   <xsl:value-of select="." />
                </div>
             </xsl:for-each>

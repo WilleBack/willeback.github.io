@@ -48,6 +48,15 @@
    </rule>
 
    <rule>
+      <title>Continual Recovery</title>
+      <type>Feat</type> <level>2</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>expert in Medicine</prereq>
+
+      <line>You zealously monitor a patient's progress to administer treatment faster. When you Treat Wounds, your patient becomes immune only for 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives.</line>
+   </rule>
+
+   <rule>
       <title>Treat Wounds</title>
       <trait>Exploration</trait> <trait>Healing</trait> <trait>Manipulate</trait>
       <requirements>You are holding healer's tools, or you are wearing them and have a hand free</requirements>
@@ -70,6 +79,24 @@
          <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
          <entry>Legendary Proficiency (DC 40) - 2d8 + 50 / 4d8 + 50</entry>
       </line>
+   </rule>
+
+   <rule>
+      <title>Raise a Shield</title>
+      <action>1</action>
+      <requirement>You are wielding a shield.</requirement>
+
+      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
+   </rule>
+
+   <rule>
+      <title>Shield Block</title>
+      <action>R</action>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+
+      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
    </rule>
 
    <rule>
@@ -119,55 +146,16 @@
          <entry>Polluting the air.</entry>
          <entry>Allowing those who cause major air pollution or climate shifts to go unpunished. This doesn't force you to take action against merely potential harm to the environment or to sacrifice yourself against an obviously superior foe.</entry>
       </line>
+      <line>The following act is anathema to druids of the wild order:</line>
+      <line list="">
+         <entry>Becoming fully domesticated by the temptations of civilization. This doesn't prevent you from buying and using processed goods or staying in a city for an adventure, but you can never come to rely on these conveniences or truly call such a place your permanent home.</entry>
+      </line>
    </rule>
 
    <rule>
       <title>Druidic Language</title>
 
       <line>You know Druidic, a secret language known only to druids, in addition to any languages you know through your ancestry. Druidic has its own alphabet.</line>
-   </rule>
-
-   <rule>
-      <title>Raise a Shield</title>
-      <action>1</action>
-      <requirement>You are wielding a shield.</requirement>
-
-      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
-   </rule>
-
-   <rule>
-      <title>Shield Block</title>
-      <action>R</action>
-      <type>Feat</type> <level>1</level>
-      <trait>General</trait>
-      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
-
-      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
-   </rule>
-
-   <rule>
-      <title>Primal Spellcasting</title>
-
-      <line>The power of the wild world flows through you. You can cast primal spells using the Cast a Spell activity, and you can supply material, somatic, and verbal components when casting spells. Because you're a druid, you can usually hold a primal focus (such as holly and mistletoe) for spells requiring material components instead of needing to use a material component pouch.</line>
-      <line>At 1st level, you can prepare two 1st-level spells and five cantrips each morning from the common spells on the primal spell list, or from other primal spells to which you gain access. Prepared spells remain available to you until you cast them or until you prepare your spells again. The number of spells you can prepare is called your spells slots.</line>
-      <line>Some of your spells require you to attempt a spell attack roll to see how effective they are, or have your enemies roll against your spell DC. Since your key ability is Wisdom, your spell attack rolls and spell DCs use your Wisdom modifier.</line>
-      <line><![CDATA[<b>Cantrips</b>]]></line>
-      <line>Some of your spells are cantrips. A cantrip is a special type of spell that doesnt use spell slots. You can cast a cantrip at will, any number of times per day.</line>
-   </rule>
-
-   <rule>
-      <title>Order Spells</title>
-
-      <line>Order spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you start with a focus pool of 1 Focus Point. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to commune with local nature spirits or otherwise tend to the wilderness in a way befitting your order.</line>
-      <line>Focus spells don't require spell slots to cast, and you can't cast them using spell slots. Selecting druid feats can give you more focus spells and increase the size of your focus pool, though your focus pool can never hold more than 3 points.</line>
-   </rule>
-
-   <rule>
-      <title>Refocus</title>
-      <trait>Concentrate</trait> <trait>Exploration</trait>
-      <requirement>You have a focus pool, and you have spent at least 1 Focus Point since you last regained any Focus Points.</requirement>
-
-      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a good deity can usually Refocus while tending the wounds of their allies, and a wizard of the illusionist school might be able to Refocus while attempting to Identify Magic of the illusion school.</line>
    </rule>
 
    <rule>
@@ -187,24 +175,34 @@
    </rule>
 
    <rule>
-      <title>Reach Spell</title>
-      <action>1</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
+      <title>Order Explorer</title>
+      <type>Feat</type> <level>2</level>
+      <trait>Druid</trait>
 
-      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
+      <line>You have learned the secrets of another druidic order, passing whatever rites of initiation that order requires and gaining access to its secrets. Choose an order other than your own.</line>
+      <line>You gain a 1st-level feat that lists that order as a prerequisite, and you are now a member of that order for the purpose of meeting feat prerequisites.</line>
+      <line>If you commit acts anathema to your new order, you lose all feats and abilities requiring that order but retain your other druid feats and abilities. You don't gain any of the other benefits of the order you chose.</line>
+      <line name="Choice:">You chose the wild order, and gained the Wild Shape feat.</line>
+      <special>You can take this feat multiple times. Each time you do, you must choose a different order other than your own.</special>
    </rule>
 
    <rule>
-      <title>Tempest Surge</title>
-      <type>Focus</type> <level>1</level>
-      <uncommon /> <trait>Air</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Evocation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <targets>1 creature</targets>
-      <save>Reflex</save>
+      <title>Wild Shape</title>
+      <type>Feat</type> <level>1</level>
+      <trait>Druid</trait>
+      <prereq>wild order</prereq>
 
-      <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage. The Target must attempt a basic Reflex save. On a failure, the target also is clumsy 2 for 1 round and takes 1 persistent electricity damage.</line>
-      <heighten value="+1">The initial damage increases by 1d12, and the persistent electricity damage on a failure increases by 1.</heighten>
+      <line>You are one with the wild, always changing and adapting to meet any challenge. You gain the <![CDATA[<i>wild shape</i>]]> order spell, which lets you transform into a variety of forms that you can expand with druid feats.</line>
+   </rule>
+
+   <rule>
+      <title>Primal Spellcasting</title>
+
+      <line>The power of the wild world flows through you. You can cast primal spells using the Cast a Spell activity, and you can supply material, somatic, and verbal components when casting spells. Because you're a druid, you can usually hold a primal focus (such as holly and mistletoe) for spells requiring material components instead of needing to use a material component pouch.</line>
+      <line>At 1st level, you can prepare two 1st-level spells and five cantrips each morning from the common spells on the primal spell list, or from other primal spells to which you gain access. Prepared spells remain available to you until you cast them or until you prepare your spells again. The number of spells you can prepare is called your spells slots.</line>
+      <line>Some of your spells require you to attempt a spell attack roll to see how effective they are, or have your enemies roll against your spell DC. Since your key ability is Wisdom, your spell attack rolls and spell DCs use your Wisdom modifier.</line>
+      <line><![CDATA[<b>Cantrips</b>]]></line>
+      <line>Some of your spells are cantrips. A cantrip is a special type of spell that doesnt use spell slots. You can cast a cantrip at will, any number of times per day.</line>
    </rule>
 
    <rule>
@@ -221,5 +219,115 @@
          <entry>Focus (manipulate); A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
       </line>
       <line><![CDATA[<b>Disrupted and Lost Spells </b>]]> Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
+   </rule>
+
+   <rule>
+      <title>Reach Spell</title>
+      <action>1</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
+
+      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
+   </rule>
+
+   <rule>
+      <title>Order Spells</title>
+
+      <line>Order spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you start with a focus pool of 1 Focus Point. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to commune with local nature spirits or otherwise tend to the wilderness in a way befitting your order.</line>
+      <line>Focus spells don't require spell slots to cast, and you can't cast them using spell slots. Selecting druid feats can give you more focus spells and increase the size of your focus pool, though your focus pool can never hold more than 3 points.</line>
+   </rule>
+
+   <rule>
+      <title>Refocus</title>
+      <trait>Concentrate</trait> <trait>Exploration</trait>
+      <requirement>You have a focus pool, and you have spent at least 1 Focus Point since you last regained any Focus Points.</requirement>
+
+      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a good deity can usually Refocus while tending the wounds of their allies, and a wizard of the illusionist school might be able to Refocus while attempting to Identify Magic of the illusion school.</line>
+   </rule>
+
+   <rule>
+      <title>Tempest Surge</title>
+      <type>Focus</type> <level>1</level>
+      <uncommon /> <trait>Air</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <save>Reflex</save>
+
+      <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage. The Target must attempt a basic Reflex save. On a failure, the target also is clumsy 2 for 1 round and takes 1 persistent electricity damage.</line>
+      <heighten value="+1">The initial damage increases by 1d12, and the persistent electricity damage on a failure increases by 1.</heighten>
+   </rule>
+
+   <rule>
+      <title>Wild Shape</title>
+      <type>Focus</type> <level>1</level>
+      <uncommon /> <trait>Druid</trait> <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>1 minute (or longer)</duration>
+
+      <line>You infuse yourself with primal essence and transform yourself into another form. You can polymorph into any form listed in <![CDATA[<i>pest form</i>]]>, which lasts for 10 minutes. All other <![CDATA[<i>wild shape</i>]]> forms last 1 minute.</line>
+      <line>You can add more forms to your <![CDATA[<i>wild shape</i>]]> list with druid feats; your feat might grant you some or all of the forms from a given polymorph spell. When you transform into a form from a spell, you gain all the effects of the form you choose from a version of the spell heightened to <![CDATA[<i>wild shape</i>]]>'s level.</line>
+      <line><![CDATA[<i>Wild shape</i>]]> allows you to use your own shapeshifting training more easily than most polymorph spells. When you choose to use your own attack modifier while polymorphed instead of the form's default attack modifier, you gain a +2 status bonus to your attack rolls.</line>
+
+      <heighten value="2nd">You can also <![CDATA[<i>wild shape</i>]]> into the forms listed in <![CDATA[<i>animal form</i>]]>.</heighten>
+   </rule>
+
+   <rule>
+      <title>Pest Form</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>10 minutes</duration>
+
+      <line>You transform into the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on the form's Size or statistics. While in this form, you gain the animal trait, and you can't make Strikes. You can Dismiss the spell.</line>
+      <line>You gain the following statistics and abilities:</line>
+      <line list="">
+         <entry>AC = 15 + your level. You ignore your armor's check penalty and Speed reduction.</entry>
+         <entry>Speed of 20 feet.</entry>
+         <entry>Weakness 5 to physical damage, meaning if you take physical damage in this form, you take 5 additional damage.</entry>
+         <entry>Low-light vision and imprecise scent 30 feet.</entry>
+         <entry>Acrobatics and Stealth modifiers of +10, unless your own modifier is higher; Atheletics modifier of -4.</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Animal Form</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>1 minute</duration>
+
+      <line>You call upon primal energy to transform yourself into a Medium animal battle form. When you cast this spell, choose ape, bear, bull, canine, cat, deer, frog, shark, or snake. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form's Size or statistics. While in this form, you gain the Animal trait. You can Dismiss the spell.</line>
+      <line>You gain the following statistics and abilities regardless of which battle form you choose:</line>
+      <line list="">
+         <entry>AC = 16 + your level. Ignore your armor check penalty and Speed reduction.</entry>
+         <entry>5 temporary hit points.</entry>
+         <entry>Low-light vision and imprecise scent 30 feet.</entry>
+         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
+         <entry>Athletics modifier of +9, unless your own modifier is higher.</entry>
+      </line>
+      <line>You also gain specific abilities based on the type of animal you choose:</line>
+      <line list="">
+         <entry name="Ape">Speed 25 feet, climb Speed 20 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fist, <b>Damage </b>]]> 2d6 bludgeoning.</entry>
+         <entry name="Bear">Speed 30 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d8 piercing; <br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]> 1d8 slashing.</entry>
+         <entry name="Bull">Speed 30 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> horn, <b>Damage </b>]]>2d8 piercing.</entry>
+         <entry name="Canine">Speed 40 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing.</entry>
+         <entry name="Cat">Speed 40 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 pierching; <br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]>1d10 slashing.</entry>
+         <entry name="Deer">Speed 50 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> antler, <b>Damage </b>]]> 2d6 piercing.</entry>
+         <entry name="Frog">Speed 25 feet, swim Speed 25 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 bludgeoning; <br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> tongue (reach 15 feet), <b>Damage </b>]]>2d4 bludgeoning.</entry>
+         <entry name="Shark">swim Speed 35 feet, breathe underwater but not in air; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing.</entry>
+         <entry name="Snake">Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; <![CDATA[<br/>
+         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fangs, <b>Damage </b>]]>2d4 piercing plus 1d6 poison.</entry>
+      </line>
    </rule>
 </catalog>

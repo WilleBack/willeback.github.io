@@ -19,7 +19,7 @@
          <entry><![CDATA[<b>Tidy</b>]]> Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.</entry>
       </line>
       <line><![CDATA[<i>Prestidigitation</i>]]> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the Spell.</line>
-      <line><![CDATA[<b>Otherwordly Magic:</b>]]> You gained this cantrip from your Otherwordly Magic ancestry feat. It is an arcane innate spell.</line>
+      <line name="Otherwordly Magic:">You gained this cantrip from your Otherwordly Magic ancestry feat. It is an arcane innate spell.</line>
    </rule>
 
    <rule>
@@ -36,6 +36,19 @@
       <heighten value="5th">The initial damage increases to 2d6 + your spellcasting ability modifier, the persistent damage increases to 3, and the splash damage increases to 2.</heighten>
       <heighten value="7th">The initial damage increases to 3d6 + your spellcasting ability modifier, the persistent damage increases to 4, and the splash damage increases to 3.</heighten>
       <heighten value="9th">The initial damage increases to 3d6 + your spellcasting ability modifier, the persistent damage increases to 5, and the splash damage increases to 4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Deep Breath</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Air</trait> <trait>Cantrip</trait>
+      <cast action="1">somatic</cast>
+      <duration>10 minutes</duration>
+
+      <line>You take an incredibly deep breath and can hold it for the spell's duration. You don't lose breath when hit, but you do lose all the air you inhaled if you speak (including to Cast a Spell). This spell doesn't create air; if you don't have air to breathe when you cast it, you get no benefit.</line>
+
+      <heighten value="2nd">The duration increases to 1 hour, and you lose only 10 minutes of breath if you speak.</heighten>
+      <heighten value="4th">The duration increases to 8 hours, and you lose only 10 minutes of breath if you speak.</heighten>
    </rule>
 
    <rule>
@@ -63,6 +76,21 @@
       <line>You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 for 1 round.</line>
 
       <heighten value="+1">The damage increases by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Eat Fire</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Fire</trait>
+      <cast action="T">somatic</cast>
+      <duration>until the end of your next turn</duration>
+
+      <line>You consume and ingest fire, making it less harmful to you. You gain resistance 5 to fire damage until the end of the current turn.</line>
+      <line>During the remaining duration of the spell, you can use the Belch Smoke action. The spell ends if you fall unconscious, inhale, or exhale (this includes speaking).</line>
+      <block>
+         <name>Belch Smoke</name> <action>1</action>
+         <part>You exhale what remains of the smoke, ending the spell and creating a smoke cloud in a 5-foot burst within 20 feet. All creatures within the smoke cloud are concealed, and all other creatures are concealed to them. The smoke lasts for 1 minute or until dispersed by a strong wind.</part>
+      </block>
    </rule>
 
    <rule>
@@ -95,6 +123,22 @@
       </line>
 
       <heighten value="+2">The damage increases by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Glass Shield</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Abjuration</trait> <trait>Cantrip</trait> <trait>Earth</trait>
+      <cast action="1">verbal</cast>
+      <save>basic Reflex</save> <duration>until the start of your next turn</duration>
+
+      <line>You summon a layer of glass to keep you from harm. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</line>
+      <line>While the spell is in effect, you can use the Shield Block reaction with your glass shield. The shield has Hardness 2 and 4 Hit Points. If this shield breaks, you can't cast this spell again for 10 minutes and, if the breaker is within 5 feet, they must succeed at a basic Reflex save or take 1d6 piercing damage from the glass shards.</line>
+
+      <heighten value="3rd">The shield has a Hardness of 4 and 8 Hit Points, and the damage increases to 2d6.</heighten>
+      <heighten value="5th">The shield has a Hardness of 7 and 16 Hit Points, and the damage increases to 3d6.</heighten>
+      <heighten value="7th">The shield has a Hardness of 10 and 24 Hit Points, and the damage increases to 4d6.</heighten>
+      <heighten value="9th">The shield has a Hardness of 14 and 32 Hit Points, and the damage increases to 5d6.</heighten>
    </rule>
 
    <rule>
@@ -134,6 +178,23 @@
    </rule>
 
    <rule>
+      <title>Needle Darts</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Attack</trait> <trait>Cantrip</trait> <trait>Evocation</trait> <trait>Metal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>60 feet</range> <targets>1 creature</targets>
+
+      <line>You shade needles out of a piece metal in your possession and sen them flying in a tight group toward one target. Make a ranged spell attack roll against the target's AC. The needles deal 3d4 piercing damage and might cause bleeding.</line>
+      <line results="">
+         <critsuccess>The target takes double damage and 1 persistent bleed damage.</critsuccess>
+         <success>The target takes full damage.</success>
+      </line>
+      <line>The needles impart any special properties of the metal that forms them; for instance, cold iron needles deal additional damage to creatures with weakness to cold iron. All needles are made of the same metal, and the metal returns to you after the attack.</line>
+
+      <heighten value="+1">You send additional needles, increasing the regular damage by 1d4 and increasing the persistent bleed damage on a critical hit by 1.</heighten>
+   </rule>
+
+   <rule>
       <title>Produce Flame</title>
       <type>Cantrip</type> <level>1</level>
       <trait>Attack</trait> <trait>Cantrip</trait> <trait>Evocation</trait> <trait>Fire</trait> <trait>Primal</trait>
@@ -147,6 +208,25 @@
       </line>
 
       <heighten value="+1">Increase the damage by 1d4 and the persistent damage on a critical hit by 1d4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Puff of Poison</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Evocation</trait> <trait>Inhaled</trait> <trait>Poison</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>5 feet</range> <targets>1 creature</targets>
+      <save>Fortitude</save>
+
+      <line>You exhale a shimmering cloud of toxic breath at an enemy's face. The target takes poison damage equal to your spellcasting modifier and 2 persistent poison damage, depending on its Fortitude save.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The target takes half initial and persistent damage.</success>
+         <fail>The target takes full initial and persistent damage.</fail>
+         <critfail>The target takes double initial and persistent damage.</critfail>
+      </line>
+
+      <heighten value="+2">The initial poison damage increases by 1d8 and the persistent poison damage increases by 2.</heighten>
    </rule>
 
    <rule>
@@ -249,6 +329,59 @@
    </rule>
 
    <rule>
+      <title>Dehydrate</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Fire</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <area>5-foot burst</area>
+      <save>Fortitude (see text)</save> <duration>1 minute</duration>
+
+      <line>You stir the inner fire of all things within the area, driving out moisture. All creatures in the area take 1d6 persistent fire damage with a basic Fortitude save; creatures with the water or plant traits get a result one degree of success worse than they rolled. The spell ends for a creature when its persistent damage ends.</line>
+      <line>A creature affected by <![CDATA[<i>dehydrate</i>]]> attempts an additional Fortitude save at the end of each of its turns, before rolling to recover from the persistent damage. It can forgo this additional save if it consumed water or similar hydrating liquid within the last round (typically, drinking requires a single action).</line>
+      <line results="">
+         <success>The creature takes no additional effect.</success>
+         <fail>The creature is enfeebled 1 until the end of its next turn.</fail>
+         <critfail>The creature is enfeebled 2 until the end of its next turn.</critfail>
+      </line>
+      <heighten value="+2">The range increases by 10 feet, the burst increases by 5 feet, and the persistent fire damage increases by 3d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Flourishing Flora</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Wood</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <area>5-foot burst</area>
+      <save>basic Reflex</save>
+
+      <line>Plants rapidly grow up from the ground. All creatures in the target area take 2d4 damage. The type of damage depends on the type of plant you choose to grow. On a critical failure, targets experience additional effects, also depending on what you choose to grow. The type of plant and its effects are chosen when you Cast the Spell.</line>
+      <line list="">
+         <entry name="Cacti">Piercing damage, and 1 persistent bleed damage on a critical failure.</entry>
+         <entry name="Flowers">Poison damage, and dazzled for 2 rounds on a critical failure.</entry>
+         <entry name="Fruits">Bludgeoning damage, and clumsy 1 for 2 rounds on a critical failure.</entry>
+         <entry name="Roots">Bludgeoning damage, and the affected creatures fall prone on a critical failure.</entry>
+      </line>
+      <heighten value="+1">The damage increases by 1d4, and the persistent bleed damage from cacti increases by 1.</heighten>
+   </rule>
+
+   <rule>
+      <title>Gust of Wind</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Air</trait> <trait>Evocation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>60-foot line.</area>
+      <save>Fortitude</save> <duration>until the start of your next turn</duration>
+
+      <line>A violent wind issues forth from your palm, blowing from the point where you are when you cast the spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Large or smaller creatures in the area must attempt a Fortitude save. Large or smaller creatures that later move into the gust must attempt the save when entering.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The creature can't move against the wind.</success>
+         <fail>The creature is knocked prone. If it was flying, it suffers the effects of critical failure instead.</fail>
+         <critfail>The creature is pushed 30 feet in the wind's direction, knocked prone, and takes 2d6 bludgeoning damage.</critfail>
+      </line>
+   </rule>
+
+   <rule>
       <title>Heal</title>
       <type>Spell</type> <level>1</level>
       <trait>Healing</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Primal</trait>
@@ -295,6 +428,24 @@
    </rule>
 
    <rule>
+      <title>Pummeling Rubble</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Earth</trait> <trait>Evocation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>15-foot cone</area>
+      <save>Reflex</save>
+
+      <line>A spray of heavy rocks flies through the air in front of you. The rubble deals 2d4 bludgeoning damage to each creature in the area. Each creature must attempt a Reflex save.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The creature takes half damage.</success>
+         <fail>The creature takes full damage and is pushed 5 feet away from you.</fail>
+         <critfail>The creature takes double damage and is pushed 10 feet away from you.</critfail>
+      </line>
+      <heighten value="+1">The damage increases by 2d4.</heighten>
+   </rule>
+
+   <rule>
       <title>Shillelagh</title>
       <type>Spell</type> <level>1</level>
       <trait>Plant</trait> <trait>Primal</trait> <trait>Transmutation</trait>
@@ -337,6 +488,22 @@
    </rule>
 
    <rule>
+      <title>Snowball</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Attack</trait> <trait>Cold</trait> <trait>Evocation</trait> <trait>Water</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 creature</targets>
+
+      <line>You throw a magically propelled and chilled ball of dense snow. The target takes 2d4 cold damage and potentially other effects, depending on the result of your ranged spell attack roll.</line>
+      <line results="">
+         <critsuccess>The target takes double damage and a -10-foot status penalty to its Speeds for 1 round.</critsuccess>
+         <success>The target takes full damage and a -5-foot status penalty to its Speeds for 1 round.</success>
+         <fail>No effect.</fail>
+      </line>
+      <heighten value="+1">The damage increases by 2d4.</heighten>
+   </rule>
+
+   <rule>
       <title>Spider Sting</title>
       <type>Spell</type> <level>1</level>
       <trait>Necromancy</trait> <trait>Poison</trait> <trait>Primal</trait>
@@ -363,36 +530,6 @@
 
    <rule>
       <category>2nd-level Druid Spells</category>
-      <title>Animal Form</title>
-      <type>Spell</type> <level>2</level>
-      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <duration>1 minute</duration>
-
-      <line>You call upon primal energy to transform yourself into a Medium animal battle form. When you first cast this spell, choose ape, bear, bull, canine, cat, deer, frog, shark, or snake. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form's Size or statistics. While in this form, you gain the Animal trait. You can Dismiss the spell.</line>
-      <line>You gain the following statistics and abilities regardless of which battle form you choose:</line>
-      <line list="">
-         <entry>AC = 16 + your level. Ignore your armor check penalty and Speed reduction.</entry>
-         <entry>5 temporary hit points.</entry>
-         <entry>Low-light vision and imprecise scent 30 feet.</entry>
-         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
-         <entry>Athletics modifier of +9, unless your own modifier is higher.</entry>
-      </line>
-      <line>You also gain specific abilities based on the type of animal you choose:</line>
-      <line list="">
-         <entry name="Ape">Speed 25 feet, climb Speed 20 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fist, <b>Damage </b>]]> 2d6 bludgeoning.</entry>
-         <entry name="Bear">Speed 30 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d8 piercing; <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]> 1d8 slashing.</entry>
-         <entry name="Bull">Speed 30 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> horn, <b>Damage </b>]]>2d8 piercing.</entry>
-         <entry name="Canine">Speed 40 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing.</entry>
-         <entry name="Cat">Speed 40 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 pierching; <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]>1d10 slashing.</entry>
-         <entry name="Deer">Speed 50 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> antler, <b>Damage </b>]]> 2d6 piercing.</entry>
-         <entry name="Frog">Speed 25 feet, swim Speed 25 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 bludgeoning; <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> tongue (reach 15 feet), <b>Damage </b>]]>2d4 bludgeoning.</entry>
-         <entry name="Shark">swim Speed 35 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing; breathe underwater but not in air.</entry>
-         <entry name="Snake">Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; <![CDATA[<b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fangs, <b>Damage </b>]]>2d4 piercing plus 1d6 poison.</entry>
-      </line>
-   </rule>
-
-   <rule>
       <title>Barkskin</title>
       <type>Spell</type> <level>2</level>
       <trait>Abjuration</trait> <trait>Plant</trait> <trait>Primal</trait>
