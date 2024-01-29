@@ -145,4 +145,58 @@
 
       <line>Your blow not only wounds creatures but also shatters their confidence. Make a melee Strike. If you hit and deal damage, the target is frightened 1, or frightened 2 on a critical hit.</line>
    </rule>
+
+   <rule>
+      <title>Scroll of Stinking Cloud</title>
+      <type>Item</type> <level>5</level>
+      <trait>Conjuration</trait> <trait>Consumable</trait> <trait>Poison</trait> <trait>Magical</trait> <trait>Scroll</trait>
+      <price>4 gp</price>
+      <usage>held in 1 hand</usage>
+      <bulk>L</bulk>
+      <range>120 feet</range> <area>20-foot burst</area>
+      <save>Fortitude</save> <duration>1 minute</duration>
+      <activate>
+         <action>2</action>
+         <type>Cast a Spell (somatic, verbal)</type>
+         <requirement linebreak="">You must have <![CDATA[<i>stinking cloud</i>]]> on your spell list</requirement>
+      </activate>
+
+      <line>This furled piece of parchment has been imbued with magical energy that allows you to create a cloud of putrid mists. All creatures in the cloud become concealed, and all creatures outside the cloud are concealed to creatures within it. A creature that ends its turn in the cloud must make a Fortitude save.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The creature is sickened 1.</success>
+         <fail>The creature is sickened 1, and slowed 1 while in the cloud.</fail>
+         <critfail>The creature is frightened 2, and slowed 1 while in the cloud.</critfail>
+      </line>
+      <line>The concealed condition is not a poison effect. You can Dismiss the cloud.</line>
+   </rule>
+
+   <rule>
+      <title>Crackling Bubble Gum, Lesser</title>
+      <type>Item</type> <level>5</level>
+      <trait>Alchemical</trait> <trait>Consumable</trait> <trait>Lozenge</trait>
+      <price>30 gp</price>
+      <usage>held in 1 hand</usage> <bulk>-</bulk>
+
+      <line>This tangy gum cracks and pops in your mouth as you chew it. While you're chewing <![CDATA[<i>lesser crackling bubble gum</i>]]>, for up to 10 minutes, you have a +1 item bonus to saving throws against auditory and sonic effects.</line>
+      <block>
+         <name>Pop the Bubble</name>
+         <trait>sonic</trait>
+         <part><name>Effect</name>You blow a bubble with the gum until it pops, after which it becomes inert. The pop deals 4d4 sonic damage in a 15-foot cone with a DC 19 basic Fortitude save. A creature that fails its save is also bound with sticky gum, taking a -10-foot penalty to its Speed for 1 minute. The creature can remove the gum with a total of 3 Interact actions. These actions don't have to be consecutive, and other creatures can provide the actions as well.</part>
+      </block>
+   </rule>
+
+   <rule>
+      <title>Everyneed Pack</title>
+      <type>Item</type> <level>3</level>
+      <uncommon/> <trait>Conjuration</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <price>20 gp</price>
+      <usage>worn backpack</usage> <bulk>1</bulk>
+
+      <line>Constructed of green material and decorated with a while Glyph of the Open Road, an <![CDATA[<i>everyneed pack</i>]]> has a dozen or more small pockets lning the inside. The pack is enchanted so that each pocket contains common, mundane gear, each item worth no more than 1 gp, such as chalk, flint and steel, and string. It doesn't contain any armor, shields, weapons, or items made of precious material.</line>
+      <line>Keep track of the exact value of the gear you retrieve from the pack. The pack becomes a mundane backpack after items of your choice with a combined value of 8 gp have been removed from it.</line>
+      <block>
+         <name>Activate</name> <type>1 minute (Interact)</type>
+      </block>
+   </rule>
 </catalog>
