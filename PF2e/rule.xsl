@@ -213,13 +213,13 @@
                <xsl:if test="trigger or cast">
                   <div id="triggercast" class="line" style="float: left;">
                      <xsl:if test="cast">
-                        <b>Cast </b><span style="font-family: 'pfactions'; font-size: 1.35em; text-align: center;"><xsl:value-of select="cast/@action" /> </span><xsl:text> </xsl:text>
+                        <b>Cast </b><!-- <span style="font-family: 'pfactions'; font-size: 1.35em; text-align: center;"><xsl:value-of select="cast/@action" /> </span><xsl:text> </xsl:text>
                         <xsl:if test="cast/@to">
                            <xsl:text>to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.35em; margin-top:0em; margin-bottom:0em; text-align: center;"><xsl:value-of select="cast/@to" /> </span><xsl:text> </xsl:text>
                         </xsl:if>
                         <xsl:if test="cast/@or">
                            <xsl:text>or </xsl:text><span style="font-family: 'pfactions'; font-size: 1.35em; text-align: center;"><xsl:value-of select="cast/@or" /> </span><xsl:text> </xsl:text>
-                        </xsl:if>
+                        </xsl:if> -->
                         <xsl:value-of select="cast" disable-output-escaping="yes" />
                         <xsl:if test="trigger">
                            <xsl:text>; </xsl:text>
@@ -486,13 +486,13 @@
             <span style="font-weight: bold; font-size:1.2em; margin:0.1em;">
                <xsl:value-of select="title" disable-output-escaping="yes"/>
             </span>
-            <xsl:if test="action">
-               <xsl:text>&#160;</xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action" /></span>
-               <xsl:if test="action/@to">
-                  <xsl:text> to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@to" /></span>
+            <xsl:if test="action or cast/@action">
+               <xsl:text>&#160;</xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action" /><xsl:value-of select="cast/@action" /></span>
+               <xsl:if test="action/@to or cast/@to">
+                  <xsl:text> to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@to" /><xsl:value-of select="cast/@to" /></span>
                </xsl:if>
-               <xsl:if test="action/@or">
-                  <xsl:text> or </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@or" /></span>
+               <xsl:if test="action/@or or cast/@to">
+                  <xsl:text> or </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@or" /><xsl:value-of select="cast/@or" /></span>
                </xsl:if>
             </xsl:if>
          </div>
