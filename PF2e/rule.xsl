@@ -491,7 +491,7 @@
                <xsl:if test="action/@to or cast/@to">
                   <xsl:text> to </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@to" /><xsl:value-of select="cast/@to" /></span>
                </xsl:if>
-               <xsl:if test="action/@or or cast/@to">
+               <xsl:if test="action/@or or cast/@or">
                   <xsl:text> or </xsl:text><span style="font-family: 'pfactions'; font-size: 1.8em; text-align: center;"><xsl:value-of select="action/@or" /><xsl:value-of select="cast/@or" /></span>
                </xsl:if>
             </xsl:if>
