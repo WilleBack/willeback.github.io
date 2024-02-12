@@ -13,7 +13,7 @@
    <list selection="8" />
    <list selection="9" />
    <list selection="10" />
-   <list selection="11" />
+   <!-- <list selection="11" />
    <list selection="12" />
    <list selection="13" />
    <list selection="14" />
@@ -32,7 +32,7 @@
    <list selection="27" />
    <list selection="28" />
    <list selection="29" />
-   <list selection="30" />
+   <list selection="30" /> -->
    
    <item>
       <title>Alchemical Launcher</title>
@@ -260,6 +260,44 @@
          <line indent="1"><name>Level 25</name>Climb speed equal to your ground speed +4.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Bracers of Defense</title>
+      <category>Common</category>
+      <fluff>These enchanted armbands can be activated can be activated to reduce the damage you take in melee</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You are hit by a melee attack</line>
+         <line><name>Effect</name>You reduce the damage you take from the triggering attack by 10.</line>
+         <line indent="1"><name>Level 12</name>Reduce by 15.</line>
+         <line indent="1"><name>Level 17</name>Reduce by 20.</line>
+         <line indent="1"><name>Level 22</name>Reduce by 25.</line>
+         <line indent="1"><name>Level 27</name>Reduce by 30.</line>
+      </block>
+   </item>
 
    <item>
       <title>Bracers of Enforced Regret</title>
@@ -278,6 +316,35 @@
          <name>Property</name>
          <line>While you're marked, you gain a +1 bonus to attack rolls and damage rolls against the enemy that marked you.</line>
          <line indent="1"><name>Level 12</name>+2 bonus</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bracers of Escape</title>
+      <category>Uncommon</category>
+      <fluff>These bracers can whisk you out of harm's way</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Teleportation</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>An enemy targets you with a melee attack</line>
+         <line><name>Effect</name>You teleport up to 1 squares.</line>
+         <line indent="1"><name>Level 17</name>Teleport up to 2 squares.</line>
+         <line indent="1"><name>Level 27</name>Teleport up to 5 squares.</line>
       </block>
    </item>
    
@@ -587,6 +654,45 @@
          <line indent="1"><name>Level 25</name>Close burst 1 (each ally in the burst); Each target gains a +4 power bonus to Fortitude until the start of the acting creature's next turn.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Dragontooth Shield</title>
+      <category>Common</category>
+      <fluff>Made to resemble a massive dragon's tooth, this shield can be a deadly weapon</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Arms</type> <subtype>Any shield</subtype>
+      <headline auto="attackenh" limit="shield"/>
+      <headline crit="d12" limit="shield"/>
+      <block>
+         <name>Property</name>
+         <line>This shield can be used as a one-handed melee weapon in the Pick group with a +2 proficiency bonus that deals 1d6 damage, and has the High Crit and Off-hand weapon properties.</line>
+      </block>
+      
+   </item>
 
    <item>
       <title>Executioner's Bracers</title>
@@ -667,14 +773,8 @@
          <bonus>+6</bonus>
          <price>1,125,000</price>
       </level>
-      <headline>
-         <name>Enhancement Bonus</name>
-         <text>Attack and damage rolls</text>
-      </headline>
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus</text>
-      </headline>
+      <headline auto="attackenh" limit="shield"/>
+      <headline crit="d6" limit="shield"/>
       <block>
          <name>Property</name>
          <line>This shield can be used as a one-handed melee weapon in the Heavy Blade group with a +3 proficiency bonus that deals 1d6 damage, and has the Off-hand weapon property.</line>
@@ -912,6 +1012,32 @@
          <line>Allies in the aura cannot be pushed, pulled, or slid unless they want to. An ally pushed, pulled, or slid into the aura can choose to negate any remaining forced movement.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Pelaurum Shield</title>
+      <category>Common</category>
+      <fluff>With this sparkling copper shield, the intense energy of an errant blast fuels your power when you next strike</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Arms Slot</type> <subtype>Any shield</subtype>
+      <block>
+         <name>Property</name>
+         <keyword>Radiant</keyword>
+         <line>When an attack that has the Fire or Radiant keyword misses you, the first melee attack you make before the end of your next turn also deals 2 radiant damage, or 3 radiant damge if the attack requires you to use a shield.</line>
+         <line indent="1"><name>Level 17</name>4 or 6 radiant damage, respectively.</line>
+         <line indent="1"><name>Level 27</name>6 or 9 radiant damage, respectively.</line>
+      </block>
+   </item>
 
    <item>
       <title>Phylactery of Action</title>
@@ -978,6 +1104,33 @@
          <line><name>Effect</name>Close burst 5 (one bloodied ally in the burst); The target gains resist 5 all until he or she is no longer bloodied or until the end of the encounter, whichever comes first.</line>
          <line indent="1"><name>Level 14</name>Resist 10 all.</line>
          <line indent="1"><name>Level 24</name>Resist 15 all.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Razor Bracers</title>
+      <category>Common</category>
+      <fluff>These steel arm plates are lined with sharp edges that make enemies thar grapple you pay dearly</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <block>
+         <name>Properties</name>
+         <line>The bracers have the following properties:</line>
+         <line><bullet/>You gain a +2 bonus to <![CDATA[<i>escape</i>]]> checks.</line>
+         <line><bullet/>When you escape a grab, you deal 1d12 damage to what was grabbing you. If you were grabbed by multiple creatures or effects, you deal half this damage to each.</line>
+         <line indent="1"><name>Level 17</name>2d12 damage.</line>
+         <line indent="1"><name>Level 27</name>3d12 damage.</line>
       </block>
    </item>
 
@@ -1183,6 +1336,33 @@
    </item>
    
    <item>
+      <title>Skull Bracers</title>
+      <category>Common</category>
+      <fluff>These heavy bracers are each mounted with a long dragonlike skull</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Arms Slot</type>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>The first attack you make before the end of the encounter deals +2d8 additional damage, or half this for a multiattack.</line>
+         <line indent="1"><name>Level 17</name>+3d8 additional damage.</line>
+         <line indent="1"><name>Level 27</name>+4d8 additional damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Stonewall Shield</title>
       <category>Common</category>
       <fluff>Favored by the dwarves, this shield can create a temporary barrier much like a wall</fluff>
@@ -1196,7 +1376,8 @@
       </level>
       <type>Arms Slot</type> <subtype>Any shield</subtype>
       <block>
-         <name>Conjuration</name>
+         <name>Utility Power</name>
+         <keyword>Conjuration</keyword>
          <frequency>Daily</frequency>
          <action>Standard</action> <subaction>Action</subaction>
          <line><name>Effect</name>Area wall 3 within 5 squares or Close wall 5; You create a wall of stone that is up to 2 squares high and lasts for 1 hour. The wall occupies its squares, and you cannot create the wall in occupied squares. If you use the Close version, it is enough that one square of the wall is adjacent to you, but it does not have to be the origin square of the wall.</line>
@@ -1246,7 +1427,7 @@
          <line><name>Hit</name>1d8 + Strength modifier damage.</line>
          <line indent="1"><name>Level 21 or 26</name>2d8 + Strength modifier damage.</line>
          <line><name>Special</name>This attack counts as being a Weapon attack for abilities the target might have.</line>
-         <line>Special (Level 16, 21 or 26): This power counts as a <![CDATA[<i>ranged basic attack</i>]]>.</line>
+         <line><name>Special (Level 16, 21 or 26)</name> This power counts as a <![CDATA[<i>ranged basic attack</i>]]>.</line>
       </block>
       <block>
          <name>Utility Power</name>

@@ -210,12 +210,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</div>
 		<xsl:choose>
 			<xsl:when test="count(level)>1 or type='Alchemical'">
-				<div class="pricetable">
+				<div class="pricetable" style="column-count:1; column-gap: 0;">
 					<xsl:for-each select="level">
-						<div class="priceline">
-							<div id="lvl" style="width: 4em; float: left;"><xsl:text>Lvl </xsl:text><xsl:value-of select="value" /></div>
+						<div class="priceline" style="width: calc(50% - 0.5em);">
+							<div id="lvl" style="width: 4em; float: left; padding-left: 0.1em;"><xsl:text>Lvl </xsl:text><xsl:value-of select="value" /></div>
 							<div id="enh" style="width: 3em; float:left;"><xsl:value-of select="bonus" />&#160;</div>
-							<div id="price" style="width:calc(100% - 8em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
+							<div id="price" style="width:calc(100% - 7.5em); float: left; text-align:right;"><xsl:value-of select="price" /><xsl:text>gp</xsl:text></div>
 						</div>
 					</xsl:for-each>
 				</div>
@@ -291,6 +291,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:for-each>
 			</xsl:when>
 			<xsl:otherwise>
+				<!-- <xsl:if test="subtype='Primordial Shard'">
+					<div class="line">
+						<b>Primordial Shard: </b> <xsl:text>You can benefit from only one primordial shard at a time. If you carry more than one, none of them function.</xsl:text>
+					</div>
+				</xsl:if> -->
 				<xsl:for-each select="headline">
 					<xsl:call-template name="headline-content"/>
 				</xsl:for-each>
@@ -299,40 +304,52 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 		<xsl:for-each select="block">
 			<div id="blockhead" style="background:linear-gradient(to right, #EFD09F, #f4debc); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
-				<div style="float:left; width: max-content; max-width: calc(100% - 14em);">
-					<b><xsl:value-of select="name" /> </b>
-					<xsl:if test="keyword">
-						<xsl:text> (</xsl:text>
-						<xsl:for-each select="keyword">
-							<xsl:value-of select="."/>
-							<xsl:if test="position()!=last()">
-								<xsl:text>, </xsl:text>
+				<div style="float:left; width:100%;">
+					<xsl:choose>
+						<xsl:when test="not(action)">
+							<b><xsl:value-of select="name" /> </b>
+							<xsl:if test="keyword">
+								&#x25C6;
+								<span class="keyword" style="font-variant: small-caps; width:calc(100% - 0.5em); margin:0.2em;">
+									<b><xsl:for-each select="keyword">
+										<xsl:value-of select="."/>
+										<xsl:if test="position()!=last()">
+											<xsl:text>, </xsl:text>
+										</xsl:if>
+									</xsl:for-each></b>
+								</span>
 							</xsl:if>
-						</xsl:for-each>
-						<xsl:text>)</xsl:text>
-					</xsl:if>
+						</xsl:when>
+						<xsl:otherwise>
+							<span class="keyword" style="font-variant: font-size: 1.2em; small-caps; width:calc(100% - 0.5em);"><b><xsl:value-of select="name" /></b></span>
+							<div style="float:left; width:100%; ">
+								<b><xsl:value-of select="frequency" /></b>
+								&#x25C6;
+								<b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text>
+								<xsl:choose>
+									<xsl:when test="subaction=''">
+										<xsl:text>Action</xsl:text>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="subaction" />
+									</xsl:otherwise>
+								</xsl:choose>
+							</div>
+						</xsl:otherwise>
+					</xsl:choose>
+					
 				</div>
-				<xsl:if test="action">
-					<div id="blob" style="width: 1.2em; float: left; text-align:center; ">
-						<xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
-					</div>
-					<div style="float:left; max-width:21em; ">
-						<b><xsl:value-of select="frequency" /></b> <xsl:text> (</xsl:text><b><xsl:value-of select="action" /></b>&#160;
-						<xsl:choose>
-							<xsl:when test="subaction=''">
-								<xsl:text>Action</xsl:text>
-							</xsl:when>
-							<xsl:otherwise>
-								<xsl:value-of select="subaction" />
-							</xsl:otherwise>
-						</xsl:choose>
-						<xsl:text>)</xsl:text>
-						<xsl:if test="note">
-							<xsl:text> </xsl:text><xsl:value-of select="note" disable-output-escaping="yes"/>
-						</xsl:if>
-					</div>
-				</xsl:if>
 			</div>
+			<xsl:if test="keyword and action">
+				<div class="keyword" style="font-variant: small-caps; float:left; width:calc(100% - 0.5em); margin:0.2em;">
+					<b><xsl:for-each select="keyword">
+						<xsl:value-of select="."/>
+						<xsl:if test="position()!=last()">
+							<xsl:text>, </xsl:text>
+						</xsl:if>
+					</xsl:for-each></b>
+				</div>
+			</xsl:if>
 			<xsl:choose>
 				<xsl:when test="spellbook">
 					<div class="line">
@@ -351,12 +368,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</div>
 				</xsl:when>
 				<xsl:when test="bookpower">
-					<div class="line"><i>Requirement: </i>You must have implement proficiency with this tome.</div>
-					<div class="line"><i>Effect: </i>Choose a power contained in this tome, and expend an unused arcane daily attack power of an equal or higher level.</div>
+					<div class="line"><b>Requirement: </b>You must have implement proficiency with this tome.</div>
+					<div class="line"><b>Effect: </b>Choose a power contained in this tome, and expend an unused arcane daily attack power of an equal or higher level.</div>
 					<div class="line">You gain the use of the chosen power during this encounter. The power is lost if not used before the end of the encounter.</div>
 				</xsl:when>
 				<xsl:when test="poison-fooddrink">
-					<div class="line"><i>Effect: </i>Melee touch (one item of food or drink); You apply the poison to the target. The poison retains potency until the end of the encounter.</div>
+					<div class="line"><b>Effect: </b>Melee touch (one item of food or drink); You apply the poison to the target. The poison retains potency until the end of the encounter.</div>
 					<div class="line">
 						<xsl:text>When a creature consumes the target food or drink while the poison retains potency, you make the following attack against that creature</xsl:text>
 						<xsl:if test="poison-fooddrink!=''">
@@ -378,6 +395,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<xsl:call-template name="blocklinecontent" />
 						</div>
 					</xsl:when>
+					<xsl:when test="@indent='3'">
+						<div class="line" style="padding-left:4.3em;">
+							<xsl:call-template name="blocklinecontent" />
+						</div>
+					</xsl:when>
+					<xsl:when test="@indent='4'">
+						<div class="line" style="padding-left:5.3em;">
+							<xsl:call-template name="blocklinecontent" />
+						</div>
+					</xsl:when>
 					<xsl:otherwise>
 						<div class="line">
 							<xsl:call-template name="blocklinecontent" />
@@ -386,7 +413,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:choose>
 			</xsl:for-each>
 			<xsl:if test="poison-fooddrink">
-				<div class="line"><i>Special: </i>If you want to apply the poison without being noticed, attempt a Thievery check against any observing creature's Passive Perception.</div>
+				<div class="line"><b>Special: </b>If you want to apply the poison without being noticed, attempt a Thievery check against any observing creature's Passive Perception.</div>
 			</xsl:if>
 		</xsl:for-each>
 
@@ -394,15 +421,43 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 </xsl:template>
 	
-<xsl:template name="blocklinecontent">
+	<xsl:template name="blocklinecontent">
+		<xsl:if test="bullet">
+			&#9658;<xsl:text> </xsl:text>
+		</xsl:if>
 	<xsl:if test="name">
-		<i><xsl:value-of select="name" />: </i>
+		<xsl:choose>
+			<xsl:when test="contains(name, 'Miss (Level')">
+				<b><xsl:value-of select="name" />: </b>
+			</xsl:when>
+			<xsl:when test="contains(name, 'Effect (Level')">
+				<b><xsl:value-of select="name" />: </b>
+			</xsl:when>
+			<xsl:when test="contains(name, 'Special (Level')">
+				<b><xsl:value-of select="name" />: </b>
+			</xsl:when>
+			<xsl:when test="contains(name, 'Aftereffect')">
+				<i><xsl:value-of select="name" />: </i>
+			</xsl:when>
+			<xsl:when test="contains(name, 'Failed Save')">
+				<i><xsl:value-of select="name" />: </i>
+			</xsl:when>
+			<xsl:when test="contains(name, 'Level')">
+				<i><xsl:value-of select="name" />: </i>
+			</xsl:when>
+			<xsl:when test="name/@style='italic'">
+				<i><xsl:value-of select="name" />: </i>
+			</xsl:when>
+			<xsl:when test="name/@style='under'">
+				<u><xsl:value-of select="name" />:</u><xsl:text> </xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<b><xsl:value-of select="name" />: </b>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:if>
 	<xsl:if test="augment">
 		<span style="font-variant:small-caps;"><b>Augment <xsl:value-of select="augment" />: </b></span>
-	</xsl:if>
-	<xsl:if test="bullet">
-		&#9658;<xsl:text> </xsl:text>
 	</xsl:if>
 	<xsl:choose>
 		<xsl:when test="@auto='bard'">
@@ -435,13 +490,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:text>When using this ammunition, you use the listed attack bonus instead of your own. You add your weapon's proficiency bonus to attack, but not its enhancement bonus or other modifiers.</xsl:text>
 		</xsl:when>
 		<xsl:when test="@auto='short-surge'">
-			<i>Special: </i>
+			<b>Special: </b>
 			<xsl:text>As part of a short rest, you can expend a healing surge to recharge this power.</xsl:text>
 		</xsl:when>
 		<xsl:when test="@auto='telepathy'">
 			<xsl:text>You gain telepathy </xsl:text>
 			<xsl:value-of select="text()"/>
 			<xsl:text>, allowing you to communicate with any other creature in your telepathy range that has a language and is within line of sight.</xsl:text>
+		</xsl:when>
+		<xsl:when test="@auto='limittelepathy'">
+			<xsl:text>You gain limited telepathy </xsl:text>
+			<xsl:value-of select="text()"/>
+			<xsl:text>, allowing you to communicate with any </xsl:text>
+			<xsl:value-of select="@creature"/>
+			<xsl:text> in your telepathy range that shares a language with you and is within line of sight.</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>
@@ -469,6 +531,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:when test="@auto='attackenh'">
 				<div class="line">
 					<b>Enhancement Bonus: </b><xsl:text>Attack rolls and damage rolls</xsl:text>
+					<xsl:if test="@limit">
+						<xsl:text> with the weapon from this </xsl:text>
+						<xsl:value-of select="@limit"/>
+						<xsl:text>'s property</xsl:text>
+					</xsl:if>
 				</div>
 			</xsl:when>
 			<xsl:when test="@auto='armorenh'">
@@ -486,8 +553,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<b>Item Bonus: </b>
 					<xsl:text>Damage rolls with </xsl:text>
 					<xsl:value-of select="text()" disable-output-escaping="yes"/>
-					<xsl:text> powers using this </xsl:text>
-					<xsl:value-of select="@itemdamage" disable-output-escaping="yes"/>
+					<xsl:text> powers</xsl:text>
+					<xsl:if test="@itemdamage!=''">
+						<xsl:text> using this </xsl:text>
+						<xsl:value-of select="@itemdamage" disable-output-escaping="yes"/>
+					</xsl:if>
 				</div>
 			</xsl:when>
 			<xsl:when test="@itembonus">
@@ -496,40 +566,29 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:value-of select="text()" disable-output-escaping="yes"/>
 				</div>
 			</xsl:when>
-			<xsl:when test="@crit='d4'">
+			<xsl:when test="@crit">
 				<div class="line">
-					<b>Critical: </b><xsl:text>+1d4 </xsl:text>
+					<b>Critical: </b><xsl:text>+1</xsl:text>
+					<xsl:value-of select="@crit"/>
 					<xsl:if test="text()">
-						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+						<xsl:text> </xsl:text><xsl:value-of select="text()"/>
 					</xsl:if>
-					<xsl:text>damage per plus</xsl:text>
-				</div>
-			</xsl:when>
-			<xsl:when test="@crit='d6'">
-				<div class="line">
-					<b>Critical: </b><xsl:text>+1d6 </xsl:text>
-					<xsl:if test="text()">
-						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+					<xsl:text> damage per plus</xsl:text>
+					<xsl:if test="@limit">
+						<xsl:text> with the weapon from this </xsl:text>
+						<xsl:value-of select="@limit"/>
+						<xsl:text>'s property</xsl:text>
 					</xsl:if>
-					<xsl:text>damage per plus</xsl:text>
-				</div>
-			</xsl:when>
-			<xsl:when test="@crit='d8'">
-				<div class="line">
-					<b>Critical: </b><xsl:text>+1d8 </xsl:text>
-					<xsl:if test="text()">
-						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+					<xsl:if test="@alt">
+						<xsl:text>, or +1</xsl:text>
+						<xsl:value-of select="@alt"/><xsl:text> damage per plus </xsl:text>
+						<xsl:value-of select="@condition" disable-output-escaping="yes"/>
 					</xsl:if>
-					<xsl:text>damage per plus</xsl:text>
-				</div>
-			</xsl:when>
-			<xsl:when test="@crit='d10'">
-				<div class="line">
-					<b>Critical: </b><xsl:text>+1d10 </xsl:text>
-					<xsl:if test="text()">
-						<xsl:value-of select="text()"/><xsl:text> </xsl:text>
+					<xsl:if test="@alt2">
+						<xsl:text>, or +1</xsl:text>
+						<xsl:value-of select="@alt2"/><xsl:text> damage per plus </xsl:text>
+						<xsl:value-of select="@condition2" disable-output-escaping="yes"/>
 					</xsl:if>
-					<xsl:text>damage per plus</xsl:text>
 				</div>
 			</xsl:when>
 			<xsl:otherwise>
@@ -552,7 +611,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:param name="bgcolor">Purple</xsl:param>
 
 	<div id="header" style="background-color:{$bgcolor}; width:100%; float:left; color:white; ">
-		<div id="title" style="float:left; margin:0.5em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9.5em);">
+		<div id="title" style="float:left; margin:0.4em; margin-top:0.3em; vertical-align:middle; font-size:1.2em; font-variant: small-caps; font-weight:bold; letter-spacing:1px; width:calc(100% - 9.5em);">
 			<xsl:value-of select="title"/>
 		</div>
 		<div id="classcat" style="width: 10em; float:right; text-align:right; font-size: 0.8em; margin:0.5em;">

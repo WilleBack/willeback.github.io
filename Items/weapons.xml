@@ -13,7 +13,7 @@
    <list selection="8" />
    <list selection="9" />
    <list selection="10" />
-   <list selection="11" />
+   <!-- <list selection="11" />
    <list selection="12" />
    <list selection="13" />
    <list selection="14" />
@@ -32,7 +32,7 @@
    <list selection="27" />
    <list selection="28" />
    <list selection="29" />
-   <list selection="30" />
+   <list selection="30" /> -->
 
    <item>
       <title>Acid Lash Weapon</title>
@@ -883,6 +883,47 @@
          <line><name>Special</name>You regain the use of this power the first time in an encounter you are bloodied.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Bloodmaul Weapon</title>
+      <category>Common</category>
+      <fluff>This bludgeon's red stains never seem to wash off</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Hammer</subtype> <subtype>Mace</subtype>
+      <headline auto="attackenh"/>
+      <headline><name>Critical</name>+1d6 damage per plus, or +1d10 damage per plus against a bloodied creature</headline>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You bloody an enemy with a Weapon attack using this weapon; the attack is not a critical hit</line>
+         <line><name>Effect</name>The triggering attack deals the additional critical damage against the triggering enemy.</line>
+      </block>
+   </item>
 
    <item>
       <title>Blood Fury Weapon</title>
@@ -984,6 +1025,49 @@
          <line><name>Trigger</name>You hit an enemy with an attack using this weapon</line>
          <line><name>Effect</name>The triggering enemy takes necrotic damage equal to three times this weapon's enhancement bonus.</line>
          <line>Also, you regain the use of the lowest-level arcane encounter attack you have expended.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Boltshard Crosbow</title>
+      <category>Common</category>
+      <fluff>You pull the trigger, spraying shards at your foes</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Crossbow</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Level 22 or 27</name>This power is an encounter power instead.</line>
+         <line><name>Effect</name>Close blast 3 (each creature in the blast); You make a <![CDATA[<i>ranged basic attack</i>]]> using this Crossbow against each target.</line>
+         <line indent="1"><name>Level 12 or 17</name>Close blast 4, and you push the target up to 2 squares on a hit.</line>
+         <line indent="1"><name>Level 22 or 27</name>Close blast 5, and you push the target up to 2 squares on a hit and half the distance on a miss.</line>
       </block>
    </item>
    
@@ -1757,6 +1841,102 @@
       <block>
          <name>Property</name>
          <line>When you take the <![CDATA[<i>total defense</i> or <i>second wind</i>]]> action, you gain an item bonus to all your defenses until the start of your next turn. The bonus equals this weapon's plus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Devil's Tongue Polearm</title>
+      <category>Common</category>
+      <fluff>This wicked polearm's red lacquered blade takes the shape of stylized flames atop a pole of burned wood reinforced with black iron</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Polearm</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8">fire</headline>
+      <block>
+         <name>Property</name>
+         <keyword>Fire</keyword>
+         <line>At the start of your turn, a creature within your melee reach and under your <![CDATA[<i>infernal captain's curse</i>]]> takes fire damage equal to 3 + twice this polearm's enhancement bonus.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy under your <![CDATA[<i>infernal captain's curse</i>]]> with a Weapon attack using this polearm</line>
+         <line><name>Effect</name>The triggering enemy is under your enhanced captain's curse (save ends) instead of the normal effect of you hitting a creature under the effects of your captain's curse.</line>
+         <line>While under the enhanced curse, the triggering enemy grants combat advantage to all creatures and sheds light like a torch. If you have the Infernal Captain's Fury feat, you can choose for all attacks against the triggering enemy to deal the fire damage from that feat instead of the triggering enemy granting combat advantage.</line>
+         <line>While the triggering enemy is under your enhanced curse, when you hit it, you do not gain the normal effect of hitting a creature under your captain's curse.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Devilblind Weapon</title>
+      <category>Uncommon</category>
+      <fluff>This weapon gleams with holy energy that devils find intensely painful</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="1d8 radiant" condition="against devils">radiant</headline>
+      <block>
+         <name>Property</name>
+         <line>You gain a +5 item bonus to saving throws against effects by devils.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Radiant</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit a devil with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering attack deals +1d8 additional radiant damage to the triggering devil, and the triggering devil is blinded (save ends).</line>
+         <line indent="1"><name>Level 12 or 17</name>+2d8 additional radiant damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>+3d8 additional radiant damage.</line>
       </block>
    </item>
    
@@ -3429,6 +3609,51 @@
          <line>You then shift a number of squares equal to the weapon's enhancement bonus.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Giantslaying Weapon</title>
+      <category>Uncommon</category>
+      <fluff>This weapon seeks out giantkind, helping deliver vicious strikes against those foes</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8" alt="d12" condition="agaist Large or larger humanoids"/>
+      <block>
+         <name>Property</name>
+         <line>You gain a bonus to damage rolls with Weapon attacks using this weapon against Large or larger humanoids. The bonus equals twice this weapon's enhancement bonus, or half that for multiattacks.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>A Large or larger humanoid pushes, pulls or slides you, stuns you, or knocks you prone</line>
+         <line><name>Effect</name>You negate the triggering forced movement, and are not stunned or knocked prone.</line>
+      </block>
+   </item>
 
    <item>
       <title>Goblin Totem</title>
@@ -4059,6 +4284,50 @@
          <line><name>Effect</name>Close burst 5 (one ally in the burst); The target can spend a healing surge to regain a number of hit points equal to your Wisdom modifier + five times this weapon's plus.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Homing Weapon</title>
+      <category>Uncommon</category>
+      <fluff>A clockwork mechanism fitted with lenses, dials, and levers helps your aim</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Bow</subtype> <subtype>Crossbow</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Property</name>
+         <line>Your Weapon attacks with this weapon ignore concealment, but not total concealment.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <subtype>Minor</subtype> <subtype/>
+         <line><name>Effect</name>The next Weapon attack you make with this weapon ignores cover, and you only take a -2 penalty to attack rolls for superior cover.</line>
+      </block>
+   </item>
 
    <item>
       <title>Howling Songbow</title>
@@ -4444,6 +4713,48 @@
          <line indent="1"><name>Level 23 or 28</name>Ongoing 15 fire damage.</line>
          <line indent="1"><name>Aftereffect</name>One enemy within 2 squares of the triggering creature takes the same amount of ongoing damage without this aftereffect.</line>
          <line indent="2"><name>Level 23 or 28</name>Within 3 squares.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Infighting Blade</title>
+      <category>Common</category>
+      <fluff>The closer your foes press, the more deadly this quick blade beomes</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Axe</subtype> <subtype>Light blade</subtype>
+      <headline><name>Requirement</name>This enhancement can only be placed on a one-handed weapon</headline>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d10" condition="against an enemy flanking you"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>Until the end of your current turn, you gain a power bonus to damage rolls with this weapon. The power bonus equals the number of enemies adjacent to you when you make the attack.</line>
+         <line>If you're wielding another <![CDATA[<i>infighting blade</i>]]> in your other hand, this bonus also applies to damage rolls with that weapon.</line>
       </block>
    </item>
 
@@ -5435,6 +5746,64 @@
    </item>
    
    <item>
+      <title>Needler Pistol</title>
+      <category>Rare</category>
+      <fluff>This odd device looks like a potion bottle or a flask that is strapped to a number of tubes</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Crossbow</subtype>
+      <headline><name>Requirement</name>This enhancement can only be placed on a hand crossbow</headline>
+      <headline auto="losttech"/>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Malfunction</name>
+         <line>When this weapon's power malfunctions or when you roll a natural 1 on an attack roll using it, you take damage equal to this weapon's level and ongoing 5 damage (save ends).</line>
+         <line indent="1"><name>Level 12 or 17</name>Ongoing 10 damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>Ongoing 15 damage.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <line>This weapon requires no immunition, and cannot use ammunition.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Weapon</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Attack</name>Close blast 3 (each creature in the blast); Item's level + 5 vs. AC</line>
+         <line indent="1"><name>Level 22 or 27</name>Close blast 4</line>
+         <line><name>Hit</name>2d8 damage, and ongoing 5 damage (save ends).</line>
+         <line indent="1"><name>Level 12 or 17</name>3d8 damage, and ongoing 10 damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>4d8 damage, and ongoing 15 damage.</line>
+         <line><name>Miss</name>Half damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Oathblade</title>
       <category>Common</category>
       <fluff>This fine steel weapon strikes deadly blows against the foe you swear to vanquish</fluff>
@@ -5873,6 +6242,47 @@
          <line>If your attack roll result exceeds the triggering attack's attack roll result, the triggering attack misses. The <![CDATA[<i>melee basic attack</i>]]> you make has no other effects.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Piercing Spear</title>
+      <category>Common</category>
+      <fluff>The point of this spear extends, digs deep into an enemy's flesh, and leaves a weeping wound</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Spear</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit a creature with a Weapon attack using this Spear</line>
+         <line><name>Effect</name>The triggering creature takes ongoing damage (save ends) from the triggering attack. The ongoing damage equals twice this weapon's enhancement bonus.</line>
+      </block>
+   </item>
 
    <item>
       <title>Pinning Weapon</title>
@@ -6134,6 +6544,53 @@
          <action>Standard</action> <subaction>Action</subaction>
          <line><name>Effect</name>You make a <![CDATA[<i>ranged basic attack</i>]]> using this weapon, even if it doesn't have the Light Thrown or Heavy Thrown property. If the weapon doesn't have a range, its range is 5/10 for this attack. The weapon returns to your hand after the attack has been resolved.</line>
          <line indent="1"><augment>2</augment>The attack deals +1[W] extra damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Quenching Weapon</title>
+      <category>Common</category>
+      <fluff>Strung with a filament of water, this weapon arms itself with arrows of fluid that can bowl over foes with soaking shots</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Bow</subtype> <subtype>Crossbow</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d10" condition="against fire creatures"/>
+      <block>
+         <name>Properties</name>
+         <line>This weapon has the following properties:</line>
+         <line><bullet/>You take no penalties when using this weapon underwater.</line>
+         <line><bullet/>This weapon requires no ammunition, althought it can use ammunition.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit a creature with a ranged Weapon attack using this weapon</line>
+         <line><name>Effect</name>You push the triggering creature 2 squares and knock it prone.</line>
       </block>
    </item>
 
@@ -6533,6 +6990,44 @@
          <action>Immediate</action> <subaction>Reaction</subaction>
          <line><name>Trigger</name>An enemy within your reach hits you with a melee attack or close attack</line>
          <line><name>Effect</name>Make a <![CDATA[<i>ranged basic attack</i>]]> against the triggering enemy using this weapon. This attack does not provoke <![CDATA[<i>opportunity attacks</i>]]>, and you push the target 2 squares on a hit.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Retribution Weapon</title>
+      <category>Common</category>
+      <fluff>This weapon bestows power to those who seek vengeance against an adversary</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d10" condition="on an attack where you deal the additional damage from this weapon's property"/>
+      <block>
+         <name>Property</name>
+         <line>Whenever an enemy scores a critical hit against you, your first attack against that enemy before the end of your next turn deals additional damage equal to +1d8 damage per plus of this weapon.</line>
       </block>
    </item>
 
@@ -7485,6 +7980,104 @@
          <line>The triggering enemy and each creature adjacent to it takes 1d8 lightning damage.</line>
          <line indent="1"><name>Level 14 or 19</name>2d8 lightning damage.</line>
          <line indent="1"><name>Level 24 or 29</name>3d8 lightning damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Spiderkissed Weapon</title>
+      <category>Uncommon</category>
+      <fluff>This weapon's surface is covered in faint lines evocative of a spider's web</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Any melee</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6">poison</headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Poison</keyword>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>Your Weapon attacks with this weapon that deal untyped damage deal poison damage instead. The attacks gain the Poison keyword.</line>
+         <line>If a Weapon attack you make already has a damage type, the type is changed to poison and the corresponding keyword is replaced with Poison.</line>
+         <line>Using this power again ends the effect.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Poison</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this weapon</line>
+         <line><name>Effect</name>The triggering enemy suffers from spider poison (save ends).</line>
+         <line>While it suffers from the poison, the target takes ongoing 5 poison damage and is slowed.</line>
+         <line indent="1"><name>First Failed Save</name>The target is immobilized instead of slowed.</line>
+         <line indent="1"><name>Level 12 or 17</name>Ongoing 10 poison damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>Ongoing 15 poison damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Splitting Flail</title>
+      <category>Common</category>
+      <fluff>This weapon breaks apart when you attack with it, hitting multiple enemies and then reforming</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Weapon</type> <subtype>Flail</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack using this flail</line>
+         <line><name>Effect</name>One enemy adjacent to the triggering enemy takes damage equal to your Dexterity modifier + this flail's enhancement bonus.</line>
+         <line indent="1"><name>Level 12 or 17</name>One or two enemies.</line>
+         <line indent="1"><name>Level 22 or 27</name>One, two or three enemies.</line>
       </block>
    </item>
 

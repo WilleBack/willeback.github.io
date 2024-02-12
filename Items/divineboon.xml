@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="item.xsl"?>
 <catalog>
-   <collection>Divine boons</collection>
+   <collection>Granted boons</collection>
    
    <list selection="1" />
    <list selection="2" />
@@ -53,7 +53,7 @@
       <type>Divine Boon</type>
       <block>
          <name>Attack Power</name>
-         <keyword>Charm</keyword>
+         <keyword>Charm</keyword> <keyword>Divine</keyword>
          <frequency>Encounter</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Attack</name>Ranged 10 (one creature); The boon's level +5 vs. Will</line>
@@ -64,6 +64,7 @@
       </block>
       <block>
          <name>Attack Power</name>
+         <keyword>Divine</keyword>
          <keyword>Fire</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
@@ -118,6 +119,7 @@
       <type>Divine Boon</type>
       <block>
          <name>Utility Power</name>
+         <keyword>Divine</keyword>
          <frequency>At-Will</frequency>
          <action>Move</action> <subaction>Action</subaction> <note>1/turn</note>
          <line><name>Requirement</name>You started your turn adjacent to two or more enemies</line>
@@ -161,6 +163,7 @@
       </block>
       <block>
          <name>Utility Power</name>
+         <keyword>Divine</keyword>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>You make a skill check and don't like the result</line>
@@ -195,6 +198,7 @@
       </block>
       <block>
          <name>Attack Power</name>
+         <divine>Divine</divine>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>Until the end of your next turn, enemies provoke <![CDATA[<i>opportunity attacks</i>]]> from you if they make an attack that does not include you as a target.</line>
@@ -228,6 +232,7 @@
       </block>
       <block>
          <name>Utility Power</name>
+         <keyword>Divine</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
          <line><name>Trigger</name>You roll initiative</line>
@@ -550,6 +555,7 @@
       </block>
       <block>
          <name>Utility Power</name>
+         <keyword>Divine</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>You gain a item bonus to melee damage rolls until the end of the encounter. The bonus equals the bonus you gain to Athletics checks from this boon.</line>
@@ -615,6 +621,82 @@
          <line><name>Effect</name>You regain a number of hit points equal to this boon's level.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Lalali-Puy's Blessing</title>
+      <category>Rare</category>
+      <fluff>Those who please the Oba find that her blessing affords them protection from enemies</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Sorcerer-King's Boon</type>
+      <block>
+         <name>Property</name>
+         <line>When you start your turn with concealment because of obscured squares, you retain that concealment until the end of your next turn even if you leave the square that granted you concealment.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Arcane</keyword> <keyword>Poison</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy with a Weapon attack</line>
+         <line><name>Effect</name>The triggering enemy takes ongoing 5 poison damage (save ends) from the triggering attack.</line>
+         <line indent="1"><name>Level 17</name>Ongoing 10 poison damage.</line>
+         <line indent="1"><name>Level 27</name>Ongoing 15 poison damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Link to the Pillars</title>
+      <category>Rare</category>
+      <fluff>You have a divine connection to the Pillars of Ioun, and can leverage their might</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Divine Boon</type>
+      <headline itembonus="">Skill checks made as part of a ritual</headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You take damage of a specific type</line>
+         <line><name>Effect</name>You gain resist 5 against the triggering damage type until the end of the encounter. If the triggering damage has more than one type, choose one of those types.</line>
+         <line indent="1"><name>Level 12 or 17</name>Resist 10.</line>
+         <line indent="1"><name>Level 22 or 27</name>Resist 15.</line>
+      </block>
+   </item>
 
    <item>
       <title>Lolth's Fickle Favor</title>
@@ -670,6 +752,35 @@
          <line><name>Effect</name>Roll a d8.</line>
          <line>On an odd number, you are dazed until the end of your next turn.</line>
          <line>On an even number, you become invisible until the end of your next turn and you must teleport. You can teleport up to a number of squares equal to the die roll.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Mark of the Tembo</title>
+      <category>Rare</category>
+      <fluff>A tembo has had you in its dreadful fangs, and you yet live</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Battle Scar</type>
+      <block>
+         <name>Properties</name>
+         <line>This scar has the following properties:</line>
+         <line><bullet/>You gain resist 5 necrotic.</line>
+         <line indent="1"><name>Level 17</name>Resist 10 necrotic.</line>
+         <line indent="1"><name>Level 27</name>Resist 15 necrotic.</line>
+         <line><bullet/>If an enemy causes you to lose a healing surge or reduces the amount of hit points you regain, you gain temporary hit points equal to 5 + your highest ability modifier.</line>
+         <line indent="1"><name>Level 17</name>Equal to 7 + your highest ability modifier.</line>
+         <line indent="1"><name>Level 27</name>Equal to 10 + your highest ability modifier.</line>
       </block>
    </item>
 
@@ -857,9 +968,9 @@
       <type>Divine Boon</type>
       <block>
          <name>Property</name>
-         <line>If you deal non-radiant damage to a target that has a vulnerability or other weakness to radiant damage, you deal additional damage equal to your [Constitution or Wisdom] modifier, whichever is higher.</line>
-         <line indent="1"><name>Level 13 or 18</name>Equal to 2 + the higher ability modifier.</line>
-         <line indent="1"><name>Level 23 or 28</name>Equal to 4 + the higher ability modifier.</line>
+         <line>If you deal non-radiant damage to a target that has a vulnerability or other weakness to radiant damage, you deal additional damage equal to your [Constitution or Wisdom] modifier.</line>
+         <line indent="1"><name>Level 13 or 18</name>Equal to 2 + your [Constitution or Wisdom] modifier.</line>
+         <line indent="1"><name>Level 23 or 28</name>Equal to 4 + your [Constitution or Wisdom] modifier.</line>
       </block>
       <block>
          <name>Utility Power</name>
@@ -867,19 +978,89 @@
          <frequency>At-Will</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>You emit bright light in a 5-square radius, and dim light for a further 5 squares.</line>
-         <line>You can use the power again to stop emitting light.</line>
+         <line>You can use this power again to stop emitting light.</line>
       </block>
       <block>
          <name>Utility Power</name>
          <keyword>Divine</keyword> <keyword>Healing</keyword>
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
-         <line><name>Effect</name>Close burst 5 (one ally in the burst); The target can spend a healing surge to regain hit points equal to his or her healing surge value, and gains a +1 item bonus to saving throws until the end of the encounter.</line>
-         <line indent="1"><name>Level 8</name>+2 item bonus.</line>
-         <line indent="1"><name>Level 13</name>Equal to his or her healing surge value + 1d6 additional hit points, and a +2 item bonus.</line>
-         <line indent="1"><name>Level 18</name>Equal to his or her healing surge value + 1d6 additional hit points, and a +3 item bonus.</line>
-         <line indent="1"><name>Level 23</name>Equal to his or her healing surge value + 2d6 additional hit points, and a +3 item bonus.</line>
-         <line indent="1"><name>Level 28</name>Equal to his or her healing surge value + 2d6 additional hit points, and a +4 item bonus.</line>
+         <line><name>Effect</name>Close burst 5 (one ally in the burst); The target can spend a healing surge to regain hit points equal to his or her healing surge value.</line>
+         <line indent="1"><name>Level 8</name>The target also gains a +1 item bonus to saving throws until the end of the encounter.</line>
+         <line indent="1"><name>Level 13</name>Equal to his or her healing surge value + 1d6 additional hit points, and the target also gains a +1 item bonus to saving throws until the end of the encounter.</line>
+         <line indent="1"><name>Level 18</name>Equal to his or her healing surge value + 1d6 additional hit points, and the target also gains a +2 item bonus to saving throws until the end of the encounter.</line>
+         <line indent="1"><name>Level 23</name>Equal to his or her healing surge value + 2d6 additional hit points, and the target also gains a +2 item bonus to saving throws until the end of the encounter.</line>
+         <line indent="1"><name>Level 28</name>Equal to his or her healing surge value + 2d6 additional hit points, the and target also gains a +3 item bonus to saving throws until the end of the encounter.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Primeval Vigor</title>
+      <category>Rare</category>
+      <fluff>The vitality of the creatures massacred during the Cleansing Wars flows through you as you draw on primal energy to transform your body</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>65,000</price>
+      </level>
+      <type>Primal Blessing</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Primal</keyword>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You use a primal power with the Polymorph keyword</line>
+         <line><name>Effect</name>You gain temporary hit points equal to 2 + your Constitution modifier.</line>
+         <line indent="1"><name>Level 17</name>Equal to 5 + your Constitution modifier.</line>
+         <line indent="1"><name>Level 27</name>Equal to 8 + your Constitution modifier.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Reflexive Psychic Shroud</title>
+      <category>Rare</category>
+      <fluff>Through your run-ins with horros cilopses and dagorrans, you have developed an innate psychic shield that masks your presence</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Battle Scar</type>
+      <headline itembonus="">Stealth checks</headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Illusion</keyword> <keyword>Psionic</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You roll initiative</line>
+         <line><name>Effect</name>Until the end of your first turn, you are hidden and cannot be seen by blindsight or tremorsense. If you can act during the surprise round, you gain this effect until the end of your turn on the first full round.</line>
       </block>
    </item>
 

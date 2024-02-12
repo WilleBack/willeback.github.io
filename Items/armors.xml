@@ -13,7 +13,7 @@
    <list selection="8" />
    <list selection="9" />
    <list selection="10" />
-   <list selection="11" />
+   <!-- <list selection="11" />
    <list selection="12" />
    <list selection="13" />
    <list selection="14" />
@@ -32,7 +32,7 @@
    <list selection="27" />
    <list selection="28" />
    <list selection="29" />
-   <list selection="30" />
+   <list selection="30" /> -->
 
    <item>
       <title>Adamantine Plating</title>
@@ -460,6 +460,45 @@
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>Ranged sight (one creature); You place your curse on the target. This counts as using your your <![CDATA[<i>warlock's curse</i>]]>, including the limit of only once per turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Armor of Dogged Grit</title>
+      <category>Uncommon</category>
+      <fluff>While in this armor, you continue to fight with grim determination, even though you absorb blows that would fell most combatants</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype> <subtype>Plate</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Property</name>
+         <line>Whenever you take 20 or more damage from a single attack, you gain 5 temporary hit points at the end of the currently acting creature's turn.</line>
+         <line indent="1"><name>Level 12 or 17</name>Whenever you take 30 or more damage from a single attack, you gain 10 temporary hit points instead.</line>
+         <line indent="1"><name>Level 22 or 27</name>Whenever you take 30 or more damage form a single attack, you gain 10 temporary hit points instead. Whenever you take 40 or more damage from an attack, you gain 15 temporary hit points instead.</line>
       </block>
    </item>
 
@@ -982,6 +1021,46 @@
          <line indent="1"><name>Level 15 or 20</name>+3 power bonus.</line>
          <line indent="1"><name>Level 25 or 30</name>+4 power bonus.</line>
          <line>Each time an attack against you AC hits you, reduce the power bonus by 1. If the bonus is reduced to +0, this effect immediately ends.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Bastion Armor</title>
+      <category>Common</category>
+      <fluff>This blocky armor, usually crafted in the dwarven style, is a favorite of many protectors</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>Close burst 1 (you, or one ally in the burst); You end a mark on the target.</line>
+         <line indent="1"><name>Level 22 or 27</name>Close burst 2.</line>
       </block>
    </item>
    
@@ -1724,6 +1803,98 @@
          <frequency>Daily</frequency>
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>Close burst 1 (each creature in the burst); Each target takes a -2 penalty to attack rolls (save ends).</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Death's Brink Armor</title>
+      <category>Common</category>
+      <fluff>This black metal armor has the image of an outthrust hand emblazoned on its breast</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Scale</subtype> <subtype>Plate</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Property</name>
+         <line>While you're dying, you don't die until you have failed an additional death saving throw. For most characters, this means you die when you have failed four death saving throws.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make a death saving throw and dislike the result</line>
+         <line><name>Effect</name>You gain a +2 bonus to the triggering death saving throw.</line>
+         <line indent="1"><name>Level 12 or 17</name>+3 bonus.</line>
+         <line indent="1"><name>Level 22 or 27</name>+4 bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Deathburst Armor</title>
+      <category>Uncommon</category>
+      <fluff>Blood and shadows  color this armor darkest crimson, and it channels the power of death</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Any</subtype>
+      <block>
+         <name>Property</name>
+         <line>You gain a +5 bonus to saving throws against ongoing necrotic damage.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Necrotic</keyword> <keyword>Shadow</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Requirement</name>You must be bloodied.</line>
+         <line><name>Effect</name>Until the end of your next turn, any creature that hits you with a melee attack takes necrotic damage equal to 1d6 + twice this armor's enhancement bonus.</line>
+         <line indent="1"><name>Level 12 or 17</name>Equal to 2d6 + twice this armor's enhancement bonus.</line>
+         <line indent="1"><name>Level 22 or 27</name>Equal to 3d6 + twice this armor's enhancement bonus.</line>
       </block>
    </item>
    
@@ -2498,6 +2669,58 @@
          <line indent="1"><name>Level 24 or 29</name><augment>4</augment>Equal to 2d8 per plus of this armor.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Feral Armor</title>
+      <category>Common</category>
+      <fluff>This armor causes its wearer to develop a ferocious streak, like that of the predator that once wore the same skin</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Hide</subtype>
+      <headline auto="armorenh"/>
+      <headline auto="attackenh" limit="hide armor"/>
+      <headline crit="d8" limit="hide armor"/>
+      <block>
+         <name>Property</name>
+         <line>While you are wearing this hide armor, you have a claw weapon that is a one-handed melee weapon in the Light Blade weapon group with a +3 proficiency bonus that deals 1d8 damage.</line>
+         <line>If you have the Whirling Frenzy barbarian class feature, you also have a second claw weapon that has the same traits and the Off-hand weapon property.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Weapon</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Special</name>You must make this attack using the weapon from this hide armor's property.</line>
+         <line><name>Attack</name>Close burst 1 (each creature in the burst); [Strength or Dexterity] vs. Fortitude</line>
+         <line indent="1"><name>Whirling Frenzy</name>You can roll the attack with your main and off-hand weapon, and resolve the hit with whichever you want</line>
+         <line><name>Hit</name>1[W] + [Strength or Dexterity] modifier damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>2[W] + [Strength or Dexterity] modifier damage.</line>
+         <line><name>Miss (Level 12, 17, 22 or 27)</name>Half damage.</line>
+      </block>
+   </item>
 
    <item>
       <title>Fireburst Armor</title>
@@ -3204,6 +3427,47 @@
          <line><name>Effect</name>You shift 2 squares.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Immolating Armor</title>
+      <category>Common</category>
+      <fluff>The steel components of this heavy armor are  chased in red enamel, with tints of yellow and orange swirled thoughout.</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Chain</subtype> <subtype>Scale</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Fire</keyword>
+         <frequency>Daily</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An enemy within 10 squares of you marks you</line>
+         <line><name>Effect</name>Close burst 10 (the triggering enemy in the burst); The mark immediate ends, and the target takes fire damage equal to 2 + three times this armor's enhancement bonus.</line>
+      </block>
+   </item>
 
    <item>
       <title>Immunizing Armor</title>
@@ -3346,6 +3610,46 @@
          <line><name>Trigger</name>An enemy misses you with a melee attack</line>
          <line><name>Effect</name>The triggering enemy takes 1d6 damage per plus of this armor.</line>
          <line indent="1"><augment>2</augment>Roll d10s for damage instead of d6s.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Irrefutable Armor</title>
+      <category>Common</category>
+      <fluff>Despite its simple contruction, this armor asserts your will as it protects your flesh</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Any</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You miss with an attack roll against Will</line>
+         <line><name>Effect</name>You reroll the triggering attack roll with a +3 power bonus to the attack roll and use either result.</line>
       </block>
    </item>
    
@@ -3637,6 +3941,53 @@
          <name>Enhancement</name>
          <text>AC</text>
       </headline>
+   </item>
+   
+   <item>
+      <title>Marauder's Armor</title>
+      <category>Common</category>
+      <fluff>This heavy, fur-lined armor is favored by barbarians and pirates who rush into the fray</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Property</name>
+         <line>When you charge, you gain a +2 item bonus to AC until the end of your next turn.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Primal</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit with a charge attack</line>
+         <line><name>Effect</name>You gain your choice of one of the following two effects:</line>
+         <line indent="1"><bullet/>You make a saving throw to end an effect that a save can end. You gain a power bonus to this save equal to this armor's enhancement bonus.</line>
+         <line indent="1"><bullet/>You spend a healing surge to regain hit points equal to your healing surge value + twice this armor's enhancement bonus.</line>
+      </block>
    </item>
 
    <item>
@@ -5521,6 +5872,48 @@
          <line indent="1"><name>Level 18, 23 or 28</name>This power becomes an encounter power.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Shadow Hound Armor</title>
+      <category>Common</category>
+      <fluff>Crafted from the hide of a massive shadow hound, this armor lets you fade away from danger when you suffer a grievous wound</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Hide</subtype>
+      <headline auto="armorenh"/>
+      <headline itembonus="">Stealth checks</headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Shadow</keyword>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You become bloodied</line>
+         <line><name>Effect</name>You become insubstantial until the end of your next turn.</line>
+      </block>
+   </item>
 
    <item>
       <title>Shadow Hunter Hide</title>
@@ -5792,6 +6185,43 @@
    </item>
    
    <item>
+      <title>Shipboard Armor</title>
+      <category>Common</category>
+      <fluff>This black leather armor allows you to stand steady in the face of uncertain footing or a possible fall</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Property</name>
+         <line>When you make a saving throw to avoid forced movement, such as to avoid falling or being moved into hazardous terrain, you gain a +5 item bonus to the save and don't fall prone on a successful save.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Shockweave Armor</title>
       <category>Common</category>
       <fluff>Metal studs on this armor magically protect you from lightning, and then unleash that same power against your foes</fluff>
@@ -5983,6 +6413,50 @@
       <block>
          <name>Property</name>
          <line>You gain an untyped bonus to escape attempts equal to this armor's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Snake's Lair Armor</title>
+      <category>Common</category>
+      <fluff>The surface of this snakeskin armor is slippery, allowing you to slip past your foes or out of their grasp</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh"/>
+      <headline itembonus=""><![CDATA[<i>escape</i>]]> checks</headline>
+      <block>
+         <name>Property</name>
+         <line>You do not grant combat advantage or take a penalty to attack rolls for squeezing.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Move</action> <subaction/>
+         <line><name>Effect</name>You shift a number of squares up to half your speed. You can shift through enemies' spaces during this move.</line>
       </block>
    </item>
 
@@ -6214,6 +6688,55 @@
          <line>As long your you are not wearing armor, you can use this power again recall the armor. The armor appears on you as though you had donned it normally.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Sunleaf Armor</title>
+      <category>Uncommon</category>
+      <fluff>Elf master crafters use the leaves of the sun tree to create radiant armor</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype> <subtype>Leather</subtype> <subtype>Hide</subtype>
+      <headline auto="armorenh"/>
+      <block>
+         <name>Property</name>
+         <line>You gain resist 5 radiant.</line>
+         <line indent="1"><name>Level 12 or 17</name>Resist 10 radiant.</line>
+         <line indent="1"><name>Level 22 or 27</name>Resist 15 radiant.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Radiant</keyword>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>An enemy hits you with an <![CDATA[<i>opportunity attack</i>]]></line>
+         <line><name>Effect</name>The triggering enemy takes radiant damage equal to 1d8 + this armor's enhancement bonus.</line>
+         <line indent="1"><name>Level 12 or 17</name>Equal to 2d8 + this armor's enhancement bonus.</line>
+         <line indent="1"><name>Level 22 or 27</name>Equal to 3d8 + this armor's enhancement bonus.</line>
+      </block>
+   </item>
 
    <item>
       <title>Sylvan Armor</title>
@@ -6398,6 +6921,47 @@
          <line><name>Trigger</name>You roll initiative and dislike the result</line>
          <line><name>Effect</name>You reroll the triggering initiative check, but must use the second result.</line>
          <line>If the second result is worse than the triggering result, you regain the use of this power after your next short rest.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Uniform of the Hidden Temple</title>
+      <category>Commmon</category>
+      <fluff>This muted gray uniform protects you from watchful eyes and lets you skillfully slip past your foes in combat</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Armor</type> <subtype>Cloth</subtype>
+      <headline auto="armorenh"/>
+      <headline itembonus="">Stealth checks</headline>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You shift</line>
+         <line><name>Effect</name>You increase the maximum distance of the shift by a number squares equal to one-half this armor's enhancement bonus, rounded up.</line>
       </block>
    </item>
 

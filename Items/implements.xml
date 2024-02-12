@@ -13,7 +13,7 @@
    <list selection="8" />
    <list selection="9" />
    <list selection="10" />
-   <list selection="11" />
+   <!-- <list selection="11" />
    <list selection="12" />
    <list selection="13" />
    <list selection="14" />
@@ -32,7 +32,7 @@
    <list selection="27" />
    <list selection="28" />
    <list selection="29" />
-   <list selection="30" />
+   <list selection="30" /> -->
 
    <item>
       <title>Apprentice's Wand</title>
@@ -562,6 +562,56 @@
       <block>
          <name>Property</name>
          <line>You gain a +4 item bonus to all defenses against attacks triggered by using a ranged or area divine power with this implement.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Blast Scepter</title>
+      <category>Rare</category>
+      <fluff>This rare, ancient device is one of the more unpleasant legacies of lost Netheril</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Rod</subtype> <subtype>Wand</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8">force</headline>
+      <block>
+         <name>Property</name>
+         <line>You gain resist 5 fire and resist 5 lightning.</line>
+         <line indent="1"><name>Level 12 or 17</name>Resist 10 fire and resist 10 lightning.</line>
+         <line indent="1"><name>Level 22 or 27</name>Resist 15 fire and resist 15 lightning.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Implement</keyword> <keyword>Thunder</keyword>
+         <frequency>At-Will</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Attack</name>Close blast 3 (each creature in the blast); [Intelligence, Constitution, or Charisma] vs. Reflex</line>
+         <line><name>Hit</name>Your [Intelligence, Consitution, or Charisma] modifier + this implement's enhancement bonus thunder damage, and you push the target up to 3 squares.</line>
+         <line indent="1"><name>Level 12 or 17</name>2 + your [Intelligence, Constitution, or Charisma] modifier + this implement's enhancement bonus thunder damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>4 + your [Intelligence, Constitution, or Charisma] modifier + this implement's enhancement bonus thunder damage, and push up to 4 squares.</line>
       </block>
    </item>
 
@@ -1776,6 +1826,97 @@
          <line>When you roll damage for an attack made using this ki focus, any die that shows a 1 instead deals 2 damage. This increases to a die that shows a 1 or 2 dealing 3 damage for d8s, d10s or d10s.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Dispelling Tome</title>
+      <category>Common</category>
+      <fluff>This thin tome helps you unbind magical creations</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Tome</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Property</name>
+         <line>When you use <![CDATA[<i>dispel magic</i>]]> using this tome, you can target two effects instead of one and you gain a +2 item bonus to your attack roll.</line>
+      </block>
+      <block>
+         <name>Spellbook</name>
+         <line>This tome contains the <![CDATA[<i>dispel magic</i>]]> level 6 wizard utility power.</line>
+         <line>If you have the wizard class feature Arcane Spellbook, this spell counts as being in your spellbook.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Arcane</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction/>
+         <line><name>Requirement</name>You must have at least one unexpended arcana utility power of 6th level or higher.</line>
+         <line><name>Effect</name>You expend an arcane utility power of 6th level or higher, and gain use of <![CDATA[<i>dispel magic</i>]]>. If you do not use it by the end of the encounter, it is lost without effect.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Earthfall Totem</title>
+      <category>Uncommon</category>
+      <fluff>Attacks with this rough-hewn stone tomem pack a powerful punch</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Totem</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Property</name>
+         <line>When you make a primal attack using this totem, you deal +2 damage to each target you push, slide, or knock prone. The damage is doubled if you cannot push or slide the target the full distance because of blocking terrain.</line>
+         <line indent="1"><name>Level 12 or 17</name>+4 additional damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>+6 additional damage.</line>
+      </block>
+   </item>
 
    <item>
       <title>Earthroot Staff</title>
@@ -2330,6 +2471,66 @@
          <line>A creature that ends its turn in the zone takes fire damage equal to your Constitution modifier + this wand's enhancement bonus.</line>
          <line indent="1"><name>Level 13 or 18</name>3 + your Constitution modifier + this wand's enhancement bonus fire damage.</line>
          <line indent="1"><name>Level 23 or 28</name>6 + your Constitution modifier + this wand's enhancement bonus fire damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Flesh-Eating Rod</title>
+      <category>Uncommon</category>
+      <fluff>This blacked iron rod is carved with horrid demons cavorting and killing all along its length</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Rod</subtype>
+      <headline auto="attackenh"/>
+      <block>
+         <name>Critical</name>
+         <keyword>Acid</keyword>
+         <line auto="critimpl">the target takes ongoing 10 acid damage (save ends).</line>
+         <line indent="1"><name>Level 12</name>Ongoing 15 acid damage.</line>
+         <line indent="1"><name>Level 17</name>Ongoing 20 acid damage.</line>
+         <line indent="1"><name>Level 22</name>Ongoing 25 acid damage.</line>
+         <line indent="1"><name>Level 27</name>Ongoing 30 acid damage.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <line>Whenever you deal ongoing damage to an enemy with an attack using this rod, that enemy takes a -2 penalty to savings throws to end the ongoing damage. If the ongoing damage is part of an effect, this penalty can result in the target succeeding at its save to end the other parts of the effect but fail at ending the ongoing damage.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Acid</keyword>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with an Implement attack using this rod</line>
+         <line><name>Effect</name>Reduce the damage he triggering enemy takes from the triggering attack by 5. This can reduce the damage the triggering enemy takes to 0, but doing so does not negate any effects the attack normally has when it deals damage.</line>
+         <line indent="1"><name>Level 12 or 17</name>Reduce by 10.</line>
+         <line indent="1"><name>Level 22 or 27</name>Reduce by 15.</line>
+         <line>The triggering enemy takes ongoing 5 acid damage (save ends). If the triggering attack dealt less damage than you reduced it by, the ongoing damage instead equals the damage the triggering attack would have dealt.</line>
+         <line indent="1"><name>Level 12 or 17</name>Ongoing 10 acid damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>Ongoing 15 acid damage.</line>
+         <line>Each time the target takes this ongoing damage, you can slide it 1 square as a free interrupt.</line>
       </block>
    </item>
 
@@ -2962,11 +3163,12 @@
       </headline>
       <block>
          <name>Critical</name>
+         <keyword>Spirit</keyword>
          <line>When you score a critical hit using this totem, you can move your spirit companion to a space adjacent ot the target as a free reaction.</line>
       </block>
       <block>
          <name>Utility Power</name>
-         <keyword>Healing</keyword> <keyword>Spirit</keyword>
+         <keyword>Healing</keyword> <keyword>Primal</keyword> <keyword>Spirit</keyword>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
          <line><name>Trigger</name>You hit an enemy adjacent to your spirit companion with a primal attack using this totem</line>
@@ -3333,6 +3535,54 @@
          <line><name>Trigger</name>You hit with a divine attack using this implement</line>
          <line><name>Effect</name>You can use an additional Channel Divinity power during this encounter. You do not regain any expended Channel Divinity power.</line>
          <line indent="1"><![CDATA[<i>Level 17, 22, 27:</i>]]> You regain any expended Channel Divinity powers.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Implement of Dread</title>
+      <category>Uncommon</category>
+      <fluff>This dreadful implement was used in Bael Turath to maintain order among slaves</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Orb</subtype> <subtype>Rod</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="" alt="d4 psychic" condition="when using a Fear power">psychic</headline>
+      <block>
+         <name>Critical</name>
+         <keyword>Fear</keyword>
+         <line>The target is dazed until the end of your next turn.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Fear</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You make an Implement attack using this implement</line>
+         <line><name>Effect</name>The attack gains the Fear keyword, and the following effect entry:</line>
+         <line indent="1"><name>Effect</name>Each target enemy grants combat advantage until the end of your next turn.</line>
       </block>
    </item>
 
@@ -3888,6 +4138,48 @@
          <line indent="1"><name>Level 25 or 30</name>3d10 + this implement's enhancement bonus damage.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Implement of Shared Healing</title>
+      <category>Common</category>
+      <fluff>This implement allows you to heal an ally even as you tend to your own wounds</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Ki focus</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Healing</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You use either your <![CDATA[<i>second wind</i>]]> or a power that allows you to spend a healing surge</line>
+         <line><name>Effect</name>Close burst 5 (one ally in the burst); The target can spend a healing surge to regaina number of hit points equal to his or her healing surge value</line>
+      </block>
+   </item>
 
    <item>
       <title>Implement of Spectral Hands</title>
@@ -4131,6 +4423,51 @@
    </item>
    
    <item>
+      <title>Implement of Distant Shielding</title>
+      <category>Common</category>
+      <fluff>With a word, you ward an ally against a foe's attack, promising swift retribution if harm comes to your companion</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy Symbol</subtype> <subtype>Staff</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6">radiant</headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Divine</keyword> <keyword>Radiant</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Requirement</name>You must be a member of a divine class.</line>
+         <line><name>Effect</name>Ranged 10 (one ally); The target is covered in shielding radiant energy until the end of the encounter.</line>
+         <line>The first time an ally attacks the target while it is shielded, that enemy takes 10 radiant damage.</line>
+         <line indent="1"><name>Level 12 or 17</name>15 radiant damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>20 radiant damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Implement of the Hunting Hound</title>
       <category>Common</category>
       <fluff>This plain, wooden implement has a carving of a snarling mastiff</fluff>
@@ -4217,6 +4554,7 @@
          <name>Attack Power</name>
          <keyword>Psychic</keyword>
          <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
          <line><name>Requirement</name>You must be bloodied.</line>
          <line><name>Trigger</name>You hit a creature with an Implement attack using this implement</line>
          <line><name>Effect</name>The triggering creature takes additional psychic damage from the triggering attack. The psychic damage equals the number of healing surges you have spent</line>
@@ -4622,7 +4960,7 @@
       <headline itemdamage="wand">Lightning</headline>
       <block>
          <name>Arc Lightning</name>
-         <keyword>Arcane</keyword> <keyword>Implement</keyword> <keyword>Implement</keyword> <keyword>Lightning</keyword>
+         <keyword>Arcane</keyword> <keyword>Evocation</keyword> <keyword>Implement</keyword> <keyword>Lightning</keyword>
          <frequency>Encounter</frequency>
          <action>Standard</action> <subaction>Action</subaction>
          <line><name>Attack</name>Ranged 10/20 (one creature, or two creatures within 5 squares of each other); Intelligence vs. Reflex</line>
@@ -6167,6 +6505,49 @@
    </item>
    
    <item>
+      <title>Medallion of Radiance</title>
+      <category>Common</category>
+      <fluff>The light from the sun adorning this golden medallion purifies the body and soul</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Ki focus</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6">radiant</headline>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Radiant</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Special</name>This power has the Divine keyword (if this implement is a holy symbol), or Psionic or Shadow keyword (if this implement is a ki focus, chosen by the creator).</line>
+         <line><name>Trigger</name>You reduce an enemy to 0 hit points or fewer with an Implement attack using this implement</line>
+         <line><name>Effect</name>Close burst 5 centered on the triggering enemy (each enemy in the burst); Each target takes radiant damage equal to 2 + three times this implement's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Mercurial Rod</title>
       <category>Common</category>
       <fluff>When you use this rod, you can forgo dismiss your curse to make one attack more potent</fluff>
@@ -6301,6 +6682,52 @@
       <block>
          <name>Critical</name>
          <line>When you score a critical hit using this implement, you and each ally within 5 squares of you can make a saving throw against one Charm or Illusion, even if that effect normally does not end on a save.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Moonsilver Staff</title>
+      <category>Common</category>
+      <fluff>This pale wood staff is topped with a moonstone sphere and it harms lycanthropes with radiant energy</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Staff</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6">radiant</headline>
+      <block>
+         <name>Property</name>
+         <line>Weapon attacks and Implement attacks made with this staff count as silvered.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Arcane</keyword> <keyword>Radiant</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You deal radiant damage to an enemy with an arcane Radiant attack using this staff</line>
+         <line><name>Effect</name>The triggering enemy takes additional radiant damage from the triggering attack equal to twice this staff's enhancement bonus.</line>
       </block>
    </item>
    
@@ -6568,6 +6995,47 @@
          <line><name>Effect</name>Close burst 5 (you and each ally in the burst); Each target can choose to use 10 as the result for their roll for the triggering Initiative check instead of rolling.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Ord of Enduring Magic</title>
+      <category>Uncommon</category>
+      <fluff>Carved from iron to resemble a clenched gauntlet, this orb allows you to extend your magical abilities while absorbing your foes' attacks</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Orb</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>You sustain all of your active powers that can be sustained with a minor action.</line>
+         <line>Also, you gain temporary hit points equal to 3 + twice this orb's enhancement bonus.</line>
+      </block>
+   </item>
 
    <item>
       <title>Orb of Far Seeing</title>
@@ -6810,6 +7278,46 @@
          <action>Free</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>A creature succeeds on a saving throw against an effect you created</line>
          <line><name>Effect</name>The triggering creature must reroll the triggeirng saving throw and use the second result.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Orb of Indisputable Gravity</title>
+      <category>Common</category>
+      <fluff>This sphere is made of sky blue crystal</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Orb</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d8" condition="against a flying target"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>Until the end of your next turn, any attack you make using this orb that hits a target within 10 squares of you also forces that target to gently fall 10 squares. If this descent brings the creature to the ground, it lands prone but takes no damage from the fall.</line>
       </block>
    </item>
 
@@ -8329,6 +8837,47 @@
          <line indent="1"><name>Level 23 or 28</name>15 psychic damage.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Rod of Blinding Awe</title>
+      <category>Common</category>
+      <fluff>Power channeled through this rod overwhelms your foe with awe, rooting it in place</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Rod</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8"/>
+      <block>
+         <name>Attack Power</name>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You hit an enemy with an Implement attack using this rod</line>
+         <line><name>Effect</name>The triggering enemy is immobilized until the end of your next turn.</line>
+      </block>
+   </item>
 
    <item>
       <title>Rod of Burgeoning Memory</title>
@@ -8719,6 +9268,50 @@
          <line>Each target gains resist against the chosen damage type equal to 3 + your Constitution modifier until the end of your next turn.</line>
          <line indent="1"><name>Level 12 or 17</name>Equal to 6 + your Constitution modifier.</line>
          <line indent="1"><name>Level 22 or 27</name>Equal to 10 + your Constitution modifier.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Rod of Feythorns</title>
+      <category>Common</category>
+      <fluff>Formed of a stalk and strange root bulb, this rod seems to weep steaming toxic liquid, able to poison even those foes normally immune</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Rod</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8">poison</headline>
+      <block>
+         <name>Property</name>
+         <line>When you place your Warlock's Curse on a target, that target's resistance to poison is diminished (save ends).</line>
+         <line>While its resistance is diminished, it gains one of the following effects:</line>
+         <line indent="1"><bullet/><name style="under">Target has immunity to poison</name>The target instead has resist poison equal to 5 + one-half its level.</line>
+         <line indent="1"><bullet/><name style="under">Target has resist to poison</name>The target loses that resist.</line>
+         <line indent="1"><bullet/><name style="under">Target has no immunity or resist to poison</name>The target gains vulnerable 5 poison.</line>
+         <line indent="2"><name>Level 12 or 17</name>Vulnerable 10 poison.</line>
+         <line indent="2"><name>Level 22 or 27</name>Vulnerable 15 poison.</line>
       </block>
    </item>
 
@@ -9354,6 +9947,51 @@
          <line>You add its enhancement bonus to the attack rolls and damage rolls of melee Weapon attacks you make with it.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Rod of Stolen Starlight</title>
+      <category>Common</category>
+      <fluff>At your command, this rod infuses your spell with light from mysterious stars</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Rod</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6">radiant and necrotic</headline>
+      <block>
+         <name>Property</name>
+         <line>When you hit an undead creature affected by your Warlock's Curse with an attack using this rod, you deal additional damage equal to this rod's enhancement bonus.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Arcane</keyword> <keyword>Radiant</keyword>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>The first Necrotic or Poison attack you make using this rod before the end of the encounter deals radiant damage instead of necrotic or poison damage, and has the Radiant keyword instead of the Necrotic or Poison keyword.</line>
+      </block>
+   </item>
 
    <item>
       <title>Rod of Time Distortion</title>
@@ -9747,6 +10385,50 @@
    </item>
    
    <item>
+      <title>Spirit Reliquary</title>
+      <category>Common</category>
+      <fluff>You take heart knowing that your ancestors' bones rest inside the intricately carved box around your neck</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype> <subtype>Totem</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Property</name>
+         <line>You gain a +2 item bonus to saving throws against Charm effects and Fear effects.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>You gain a power bonus to the first skill check, ability check, or saving throw you make before the end of the encounter. The power bonus equals this implement's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Spring Renewal Totem</title>
       <category>Uncommon</category>
       <fluff>This totem carries the primal magic of spring, representing the power to restore life</fluff>
@@ -9835,7 +10517,7 @@
       </level>
       <type>Implement</type> <subtype>Staff</subtype>
       <headline auto="attackenh"/>
-      <headline><name>Critical</name>+1d6 force damage per plus</headline>
+      <headline crit="d6">force</headline>
       <block>
          <name>Attack Power</name>
          <keyword>Augmentable</keyword> <keyword>Psionic</keyword>
@@ -9895,6 +10577,50 @@
          <line indent="1"><name>Level 25 or 30</name>+4 power bonus to damage rolls.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Staff of Bitter Dismissal</title>
+      <category>Uncommon</category>
+      <fluff>When you batter an enemy with a forceful attack, this gnarled staff's potent psionic energy shunts the foe away from you</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Staff</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8">force</headline>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Augmentable</keyword> <keyword>Psionic</keyword> <keyword>Teleportation</keyword>
+         <frequency>Encounter</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit an enemy within 3 squares of you with a Force attack using this staff</line>
+         <line><name>Effect</name>You teleport the triggering enemy a number of squares equal to 1 + one-half this staff's enhancement bonus.</line>
+         <line indent="1"><augment>1</augment>Before you teleport the triggering creature, each enemy within 3 squares of it is pulled 1 square towards it.</line>
+         <line indent="1"><name>Level 22 or 27</name><augment>2</augment>Before you teleport the triggering creature, each enemy within 5 squares of it is pulled 1 square towards it, or pulled 2 squares towards it if it is within 3 squares of it.</line>
+      </block>
+   </item>
 
    <item>
       <title>Staff of Divinity</title>
@@ -9932,10 +10658,8 @@
       </level>
       <type>Implement</type> <subtype>Staff</subtype>
       <headline auto="attackenh" />
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus, or +1d8 damage per plus when used as a holy symbol</text>
-      </headline>
+      <headline crit="d6" alt="d8" condition="when used as a holy symbol"/>
+      
       <block>
          <name>Property</name>
          <line>A character that has implement proficiency with holy symbols can use this staff as a holy symbol. The implement counts as either a holy symbol or a staff implement when used, not both.</line>
@@ -10036,10 +10760,7 @@
       </level>
       <type>Implement</type> <subtype>Staff</subtype>
       <headline auto="attackenh" />
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus</text>
-      </headline>
+      <headline crit="d6"/>
       <block>
          <name>Property</name>
          <line>You gain a +2 item bonus to saving throws against effects that immobilize or slow you.</line>
@@ -10090,10 +10811,7 @@
       </level>
       <type>Implement</type> <subtype>Staff</subtype>
       <headline auto="attackenh" />
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 damage per plus, or +1d10 fire damage per plus with Fire attacks</text>
-      </headline>
+      <headline crit="d6" alt="d10 fire" condition="with Fire attacks"/>
       <block>
          <name>Attack Power</name>
          <frequency>Daily</frequency>
@@ -10139,10 +10857,7 @@
       </level>
       <type>Implement</type> <subtype>Staff</subtype>
       <headline auto="attackenh" />
-      <headline>
-         <name>Critical</name>
-         <text>+1d6 psychic damage per plus, or +1d8 psychic damage per plus if the attack was against Will</text>
-      </headline>
+      <headline crit="d6" alt="d8 psychic" condition="with attacks against Will">psychic</headline>
       <block>
          <name>Property</name>
          <line>You gain resist 5 psychic.</line>
@@ -10251,7 +10966,7 @@
       <headline auto="attackenh" />
       <headline>
          <name>Critical</name>
-         <text>1d6 damage per plus, or +1d10 damage per plus when used as a melee weapon</text>
+         <text>+1d6 damage per plus, or +1d10 damage per plus when used as a melee weapon</text>
       </headline>
       <block>
          <name>Utility Power</name>
@@ -10404,6 +11119,96 @@
          <name>Item Bonus</name>
          <text>Damage rolls</text>
       </headline>
+   </item>
+   
+   <item>
+      <title>Staff of the Serpent</title>
+      <category>Uncommon</category>
+      <fluff>Shaped like a rigid combra, this bronze staff enables you to wield poison as a deadly weapon</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Staff</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d8">poison</headline>
+      <block>
+         <name>Property</name>
+         <keyword>Poison</keyword>
+         <line>Ane melee attack made with this staff deals an extra +1d4 poison damage.</line>
+         <line indent="1"><name>Level 12 or 17</name>Extra +2d4 poison damage.</line>
+         <line indent="1"><name>Level 22 or 27</name>Extra +3d4 poison damage.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Keyword</keyword>
+         <frequency>Daily</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You deal poison damage to a creature with a Poison attack using this staff</line>
+         <line><name>Effect</name>The triggering creature takes ongoing poison damage (save ends). The ongoing poison damage equals 3 + twice times this staff's enhancement bonus. If the triggering attack already deals ongoing poison damage, you instead increase that ongoing poison damage by this staff's enhancement bonus if that would deal more ongoing poison damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Staff of Spatial Contortion</title>
+      <category>Common</category>
+      <fluff>The crystal atop this staff refracts your spell's energy, scattering it in different directions</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Staff</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d10" condition="when you use this staff's power"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Nonaction</action> <subaction>Interrupt</subaction>
+         <line><name>Trigger</name>You use a close blast power using this implement; the power must be at least a close blast 3</line>
+         <line><name>Effect</name>The triggering power becomes a close burst with a size two smaller than the blast. For example, a close blast 4 becomes a close burst 2.</line>
+      </block>
    </item>
    
    <item>
@@ -10892,6 +11697,45 @@
          <action>Minor</action> <subaction>Action</subaction>
          <line><name>Effect</name>Close burst 5; The burst creates a zone of hindering vines until the end of your next turn.</line>
          <line>The zone is difficult terrain for your enemies.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Summoner's Staff</title>
+      <category>Common</category>
+      <fluff>This hawthorn staff is engraved with the images of dozens of different creatures</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Staff</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d10" condition="with attacks made by your summoned creatures"/>
+      <block>
+         <name>Property</name>
+         <line>Whenever an enemy makes an attack and misses a creature summoned by you, choose either yourself, or one ally within 5 squares of that summoned creature.</line>
+         <line>After the triggering attack is resolved, the chosen creature gains temporary hit points equal to 3 + twice this staff's enhancement bonus.</line>
       </block>
    </item>
    
@@ -11447,6 +12291,92 @@
          <line><name>Effect</name>Close burst 10 (one ally in burst); The target gains a power bonus to one attack rolls, ability check, or skill of his or her choice before the end of the encounter. The power bonus equals the enchancement bonus of this holy symbol.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Symbol of Foe Turning</title>
+      <category>Common</category>
+      <fluff>Through this symbol, you can punish specific enemies of your faith as well as vile undead</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d8" condition="against the chosen creature type"/>
+      <block>
+         <name>Creation</name>
+         <line>When this holy symbol is created, the creator chooses the angel, demon, devil, dragon, or giant creature type.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <keyword>Channel Divinity</keyword>
+         <line>When you use either the <![CDATA[<i>abjure undead</i> or <i>turn undead</i>]]> Channel Divinity attack using this holy symbol, you can choose to target the chosen creature type instead of undead.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Symbol of Gajz</title>
+      <category>Rare</category>
+      <fluff>The runes that adorn this holy symbol allow your healing powers to grant resistance to your allies</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block></block>
+      <block>
+         <name>Property</name>
+         <line>When you use your <![CDATA[<i>healing word</i>]]> class power or a Healing power using this holy symbol, choose one of acid, cold, fire, lightning, or poison.</line>
+         <line>Each ally healed by the power gains resist 5 against the chosen damage type until the end of your next turn.</line>
+         <line indent="1"><name>Level 12 or 17</name>Resist 10.</line>
+         <line indent="1"><name>Level 22 or 27</name>Resist 15.</line>
+         <line>If the ally is a dragonborn or wearing one of the heirlooms of Mazgorax, increase the resistance by 5, or by 10 if the ally is a dragonborn wearing one of the heirlooms of Mazgorax.</line>
+      </block>
+   </item>
 
    <item>
       <title>Symbol of Good Fortune</title>
@@ -11729,16 +12659,57 @@
          <keyword>Divine</keyword>
          <frequency>Daily</frequency>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
-         <block>
-            <name>Attack Power</name>
-            <keyword>Divine</keyword>
-            <frequency>Daily</frequency>
-            <action>Nonaction</action> <subaction>Interrupt</subaction>
-            <line><name>Trigger</name>You hit or miss an undead or immortal creature with an Implement attack using this holy symbol</line>
-            <line><name>Effect</name>The triggering power deals +1d8 additional damage to undead or immortal creatures. If the triggering attack deals reduced damage instead of half damage on a miss, an undead or immortal creature still takes half of this additional damage.</line>
-            <line indent="1"><name>Level 14 or 19</name>+2d10 additional damage.</line>
-            <line indent="1"><name>Level 24 or 29</name>+3d10 additional damage.</line>
-         </block>
+         <line><name>Trigger</name>You hit or miss an undead or immortal creature with an Implement attack using this holy symbol</line>
+         <line><name>Effect</name>The triggering power deals +1d8 additional damage to undead or immortal creatures. If the triggering attack deals reduced damage instead of half damage on a miss, an undead or immortal creature still takes half of this additional damage.</line>
+         <line indent="1"><name>Level 14 or 19</name>+2d8 additional damage.</line>
+         <line indent="1"><name>Level 24 or 29</name>+3d8 additional damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Symbol of Perseverance</title>
+      <category>Common</category>
+      <fluff>This symbol glows with an inner light, preserving a fragment of your life force to bestow when an ally needs it most</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
+      <block>
+         <name>Critical</name>
+         <keyword>Healing</keyword>
+         <line>When you score a critical hit with a Healing, Implement attack using this holy symbol, increase the healing by this holy symbol's enhancement bonus.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Healing</keyword>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit with an Implement attack using this holy symbol</line>
+         <line><name>Effect</name>Close burst 20 (one dying ally); The target regains a number of hit points equal to his or her healing surge value + this holy symbol's enhancement bonus.</line>
       </block>
    </item>
 
@@ -11786,8 +12757,49 @@
          <name>Utility Power</name>
          <frequency>Daily</frequency>
          <action>Free</action> <subaction>Reaction</subaction>
-         <line><name>Trigger</name>You hit with an attack delivered with this holy symbol</line>
+         <line><name>Trigger</name>You hit with an Implement attack using this holy symbol</line>
          <line><name>Effect</name>Close burst 10 (you or one ally in burst); The target can make a saving throw against one effect a save can end. The target gains a power bonus to the saving throw equal to this holy symbol's enhancement bonus.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Symbol of Shielding</title>
+      <category>Common</category>
+      <fluff>Your holy symbol glows as you conjure a nimbus of protection</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Implement</type> <subtype>Holy symbol</subtype>
+      <headline auto="attackenh"/>
+      <headline crit="d6" alt="d8" condition="with an attack that grants a bonus to defense or resistance to damage"/>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You hit with an Implement attack using this holy symbol</line>
+         <line><name>Effect</name>Close burst 2 (you, or an ally in the burst); The target gains a +2 power bonus to AC and Reflex until the end of your next turn.</line>
       </block>
    </item>
    
@@ -13343,7 +14355,7 @@
       <block>
          <name>Property</name>
          <line>When you use an arcane ranged or arcane area power with this wand, you can add the wand's enhancement bonus to the range.</line>
-         <line>For example, a <![CDATA[<i>+3 wand of unparalleled reach</line>i>]]> would increase an "area burst 1 within 5 squares" to an "area burst 1 within 8 squares", a "ranged 5/10" to "ranged 8/13", and so on.</line>
+         <line>For example, a <![CDATA[<i>+3 wand of unparalleled reach</i>]]> would increase an "area burst 1 within 5 squares" to an "area burst 1 within 8 squares", a "ranged 5/10" to "ranged 8/13", and so on.</line>
       </block>
    </item>
 
@@ -13435,9 +14447,10 @@
       </headline>
       <block>
          <name>Attack Power</name>
-         <keyword>Primal</keyword>
+         <keyword>Primal</keyword> <keyword>Spirit</keyword>
          <frequency>Daily</frequency>
-         <action>Minor</action> <subaction>Action</subaction>
+         <action>Minor</action> <subaction/>
+         <line><name>Effect</name>Until the end of your next turn, whenever an enemy deals damage to an ally adjacent to your spirit companion, that enemy takes damage equal to 3 + twice this implement's enhancement bonus.</line>
       </block>
    </item>
    

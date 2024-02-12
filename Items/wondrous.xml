@@ -128,6 +128,32 @@
    </item>
    
    <item>
+      <title>Bottled Cinders</title>
+      <category>Common</category>
+      <fluff>This brass bottle is hot to the touch, and spews forth a cloud of ash and smoke when opened</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Fire</keyword> <keyword>Zone</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>Close burst 1; The burst creates a zone of floating ash and smoke until the end of your next turn.</line>
+         <line indent="1"><name>Level 17</name>Close burst 3.</line>
+         <line>Creatures in the zone have concealment. Any creature other than you that starts its turn in the zone takes 5 fire damage.</line>
+         <line indent="1"><name>Sustain Minor</name> <![CDATA[<i>Requirement:</i>]]>You must be within 10 squares of the zone; The zone persists until the end of your next turn.</line>
+         <line indent="1"><name>Level 17</name>10 fire damage.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Bottled Spirit</title>
       <category>Uncommon</category>
       <fluff>The spirit bound within this rune-inscribed black metal flask manipulates objects at your command</fluff>
@@ -358,6 +384,27 @@
    </item>
    
    <item>
+      <title>Decanter of Endless Water</title>
+      <category>Common</category>
+      <fluff>When you open this always-dripping flask, it will release a steady stream of water, or a torrent that blasts away obstacles</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>You cause the decanter to pour forth fresh or salt water in one of three volumes:</line>
+         <line indent="1"><bullet/><name>Stream</name>1 gallon.</line>
+         <line indent="1"><bullet/><name>Fountain</name>5 gallons in a 5-foot-long stream.</line>
+         <line indent="1"><bullet/><name>Geyser</name>30 gallons in a 20-foot-long stream. The geyser creates considerable pressure, and you must succeed at a DC 16 Strength check when you use this function, or you are knocked prone.</line>
+         <line>In addition to filling a container of suitable volume, the fountain function of the decanter can be used to clear dirt or light debris from an area 2 squares on a side.</line>
+         <line>The geyser function can be used to break a door or other similarly sized object. Make an Athletics check at a +12 check modifier to break the object. The area in a burst 1 centered on the door or object is difficult terrain until the end of the encounter.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Deepfarer's Pouch</title>
       <category>Common</category>
       <fluff>This oilskin pouch holds more than it should, including a small breathing tube that extends from the inside</fluff>
@@ -369,7 +416,7 @@
       <block>
          <name>Property</name>
          <line>This belt pouch contains 1 hour's worth of air, which remains fresh indefinitely.</line>
-         <line>Once the air in the pouch, you can refresh the supply by exposing the open pouch to any supply of breathable air during a short rest.</line>
+         <line>Once the air in the pouch has been used up, you can refresh the supply by exposing the open pouch to any supply of breathable air during a short rest.</line>
       </block>
    </item>
 
@@ -418,6 +465,21 @@
          <line indent="1"><name>Level 23</name>Resist 15.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Distracting Tattoo</title>
+      <category>Common</category>
+      <fluff>Any small, bright image in a highly visible place is sufficient for the magic of this tattoo</fluff>
+      <level>
+         <value>6</value>
+         <price>1,800</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>When you spend an action point, you can end any mark affecting you.</line>
+      </block>
+   </item>
 
    <item>
       <title>Door of Alarm</title>
@@ -437,17 +499,115 @@
    </item>
    
    <item>
-      <title>Distracting Tattoo</title>
+      <title>Doss Lute</title>
       <category>Common</category>
-      <fluff>Any small, bright image in a highly visible place is sufficient for the magic of this tattoo</fluff>
+      <fluff>The dulcet music of this lute imbues its listeners with resilience and quiet resolve</fluff>
       <level>
-         <value>6</value>
-         <price>1,800</price>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
       </level>
-      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <headline auto="attackenh"/>
+      <headline crit="d6"/>
       <block>
          <name>Property</name>
-         <line>When you spend an action point, you can end any mark affecting you.</line>
+         <line auto="bardinstrument"/>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Short</action> <subaction>Rest</subaction>
+         <line><name>Effect</name>Choose yourself, or an ally who remained within 20 squares of you during the rest.</line>
+         <line>The chosen character gains a +1 power bonus to saving throws until the end of his or her next rest.</line>
+         <line indent="1"><name>Song of Rest</name>If the target also benefited from your Song or Rest class feature, the power bonus increases to +2.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Echo of Ty'h'kadi</title>
+      <category>Rare</category>
+      <fluff>Light worms through this violet shard, as if somehow it contains the very essence of lightning</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Primordial Shard</subtype>
+      <headline itemdamage="">Lightning or Thunder</headline>
+      <block>
+         <name>Primordial Shard</name>
+         <line>You can benefit from only one primordial shard at a time. If you carry more than one, none of them function.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <line>Your origin changes to elemental.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Elemental</keyword> <keyword>Thunder</keyword>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You take lightning damage</line>
+         <line><name>Effect</name>Close burst 1 (each enemy in the burst); Each target takes 5 thunder damage.</line>
+         <line indent="1"><name>Level 17</name>10 thunder damage.</line>
+         <line indent="1"><name>Level 27</name>Close burst 2, 10 thunder damage.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Enshrouding Candle</title>
+      <category>Uncommon</category>
+      <fluff>This candle creates a dim corona of light that helps conceal you from foes</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>This candle never burns down.</line>
+         <line>When lit, this candle sheds dim light in a 2-square radius. Bright light within the candle's radius is reduced to dim light.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Illusion</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Requirement</name>The candle must be lit.</line>
+         <line><name>Effect</name>The candle creates an illusion within the area of its illumination. The illusion moves with the candle, and lasts for 8 hours or until the candle is extinguished as a minor action.</line>
+         <line>Creatures within the illusion are invisible to those outside the area, though other features within the area appear as normal. Sound (including speech) within the area is likewise inaudible to those outside. Creatures within the area are unaffected by the illusion and can perceive each other normally.</line>
+         <line>Other senses are unaffected by the candle's illusion. For example, a creature with tremorsense could locate characters hidden by the illusion normally. Likewise, if characters within the area move objects around them, the moving objects can be seen.</line>
       </block>
    </item>
 
@@ -918,6 +1078,24 @@
          <line indent="1"><name>Level 13</name>The bonus increases to +2 for exploration speed.</line>
       </block>
    </item>
+   
+   <item>
+      <title>Horn of Summons</title>
+      <category>Uncommon</category>
+      <fluff>This steel battle horn alerts even those allies you cannot see</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Encounter</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>You sound the horn. All creatures within 1 mile hear its call.</line>
+         <line>Allies within that range are awakened if they are sleeping, and instantly know your current location, hit point total, and any effects currently affecting you.</line>
+      </block>
+   </item>
 
    <item>
       <title>Hyrsam Fiddle</title>
@@ -1056,6 +1234,26 @@
    </item>
    
    <item>
+      <title>Jar of Steam</title>
+      <category>Common</category>
+      <fluff>This clay jar is warm to the touch and, when opened, creates a cloud of steam that fills the area around it</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Zone</keyword>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>Close burst 1; You pull the lid off the jar and it creates a zone of steam in the burst until the end of your next turn.</line>
+         <line>Any creature other than you that ends its turn in the zone takes 1d10 fire damage.</line>
+         <line indent="1"><name>Sustain Minor</name>Requirement: you must be within 10 squares of the zone; The zone persists until the end of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Lamp of Discerning</title>
       <category>Common</category>
       <fluff>This plain-looking lantern grants those in its light the ability to see through deception</fluff>
@@ -1068,6 +1266,24 @@
          <name>Property</name>
          <line>When lit, this lantern sheds bright light in a 10-square radius and dim light for a further 10 squares, like a normal lantern, but never needs refilling.</line>
          <line>You and allies within the bright light gain a +1 power bonus to Insight checks and Perception checks.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Lens of Reading</title>
+      <category>Common</category>
+      <fluff>Holding this lens to your eye allows you to read even the most complex scripts and obscure languages</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Requirement</name>You must be perusing a text written in a language you do not know.</line>
+         <line><name>Effect</name>For 6 hours, as long as you read using this lens, you can read the unknown language you are perusing. This does not give you any special ability to notice hidden messages in the text.</line>
       </block>
    </item>
    
@@ -1090,10 +1306,25 @@
       <type>Wondrous Item</type> <subtype>Consumable</subtype>
       <block>
          <name>Property</name>
-         <line>While wrapped in this shroud, a corpse does not decay, can't be touched by an undead creature unless that undead is at least 5 levels higher than the shroud. and can't become undead.</line>
+         <line>While wrapped in this shroud, a corpse does not decay, can't be touched by an undead creature unless that undead is at least 5 levels higher than the shroud, and can't become undead.</line>
          <line>Once wrapped around a body, the magic in the shroud dissipates after 90 days.</line>
          <line indent="1"><name>Level 9</name>After a year and a day.</line>
          <line indent="1"><name>Level 14</name>After five years.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Long Day's Battle Tattoo</title>
+      <category>Common</category>
+      <fluff>This tattoo is often depicted as a shield surrounded by weapons</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>You gain a bonus to damage rolls with daily powers equal to the number of healing surges you have spent.</line>
       </block>
    </item>
    
@@ -1188,6 +1419,33 @@
    </item>
    
    <item>
+      <title>Map of Unseen Lands</title>
+      <category>Rare</category>
+      <fluff>Unseen images glimmer within this mundane-looking sheet of vellum, which erupts with detail as it creates complex maps at your command</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Property</name>
+         <line>You gain a +2 bonus to Nature checks and Perception checks realted to navigating through areas mapped by this item's power.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>You command the map to redraw itself, depicting the surface area in a 10-mile radius around you. The map doesn't go into precise detail, but it is accurate. It shows only aboveground terrain, not underground areas. The map displays the following features:</line>
+         <line indent="1"><bullet/>General terrain, such as mountains, rivers, and lakes</line>
+         <line indent="1"><bullet/>Structures 5,000 squares feet or larger in area</line>
+         <line indent="1"><bullet/>Structures important for travel, such as bridges and portals</line>
+         <line indent="1"><bullet/>Lairs of creatures that are significant threats</line>
+         <line indent="1"><bullet/>Names or general descriptions of any of the above features, if such information is well-known within the area presented by the map</line>
+         <line>The map depicts the same area until this power is used again.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Martyr's Saddle</title>
       <category>Common</category>
       <fluff>Those who seek to protect their mounts at any cost favor this saddle</fluff>
@@ -1217,6 +1475,24 @@
          <action>Immediate</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>The mount would take damage; you must be riding the mount</line>
          <line><name>Effect</name>The mount takes half of the triggering damage, and you take the remainder. The damage you take is typeless, and cannot be reduced or prevented.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Marvelous Pigments</title>
+      <category>Uncommon</category>
+      <fluff>You smear a glob of this paint on a wall or floor, creating any object you desire</fluff>
+      <level>
+         <value>7</value>
+         <price>100</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Consumable</subtype>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Consumable</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>You create a nonmagical object that is up to 1 square in volume and weighs up to 200 pounds. The object remains until the end of the encounter.</line>
+         <line>The object must be created in an unoccupied square and on a solid surface, such as a floor, a wall, or a tree.</line>
       </block>
    </item>
    
@@ -1381,6 +1657,127 @@
    </item>
    
    <item>
+      <title>Pale Tooth</title>
+      <category>Rare</category>
+      <fluff>This milky white shard is cool to the touch, hinting at the elemental power contained within</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Primordial Shard</subtype>
+      <headline itemdamage="">Cold</headline>
+      <block>
+         <name>Primordial Shard</name>
+         <line>You can benefit from only one primordial shard at a time. If you carry more than one, none of them function.</line>
+      </block>
+      <block>
+         <name>Property</name>
+         <line>Your origin changes to elemental.</line>
+      </block>
+      <block>
+         <name>Ice Walk</name>
+         <line>You ignore difficult terrain that is the result of ice or snow.</line>
+      </block>
+      <block>
+         <name>Attack Power</name>
+         <keyword>Cold</keyword> <keyword>Elemental</keyword>
+         <frequency>Encounter</frequency>
+         <action>Immediate</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You take cold damage</line>
+         <line><name>Effect</name>Close burst 1 (each enemy in the burst); Each target is frozen until the start of the currently acting creature's next turn.</line>
+         <line indent="1"><name>Level 17</name>Close burst 2.</line>
+         <line indent="1"><name>Level 27</name>Close burst 3.</line>
+         <line>While frozen, the target is immobilized and has vulnerable 5 cold.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Pearl of Power</title>
+      <category>Uncommon</category>
+      <fluff>This pearl grows warm to the touch each time you attack, ready to overcome your enemies' best attempts to thwart you</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Free</action> <subaction>Reaction</subaction>
+         <line><name>Trigger</name>You miss all targets with an encounter attack power of 3rd level or lower</line>
+         <line indent="1"><name>Level 17</name>13th level or lower.</line>
+         <line indent="1"><name>Level 27</name>23rd level or lower.</line>
+         <line><name>Effect</name>You regain the use of the triggering power at the start of your next turn.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Phantom Soldier</title>
+      <category>Common</category>
+      <fluff>This tiny figuriine is carved in the shape of a warrior and can be used to summon a life-sized illusion of the depicted warrior to distract your enemies in battle</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <keyword>Illusion</keyword>
+         <frequency>Daily</frequency>
+         <action>Minor</action> <subaction/>
+         <line auto="no-opportunity"/>
+         <line><name>Effect</name>Ranged 5; An illusory soldier appears in an unnocpied square in range. The illusion occupies its square and lasts until the end of the encounter.</line>
+         <line>The illusory soldier counts as one of your allies for the purposes of flanking and movement, but can not make any attacks. The illusion uses your defenses, not counting temporary bonuses, has 5 hit points, and is damaged like a minion. You can use the following action once per round:</line>
+         <line indent="1"><name>Minor Action</name>You move the illusory soldier up to your speed.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Pierced Heart Tattoo</title>
+      <category>Common</category>
+      <fluff>Arrows, spears, swords - anything with a point serves to pincushion the heart at the center of this tattoo</fluff>
+      <level>
+         <value>2</value>
+         <price>520</price>
+      </level>
+      <level>
+         <value>12</value>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <price>325,000</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>When you use your <![CDATA[<i>second wind</i>]]>, you gain a +2 bonus to damage the first time you hit before the end of your next turn.</line>
+         <line indent="1"><name>Level 12</name>+4 bonus.</line>
+         <line indent="1"><name>Level 22</name>+6 bonus.</line>
+         <line>If you are raging when you use your <![CDATA[<i>second wind</i>]]>, you also gain a +1 bonus to attack rolls until you hit, or until the end of your next turn, whichever comes first.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Polyglot Gem</title>
       <category>Common</category>
       <fluff>This intricately carved gemstone holds the secrets of language within its many facets</fluff>
@@ -1421,32 +1818,6 @@
          <line><name>Requirement</name>You must look exactly like the creature depicted by the portrait.</line>
          <line><name>Effect</name>The portrait canvas vanishes, providing access to the extradimensional space. Retrieving an item is a minor action, as usual.</line>
          <line>Using this power again ends the effect.</line>
-      </block>
-   </item>
-
-   <item>
-      <title>Pierced Heart Tattoo</title>
-      <category>Common</category>
-      <fluff>Arrows, spears, swords - anything with a point serves to pincushion the heart at the center of this tattoo</fluff>
-      <level>
-         <value>2</value>
-         <price>520</price>
-      </level>
-      <level>
-         <value>12</value>
-         <price>13,000</price>
-      </level>
-      <level>
-         <value>22</value>
-         <price>325,000</price>
-      </level>
-      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
-      <block>
-         <name>Property</name>
-         <line>When you use your <![CDATA[<i>second wind</i>]]>, you gain a +2 bonus to damage the first time you hit before the end of your next turn.</line>
-         <line indent="1"><name>Level 12</name>+4 bonus.</line>
-         <line indent="1"><name>Level 22</name>+6 bonus.</line>
-         <line>If you are raging when you use your <![CDATA[<i>second wind</i>]]>, you also gain a +1 bonus to attack rolls until you hit, or until the end of your next turn, whichever comes first.</line>
       </block>
    </item>
    
@@ -1490,6 +1861,21 @@
          <line><name>Effect</name>You regain the use of an expended encounter power of 3rd level or lower.</line>
          <line indent="1"><name>Level 15</name>13th level or lower.</line>
          <line indent="1"><name>Level 25</name>23rd level or lower.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Quick-Step Tattoo</title>
+      <category>Common</category>
+      <fluff>Cheetahs, panthers, and other fast predators serve well for these tattoos</fluff>
+      <level>
+         <value>7</value>
+         <price>1,300</price>
+      </level>
+      <type>Wondrous Item</type> <subtype>Tattoo</subtype>
+      <block>
+         <name>Property</name>
+         <line>When you spend an action point to take an extra action, each ally who can see you and that also has a <![CDATA[<i>quick-step tattoo</i>]]> can shift 1 square as a free reaction.</line>
       </block>
    </item>
 
@@ -1543,7 +1929,7 @@
       <block>
          <name>Utility Power</name>
          <frequency>Encounter</frequency>
-         <action>Minor</action> <subaction>Action</subaction>
+         <action>Free</action> <subaction>Interrupt</subaction>
          <line><name>Trigger</name>You make a Weapon attack with a blade attuned to this scabbard</line>
          <line><name>Effect</name>You gain a +2 power bonus to damage with the triggering attack. This increases to a +3 power bonus if you draw the weapon from the scabbard as part of the attack.</line>
          <line indent="1"><name>Level 15</name>+4 power bonus or +6 power bonus, respectively.</line>
@@ -1666,6 +2052,34 @@
    </item>
    
    <item>
+      <title>Shroud of Revival</title>
+      <category>Common</category>
+      <fluff>This white gossamer shroud grants protection and bodily strength to a dying ally</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>17</value>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <price>1,625,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>Melee 1 (one dying creature); The target gains resist 25 all, and a +2 power bonus to death saving throws.</line>
+         <line indent="1"><name>Level 17</name>Resist 40, and a +3 power bonus.</line>
+         <line indent="1"><name>Level 27</name>Resist 60, and a +4 power bonus.</line>
+         <line>The effect lasts until the target is no longer dying or until the shroud is removed (a standard action), whichever comes first.</line>
+      </block>
+   </item>
+   
+   <item>
       <title>Sigil of Companionship</title>
       <category>Common</category>
       <fluff>This medal, which can be strapped to a leg or hung around a neck, signifies the depth of experience you and your companion have working together</fluff>
@@ -1722,6 +2136,53 @@
          <line>When used to do the work it was designed for, a silent tool makes practically no noise. For example, a silent crowbar could aid attempts to open a locked door without alerting the sleeping monster on the other side, while a silent grappling hook has less chance of being heard by nearby guards.</line>
          <line>You gain a +5 item bonus to Stealth checks related to using the tool.</line>
          <line>Any individual mundane tool -a woodcutter's axe, a crowbar, a hammer, a shovel, and so on- can be made silent. Weapons, clothing, jewelry, or other mundane objects cannot.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Sitar of Restfulness</title>
+      <category>Common</category>
+      <fluff>The sweet sounds of this breathtaking wooden stringed instrument instill a luck that can be realized only through boldness of action</fluff>
+      <level>
+         <value>7</value>
+         <bonus>+2</bonus>
+         <price>2,600</price>
+      </level>
+      <level>
+         <value>12</value>
+         <bonus>+3</bonus>
+         <price>13,000</price>
+      </level>
+      <level>
+         <value>17</value>
+         <bonus>+4</bonus>
+         <price>65,000</price>
+      </level>
+      <level>
+         <value>22</value>
+         <bonus>+5</bonus>
+         <price>325,000</price>
+      </level>
+      <level>
+         <value>27</value>
+         <bonus>+6</bonus>
+         <price>1,625,000</price>
+      </level>
+      <type>Wondrous Item</type>
+      <headline auto="attackenh"/>
+      <headline crit="d8"></headline>
+      <block>
+         <name>Property</name>
+         <line auto="bardinstrument"/>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>Daily</frequency>
+         <action>Short</action><subaction>Rest</subaction>
+         <line><name>Effect</name>At the end of the rest, you and each ally who remained within 20 squares of you during the rest gains 6 temporary hit points.</line>
+         <line indent="1"><name>Level 12 or 17</name>10 temporary hit points.</line>
+         <line indent="1"><name>Level 22 or 27</name>15 temporary hit points.</line>
+         <line indent="1"><name>Song of Rest</name>Allies benefiting from your Song of Rest bard class feature instead gain 5 additional temporary hit points.</line>
       </block>
    </item>
    
@@ -1827,6 +2288,28 @@
          <line>The first time during this day that you spend a healing surge to regain hit points, you regain 2 additional hit points.</line>
          <line indent="1"><name>Level 13</name>4 additional hit points.</line>
          <line>You also gain a +2 power bonus to Endurance checks for 12 hours.</line>
+      </block>
+   </item>
+   
+   <item>
+      <title>Stylus of the Translator</title>
+      <category>Common</category>
+      <fluff>This writing implement allows you to sribe in translation</fluff>
+      <level>
+         <value>7</value>
+         <price>2,600</price>
+      </level>
+      <type>Wondrous Item</type>
+      <block>
+         <name>Creation</name>
+         <line>When this stylus is created, the creator chooses any one language.</line>
+      </block>
+      <block>
+         <name>Utility Power</name>
+         <frequency>At-Will</frequency>
+         <action>Standard</action> <subaction/>
+         <line><name>Effect</name>Everything written with this stylus is in the language chosen when it was created, regardless of which language the writer is actually writing.</line>
+         <line>Using this power again ends the effect.</line>
       </block>
    </item>
 
