@@ -362,6 +362,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<b>Requirement:&#160;</b>
 		<xsl:text>You must be wielding two melee weapons, or a ranged weapon.</xsl:text>
 	</xsl:if>
+   <xsl:if test="@auto='prereq-wildshape'">
+      <b>Prerequisite:&#160;</b>
+      <xsl:text>You must have the </xsl:text><i>wild shape</i><xsl:text> class power.</xsl:text>
+   </xsl:if>
 	<xsl:if test="@auto='powerstrike'">
 		<b>Special:&#160;</b>
 		<i>Power strike</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>power strike</i><xsl:text> per triggering attack.</xsl:text>
@@ -397,6 +401,24 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="name/@vestige">
 			<b><i>Eyes of the Vestige</i> Augment:</b>&#160;
 		</xsl:when>
+      <xsl:when test="contains(name, 'Miss (Level')">
+			<b><xsl:value-of select="name" />&#160;</b>
+		</xsl:when>
+		<xsl:when test="contains(name, 'Effect (Level')">
+			<b><xsl:value-of select="name" />&#160;</b>
+		</xsl:when>
+		<xsl:when test="contains(name, 'Special (Level')">
+			<b><xsl:value-of select="name" />&#160;</b>
+		</xsl:when>
+		<xsl:when test="contains(name, 'Aftereffect')">
+			<i><xsl:value-of select="name" />&#160;</i>
+		</xsl:when>
+		<xsl:when test="contains(name, 'Failed Save')">
+			<i><xsl:value-of select="name" />&#160;</i>
+		</xsl:when>
+		<xsl:when test="contains(name, 'Level')">
+			<i><xsl:value-of select="name" />&#160;</i>
+		</xsl:when>
 		<xsl:when test="keyword">
 			<xsl:text>This power gains the </xsl:text>
 			<b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.1em; width:calc(100% - 0.5em); margin:0.2em;"><xsl:value-of select="keyword"/></span></b>
@@ -410,21 +432,41 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:otherwise>
 	</xsl:choose>
 	<xsl:if test="type">
-		<i><xsl:value-of select="type" /></i>
+      <xsl:choose>
+         <xsl:when test="not(name) or type/@style='bold'">
+            <b><xsl:value-of select="type" /></b>
+         </xsl:when>
+         <xsl:otherwise>
+            <i><xsl:value-of select="type" /></i>
+         </xsl:otherwise>
+      </xsl:choose>
 		<xsl:if test="range">
 			<xsl:text> </xsl:text><xsl:value-of select="range" disable-output-escaping="yes"/>
 		</xsl:if>
+      <xsl:if test="target and target2">
+         <xsl:text> (</xsl:text>
+         <xsl:value-of select="target" disable-output-escaping="yes" />
+         <xsl:text>)</xsl:text>
+      </xsl:if>
 		<xsl:if test="type2">
-			<xsl:text> or </xsl:text><i><xsl:value-of select="type2"/></i>
+         <xsl:text> or </xsl:text>
+         <xsl:choose>
+            <xsl:when test="not(name) or type2/@style='bold'">
+               <b><xsl:value-of select="type2" /></b>
+            </xsl:when>
+            <xsl:otherwise>
+               <i><xsl:value-of select="type2"/></i>
+            </xsl:otherwise>
+         </xsl:choose>
 			<xsl:if test="range2">
 				<xsl:text> </xsl:text><xsl:value-of select="range2" disable-output-escaping="yes"/>
 			</xsl:if>
 		</xsl:if>
-		<xsl:if test="target">
+		<xsl:if test="target and not(target2)">
 		   <xsl:text> (</xsl:text><xsl:value-of select="target" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
 		</xsl:if>
-		<xsl:if test="text">
-			<xsl:text>; </xsl:text>
+		<xsl:if test="target2">
+		   <xsl:text> (</xsl:text><xsl:value-of select="target2" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
 		</xsl:if>
 	</xsl:if>
 	<xsl:if test="type and target">
@@ -433,6 +475,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:if test="text">
 		<xsl:value-of select="text" disable-output-escaping="yes" />
 	</xsl:if>
+   <xsl:if test="text()!=''">
+      <xsl:value-of select="text()" disable-output-escaping="yes" />
+   </xsl:if>
 
 </xsl:template>
 

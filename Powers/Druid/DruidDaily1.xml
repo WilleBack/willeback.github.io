@@ -150,7 +150,7 @@
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Primal Swarm:</name> <name-style>bold</name-style>
-            <text>You can choose to have the aura centered on an ally within 3 squares of you instead.</text>
+            <text>You can choose one ally in the burst. The ally activates the aura instead of you.</text>
          </section>
    </power>
 
@@ -339,7 +339,7 @@
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>Once per round when a Weapon attack using the target hits, the target hit with the attack also takes fire damage equal to your Wisdom modifier.</text>
+				<text>Once per round when a Weapon attack using the target hits, the target hit with the attack also takes fire damage equal to your Wisdom modifier. This effect lasts until the end of the encounter.</text>
 			</section>
 	</power>
 
@@ -441,7 +441,7 @@
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>Once per round when a Weapon attack using the target hits, the target hit with the attack also takes force equal to one-half your Wisdom modifier and is knocked prone.</text>
+				<text>Once per round when a Weapon attack using the target hits, the target hit with the attack also takes force damage equal to one-half your Wisdom modifier and is knocked prone.</text>
 			</section>
 	</power>
 
@@ -452,10 +452,10 @@
 			<frequency>Daily</frequency>
 			<keyword>Implement, Primal, Summoning</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
+         <section><type>Ranged</type> <range>10</range></section>
 			<section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-				<type>Ranged</type> <range>10</range>
+            <name>Effect:</name>
             <text>You summon a medium Fierce Boar in an unoccupied space within range.</text>
          </section>
 			<section>
@@ -475,10 +475,10 @@
 			<frequency>Daily</frequency>
 			<keyword>Implement, Primal, Summoning</keyword>
 			<action>Minor</action> <subaction>Action</subaction>
+         <section><type>Ranged</type> <range>10</range></section>
 			<section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-				<type>Ranged</type> <range>10</range>
+            <name>Effect:</name>
             <text>You summon a medium Giant Toad in an unoccupied space within range.</text>
          </section>
 			<section>
@@ -502,10 +502,10 @@
 				<name>Prerequisite:</name> <name-style>bold</name-style>
 				<text>A Primal Aspect class feature.</text>
 			</section>
+         <section><type>Ranged</type> <range>10</range></section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-	         <type>Ranged</type> <range>10</range>
+            <name>Effect:</name>
             <text>You summon a creature in an unoccupied space within range. Your choice of creatures depends on your Primal Aspect:</text>
          </section>
 			<section>
@@ -579,10 +579,6 @@
 			<keyword>Implement, Primal</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Target:</name> <name-style>bold</name-style>
-				<text>Each enemy in the burst</text>
-			</section>
-			<section>
 				<name>Attack:</name> <name-style>bold</name-style>
 				<type>Area</type> <range>burst 1 within 5 squares</range>
 				<type2>Close</type2> <range2>burst 1</range2>
@@ -592,7 +588,7 @@
 			<section>
 				<shade>true</shade>
 				<name>Hit:</name> <name-style>bold</name-style>
-				<text>2d8 + Wisdom modifier damage, and the target is slowed (save ends).</text>
+				<text>2d6 + Wisdom modifier damage, and the target is slowed (save ends).</text>
 			</section>
 			<section>
 				<name>Miss:</name> <name-style>bold</name-style>
@@ -601,11 +597,11 @@
 			<section>
 				<shade>true</shade>
 				<name>Effect:</name> <name-style>bold</name-style>
-				<text>If an ally was in the origin square of the area version or you used the close version, that ally or you (respectively) gain the following effect:</text>
+				<text>If you used this power as a close burst, you activate an Aura 1 (Primal). If you used this power as an area burst and an ally was in the origin square, that ally activates an Aura 1 (Primal).</text>
 			</section>
 			<section>
-				<shade>true</shade> <indent>1</indent>
-				<text>Until the end of the encounter, squares adjacent to the ally or you (respectively) are difficult terrain for enemies.</text>
+				<shade>true</shade>
+				<text>Squares in the aura are difficult terrain for enemies.</text>
 			</section>
 	</power>
 
