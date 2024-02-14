@@ -74,11 +74,11 @@
          <frequency>Encounter</frequency>
          <keyword>Shadow</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
-         <section auto="personal"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy targets you with a melee attack or ranged attack</text>
          </section>
+         <section personal=""/>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
@@ -98,10 +98,10 @@
          <keyword>Illusion, Shadow</keyword>
          <action>Minor</action> <subaction>Action</subaction>
          <section auto="no-opportunity"/>
+         <section><type>Ranged</type> <range>10</range></section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>10</range>
             <text>You create the illusion of a Medium or smaller creature of your choice in an unoccupied square in the burst until the end of your next turn.</text>
          </section>
          <section>
@@ -186,7 +186,7 @@
       <fluff>You pad quietly toward your victim, unseen and unheard</fluff>
          <frequency>At-Will</frequency>
          <keyword>Shadow</keyword>
-         <action>Move</action> <subaction>Move</subaction>
+         <action>Move</action> <subaction/>
          <section>
             <name>Requirement:</name> <name-style>bold</name-style>
             <text>You must be hidden.</text>
@@ -214,10 +214,10 @@
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An enemy enters a square adjacent to you</text>
          </section>
+         <section><type>Close</type> <range>burst 1</range></section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 1</range>
+            <name>Effect:</name>
             <text>The burst creates a zone of smoke until the start of the acting creature's next turn.</text>
          </section>
          <section>
@@ -237,10 +237,10 @@
          <frequency>Daily</frequency>
          <keyword>Shadow, Zone</keyword>
          <action>Minor</action> <subaction>Action</subaction>
+         <section><type>Close</type> <range>burst 5</range></section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 5</range>
+            <name>Effect:</name>
             <text>The burst creates a zone of mist until the end of the encounter.</text>
          </section>
          <section>

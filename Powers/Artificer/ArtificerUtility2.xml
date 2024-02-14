@@ -15,38 +15,14 @@
            <text>You or at least one ally you can see within 10 squares of you is pushed, pulled, or slid</text>
         </section>
         <section>
-           <name>Target:</name> <name-style>bold</name-style>
-           <type>Close</type> <range>burst 5</range>
-           <type2>Close</type2> <range2>burst 10</range2>
-           <text>You and each triggering ally in the burst if you use this power as a burst 5; one triggering ally if you use this power as a burst 10</text>
+           <name>Target:</name>
+           <type>Close</type> <range>burst 5</range><target>you and each triggering ally in the burst</target>
+           <type2>Close</type2> <range2>burst 10</range2><target2>one triggering ally in the burst</target2>
         </section>
         <section>
            <shade>true</shade>
            <name>Effect:</name> <name-style>bold</name-style>
-           <text>The push, pull, or slide is negated for the target.</text>
-        </section>
-  </power>
-
-  <power>
-     <title>Swift Mender</title>
-     <class>Artificer</class> <category>Utility</category> <level>2</level>
-     <fluff>You empower a tiny construct to zoom to an ally's aid</fluff>
-        <frequency>Encounter</frequency>
-        <keyword>Arcane</keyword>
-        <action>Minor</action> <subaction>Action</subaction>
-        <section>
-           <name>Target:</name> <name-style>bold</name-style>
-           <type>Ranged</type> <range>5</range>
-           <target>one ally</target>
-        </section>
-        <section>
-           <shade>true</shade>
-           <name>Effect:</name> <name-style>bold</name-style>
-           <text>The target can make a saving throw against one effect, even if that effect does not normally end on a save.</text>
-        </section>
-        <section>
-           <shade>true</shade>
-           <text>If the effect effect is ongoing damage, the target can roll twice and use either result.</text>
+           <text>You negate the triggering forced movement.</text>
         </section>
   </power>
 
@@ -57,10 +33,10 @@
         <frequency>Encounter</frequency>
         <keyword>Arcane, Conjuration</keyword>
         <action>Standard</action> <subaction>Action</subaction>
+        <section><type>Ranged</type> <range>10</range></section>
         <section>
            <shade>true</shade>
-           <name>Effect:</name> <name-style>bold</name-style>
-           <type>Ranged</type> <range>10</range>
+           <name>Effect:</name>
            <text>You conjure an arcane springboard in a square in range. The springboard does not occupy its square and lasts until the end of your next turn.</text>
         </section>
         <section>
@@ -153,10 +129,10 @@
         <frequency>Daily</frequency>
         <keyword>Arcane, Conjuration</keyword>
         <action>Minor</action> <subaction>Action</subaction>
+        <section><type>Ranged</type> <range>10</range></section>
         <section>
            <shade>true</shade>
-           <name>Effect:</name> <name-style>bold</name-style>
-           <type>Ranged</type> <range>10</range>
+           <name>Effect:</name>
            <text>You conjure a shadowy figurine in a square in range. The figurine does not occupy its space and remains until the end of your next turn.</text>
         </section>
         <section>
@@ -171,6 +147,29 @@
            <shade>true</shade> <indent>1</indent>
            <name>Sustain Minor:</name> <name-style>bold</name-style>
            <text>The figurine persists until the end of your next turn, and you can move it up to 5 squares.</text>
+        </section>
+  </power>
+
+  <power>
+     <title>Swift Mender</title>
+     <class>Artificer</class> <category>Utility</category> <level>2</level>
+     <fluff>You empower a tiny construct to zoom to an ally's aid</fluff>
+        <frequency>Encounter</frequency>
+        <keyword>Arcane</keyword>
+        <action>Minor</action> <subaction>Action</subaction>
+        <section>
+           <name>Target:</name> <name-style>bold</name-style>
+           <type>Ranged</type> <range>5</range>
+           <target>one ally</target>
+        </section>
+        <section>
+           <shade>true</shade>
+           <name>Effect:</name> <name-style>bold</name-style>
+           <text>The target can make a saving throw against one effect, even if that effect does not normally end on a save.</text>
+        </section>
+        <section>
+           <shade>true</shade>
+           <text>If the effect effect is ongoing damage, the target can roll twice and use either result.</text>
         </section>
   </power>
 </catalog>
