@@ -67,7 +67,6 @@
    <list selection="Necrotic Specialization" />
 
    <list selection="Ongoing Damage" />
-   <list selection="Opportunity Attacks" />
 
    <list selection="Perception" />
    <list selection="Physical Change" />
@@ -80,6 +79,7 @@
    <list selection="Psychic Specialization" />
 
    <list selection="Radiant Specialization" />
+   <list selection="Reactive Strikes" />
    <list selection="Rituals" />
 
    <list selection="Saving Throws" />
@@ -356,7 +356,7 @@
       <group>Class</group>
       <group>Combat Advantage</group>
       <group>Mobility</group>
-      <benefit>When you are missed by an &lt;i&gt;opportunity attack&lt;/i&gt;, you gain combat advantage against the attacker until the end of your next turn.</benefit>
+      <benefit>When you are missed by a &lt;i&gt;reactive strike&lt;/i&gt;, you gain combat advantage against the attacker until the end of your next turn.</benefit>
    </feat>
 
    <feat>
@@ -393,7 +393,7 @@
       <prereq>
          <type>ability</type>
          <name>Charisma</name>
-         <value>21</value>
+         <value>23</value>
       </prereq>
       <prereq>
          <type>class</type>
@@ -1149,7 +1149,7 @@
       </prereq>
       <group>Class</group>
       <group>Defense</group>
-      <benefit>Your ranged arcane attack powers do not provoke &lt;i&gt;opportunity attacks&lt;/i&gt;.</benefit>
+      <benefit>Your ranged arcane attack powers do not provoke &lt;i&gt;reactive strikes&lt;/i&gt;.</benefit>
    </feat>
 
    <feat>
@@ -1630,7 +1630,7 @@
       <group>Class</group>
       <group>Damage Resistance</group>
       <group>Mobility</group>
-      <benefit>While you have concealment from your Shadow Walk class feature, you are treated as insubstantial against attacks triggered by your movement and can enter your enemies' spaces, though you cannot end your move there and trigger &lt;i&gt;opportunity attacks&lt;/i&gt; normally for entering an enemy's space.</benefit>
+      <benefit>While you have concealment from your Shadow Walk class feature, you are treated as insubstantial against attacks triggered by your movement and can enter your enemies' spaces, though you cannot end your move there and trigger &lt;i&gt;reactive strikes&lt;/i&gt; normally for entering an enemy's space.</benefit>
    </feat>
 
    <feat>
@@ -1988,7 +1988,7 @@
       </prereq>
       <group>Mobility</group>
       <benefit>You can move diagonally even if a wall corner normally blocks such movement.</benefit>
-      <benefit>Also, you can move through enemies' spaces. You provoke &lt;i&gt;opportunity attacks&lt;/i&gt; for this movement as normal. You can't end your move in an enemy's space.</benefit>
+      <benefit>Also, you can move through enemies' spaces. You provoke &lt;i&gt;reactive strikes&lt;/i&gt; for this movement as normal. You can't end your move in an enemy's space.</benefit>
    </feat>
 
    <feat>
@@ -2275,8 +2275,8 @@
       </prereq>
       <group>Class</group>
       <group>Extra Attack</group>
-      <group>Opportunity Attacks</group>
-      <benefit>While you are adjacent to your oath target, other enemies trigger &lt;i&gt;opportunity attacks&lt;/i&gt; from you when they enter a square adjacent to you, not just when they leave.</benefit>
+      <group>Reactive Strikes</group>
+      <benefit>While you are adjacent to your oath target, other enemies trigger &lt;i&gt;reactive strikes&lt;/i&gt; from you when they enter a square adjacent to you, not just when they leave.</benefit>
    </feat>
 
    <feat>
@@ -2423,6 +2423,36 @@
       <group>Racial</group>
       <group>Teleport</group>
       <benefit>Once per turn, when you teleport, you deal fire damage to each enemy in or adjacent to the space you leave. The fire damage equals 10 + your Intelligence modifier or Charisma modifier.</benefit>
+   </feat>
+
+   <feat>
+      <title>Holy Symbol Mastery</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>hidden</type>
+         <name>Cleric</name>
+      </prereq>
+      <prereq>
+         <type>hidden</type>
+         <name>Paladin</name>
+      </prereq>
+      <prereq>
+         <type>hidden</type>
+         <name>Vampire</name>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Wisdom</name>
+         <value>19</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>19</value>
+      </prereq>
+      <group>Critical</group>
+      <group>Implement Specialization</group>
+      <benefit>When you make an Implement attack using a holy symbol you have proficiency with, you can score a critical hit on a natural roll of 19 or 20.</benefit>
    </feat>
 
    <feat>
@@ -2690,7 +2720,7 @@
       <group>Defense</group>
       <group>Mobility</group>
       <group>Power Enhancement</group>
-      <benefit>When you use your &lt;i&gt;speed of thought&lt;/i&gt; class power, you can move through spaces occupied by enemies and your movement does not provoke &lt;i&gt;opportunity attacks&lt;/i&gt;.</benefit>
+      <benefit>When you use your &lt;i&gt;speed of thought&lt;/i&gt; class power, you can move through spaces occupied by enemies and your movement does not provoke &lt;i&gt;reactive strikes&lt;/i&gt;.</benefit>
    </feat>
 
    <feat>
@@ -2854,7 +2884,7 @@
    </feat>
 
    <feat>
-      <title>Invoker Implement Expertise</title>
+      <title>Invoker Implement Mastery</title>
       <tier>Epic</tier>
       <prereq>
          <type>ability</type>
@@ -2869,7 +2899,7 @@
       <prereq>
          <type>ability</type>
          <name>Wisdom</name>
-         <value>21</value>
+         <value>23</value>
       </prereq>
       <prereq>
          <type>class</type>
@@ -3016,9 +3046,9 @@
       </prereq>
       <group>Class</group>
       <group>Forced Movement</group>
-      <group>Opportunity Attacks</group>
+      <group>Reactive Strikes</group>
       <group>Weapon Specialization</group>
-      <benefit>When you make an &lt;i&gt;opportunity attack&lt;/i&gt; with an Axe, a Hammer, a Mace, or a Pick, you can push the target 1 square, whether or not the attack hits.</benefit>
+      <benefit>When you make a &lt;i&gt;reactive strike&lt;/i&gt; with an Axe, a Hammer, a Mace, or a Pick, you can push the target 1 square, whether or not the attack hits.</benefit>
    </feat>
 
    <feat>
@@ -3803,22 +3833,22 @@
    </feat>
 
    <feat>
-      <title>Psion Implement Expertise</title>
+      <title>Psion Implement Mastery</title>
       <tier>Epic</tier>
       <prereq>
          <type>ability</type>
          <name>Intelligence</name>
-         <value>21</value>
+         <value>23</value>
       </prereq>
       <prereq>
          <type>ability</type>
          <name>Wisdom</name>
-         <value>17</value>
+         <value>15</value>
       </prereq>
       <prereq>
          <type>ability</type>
          <name>Charisma</name>
-         <value>17</value>
+         <value>15</value>
       </prereq>
       <prereq>
          <type>class</type>
@@ -4656,7 +4686,7 @@
       <group>Triggered</group>
       <benefit>When you hit with an enemy with a melee attack on your turn, you activate an Aura 1 (Martial) until the start of your next turn.</benefit>
       <benefit>An enemy that ends its turn in the aura takes damage equal to your ability modifier + your weapon's enhancement bonus. The ability modifier depends on the weapon your are wielding:</benefit>
-      <benefit>&lt;i&gt;Axe, Hammer, Mace, Pick:&lt;/b&gt; Constitution modifier.</benefit>
+      <benefit>&lt;i&gt;Axe, Hammer, Mace, Pick:&lt;/i&gt; Constitution modifier.</benefit>
       <benefit>&lt;i&gt;Flail, Heavy Blade, Light Blade, Unarmed, Spear:&lt;/i&gt; Dexterity modifier.</benefit>
       <benefit>&lt;i&gt;Polearm, Staff:&lt;/i&gt; Wisdom modifier.</benefit>
    </feat>
@@ -4674,6 +4704,34 @@
       <group>Mobility</group>
       <benefit>When you bloody a creature or reduce a creature to 0 hit points or fewer, you can shift 1 square as a free reaction.</benefit>
       <benefit>If you have the Whirling Frenzy class feature, you increase the shift from that feature when you bloody a creature instead, and you can shift 2 squares when you reduce a creature to 0 hit points or fewer.</benefit>
+   </feat>
+
+   <feat>
+      <title>Sorcerer Implement Mastery</title>
+      <tier>Epic</tier>
+      <prereq>
+         <type>ability</type>
+         <name>Strength</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Dexterity</name>
+         <value>15</value>
+      </prereq>
+      <prereq>
+         <type>ability</type>
+         <name>Charisma</name>
+         <value>23</value>
+      </prereq>
+      <prereq>
+         <type>class</type>
+         <name>Sorcerer</name>
+      </prereq>
+      <group>Class</group>
+      <group>Critical</group>
+      <group>Implement Specialization</group>
+      <benefit>When you wield a sorcerer implement while using an arcane power, you can score a critical hit on a natural roll of 19 or 20.</benefit>
    </feat>
 
    <feat>

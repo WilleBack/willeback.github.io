@@ -242,6 +242,45 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("featlist.html", pretty_print=True)
 
+# Heroic tier list
+source_doc = etree.parse("heroic.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("heroiclist.html", pretty_print=True)
+
+source_doc = etree.parse("heroicgen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("heroicgenlist.html", pretty_print=True)
+
+# Paragon tier
+source_doc = etree.parse("paragon.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("paragonlist.html", pretty_print=True)
+
+source_doc = etree.parse("paragongen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("paragongenlist.html", pretty_print=True)
+
+# Epic tier
+source_doc = etree.parse("epic.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("epiclist.html", pretty_print=True)
+
+source_doc = etree.parse("epicgen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("epicgenlist.html", pretty_print=True)
+
 ## Group list
 xslt_doc = etree.parse("feat-groups.xsl")
 xslt_transformer = etree.XSLT(xslt_doc)
@@ -249,3 +288,42 @@ output_doc = xslt_transformer(source_doc)
 
 print(str(output_doc))
 output_doc.write("featgroups.html", pretty_print=True)
+
+# Heroic tier groups
+source_doc = etree.parse("heroic.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("heroic-groups.html", pretty_print=True)
+
+source_doc = etree.parse("heroicgen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("heroicgen-groups.html", pretty_print=True)
+
+# Paragon tier groups
+source_doc = etree.parse("paragon.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("paragon-groups.html", pretty_print=True)
+
+source_doc = etree.parse("paragongen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("paragongen-groups.html", pretty_print=True)
+
+# Epic tier groups
+source_doc = etree.parse("epic.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("epic-groups.html", pretty_print=True)
+
+source_doc = etree.parse("epicgen.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("epicgen-groups.html", pretty_print=True)

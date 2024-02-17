@@ -344,7 +344,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:text>One Channel Divinity power per encounter.</xsl:text>
 	</xsl:if>
 	<xsl:if test="@auto='no-opportunity'">
-		<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
+		<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i>
 	</xsl:if>
 	<xsl:if test="@auto='charge-effect'">
 		<b>Effect:&#160;</b>
