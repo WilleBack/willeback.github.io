@@ -3,6 +3,38 @@
 <catalog>
 
    <rule>
+      <title>Healing Potion</title>
+      <type>Item</type> <level>1+</level>
+      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Potion</trait>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+      <activate>
+         <action>1</action>
+         <type>Interact</type>
+      </activate>
+
+      <line>A <![CDATA[<i>healing potion</i>]]> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <![CDATA[<i>healing potion</i>]]>, you regain the listed number of Hit Points.</line>
+
+      <variant>
+         <type>Minor</type> <level>1</level>
+         <price>4 gp</price>
+
+         <line>The potion restores 1d8 Hit Points.</line>
+      </variant>
+      <variant>
+         <type>Lesser</type> <level>3</level>
+         <price>12 gp</price>
+
+         <line>The potion restores 2d8+5 Hit Points.</line>
+      </variant>
+      <variant>
+         <type>Moderate</type> <level>6</level>
+         <price>50 gp</price>
+
+         <line>The potion restores 3d8+10 Hit Points.</line>
+      </variant>
+   </rule>
+
+   <rule>
       <title>Low-Light Vision</title>
 
       <line>You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.</line>
@@ -34,6 +66,25 @@
 
       <line>Your elven magic manifests as a simple arcane spell, even if you aren't formally trained in magic. Choose one cantrip from the arcane spell list. You can cast this cantrip as an arcane innate spell at will. A cantrip is heighened to a spell level equal to half your level rounded up. Since this magic is innate, you can replace any material component with a somatic component.</line>
    </rule>
+
+      <rule>
+         <title>Prestidigitation</title>
+         <type>Cantrip</type> <level>1</level>
+         <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Evocation</trait>
+         <cast action="2">somatic, verbal</cast>
+         <range>10 feet</range> <targets>1 object (cook, lift, or tidy only)</targets>
+         <duration>sustained</duration>
+
+         <line>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the Spell. Each time you Sustain the Spell, you can choose one of four options.</line>
+         <line list="">
+            <entry><![CDATA[<b>Cook</b>]]> Cool, warm, or flavor 1 pound of nonliving material.</entry>
+            <entry><![CDATA[<b>Lift</b>]]> Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</entry>
+            <entry><![CDATA[<b>Make</b>]]> Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile; it can't be used as a tool, weapon, or spell component.</entry>
+            <entry><![CDATA[<b>Tidy</b>]]> Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.</entry>
+         </line>
+         <line><![CDATA[<i>Prestidigitation</i>]]> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the Spell.</line>
+         <line name="Otherwordly Magic:">You gained this cantrip from your Otherwordly Magic ancestry feat. It is an arcane innate spell.</line>
+      </rule>
 
    <rule>
       <title>Battle Medicine</title>
@@ -182,7 +233,7 @@
       <line>You have learned the secrets of another druidic order, passing whatever rites of initiation that order requires and gaining access to its secrets. Choose an order other than your own.</line>
       <line>You gain a 1st-level feat that lists that order as a prerequisite, and you are now a member of that order for the purpose of meeting feat prerequisites.</line>
       <line>If you commit acts anathema to your new order, you lose all feats and abilities requiring that order but retain your other druid feats and abilities. You don't gain any of the other benefits of the order you chose.</line>
-      <line name="Choice:">You chose the wild order, and gained the Wild Shape feat.</line>
+      <line name="Choice">You chose the wild order, and gained the Wild Shape feat.</line>
       <special>You can take this feat multiple times. Each time you do, you must choose a different order other than your own.</special>
    </rule>
 
@@ -287,6 +338,8 @@
          <entry>Low-light vision and imprecise scent 30 feet.</entry>
          <entry>Acrobatics and Stealth modifiers of +10, unless your own modifier is higher; Atheletics modifier of -4.</entry>
       </line>
+
+      <heighten value="4th">You can turn into a flying creature, such as a bird, which grants you a fly Speed of 20 feet in addition to the above statistics.</heighten>
    </rule>
 
    <rule>
@@ -329,5 +382,9 @@
          <entry name="Snake">Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; <![CDATA[<br/>
          <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fangs, <b>Damage </b>]]>2d4 piercing plus 1d6 poison.</entry>
       </line>
+
+      <heighten value="3rd">You instead gain 10 temporary HP, AC = 17 + your level, attack modifier +14, damage bonus +5, and Athletics +14.</heighten>
+      <heighten value="4th">You can choose to make your battle form Large and your attacks have 10-foot reach (20-foot reach for the frog's tongue Strike); You must have enough space to expand into or the spell is lost. You instead gain 15 temporary HP, AC = 18 + your level, attack modifier +16, damage bonus +9, and Athletics +16.</heighten>
+      <heighten value="5th">You can choose to make your battle form Huge and your attacks have 15-foot reach (30-foot reach for the frog's tongue Strike); You must have enough space to expand into or the spell is lost. You instead gain 20 temporary HP, AC = 18 + your level, attack modifier +18, damage bonus +7 and double the number of damage dice, and Athletics +20.</heighten>
    </rule>
 </catalog>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Healing Potion</title>
+      <type>Item</type> <level>1+</level>
+      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Potion</trait>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+      <activate>
+         <action>1</action>
+         <type>Interact</type>
+      </activate>
+
+      <line>A <![CDATA[<i>healing potion</i>]]> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <![CDATA[<i>healing potion</i>]]>, you regain the listed number of Hit Points.</line>
+
+      <variant>
+         <type>Minor</type> <level>1</level>
+         <price>4 gp</price>
+
+         <line>The potion restores 1d8 Hit Points.</line>
+      </variant>
+      <variant>
+         <type>Lesser</type> <level>3</level>
+         <price>12 gp</price>
+
+         <line>The potion restores 2d8+5 Hit Points.</line>
+      </variant>
+      <variant>
+         <type>Moderate</type> <level>6</level>
+         <price>50 gp</price>
+
+         <line>The potion restores 3d8+10 Hit Points.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Scimitar</title>
+      <trait>Forceful</trait> <trait>Sweep</trait>
+      <price>1 gp</price>
+      <damage>1d6 S</damage>
+      <bulk>1</bulk>
+      <hands>1</hands>
+      <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Sword</weapgroup>
+
+      <line>This one-handed curved blade is sharp on one side.</line>
+
+      <traittext><name>Forceful</name>This weapon becomes more dangerous as you build momentum. When you attack with it more than once on your turn, the second attack gains a circumstance bonus to damage equal to the number of weapon damage dice, and each subsequent attack gains a circumstance bonus to damage equal to double the number of weapon damage dice.</traittext>
+      <traittext><name>Sweep</name>This weapon makes wide sweeping or spinning attacks, making it easier to attack multiple enemies. When you attack with this weapon, you gain a +1 circumstance bonus to your attack roll if you already attempted to attack a different target this turn using this weapon.</traittext>
+
+      <variant>
+         <rune><![CDATA[<i>+1 Potency</i>]]></rune> <level>2</level>
+         <trait>Evocation</trait> <trait>Magical</trait>
+         <usage>etched onto the weapon</usage>
+         <price>35 gp</price>
+
+         <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +1 item bonus, and the weapon can be etched with one property rune.</line>
+      </variant>
+      <variant>
+         <rune><![CDATA[<i>Striking</i>]]></rune> <level>4</level>
+         <trait>Evocation</trait> <trait>Magical</trait>
+         <usage>etched onto the weapon</usage>
+         <price>65 gp</price>
+
+         <line>A <![CDATA[<i>striking</i>]]> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Full Plate</title>
+      <type>Item</type> <level>2</level>
+      <price>30 gp</price>
+      <ac>+6</ac> <dexcap>+0</dexcap> <checkpenalty>-3</checkpenalty> <spdpenalty>-10 ft.</spdpenalty>
+      <strreq>18</strreq>
+      <bulk>4</bulk>
+      <armorcat>Heavy</armorcat> <armorgroup>Plate</armorgroup>
+
+      <line>Plate mail consists of interlocking plates that encase nearly the entire body in a carapace of steel. It is costly and heavy, and the wearer often requires help to don it correctly, but it provides some of the best defense armor can supply. A suit of this armor comes with an undercoat of padded armor and a pair of gauntlets.</line>
+
+      <traittext><name>Bulwark</name>The armor covers you so completely that it provides benefits against some damaging effects. On Reflex saves to avoid a damaging effect, such as a <![CDATA[<i>fireball</i>]]>, you add a +3 modifier instead of your Dexterity modifier.</traittext>
+   </rule>
+
+   <rule>
+      <title>Sturdy Shield</title>
+      <type>Item</type> <level>4+</level>
+      <trait>Abjuration</trait> <trait>Magical</trait>
+      <usage>held in 1 hand</usage> <bulk>1</bulk>
+      <base item="Shield">Steel Shield</base>
+
+      <line>With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it hard to break and destroy.</line>
+
+      <variant>
+         <type>Minor</type> <level>4</level>
+         <price>100 gp</price>
+
+         <line>This shield has Hardness 8, HP 64, and BT 32.</line>
+      </variant>
+      <variant>
+         <attachment>Shield Boss</attachment>
+         <price>5 sp</price> <damage>1d6 B</damage> <bulk>-</bulk>
+         <hands>1</hands>
+         <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Shield</weapgroup>
+
+         <line>Typically a round, convex, or conical piece of thick metal attached to the center of a shield, a shield boss increases the bludgeoning damage of a shield bash.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Everburning Torch</title>
+      <type>Item</type> <level>1</level>
+      <trait>Evocation</trait> <trait>Light</trait> <trait>Magical</trait>
+      <price>15 gp</price>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+
+      <line>An <![CDATA[<i>everburning torch</i>]]> is one of the most common applications of permanent magic. This torch sheds light constantly, requiring no oxygen and generating no heat. The flame can be covered or hidden, but can't be smothered or quenched.</line>
+   </rule>
+
+   <rule>
+      <title>Adventurer's Pack</title>
+      <price>1 gp, 5 sp</price>
+      <bulk>1 in the backpack</bulk>
+
+      <line>This is the starter kit for an adventurer, containing the essential items for exploration and survival.</line>
+      <line>The pack contains the following items: backpack (containing the other goods), bedroll, 10 pieces of chalk, flint and steel, 50 feet of rope, 2 weeks' rations, soap, 5 torches, and a waterskin.</line>
+
+      <variant>
+         <container>Backpack</container>
+         <bulk>-</bulk>
+
+         <line>A backpack holds up to 4 Bulk of items, and the first 2 Bulk of these items don't count against your Bulk limits. If you're carrying or stowing the pack rather than wearing it, its Bulk is light instead of negligible and the Bulk reduction does not apply.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Healer's Tools</title>
+      <price>5 gp</price>
+      <hands>2</hands> <bulk>1</bulk>
+
+      <line>This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds. If you wear your healer's tools, you can draw and replace them as part of the action that uses them.</line>
+      <line>You can use a set of tools with 1 hand if you're wearing them, or 2 if you're holding them. You can wear up to 2 Bulk of tools.</line>
+   </rule>
+
+   <rule>
+      <title>Repair Kit</title>
+      <price>2 gp</price>
+      <hands>2</hands> <bulk>1</bulk>
+
+      <line>A repair kit allows you to perform simple repairs while traveling. It contains a portable anvil, tongs, woodworking tools, a whetstone, and oils for conditioning leather and wood. You can use a repair kit to Repair items using the Crafting skill. If you wear your repair kit, you can draw and replace them as part of the action to use them.</line>
+      <line>You can use a set of tools with 1 hand if you're wearing them, or 2 if you're holding them. You can wear up to 2 Bulk of Tools.</line>
+   </rule>
+</catalog>

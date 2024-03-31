@@ -1,127 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="rule.xsl"?>
 <catalog>
-   <rule>
-      <title>Gate Attenuator</title>
-      <type>Item</type> <level>3</level>
-      <trait>Invested</trait> <trait>Magical</trait>
-      <usage>worn</usage> <bulk>-</bulk>
-      <price>60 gp</price>
-
-      <line><![CDATA[<i>gate attenuators</i>]]> are typically worn near the body's core and are shaped like portals or passageways, making literal the elemental gates kineticists posses within their bodies. The appearance can vary from a simple disk with a hole in the middle to a design matching a cirty gate of a particular settlement.</line>
-      <line>If you're a kineticist, the attenuator grants you a +1 item bonus to your impulse attack modifier (but not your impulse DC).</line>
-      <line>When you invest a <![CDATA[<i>gate attenuator</i>]]> (usually as part of your daily preparations), attune it to an element of your choice. Designs on the attenuator's surface transform to match that element, and the attenuator gains the element's trait until it's no longer invested or is attuned to a different element.</line>
-      <block>
-         <name>Activate</name> <action>2</action> <type>Envision</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Effect</name>The <![CDATA[<i>gate attenuator</i>]]> casts a 1st-level spell, with an spell attack modifier of +7 and spell DC of 17. If you're a kineticist and the spell's element matches one of your kinetic elements, you can use your impulse attack modifier instead of the spell's attack modifier or your impulse DC instead of the spell DC. The spell corresponds to the element the item is attuned to, and it gains that element's trait if it doesn't already have it</part>
-         <part linebreak=""><name>air</name><![CDATA[<i>gust of wind</i>]]></part>
-         <part><name>earth</name><![CDATA[<i>pummeling rubble</i>]]></part>
-         <part><name>fire</name><![CDATA[<i>dehydrate</i>]]></part>
-         <part><name>metal</name><![CDATA[<i>thunderstrike</i>]]></part>
-         <part><name>water</name><![CDATA[<i>snowball</i>]]></part>
-         <part><name>wood</name><![CDATA[<i>flourishing flora</i>]]></part>
-      </block>
-   </rule>
-
-   <rule>
-      <title>Dehydrate</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Fire</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <area>5-foot burst</area>
-      <save>Fortitude (see text)</save> <duration>1 minute</duration>
-
-      <line>You stir the inner fire of all things within the area, driving out moisture. All creatures in the area take 1d6 persistent fire damage with a basic Fortitude save; creatures with the water or plant traits get a result one degree of success worse than they rolled. The spell ends for a creature when its persistent damage ends.</line>
-      <line>A creature affected by <![CDATA[<i>dehydrate</i>]]> attempts an additional Fortitude save at the end of each of its turns, before rolling to recover from the persistent damage. It can forgo this additional save if it consumed water or similar hydrating liquid within the last round (typically, drinking requires a single action).</line>
-      <line results="">
-         <success>The creature takes no additional effect.</success>
-         <fail>The creature is enfeebled 1 until the end of its next turn.</fail>
-         <critfail>The creature is enfeebled 2 until the end of its next turn.</critfail>
-      </line>
-      <!-- <heighten value="+2">The range increases by 10 feet, the burst increases by 5 feet, and the persistent fire damage increases by 3d6.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Flourishing Flora</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Wood</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <area>5-foot burst</area>
-      <save>basic Reflex</save>
-
-      <line>Plants rapidly grow up from the ground. All creatures in the target area take 2d4 damage. The type of damage depends on the type of plant you choose to grow. On a critical failure, targets experience additional effects, also depending on what you choose to grow. The type of plant and its effects are chosen when you Cast the Spell.</line>
-      <line list="">
-         <entry name="Cacti">Piercing damage, and 1 persistent bleed damage on a critical failure.</entry>
-         <entry name="Flowers">Poison damage, and dazzled for 2 rounds on a critical failure.</entry>
-         <entry name="Fruits">Bludgeoning damage, and clumsy 1 for 2 rounds on a critical failure.</entry>
-         <entry name="Roots">Bludgeoning damage, and the affected creatures fall prone on a critical failure.</entry>
-      </line>
-      <!-- <heighten value="+1">The damage increases by 1d4, and the persistent bleed damage from cacti increases by 1.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Gust of Wind</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Air</trait> <trait>Evocation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <area>60-foot line.</area>
-      <save>Fortitude</save> <duration>until the start of your next turn</duration>
-
-      <line>A violent wind issues forth from your palm, blowing from the point where you are when you cast the spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Large or smaller creatures in the area must attempt a Fortitude save. Large or smaller creatures that later move into the gust must attempt the save when entering.</line>
-      <line results="">
-         <critsuccess>The creature is unaffected.</critsuccess>
-         <success>The creature can't move against the wind.</success>
-         <fail>The creature is knocked prone. If it was flying, it suffers the effects of critical failure instead.</fail>
-         <critfail>The creature is pushed 30 feet in the wind's direction, knocked prone, and takes 2d6 bludgeoning damage.</critfail>
-      </line>
-   </rule>
-
-   <rule>
-      <title>Pummeling Rubble</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Earth</trait> <trait>Evocation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <area>15-foot cone</area>
-      <save>Reflex</save>
-
-      <line>A spray of heavy rocks flies through the air in front of you. The rubble deals 2d4 bludgeoning damage to each creature in the area. Each creature must attempt a Reflex save.</line>
-      <line results="">
-         <critsuccess>The creature is unaffected.</critsuccess>
-         <success>The creature takes half damage.</success>
-         <fail>The creature takes full damage and is pushed 5 feet away from you.</fail>
-         <critfail>The creature takes double damage and is pushed 10 feet away from you.</critfail>
-      </line>
-      <!-- <heighten value="+1">The damage increases by 2d4.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Snowball</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Attack</trait> <trait>Cold</trait> <trait>Evocation</trait> <trait>Water</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <targets>1 creature</targets>
-
-      <line>You throw a magically propelled and chilled ball of dense snow. The target takes 2d4 cold damage and potentially other effects, depending on the result of your ranged spell attack roll.</line>
-      <line results="">
-         <critsuccess>The target takes double damage and a -10-foot status penalty to its Speeds for 1 round.</critsuccess>
-         <success>The target takes full damage and a -5-foot status penalty to its Speeds for 1 round.</success>
-         <fail>No effect.</fail>
-      </line>
-      <!-- <heighten value="+1">The damage increases by 2d4.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Thunderstrike</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Electricity</trait> <trait>Evocation</trait> <trait>Sonic</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>120 feet</range> <targets>1 creature</targets>
-      <save>basic Reflex</save>
-
-      <line>You call down a tendril of lightning that cracks with thunder, dealing 1d12 electricity damage and 1d4 sonic damage to the target with a basic Reflex save. A target wearing metal armor or made of metal takes a -1 circumstance penalty to its save and, if damaged by the spell, is clumsy 1 for 1 round.</line>
-      <!-- <heighten value="+1">The damage increases by 1d12 electricity and 1d4 sonic.</heighten> -->
-   </rule>
 
    <rule>
       <title>Tiefling Heritage</title>
@@ -152,6 +31,16 @@
       <prereq>trained in Deception</prereq>
 
       <line>You can use Deception to weave traps to trip up anyone trying to deceive you. If you can engage in conversation with someone trying to Lie to you, use your Deception DC if it's higher than your Perception DC to determine whether they succeed. This doesn't apply if you don't have a back-and-forth dialogue, such as when someone attempts to Lie during a long speech.</line>
+   </rule>
+
+   <rule>
+      <title>Fiendish Resistance</title>
+      <type>Feat</type> <level>5</level>
+      <trait>Tiefling</trait>
+
+      <line>Your connection to your fiendish forebears has granted you one of their resistances as well. Choose one of the following energy types: acid, cold, electricity, fire, or sonic. You gain resistance 5 to that damage type.</line>
+      <line>Though you can choose any of these, the damage type typically matches a fiend associated with your bloodline. For instance, a hellspawn might choose resistance to fire, or a pitborn with a vrock ancestor might choose resistance to electricity.</line>
+      <line name="Choice">You chose fire.</line>
    </rule>
 
    <rule>
@@ -207,46 +96,6 @@
    </rule>
 
    <rule>
-      <title>Navigator's Star</title>
-      <type>Item</type> <level>1</level>
-      <trait>Divination</trait> <trait>Invested</trait> <trait>Magical</trait> <trait>Tattoo</trait>
-      <price>18 gp</price>
-      <usage>tattooed on the body</usage> <bulk>-</bulk>
-
-      <line>A star inked on the back of the hand, usually between the thumb and forefinger, keeps you on the right path.</line>
-      <block>
-         <name>Activate</name> <action>2</action> <type>Envision, Interact</type>
-         <part><name>Effect</name>As you hold up your hand and align the star in view, you learn which direction you're facing.</part>
-      </block>
-   </rule>
-
-   <rule>
-      <title>Hat of Disguise</title>
-      <type>Item</type> <level>2</level>
-      <trait>Illusion</trait> <trait>Invested</trait> <trait>Magical</trait>
-      <usage>worn headwear</usage> <bulk>-</bulk>
-      <price>30 gp</price>
-
-      <line>This ordinary-looking hat allows you to cloak yourself in illusions.</line>
-      <block>
-         <name>Activate</name> <type>1 minute (Interact)</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Effect</name>The hat casts a 1st-level <![CDATA[<i>illusory disguise</i>]]> spell on you. While setting up the disguise, you can magically alter the hat to appear as a comb, ribbon, helm, or other piece of headwear.</part>
-      </block>
-   </rule>
-
-   <rule>
-      <title>Illusory Disguise</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Illusion</trait> <trait>Visual</trait>
-      <cast action="2">somatic, verbal</cast>
-      <duration>1 hour</duration>
-
-      <line>You create an illusion that cause you to appear as another creature of the same body shape, and with roughly similar height (within 6 inches) and weight (within 50 pounds), as yourself. The disguise is typically good enough to hide your identity, but not to impersonate a specific individual. The spell doesn't change your voice, scent, or mannerisms. You can change the appearance of your clothing and worn items, such as making your armor look like a dress. Held items are unaffected, and any worn item you remove returns to its true appearance.</line>
-      <line>Casting <![CDATA[<i>illusory disguise</i>]]> counts as setting up a disguise for the Impersonate use of Deception; it ignores any circumstance penalties you might take for disguising yourself as a dissimilar creature, it gives you a +4 status bonus to Deception checks to prevent others from seeing through your disguise, and you add your level even if you're untrained. You can Dismiss this spell.</line>
-   </rule>
-
-   <rule>
       <title>Kinetic Gate</title>
 
       <line>As a kineticist, you've awakened or opened a kinetic gate, a supernatural conduit within your body that can channel elemental forces straight from the elemental planes.</line>
@@ -299,118 +148,20 @@
    </rule>
 
    <rule>
-      <title>Base Kinesis</title>
-      <type>Level</type> <level>1</level>
-      <action>2</action>
-      <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
-      <range>30 feet</range>
+      <title>Gate's Threshold</title>
 
-      <line>It's trivial for you to create some of your element or alter a portion of it that already exists. Choose one of your kinetic elements to affect. The Bulk of the target must be negligible or light. The GM determines what Bulk the element is. You can't affect an element that's magical, secured in place (line a stone mortared in a wall), or attended by a creature unwilling to let you.</line>
-      <line>Choose one  of the following options, though the GM might allow you to make similar small alterations. Base Kinesis can't deal damage or cause conditions unless otherwise noted.</line>
-      <line list="">
-         <entry name="Generate">You bring an ordinary, non-magical piece of the chosen element from its elemental plane. The element can be used for any of its normal uses. For example, air can be breathed by an air-breathing creature, and fire casts light and can ignite flammable substances.</entry>
-         <entry name="Move">Move an existing piece of the element up to 20 feet in any direction. If you bring it into your space, you can catch it in an open hand. You can Sustain the impulse to keep moving the element.</entry>
-         <entry name="Suppress">You destroy an existing piece of element, such as snuffing out a flame or evaporating water from a cup. This affects only natural forms of the element, not durable, crafted goods like a stone statue, metal lock, or a wooden door.</entry>
-      </line>
-
-      <levels value="+4">The range increases by 15 feet, and the maximum Bulk increases by 1 (allowing Bulk 1 at 5th level).</levels>
+      <line>You reach a new milestone in your odyssey to become in tune with your kinetic gate and must decide how to expand the gate's power. At 5th levle and every 4 levels thereafter, you can choose to either expand the portal or fork the path.</line>
+      <line name="5th level">You chose to expand the fire portal. You gained the Blazing Wave fire impulse, and the Fire Impulse Junction.</line>
    </rule>
 
    <rule>
-      <title>Elemental Blast</title>
-      <type>Level</type> <level>1</level>
-      <action or="2">1</action>
-      <trait>Attack</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+      <title>Impulse Junction</title>
 
-      <line>With a wave of your hand, you collect elemental matter from your aura and swing or hurl it. Choose one of your kinetic elements and a damage type listed for that element, then make a melee or ranged impulse attack against the AC of one creature. Add your Strength modifier to the damage roll for a melee Elemental Blast. If you make a 2-action Elemental Blast, you gain a status bonus to the damage roll equal to your Constitution modifier.</line>
-      <line results="">
-         <critsuccess>The target takes double damage.</critsuccess>
-         <success>The target takes full damage.</success>
-      </line>
-      <line>The element determines the damage die, damage type, and range (for a ranged blast). A damage type other than a physical damage type adds its trait to the blast.</line>
-      <line list="">
-         <entry name="Air">1d6 electricity or slashing, 60 feet</entry>
-         <entry name="Fire">1d6 fire, 60 feet</entry>
-      </line>
+      <line>An impulse junction is a benefit that occurs when you use an impulse of the chosen element that takes 2 actions or more. This happens before the other effects of the impulse, unless otherwise noted. You can gain only one impulse junction per round.</line>
 
-      <levels value="+4">The damage increases by one die.</levels>
-   </rule>
-
-   <rule>
-      <title>Aerial Boomerang</title> <action>2</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Air</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
-
-      <line>A blade of shearing wind races away from you in a 60-foot line. Each creature in the area takes 2d4 slashing damage with a basic Reflex save against your class DC. In the final square of the line, the boomerang whirls in place until the end of your next turn. Any creature that ends its turn in that square has to save against the boomerang.</line>
-      <line>On your next turn, you can use a single action, which has the concentrate trait, to return the boomerang to you. It returns in a line from its squareto your current location, with the same effect as the initial line, then the impulse ends. You must have line of effect to the boomerang and be within 60 feet of it.</line>
-      <levels value="+2">The damage increases by 1d4.</levels>
-   </rule>
-
-   <rule>
-      <title>Extract Elements</title>
-      <action>1</action>
-      <type>Level</type> <level>3</level>
-      <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
-      <range>30 feet</range> <targets>A creature that has a trait matching one of your kinetic elements or is made of one of your kinetic elements</targets>
-
-      <line>You extract elemental matter from a creature's body to weaken it and take its power for your own. The target takes 2d4 damage (with no damage type) and becomes susceptible to your impulses, depending on its Fortitude save against your class DC.</line>
-      <line results="">
-         <critsuccess>The creature is unaffected.</critsuccess>
-         <success>The creature takes half damage, and you add some of its elemental matter to your kinetic aura. Your impulses bypass any immunity the creature has to their elemental tait or traits, and the target takes a -1 circumstance penalty to its saves and AC against your impulses. If the target normally has a resistance that would apply to damage from one of your impulses, ignore that resistance; if it normally would be immune to that damage type, it instead has resistance equal to its level to damage from the impulse. You can't target a creature with your Extract Element if elemental matter you extracted from it is already in your kinetic aura. These effects last for 5 minutes or until your kinetic aura ends, whichever comes first.</success>
-         <fail>As success, but the creature takes full damage.</fail>
-         <critfail>As failure, but the creature takes double damage.</critfail>
-      </line>
-      <levels value="+2">The damage increases by 1d4.</levels>
-   </rule>
-
-   <rule>
-      <title>Flying Flame</title> <action>2</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Fire</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
-
-      <line>A Tiny shape of flame appears, taking a form of your choice -such as a bird, arrow, or a simple sphere. It Flies from you up to 30 feet in a path you choose. Each creature it passes through takes 1d6 fire damage with a basic Reflex save against your class DC. A creature takes this damage only once, even if the flame passes through it multiple times.</line>
-      <levels value="+2">The damage increases by 1d6.</levels>
-   </rule>
-
-   <rule>
-      <title>Burning Jet</title> <action>2</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Fire</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
-
-      <line>A condensed burst of flame shoots behind you, propelling you forward with its sheer force. Stride up to 40 feet in a straight line. Movement from this impulse ignores difficult terrain and doesn't trigger reactions.</line>
-      <levels value="6th">The maximum distance of the Stride is 60 feet. You can choose to Leap up to 40 feet in any direction instead of Striding. If you're in the air at the end of this Leap, you fall normally.</levels>
-      <levels value="10th">As 6th level, but you hover briefly after leaping into the air. If you Leap, you don't fall until the end of your next turn. If you use Burning Jet again on a subsequent turn, you remain airborne.</levels>
-   </rule>
-
-   <rule>
-      <title>Lightning Dash</title> <action>2</action>
-      <type>Feat</type> <level>4</level>
-      <trait>Air</trait> <trait>Electricity</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Move</trait> <trait>Overflow</trait> <trait>Polymorph</trait> <trait>Primal</trait>
-
-      <line>For an instant, you transform yourself into a being of pure lightning and fly forward, shocking anyone in your way. You propel yourself in a 30-foot line. You can move through creatures during this movement, and this movement doesn't trigger reactions that are triggered by movement.</line>
-      <line>Each creature you move through takes 2d12 electricity damage with a basic Reflex save against your class DC. You return to your normal form in the final square of the line. If you're in the air, you fall unless you have a fly Speed.</line>
-      <levels value="+3">The length of the line increases by 5 feet, and the damage increases by 1d12.</levels>
-   </rule>
-
-   <rule>
-      <title>Whisper on the Wind</title> <action>1</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Air</trait> <trait>Auditory</trait> <trait>Illusion</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Linguistic</trait> <trait>Primal</trait>
-
-      <line>You speak in a whisper, a soft wind carrying your words far away. This has the effect of the <![CDATA[<i>message</i>]]> spell with a range of 500 feet, and it can target only a creature surrounded by air. If you start your message with the target's name, you and the target don't need to be able to see each other, nor do you need line of effect.</line>
-      <levels value="4th">The range is 1 mile.</levels>
-      <levels value="14th">The range is planetary plus the Plane of Air.</levels>
-   </rule>
-
-   <rule>
-      <title>Message</title>
-      <type>Cantrip</type> <level>1</level>
-      <trait>Auditory</trait> <trait>Cantrip</trait> <trait>Illusion</trait> <trait>Linguistic</trait> <trait>Mental</trait>
-      <cast action="1">verbal</cast>
-      <range>120 feet</range> <targets>1 creature</targets>
-      <duration>see below</duration>
-
-      <line>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you. The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly in your ear, just like the original message.</line>
-      <!-- <heighten value="3rd">The spell's range increases to 500 feet.</heighten> -->
+      <variant>
+         <element>Fire</element>
+         <line>Increase the damage die size of fire damage dealt by the impulse by one step, such as from d6 to d8.</line>
+      </variant>
    </rule>
 </catalog>

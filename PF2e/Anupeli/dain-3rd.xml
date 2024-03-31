@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule.xsl"?>
+<catalog>
+
+   <rule>
+      <category>3rd-level Druid Spells</category>
+      <title>Blastback</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Air</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="R">verbal</cast>
+      <trigger>You fall more than 10 feet</trigger>
+      <area>20-foot emanation</area>
+      <save>basic Reflex</save>
+
+      <line>You hit the ground with a shuddering boom, propelling the force of your fall out in a wave. You take no damage from the fall as the displaced air allows you to land gently, but all other creatures in the spell's area take 6d4 bludgeoning damage, with a basic Reflex save. Creatures that fail their save are pushed back 5 feet.</line>
+
+      <heighten value="+2">The emanation increases by 10 feet, and the damage increases by 3d4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Blindness</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Incapacitation</trait> <trait>Necromancy</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <save>Fortitude</save> <duration>varies</duration>
+
+      <line>You blind the target. The effect is determined by the target's Fortitude save. The target then becomes temporarily immune for 1 minute.</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The target is blinded until the end of its next turn.</success>
+         <fail>The target is blinded for 1 minute.</fail>
+         <critfail>The target is blinded permanently.</critfail>
+      </line>
+   </rule>
+
+   <!-- <rule>
+      <title>Bottomless Stomach</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Conjuration</trait> <trait>Extradimensional</trait> <trait>Primal</trait>
+      <cast action="3">material, somatic, verbal</cast>
+      <range>touch</range> <targets>1 willing creature</targets>
+      <duration>1 hour</duration>
+
+      <line>You create a shimmering extradimensional space accessible from the target's mouth. The space can hold objects and equipment, up to a total of 10 Bulk. This extradimensional space doesn't hamper the target's ability to eat, drink, speak (if applicable), or otherwise act, as it only opens and closes when the target chooses.</line>
+      <line>The target can Interact to swallow an object of up to 1 Bulk, which doesn't harm the object or the target. If the extradimensional space is full, the target can't add any more objects until first removing one or more stored objects. Organic matter and living creatures can't be stored in this space. The extradimensional storage is obvious to any creature who looks into the target's mouth, as the entryway shimmers slightly, though this doesn't clearly reveal the contents inside.</line>
+      <line>The target can Interact to spit out a single object of its choice, causing the object to fall to the ground in the target's space. The target can Interact three times in a row to spit out the entire contents of its extradimensional storage; the target doesn't have to tkae these actions all in the same turn, but if it takes any other actions in between, it has to start over. The items eject into the target's space, possibly spilling out into adjacent spaces if there is too much to fit.</line>
+      <line>WHen the spell ends or target falls unconscious, the contents of the extradimensional storage are disgorged in a riotous spew, landing in the nearest unoccupied space, a bit wet, but otherwise unharmed.</line>
+
+      <heighten value="5th">The duration increases to 8 hours.</heighten>
+   </rule> -->
+
+   <rule>
+      <title>Coral Scourge</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Conjuration</trait> <trait>Incapacitation</trait> <trait>Primal</trait> <trait>Water</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <save>Reflex</save> <duration>1 minute</duration>
+
+      <line>Barnacles, coral, and other rough aquatic creatures grow on the target's body, getting between their joints and stiffening their movement. This impedes the target's movement depending on the resutl of its saving throw.</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The target is clumsy 1.</success>
+         <fail>The target is clumsy 2. Each round at the beginning of its turn, the target becomes clumsy 1 or increases its clumsy condition by 1, to a maximum of  clumsy 4. If the target's clumsy condition from this spell reaches 4, the growths spread to cover the target's entire body, and the target becomes paralyzed.</fail>
+         <critfail>As failure, but when the target Interacts to scrape the coral growths from its body, it reduces the clumsy condition by 1 instead of decreasing it to 0, and decreasing the clumsy condition to 0 doesn't end the spell.</critfail>
+      </line>
+      <line>The target can Interact to reduce the clumsy condition to 0 and ending the spell.</line>
+   </rule>
+
+   <rule>
+      <title>Crashing Wave</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Evocation</trait> <trait>Primal</trait> <trait>Water</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>30-foot cone</area>
+      <save>basic Reflex</save>
+
+      <line>You summon a crashing wave that sweeps away from you. You deal 6d6 bludgeoning damage to creatures in the area, with a basic Reflex save. The water also extinguishes non-magical fires in the area.</line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Dive and Breach</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Attack</trait> <trait>Primal</trait> <trait>Teleportation</trait> <trait>Transmutation</trait> <trait>Water</trait>
+      <cast action="2">somatic</cast>
+      <save>basic Reflex</save>
+
+      <line>You make the briefest of dives through the Plane of Water. You Leap 10 feet, and where you land on the ground, you instead disappear in a splash of water, your body entering the surface like a diver entering a pool. You then exit from an unoccupied surface within 40 feet, appearing in another splash of water as you Leap out, landing 10 feet away from where you exited.</line>
+      <line>Each splash deals 3d10 bludgeoning damage to all creatures in a 5-foot emantion, with a basic Reflex save; creatures in multiple splash zones take damage once.</line>
+
+      <heighten value="+1">The damage dealt by each splash increass by 1d10.</heighten>
+   </rule>
+
+   <rule>
+      <title>Earthbind</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Earth</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <targets>1 flying creature</targets>
+      <save>Fortitude</save> <duration>varies</duration>
+
+      <line>Using the weight of the earth, you hamper a target's flight, with effects based on its Fortitude save. If the creature reaches the ground safely, it doesn't take falling damage.</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The target falls safely up to 120 feet.</success>
+         <fail>The target falls safely up to 120 feet. If it hits the ground, it can't Fly, <![CDATA[<i>levitate</i>]]>, or otherwise leave the ground for 1 round.</fail>
+         <critfail>The target falls safely up to 120 feet. If it hits the ground, it can't Flyr, <![CDATA[<i>levitate</i>]]>, or otherwise leave the ground for 1 minute.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Fireball</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Evocation</trait> <trait>Fire</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>500 feet</range> <area>20-foot burst</area>
+      <save>basic Reflex</save>
+
+      <line>A roaring blast of fire appears at a spot you designate, dealing 6d6 fire damage, with a basic Reflex save.</line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Lightning Bolt</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Electricity</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>120-foot line</area>
+      <save>basic Reflex</save>
+
+      <line>A bolt of lightning strikes outward from your hand, dealing 4d12 electricity damage, with a basic Reflex save.</line>
+
+      <heighten value="+1">The damage increases by 1d12.</heighten>
+   </rule>
+
+   <rule>
+      <title>Lotus Walk</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>1 minute</duration>
+
+      <line>Lotuses, water lilies, and other watery plants bloom at your feet, allowing you to walk on the surface of water and other liquids. You can go underwater if you wish, but in that case you must Swim normally. As you Stride or Step on water, you leave a trail of oversized lily pads, lotus leaves, or spatterdock that fill the squares' surfaces in your wake. Each square of this trail can withstand the weight of 1 Medium creature and lasts until the end of your next turn. You can Dismiss the spell early.</line>
+
+      <heighten value="4th">The duration of this spell increases to 10 minutes. The trail lasts until the spell ends or you Dismiss the spell on you, whichever comes first.</heighten>
+      <heighten value="6th">The duration increases to 1 hour. Your trail is permanent even if you Dismiss the spell on you, although if the water can't support such plants, they'll die in a week. The trail can be removed by <![CDATA[<i>dispel magic</i>]]> or a similar spell.</heighten>
+   </rule>
+
+   <rule>
+      <title>Magnetic Acceleration</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Attack</trait> <trait>Evocation</trait> <trait>Metal</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <targets>1 creature or object</targets>
+
+      <line>You magnetize a small metal object, such as a nail or coin, and launch it away from you at massive speed. Make a ranged spell attack roll against the target; if the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll. On a hit, the target takes 3d6 bludgeoning damage and 3d6 piercing damage, or double damage on a critical hit.</line>
+
+      <heighten value="+1">The bludgeoning and piercing damage each increase by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Moth's Supper</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Healing</trait> <trait>Necromancy</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>1 hour</duration>
+
+      <line>You sigh, and your breath transforms into delicate, black-winged butterflies and huge death's-head hawkmoths. They flutter about you briefly, and then range forth in search of sustenance -fresh-spilled blood, by preference, but rotting corspses, flowering plants, or even left-behind food will do in a pinch. They then return, perching on your hair or shoulders and whispering their secrets into your ears. This has three effects:</line>
+      <line list="">
+         <entry>You heal 2d4 Hit Points every 10 minutes.</entry>
+         <entry>The first time during the duration when someone successfully Treats your Wounds, you regain an additional 4d4 Hit Points.</entry>
+         <entry>You gain an imprecise sense out to 30 feet that senses only freshly spilled blood and rotten flesh.</entry>
+      </line>
+
+      <heighten value="+1">The amount of Hit Points healed every 10 minutes increases by 1d4 and the amount of Hit Points regained from the first Treat Wounds increases by 2d4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Neatralize Poison</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Healing</trait> <trait>Necromancy</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <targets>1 creature</targets>
+
+      <line>You pour healing magic through the target in an attempt to cure one poison afflicting it. Attempt a counteract check against the poison.</line>
+   </rule>
+
+   <rule>
+      <title>Remove Disease</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Healing</trait> <trait>Necromancy</trait> <trait>Primal</trait>
+      <cast>10 minutes (material, somatic, verbal)</cast>
+      <range>touch</range> <targets>1 creature</targets>
+
+      <line>Healing magic purges disease from a creature's body. You attempt to counteract one disease afflicting the target.</line>
+   </rule>
+
+   <rule>
+      <title>Searing Light</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Attack</trait> <trait>Evocation</trait> <trait>Fire</trait> <trait>Good</trait> <trait>Light</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <targets>1 creature</targets>
+
+      <line>You shoot a blazing ray of light tinged with holy energy. Make a ranged spell attack against the target's AC. The ray deals 5d6 fire damage. If the target is a fiend or undead, you deal an extra 5d6 good damage.</line>
+      <line results="">
+         <critsuccess>The target takes double damage.</critsuccess>
+         <success>The target takes full damage.</success>
+      </line>
+      <line>If the light passes through an area of magical darkness or targets a creature affected by magical darkness, <![CDATA[<i>searing light</i>]]> attempts to counteract the darkness.</line>
+
+      <heighten value="+1">The fire damage increases by 2d6, and the good damage against fiends and undead increases by 2d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Slow</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <save>Fortitude</save> <duration>1 minute</duration>
+
+      <line>You dilate the flow of time around the target, slowing its actions based on its Fortitude save result:</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The target is slowed 1 for 1 round.</success>
+         <fail>The target is slowed 1 for 1 minute.</fail>
+         <critfail>The target is slowed 2 for 1 minute.</critfail>
+      </line>
+
+      <heighten value="6th">You can target up to 10 creatures.</heighten>
+   </rule>
+
+   <rule>
+      <title>Soothing Blossoms</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <area>10-foot burst</area>
+      <duration>10 minutes</duration>
+
+      <line>Blossoms grow from the ground in a small area, soothing away afflictions and persistent pains and harm. When any creature in the area rolls a successful save against a poison or disease effect, it gets a critical success instead.</line>
+      <line>The blossoms also grant assisted recovery to everyone in the area to end their persistent damage, both when the spell is cast and at the start of each of your turns; this reduces the DC for the next flat check an assisted creature makes against the persistent damage to 10.</line>
+      <line>Once the duration ends, the flowers lose their magical effect, but a few of them might survive in the area as long as they can naturally. This spell doesn't give a benefit on a save against affliction unless the stage lasts 10 minutes or less.</line>
+   </rule>
+
+   <rule>
+      <title>Stinking Cloud</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Conjuration</trait> <trait>Poison</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <area>20-foot burst</area>
+      <save>Fortitude</save> <duration>1 minute</duration>
+
+      <line>You create a cloud of putrid mists. All creatures in the cloud become concealed, and all creatures outside the cloud are concealed to creatures within it. A creature that ends its turn in the cloud must make a Fortitude save.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The creature is sickened 1.</success>
+         <fail>The creature is sickened 1, and is slowed 1 while in the cloud.</fail>
+         <critfail>The creature is sickened 2, and is slowed 1 while in the cloud.</critfail>
+      </line>
+      <line>The concealed condition is not a poison effect. You can Dismiss the cloud.</line>
+   </rule>
+
+   <rule>
+      <title>Tempest Cloak</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Air</trait> <trait>Abjuration</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <targets>1 willing creature</targets>
+      <duration>1 minute</duration>
+
+      <line>You shroud one creature in a cloak of fierce, howling winds, shielding it from attacks and making it difficult to approach. The twisting shield of wind creates difficult terrain in 1 5-foot burst surrounding the target. The target also gains a +2 circumstance bonus to AC against physical ranged attacks, such as attacks made with a bow, javelin, or sling.</line>
+      <line>In addition, the swirling storms makes it easier for the target to ignore anything it doesn't want to hear, granting the target a +2 circumstance bonus to all defenses against auditory effects.</line>
+   </rule>
+
+   <rule>
+      <title>Wall of Thorns</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Primal</trait>
+      <cast action="3">matieral, somatic, verbal</cast>
+      <range>60 feet</range>
+      <duration>1 minute</duration>
+
+      <line>Over the course of a minute, a thick wall of thorny brambles grows from the ground. You create a 5-foot-thick wall of brambles and thorns in a straight line up to 60 feet long and 10 feet high. You must create the wall in an unbroken open space so its edges don't pass through any creatures or objects, or the spell is lost. The wall stands vertically.</line>
+      <line>If you wish, the wall can be of a shorter length or height. Everything on each side of the wall has cover from creatures on the opposite side, and the wall's spaces are difficult terrain. For every move action a creature uses to enter at least one of the wall's spaces, that creature takes 3d4 piercing damage.</line>
+      <line>Each 10-foot-by-10-foot section of the wall has AC 10, Hardness 10, and 20 Hit Points. It's immune to critical hits and precision damage. A destroyed section can be moved through freely.</line>
+
+      <heighten value="+1">The Hit Points of each section of the wall increase by 5, and the piercing damage increases by 1d4.</heighten>
+   </rule>
+
+   <rule>
+      <title>Wooden Double</title>
+      <type>Spell</type> <level>3</level>
+      <trait>Conjuration</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <cast action="R">somatic</cast>
+      <trigger>You're critically hit by a damage-dealing effect or Strike</trigger>
+
+      <line>A wooden double appears out of nowhere and takes a blow in your place. Take a Step action. A wooden block of your size and roughly shaped like you appears in the space you left and absorbs the hit.</line>
+      <line>This block has Hardness 5 and 20 Hit Points. If the wooden block is destroyed, you take any excess damage that the block didn't absorb. After taking the blow, the wooden block collapses into a pile of splinters and dust.</line>
+
+      <heighten value="+1">The block's Hit Points increase by 10.</heighten>
+   </rule>
+
+</catalog>

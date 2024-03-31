@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Base Kinesis</title>
+      <type>Level</type> <level>1</level>
+      <action>2</action>
+      <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+      <range>30 feet</range>
+
+      <line>It's trivial for you to create some of your element or alter a portion of it that already exists. Choose one of your kinetic elements to affect. The Bulk of the target must be negligible or light. The GM determines what Bulk the element is. You can't affect an element that's magical, secured in place (line a stone mortared in a wall), or attended by a creature unwilling to let you.</line>
+      <line>Choose one  of the following options, though the GM might allow you to make similar small alterations. Base Kinesis can't deal damage or cause conditions unless otherwise noted.</line>
+      <line list="">
+         <entry name="Generate">You bring an ordinary, non-magical piece of the chosen element from its elemental plane. The element can be used for any of its normal uses. For example, air can be breathed by an air-breathing creature, and fire casts light and can ignite flammable substances.</entry>
+         <entry name="Move">Move an existing piece of the element up to 20 feet in any direction. If you bring it into your space, you can catch it in an open hand. You can Sustain the impulse to keep moving the element.</entry>
+         <entry name="Suppress">You destroy an existing piece of element, such as snuffing out a flame or evaporating water from a cup. This affects only natural forms of the element, not durable, crafted goods like a stone statue, metal lock, or a wooden door.</entry>
+      </line>
+
+      <levels value="+4">The range increases by 15 feet, and the maximum Bulk increases by 1 (allowing Bulk 1 at 5th level).</levels>
+   </rule>
+
+   <rule>
+      <title>Elemental Blast</title>
+      <type>Level</type> <level>1</level>
+      <action or="2">1</action>
+      <trait>Attack</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+
+      <line>With a wave of your hand, you collect elemental matter from your aura and swing or hurl it. Choose one of your kinetic elements and a damage type listed for that element, then make a melee or ranged impulse attack against the AC of one creature. Add your Strength modifier to the damage roll for a melee Elemental Blast. If you make a 2-action Elemental Blast, you gain a status bonus to the damage roll equal to your Constitution modifier.</line>
+      <line results="">
+         <critsuccess>The target takes double damage.</critsuccess>
+         <success>The target takes full damage.</success>
+      </line>
+      <line>The element determines the damage die, damage type, and range (for a ranged blast). A damage type other than a physical damage type adds its trait to the blast.</line>
+      <line list="">
+         <entry name="Air">1d6 electricity or slashing, 60 feet</entry>
+         <entry name="Fire">1d6 fire, 60 feet</entry>
+      </line>
+      <line name="Impulse Junction">If you use make a 2-action fire blast, increase the damage to d8s.</line>
+
+      <levels value="+4">The damage increases by one die.</levels>
+   </rule>
+
+   <rule>
+      <title>Extract Elements</title>
+      <action>1</action>
+      <type>Level</type> <level>3</level>
+      <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+      <range>30 feet</range> <targets>A creature that has a trait matching one of your kinetic elements or is made of one of your kinetic elements</targets>
+
+      <line>You extract elemental matter from a creature's body to weaken it and take its power for your own. The target takes 2d4 damage (with no damage type) and becomes susceptible to your impulses, depending on its Fortitude save against your class DC.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected.</critsuccess>
+         <success>The creature takes half damage, and you add some of its elemental matter to your kinetic aura. Your impulses bypass any immunity the creature has to their elemental tait or traits, and the target takes a -1 circumstance penalty to its saves and AC against your impulses. If the target normally has a resistance that would apply to damage from one of your impulses, ignore that resistance; if it normally would be immune to that damage type, it instead has resistance equal to its level to damage from the impulse. You can't target a creature with your Extract Element if elemental matter you extracted from it is already in your kinetic aura. These effects last for 5 minutes or until your kinetic aura ends, whichever comes first.</success>
+         <fail>As success, but the creature takes full damage.</fail>
+         <critfail>As failure, but the creature takes double damage.</critfail>
+      </line>
+      <levels value="+2">The damage increases by 1d4.</levels>
+   </rule>
+
+   <rule>
+      <title>Aerial Boomerang</title> <action>2</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Air</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+      <area>60-foot line</area>
+      <save>basic Reflex</save>
+
+      <line>A blade of shearing wind races away from youin a line. Each creature in the area takes 2d4 slashing damage, with a basic Reflex save against your class DC. In the final square of the line, the boomerang whirls in place until the end of your next turn. Any creature that ends its turn in that square has to save against the boomerang.</line>
+      <line>On your next turn, you can use a single action, which has the concentrate trait, to return the boomerang to you. It returns in a line from its squareto your current location, with the same effect as the initial line, then the impulse ends. You must have line of effect to the boomerang and be within 60 feet of it.</line>
+      <levels value="+2">The damage increases by 1d4.</levels>
+   </rule>
+
+   <rule>
+      <title>Flying Flame</title> <action>2</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Fire</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+      <save>basic Reflex</save>
+
+      <line>A Tiny shape of flame appears, taking a form of your choice -such as a bird, arrow, or a simple sphere. It Flies from you up to 30 feet in a path you choose. Each creature it passes through takes 1d6 fire damage, with a basic Reflex save against your class DC. A creature takes this damage only once, even if the flame passes through it multiple times.</line>
+      <line name="Impulse Junction">Increase the damage dice to d8s.</line>
+      <levels value="+2">The damage increases by 1d6.</levels>
+   </rule>
+
+   <rule>
+      <title>Blazing Wave</title> <action>2</action>
+      <type>Feat</type> <level>4</level>
+      <trait>Fire</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Overflow</trait> <trait>Primal</trait>
+      <area>30-foot cone</area>
+      <save>basic Reflex</save>
+
+      <line>Flames flow out of you in a cascade, engulfing everyone in the area. Each creature in the area takes 4d6 fire damage, with a basic Reflex save against your class DC. A creature that critically fails its save is knocked prone.</line>
+      <line name="Impulse Junction">Increase the damage dice to d8s.</line>
+      <levels value="+2">The damage increases by 1d6.</levels>
+   </rule>
+
+   <rule>
+      <title>Burning Jet</title> <action>2</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Fire</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+
+      <line>A condensed burst of flame shoots behind you, propelling you forward with its sheer force. Stride up to 40 feet in a straight line. Movement from this impulse ignores difficult terrain and doesn't trigger reactions.</line>
+      <levels value="6th">The maximum distance of the Stride is 60 feet. You can choose to Leap up to 40 feet in any direction instead of Striding. If you're in the air at the end of this Leap, you fall normally.</levels>
+      <levels value="10th">As 6th level, but you hover briefly after leaping into the air. If you Leap, you don't fall until the end of your next turn. If you use Burning Jet again on a subsequent turn, you remain airborne.</levels>
+   </rule>
+
+   <rule>
+      <title>Lightning Dash</title> <action>2</action>
+      <type>Feat</type> <level>4</level>
+      <trait>Air</trait> <trait>Electricity</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Move</trait> <trait>Overflow</trait> <trait>Polymorph</trait> <trait>Primal</trait>
+
+      <line>For an instant, you transform yourself into a being of pure lightning and fly forward, shocking anyone in your way. You propel yourself in a 30-foot line. You can move through creatures during this movement, and this movement doesn't trigger reactions that are triggered by movement.</line>
+      <line>Each creature you move through takes 2d12 electricity damage with a basic Reflex save against your class DC. You return to your normal form in the final square of the line. If you're in the air, you fall unless you have a fly Speed.</line>
+      <levels value="+3">The length of the line increases by 5 feet, and the damage increases by 1d12.</levels>
+   </rule>
+
+   <rule>
+      <title>Whisper on the Wind</title> <action>1</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Air</trait> <trait>Auditory</trait> <trait>Illusion</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Linguistic</trait> <trait>Primal</trait>
+
+      <line>You speak in a whisper, a soft wind carrying your words far away. This has the effect of the <![CDATA[<i>message</i>]]> spell with a range of 500 feet, and it can target only a creature surrounded by air. If you start your message with the target's name, you and the target don't need to be able to see each other, nor do you need line of effect.</line>
+      <levels value="4th">The range is 1 mile.</levels>
+      <levels value="14th">The range is planetary plus the Plane of Air.</levels>
+   </rule>
+
+   <rule>
+      <title>Message</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Auditory</trait> <trait>Cantrip</trait> <trait>Illusion</trait> <trait>Linguistic</trait> <trait>Mental</trait>
+      <cast action="1">verbal</cast>
+      <range>120 feet</range> <targets>1 creature</targets>
+      <duration>see below</duration>
+
+      <line>You mouth words quietly, but instead of coming out of your mouth, they're transferred directly to the ears of the target. While others can't hear your words any better than if you normally mouthed them, the target can hear your words as if they were standing next to you. The target can give a brief response as a reaction, or as a free action on their next turn if they wish, but they must be able to see you and be within range to do so. If they respond, their response is delivered directly in your ear, just like the original message.</line>
+      <!-- <heighten value="3rd">The spell's range increases to 500 feet.</heighten> -->
+   </rule>
+</catalog>
