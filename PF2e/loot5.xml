@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Staff of Elemental Power</title>
+      <type>Item</type> <level>6</level>
+      <trait>Magical</trait> <trait>Staff</trait>
+      <price>230 gp</price>
+      <usage>held in 1 hand</usage> <bulk>1</bulk>
+
+      <line>This staff is tapered at the base and carved into a gem-studded twist at the top. While wielding the staff, you gain a +2 circumstance bonus checks to identify elemental creatures.</line>
+      <line list="Contained Spells">
+         <entry name="Cantrip"><![CDATA[<i>frostbite</i>]]></entry>
+         <entry name="1st"><![CDATA[<i>burning hands</i>, <i>pummeling rubble</i>, <i>thunderstike</i>]]></entry>
+         <entry name="2nd"><![CDATA[<i>flaming sphere</i>, <i>resist energy</i>]]></entry>
+      </line>
+      <block>
+         <name>Activate</name> <type>Cast a Spell</type>
+         <part><name>Effect</name>You expend a number of charges from the staff to cast a spell from its list.</part>
+      </block>
+   </rule>
+
+   <rule>
+      <title>Ring of Energy Resistance</title>
+      <trait>Abjuration</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <type>Item</type> <level>6+</level>
+      <usage>worn</usage> <bulk>-</bulk>
+
+      <line>This ring grants you resistance against one type of energy damage: acid, cold, electricity, or sonic. Each ring is crafted to protect against a particular type of energy damage.</line>
+
+      <variant>
+         <type>acid resistance</type> <level>6</level>
+         <price>245 gp</price>
+
+         <line>This ring is adorned with an emerald. It grants resistance 5 acid.</line>
+      </variant>
+   </rule>
+
+      <rule>
+         <title>Runestone</title>
+         <type>Item</type> <level>1</level>
+         <trait>Abjuration</trait> <trait>Consumable</trait> <trait>Magical</trait>
+         <price>3 gp</price>
+         <usage>held in 1 hand</usage> <bulk>L</bulk>
+
+         <line>This flat piece of hard stone is specially etched with a rune. When the rune is transferred from the <![CDATA[<i>runestone</i> to an armor, the <i>runestone</i>]]> cracks and is destroyed.</line>
+         <block>
+            <name>Transferring a rune</name>
+            <part linebreak=""><name>Time</name>1 day</part>
+            <part><name>Requirement</name>You must be able to craft magical items</part>
+            <part><name>Check</name>Crafting DC 20; you transfer the rune on a success</part>
+         </block>
+
+         <variant>
+            <rune italic="">+1 armor potency</rune> <level>5</level>
+            <trait>Abjuration</trait> <trait>Magical</trait>
+            <price>160 gp</price>
+            <usage>etched onto an armor</usage>
+
+            <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Obsidian Goggles</title>
+         <type>Item</type> <level>5</level>
+         <trait>Divination</trait> <trait>Invested</trait> <trait>Magical</trait>
+         <price>150 gp</price>
+         <usage>worn eyepiece</usage> <bulk>-</bulk>
+
+         <line>The sleek, black lenses of these goggles somehow make everything seem more brightly lit. While wearing the goggles, you gain a +1 item bonus to Perception checks involving sight.</line>
+         <block>
+            <name>Activate - Darkvision</name> <action>1</action> <type>(manipulate)</type>
+            <part linebreak=""><name>Frequency</name>once per day</part>
+            <part><name>Effect</name>Adjusting the goggles, you gain darkvision for 1 hour.</part>
+         </block>
+      </rule>
+
+      <rule>
+         <title>Antidote</title>
+         <type>Item</type> <level>1+</level>
+         <trait>Alchemical</trait> <trait>Consumable</trait> <trait>Elixir</trait> <trait>Healing</trait>
+         <usage>hald in 1 hand</usage> <bulk>L</bulk>
+         <duration>6 hours</duration>
+         <activate><action>1</action><type>Interact</type></activate>
+
+         <line>This elixir protects you against toxins. Upon drinking an <![CDATA[<i>antidote</i>]]>, you gain an item bonus to Fortitude saving throws against poisons for the duration.</line>
+         <variant>
+            <type>Moderate</type> <level>6</level>
+            <price>35 gp</price>
+
+            <line>You gain a +3 item bonus.</line>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Healing Potion, Moderate</title>
+         <type>Item</type> <level>6</level>
+         <line>DC 22</line>
+      </rule>
+
+      <rule>
+         <title>Firestarter Pellet</title>
+         <type>Item</type> <level>5+</level>
+         <trait>Catalyst</trait> <trait>Consumable</trait> <trait>Magical</trait>
+         <usage>held in 1 hand</usage> <bulk>L</bulk>
+         <activate><type>Cast a Spell (add 1 action)</type></activate>
+
+         <line>These compacted pellets of bat guano, sulfur, and magical accelerants have long been a staple for spellcasters on the battlefield. Adding a <![CDATA[<i>firestarter pellet</i> to a <i>fireball</i>]]> clinging flames that deal persistent fire damage to all who fail the saving throw (doubling on a critical failure).</line>
+
+         <variant>
+            <type>Moderate</type> <level>5</level>
+            <price>25 gp</price>
+
+            <line>The persistent fire damage is 1d6.</line>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Statue Skin Salve</title>
+         <type>Item</type> <level>5</level>
+         <uncommon/> <trait>Consumable</trait> <trait>Magical</trait> <trait>Oil</trait> <trait>Transmutation</trait>
+         <price>25 gp</price>
+         <usage>held in 1 hand</usage> <bulk>L</bulk>
+         <activate><action>3</action><type>Interact</type></activate>
+
+         <line>This gritty salve can be applied to the skin of a creature to form a thin layer of  smooth stone on its body for 20 minutes. During this time, it gains resistance 3 to piercing and slashing damage.</line>
+         <line>Further, the creature gains a +2 item bonus to Impersonate a statue or creature made of stone for 8 hours, or until its body is fully submerged in water.</line>
+      </rule>
+
+      <rule>
+         <title>Potion Patch</title>
+         <type>Item</type> <level>4+</level>
+         <trait>Consumable</trait> <trait>Magical</trait> <trait>Transmutation</trait>
+         <usage>worn</usage> <bulk>-</bulk>
+         <activate><action>1</action><type>command</type><requirement>You must have the <![CDATA[<i>potion patch</i>]]> affixed to your skin</requirement></activate>
+
+         <line>A <![CDATA[<i>potion patch</i>]]> is a sticky, bandage-like pad that can be filled with one potion and affixed to the skin. Filling the patch and affixing it is a 1-minute activity that takes two hands and has the manipulate trait. A patch has a maximum level of potion it can absorb, depending on the patch's type.</line>
+         <line>When you Activate the patch, the potion affects you without needing to have the potion in your hand. The patch's magic is negated after it's used, the next time you make your daily preparations, or when  another <![CDATA[<i>potion patch</i>]]> is affixed to you, whichever comes first.</line>
+
+         <variant>
+            <type>Lesser</type> <level>4</level>
+            <price>20 gp</price>
+
+            <line>The potion must be 10th level or lower.</line>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Dragonbone Arrowhead</title>
+         <type>Item</type> <level>4</level>
+         <trait>Consumable</trait> <trait>Evocation</trait> <trait>Magical</trait> <trait>Talisman</trait>
+         <price>20 gp</price>
+         <usage>affixed to a melee weapon, or a ranged weapon with the thrown trait</usage> <bulk>-</bulk>
+         <activate><action>1</action><type>Interact</type><requirement>You're an expert with the affixed weapon</requirement></activate>
+
+         <line>This arrowhead, carved from dragon bone, hangs off the shaft of your weapon. When you Activate the talisman, until the end of the current turn, the affixed weapon gains the thrown 20 ft. weapon trait, and when you make a thrown Strike with it, it flies back to your hand after the Strike completes. If your hands are full when the weapon returns, it falls to the ground in your space.</line>
+      </rule>
+</catalog>
