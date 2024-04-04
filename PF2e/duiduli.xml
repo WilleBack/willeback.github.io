@@ -3,38 +3,6 @@
 <catalog>
 
    <rule>
-      <title>Healing Potion</title>
-      <type>Item</type> <level>1+</level>
-      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Potion</trait>
-      <usage>held in 1 hand</usage> <bulk>L</bulk>
-      <activate>
-         <action>1</action>
-         <type>Interact</type>
-      </activate>
-
-      <line>A <![CDATA[<i>healing potion</i>]]> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <![CDATA[<i>healing potion</i>]]>, you regain the listed number of Hit Points.</line>
-
-      <variant>
-         <type>Minor</type> <level>1</level>
-         <price>4 gp</price>
-
-         <line>The potion restores 1d8 Hit Points.</line>
-      </variant>
-      <variant>
-         <type>Lesser</type> <level>3</level>
-         <price>12 gp</price>
-
-         <line>The potion restores 2d8+5 Hit Points.</line>
-      </variant>
-      <variant>
-         <type>Moderate</type> <level>6</level>
-         <price>50 gp</price>
-
-         <line>The potion restores 3d8+10 Hit Points.</line>
-      </variant>
-   </rule>
-
-   <rule>
       <title>Low-Light Vision</title>
 
       <line>You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.</line>
@@ -57,6 +25,14 @@
          <critsuccess>If you were searching for creatures, any undetected or hidden creature you critically succeeded against becomes observed by you. If you were searching for an object, you learn its location.</critsuccess>
          <success>If you were searching for creatures, any undetected creature you succeeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. If you were searching for an object, you learn its location or get a clue to its whereabouts, as determined by the GM.</success>
       </line>
+   </rule>
+
+   <rule>
+      <title>Elven Verve</title>
+      <type>Feat</type> <level>1</level>
+      <trait>Elf</trait>
+
+      <line>While all elves are to the paralyzing touch of ghouls, you can shake off flush-numbing magic of all kinds. You gain a +1 circumstance bonus to saves against effect that would impose the immobilized, paralyzed, or slowed conditions. When you would be immobilized, paralyzed, or slowed for at least 2 rounds, reduce that duration by 1 round.</line>
    </rule>
 
    <rule>
@@ -87,24 +63,21 @@
       </rule>
 
    <rule>
-      <title>Battle Medicine</title>
-      <type>Feat</type> <level>1</level>
+      <title>Raise a Shield</title>
       <action>1</action>
-      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
-      <prereq>trained in Medicine</prereq>
-      <requirements>You are holding healder's tools, or you are wearing them and have a hand free</requirements>
+      <requirement>You are wielding a shield.</requirement>
 
-      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day.</line>
-      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
+      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
    </rule>
 
    <rule>
-      <title>Continual Recovery</title>
-      <type>Feat</type> <level>2</level>
-      <trait>General</trait> <trait>Skill</trait>
-      <prereq>expert in Medicine</prereq>
+      <title>Shield Block</title>
+      <action>R</action>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
 
-      <line>You zealously monitor a patient's progress to administer treatment faster. When you Treat Wounds, your patient becomes immune only for 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives.</line>
+      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
    </rule>
 
    <rule>
@@ -133,21 +106,24 @@
    </rule>
 
    <rule>
-      <title>Raise a Shield</title>
+      <title>Battle Medicine</title>
+      <type>Feat</type> <level>1</level>
       <action>1</action>
-      <requirement>You are wielding a shield.</requirement>
+      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
+      <prereq>trained in Medicine</prereq>
+      <requirements>You are holding healder's tools, or you are wearing them and have a hand free</requirements>
 
-      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
+      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day.</line>
+      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
    </rule>
 
    <rule>
-      <title>Shield Block</title>
-      <action>R</action>
-      <type>Feat</type> <level>1</level>
-      <trait>General</trait>
-      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+      <title>Continual Recovery</title>
+      <type>Feat</type> <level>2</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>expert in Medicine</prereq>
 
-      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
+      <line>You zealously monitor a patient's progress to administer treatment faster. When you Treat Wounds, your patient becomes immune only for 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives.</line>
    </rule>
 
    <rule>
@@ -273,15 +249,6 @@
    </rule>
 
    <rule>
-      <title>Reach Spell</title>
-      <action>1</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
-
-      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
-   </rule>
-
-   <rule>
       <title>Order Spells</title>
 
       <line>Order spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you have a focus pool of 1 Focus Point for each focus spell you have, to a maximum of 3 Focus Points. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to commune with local nature spirits or otherwise tend to the wilderness in a way befitting your order.</line>
@@ -294,6 +261,15 @@
       <requirement>You have a focus pool, and you have spent at least 1 Focus Point</requirement>
 
       <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a good deity can usually Refocus while tending the wounds of their allies, and a wizard of the illusionist school might be able to Refocus while attempting to Identify Magic of the illusion school.</line>
+   </rule>
+
+   <rule>
+      <title>Reach Spell</title>
+      <action>1</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
+
+      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
    </rule>
 
    <rule>
