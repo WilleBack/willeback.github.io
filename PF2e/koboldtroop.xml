@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="creature.xsl"?>
+<catalog>
+
+   <creature>
+      <title>Kobold Troop</title>
+      <type>Creature</type> <level>5</level>
+      <alignment>LE</alignment> <size>Gargantuan</size> <trait>Humanoid</trait> <trait>Kobold</trait> <trait>Troop</trait>
+
+      <perception>+12</perception>
+      <sense>darkvision</sense>
+
+      <language>Draconic</language>
+
+      <skill><name>Acrobatics</name><value>+13</value></skill>
+      <skill><name>Crafting</name><value>+11</value></skill>
+      <skill><name>Stealth</name><value>+13</value></skill>
+
+      <str>+2</str> <dex>+4</dex> <con>+0</con> <int>+0</int> <wis>+2</wis> <cha>-1</cha>
+
+      <ac>20</ac> <fort>+12</fort> <ref>+7</ref> <will>+9</will>
+      <hp>75 (16 squares)</hp> <threshold>50 (12 squares), 25 (8 squares)</threshold>
+
+      <weakness><name>area</name><value>10</value></weakness>
+      <weakness><name>splash</name><value>5</value></weakness>
+
+      <speed>25</speed>
+      <speedmod>troop movement</speedmod>
+
+      <passive><name>Troop Defenses</name><line>Check the rules, there's a lot.</line></passive>
+
+      <action>
+         <name>Form Up</name> <action>1</action>
+         <line>The troop selects one square it currently occupies and redistributes its squares to any configuration in which all squares are contiguous and within 15 feet of the chosen square. The troop can't share its space with other creatures.</line>
+      </action>
+
+      <action>
+         <name>Troop Movement</name>
+         <line>Whenever the kobold troop Stride, they first Form Up as a free action to condense into a 20-foot-by-20-foot area (minus any missing squares), then move up to their Speed. This works just like a Gargantuan creature moving; for instance, if any square of the troop enter difficult terrain, the extra movement cost applies to the whole troop.</line>
+      </action>
+
+      <action>
+         <name>Wild Stabs</name> <action to="3">1</action>
+         <freq>once per round</freq>
+         <line name="Effect">The members of the troop wildly stab with their spears at each creature adjacent to the troop. The damage depends on the number of actions, with a DC 19 basic Reflex save.</line>
+         <line action="1">1d10 piercing damage.</line>
+         <line action="2">1d10+7 piercing damage.</line>
+         <line action="3">1d10+10 piercing damage.</line>
+      </action>
+      <action>
+         <name>Sling Storm</name> <action>2</action>
+         <line>The kobolds draw or reload their slings, then launch a ranged attack in the form of a volley. This volley is a 10-foot burst within 20 feet that deals 3d8 bludgeoning damage, with a DC 19 basic Reflex save.</line>
+         <line>When the kobolds are reduced to 8 or fewer squares, this area decreases to a 5-foot burst.</line>
+      </action>
+   </creature>
+
+</catalog>

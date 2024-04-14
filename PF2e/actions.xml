@@ -99,16 +99,16 @@
       <title>Cast a Spell</title>
 
       <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
-      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity. Such cases will be noted in the spell's stat block (for example, "<![CDATA[<b>Cast </b> <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">R</span>]]> verbal").</line>
-      <line><![CDATA[<b>Long Casting Times </b>]]> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes a mix of the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
-      <line><![CDATA[<b>Spell Components </b>]]> Each spell lists the spell components required to cast it after the action icons or text, such as "<![CDATA[<span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">3</span>]]> material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
+      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity.</line>
+      <line name="Long Casting Times"> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes the required time with the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
+      <line name="Spell Components"> Each spell lists the spell components required to cast it, such as "material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
       <line list="">
-         <entry>Material (manipulate); A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
-         <entry>Somatic (manipulate); A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
-         <entry>Verbal (concentrate); A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
-         <entry>Focus (manipulate); A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
+         <entry name="Material (manipulate);">A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
+         <entry name="Somatic (manipulate);">A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
+         <entry name="Verbal (concentrate);">A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
+         <entry name="Focus (manipulate);">A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
       </line>
-      <line><![CDATA[<b>Disrupted and Lost Spells </b>]]> Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
+      <line name="Disrupted and Lost Spells">Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
    </rule>
 
    <rule>
@@ -189,6 +189,21 @@
    </rule>
 
    <rule>
+      <title>Disarm</title> <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one hand free. The target can't be more than one size larger than you.</requirement>
+
+      <line>You try to knock an item out of a creature's grasp. Attempt an Athletics check against the target's Reflex DC.</line>
+      <line results="">
+         <critsuccess>You knock the item out of the target's grasp. It falls to the ground in the target's space.</critsuccess>
+         <success>You weaken the target's grasp on the item. Further attempts to Disarm the target of that item gain a +2 circumstance bonus, and the target takes a -2 circumstance penalty to attacks with the item or other checks requiring a firm grasp on the item.</success>
+         <success>The creature can end the effect by Interacting to change its grip on the item; otherwise, it lasts as long as the creature holds the item.</success>
+         <critfail>You lose your balance and become flat-footed until the start of your next turn.</critfail>
+      </line>
+   </rule>
+
+   <rule>
       <title>Dismiss</title>
       <action>1</action>
       <trait>Concentrate</trait>
@@ -223,7 +238,7 @@
       <trait>Move</trait>
       <requirement>You have a fly Speed.</requirement>
 
-      <line>You move through the air up to your fly Speed. Moving upward (straight or diagonally) uses the rules for moving through difficult terrain). You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don't take falling damage. You can use an action to Fly 0 feet to hover in place. If you're airborne at the end of your turn and didn't use a Fly action this round, you fall.</line>
+      <line>You move through the air up to your fly Speed. Moving upward (straight or diagonally) uses the rules for moving through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you Fly to the ground, you don't take falling damage. You can use an action to Fly 0 feet to hover in place. If you're airborne at the end of your turn and didn't use a Fly action this round, you fall.</line>
    </rule>
 
    <rule>
@@ -232,7 +247,7 @@
       <type>Athletics</type>
       <trait>Attack</trait>
 
-      <line>Using your body, a level, or some other tool, you attempt to forcefully open a door, window, container or heavy gate. WIth a high enough result, you can even smash through walls. Without a crowbar, prying something open takes a -2 item penalty to the Athletics check to Force Open.</line>
+      <line>Using your body, a level, or some other tool, you attempt to forcefully open a door, window, container or heavy gate. With a high enough result, you can even smash through walls. Without a crowbar, prying something open takes a -2 item penalty to the Athletics check to Force Open.</line>
       <line result="">
          <critsuccess>You open the door, window, container, or gate and can avoid damaging it in the process.</critsuccess>
          <success>You break the door, window, container, or gate open, and the door, window, container or gate gains the broken condition. If it's especially sturdy, the GM might have it take damage but not be broken.</success>
@@ -278,10 +293,10 @@
 
       <line>You Stride, then make a vertical Leap and attempt a DC 30 Athletics check to increase the height of your jump. If you didn't Stride at least 10 feet, you atomatically fail your check. This DC might be increased or decreased due to the situation, or as determined by the GM.</line>
       <line results="">
-         <critsuccess>Increase the maximum vertical distance to 8 feet, or increase the maximum vertical distance to 5 feet and maximum horizontal distance to 10 feet.</critsuccess>
-         <success>Increase the maximum vertical distance to 5 feet.</success>
+         <critsuccess>You Leap up to 8 feet vertically and 10 feet horizontally.</critsuccess>
+         <success>You Leap up to 5 feet vertically and 5 feet horizontally.</success>
          <fail>You Leap normally.</fail>
-         <critfail>You don't Leap at all, and instead fall prone in your space.</critfail>
+         <critfail>You fall prone in your space.</critfail>
       </line>
    </rule>
 
@@ -307,7 +322,7 @@
 
       <line>You take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space when your Leap ends (meaning you can typically clear a 5-foot gap, or a 10-foot gap if your Speed is 30 feet or more).</line>
       <line>If you Leap vertically, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface.</line>
-      <line>Jumping a greater distance requires using the Athletics skill.</line>
+      <line>Jumping a greater distance requires using the Athletics skill, either the High Jump or Long Jump action.</line>
    </rule>
 
    <rule>
@@ -328,12 +343,11 @@
       <action>2</action>
       <type>Athletics</type>
 
-      <line>You Stride, then make a horizontal Leap and attempt an Athletics check to increase the length of your jump. The DC of the Athletics check is equal to the total distance in feet you're attempting to move during your Leap (so you'd need to succeed at a DC 20 check to Leap 20 feet). You can't Leap farther than your Speed.</line>
-      <line>If you didn't Stride at least 10 feet, or if you attempt to jump in a different direction than your Stride, you automatically fail your check. This DC might be increased or decreased due to the situation, as determined by the GM.</line>
+      <line>You Stride, then attempt a DC 15 Athletics check to make a long jump in the direction were Striding. If you didn't Stride at least 10 feet, you automatically fail your check. The GM might increase or decrease this DC depending on the situation.</line>
       <line results="">
-         <success>Increase the maximum horizontal distance you Leap to the desired distance.</success>
-         <fail>You Leap normally.</fail>
-         <critfail>You Leap normally, but then fall and land prone.</critfail>
+         <success>You Leap up to a distance equal to your check result rounded down to the nearest 5 feet. You can't jump further than your land Speed.</success>
+         <fail>You make a normal horizontal Leap.</fail>
+         <critfail>You make a normal horizontal Leap, then fall and land prone.</critfail>
       </line>
    </rule>
 
@@ -540,23 +554,13 @@
    </rule>
 
    <rule>
-      <title>Sustain a Spell</title>
+      <title>Sustain</title>
       <action>1</action>
       <trait>Concentration</trait>
-      <requirement>You have at least one spell active with a sustained duration, and you are not fatigued.</requirement>
 
-      <line>Choose one spell with a sustained duration you have in effect. The duration of that spell continues until the end of your next turn. Some spells might have slightly different or expanded effects if you sustain them. Sustaining a Spell for more than 10 minutes (100 rounds) ends the spell and makes you fatigued unless the spell lists a different maximum duration (such as "sustained up to 1 minute" or "sustained up to 1 hour").</line>
-      <line>If you Sustain a Spell action is disrupted, the spell immediately ends.</line>
-   </rule>
-
-   <rule>
-      <title>Sustain an Activation</title>
-      <action>1</action>
-      <trait>Concentrate</trait>
-      <requirement>You have at least one magic item activation that you can sustain and you are not fatigued.</requirement>
-
-      <line>Choose one magic item activation with a sustained duration you have in effect. The duration of that activation continues until the end of your next turn. Some activations may have slightly different or expanded effects if you sustain them. Sustaining an Activation for more than 10 minutes (100 rounds) ends the activation and makes you fatigued unless the item's description states a different maximum duration (such as "up to 1 minute" or "up to 1 hour").</line>
-      <line>If your Sustain an Activation action is disrupted, the item's effect immediately ends.</line>
+      <line>Choose one of your effects that has a sustained duration or lists a special benefit when you Sustain it. Most such effects come from spells or magic item activations. If the effect has a sustained duration, its duration extends until the end of your next turn (Sustaining more than once in the same turn doesn't extend the duration to subsequent turns). If an ability can be sustained but doesn't list how long, it can be sustained up to 10 minutes.</line>
+      <line>An effect might list an additional benefit thtat occurs when you Sustain it, and this can even appear on effects that don't have a sustained duration. If the effect has both a special benefit and a sustained duration, your Sustain action extends the duration as well as having the special benefit.</line>
+      <line>If your Sustain action is disrupted, the chosen ability ends.</line>
    </rule>
 
    <rule>

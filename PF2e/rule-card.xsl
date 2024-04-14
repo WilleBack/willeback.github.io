@@ -6,6 +6,11 @@
          <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <style>
+               body {
+                  font-family:MentorSansStd, Trebuchet, Verdana, Arial;
+                  font-size:8.5pt;
+                  margin:0cm;
+               }
                .container {
                box-sizing:border-box;
                float:left;
@@ -112,38 +117,48 @@
                }
 
                @page {
-               size: auto;
-               margin: 1.2cm 0.9cm;
+               size: A5;
+               margin: 0cm;
                }
 
                @media print {
-               .container {
-               column-count: 2;
-               column-gap:1em;
-               margin:0cm;
-               }
+                  body {
+                     font-size: 15pt;
+                  }
+                  .rule {
+                     height: 19cm;
+                  }
+                  .grouping {
+                     padding:5cm 2cm; 
+                  }
+                  .container {
+                     column-gap:1em;
+                     margin:0cm;
+                  }
 
-               .listcontainer {
-               column-count: 2;
-               column-gap:1em;
-               margin:0cm;
-               }
+                  .listcontainer {
+                     column-count: 2;
+                     column-gap:1em;
+                     margin:0cm;
+                  }
 
                }
 
             </style>
          </head>
-         <body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8.5pt;margin:0cm; ">
+         <body>
             <div class="container">
                <xsl:for-each select="rule">
                   <xsl:choose>
                      <xsl:when test="category">
-                        <div class="grouping" style="float:left; width:100%; margin:0.05cm; page-break-inside:avoid;">
-                           <div class="grouptitle" style="float:left; width: 98%; border-bottom: 0.2em solid #5d0000; font-variant: small-caps; letter-spacing:1px; padding-left: 0.1em;">
-                              <xsl:value-of select="category"/>
+                        <div class="rule">
+                           <div class="grouping">
+                              <div class="grouptitle" style="float:left; width: 98%; border-bottom: 0.2em solid #5d0000; font-variant: small-caps; letter-spacing:1px; padding-left: 0.1em;">
+                                 <xsl:value-of select="category"/>
+                              </div>
                            </div>
-                           <xsl:call-template name="rule"/>
                         </div>
+                        <xsl:call-template name="rule"/>
                      </xsl:when>
                      <xsl:otherwise>
                         <xsl:call-template name="rule" />
@@ -625,7 +640,7 @@
                   </xsl:if>
                   <xsl:if test="fail">
                      <div id="result" class="line" style="float: left;">
-                        <b>Failure: </b><xsl:value-of select="fail[1]" disable-output-escaping="yes" />
+                        <b>Failure: </b><xsl:value-of select="fail" disable-output-escaping="yes" />
                         <xsl:for-each select="fail[position()>1]">
                            <br/><xsl:value-of select="." disable-output-escaping="yes" />
                         </xsl:for-each>
@@ -633,7 +648,7 @@
                   </xsl:if>
                   <xsl:if test="critfail">
                      <div id="result" class="line" style="float: left;">
-                        <b>Critical Failure: </b><xsl:value-of select="critfail[1]" disable-output-escaping="yes" />
+                        <b>Critical Failure: </b><xsl:value-of select="critfail" disable-output-escaping="yes" />
                         <xsl:for-each select="critfail[position()>1]">
                            <br/><xsl:value-of select="." disable-output-escaping="yes" />
                         </xsl:for-each>
@@ -661,9 +676,6 @@
             </xsl:when>
             <xsl:when test="@action">
                <div id="list" class="line" style="float: left; padding-left: 2em;">
-                  <xsl:if test="@name">
-                     <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
-                  </xsl:if>
                   <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="@action" /></span>
                   <xsl:text> </xsl:text>
                   <xsl:if test="@traits">

@@ -284,6 +284,10 @@
                      </xsl:if>
                   </xsl:for-each>
                </xsl:if>
+               <xsl:if test="threshold">
+                  <xsl:text>; </xsl:text>
+                  <b>Thresholds </b><xsl:value-of select="threshold" disable-output-escaping="yes" />
+               </xsl:if>
                <xsl:if test="hardness">
                   <xsl:text>; </xsl:text>
                   <b>Hardness </b><xsl:value-of select="hardness" />
@@ -327,7 +331,7 @@
             </div>
             <xsl:for-each select="passive">
                <div id="passive" class="line" style="float:left;">
-                  <b><xsl:value-of select="name" /> </b>
+                  <b><xsl:value-of select="name" /><xsl:text> </xsl:text></b>
                   <xsl:if test="trait">
                      <xsl:text> (</xsl:text>
                      <xsl:for-each select="trait">
@@ -506,7 +510,10 @@
                         <b><xsl:value-of select="name" />&#160;</b>
                         <xsl:if test="action">
                            <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action" /></span><xsl:text> </xsl:text>
-                           <xsl:text> </xsl:text>
+                           <xsl:if test="action/@to">
+                              <xsl:text>to </xsl:text>
+                              <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="action/@to" /></span><xsl:text> </xsl:text>
+                           </xsl:if>
                         </xsl:if>
                         <xsl:if test="name='Melee' or name='Ranged'">
                            <xsl:value-of select="weapon" /><xsl:text>&#160;</xsl:text><xsl:value-of select="atk" />
@@ -523,7 +530,7 @@
                               </xsl:if>
                            </xsl:for-each>
                            <xsl:text>)</xsl:text>
-                           <xsl:if test="req or line">
+                           <xsl:if test="req or freq or line">
                               <xsl:text> </xsl:text>
                            </xsl:if>
                         </xsl:if>
@@ -531,26 +538,40 @@
                            <b>Requirements&#160;</b><xsl:value-of select="req" disable-output-escaping="yes"/>
                            <xsl:text>; </xsl:text>
                         </xsl:if>
+                        <xsl:if test="freq">
+                           <b>Frequency&#160;</b><xsl:value-of select="freq" disable-output-escaping="yes"/>
+                           <xsl:text>; </xsl:text>
+                        </xsl:if>
                         <xsl:if test="damage">
-                           <xsl:if test="not(req)">
+                           <xsl:if test="not(req) and not(freq)">
                               <xsl:text>, </xsl:text>
                            </xsl:if>
                            <b>Damage&#160;</b><xsl:value-of select="damage" disable-output-escaping="yes" />
                         </xsl:if>
                         <xsl:if test="effect">
-                           <xsl:if test="not(req)">
+                           <xsl:if test="not(req) and not(freq)">
                               <xsl:text>, </xsl:text>
                            </xsl:if>
                            <b>Effect&#160;</b><xsl:value-of select="effect" disable-output-escaping="yes" />
+                           <xsl:if test="line">
+                              <xsl:text>; </xsl:text>
+                           </xsl:if>
                         </xsl:if>
                         <xsl:if test="line[1]/@name">
-                     <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
-                  </xsl:if>
+                           <b><xsl:value-of select="line[1]/@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
+                        </xsl:if>
                   <xsl:value-of select="line[1]" disable-output-escaping="yes"/>
                   <xsl:for-each select="line[position()>1]">
                      <br />
                      <xsl:if test="@name">
                         <b><xsl:value-of select="@name" disable-output-escaping="yes"/><xsl:text> </xsl:text></b>
+                     </xsl:if>
+                     <xsl:if test="@action">
+                        <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="@action" /></span><xsl:text> </xsl:text>
+                        <xsl:if test="@to">
+                           <xsl:text>to </xsl:text>
+                           <span style="font-family: 'pfactions';font-size: 1.5em; width:2em; text-align: center;"><xsl:value-of select="@to" /></span><xsl:text> </xsl:text>
+                        </xsl:if>
                      </xsl:if>
                      <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:for-each>
