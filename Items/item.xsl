@@ -357,20 +357,74 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:value-of select="spellbook"/>
 						<xsl:text> attack powers, chosen when it was created. Both powers must be of a level equal to or lower than that of the tome. If the tome's level is incresed, one or both powers can be exchanged for new ones.</xsl:text>
 					</div>
-					<div class="line" style="padding-left:2.3em;">
-						<i><xsl:text>Level </xsl:text><xsl:value-of select="levels"/>: </i>
-						<xsl:text>Three </xsl:text>
-						<xsl:value-of select="spellbook"/>
-						<xsl:text> attack powers, one of which can be an encounter power.</xsl:text>
-					</div>
+					<xsl:if test="levels">
+						<div class="line" style="padding-left:2.3em;">
+							<i><xsl:text>Level </xsl:text><xsl:value-of select="levels"/>: </i>
+							<xsl:text>Three </xsl:text>
+							<xsl:value-of select="spellbook"/>
+							<xsl:text> attack powers, one of which can be an encounter power.</xsl:text>
+						</div>
+					</xsl:if>
 					<div class="line">
 						<xsl:text>If you have the wizard class feature Arcane Spellbook, these spells count as being in your spellbook.</xsl:text>
+					</div>
+				</xsl:when>
+				<xsl:when test="spellbook-specific">
+					<div class="line">
+						<xsl:text>This tome contains the </xsl:text>
+						<xsl:for-each select="spellbook-specific">
+							<i><xsl:value-of select="."/></i>
+							<xsl:if test="@level">
+								<xsl:text> level </xsl:text><xsl:value-of select="@level"/>
+							</xsl:if>
+							<xsl:if test="position()!=last()">
+								<xsl:text>, </xsl:text>
+							</xsl:if>
+						</xsl:for-each>
+						<xsl:text> wizard </xsl:text>
+						<xsl:if test="limit">
+							<xsl:value-of select="limit"/>
+							<xsl:text> </xsl:text>
+						</xsl:if>
+						<xsl:text>power</xsl:text>
+						<xsl:if test="count(spellbook-specific)>1">
+							<xsl:text>s</xsl:text>
+						</xsl:if>
+						<xsl:text>.</xsl:text>
+					</div>
+					<div class="line">
+						<xsl:text>If you have the wizard class feature Arcane Spellbook, </xsl:text>
+						<xsl:choose>
+							<xsl:when test="count(spellbook-specific)>1">
+								<xsl:text>these spells</xsl:text>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:text>this spell</xsl:text>
+							</xsl:otherwise>
+						</xsl:choose>
+						<xsl:text> count as being in your spellbook.</xsl:text>
 					</div>
 				</xsl:when>
 				<xsl:when test="bookpower">
 					<div class="line"><b>Requirement: </b>You must have implement proficiency with this tome.</div>
 					<div class="line"><b>Effect: </b>Choose a power contained in this tome, and expend an unused arcane daily attack power of an equal or higher level.</div>
+					<xsl:if test="preceding-sibling::block/levels">
+						<div class="line" style="padding-left:2.3em;">
+							<i><xsl:text>Level </xsl:text><xsl:value-of select="preceding-sibling::block/levels"/>: </i>
+							<xsl:text>If you chose an encounter power contained in this tome, you expend an encounter attack power of an equal or higher level.</xsl:text>
+						</div>
+					</xsl:if>
 					<div class="line">You gain the use of the chosen power during this encounter. The power is lost if not used before the end of the encounter.</div>
+				</xsl:when>
+				<xsl:when test="bookpower-single">
+					<div class="line"><b>Requirement: </b>You must have implement proficiency with this tome.</div>
+					<div class="line"><b>Effect: </b><xsl:text>You expend an unused arcane </xsl:text>
+						<xsl:value-of select="bookpower-single/@limit"/>
+						<xsl:text> power of </xsl:text>
+						<xsl:value-of select="bookpower-single/@level"/><xsl:text> level or higher, and gain use of </xsl:text>
+						<xsl:value-of select="bookpower-single"/>
+						<xsl:text>. If you do not use it by the end of the encounter, it is lost without effect.</xsl:text>
+					</div>
 				</xsl:when>
 				<xsl:when test="poison-fooddrink">
 					<div class="line"><b>Effect: </b>Melee touch (one item of food or drink); You apply the poison to the target. The poison retains potency until the end of the encounter.</div>
@@ -484,7 +538,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:value-of select="text()" disable-output-escaping="yes"/>
 		</xsl:when>
 		<xsl:when test="@auto='no-opportunity'">
-			<xsl:text>Using this power does not trigger </xsl:text><i>opportunity attacks</i>
+			<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i>
 		</xsl:when>
 		<xsl:when test="@auto='ammo'">
 			<xsl:text>When using this ammunition, you use the listed attack bonus instead of your own. You add your weapon's proficiency bonus to attack, but not its enhancement bonus or other modifiers.</xsl:text>
