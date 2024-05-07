@@ -182,7 +182,7 @@
 
             </style>
          </head>
-         <body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; ">
+         <body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:8pt;margin:0cm; line-height: 0.95;">
             <div class="container">
                <xsl:for-each select="creature">
                   <xsl:call-template name="creature" />
