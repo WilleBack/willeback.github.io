@@ -200,56 +200,55 @@
 
          <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.3em; float:left;">
             <xsl:choose>
-               <xsl:when test="role='Summoned creature'">
+               <xsl:when test="initiative or perception or insight or sense">
+                  <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
+                     <xsl:call-template name="hp-content"/>
+                  </div>
+                  <xsl:if test="init">
+                     <div id="init" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
+                        <b>Initiative </b> <xsl:value-of select="init" />
+                     </div>
+                  </xsl:if>
+                  <xsl:if test="perception or insight or sense">
+                     <div id="senses" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
+                        <xsl:if test="perception">
+                           <b>Perception </b> <xsl:value-of select="perception" />
+                           <xsl:if test="insight or sense"> <br /> </xsl:if>
+                        </xsl:if>
+                        <xsl:if test="insight">
+                           <b>Insight </b> <xsl:value-of select="insight" />
+                           <xsl:if test="sense"> <br/></xsl:if>
+                        </xsl:if>
+                        <xsl:if test="not(perception) and not(insight)">
+                           <b>Senses</b><br/>
+                        </xsl:if>
+                        <xsl:for-each select="sense">
+                           <xsl:value-of select="." disable-output-escaping="yes" />
+                           <xsl:if test="position()!=last()">
+                              <br/>
+                           </xsl:if>
+                        </xsl:for-each>
+                     </div>
+                  </xsl:if>
+                  <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
+                     <xsl:call-template name="defense-content"/>
+                  </div>
+                  <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
+                     <xsl:call-template name="move-content"/>
+                  </div>
+               </xsl:when>
+               <xsl:otherwise>
                   <div id="hp" class="line">
-                     <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
-                     <xsl:if test="hpnote">
-                        <br /> <xsl:value-of select="hpnote" disable-output-escaping="yes" />
-                     </xsl:if>
+                     <xsl:call-template name="hp-content"/>
                   </div>
                   <div id="defense" class="line">
-                     <xsl:choose>
-                        <xsl:when test="defenses">
-                           <b>Defenses </b> <xsl:value-of select="defenses" disable-output-escaping="yes" />
-                        </xsl:when>
-                        <xsl:otherwise>
-                           <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
-                        </xsl:otherwise>
-                     </xsl:choose>
-                     <xsl:if test="defmod">
-                        <br />
-                        <xsl:for-each select="defmod">
-                           <xsl:value-of select="." disable-output-escaping="yes" />
-                           <xsl:if test="position()!=last()">
-                              <xsl:text>; </xsl:text>
-                           </xsl:if>
-                        </xsl:for-each>
-                     </xsl:if>
+                     <xsl:call-template name="defense-content"/>
                   </div>
                   <div id="move" class="line">
-                     <b>Speed </b> <xsl:value-of select="speed" />
-                     <xsl:if test="fly">
-                        <xsl:text>, </xsl:text> <i>fly&#160;</i> <xsl:value-of select="fly" />
-                     </xsl:if>
-                     <xsl:if test="climb">
-                        <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" />
-                     </xsl:if>
-                     <xsl:if test="burrow">
-                        <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="burrow" />
-                     </xsl:if>
-                     <xsl:if test="swim">
-                        <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
-                     </xsl:if>
-                     <xsl:if test="speedmod">
-                        <br />
-                        <xsl:for-each select="speedmod">
-                           <xsl:value-of select="." disable-output-escaping="yes" />
-                           <xsl:if test="position()!=last()">
-                              <xsl:text>; </xsl:text>
-                           </xsl:if>
-                        </xsl:for-each>
-                     </xsl:if>
+                     <xsl:call-template name="move-content"/>
                   </div>
+               </xsl:otherwise>
+            </xsl:choose>
                   <xsl:if test="immune">
                      <div id="immune" class="line">
                         <b>Immune </b>
@@ -333,154 +332,7 @@
                         </xsl:otherwise>
                      </xsl:choose>
                   </xsl:if>
-               </xsl:when>
-               <xsl:otherwise>
-                  <div id="hp" class="line" style="width: calc(100% - 9em); float: left;">
-                     <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
-                     <xsl:if test="hpnote">
-                        <br /> <xsl:value-of select="hpnote" disable-output-escaping="yes"/>
-                     </xsl:if>
-                  </div>
-                  <div id="init" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
-                     <b>Initiative </b> <xsl:value-of select="init" />
-                  </div>
-                  <div id="senses" class="line" style="width: 9em; float: right; text-align: right; padding-left: 0.3em;">
-                     <b>Perception </b> <xsl:value-of select="perception" /> <br />
-                     <b>Insight </b> <xsl:value-of select="insight" />
-                     <xsl:if test="sense">
-                        <xsl:for-each select="sense">
-                           <br /> <xsl:value-of select="."/>
-                        </xsl:for-each>
-                     </xsl:if>
-                  </div>
-                  <div id="defense" class="line" style="width: calc(100% - 9em); float: left;">
-                     <xsl:choose>
-                        <xsl:when test="defenses">
-                           <b>Defenses </b> <xsl:value-of select="defenses" disable-output-escaping="yes" />
-                        </xsl:when>
-                        <xsl:otherwise>
-                           <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
-                        </xsl:otherwise>
-                     </xsl:choose>
-                     <xsl:if test="defmod">
-                        <br />
-                        <xsl:for-each select="defmod">
-                           <xsl:value-of select="." disable-output-escaping="yes" />
-                           <xsl:if test="position()!=last()">
-                              <xsl:text>; </xsl:text>
-                           </xsl:if>
-                        </xsl:for-each>
-                     </xsl:if>
-                  </div>
-                  <div id="move" class="line" style="width: calc(100% - 9em); float: left;">
-                     <b>Speed </b> <xsl:value-of select="speed" />
-                     <xsl:if test="fly">
-                        <xsl:text>, </xsl:text> <i>fly&#160;</i> <xsl:value-of select="fly" />
-                     </xsl:if>
-                     <xsl:if test="climb">
-                        <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" />
-                     </xsl:if>
-                     <xsl:if test="burrow">
-                        <xsl:text>, </xsl:text> <i>burrow&#160;</i> <xsl:value-of select="burrow" />
-                     </xsl:if>
-                     <xsl:if test="swim">
-                        <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
-                     </xsl:if>
-                     <xsl:if test="speedmod">
-                        <br />
-                        <xsl:for-each select="speedmod">
-                           <xsl:value-of select="." disable-output-escaping="yes"/>
-                           <xsl:if test="position()!=last()">
-                              <xsl:text>; </xsl:text>
-                           </xsl:if>
-                        </xsl:for-each>
-                     </xsl:if>
-                  </div>
-                  <xsl:if test="immune">
-                     <div id="immune" class="line" style="width:calc(100% - 9em);">
-                        <b>Immune </b>
-                        <xsl:for-each select="immune">
-                           <xsl:value-of select="."/>
-                           <xsl:if test="position()!=last()">
-                              <xsl:text>, </xsl:text>
-                           </xsl:if>
-                        </xsl:for-each>
-                     </div>
-                  </xsl:if>
-                  <xsl:if test="resist or vulnerable">
-                     <div id="resist" class="line" style="width:calc(100% - 9em);">
-                        <xsl:if test="resist">
-                           <b>Resist&#160;</b>
-                           <xsl:for-each select="resist">
-                              <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
-                              <xsl:if test="position()!=last()">
-                                 <xsl:text>, </xsl:text>
-                              </xsl:if>
-                           </xsl:for-each>
-                           <xsl:if test="vulnerable">
-                              <xsl:text>; </xsl:text>
-                           </xsl:if>
-                        </xsl:if>
-                        <xsl:if test="vulnerable">
-                           <b>Vulnerable&#160;</b>
-                           <xsl:for-each select="vulnerable">
-                              <xsl:value-of select="./value"/><xsl:text>&#160;</xsl:text><xsl:value-of select="./type" />
-                              <xsl:if test="position()!=last()">
-                                 <xsl:text>, </xsl:text>
-                              </xsl:if>
-                           </xsl:for-each>
-                        </xsl:if>
-                     </div>
-                  </xsl:if>
-                  <xsl:if test="saves or ap or savemod">
-                     <xsl:choose>
-                        <xsl:when test="saves">
-                           <div id="extra" class="line" style="width:calc(100% - 9em);">
-                              <xsl:if test="saves">
-                                 <b>Saving Throws </b>
-                                 <xsl:value-of select="saves"/>
-                                 <xsl:if test="ap">
-                                    <xsl:text>; </xsl:text>
-                                 </xsl:if>
-                              </xsl:if>
-                              <xsl:if test="ap">
-                                 <b>Action Points </b>
-                                 <xsl:value-of select="ap"/>
-                              </xsl:if>
-                              <xsl:if test="savemod">
-                                 <br />
-                                 <xsl:for-each select="savemod">
-                                    <xsl:value-of select="."/>
-                                    <xsl:if test="position()!=last()">
-                                       <xsl:text>; </xsl:text>
-                                    </xsl:if>
-                                 </xsl:for-each>
-                              </xsl:if>
-                           </div>
-                        </xsl:when>
-                        <xsl:otherwise>
-                           <xsl:if test="savemod">
-                              <div id="savemods" class="line" style="width:calc(100% - 9em);">
-                                 <b>Saving Throws </b>
-                                 <xsl:for-each select="savemod">
-                                    <xsl:value-of select="."/>
-                                    <xsl:if test="position()!=last()">
-                                       <xsl:text>; </xsl:text>
-                                    </xsl:if>
-                                 </xsl:for-each>
-                              </div>
-                           </xsl:if>
-                           <xsl:if test="ap">
-                              <div id="ap" class="line" style="width:calc(100% - 9em);">
-                                 <b>Action Points </b>
-                                 <xsl:value-of select="ap"/>
-                              </div>
-                           </xsl:if>
-                        </xsl:otherwise>
-                     </xsl:choose>
-                  </xsl:if>
-               </xsl:otherwise>
-            </xsl:choose>
+               
          </div>
 
          <xsl:for-each select="category">
@@ -491,6 +343,9 @@
                <div id="blockhead" style="background:linear-gradient(to right, #c6c5ad, #d6d5c4); width:100%; box-sizing:border-box; padding:0.3em; float:left; ">
                   <div style="float:left; width: max-content; max-width: calc(100% - 6em);">
                      <xsl:choose>
+                        <xsl:when test="@summon-move">
+                           <b>Minor Action </b>
+                        </xsl:when>
                         <xsl:when test="type='aura'">
                            <div style="font-family: 'game_icons';font-size: 0.78em; width:2em; float: left; text-align: center;"><img src="../font/auraicon.svg" width="12px" height="12px" /></div>
                         </xsl:when>
@@ -531,6 +386,12 @@
                         <xsl:text>)</xsl:text>
                      </xsl:if>
                   </div>
+                  <xsl:if test="@summon-move">
+                     <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
+                        <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
+                     </div>
+                     <div style="float:left; max-width:30em; "><b>At-Will </b><xsl:text>1 / turn</xsl:text></div>
+                  </xsl:if>
                   <xsl:if test="frequency">
                      <div id="blob" style="width: 1.2em; float: left; text-align:center; ">
                         <xsl:text disable-output-escaping="yes">&#x25C6;</xsl:text>
@@ -544,10 +405,16 @@
                      <div style="float:left; max-width:30em; "><b>Recharge </b><span style="font-family:'game_icons'; font-size:0.82em;"><xsl:value-of select="recharge" /></span></div>
                   </xsl:if>
                </div>
+               <xsl:if test="@summon-move">
+                  <div class="line" style="padding-left:1.8em;">
+                     <i>Effect: </i>
+                     <xsl:text>The creature either walks, steps, stands up, squeezes, or crawls.</xsl:text>
+                  </div>
+               </xsl:if>
                <xsl:for-each select="line">
                   <xsl:choose>
                      <xsl:when test="@indent='1'">
-                        <div class="line" style="padding-left:3.3em;">
+                        <div class="line" style="padding-left:2.8em;">
                            <xsl:if test="name">
                               <i><xsl:value-of select="name" disable-output-escaping="yes"/><xsl:text>: </xsl:text></i>
                            </xsl:if>
@@ -555,7 +422,7 @@
                         </div>
                      </xsl:when>
                      <xsl:when test="@indent='2'">
-                        <div class="line" style="padding-left:4.3em;">
+                        <div class="line" style="padding-left:3.8em;">
                            <xsl:if test="name">
                               <i><xsl:value-of select="name" disable-output-escaping="yes"/><xsl:text>: </xsl:text></i>
                            </xsl:if>
@@ -563,7 +430,7 @@
                         </div>
                      </xsl:when>
                      <xsl:when test="@indent='3'">
-                        <div class="line" style="padding-left:5.3em;">
+                        <div class="line" style="padding-left:4.8em;">
                            <xsl:if test="name">
                               <i><xsl:value-of select="name" disable-output-escaping="yes"/><xsl:text>: </xsl:text></i>
                            </xsl:if>
@@ -571,7 +438,7 @@
                         </div>
                      </xsl:when>
                      <xsl:otherwise>
-                        <div class="line" style="padding-left:2.3em;">
+                        <div class="line" style="padding-left:1.8em;">
                            <xsl:if test="name">
                               <i><xsl:value-of select="name" disable-output-escaping="yes"/><xsl:text>: </xsl:text></i>
                            </xsl:if>
@@ -645,7 +512,15 @@
             </xsl:if>
             <xsl:if test="source">
                <div id="equipment" class="line">
-                  <i>Source Power: </i> <xsl:value-of select="source" />
+                  <xsl:choose>
+                     <xsl:when test="source/@type">
+                        <i>Source <xsl:value-of select="source/@type" />: </i>
+                     </xsl:when>
+                     <xsl:otherwise>
+                        <i>Source Power: </i>
+                     </xsl:otherwise>
+                  </xsl:choose>
+                  <xsl:value-of select="source" />
                </div>
             </xsl:if>
             <xsl:if test="description">
@@ -726,6 +601,87 @@
          </div>
       </div>
 
+   </xsl:template>
+   
+   <xsl:template name="hp-content">
+      <xsl:choose>
+         <xsl:when test="hp/@bloodied">
+            <b>HP </b><xsl:text>Your bloodied value; </xsl:text><b>Bloodied </b><xsl:text>one-half HP</xsl:text><br/>
+            <xsl:text>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</xsl:text>
+         </xsl:when>
+         <xsl:when test="hp/@surge">
+            <b>HP </b><xsl:text>Your healing surge value; </xsl:text><b>Bloodied </b><xsl:text>one-half HP</xsl:text><br/>
+            <xsl:text>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</xsl:text>
+         </xsl:when>
+         <xsl:when test="hp/@minion">
+            <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:text>any damage bloodies a minion</xsl:text>
+            <xsl:if test="hpnote">
+               <br /> <xsl:value-of select="hpnote" disable-output-escaping="yes"/>
+            </xsl:if>
+         </xsl:when>
+         <xsl:otherwise>
+            <b>HP </b> <xsl:value-of select="hp" /><xsl:text>; </xsl:text><b>Bloodied </b> <xsl:value-of select="bloodied" />
+            <xsl:if test="hpnote">
+               <br/>
+               <xsl:choose>
+                  <xsl:when test="hpnote/@summoned">
+                     <xsl:text>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                     <xsl:value-of select="hpnote" disable-output-escaping="yes" />
+                  </xsl:otherwise>
+               </xsl:choose>
+            </xsl:if>
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
+   
+   <xsl:template name="defense-content">
+      <xsl:choose>
+         <xsl:when test="defenses/@yours">
+            <b>Defenses </b> <xsl:text>Your defenses, not counting temporary bonuses</xsl:text>
+         </xsl:when>
+         <xsl:when test="defenses">
+            <b>Defenses </b> <xsl:value-of select="defenses" disable-output-escaping="yes" />
+         </xsl:when>
+         <xsl:otherwise>
+            <b>AC </b> <xsl:value-of select="ac" /><xsl:text>, </xsl:text><b>Fortitude </b> <xsl:value-of select="fort" /><xsl:text>, </xsl:text> <b>Reflex </b> <xsl:value-of select="ref" /> <xsl:text>, </xsl:text><b>Will </b> <xsl:value-of select="will" />
+         </xsl:otherwise>
+      </xsl:choose>
+      <xsl:if test="defmod">
+         <br />
+         <xsl:for-each select="defmod">
+            <xsl:value-of select="." disable-output-escaping="yes" />
+            <xsl:if test="position()!=last()">
+               <xsl:text>; </xsl:text>
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:if>
+   </xsl:template>
+   
+   <xsl:template name="move-content">
+      <b>Speed </b> <xsl:value-of select="speed" />
+      <xsl:if test="fly">
+         <xsl:text>, </xsl:text> <i>fly&#160;</i> <xsl:value-of select="fly" />
+      </xsl:if>
+      <xsl:if test="climb">
+         <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="climb" />
+      </xsl:if>
+      <xsl:if test="burrow">
+         <xsl:text>, </xsl:text> <i>climb&#160;</i> <xsl:value-of select="burrow" />
+      </xsl:if>
+      <xsl:if test="swim">
+         <xsl:text>, </xsl:text> <i>swim&#160;</i> <xsl:value-of select="swim" />
+      </xsl:if>
+      <xsl:if test="speedmod">
+         <br />
+         <xsl:for-each select="speedmod">
+            <xsl:value-of select="." disable-output-escaping="yes" />
+            <xsl:if test="position()!=last()">
+               <xsl:text>; </xsl:text>
+            </xsl:if>
+         </xsl:for-each>
+      </xsl:if>
    </xsl:template>
 
 </xsl:stylesheet>

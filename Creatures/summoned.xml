@@ -5,10 +5,11 @@
       <title>Abyssal Maw</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod><![CDATA[+2 <i>Fortitude</i>]]></defmod>
       <speed>6</speed>
 
@@ -28,28 +29,24 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence +3 vs. AC</line>
-            <line><name>Hit:</name> 2d6 + Intelligence modifier damage. On a critical hit, the target grants combat advantage until the end of your next turn.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence +3 vs. AC</line>
+            <line><name>Hit</name> 2d6 + Intelligence modifier damage. On a critical hit, the target grants combat advantage until the end of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Opportunity Interrupt</name>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> A creature adjacent to the abyssal maw provokes a <![CDATA[<i>reactive strike</i>]]></line>
-            <line><name>Effect:</name> The abyssal maw makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as a <i>reactive strike</i>]]>.</line>
+            <line><name>Trigger</name> A creature adjacent to the abyssal maw provokes a <![CDATA[<i>reactive strike</i>]]></line>
+            <line><name>Effect</name> The abyssal maw makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as a <i>reactive strike</i>]]>.</line>
          </block>
 
          <block>
             <name>Immediate Reaction</name>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> A creature adjacent to the abyssal maw makes an attack that doesn't target it</line>
-            <line><![CDATA[<i>Effect:</name> The abyssal maw makes its <name>melee basic attack</i> against the triggering creature.]]></line>
+            <line><name>Trigger</name> A creature adjacent to the abyssal maw makes an attack that doesn't target it</line>
+            <line><![CDATA[<i>Effect</name> The abyssal maw makes its <name>melee basic attack</i> against the triggering creature.]]></line>
          </block>
       </category>
 
@@ -77,10 +74,11 @@
       <title>Celestial Battle Tiger</title>
       <role>Summoned creature</role>
       <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+      
+      <sense>low-light vision</sense>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defnote>+1 to all defenses</defnote>
       <speed>9</speed>
       <speedmod>Forest Walk</speedmod>
@@ -102,31 +100,27 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Charisma +3 vs. AC</line>
-            <line><name>Hit:</name> 2d8 + your Charisma modifier damage.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Charisma +3 vs. AC</line>
+            <line><name>Hit</name> 2d8 + your Charisma modifier damage.</line>
          </block>
 
          <block>
             <name>Standard Action</name> <type>melee</type>
             <frequency>Encounter</frequency>
-            <line><name>Effect:</name> The tiger jumps up to 5 squares.</line>
-            <line><name>Attack:</name> Melee 1 (one creature); Charisma +3 vs. AC</line>
-            <line><name>Hit:</name> 3d8 + your Charisma modifier damage, and the target falls prone.</line>
-            <line><name>Miss:</name> 3 + your Charisma modifier damage.</line>
+            <line><name>Effect</name> The tiger jumps up to 5 squares.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Charisma +3 vs. AC</line>
+            <line><name>Hit</name> 3d8 + your Charisma modifier damage, and the target falls prone.</line>
+            <line><name>Miss</name> 3 + your Charisma modifier damage.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Immediate Reaction</name> <type>melee</type>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> An enemy enters a square adjacent to the tiger</line>
-            <line><name>Attack:</name> Melee 1 (triggering enemy); Charisma +3 vs. AC</line>
-            <line><name>Hit:</name> 1d8 + your Charisma modifier damage.</line>
+            <line><name>Trigger</name> An enemy enters a square adjacent to the tiger</line>
+            <line><name>Attack</name> Melee 1 (triggering enemy); Charisma +3 vs. AC</line>
+            <line><name>Hit</name> 1d8 + your Charisma modifier damage.</line>
          </block>
       </category>
 
@@ -154,10 +148,11 @@
       <title>Celestial Behemoth</title>
       <role>Summoned creature</role>
       <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+      
+      <sense>low-light vision</sense>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod>+1 to all defenses</defmod> <defmod>additional +1 to <![CDATA[<i>AC</i> and <i>Fort</i>]]></defmod>
       <speed>7</speed>
 
@@ -182,30 +177,26 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Charisma +2 vs. AC</line>
-            <line><name>Hit:</name> 2d10 + your Charisma modifier damage (gore), and the behemoth pushes the target 1 square. The behemoth can shift into the vacated space.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Charisma +2 vs. AC</line>
+            <line><name>Hit</name> 2d10 + your Charisma modifier damage (gore), and the behemoth pushes the target 1 square. The behemoth can shift into the vacated space.</line>
          </block>
 
          <block>
             <name>Standard Action</name>
             <frequency>At-Will</frequency>
-            <line><name>Effect:</name> The behemoth charges the closest enemy.</line>
+            <line><name>Effect</name> The behemoth charges the closest enemy.</line>
          </block>
 
          <block>
             <name>Standard Action</name> <type>melee</type>
             <frequency>Encounter</frequency>
-            <line><name>Effect:</name> The behemoth moves up to its speed and can move through enemies' spaces during the move by trampling them. Each time the behemoth enters a Large size or smaller enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
-            <line><name>Attack:</name> Melee 0 (one creature); Charisma vs. Fortitude</line>
+            <line><name>Effect</name> The behemoth moves up to its speed and can move through enemies' spaces during the move by trampling them. Each time the behemoth enters a Large size or smaller enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
+            <line><name>Attack</name> Melee 0 (one creature); Charisma vs. Fortitude</line>
             <line indent="1">Combat advantage against a prone target</line>
-            <line><name>Hit:</name> 4d8 + your Charisma modifier damage, and the behemoth pushes the target 1 square and the enemy is knocked prone.</line>
+            <line><name>Hit</name> 4d8 + your Charisma modifier damage, and the behemoth pushes the target 1 square and the enemy is knocked prone.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -232,10 +223,11 @@
       <title>Celestial Pegasus</title>
       <role>Summoned creature</role>
       <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+      
+      <sense>low-light vision</sense>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defnote>+1 to all defenses</defnote> <defnote>additional +1 to <![CDATA[<i>AC</i> and Reflex</i>]]></defnote>
       <speed>8</speed> <fly>8</fly>
 
@@ -256,8 +248,8 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Charisma +2 vs. AC</line>
-            <line><name>Hit:</name> 2d8 + your Charisma modifier damage (kick).</line>
+            <line><name>Attack</name> Melee 1 (one creature); Charisma +2 vs. AC</line>
+            <line><name>Hit</name> 2d8 + your Charisma modifier damage (kick).</line>
          </block>
 
          <block>
@@ -270,15 +262,11 @@
          <block>
             <name>Standard Action</name> <type>melee</type>
             <frequency>Encounter</frequency>
-            <line><name>Effect:</name> The pegasus flies up to its speed.</line>
+            <line><name>Effect</name> The pegasus flies up to its speed.</line>
             <line>Either the pegasus or its rider can make a <![CDATA[<i>melee basic attack</i>]]> at any point during the move. The movement does not provoke <![CDATA[<i>reactive strikes</i>]]> against the pegasus or its rider from the target of the attack.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -305,10 +293,11 @@
       <title>Celestial Silver Dragon</title>
       <role>Summoned creature</role>
       <size>Large</size> <origin>immortal</origin> <type>magical beast</type> <subtype>dragon</subtype> <subtype>mount</subtype>
+      
+      <sense>darkvision</sense>
 
-      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effecs that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defnote>+2 to all defenses</defnote>
       <speed>8</speed> <fly>10</fly>
 
@@ -334,40 +323,36 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 2 (one creature); Charisma +3 vs. AC</line>
-            <line><name>Hit:</name> 3d8 + Charisma modifier damage (bite).</line>
+            <line><name>Attack</name> Melee 2 (one creature); Charisma +3 vs. AC</line>
+            <line><name>Hit</name> 3d8 + Charisma modifier damage (bite).</line>
          </block>
 
          <block>
             <name>Standard Action</name> <type>close</type>
             <keyword>Arcane</keyword> <keyword>Cold</keyword>
             <frequency>Encounter</frequency>
-            <line><name>Attack:</name> Close blast 5 (each creature in blast); Charisma vs. Reflex</line>
-            <line><name>Hit:</name> 3d6 + your Charisma modifier cold damage.</line>
-            <line indent="1"><name>Crit:</name> Ongoing 15 cold damage (save ends), and the target is slowed until the end of your next turn.</line>
-            <line><name>Miss:</name> Half damage.</line>
+            <line><name>Attack</name> Close blast 5 (each creature in blast); Charisma vs. Reflex</line>
+            <line><name>Hit</name> 3d6 + your Charisma modifier cold damage.</line>
+            <line indent="1"><name>Crit</name> Ongoing 15 cold damage (save ends), and the target is slowed until the end of your next turn.</line>
+            <line><name>Miss</name> Half damage.</line>
          </block>
 
          <block>
             <name>Minor Action</name>
             <keyword>Divine</keyword> <keyword>Healing</keyword> <keyword>Mount</keyword>
             <frequency>Encounter</frequency>
-            <line><name>Effect:</name> The dragon regains hit points equal to your healing surge value.</line>
+            <line><name>Effect</name> The dragon regains hit points equal to your healing surge value.</line>
             <line>If its breath weapon attack has been expended, it regains its use at the start of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Immediate Reaction</name> <type>melee</type>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> An enemy enters a square adjacent to the dragon</line>
-            <line><name>Attack:</name> Melee 1 (triggering enemy); Charisma +3 vs. AC</line>
-            <line><name>Hit:</name> 2d8 + your Charisma modifier damage (tail), and the dragon knocks the target prone.</line>
+            <line><name>Trigger</name> An enemy enters a square adjacent to the dragon</line>
+            <line><name>Attack</name> Melee 1 (triggering enemy); Charisma +3 vs. AC</line>
+            <line><name>Hit</name> 2d8 + your Charisma modifier damage (tail), and the dragon knocks the target prone.</line>
          </block>
       </category>
 
@@ -395,10 +380,11 @@
       <title>Celestial Warhorse</title>
       <role>Summoned creature</role>
       <size>Large</size> <origin>immortal</origin> <type>beast</type> <subtype>mount</subtype>
+      
+      <sense>low-light vision</sense>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <speed>8</speed>
 
       <category>
@@ -417,24 +403,20 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Charisma +2 vs. AC</line>
-            <line><name>Hit:</name> 2d6 + your Charisma modifier damage (kick).</line>
+            <line><name>Attack</name> Melee 1 (one creature); Charisma +2 vs. AC</line>
+            <line><name>Hit</name> 2d6 + your Charisma modifier damage (kick).</line>
          </block>
 
          <block>
             <name>Standard Action</name> <type>melee</type>
             <frequency>Encounter</frequency>
-            <line><name>Effect:</name> The warhorse moves up to its speed and can move through enemies' spaces during the move by trampling them, if that enemy is Medium size or smaller. Each time the warhorse enters an enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
-            <line><name>Attack:</name> Melee 0 (one creature); Charisma vs. Reflex</line>
+            <line><name>Effect</name> The warhorse moves up to its speed and can move through enemies' spaces during the move by trampling them, if that enemy is Medium size or smaller. Each time the warhorse enters an enemy's space for the first itme during the move, it makes the following attack against that enemy.</line>
+            <line><name>Attack</name> Melee 0 (one creature); Charisma vs. Reflex</line>
             <line indent="1">Combat advantage against a prone target</line>
-            <line><name>Hit:</name> 2d8 + your Charisma modifier damage, and the enemy is knocked prone.</line>
+            <line><name>Hit</name> 2d8 + your Charisma modifier damage, and the enemy is knocked prone.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -456,37 +438,71 @@
       <language>understands any you speak</language>
       <source>Call Celestial Steed (Paladin Utility 6)</source>
    </creature>
+   
+   <creature>
+      <title>Conjured Critter</title>
+      <role>Summoned creature</role>
+      <size>Tiny</size> <origin>natural</origin> <type>beast</type>
+      <level>6</level>
+      
+      <perception>+8</perception>
+      <sense>low-light vision</sense>
+      
+      <hp minion="">6</hp>
+      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
+      <ac>20</ac> <fort>17</fort> <ref>18</ref> <will>16</will>
+      <speed>6</speed>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Minor Action</name> <type>mbasic</type> <note>1 / turn</note>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); +12 vs. AC</line>
+            <line><name>Hit</name>4 damage.</line>
+         </block>
+         
+         <block summon-move=""/>
+      </category>
+      
+      <alignment>Unaligned</alignment>
+      <language>-</language>
+      
+      <str><value>6</value><mod>+1 / -2</mod></str>
+      <con><value>11</value><mod>+3 / +0</mod></con>
+      <dex><value>12</value><mod>+4 / +1</mod></dex>
+      <int><value>2</value><mod>-1 / -4</mod></int>
+      <wis><value>11</value><mod>+3 / +0</mod></wis>
+      <cha><value>6</value><mod>+1 / -2</mod></cha>
+      <source type="Item">Bag of Tricks, Gray (Wondrous Item 8)</source>
+   </creature>
 
    <creature>
       <title>Desert Hawk</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>beast</type>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <speed>4</speed> <fly>8</fly>
 
       <category>
-         <category-name>Action</category-name>
+         <category-name>Actions</category-name>
 
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Wisdom +2 vs. AC</line>
-            <line><name>Hit:</name> 2d6 + Wisdom modifier damamge.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Wisdom +2 vs. AC</line>
+            <line><name>Hit</name> 2d6 + Wisdom modifier damamge.</line>
          </block>
          <block>
             <name>Standard Action</name>
             <frequency>At-Will</frequency>
-            <line><name>Effect:</name> The hawk shifts up to 2 squares, then makes its <![CDATA[<i>melee basic attack</i>]]>. On a hit, it can slide the target 1 square.</line>
+            <line><name>Effect</name> The hawk shifts up to 2 squares, then makes its <![CDATA[<i>melee basic attack</i>]]>. On a hit, it can slide the target 1 square.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -513,34 +529,31 @@
       <title>Dretch</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>elemental</origin> <type>humanoid</type>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <speed>5</speed>
 
       <category>
-         <category-name>Action</category-name>
+         <category-name>Actions</category-name>
 
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one or two creatures); Intelligence +2 vs. AC</line>
-            <line><name>Hit:</name> 1d4 + Intelligence modifier damage.</line>
+            <line><name>Attack</name> Melee 1 (one or two creatures); Intelligence +2 vs. AC</line>
+            <line><name>Hit</name> 1d4 + Intelligence modifier damage.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Nonaction Interrupt</name> <type>close</type>
             <keyword>Poison</keyword> <keyword>Zone</keyword>
             <frequency>Encounter</frequency>
-            <line><name>Trigger:</name> The dretch is reduced to 0 hit points or less</line>
-            <line><name>Effect:</name> Close burst 1; The burst creates a zone of vile miasma until the start of the next turn of the creature that reduced the dretch's hit points.</line>
+            <line><name>Trigger</name> The dretch is reduced to 0 hit points or less</line>
+            <line><name>Effect</name> Close burst 1; The burst creates a zone of vile miasma until the start of the next turn of the creature that reduced the dretch's hit points.</line>
             <line>A nondemon that ends its turn in the zone or enters it takes 5 poison damage. A creature can only take this damage once per turn.</line>
          </block>
       </category>
@@ -570,11 +583,10 @@
       <role>Summoned creature</role>
       <size>Small</size> <origin>Elemental</origin> <type>magical beast</type>
 
-      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod><![CDATA[+2 <i>Reflex</i>]]></defmod>
-      <defmod>+2 to all defenses against attacks triggered by movement when not slowed</defmod>
+      <defmod>+2 to all defenses against attacks triggered by movement when not slowed or immobilized</defmod>
       <defmod>-2 to all defenses while slowed or immobilized</defmod>
       <speed>8</speed>
 
@@ -586,32 +598,28 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence vs. Reflex</line>
-            <line><name>Hit:</name> 1d8 + Intelligence modifier damage, and the dust devil slides the target 2 squares.</line>
-            <line><name>Effect:</name> The dust devil shifts 1 square, or 2 squares if it scored a critical hit.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence vs. Reflex</line>
+            <line><name>Hit</name> 1d8 + Intelligence modifier damage, and the dust devil slides the target 2 squares.</line>
+            <line><name>Effect</name> The dust devil shifts 1 square, or 2 squares if it scored a critical hit.</line>
          </block>
 
          <block>
             <name>Standard Action</name> <type>close</type>
             <frequency>Encounter</frequency>
-            <line><name>Attack:</name> Close burst 3 (enemies in the burst); Intelligence vs. Fortitude</line>
-            <line><name>Hit:</name> 2d6 + Intelligence modifier damage, and the target is blinded until the end of the dust devil's next turn.</line>
-            <line><name>Miss:</name> Half damage.</line>
+            <line><name>Attack</name> Close burst 3 (enemies in the burst); Intelligence vs. Fortitude</line>
+            <line><name>Hit</name> 2d6 + Intelligence modifier damage, and the target is blinded until the end of the dust devil's next turn.</line>
+            <line><name>Miss</name> Half damage.</line>
          </block>
 
          <block>
             <name>Move Action</name>
             <frequency>Recharge</frequency> <note>when the dust devil is critically hit</note>
-            <line><name>Effect:</name> The dust devil shifts up to 5 squares. The first time it moves adjacent to an enemy during the move, it makes the following attack against that enemy:</line>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence vs. Fortitude</line>
-            <line><name>Hit:</name> The target falls prone</line>
+            <line><name>Effect</name> The dust devil shifts up to 5 squares. The first time it moves adjacent to an enemy during the move, it makes the following attack against that enemy</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence vs. Fortitude</line>
+            <line><name>Hit</name> The target falls prone</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -638,39 +646,34 @@
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>beast</type>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod>+2 <![CDATA[<i>Fortitude</i>]]></defmod>
       <speed>6</speed>
 
       <category>
-         <category-name>Action</category-name>
+         <category-name>Actions</category-name>
 
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Wisdom vs. Fortitude</line>
-            <line><name>Hit:</name> 1d8 + Wisdom modifier damage, and boar pushes the target 1 square.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Wisdom vs. Fortitude</line>
+            <line><name>Hit</name> 1d8 + Wisdom modifier damage, and boar pushes the target 1 square.</line>
          </block>
          <block>
             <name>Standard Action</name>
             <frequency>At-Will</frequency>
-            <line><name>Effect:</name> The boar charges the closest enemy.</line>
+            <line><name>Effect</name> The boar charges the closest enemy.</line>
             <line>If the boar has movement remaining and the attack hits, it can keep moving, pushing the target 1 square for each square it moves. This movement does not trigger <![CDATA[<i>reactive strikes</i>]]> from the target.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Immediate Interrupt</name>
             <frequency>Encounter</frequency>
-            <line><name>Trigger:</name> The boar is reduced to 0 hit points or fewer</line>
-            <line><name>Effect:</name> The boar makes its <![CDATA[<i>melee basic attack</i>]]>. If it targets the enemy, trap or hazard that triggered this attack, it deals half damage on a miss.</line>
+            <line><name>Trigger</name> The boar is reduced to 0 hit points or fewer</line>
+            <line><name>Effect</name> The boar makes its <![CDATA[<i>melee basic attack</i>]]>. If it targets the enemy, trap or hazard that triggered this attack, it deals half damage on a miss.</line>
          </block>
       </category>
 
@@ -698,11 +701,12 @@
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>humanoid</type>
 
-      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod><![CDATA[+2 <i>AC</i> and <i>Fort</i>]]></defmod>
       <speed>6</speed> <fly>6 (hover)</fly>
+      
+      <immune>disease</immune> <immune>poison</immune>
 
       <resist>
          <type>fire</type> <value>10</value>
@@ -715,22 +719,18 @@
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Fire</keyword> <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence +2 vs. AC</line>
-            <line><name>Hit:</name> 1d10 + Intelligence modifier fire damage.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence +2 vs. AC</line>
+            <line><name>Hit</name> 1d10 + Intelligence modifier fire damage.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Opportunity Interrupt</name>
             <keyword>Fire</keyword> <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> A creature adjacent to the fire warrior provokes a <![CDATA[<i>reactive strike</i>]]></line>
-            <line><name>Effect:</name> The fire warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as a <i>reactive strike</i>]]>.</line>
+            <line><name>Trigger</name> A creature adjacent to the fire warrior provokes a <![CDATA[<i>reactive strike</i>]]></line>
+            <line><name>Effect</name> The fire warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as a <i>reactive strike</i>]]>.</line>
          </block>
       </category>
 
@@ -757,10 +757,11 @@
       <title>Giant Cobra</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>beast</type>
+      
+      <sense>low-light vision</sense>
 
-      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <speed>6</speed>
 
       <category>
@@ -770,15 +771,11 @@
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Poison</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Wisdom vs. Reflex</line>
-            <line><name>Hit:</name> 1d6 + Wisdom modifier damage plus 2d4 poison damage, and the target takes a -2 penalty to attack rolls until the end of your next turn.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Wisdom vs. Reflex</line>
+            <line><name>Hit</name> 1d6 + Wisdom modifier damage plus 2d4 poison damage, and the target takes a -2 penalty to attack rolls until the end of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -806,9 +803,8 @@
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>beast</type>
 
-      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod>+2 to defenses against escape attempts</defmod>
       <speed>5</speed> <swim>6</swim>
 
@@ -827,16 +823,12 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 3 (one creature); Wisdom vs. Fortitude</line>
-            <line><name>Hit:</name> 1d8 + Wisdom modifier damage, and the target is pulled 2 squares. If the target was adjacent, it is grabbed until the end of your next turn instead of pulled.</line>
-            <line indent="1"><name>Crit:</name> The target is grabbed until the end of your next turn, or grabbed and restrained if it was adjacent.</line>
+            <line><name>Attack</name> Melee 3 (one creature); Wisdom vs. Fortitude</line>
+            <line><name>Hit</name> 1d8 + Wisdom modifier damage, and the target is pulled 2 squares. If the target was adjacent, it is grabbed until the end of your next turn instead of pulled.</line>
+            <line indent="1"><name>Crit</name> The target is grabbed until the end of your next turn, or grabbed and restrained if it was adjacent.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -864,9 +856,8 @@
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>beast</type>
 
-      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod>+2 to defenses against escape attempts</defmod>
       <speed>6</speed>
 
@@ -876,17 +867,13 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Wisdom vs. Reflex</line>
+            <line><name>Attack</name> Melee 1 (one creature); Wisdom vs. Reflex</line>
             <line indent="1">+2 vs. a target already grabbed by the bear, and can make the attack against Fortitude</line>
-            <line><name>Hit:</name> 2d6 + Wisdom modifier damage and the grab persists until the end of your next turn. If the bear has no creatures grabbed, the target is grabbed until the end of your next turn.</line>
-            <line indent="1"><name>Sustain Minor:</name> The grab persists until the end of your next turn.</line>
+            <line><name>Hit</name> 2d6 + Wisdom modifier damage and the grab persists until the end of your next turn. If the bear has no creatures grabbed, the target is grabbed until the end of your next turn.</line>
+            <line indent="1"><name>Sustain Minor</name> The grab persists until the end of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -914,9 +901,8 @@
       <role>Summoned creature</role>
       <size>Medium</size> <origin>immortal</origin> <type>humanoid</type>
 
-      <hp>your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effecs that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <speed>5</speed>
 
       <resist>
@@ -930,23 +916,19 @@
             <name>Standard Action</name> <type>melee</type>
             <keyword>Divine</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Effect:</name> Melee 1 (one creature); The guardian and the target gain a +2 power bonus to AC until the end of your next turn.</line>
+            <line><name>Effect</name> Melee 1 (one creature); The guardian and the target gain a +2 power bonus to AC until the end of your next turn.</line>
             <line>If the target is bloodied, the bonus increases to +4.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Nonaction Reaction</name> <type>close</type>
             <keyword>Divine</keyword> <keyword>Radiant</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> An enemy ends its turn adjacent to the guardian</line>
-            <line><name>Attack:</name> Close blast 1 (the triggering enemy); Wisdom vs. Fortitude</line>
-            <line><name>Hit:</name> Radiant damage equal to 5 + your Wisdom modifier + your implement's enhancement bonus.</line>
+            <line><name>Trigger</name> An enemy ends its turn adjacent to the guardian</line>
+            <line><name>Attack</name> Close blast 1 (the triggering enemy); Wisdom vs. Fortitude</line>
+            <line><name>Hit</name> Radiant damage equal to 5 + your Wisdom modifier + your implement's enhancement bonus.</line>
          </block>
       </category>
 
@@ -975,10 +957,11 @@
       <title>Imp</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>immortal</origin> <type>humanoid</type> <subtype>devil</subtype>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <speed>4</speed> <fly>6 (hover)</fly>
 
       <resist>
@@ -992,22 +975,18 @@
             <name>Standard Action</name> <type>melee</type>
             <keyword>Illusion</keyword> <keyword>Poison</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence +2 vs. AC</line>
-            <line><name>Hit:</name> 1d8 + Intelligence modifier damage, and the target takes ongoing 5 poison damage (save ends). The imp becomes invisible invisible until the start of your next turn, or the end of your next turn on a critical hit.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence +2 vs. AC</line>
+            <line><name>Hit</name> 1d8 + Intelligence modifier damage, and the target takes ongoing 5 poison damage (save ends). The imp becomes invisible invisible until the start of your next turn, or the end of your next turn on a critical hit.</line>
          </block>
 
          <block>
             <name>Minor Action</name>
             <keyword>Illusion</keyword>
             <frequency>Encounter</frequency>
-            <line><name>Effect:</name> The imp becomes invisible until the end of your next turn or until it has made an attack, whichever comes first.</line>
+            <line><name>Effect</name> The imp becomes invisible until the end of your next turn or until it has made an attack, whichever comes first.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -1033,10 +1012,11 @@
       <title>Iron Cohort</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>elemental</origin> <type>humanoid</type> <subtype>earth</subtype>
+      
+      <sense>low-light vision</sense>
 
-      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod>+2 <![CDATA[<i>AC</i>]]></defmod>
       <speed>6</speed>
 
@@ -1050,26 +1030,22 @@
       </category>
 
       <category>
-         <category-name>Action</category-name>
+         <category-name>Actions</category-name>
 
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency>
-            <line><name>Effect:</name> The iron cohort gains resist 5 all until the end of your next turn.</line>
+            <line><name>Effect</name> The iron cohort gains resist 5 all until the end of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Immediate Interrupt</name>
             <frequency>At-Will</frequency>
-            <line><name>Requirement:</name> The iron cohort must be adjacent to you</line>
-            <line><name>Trigger:</name> You are targeted by a ranged or melee attack</line>
-            <line><name>Effect:</name> The iron cohort becomes the target of the triggering attack instead of you.</line>
+            <line><name>Requirement</name> The iron cohort must be adjacent to you</line>
+            <line><name>Trigger</name> You are targeted by a ranged or melee attack</line>
+            <line><name>Effect</name> The iron cohort becomes the target of the triggering attack instead of you.</line>
          </block>
       </category>
 
@@ -1096,10 +1072,11 @@
       <title>Magma Beast</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>elemental</origin> <type>magical beast</type> <subtype>earth</subtype> <subtype>fire</subtype>
+      
+      <sense>low-light vision</sense>
 
-      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod>+2 <![CDATA[<i>Fort</i>]]></defmod>
       <speed>4</speed>
       <speedmod>+4 speed when charging</speedmod>
@@ -1125,8 +1102,8 @@
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Fire</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence vs. Fortitude</line>
-            <line><name>Hit:</name> 1d10 + Intelligence modifier fire damage, and the target is covered with magma (save ends).</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence vs. Fortitude</line>
+            <line><name>Hit</name> 1d10 + Intelligence modifier fire damage, and the target is covered with magma (save ends).</line>
             <line>While covered, the target takes ongoing 5 fire damage and is slowed.</line>
          </block>
 
@@ -1136,20 +1113,16 @@
             <line>The magma beast charges the closest enemy.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
          <category-name>Summon Traits</category-name>
 
          <block>
-            <name>Intrinsic Nature</name>
+            <name>Instinctive Action</name>
             <line>If you haven't given the magma beast any commands by the end of your turn, it attacks an adjacent creature or charges the nearest creature it can charge. Otherwise it moves its speed toward the nearest enemy.</line>
-            <line>If the magma beast couldn't attack or charge, you are slowed until the end of your turn.</line>
+            <line>If the magma beast couldn't attack or charge, you are slowed until the end of your next turn.</line>
          </block>
 
          <block>
@@ -1166,10 +1139,11 @@
      <title>Obedient Servant</title>
      <role>Summoned creature</role>
      <size>Medium</size> <origin>elemental</origin> <type>animate</type> <subtype>construct</subtype>
+      
+      <sense>low-light vision</sense>
 
-     <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-     <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-     <defenses>Your defenses, not counting temporary bonuses</defenses>
+     <hp bloodied=""/>
+     <defenses yours=""/>
      <speed>6</speed>
 
      <category>
@@ -1188,28 +1162,24 @@
        <block>
          <name>Standard Action</name> <type>mbasic</type>
          <frequency>At-Will</frequency>
-         <line><name>Attack:</name> Melee 1 (one creature); Intelligence +2 vs. AC</line>
-         <line><name>Hit:</name> 1d10 + Intelligence modifier damage, and the target is marked by the servant until the end of your next turn.</line>
+         <line><name>Attack</name> Melee 1 (one creature); Intelligence +2 vs. AC</line>
+         <line><name>Hit</name> 1d10 + Intelligence modifier damage, and the target is marked by the servant until the end of your next turn.</line>
        </block>
 
        <block>
          <name>Standard Action</name> <type>ranged</type>
          <frequency>At-Will</frequency>
-         <line><name>Attack:</name> Ranged 5/10 (one creature); Intelligence vs. Reflex</line>
-         <line><name>Hit:</name> 1d8 + Intelligence modifier damage.</line>
+         <line><name>Attack</name> Ranged 5/10 (one creature); Intelligence vs. Reflex</line>
+         <line><name>Hit</name> 1d8 + Intelligence modifier damage.</line>
        </block>
 
-       <block>
-          <name>Minor Action</name>
-          <frequency>At-Will</frequency> <note>1/round</note>
-          <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-       </block>
+        <block summon-move=""/>
 
        <block>
          <name>Opportunity Interrupt</name>
          <frequency>At-Will</frequency>
-         <line><name>Trigger:</name> A creature adjacent to the servant provokes a <![CDATA[<i>reactive strike</i>]]>; The triggering creature must be either marked by the servant, or adjacent to your bloodied ally or you if you are bloodied</line>
-         <line><name>Effect:</name> The servant makes a <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as a <i>reactive strike</i>]]>.</line>
+         <line><name>Trigger</name> A creature adjacent to the servant provokes a <![CDATA[<i>reactive strike</i>]]>; The triggering creature must be either marked by the servant, or adjacent to your bloodied ally or you if you are bloodied</line>
+         <line><name>Effect</name> The servant makes a <![CDATA[<i>melee basic attack</i> against the triggering creature. This counts as a <i>reactive strike</i>]]>.</line>
        </block>
      </category>
 
@@ -1231,15 +1201,178 @@
      <alignment>unaligned</alignment> <language>-</language>
      <source>Summon Obedient Servant (Artificer Daily 1)</source>
    </creature>
+   
+   <creature>
+      <title>Obsidian Steed</title>
+      <role>Summoned minion</role>
+      <level>4</level>
+      <size>Large</size> <origin>natural</origin> <type>animate</type> <subtype>mount</subtype>
+      
+      <perception>+3</perception>
+      
+      <hp minion="">6</hp>
+      <hpnote summoned=""/>
+      <ac>17</ac> <fort>16</fort> <ref>14</ref> <will>14</will>
+      <speed>8</speed>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Charger</name>
+            <keyword>Mount</keyword>
+            <line><name>Requirement</name>Mounted by a friendly rider of 4th level or higher.</line>
+            <line>The steed's rider gains a +5 bonus to damage rolls with charge attacks.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); +9 vs. AC</line>
+            <line><name>Hit</name>1d8 + 5 damage.</line>
+         </block>
+         
+         <block summon-move=""/>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <str><value>21</value><mod>+7 / +5</mod></str>
+      <con><value>18</value><mod>+6 / +4</mod></con>
+      <dex><value>14</value><mod>+4 / +2</mod></dex>
+      <int><value>2</value><mod>-2 / -4</mod></int>
+      <wis><value>13</value><mod>+3 / +1</mod></wis>
+      <cha><value>10</value><mod>+2 / +0</mod></cha>
+      
+      <source type="Item">Obsidian Steed (Wondrous Item 5)</source>
+   </creature>
+   
+   <creature>
+      <title>Onyx Dox</title>
+      <role>Summoned creature</role>
+      <level>2</level>
+      <size>Medium</size> <origin>natural</origin> <type>animate</type>
+      
+      <perception>+7</perception>
+      <sense>low-light vision</sense>
+      
+      <hp>34</hp> <bloodied>17</bloodied>
+      <hpnote summoned=""/>
+      <ac>16</ac> <fort>15</fort> <ref>15</ref> <will>13</will>
+      <speed>7</speed>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); +7 vs. AC</line>
+            <line><name>Hit</name>1d8 + 3 damage.</line>
+         </block>
+         <block>
+            <name>Immediate Reaction</name>
+            <frequency>At-Will</frequency>
+            <line><name>Trigger</name>An enemy adjacent to the onyx dog makes an attack against you</line>
+            <line><name>Effect</name>The onyx dog makes a <![CDATA[<i>melee basic attack</i>]]> against the triggering enemy.</line>
+         </block>
+         
+         <block summon-move=""/>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <str><value>16</value><mod>+4 / +3</mod></str>
+      <con><value>14</value><mod>+3 / +2</mod></con>
+      <dex><value>15</value><mod>+3 / +2</mod></dex>
+      <int><value>2</value><mod>-3 / -4</mod></int>
+      <wis><value>13</value><mod>+2 / +1</mod></wis>
+      <cha><value>10</value><mod>+1 / +0</mod></cha>
+      
+      <source type="Item">Onyx Dog (Wondrous Item 6)</source>
+   </creature>
+   
+   <creature>
+      <title>Opal Carp</title>
+      <role>Summoned creature</role>
+      <level>4</level>
+      <size>Medium</size> <origin>natural</origin> <type>animate</type> <subtype>aquatic</subtype> <subtype>mount</subtype>
+      
+      <perception>+6</perception>
+      <sense>low-light vision</sense>
+      
+      <hp>42</hp> <bloodied>21</bloodied>
+      <ac>17</ac> <fort>14</fort> <ref>17</ref> <will>16</will>
+      <swim>8</swim>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Opal Glamer</name>
+            <keyword>Illusion</keyword>
+            <line>The carp has concealment against ranged and area attacks.</line>
+            <line indent="1"><name>Mount</name>If mounted by a friendly rider, the rider also gains concealment against ranged and area attacks.</line>
+         </block>
+         
+         <block>
+            <name>Underwater Mount</name>
+            <keyword>Mount</keyword>
+            <line>The carp can be ridden by a Medium or smaller rider that weighs no more than 300 pounds.</line>
+            <line>A character riding the opal carp can breathe underwater as if it were air, and can speak normally underwater.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); +9 vs. AC</line>
+            <line><name>Hit</name>1d10 + 4 damage.</line>
+         </block>
+         
+         <block summon-move=""/>
+         
+         <block>
+            <name>Opportunity Reaction</name>
+            <keyword>Mount</keyword>
+            <frequency>At-Will</frequency>
+            <line><name>Requirement</name>Mounted by a friendly rider of 4th level or higher.</line>
+            <line><name>Trigger</name>An attack misses the carp or its rider</line>
+            <line><name>Effect</name>The carp shifts 1 square.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>-</language>
+      
+      <str><value>11</value><mod>+2 / +0</mod></str>
+      <con><value>12</value><mod>+3 / +1</mod></con>
+      <dex><value>19</value><mod>+6 / +4</mod></dex>
+      <int><value>2</value><mod>-2 / -4</mod></int>
+      <wis><value>16</value><mod>+5 / +3</mod></wis>
+      <cha><value>10</value><mod>+2 / +0</mod></cha>
+      
+      <source type="Item">Opal Carp (Wondrous Item 6)</source>
+   </creature>
 
    <creature>
       <title>Pack Wolf</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>beast</type>
+      
+      <sense>low-light vision</sense>
 
-      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp surge=""/>
+      <defenses yours=""/>
       <speed>6</speed>
 
       <category>
@@ -1257,16 +1390,12 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Wisdom vs. Reflex</line>
-            <line><name>Hit:</name> 1d8 + Wisdom modifier damage, and the target is knocked prone.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Wisdom vs. Reflex</line>
+            <line><name>Hit</name> 1d8 + Wisdom modifier damage, and the target is knocked prone.</line>
             <line>The pack wolf deals an additional +1d8 damage against a prone target.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -1293,10 +1422,11 @@
       <title>Shadow Beast</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>beast</type>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp surge=""/>
+      <defenses yours=""/>
       <speed>6</speed>
       <speedmod>+2 speed while charging</speedmod> <speedmod>phasing</speedmod>
 
@@ -1316,29 +1446,25 @@
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Fear</keyword> <keyword>Necrotic</keyword> <keyword>Shadow</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 2 (one creature); Intelligence vs. Reflex</line>
-            <line><name>Hit:</name> 2d8 + Intelligence modifier necrotic damage.</line>
-            <line><name>Effect:</name> The target takes a -2 penalty to attack rolls until the end of its next turn.</line>
+            <line><name>Attack</name> Melee 2 (one creature); Intelligence vs. Reflex</line>
+            <line><name>Hit</name> 2d8 + Intelligence modifier necrotic damage.</line>
+            <line><name>Effect</name> The target takes a -2 penalty to attack rolls until the end of its next turn.</line>
          </block>
 
          <block>
             <name>Standard Action</name>
             <frequency>At-Will</frequency>
-            <line><name>Effect:</name> The shadow beast charges a bloodied enemy.</line>
+            <line><name>Effect</name> The shadow beast charges a bloodied enemy.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Immediate Reaction</name> <type>close</type>
             <keyword>Shadow</keyword> <keyword>Zone</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> The beast takes damage</line>
-            <line><name>Effect:</name> The beast creates a zone of shadows in a close burst 1.</line>
+            <line><name>Trigger</name> The beast takes damage</line>
+            <line><name>Effect</name> The beast creates a zone of shadows in a close burst 1.</line>
             <line>The zone is heavily obscured for creatures other than the beast and you.</line>
          </block>
       </category>
@@ -1366,11 +1492,12 @@
       <title>Shadow Serpent</title>
       <role>Summoned creature</role>
       <size>Small</size> <origin>shadow</origin> <type>beast</type>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your Bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
-      <speed>6</speed>
+      <hp bloodied=""/>
+      <defenses yours=""/>
+      <speed>6</speed> <climb>3</climb> <swim>4</swim>
 
       <category>
          <category-name>Traits</category-name>
@@ -1387,14 +1514,15 @@
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency>
-            <line><name>Effect:</name> Until the end of your next turn, you can see through the serpent's eyes. The serpent has darkvision, which you also gain.</line>
+            <line><name>Effect</name> Until the end of your next turn, you can see through the serpent's eyes. While seeing through its eyes, you share the serpent's darkvision.</line>
             <line>You cannot gain line of sight or line of effect for your powers from the serpent's space, but you can make Perception checks from it.</line>
          </block>
 
          <block>
             <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+            <frequency>At-Will</frequency>
+            <line><name>Effect</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
+            <line>Unlike most summoned creatures, you can give the shadow serpent this command multiple times in a turn.</line>
          </block>
       </category>
 
@@ -1421,10 +1549,11 @@
       <title>Shadow Wraith</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>humanoid</type> <subtype>undead</subtype>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp surge=""/>
+      <defenses yours=""/>
       <speed>6</speed> <fly>6 (hover)</fly>
       <speedmod>phasing</speedmod>
 
@@ -1451,15 +1580,11 @@
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Necrotic</keyword> <keyword>Shadow</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence vs. Fortitude</line>
-            <line><name>Hit:</name> 2d6 + Intelligence modifier necrotic damage, and the target is weakened until the start of your next turn.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence vs. Fortitude</line>
+            <line><name>Hit</name> 2d6 + Intelligence modifier necrotic damage, and the target is weakened until the start of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
       </category>
 
       <category>
@@ -1485,10 +1610,11 @@
       <title>Shambling Cadaver</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>natural</origin> <type>humanoid</type> <subtype>undead</subtype>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your healing surge value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp surge=""/>
+      <defenses yours=""/>
       <defmod>+2 <![CDATA[<i>Fort</i>]]></defmod>
       <speed>4</speed>
 
@@ -1506,22 +1632,18 @@
          <block>
             <name>Standard Action</name> <type>mbasic</type>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence vs. Reflex</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence vs. Reflex</line>
             <line>If the shambling cadaver is already grabbing a creature, it must target that creature and makes the attack against Fortitude instead</line>
-            <line><name>Hit:</name>1d8 + Intelligence modifier damage, and the target is grabbed by the cadaver until the end of your next turn.</line>
+            <line><name>Hit</name>1d8 + Intelligence modifier damage, and the target is grabbed by the cadaver until the end of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Minor Action</name>
             <frequency>At-Will</frequency>
-            <line><name>Requirement:</name> The shambling cadaver has a creature grabbed.</line>
-            <line><name>Effect:</name> The grab persists until the end of your next turn, and the cadaver gains a +2 bonus to all defenses against escape attempts. If the grabbed creature is bloodied, the cadaver deals damage to it equal to your Wisdom modifier + your implement's enhancement bonus.</line>
+            <line><name>Requirement</name> The shambling cadaver has a creature grabbed.</line>
+            <line><name>Effect</name> The grab persists until the end of your next turn, and the cadaver gains a +2 bonus to all defenses against escape attempts. If the grabbed creature is bloodied, the cadaver deals damage to it equal to your Wisdom modifier + your implement's enhancement bonus.</line>
          </block>
       </category>
 
@@ -1543,15 +1665,291 @@
       <alignment>unaligned</alignment> <language>-</language>
       <source>Summon Shambling Cadavers (Wizard Daily 1)</source>
    </creature>
+   
+   <creature>
+      <title>Silt Elemental</title>
+      <role>Summoned creature</role>
+      <size>Medium</size> <origin>elemental</origin> <type>magical beast</type> <subtype>air</subtype> <subtype>earth</subtype>
+      
+      <sense>tremorsense 5</sense>
+      
+      <hp surge=""/>
+      <hpnote>Incoherent Form</hpnote>
+      <defenses yours=""/>
+      <defmod>+2 to all defenses</defmod>
+      <speed>7</speed>
+      <speedmod>Silt Walk</speedmod>
+      
+      <vulnerable><type>force</type><value>10</value></vulnerable>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Incoherent Form</name>
+            <line>A silt elemental takes half damage from melee attacks and ranged attacks, unless the attack deals force damage.</line>
+         </block>
+         
+         <block>
+            <name>Silt Walk</name>
+            <line>A silt elemental can walk on silt as if it was solid ground.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); your level +6 vs. AC</line>
+            <line><name>Hit</name>1d8 + 6 + inherent enhancement damage, plus an additional 2d8 damage if the target is slowed or immobilized.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name> <type>m</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); Your level +4 vs. Fortitude</line>
+            <line><name>Hit</name>1d10 + 6 + inherent enhancement damage, and the target is slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name> <type>close</type>
+            <frequency>Recharge</frequency> <note>by spending a healing surge</note>
+            <line><name>Attack</name>Close blast 3 (each creature in the blast); Your level +5 vs. Reflex</line>
+            <line><name>Hit</name>2d8 + 6 + inherent enhancement damage, and the target is immobilized until the end of your next turn.</line>
+            <line><name>Miss</name>The target is slowed until the end of its next turn.</line>
+         </block>
+         
+         <block>
+            <name>Move Action</name>
+            <frequency>Recharge</frequency> <note>when the silt elemental is hit by a melee attack or ranged attack</note>
+            <line><name>Effect</name>The silt elemental shifts 4 squares, and can shift through creatures' spaces. For this shift, enemies' spaces are not difficult terrain.</line>
+            <line>The first time during this shift that the silt elemental enters a creature's space, that creature takes damage and is slowed until the end of your next turn. The damage equals 3 + twice your inherent enhancement bonus.</line>
+         </block>
+         
+         <block summon-move=""/>
+         
+         <block>
+            <name>Opportunity Reaction</name>
+            <frequency>At-Will</frequency>
+            <line><name>Trigger</name>An enemy within 10 squares of the silt elemental makes a melee attack against you</line>
+            <line><name>Effect</name>The silt elemental either shifts half its speed or moves its speed. It must end this movement adjacent to the triggering enemy.</line>
+            <line>The triggering enemy is slowed until the end of your next turn.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the silt elemental any commands by the end of your turn, if the move action is available and there is a creature whose space the silt elemental can shift through, it does so, otherwise it moves its speed towards the nearest creature that is slowed or immobilized.</line>
+            <line>If you did not give it commands and it could not shift through a creature's space, you are slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain the Silt Walk trait.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>Primordial</language>
+      <source type="Item">Servant of the Silt Sea (Elemental Gift 15)</source>
+   </creature>
+   
+   <creature>
+      <title>Silt Elemental, Greater</title>
+      <role>Summoned creature</role>
+      <size>Large</size> <origin>elemental</origin> <type>magical beast</type> <subtype>air</subtype> <subtype>earth</subtype>
+      
+      <sense>tremorsense 5</sense>
+      
+      <hp surge=""/>
+      <hpnote>Incoherent Form</hpnote>
+      <defenses yours=""/>
+      <defmod>+2 to all defenses</defmod>
+      <speed>7</speed>
+      <speedmod>Silt Walk</speedmod>
+      
+      <vulnerable><type>force</type><value>10</value></vulnerable>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Incoherent Form</name>
+            <line>A silt elemental takes half damage from melee attacks and ranged attacks, unless the attack deals force damage.</line>
+         </block>
+         
+         <block>
+            <name>Silt Walk</name>
+            <line>A silt elemental can walk on silt as if it was solid ground.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 3 (one creature); your level +6 vs. AC</line>
+            <line><name>Hit</name>2d8 + 8 + inherent enhancement damage, plus an additional 3d8 damage if the target is slowed or immobilized.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name> <type>m</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 3 (one or two creatures); Your level +4 vs. Fortitude</line>
+            <line><name>Hit</name>2d8 + 8 + inherent enhancement damage, and the target is slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name> <type>close</type>
+            <keyword>Elemental</keyword>
+            <frequency>Recharge</frequency> <note>when first bloodied</note>
+            <line><name>Attack</name>Close burst 3 (each creature in the burst); Your level +4 vs. Fortitude</line>
+            <line><name>Hit</name>The target is pulled 2 squares, including into the silt elemental's space.</line>
+            <line>A target pulled into the silt elemental's space is grabbed (until escape), and automatically moves with the silt elemental, remaining in its space.</line>
+            <line indent="1"><name>Sustain Standard</name>The silt elemental maintains the grab on all creatures in its space, and all such creatures take 3d8 + 8 + inherent enhancement damage. A creature that does not breathe or is immune to suffocation only takes half damage.</line>
+            <line>A target that was not pulled into the silt elementa's space is immobilized until the end of your next turn.</line>
+            <line><name>Miss</name>The target is slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Move Action</name>
+            <frequency>Recharge</frequency> <note>when the silt elemental is hit by a melee attack or ranged attack</note>
+            <line><name>Effect</name>The silt elemental shifts 6 squares, and can shift through creatures' spaces. For this shift, enemies' spaces are not difficult terrain.</line>
+            <line>The first time during this shift that the silt elemental enters a creature's space, that creature takes damage and is slowed until the end of your next turn. The damage equals 3 + twice your inherent enhancement bonus.</line>
+         </block>
+         
+         <block summon-move=""/>
+         
+         <block>
+            <name>Opportunity Reaction</name>
+            <frequency>At-Will</frequency>
+            <line><name>Trigger</name>An enemy within 10 squares of the silt elemental makes a melee attack against you</line>
+            <line><name>Effect</name>The silt elemental either shifts half its speed or moves its speed. It must end this movement adjacent to the triggering enemy.</line>
+            <line>The triggering enemy is slowed until the end of your next turn.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the silt elemental any commands by the end of your turn, if the move action is available and there is a creature whose space the silt elemental can shift through, it does so, otherwise it moves its speed towards the nearest creature that is slowed or immobilized.</line>
+            <line>If you did not give it commands and it could not shift through a creature's space, you are slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain the Silt Walk trait.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>Primordial</language>
+      <source type="Item">Servant of the Silt Sea (Elemental Gift 25)</source>
+   </creature>
+   
+   <creature>
+      <title>Silt Elemental, Lesser</title>
+      <role>Summoned creature</role>
+      <size>Small</size> <origin>elemental</origin> <type>magical beast</type> <subtype>air</subtype> <subtype>earth</subtype>
+      
+      <sense>tremorsense 5</sense>
+      
+      <hp surge=""/>
+      <hpnote>Incoherent Form</hpnote>
+      <defenses yours=""/>
+      <defmod>+2 to all defenses</defmod>
+      <speed>7</speed>
+      <speedmod>Silt Walk</speedmod>
+      
+      <vulnerable><type>force</type><value>5</value></vulnerable>
+      
+      <category>
+         <category-name>Traits</category-name>
+         
+         <block>
+            <name>Incoherent Form</name>
+            <line>A silt elemental takes half damage from melee attacks and ranged attacks, unless the attack deals force damage.</line>
+         </block>
+         
+         <block>
+            <name>Silt Walk</name>
+            <line>A silt elemental can walk on silt as if it was solid ground.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Actions</category-name>
+         
+         <block>
+            <name>Standard Action</name> <type>mbasic</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); your level +6 vs. AC</line>
+            <line><name>Hit</name>1d8 + 4 + inherent enhancement damage, plus an additional 2d6 damage if the target is slowed or immobilized.</line>
+         </block>
+         
+         <block>
+            <name>Standard Action</name> <type>m</type>
+            <frequency>At-Will</frequency>
+            <line><name>Attack</name>Melee 1 (one creature); Your level +4 vs. Fortitude</line>
+            <line><name>Hit</name>1d10 + 4 + inherent enhancement damage, and the target is slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Move Action</name>
+            <frequency>Recharge</frequency> <note>when the silt elemental is hit by a melee attack or ranged attack</note>
+            <line><name>Effect</name>The silt elemental shifts 3 squares, and can shift through creatures' spaces. For this shift, enemies' spaces are not difficult terrain.</line>
+            <line>The first time during this shift that the silt elemental enters a creature's space, that creature takes damage and is slowed until the end of your next turn. The damage equals 3 + twice your inherent enhancement bonus.</line>
+         </block>
+         
+         <block summon-move=""/>
+         
+         <block>
+            <name>Opportunity Reaction</name>
+            <frequency>At-Will</frequency>
+            <line><name>Trigger</name>An enemy within 10 squares of the silt elemental makes a melee attack against you</line>
+            <line><name>Effect</name>The silt elemental either shifts half its speed or moves its speed. It must end this movement adjacent to the triggering enemy.</line>
+            <line>The triggering enemy is slowed until the end of your next turn.</line>
+         </block>
+      </category>
+      
+      <category>
+         <category-name>Summon Traits</category-name>
+         
+         <block>
+            <name>Instinctive Action</name>
+            <line>If you haven't given the silt elemental any commands by the end of your turn, if the move action is available and there is a creature whose space the silt elemental can shift through, it does so, otherwise it moves its speed towards the nearest creature that is slowed or immobilized.</line>
+            <line>If you did not give it commands and it could not shift through a creature's space, you are slowed until the end of your next turn.</line>
+         </block>
+         
+         <block>
+            <name>Symbiosis</name>
+            <line>You gain the Silt Walk trait.</line>
+         </block>
+      </category>
+      
+      <alignment>unaligned</alignment>
+      <language>Primordial</language>
+      <source type="Item">Servant of the Silt Sea (Elemental Gift 5)</source>
+   </creature>
 
    <creature>
       <title>Skeletal Warrior</title>
       <role>Summoned creature</role>
       <size>Medium</size> <origin>shadow</origin> <type>humanoid</type> <subtype>undead</subtype>
+      
+      <sense>darkvision</sense>
 
-      <hp>Your bloodied value</hp> <bloodied>One-half HP</bloodied>
-      <hpnote>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</hpnote>
-      <defenses>Your defenses, not counting temporary bonuses</defenses>
+      <hp bloodied=""/>
+      <defenses yours=""/>
       <defmod>+2 <![CDATA[<i>AC</i>]]></defmod>
       <speed>6</speed>
 
@@ -1570,22 +1968,18 @@
             <name>Standard Action</name> <type>mbasic</type>
             <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Attack:</name> Melee 1 (one creature); Intelligence +3 vs. AC</line>
-            <line><name>Hit:</name> 2d6 + Intelligence modifier damage, and the target cannot shift until the end of your next turn.</line>
+            <line><name>Attack</name> Melee 1 (one creature); Intelligence +3 vs. AC</line>
+            <line><name>Hit</name> 2d6 + Intelligence modifier damage, and the target cannot shift until the end of your next turn.</line>
          </block>
 
-         <block>
-            <name>Minor Action</name>
-            <frequency>At-Will</frequency> <note>1/round</note>
-            <line><name>Effect:</name> The creature either walks, steps, stands up, squeezes, or crawls.</line>
-         </block>
+         <block summon-move=""/>
 
          <block>
             <name>Opportunity Interrupt</name>
             <keyword>Weapon</keyword>
             <frequency>At-Will</frequency>
-            <line><name>Trigger:</name> An enemy adjacent to the skeletal warrior provokes a <![CDATA[<i>reactive strike</i>]]></line>
-            <line><name>Effect:</name> The skeletal warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature, and has a +2 bonus to the attack roll and deals an additional +1d6 damage. This counts as a <i>reactive strike</i>]]>.</line>
+            <line><name>Trigger</name> An enemy adjacent to the skeletal warrior provokes a <![CDATA[<i>reactive strike</i>]]></line>
+            <line><name>Effect</name> The skeletal warrior makes its <![CDATA[<i>melee basic attack</i> against the triggering creature, and has a +2 bonus to the attack roll and deals an additional +1d6 damage. This counts as a <i>reactive strike</i>]]>.</line>
          </block>
       </category>
 
