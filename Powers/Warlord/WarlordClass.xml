@@ -3,7 +3,7 @@
 
 <class>
 	<name>Warlord</name>
-	<subname>Tactician</subname>
+	<subname>Commander</subname>
 	<role>Leader</role>
 	<source>Martial</source>
 	<shortfluff>You rally your companions with a mixture of shouted commands and cunning stratagems, leading them to victory through superior tactics.</shortfluff>
@@ -48,12 +48,12 @@
 		<number>3</number>
 	</skills>
 
-	<fluff>Where a marshal leads their allies through example and might of arm, a tactician does his or her job through a steely presence. While a tactician may very well be an excellent warrior, it is his or her tactical acumen, eye for opportunity and inspiring countenance that form the basis of his or her abilities. </fluff>
-	<fluff>That does not mean that a tactician prefers to stay far away from battle. The eye of battle affords the most opportunities for him or her to seize the chance and turn even the hardest battle into an easy victory. </fluff>
+	<fluff>Where a marshal leads their allies through example and might of arm, a commander does his or her job through a steely presence. While a commander may very well be an excellent warrior, it is his or her tactical acumen, eye for opportunity and inspiring countenance that form the basis of his or her abilities. </fluff>
+	<fluff>That does not mean that a commander prefers to stay far away from battle. The eye of battle affords the most opportunities for him or her to seize the chance and turn even the hardest battle into an easy victory. </fluff>
 
 	<feature>
 		<name>Commanding Presence</name>
-		<benefit>A tactician's presence can shape a battle's outcome, help allies find new reserves, or reveal an opportunity to seize a swift victory.</benefit>
+		<benefit>A commander's presence can shape a battle's outcome, help allies find new reserves, or reveal an opportunity to seize a swift victory.</benefit>
 		<benefit>Your demeanor and your approach determine how you lead your allies, whether you inspire them to push harder and reach farther or you command them to take advantage of your enemies' vulnerabilities. Choose one of Inspiring Presence, Resourceful Presence, Skirmishing Presence, or Tactical Presence to best fit your style.</benefit>
 
 		<subfeature>
@@ -96,10 +96,12 @@
 
 	<feature>
 		<name>Leader's Strategy</name>
-		<benefit>Every tactician has a knack with a certain kind of leadership. Choose one of Battlefront Leader, Canny Leader, or Combat Leader to represent your knack.</benefit>
+		<benefit>Every commander has a knack for certain kind of leadership.</benefit>
+      <benefit>Choose one of Battlefront Leader, Canny Leader, or Combat Leader to represent your knack.</benefit>
 
 		<subfeature>
 			<name>Battlefront Leader</name>
+         <benefit>Some commanders are at their best when they rush into battle and cover their allies with a shield.</benefit>
 			<benefit>You gain proficiency with heavy shields, and the <![CDATA[<i>battlefront shift</i>]]> power.</benefit>
 
 			<power>
@@ -142,32 +144,25 @@
 
 		<subfeature>
 			<name>Canny Leader</name>
+         <benefit>Many commanders have a sharp mind, and they have a talent for keeping their allies vigilant.</benefit>
 			<benefit>You and any ally within 10 squares of you who can see and hear you gain a +2 bonus to Insight and Perception checks.</benefit>
 		</subfeature>
 
 		<subfeature>
 			<name>Combat Leader</name>
+         <benefit>Commanders are often experts at assessing the battlefield, with their vigilance translating into an urgency to face the enemy.</benefit>
 			<benefit>You and any ally within 10 squares of you who can see and hear you gain a +2 bonus to Initiative.</benefit>
 		</subfeature>
 
 	</feature>
 
 	<feature>
-		<name>Strategic Reservoir</name>
-		<benefit>A tactician knows that while he or she can improvise during most battles, it is wise to have a couple of different tactics prepared as contingencies.</benefit>
-		<benefit>At first level, you gain two 1st-level Warlord daily attack powers with the Tactic keyword, but each day you can use only one Warlord daily atack. You do not need to make the choice of which power you have available when you regain your daily attack powers. Instead, using one locks away the other until you regain the use.</benefit>
-		<benefit>When you gain a Warlord daily attack at 5th level, you gain two powers with the Tactic keyword and can now use two Warlord daily attack powers each day, but no more than one of a particular level.</benefit>
-		<benefit>Similarly, when you gain a Warlord daily attack power at 9th level, you gain two powers with the Tactic keyword and can now use three Warlord daily attack powers per day, but still no more than one of a particular level.</benefit>
-		<benefit>At levels 15, 19, 25, and 29, you gain two new Warlord daily attack powers with the Tactic keyword without having to replace a power, but the number of daily Warlord attack powers you can use per day remains at three.</benefit>
-	</feature>
-
-	<feature>
-		<name>Tactician's Command</name>
-		<benefit>While a tactician can hold their own in a fight, they know that often it is better to point out an opportunity to their allies than to take one themselves.</benefit>
-		<benefit>You gain the <![CDATA[<i>tactician's command</i>]]> power. Your Warlord at-will attacks provide additional benefits for the command. </benefit>
+		<name>Opportune Command</name>
+		<benefit>While a commander can hold their own in a fight, they know that often it is better to point out an opportunity to their allies than to take one themselves.</benefit>
+		<benefit>You gain the <![CDATA[<i>opportune command</i>]]> power. Your Warlord at-will attacks provide additional benefits for the command. </benefit>
 
 		<power>
-			<title>Tactician's Command</title>
+			<title>Opportune Command</title>
 			<class>Warlord</class> <category>Utility</category>
 			<fluff>You eye the battle vigilantly, and at the right moment point out an opportunity to an ally</fluff>
 			<frequency>At-Will</frequency>
@@ -182,103 +177,114 @@
 				<shade>true</shade>
 				<name-style>bold</name-style>
 				<name>Effect:</name>
-				<text>The target ally makes a <![CDATA[<i>melee basic attack</i>]]> or a <![CDATA[<i>ranged basic attack</i>]]> against the target enemy as a free reaction.</text>
+				<text>The target ally makes a <![CDATA[<i>melee basic attack</i>]]> or a <![CDATA[<i>ranged basic attack</i>]]> against the target enemy as an opportunity reaction.</text>
+         </section>
+         <section shade="">
+            <text>If the target ally has a power that he or she can use when making a <![CDATA[<i>reactive strike</i>]]>, he or she can use that power to make this attack.</text>
 			</section>
 		</power>
 
 	</feature>
 
 	<feature>
+		<name>Strategic Reservoir</name>
+		<benefit>A commander knows that while he or she can improvise during most battles, it is wise to have a couple of different tactics prepared as contingencies.</benefit>
+		<benefit>At first level, you gain two 1st-level Warlord daily attack powers with the Tactic keyword, but each day you can use only one Warlord daily atack. You do not need to make the choice of which power you have available when you regain your daily attack powers. Instead, using one locks away the other until you regain the use.</benefit>
+		<benefit>When you gain a Warlord daily attack at 5th level, you gain two powers with the Tactic keyword and can now use two Warlord daily attack powers each day, but no more than one of a particular level.</benefit>
+		<benefit>Similarly, when you gain a Warlord daily attack power at 9th level, you gain two powers with the Tactic keyword and can now use three Warlord daily attack powers per day, but still no more than one of a particular level.</benefit>
+		<benefit>At levels 15, 19, 25, and 29, you gain two new Warlord daily attack powers with the Tactic keyword without having to replace a power, but the number of daily Warlord attack powers you can use per day remains at three.</benefit>
+	</feature>
+
+	<feature>
 		<name>Warlord's Aura</name>
 		<benefit>When danger strikes, often the only thing standing between your allies and their defeat is their morale. Your ability to push them past their limits gives them (and you) the energy to fight on.</benefit>
-		<benefit>You gain the <![CDATA[<i>warlord's aura</i>]]> power. In addition to the benefits listed here, your Warlord at-will attacks give the aura additional benefits.</benefit>
+      <benefit>When you finish an extended rest, you gain two uses of inspiration. Starting at 16th level, you instead gain three uses of inspiration.</benefit>
+      <benefit>When you finish a short rest, you regain any expended uses of inspiration.</benefit>
+		<benefit>You gain the <![CDATA[<i>warlord's aura</i>]]> power. In addition to the benefits listed here, your warlord at-will attacks give the aura additional benefits.</benefit>
+      <benefit>You also gain the <![CDATA[<i>draw inspiration</i> and <i>inspire the fallen</i>]]> class powers. You expend your inspiration to use these powers.</benefit>
 
 			<power>
 				<title>Warlord's Aura</title>
-				<class>Warlord</class> <category>Utility </category>
-				<fluff>Your very presence encourages your allies to press on, allowing them to call forth the strength to battle on a little longer</fluff>
-					<frequency>Encounter</frequency>
-					<keyword>Aura, Martial</keyword>
-					<action>Minor</action> <subaction>Action</subaction>
-					<section personal=""/>
-					<section>
-						<shade>true</shade>
-						<name>Effect:</name>
-						<text>You activate an aura 5 that lasts until the end of the encounter. If the aura ends prematurely for any reason, you can reactivate it during the encounter as a minor action.</text>
-					</section>
-					<section>
-						<shade>true</shade>
-						<text>Whenever you complete an extended rest, choose one warlord at-will attack that modifies your <![CDATA[<i>warlord's aura</i>]]>. When you activate the aura, it is automatically modified by that power.</text>
-					</section>
-					<section>
-						<shade>true</shade>
-						<text>In addition, the Draw Inspiration action can be used twice during the encounter, as long as your aura is active.</text>
-					</section>
-					<section>
-						<shade>true</shade> <indent>1</indent>
-						<name>Level 16:</name> <name-style>italic</name-style>
-						<text>Three times during the encounter.</text>
-					</section>
-				<part>
-					<part-name>Draw Inspiration</part-name>
-					<frequency>Special</frequency>
-					<keyword>Healing, Martial</keyword>
-					<action>Minor</action> <subaction>Action</subaction>
-					<section>
-						<name>Special:</name> <name-style>bold</name-style>
-						<text>An ally in your <![CDATA[<i>warlord's aura</i>]]> can use this action as a <![CDATA[<i>personal</i>]]> power.</text>
-					</section>
-					<section>
-						<text>You can use it as a <![CDATA[<i>personal</i>]]> power, or as a <![CDATA[<i>Close</i>]]> power with the following target:</text>
-					</section>
-					<section>
-						<indent>1</indent>
-						<name>Target:</name>
-						<type>Close</type> <range>burst 5</range>
-						<target>one dying ally in the burst</target>
-					</section>
-					<section>
-						<shade>true</shade>
-						<name>Effect: </name> <name-style>bold</name-style>
-						<text>The character taking this action (or the dying target) can spend a healing surge to regain hit points equal to his or her healing surge value plus an additional 1d6 hit points.</text>
-					</section>
-					<section>
-						<shade>true</shade> <indent>1</indent>
-						<name>Level 6:</name> <name-style>italic</name-style>
-						<text>2d6 additional hit points.</text>
-					</section>
-					<section>
-						<shade>true</shade> <indent>1</indent>
-						<name>Level 11:</name> <name-style>italic</name-style>
-						<text>3d6 additional hit points.</text>
-					</section>
-					<section>
-						<shade>true</shade> <indent>1</indent>
-						<name>Level 16:</name> <name-style>italic</name-style>
-						<text>4d6 additional hit points.</text>
-					</section>
-					<section>
-						<shade>true</shade> <indent>1</indent>
-						<name>Level 21:</name> <name-style>italic</name-style>
-						<text>5d6 additional hit points.</text>
-					</section>
-					<section>
-						<shade>true</shade> <indent>1</indent>
-						<name>Level 26:</name> <name-style>italic</name-style>
-						<text>6d6 additional hit points.</text>
-					</section>
-					<section>
-						<shade>true</shade>
-						<text>If you used this action on a dying ally and are adjacent to the target, the additional hit points regained is equal to the maximum result and the target can stand up as a free reaction.</text>
-					</section>
-				</part>
-			</power>
-
+			   <class>Warlord</class> <category>Utility </category>
+			   <fluff>Your very presence encourages your allies to press on, allowing them to push past their limits</fluff>
+				<frequency>At-Will</frequency>
+				<keyword>Aura, Martial</keyword>
+				<action>Minor</action> <subaction>Action</subaction>
+				<section personal=""/>
+				<section>
+					<shade>true</shade>
+					<name>Effect:</name>
+					<text>You activate an aura 5 that lasts until the end of the encounter.</text>
+				</section>
+				<section>
+					<shade>true</shade>
+					<text>Whenever you complete an extended rest, choose one warlord at-will attack that modifies your <![CDATA[<i>warlord's aura</i>]]>. When you activate the aura, you also use that attack without spending an action.</text>
+				</section>
+         </power>
+         
+         <subfeature>
+         <power>
+            <title>Draw Inspiration</title>
+            <class>Warlord</class> <category>Utility</category>
+            <frequency>Encounter</frequency>
+            <action>Minor</action> <subaction/>
+            <fluff>You utter a few encouraging words, pushing yourself or an ally to battle on a little longer</fluff>
+            <keyword>Healing</keyword> <keyword>Martial</keyword>
+            <section><name>Special:</name>This power can be used by you, or an ally in your <![CDATA[<i>warlord's aura</i>]]>.</section>
+            <section><name>Inspiration:</name>You must have at least one unexpended inspiration.</section>
+            <section>You can use two Inspiration powers per encounter, but only one per turn.</section>
+            <section indent="1"><name>Level 16:</name>Thee Inspiration powers per encounter.</section>
+            <section personal=""/>
+            <section shade=""><name>Effect:</name>You expend one of your inspirations, and the acting character can spend a healing surge to regain hit points equal to his or her healing surge value plus an additional 1d6 hit points.</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 6:</name> <name-style>italic</name-style>
+					<text>2d6 additional hit points.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 11:</name> <name-style>italic</name-style>
+					<text>3d6 additional hit points.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 16:</name> <name-style>italic</name-style>
+					<text>4d6 additional hit points.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 21:</name> <name-style>italic</name-style>
+					<text>5d6 additional hit points.</text>
+				</section>
+				<section>
+					<shade>true</shade> <indent>1</indent>
+					<name>Level 26:</name> <name-style>italic</name-style>
+					<text>6d6 additional hit points.</text>
+				</section>
+         </power>
+         
+         <power>
+            <title>Inspire the Fallen</title>
+            <class>Warlord</class> <category>Utility</category>
+            <frequency>Encounter</frequency>
+            <action>Minor</action> <subaction/>
+            <fluff>Your voice pulls a dying ally back into the fight</fluff>
+            <keyword>Healing</keyword> <keyword>Martial</keyword>
+            <section><name>Inspiration:</name>You must have at least one unexpended inspiration.</section>
+            <section>You can use two Inspiration powers per encounter, but only one per turn.</section>
+            <section indent="1"><name>Level 16:</name>Thee Inspiration powers per encounter.</section>
+            <section><name>Target:</name><type>Close</type><range>burst 5</range><target>one dying ally in the burst</target></section>
+            <section indent="1"><name>Level 11:</name><type>Close</type><range>burst 10</range></section>
+            <section indent="1"><name>Level 21:</name><type>Close</type><range>burst 15</range></section>
+            <section shade=""><name>Effect:</name>You expend one of your inspirations, and the target can spend a healing surge to regain hit points as if he or she had used your <![CDATA[<i>draw inspiration</i>]]> power.</section>
+            <section shade="">If you are adjacent to the target, the target regains the maximum number of hit points, and can then stand from prone as a free reaction.</section>
+         </power>
+         </subfeature>
 	</feature>
 
 	<feature>
 		<name>Words of Encouragement</name>
-		<benefit>All tacticians know enough healing techniques that even if they can't mend broken bones or knit together torn flesh, their allies feel the confidence to push on regardless with a little rest.</benefit>
+		<benefit>All commanders know enough healing techniques that even if they can't mend broken bones or knit together torn flesh, their allies feel the confidence to push on regardless with a little rest.</benefit>
 		<benefit>By tending to wounds, sharing inspiring words and showing your own confidence, you and all allies you interact with during a short rest are affected by your Words of Encouragement for that rest.</benefit>
 		<benefit>When an affected character spends a healing surge at the end of a rest, that character regains an additional number of hit points equal to your highest ability modifier with each healing surge.</benefit>
 		<benefit>The additional hit points increase by 2 at 5th level, by 4 at 15th level, and by 6 at 25th level.</benefit>

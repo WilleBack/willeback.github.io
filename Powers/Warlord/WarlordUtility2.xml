@@ -10,10 +10,11 @@
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 10</range>
-            <target>One ally in the burst</target>
+            <type>Ranged</type> <range>10</range>
+            <target>one ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -40,7 +41,7 @@
          <section>
             <name>Target:</name> <name-style>bold</name-style>
             <type>Melee</type> <range>1</range>
-            <target>You, or one ally adjacent to you</target>
+            <target>you, or one ally adjacent to you</target>
          </section>
          <section>
             <shade>true</shade>
@@ -49,7 +50,7 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>If the target ally is prone, he or she can stand up without spending an action.</text>
+            <text>If the target ally is prone, he or she can stand up as a free reaction.</text>
          </section>
    </power>
 
@@ -87,13 +88,14 @@
          <frequency>At-Will</frequency>
          <keyword>Martial</keyword>
          <action>Opportunity</action> <subaction>Reaction</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
             <text>An ally in your <![CDATA[<i>warlord's aura</i>]]> scores a critical hit</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>special</range>
+            <type>Ranged</type> <range>sight</range>
             <target>the triggering ally</target>
          </section>
          <section>
@@ -122,7 +124,7 @@
          <action>Free</action> <subaction>Reaction</subaction>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>On your turn, you hit an enemy with a melee attack, or the target ally of your <![CDATA[<i>tactician's command</i>]]> hits an enemy with a melee attack</text>
+            <text>On your turn, you hit an enemy with a melee attack, or the target ally of your <![CDATA[<i>opportune command</i>]]> hits an enemy with a melee attack</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
@@ -132,7 +134,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target can shift 3 squares as a free reaction, and gains combat advantage against the enemy that was hit by the triggering attack. The combat advantage lasts until the end of your next turn.</text>
+            <text>The target can shift 3 squares as a free reaction, and gains combat advantage against the triggering enemy. The combat advantage lasts until the end of your next turn.</text>
          </section>
    </power>
 
@@ -143,9 +145,10 @@
          <frequency>Encounter</frequency>
          <keyword>Healing, Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>special</range>
+            <type>Ranged</type> <range>sight</range>
             <target>one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
          </section>
          <section>
@@ -262,12 +265,12 @@
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Skirmishing Presence:</name> <name-style>bold</name-style>
-            <text>Allies's movement does not provoke <![CDATA[<i>reactive strikes</i>]]> from the target while they have the combat advantage.</text>
+            <text>Allies's movement does not provoke <![CDATA[<i>opportunity attacks</i>]]> from the target while they have the combat advantage.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Tactical Presence:</name> <name-style>bold</name-style>
-            <text>Allies also gain a bonus to damage rolls with attacks only targeting the target when they have the combat advantage. The bonus equals your Intelligence modifier.</text>
+            <text>Allies also have a bonus to damage rolls with attacks that only target the target when they have the combat advantage. The bonus equals your Intelligence modifier.</text>
          </section>
    </power>
 
@@ -278,10 +281,11 @@
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Move</action> <subaction>Action</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 10</range>
-            <target>one ally in the burst</target>
+            <type>Ranged</type> <range>10</range>
+            <target>one ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -313,7 +317,7 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>If your triggering attack was a critical hit or you made the attack using an action gained by spending an action point, the targets also gain a +2 power bonus to damage rolls.</text>
+            <text>If your triggering attack was a critical hit or you made the attack using an action gained by spending an action point, the targets also gain the power bonus to damage rolls.</text>
          </section>
    </power>
 
@@ -324,19 +328,20 @@
          <frequency>Daily</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Special</type>
-            <target>one bloodied ally in the burst</target>
+            <type>Ranged</type> <range>10</range>
+            <target>one bloodied ally</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target regainst the use of his or her <![CDATA[<i>second wind</i>]]>.</text>
+            <text>The target regains the use of his or her <![CDATA[<i>second wind</i>]]>. If the target has not used his or her <![CDATA[<i>second wind</i>]]>, he or she instead gains a power bonus to all defenses until the end of your next turn. The power bonus equals your [Wisdom or Charisma] modifier.</text>
          </section>
          <section>
             <shade>true</shade>
-            <text>After using his or her <![CDATA[<i>second wind</i>]]>, the target gains a power bonus to the next attack roll he or she makes before the end of the encounter. The bonus equals your [Wisdom or Charisma] modifier.</text>
+            <text>After using his or her <![CDATA[<i>second wind</i>]]>, the target gains a power bonus to the first attack roll he or she makes before the end of the encounter. The bonus equals your [Wisdom or Charisma] modifier.</text>
          </section>
    </power>
 
@@ -355,7 +360,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Each target can shift 2 squares.</text>
+            <text>Each target can shift 2 squares. This is a free reaction for your allies.</text>
          </section>
    </power>
 
@@ -403,7 +408,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target makes a saving throw, and has a power bonus to the roll equal to your [Wisdom or Charisma] modifier.</text>
+            <text>The target makes a saving throw against one effect that a save can end, with a power bonus to the roll equal to your [Wisdom or Charisma] modifier.</text>
          </section>
    </power>
 

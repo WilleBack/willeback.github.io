@@ -19,24 +19,20 @@
             <type>Close</type> <range>special</range>
             <target>one ally in your <![CDATA[<i>warlord's aura</i>]]></target>
          </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The triggering attack also knocks the enemy prone.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>After the triggering attack is resolved, the target makes a <![CDATA[<i>basic attack</i>]]> against the triggering enemy as free reaction.</text>
-         </section>
+         <section shade=""><name>Effect:</name>The target can make a <![CDATA[<i>basic attack</i>]]> against the triggering enemy as either a free interrupt or free reaction.</section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Inspiring Presence:</name> <name-style>bold</name-style>
-            <text>The target gainst temporary hit points equal to your Charisma modifier. If the target is bloodied, he or she 5 + your Charisma modifier temporary hit points instead.</text>
+            <text>The target gainst temporary hit points equal to your Charisma modifier. If the target is bloodied, he or she gains 5 + your Charisma modifier temporary hit points instead.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Skirmishing Presence:</name> <name-style>bold</name-style>
             <text>The target can shift a number of squares equal to one-half your Intelligence modifier before making the attack.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>The triggering attack also knocks the triggering enemy prone.</text>
          </section>
    </power>
 
@@ -51,16 +47,12 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of your next turn, you and allies in your <![CDATA[<i>warlord's aura</i>]]> gain a +1 bonus to attack rolls and and score critical hits on a natural roll of 19 or 20 against bloodied enemies.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>If you hit a bloodied enemy with an attack, the bonus to attack rolls increases to +2.</text>
+            <text>Until the end of your next turn, you and allies in your <![CDATA[<i>warlord's aura</i>]]> have a +1 bonus to attack rolls against bloodied enemies, and and can score critical hits on a natural roll of 19 or 20 against them.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Inspiring Presence:</name> <name-style>bold</name-style>
-            <text>You and allies the aura also gain a bonus to AC against bloodied enemies. The bonus equals one-half your Charisma modifier.</text>
+            <text>You and allies in the aura also have a bonus to AC against bloodied enemies. The bonus equals one-half your Charisma modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -71,6 +63,10 @@
             <shade>true</shade> <indent>1</indent>
             <name>Tactical Presence:</name> <name-style>bold</name-style>
             <text>You and allies also gain a power bonus to damage rolls against bloodied enemies. The bonus equals your Intelligence modifier.</text>
+         </section>
+         <section>
+            <shade>true</shade>
+            <text>If you hit a bloodied enemy with an attack, the bonus to attack rolls increases to +2.</text>
          </section>
    </power>
 
@@ -83,7 +79,7 @@
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You hit an enemy with a melee or ranged attack</text>
+            <text>On your turn, you hit an enemy with a melee or ranged attack</text>
          </section>
          <section auto="special"/>
          <section>
@@ -106,7 +102,7 @@
          <action>Standard</action> <subaction>Action</subaction>
          <section>
             <name>Prerequisite:</name> <name-style>bold</name-style>
-            <text>You must have the <![CDATA[<i>tactician's command</i>]]> class power.</text>
+            <text>You must have the <![CDATA[<i>opportune command</i>]]> class power.</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
@@ -120,7 +116,7 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>You then use your <![CDATA[<i>tactician's command</i>]]> and must choose the target as the target enemy.</text>
+            <text>You then use your <![CDATA[<i>opportune command</i>]]> class power, and must choose the target as the target enemy.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -130,7 +126,7 @@
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Resourceful Presence:</name> <name-style>bold</name-style>
-            <text>If the target ally's attack hits, the target enemy takes a penalty to its first attack's attack rolls equal to one-half your Wisdom modifier until the end of your next turn.</text>
+            <text>If the target ally's attack hits, the target enemy takes a penalty to all attack rolls with the first attack it makes before the end of your next turn. The penalty equals one-half your Wisdom modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -161,7 +157,7 @@
             <text>Until the end of your next turn, allies in your <![CDATA[<i>warlord's aura</i>]]> gain combat advantage against enemies adjacent to you.</text>
          </section>
          <section shade="">
-            <text>If you hit an enemy with a melee attack, allies also gain a +2 bonus to attack rolls against the enemy while it remains within your reach.</text>
+            <text>If you hit an enemy with a melee attack, allies also gain a +2 bonus to attack rolls against that enemy while it remains within your reach.</text>
          </section>
    </power>
 
@@ -188,7 +184,7 @@
             <text>The bonus equals one-half your Intelligence modifier (minimum +1).</text>
          </section>
          <section shade="">
-            <text>You charge an enemy.</text>
+            <text>You charge an enemy. Your charge attack deals an additional +1[W] damage (+1d8 additinal damage if it is not a Weapon attack).</text>
          </section>
          <section shade="">
             <text>If your charge attack hits, allies benefiting from the speed bonus deal additional damage against the enemy you charged. The damage equals one-half your [Intelligence or Wisdom] modifier.</text>
@@ -206,7 +202,7 @@
          <section shade="">
             <indent>1</indent>
             <name>Tactical Presence:</name> <name-style>bold</name-style>
-            <text>If an ally benefiting from the speed bonus charges the same eny you charged, the additional damage increases to your Intelligence modifier.</text>
+            <text>If an ally benefiting from the speed bonus charges the same enemy you charged, the additional damage increases to your Intelligence modifier.</text>
          </section>
    </power>
 
@@ -219,7 +215,7 @@
          <action>Immediate</action> <subaction>Interrupt</subaction>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You or one or more allies in your <![CDATA[<i>warlord's aura</i>]]> would be pushed, pulled, or slid</text>
+            <text>You, or one or more allies in your <![CDATA[<i>warlord's aura</i>]]> would be pushed, pulled, or slid</text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
@@ -229,7 +225,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The triggering forced movement is negated, and one target makes a <![CDATA[<i>basic attack</i>]]> against the source of the forced movement.</text>
+            <text>The triggering forced movement is negated, and one target makes a <![CDATA[<i>basic attack</i>]]> as a free reaction against the source of the forced movement.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -270,7 +266,7 @@
             <text>Until the start of your next turn, allies in your <![CDATA[<i>warlord's aura</i>]]> have resist all equal to 2 + one-half your [Wisdom or Charisma] modifier. If you scored a critical hit during your current turn, the resistance increases by +3.</text>
          </section>
          <section shade="">
-            <text>If an enemy attacks an ally benefiting from this resistance, that ally gains a bonus to their first damage roll against the enemy. The bonus equals your [Intelligence or Wisdom] modifier, and the bonus is lost if the ally does not make the attack before the end of his or her next turn.</text>
+            <text>If an enemy attacks an ally benefiting from this resistance, that ally gains a bonus to the first damage roll he or she makes against that enemy before the end of his or her next turn. The bonus equals your [Intelligence or Wisdom] modifier.</text>
          </section>
    </power>
 
@@ -320,15 +316,15 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The triggering attack deals additional damage equal to your [Intelligence or Wisdom] modifier, and you mark the target of that attack until the end of your next turn.</text>
+            <text>You deal additional damage equal to your [Intelligence or Wisdom] modifier to the triggering enemy, and mark it until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
-            <text>While it remains marked, the first time the enemy makes an attack that does not include you as a target, one ally in your <![CDATA[<i>warlord's aura</i>]]> can take an immediate interrupt to make a <![CDATA[<i>basic attack</i>]]> against the marked enemy. If the ally's attack hits, the marked enemy takes a -2 penalty to attack rolls on the triggering attack.</text>
+            <text>While it remains marked, the first time the enemy makes an attack that does not include you as a target, one ally in your <![CDATA[<i>warlord's aura</i>]]> can take an immediate interrupt to make a <![CDATA[<i>basic attack</i>]]> against the marked enemy. If the ally's attack hits, the marked enemy takes a -2 penalty to all attack rolls on the triggering attack.</text>
          </section>
          <section>
             <shade>true</shade>
-            <text>If you have the <![CDATA[<i>tactician's commmand</i>]]> class power, the ally making the attack gains the benefits that your at-will attack grants to the target ally of your command.</text>
+            <text>If you have the <![CDATA[<i>opportune commmand</i>]]> class power, the enemy and ally count as the target ally and target enemy for all effects.</text>
          </section>
    </power>
 
@@ -347,11 +343,11 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of your next turn, the target grants combat advantage to allies in your <![CDATA[<i>warlord's aura</i>]]>.</text>
+            <text>Until the end of your next turn, allies in your <![CDATA[<i>warlord's aura</i>]]> have combat advantage against the target, and deal additional damage against it equal to one-half your [Intelligence or Wisdom] modifier.</text>
          </section>
          <section>
             <shade>true</shade>
-            <text>If any of your allies makes an attack against the target with an attack made during an extra action gained by spending an action point, he or she deals additional damage equal to your [Intelligence or Wisdom] modifier. For each such attack that hits, the additional damage increases by +1.</text>
+            <text>Each time an ally hits the target with an attack made during an extra action gained by spending an action point, the additional damage increases by +2.</text>
          </section>
    </power>
 
@@ -382,18 +378,18 @@
             <text>The triggering ally gains temporary hit points equal to 5 + your Charisma modifier.</text>
          </section>
          <section>
+            <shade>true</shade> <indent>1</indent>
+            <name>Skirmishing Presence:</name> <name-style>bold</name-style>
+            <text>Either the triggering ally or the second target can shift a number of squares equal to your Intelligence modifier as a free interrupt.</text>
+         </section>
+         <section>
             <shade>true</shade>
-            <text>The second target makes a <![CDATA[<i>basic attack</i>]]> against a target of the triggering attack.</text>
+            <text>The second target makes a <![CDATA[<i>basic attack</i>]]> against a target of the triggering attack as an opportunity reaction.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Resourceful Presence:</name> <name-style>bold</name-style>
             <text>The second target can use a melee or ranged at-will attack instead of a <![CDATA[<i>basic attack</i>]]>.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name> <name-style>bold</name-style>
-            <text>Either the triggering ally or the second target can shift a number of squares equal to your Intelligence modifier before other parts of this power resolved.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -436,7 +432,7 @@
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Skirmishing Presence:</name> <name-style>bold</name-style>
-            <text>Either the triggering ally or the target ally can shift a number of squares equal to your Intelligence modifier before the target ally's attack.</text>
+            <text>Either the triggering ally or the target ally can shift a number of squares equal to your Intelligence modifier as a free interrupt.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -461,16 +457,16 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The triggering attack deals +1[W] additional damage, or +1d8 additional damage if the attack is not a Weapon attack.</text>
+            <text>The triggering attack deals +1[W] additional damage (+1d8 additional damage if the attack is not a Weapon attack).</text>
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of your next turn, allies in your <![CDATA[<i>warlord's aura</i>]]> gain a bonus to damage rolls against the triggering enemy. The bonus equals one-half your [Intelligence or Wisdom] modifier.</text>
+            <text>Until the end of your next turn, allies in your <![CDATA[<i>warlord's aura</i>]]> have a bonus to damage rolls against the triggering enemy. The bonus equals one-half your [Intelligence or Wisdom] modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Inspiring Presence:</name> <name-style>bold</name-style>
-            <text>Until the end of your next turn, allies in your aura gain a bonus to all defenses against the triggering enemy equal to your Charisma modifier.</text>
+            <text>Until the end of your next turn, allies in your aura have a bonus to all defenses against the triggering enemy equal to your Charisma modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
