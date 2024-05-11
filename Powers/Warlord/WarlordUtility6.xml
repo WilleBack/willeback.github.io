@@ -18,7 +18,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target either stands up, or shifts 1 square.</text>
+            <text>The target either stands up, shifts 1 square, or can reduce all forced movement it is subject to by 2 squares.</text>
          </section>
    </power>
 
@@ -120,7 +120,7 @@
          <section>
             <name>Target:</name>
             <type>Ranged</type> <range>sight</range>
-            <text>one enemy you can see</text>
+            <target>one enemy you can see</target>
          </section>
          <section>
             <shade>true</shade>
@@ -136,15 +136,16 @@
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Move</action> <subaction>Action</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 5</range>
-            <target>one ally in the burst</target>
+            <type>Ranged</type> <range>5</range>
+            <target>one ally</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target can shift up to one-half his or her speed as a free reaction.</text>
+            <text>The target can shift up to one-half his or her speed as a free reaction. The target can choose to drop prone.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -202,7 +203,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target ally immediately takes his or her next turn, and you delay until his or her next turn would have taken place.</text>
+            <text>The target ally immediately takes his or her next turn, and acts on this initiative from now on, and you delay until his or her next turn would have taken place.</text>
          </section>
    </power>
 
@@ -294,7 +295,7 @@
          <action>Free</action> <subaction>Reaction</subaction>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>You hit an enemy with a martial melee or ranged attack, or trigger a martial attack by hiting with a melee or ranged attack</text>
+            <text>You hit an enemy with a martial melee or ranged attack, or trigger a martial attack by hitting with a melee or ranged attack</text>
          </section>
          <section auto="special"/>
          <section>
@@ -328,10 +329,10 @@
             <text>You assume the Phalanx Formation stance.</text>
          </section>
          <section shade="">
-            <text>Until the stance ends, allies adjacent to you gain a +1 power bonus to AC and Reflex.</text>
+            <text>Until the stance ends, allies adjacent to you gain a +2 power bonus to AC and Reflex.</text>
          </section>
          <section shade="">
-            <text>If the ally is using a shield, the power bonus increases to +2 and you also gain the bonus.</text>
+            <text>If the ally is using a shield, the power bonus increases to +3 and you also gain the bonus.</text>
          </section>
    </power>
 
@@ -363,10 +364,11 @@
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Minor</action> <subaction>Action</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 10</range>
-            <target>one ally in the burst</target>
+            <type>Ranged</type> <range>10</range>
+            <target>one ally</target>
          </section>
          <section>
             <shade>true</shade>
@@ -387,26 +389,27 @@
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
+         <section auto="no-opportunity"/>
          <section>
             <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An ally uses the Draw Inspiration action of your <![CDATA[<i>warlord's aura</i>]]></text>
+            <text>An ally uses your <![CDATA[<i>draw inspiration</i>]]></text>
          </section>
          <section>
             <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>special</range>
+            <type>Ranged</type> <range>sight</range>
             <target>the triggering ally</target>
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target also gains temporary hit points. The temporary hit points equal the additional hit points rolled as part Draw Inspiration + your [Wisdom or Charisma] modifier.</text>
+            <text>The target also gains temporary hit points. The temporary hit points equal the additional hit points from <![CDATA[<i>draw inspiration</i>]]> + your [Wisdom or Charisma] modifier.</text>
          </section>
    </power>
 
    <power>
       <title>Reorient the Axis</title>
       <class>Warlord</class> <category>Utility</category> <level>6</level>
-      <fluff>You realize that your allies need to adjust their formation, so you order several to move to new locations</fluff>
+      <fluff>You realize that your allies need to adjust their formation, so you order them to move</fluff>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Move</action> <subaction>Action</subaction>
@@ -461,27 +464,27 @@
          </section>
          <section>
             <shade>true</shade>
-            <text>Also, if an ally uses the Draw Inspiration action of your <![CDATA[<i>warlord's aura</i>]]> before the end of your next turn, that ally can stand up as part of that action.</text>
+            <text>Also, if an ally uses your <![CDATA[<i>draw inspiration</i>]]> classs power before the end of your next turn, that ally can stand up as part of that action.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Inspiring Presence:</name> <name-style>bold</name-style>
-            <text>Choose one defense. An ally that uses the Draw Inspiration action also gains a power bonus to the chosen defense equal to your Charisma modifier until the end of his or her next turn.</text>
+            <text>Choose one defense. An ally that uses your <![CDATA[<i>draw inspiration</i>]]> also gains a power bonus to the chosen defense equal to your Charisma modifier until the end of his or her next turn.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Resourceful Presence:</name> <name-style>bold</name-style>
-            <text>An ally that uses the Draw Inspiration action also gains a power bonus to all defenses equal to one-half your Wisdom modifier until the end of his or her next turn.</text>
+            <text>An ally that uses your <![CDATA[<i>draw inspiration</i>]]> also gains a power bonus to all defenses equal to one-half your Wisdom modifier until the end of his or her next turn.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Skirmishing Presence:</name> <name-style>bold</name-style>
-            <text>An ally that uses the Draw Inspiration action can also shift a number of squares equal to your Intelligence modifier as part of taking the action.</text>
+            <text>An ally that uses your <![CDATA[<i>draw inspiration</i>]]> can also shift a number of squares equal to your Intelligence modifier as part of taking the action.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Tactical Presence:</name> <name-style>bold</name-style>
-            <text>An ally that uses the Draw Inspiration action also gains a power bonus to damage rolls equal to your Intelligence modifier until the end of his or her next turn.</text>
+            <text>An ally that uses your <![CDATA[<i>draw inspiration</i>]]> also gains a power bonus to damage rolls equal to your Intelligence modifier until the end of his or her next turn.</text>
          </section>
    </power>
 
@@ -533,7 +536,7 @@
          <section>
             <shade>true</shade>
             <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target gains a power bonus to the attack roll equal to one-half your Intelligence modifier or one-half your Wisdom modifier.</text>
+            <text>The target gains a power bonus to the triggering attack roll equal to one-half your Intelligence modifier or one-half your Wisdom modifier.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
@@ -576,7 +579,7 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <text>You grant combat advantage to all enemies.</text>
+            <text>You grant combat advantage for melee and close attacks made against you.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
@@ -584,7 +587,7 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <text>An enemy that misses you with an attack takes additional damage from the all attacks made against it before the start of its next turn. The additional damage equals one-half your [Intelligence or Wisdom] modifier.</text>
+            <text>An adjacent enemy that misses you with an attack gains vulnerable all until the start of its next turn. The vulnerable equals one-half your [Intelligence or Wisdom] modifier.</text>
          </section>
    </power>
 
