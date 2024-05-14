@@ -123,13 +123,13 @@
 
                @media print {
                   body {
-                     font-size: 15pt;
+                     font-size: 14.5pt;
                   }
                   .rule {
                      height: 19cm;
                   }
                   .grouping {
-                     padding:5cm 2cm; 
+                     padding:5cm 2cm;
                   }
                   .container {
                      column-gap:1em;

@@ -47,6 +47,25 @@
    </rule>
 
    <rule>
+      <title>Chilling Spray</title>
+      <type>Spell</type> <level>1</level>
+      <trait>Cold</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>15-foot cone</area>
+      <save>Reflex</save>
+
+      <line>A cone of icy shards bursts from your spread hands and coats the targets in a layer of frost. Creatures in the area take 2d4 cold damage, and must make a Reflex save.</line>
+      <line results="">
+         <critsuccess>The creature is unaffected</critsuccess>
+         <success>The creature takes half damage.</success>
+         <fail>The creature takes full damage, and takes a -5-foot status penalty tp its Speeds for 2 rounds.</fail>
+         <critfail>The creature takes double damage, and takes a -10-foot status penalty to its Speeds for 2 rounds.</critfail>
+      </line>
+
+      <heighten value="+1">The damage increases by 2d4.</heighten>
+   </rule>
+
+   <rule>
       <title>Conductive Weapon</title>
       <type>Spell</type> <level>1</level>
       <trait>Electricity</trait> <trait>Evocation</trait> <trait>Metal</trait> <trait>Primal</trait>
@@ -97,7 +116,7 @@
    <rule>
       <title>Flourishing Flora</title>
       <type>Spell</type> <level>1</level>
-      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Wood</trait>
+      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
       <cast action="2">somatic, verbal</cast>
       <range>30 feet</range> <area>5-foot burst</area>
       <save>basic Reflex</save>
@@ -266,7 +285,7 @@
          <critfail>The creature falls prone plus takes 1d6 damage.</critfail>
       </line>
 
-      <heighten value="+1">The area increases by 5 feet (to a 20-foot cone at 2nd spell level, and so on).</heighten>
+      <heighten value="+1">The area increases by 5 feet (to a 20-foot cone at 2nd spell rank, and so on).</heighten>
    </rule>
 
    <rule>

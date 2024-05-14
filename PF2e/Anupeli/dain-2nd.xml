@@ -4,6 +4,25 @@
 
    <rule>
       <category>2nd-level Druid Spells</category>
+      <title>Ash Cloud</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Air</trait> <trait>Conjuration</trait> <trait>Fire</trait> <trait>Primal</trait>
+      <cast action="3">material, somatic, verbal</cast>
+      <range>120 feet</range> <area>20-foot burst</area>
+      <save>Fortitude</save> <duration>1 minute</duration>
+
+      <line>You summon a tumultuous cloud of ash and smoke. The cloud is difficult terrain for flying creatures, and creatures in the cloud can't detect anything using their sense of smell. Creatures that start their turn within the cloud take 2d4 fire damage as their lungs fill with the hot, acrid smoke, with a Fortitude save.</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The target takes half damage.</success>
+         <fail>The target takes full damage, and is dazzled for 1 round.</fail>
+         <critfail>The target takes double damage and is blinded for 1 round.</critfail>
+      </line>
+
+      <heighten value="+1">The damage increases by 1d4.</heighten>
+   </rule>
+
+   <rule>
       <title>Barkskin</title>
       <type>Spell</type> <level>2</level>
       <trait>Abjuration</trait> <trait>Plant</trait> <trait>Primal</trait>
@@ -93,6 +112,19 @@
    </rule>
 
    <rule>
+      <title>Exploding Earth</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Earth</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <targets>1 creature</targets>
+
+      <line>You throw a hard-packed ball of earth and stone at a creature, and the projectile explodes upon impact. Make a ranged spell attack roll against the target's AC. On a hit, the projectile deals 3d6 bludeoning damage. On a critical hit, the projectile deals double damage, and the target must succeed at a Fortitude saving throw or fall prone.</line>
+      <line>On a miss, hit, or critical hit, the projectile deals 1d6 splash damage to all creatures within 5 feet of the target (including the target). Splash damage is not doupled on a critical hit, and you add it together with the initial damage against the target before applying the target's resistance or weakness.</line>
+
+      <heighten value="+2">The initial damage increases by 3d6, and the splash damage increases by 1d6.</heighten>
+   </rule>
+
+   <rule>
       <title>Flaming Sphere</title>
       <type>Spell</type> <level>2</level>
       <trait>Evocation</trait> <trait>Fire</trait> <trait>Primal</trait>
@@ -172,6 +204,16 @@
    </rule>
 
    <rule>
+      <title>Propulsive Breeze</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Air</trait> <trait>Conjuration</trait> <trait>Move</trait> <trait>Primal</trait>
+      <cast action="R">somatic</cast> <trigger>An ally in range Strides or Leaps</trigger>
+      <range>60 feet</range> <targets>the triggering creature</targets>
+
+      <line>You create a current of wind at your ally's back, propelling their movement. When your ally's Stride or Leap ends, the current propels them an additional 15 feet in the same direction as the last 5 feet of their Stride or Leap.</line>
+   </rule>
+
+   <rule>
       <title>Resist Energy</title>
       <type>Spell</type> <level>2</level>
       <trait>Abjuration</trait> <trait>Primal</trait>
@@ -200,6 +242,18 @@
 
       <heighten value="4th">Add drained to the list of conditions you can reduce. When you lessen a toxin, reduce the stage by two. You also gain a third option that allows you to reduce the target's doomed value by 1. You can't use this to reduce a permanent doomed condition.</heighten>
       <heighten value="6th">As the 4th-level <![CDATA[<i>restoration</i>]]>, but you can reduce a permanent doomed condition if you add a material component to Casting the Spell, providing 100 gp worth of diamond dust as a cost.</heighten>
+   </rule>
+
+   <rule>
+      <title>Slough Skin</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Necromancy</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>1 hour</duration>
+
+      <line>You continually and harmlessly slough off the top layer of your skin while new skin regenerates immediately, quickly moving damaging substances away from your body. The flat check to remove persistent damage from effects that coat your skin (such as most persistent acid damage) is reduced to 5, and you gain a +2 status bonus to your initial save against contact poison (but not further saves, since by that point, the toxin has already entered your system).</line>
+      <line>If you're suffering from an effect other than persistent damage that depends on continuous contact with your skin, if that effect allows a saving throw, you receive a new saving throw against that effect at the end of each of your turn when you attempt your flat checks against persistent damage, and you also receive a +2 status bonus to these saving throws.</line>
+      <line>While affected by this spell, your continually shedding skin makes you much easier to Track. Anyone Tracking you gains a +2 circumstance bonus to do so, and you cannot Hide your Tracks.</line>
    </rule>
 
    <rule>
@@ -237,14 +291,14 @@
       <range>touch</range> <targets>up to 1 gallon of non-magical liquid or up to 5 pounds of food</targets>
       <duration>1 hour</duration>
 
-      <line>You adjust the delicate levels of bitter ingredients in food and drink to draw out their full restorative and fortifying properties. Choose one of the benefits listed below. Any creature that consumes the targeted drink or food gains that benefit. Up to 10 creatures can partake int he meal, and a creature gets no extra benefit for consuming more than one portion.</line>
+      <line>You adjust the delicate levels of bitter ingredients in food and drink to draw out their full restorative and fortifying properties. Choose one of the benefits listed below. Any creature that consumes the targeted drink or food gains that benefit. Up to 10 creatures can partake in the meal, and a creature gets no extra benefit for consuming more than one portion.</line>
       <line list="">
          <entry>Gain 5 temporary Hit Points.</entry>
          <entry>Gain resistance 2 to fire.</entry>
          <entry>Gain a +1 circumstance bonus to saves against disease.</entry>
       </line>
 
-      <heighten value="4th">The remedy provides two benefits of your choice instead of one. The temporary Hit Points increase to 10, the resistance to fire increases to 3, the bonus against increases to +2, and the duration is 2 hours.</heighten>
+      <heighten value="4th">The remedy provides two benefits of your choice instead of one. The temporary Hit Points increase to 10, the resistance to fire increases to 3, the bonus against disease increases to +2, and the duration is 2 hours.</heighten>
       <heighten value="7th">The remedy provides all three benefits. The temporary Hit Points increase to 15, the resistance to fire increases to 5, the bonus against disease increases to +3, and the duration is 8 hours.</heighten>
    </rule>
 
@@ -275,7 +329,7 @@
       <heighten value="4th">The spell's range increases to 30 feet, the duration increases to 1 hour, and you can target up to 10 creatures.</heighten>
    </rule>
 
-   <rule>
+   <!-- <rule>
       <title>Web</title>
       <type>Spell</type> <level>2</level>
       <trait>Conjuration</trait> <trait>Primal</trait>
@@ -293,5 +347,5 @@
       </line>
 
       <heighten value="4th">The spell's area increases to a 20-foot burst, and its range increases to 60 feet.</heighten>
-   </rule>
+   </rule> -->
 </catalog>
