@@ -282,7 +282,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 						<xsl:for-each select="benefit">
 							<div class="text">
-								<xsl:value-of select="." disable-output-escaping="yes" />
+								<xsl:if test="name">
+									<b><xsl:value-of select="name"/><xsl:text> </xsl:text></b>
+								</xsl:if>
+								<xsl:value-of select="text()" disable-output-escaping="yes" />
 							</div>
 						</xsl:for-each>
 

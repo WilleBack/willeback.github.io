@@ -263,22 +263,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:choose>
 				<xsl:when test="indent='1' or @indent='1'">
 					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
+						<xsl:with-param name="leftindent">2.4em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="indent='2' or @indent='2'">
 					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+						<xsl:with-param name="leftindent">3.9em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="indent='3' or @indent='3'">
 					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
+						<xsl:with-param name="leftindent">5.4em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="indent='4' or @indent='4'">
 					<xsl:call-template name="shadesection">
-						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
+						<xsl:with-param name="leftindent">6.9em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise>
@@ -290,22 +290,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:choose>
 				<xsl:when test="indent='1' or @indent='1'">
 					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">2.5em</xsl:with-param>
+						<xsl:with-param name="leftindent">2.4em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="indent='2' or @indent='2'">
 					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">3.8em</xsl:with-param>
+						<xsl:with-param name="leftindent">3.9em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="indent='3' or @indent='3'">
 					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">5.1em</xsl:with-param>
+						<xsl:with-param name="leftindent">5.4em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:when test="indent='4' or @indent='4'">
 					<xsl:call-template name="clearsection">
-						<xsl:with-param name="leftindent">6.4em</xsl:with-param>
+						<xsl:with-param name="leftindent">6.9em</xsl:with-param>
 					</xsl:call-template>
 				</xsl:when>
 				<xsl:otherwise>
@@ -318,24 +318,43 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="shadesection">
-	 <xsl:param name="leftindent">1.2em</xsl:param>
+	 <xsl:param name="leftindent">0.9em</xsl:param>
 
-	<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
-		<xsl:call-template name="sectioncontent" />
-	</div>
+	 <xsl:choose>
+		 <xsl:when test="name or bullet or @bullet or @auto or @special or @personal or keyword or type">
+			<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
+		 		<xsl:call-template name="sectioncontent" />
+		 	</div>
+		</xsl:when>
+		<xsl:otherwise>
+			<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
+		 		<xsl:call-template name="sectioncontent" />
+		 	</div>
+		</xsl:otherwise>
+	</xsl:choose>
+
 </xsl:template>
 
 <xsl:template name="clearsection">
-	 <xsl:param name="leftindent">1.2em</xsl:param>
+	 <xsl:param name="leftindent">0.9em</xsl:param>
 
-	<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-1em; float:left; padding-left:{$leftindent};">
-		<xsl:call-template name="sectioncontent" />
-	</div>
+	 <xsl:choose>
+ 		<xsl:when test="name or bullet or @bullet or @auto or @special or @personal or keyword or type">
+ 		  <div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; padding-left:{$leftindent};">
+ 			  <xsl:call-template name="sectioncontent" />
+ 		  </div>
+ 	  </xsl:when>
+ 	  <xsl:otherwise>
+ 		  <div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; padding-left:{$leftindent};">
+ 			  <xsl:call-template name="sectioncontent" />
+ 		  </div>
+ 	  </xsl:otherwise>
+   </xsl:choose>
 </xsl:template>
 
 <xsl:template name="sectioncontent">
 
-	<xsl:if test="bullet or name/@style='bullet'">
+	<xsl:if test="bullet or name/@style='bullet' or @bullet">
 		&#9658;<xsl:text> </xsl:text>
 	</xsl:if>
 
@@ -467,6 +486,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</xsl:if>
 		<xsl:if test="target2">
 		   <xsl:text> (</xsl:text><xsl:value-of select="target2" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
+		</xsl:if>
+		<xsl:if test="text or text()">
+			<xsl:text>; </xsl:text>
 		</xsl:if>
 	</xsl:if>
 	<xsl:if test="type and target">

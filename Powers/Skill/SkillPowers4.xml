@@ -92,7 +92,7 @@
             </section>
             <section>
                <shade>true</shade>
-               <text>If the triggering attack only targeted you, the triggering enemy can choose a new target for the attack if you are now out of range.</text>
+               <text>If the triggering attack is a ranged attack that only targeted you, the triggering enemy can choose a new target for the attack if you are now out of range.</text>
             </section>
       </power>
 
@@ -142,7 +142,7 @@
             </section>
             <section>
                <shade>true</shade>
-               <text>After the triggering power has been resolved, you take psychic damage equal to twice the power's level. Any resist psychic you might have does not apply to this damage.</text>
+               <text>After the triggering power has been resolved, you take psychic damage equal to twice the power's level. Any resist or immunity to psychic you might have does not apply to this damage.</text>
             </section>
       </power>
 
@@ -397,6 +397,7 @@
                <name>Success:</name>
                <text>The target cannot make <![CDATA[<i>reactive strikes</i>]]> against you until the end of your next turn.</text>
             </section>
+            <section><name>Miss:</name>The target takes a -2 penalty to attack rolls with <![CDATA[<i>reactive strikes</i>]]> against you until the end of your next turn.</section>
       </power>
 
       <power>
@@ -419,7 +420,7 @@
             <section>
                <shade>true</shade>
                <name>Success:</name>
-               <text>You make the target doubt its memory of an event it remembered clearly, or to believe your version of an event it remembered vaguely.</text>
+               <text>You make the target either doubt its memory of an event it remembered clearly, or to believe your version of an event it remembered vaguely.</text>
             </section>
       </power>
    </category>
@@ -438,6 +439,7 @@
                <name>Requirement:</name>
                <text>You use this power as part of buying a common or uncommon item of your level or lower.</text>
             </section>
+            <section personal=""/>
             <section shade="">
                <name>Effect:</name>
                <text>You get a 10% discount on the item's price if it is common, or a 5% discount if it is uncommon.</text>
@@ -451,15 +453,11 @@
             <frequency>Daily</frequency>
             <keyword>Skill</keyword>
             <action>Short</action> <subaction>Rest</subaction>
-            <section>
-               <name>Target:</name>
-               <type>Special</type>
-               <target>each ally who listens to you during the rest</target>
-            </section>
+            <section><name>Target:</name><type>Special</type><target>each ally who listens to you during the rest</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
-               <text>Until the end of the next encounter, each target gains a +1 bonus to attack rolls and saving throws while he or she is not bloodied.</text>
+               <text>Each target gains a +1 bonus to attack rolls and saving throws until he or she is bloodied or until the end of the next encounter, whichever comes first.</text>
             </section>
       </power>
    </category>
@@ -474,15 +472,12 @@
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
+            <section auto="no-opportunity"/>
             <section>
                <name>Trigger:</name>
-               <text>An ally within 10 squares of you makes an Acrobatics, Athletics, Dungeoneering, or Perception check in an underground environment; You must see the ally and the ally must be able to hear you</text>
+               <text>An ally within range makes an Acrobatics, Athletics, Dungeoneering, or Perception check in an underground environment; You must see the ally and the ally must be able to hear you</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Close</type> <range>burst 10</range>
-               <target>the triggering ally</target>
-            </section>
+            <section><name>Target:</name><type>Ranged</type><range>10</range><target>the triggering ally</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -621,13 +616,13 @@
             <action>Free</action> <subaction>Interrupt</subaction>
             <section>
                <name>Trigger:</name>
-               <text>Your turn starts and you have ongoing damage</text>
+               <text>Your turn starts and you are taking ongoing damage</text>
             </section>
             <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
-               <text>You make a saving throw against the ongoing damage before you take the damage. If you are suffering from several types of ongoing damage, make a saving throw against each.</text>
+               <text>You make a saving throw against the ongoing damage before you take the damage. If you are taking several types of ongoing damage, make a saving throw against each.</text>
             </section>
       </power>
    </category>
@@ -646,15 +641,11 @@
                <name>Requirement:</name>
                <text>You must have a healer's kit.</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Melee</type> <range>touch</range>
-               <target>you or one ally; The target must spend at least 2 healing surges during the rest</target>
-            </section>
+            <section><name>Target:</name><type>Melee</type><range>touch</range><target>you or one ally</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
-               <text>The target regains one healing surge.</text>
+               <text>If the target spends at least 2 healing surges during the rest, he or she regains one healing surge.</text>
             </section>
       </power>
 
@@ -669,11 +660,7 @@
                <name>Requirement:</name>
                <text>You must have a healer's kit.</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Melee</type> <range>touch</range>
-               <target>one creature</target>
-            </section>
+            <section><name>Target:</name><type>Melee</type><range>touch</range><target>one creature</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -692,11 +679,7 @@
                <name>Requirement:</name>
                <text>You must have a healer's kit.</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Melee</type> <range>touch</range>
-               <target>one ally</target>
-            </section>
+            <section><name>Target:</name><type>Melee</type><range>touch</range><target>one ally</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -715,15 +698,12 @@
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Reaction</subaction>
+            <section auto="no-opportunity"/>
             <section>
                <name>Trigger:</name>
-               <text>An ally within 5 squares of you makes a knowledge check and dislikes the result</text>
+               <text>An ally within range makes a knowledge check and dislikes the result</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Close</type> <range>burst 5</range>
-               <target>the triggering ally in the burst</target>
-            </section>
+            <section><name>Target:</name><type>Ranged</type><range>5</range><target>the triggering ally in the burst</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -742,11 +722,7 @@
                <name>Trigger:</name>
                <text>A creature you can see makes an attack roll for an area or close attack that includes you as a target</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Close</type> <range>burst 5</range>
-               <target>you, and each ally in the burst that is targeted by the triggering attack</target>
-            </section>
+            <section><name>Target:</name><type>Close</type><range>burst 5</range><target>you, and each ally in the burst that is targeted by the triggering attack</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -794,15 +770,12 @@
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Immediate</action> <subaction>Interrupt</subaction>
+            <section auto="no-opportunity"/>
             <section>
                <name>Trigger:</name>
-               <text>An ally within 5 squares of you makes a Bluff check, a Diplomacy check, or an Intimidate check, and dislikes the result</text>
+               <text>An ally within range makes a Bluff check, a Diplomacy check, or an Intimidate check, and dislikes the result</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Close</type> <range>burst 5</range>
-               <target>the triggering ally</target>
-            </section>
+            <section><name>Target:</name><type>Ranged</type><range>5</range><target>the triggering ally</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -859,11 +832,7 @@
                <name>Trigger:</name>
                <text>You hit an adjacent enemy with an attack</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Melee</type> <range>1</range>
-               <target>the triggering enemy</target>
-            </section>
+            <section><name>Target:</name><type>Melee</type><range>1</range><target>the triggering enemy</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -878,11 +847,7 @@
             <frequency>Encounter</frequency>
             <keyword>Fear, Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <section>
-               <name>Target:</name>
-               <type>Close</type> <range>blast 3</range>
-               <target>each enemy in the blast</target>
-            </section>
+            <section><name>Target:</name><type>Close</type><range>blast 3</range><target>each enemy in the blast</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -970,11 +935,7 @@
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Minor</action> <subaction>Action</subaction>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <type>Close</type> <range>burst 3</range>
-               <target>you, and each ally in the burst</target>
-            </section>
+            <section><name>Target:</name><type>Close</type><range>burst 3</range><target>you, and each ally in the burst</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
@@ -992,13 +953,9 @@
             <section auto="no-opportunity"/>
             <section>
                <name>Trigger:</name>
-               <text>An ally within 10 squares of you makes an Acrobatics, Athletics, Nature, or Perception check in a wilderness environment; You must see the ally and the ally must be able to hear you</text>
+               <text>An ally within range makes an Acrobatics, Athletics, Nature, or Perception check in a wilderness environment; You must see the ally and the ally must be able to hear you</text>
             </section>
-            <section>
-               <name>Target:</name>
-               <type>Ranged</type> <range>10</range>
-               <target>the triggering ally</target>
-            </section>
+            <section><name>Target:</name><type>Ranged</type><range>10</range><target>the triggering ally</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -1043,13 +1000,9 @@
             <section auto="no-opportunity"/>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
-               <text>An ally misses an attack against AC; The target of the attack must be within 10 squares of you</text>
+               <text>An ally within range misses an attack against AC; The target of the attack must be within 10 squares of you</text>
             </section>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <type>Ranged</type> <range>15</range>
-               <text>The triggering ally within range</text>
-            </section>
+            <section><name>Target:</name><type>Ranged</type><range>15</range><target>the triggering ally</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -1105,7 +1058,7 @@
             </section>
             <section shade="">
                <indent>1</indent>
-               <name>Free Reaction:</name>
+               <name>Opportunity Reaction:</name>
                <text><![CDATA[<i>Trigger:</i>]]> An undead ends its turn in the aura; You push the triggering undead 1 square.</text>
             </section>
       </power>
@@ -1123,6 +1076,7 @@
                <name>Effect:</name>
                <text>You spend a healing surge to gain temporary hit points equal to your healing surge value.</text>
             </section>
+            <section shade="">If you have any of these temporary hit points at the end of the encounter, you regain hit points equal to the amount remaining, and then lose them.</section>
       </power>
 
       <power>
@@ -1136,6 +1090,7 @@
                <name>Trigger:</name>
                <text>You are hit by a Necrotic or a Radiant attack</text>
             </section>
+            <section personal=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
@@ -1258,11 +1213,7 @@
             <frequency>Encounter</frequency>
             <keyword>Skill</keyword>
             <action>Move</action> <subaction>Action</subaction>
-            <section>
-               <name>Target:</name> <name-style>bold</name-style>
-               <type>Melee</type> <range>1</range>
-               <target>one ally adjacent to you</target>
-            </section>
+            <section><name>Target:</name><type>Melee</type><range>1</range><target>one ally adjacent to you</target></section>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
