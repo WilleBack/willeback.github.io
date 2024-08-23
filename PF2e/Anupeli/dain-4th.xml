@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule-card.xsl"?>
+<catalog>
+
+   <rule>
+      <category>4th-level Druid Spells</category>
+      <title>Bestial Curse</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Curse</trait> <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <targets>1 living humanoid</targets>
+      <save>Fortitude</save> <duration>varies</duration>
+
+      <line>You tap into the target's inner being and curse it to become a bestial version of itself. The effect is based on its Fortitude save.</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The target's body gains minor bestial features. Its insides churn as they partially transform, causing it to be clumsy 1 for 1 round. When it recovers from the clumsy condition, its features revert to normal and the spell ends.</success>
+         <fail>The target transforms into a bestail form for 1 hour. The target becomes clumsy 1 and gains weakness 1 to solver. It gains a claw, hoow, horn, or jaws strike (your choice) that uses the target's unarmed Strike statistics except that the damage type changes to bludgeoning, piercing, or slashing, as appropriate.</fail>
+         <fail>Whenever the target attempts to use any <![CDATA[<u>manipulate</u>]]> action, it must succeed at a DC 5 flat check or the action is lost.</fail>
+         <critfail>As failure, but the duration is unlimited.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Bloodspray Curse</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Curse</trait> <trait>Necromancy</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <target>1 creature</target>
+      <save>Fortitude</save> <duration>1 minute</duration>
+
+      <line>You inflict a short-lived curse on the target, causing any wound it receives to gush blood. The target must attempt a Fortitude save.</line>
+      <line results="">
+         <critsuccess>The target is unaffected.</critsuccess>
+         <success>The first time each round that the target takes at least 10 piercing or slashing damage from a single source, it takes 2d6 additional damage of the same type.</success>
+         <fail>As success, but when it takes the additional damage, the target also takes 2d6 persistent bleed damage.</fail>
+      </line>
+
+      <heighten value="+2">The additional damage and persistent bleed damage both increase by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Coral Eruption</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Conjuration</trait> <trait>Primal</trait>
+      <cast action="3">somatic, verbal</cast>
+      <range>120 feet</range> <area>two 10-foot bursts that don't overlap</area>
+      <save>basic Reflex</save> <duration>1 minute</duration>
+
+      <line>Razor sharp coral growths erupt from the ground, transforming the landscape into a dangerous coral reef for the duration. You can create a third nonoverlapping burst if the centers of all three bursts are underwater. Creatures in the area when the spell is cast take 6d6 piercing damage, with a basic Reflex save. A creature that critically fails its saving throw also takes 1d6 persistent bleed damage.</line>
+      <line>The area becomes difficult terrain and hazardous terrain. A creature that moves through the hazardous terrain takes 3 piercing damage for every square of that area it moves into.</line>
+
+      <heighten value="+2">The initial piercing damage increases by 3d6, and the persistent bleed damage on a critical failure and the hazardous terrain damage each increase by 1.</heighten>
+   </rule>
+
+   <rule>
+      <title>Draw the Lightning</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Electricity</trait> <trait>Evocation</trait> <trait>Metal</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <target>1 creature that is either taller than you or higher in the air than you</target>
+      <save>basic Reflex</save> <duration>1 minute</duration>
+
+      <line>Calling out to the skies, you summon a bolt of lightning to strike through a foe above you and down into your weapon or your body, charging it with electrical power. You must hold your weapon or an empty hand aloft as part of this spell's somatic component. When you do, a bolt of lightning descends from a storm cloud in the air above you and through the target, dealing 3d12 electricity damage to it, with a basic Reflex save.</line>
+      <line>For the rest of the spell's duration, your first Strike each round with the weapon you held aloft (or with your enarmed attacks if you held an empty hand aloft) deals an additional 1d12 electricity damage.</line>
+      <line>The spell createsits own storm cloud if necessary, so you can cast <![CDATA[<i>draw the lightning</i>]]> anywhere, even underground. If you cast the spell outside under a cloudy or stormy sky, increase the bolt's initial damage by 2d12.</line>
+
+      <heighten value="+1">The damage dealt by the initial bolt increases by 1d12.</heighten>
+      <heighten value="8th">The additional damage dealt on the first Strike each round increases by 1d12.</heighten>
+   </rule>
+
+   <rule size="small">
+      <title>Elemental Gift</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>30 feet</range> <target>1 willing creature</target>
+      <duration>1 minute</duration>
+
+      <line>An elemental force fills your target, granting the target the swiftness of air, the ruggedness of earth, or so on, depending on which element you choose. Choose en element when you Cast the Spell. The target gains the benefit of that element as described below, and this spell gains that element's trait.</line>
+      <line list="">
+         <entry name="Air">The target gains a +30-foot bonus to its land Speed, and gains a fly Speed equal to its land Speed without the bonus.</entry>
+         <entry name="Earth">While on the ground, the target gains a +2 status bonus to Fortitude and Reflex saves against effects that would forcefully move it, and to saves against effects that would knock it prone. In addition, the ground adjacent to the target is difficult terrain, and the difficult terrain moves with the target, though the target ignores this difficult terrain with its own movement.</entry>
+         <entry name="Fire">The target's melee unarmed Strikes and melee weapon Strikes deal 1d6 persistent fire damage on a hit.</entry>
+         <entry name="Metal">The target's Strikes using a metal weapon or an unarmed attack deal an additional 1d4 electricity damage on a hit and get a +1 status bonus to attack rolls if the target is made of metal or wearing metal armor.</entry>
+         <entry name="Water">The target takes on a watery sheen, gaining resistance to fire equal to the spell's rank, and a swim Speed equal to its land Speed.</entry>
+         <entry name="Wood">The target gains a number of temporary Hit Points equal to the spell's rank, then gains half that number of temporary Hit Points at the start pf each of its turns.</entry>
+      </line>
+
+      <heighten value="8th">You can target up to 5 willing creatures.</heighten>
+   </rule>
+
+   <!-- <rule size="small">
+      <title>Fey Form</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <duration>1 minute</duration>
+
+      <line>Channeling the mischievous fey, you transform into a fey battle form, which is Medium unless noted otherwise. When you cast this spell, choose dryad, elananx, naiad, redcap, or unicorn. If you choose unicorn, the battle form is Large and you must have space to expand or the spell is lost. While in this form, you gain the <![CDATA[<u>fey</u>]]> trait. Unless you choose elananx or unicorn, you have hands in this battle form and can use <![CDATA[<u>manipulate</u>]]> actions. You can Dismiss the spell.</line>
+      <line>You gain the following statistics and abilities regardless of the form you choose:</line>
+      <line list="">
+         <entry>AC = 19 + your level. Ignore your armor's check penalty and Speed reduction.</entry>
+         <entry>15 temporary Hit Points and weakness 5 to cold iron.</entry>
+         <entry>Low-light vision.</entry>
+         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with with them. Your attack modifier is +16, and you use the listed damage. These attacks are Dexterity-based (for the purposes of the clumsy condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
+         <entry>Acrobatics modifier of +16, unless your own modifier is higher.</entry>
+      </line>
+      <line>You also gain specific abilities based on the type of fey:</line>
+      <line list="">
+         <entry name="Dryad">The temporary Hit Points gained increase to 30; Speed 25 feet; weakness 5 fire;<![CDATA[<br/>
+         <b>Melee </b><span class="action">1</span> branch, <b>Damage </b>]]>1d12+8 bludgeoning.</entry>
+         <entry name="Elanax">Speed 30 feet; resistance 5 fire;<![CDATA[<br/>
+         <b>Melee </b><span class="action">1</span> jaws, <b>Damage </b>]]>1d6+8 piercing plus 1d6 fire; <![CDATA[<b>Melee </b><span class="action">1</span> claw (agile), <b>Damage </b>]]> 1d6+5 slashing.</entry>
+         <entry name="Naiad">Speed 25 feet, swim Speed 25 feet; resistance 5 fire;<![CDATA[<br/>
+         <b>Melee </b><span class="action">1</span> jaws, <b>Damage </b>]]>1d6+8 piercing plus 1d6 fire; <![CDATA[<b>Melee </b><span class="action">1</span> claw (agile), <b>Damage </b>]]> 1d6+5 slashing.</entry>
+      </line>
+   </rule> -->
+
+   <rule>
+      <title>Fly</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <target>1 creature</target>
+      <duration>5 minutes</duration>
+
+      <line>The target can soar through the air, gaining a fly Speed equal to its Speed or 20 feet, whichever is greater.</line>
+
+      <heighten value="7th">The duration increases to 1 hour.</heighten>
+   </rule>
+
+   <rule>
+      <title>Glass Form</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Earth</trait> <trait>Morph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <target>1 willing creature</target>
+      <duration>10 minutes</duration>
+
+      <line>You grant the target properties of dull, transparent glass. The target becomes concealed (requiring a a DC 5 flat check to target), has no scent, and can't bleed. They gain resistance 5 to acid, cold, electricity, and piercing damage and weakness 5 to sonic and bludgeoning damage. A creature in this form is affected by the <![CDATA[<i>shatter</i>]]> spell as though the creature were an unattended object.</line>
+      <line>Each time the target takes damage to which the spell grants resistance or weakness, reduce the duration by 1 minute.</line>
+
+      <heighten value="+2">The resistances and weaknesses increase by 5.</heighten>
+   </rule>
+
+   <rule>
+      <title>Grasp of the Deep</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Enchantment</trait> <trait>Mental</trait> <trait>Primal</trait> <trait>Water</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>60 feet</range> <target>1 creature</target>
+      <save>basic Will</save> <duration>1 minute</duration>
+
+      <line>You grip one target with the phantasmal pressure of the deep sea, disorienting and crushing its lungs and joints. The target takes 6d6 bludgeoning damage, with a basic Will save. If the target fails its save, it becomes grabbed but can attempt to Escape, rolling its Will against your spell DC.</line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
+      <heighten value="6th">You can target up to 5 creatures.</heighten>
+   </rule>
+
+   <rule>
+      <title>Grasping Earth</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Earth</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>60 feet</range> <area>10-foot radius burst on the ground</area>
+      <save>Fortitude</save> <duration>sustained up to 1 minute</duration>
+
+      <line>Handlike protrusions of rock and soil grab and bury creatures. Each creature in the area when you Cast the Spell, and each creature that ends its turn in the area during the spell's duration, must attempt a Fortitude save.</line>
+      <line results="">
+         <success>The creature is unaffected.</success>
+         <fail>The creature is grabbed by the earth.</fail>
+         <critfail>The creature is restrained by the earth.</critfail>
+      </line>
+      <line>A creature can attempt to Escape the earth, rolling against your spell DC.</line>
+      <line>The first time each round you Sustain this spell, each creature grabbed by the earth takes 1d6 bludgeoning damage, and each creature restrained by the earth takes 2d6 bludgeoning.</line>
+
+      <heighten value="+2">The bludgeoning damage increases by 1d6 for grabbed creatures and 2d6 for restrained creatures.</heighten>
+   </rule>
+
+   <rule>
+      <title>Hydraulic Torrent</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Evocation</trait> <trait>Primal</trait> <trait>Water</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>60-foot line</area>
+      <save>basic Fortitude</save>
+
+      <line>A swirling torrent of water manifests along a straight  line, battering creatures and unattended objects in its path and possibly pushing them away from you. The torrent deals 8d6 bludgeoning damage, with a basic Fortitude save; unattended objects automatically fail. Creatures and objects that fail are also knocked back 5 feet (10 feet on a critical failure or for unattended objects).</line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Life-Draining Roots</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Evocation</trait> <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>30-foot line</area>
+      <save>basic Reflex</save>
+
+      <line>Thorny roots erupt from your hands in a tangled cascade, puncturing creatures in the way of their growth and revitalizing you. Creatures in the line take 8d6 piercing damage, with a basic Reflex save. You gain 1d4 temporary Hit Points for every living creature that takes damage, as the roots transfer nutrients from those damaged into you. These temporary Hit Points last for 1 minute.</line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Mountain Resilience</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Abjuration</trait> <trait>Earth</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <target>1 creature</target>
+      <duration>20 minutes</duration>
+
+      <line>The target's skin hardens like the stone of a mountain face. It gains resistance 5 to physical damage, except adamantine. Each time the target takes bludgeoning, piercing, or slashing damage, this spell's duration decreases by 1 minute.</line>
+
+      <heighten value="6th">The resistance increases to 10.</heighten>
+      <heighten value="8th">The resistance increases to 15.</heighten>
+      <heighten value="10th">The resistance increases to 20, and the duration to 1 hour.</heighten>
+   </rule>
+
+   <rule>
+      <title>Petal Storm</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Air</trait> <trait>Conjuration</trait> <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>120 feet</range> <area>15-foot radius burst</area>
+      <duration>1 minute</duration>
+
+      <line>You bring forth a cloud of razor-sharp flower petals that thrash violently in the air. A creature that enters the storm or starts its turn in the storm is sliced by the razor-sharp edges of the petals and takes 2d10 slashing damage, with a basic Reflex save. A creature can take damage from the petals only once per round. At the end of the duration, the storm calms and the petals fall harmlessly to the ground.</line>
+
+      <heighten value="+2">The damage increases by 1d10.</heighten>
+   </rule>
+
+   <rule>
+      <title>Soothing Spring</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Healing</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Primal</trait> <trait>Water</trait>
+      <cast>1 minute (material, somatic, verbal)</cast>
+      <range>30 feet</range> <duration>1 hour</duration>
+
+      <line>Steam wisps into the air as a stone-lined pool appears in the ground and fills with hot water that bubbles up from the earth. The water is comfortably hot and smells mildly sulfurous in a non-unpleasant way. You are able to draw out the full energizing potential of the mineral-rich water.</line>
+      <line>Any creature that spends the full hour soaking in the hot spring or basking in the mud from the bottom of the pit regains 10d8 Hit Points and feels refreshed, losing the fatigued condition. As normal for effects that remove fatigue, this doesn't remove any underlying source of fatigue, such as lack of sleep, causing the condition to return if the underlying source isn't addressed.</line>
+      <line>The pool is 20 feet on each side, and it's 5 feet deep. It can contain 16 Medium or smaller creatures at a time. A Large creature counts as eight Medium creatures and a Huge creature fills the entire pool. This pool has the <![CDATA[<u>structure</u>]]> trait and the same restrictions as magic items that create structures.</line>
+
+      <heighten value="+1">The healing increases by 2d8.</heighten>
+   </rule>
+
+   <rule>
+      <title>Vapor Form</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Air</trait> <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>touch</range> <target>1 willing creature</target>
+      <duration>5 minutes</duration>
+
+      <line>The target transforms into a vaporous state. In this state, the target is amorphous. It loses any item bonus to AC and all other effects and bonuses from armor, and it uses its proficiency modifier for unarmored defense. It gains resistance to physical damage equal to twice the spell's rank and is immune to precision damage. It can't Cast a Spell, Activate an item, or use actions that have the <![CDATA[<u>attack</u> or <u>manipulate</u>]]> trait. It also gains a fly Speed of 10 feet and can slip through tiny cracks. The target can Dismiss the spell.</line>
+   </rule>
+
+   <rule>
+      <title>Vital Beacon</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Healing</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Primal</trait>
+      <cast action="2">1 minute (somatic, verbal)</cast>
+      <duration>until your next daily preparation</duration>
+
+      <line>Life energy radiates out from you, allowing others to supplicate and receive healing. Once per round, either you or an ally can use an Interact action to supplicate and lay hands upon you to regain Hit Points. Each time the beacon heals someone, it decreases in strength. It restores 4d10 Hit Points to the first creature, 4d8 Hit Points to the second, 4d6 Hit Points to the third, and 4d4 Hit Points to the fourth, after which the spell ends. You can have only one <![CDATA[<i>vital beacon</i>]]> active at a time.</line>
+
+      <heighten value="+1">The beacon restores one additional die of HP each time it heals, using the normal die size for that step.</heighten>
+   </rule>
+
+   <rule>
+      <title>Wall of Fire</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Evocation</trait> <trait>Fire</trait> <trait>Primal</trait>
+      <cast action="3">material, somatic, verbal</cast>
+      <range>120 feet</range>
+      <duration>1 minute</duration>
+
+      <line>You raise a blazing wall that burns creatures passing through it. You create either a 5-foot-thick wall of flame in a straight line up to 60 feet long and 10 feet high, or a 5-foot-thick, 10-foot-radius ring of flame with the same height. The wall stands vertically in either form; if you wish, the wall can be of a shorter length or height.</line>
+      <line>Everything on each side of the wall is concealed (required a flat DC 5 check to target) from creatures on the opposite side. Any creature that crosses the wall or is occupying the wall's area at the start of its turn takes 4d6 fire damage.</line>
+
+      <heighten value="+1">The fire damage increases by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Zephyr Slip</title>
+      <type>Spell</type> <level>4</level>
+      <trait>Abjuration</trait> <trait>Air</trait> <trait>Primal</trait>
+      <cast action="R">somatic</cast>
+      <trigger>A creature enters a space within 5 feet of you</trigger>
+
+      <line>An arresting breeze sweeps you up in an instant and moves you to safety. You Fly up to 15 feet directly away from the triggering creature.</line>
+
+      <heighten value="6th">You and one adjacent ally Fly up to 25 feet directly away from the triggering creature.</heighten>
+      <heighten value="8th">You and up to 5 allies within 30 feet Fly up to 25 feet directly away from the triggering creature.</heighten>
+   </rule>
+
+</catalog>

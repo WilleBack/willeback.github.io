@@ -48,6 +48,13 @@
                margin:0.2em;
                }
 
+               .action {
+               font-family: 'pfactions';
+               font-size: 150%;
+               width:2em;
+               text-align: center;
+               }
+
                .line {
                width:100%;
                box-sizing:border-box;
@@ -171,102 +178,52 @@
    </xsl:template>
 
    <xsl:template name="rule">
-      <div class="rule">
-         <xsl:call-template name="createheader" />
+      <xsl:choose>
+         <xsl:when test="@size='small'">
+            <div class="rule" style="font-size:88%;">
+               <xsl:call-template name="createheader" />
 
-         <xsl:call-template name="topbox" />
+               <xsl:call-template name="topbox" />
 
-         <xsl:call-template name="description" />
+               <xsl:call-template name="description" />
+            </div>
+         </xsl:when>
+         <xsl:otherwise>
+            <div class="rule">
+               <xsl:call-template name="createheader" />
 
-         <xsl:if test="block">
-            <xsl:for-each select="block">
-               <div id="block" class="line" style="width:100%; box-sizing:border-box; padding-top:0.3em; padding-bottom:0.3em; float:left;">
-                  <b><xsl:value-of select="name" disable-output-escaping="yes" /><xsl:text> </xsl:text></b>
-                  <xsl:if test="action">
-                     <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="action" /> </span><xsl:text> </xsl:text>
-                  </xsl:if>
-                  <xsl:if test="type">
-                     <xsl:text> </xsl:text><xsl:value-of select="type" disable-output-escaping="yes" /><xsl:text>; </xsl:text>
-                  </xsl:if>
-                  <xsl:for-each select="part">
-                     <xsl:if test="@linebreak">
-                        <br />
-                     </xsl:if>
-                     <b><xsl:value-of select="name" disable-output-escaping="yes" /></b><xsl:text> </xsl:text>
-                     <xsl:value-of select="text()" disable-output-escaping="yes" />
-                     <xsl:if test="position()!=last()">
-                        <xsl:text>; </xsl:text>
-                     </xsl:if>
+               <xsl:call-template name="topbox" />
+
+               <xsl:call-template name="description" />
+
+               <xsl:if test="variant">
+                  <xsl:for-each select="variant">
+                     <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
+                        <div id="variant" class="line" style="float: left;">
+                           <xsl:choose>
+                              <xsl:when test="child::*[1]/@italic">
+                                 <b><span style="text-transform: capitalize;"><xsl:value-of select="name(child::*[1])" /></span><xsl:text> </xsl:text></b><i><xsl:value-of select="child::*[1]" disable-output-escaping="yes" /></i>
+                              </xsl:when>
+                              <xsl:otherwise>
+                                 <b><span style="text-transform: capitalize;"><xsl:value-of select="name(child::*[1])" /></span><xsl:text> </xsl:text></b><xsl:value-of select="child::*[1]" disable-output-escaping="yes" />
+                              </xsl:otherwise>
+                           </xsl:choose>
+                           <xsl:if test="level">
+                              <xsl:text>; </xsl:text>
+                              <b>Level </b><xsl:value-of select="level" />
+                           </xsl:if>
+                        </div>
+                        <xsl:call-template name="topbox" />
+
+                        <xsl:call-template name="description" />
+
+                     </div>
                   </xsl:for-each>
-               </div>
-            </xsl:for-each>
-         </xsl:if>
-         <xsl:if test="special">
-            <div id="special" class="line" style="float: left;">
-               <b>Special&#160;</b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
-            </div>
-            <xsl:for-each select="special[position()>1]">
-               <div id="special" class="line" style="float: left;">
-                  <xsl:value-of select="." disable-output-escaping="yes"/>
-               </div>
-            </xsl:for-each>
-         </xsl:if>
-         <xsl:if test="heighten">
-            <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
-               <xsl:for-each select="heighten">
-                  <div id="heighten" class="line" style="float: left;">
-                     <b>Heightened (<xsl:value-of select="@value" />)&#160;</b>
-                     <xsl:value-of select="." disable-output-escaping="yes" />
-                  </div>
-               </xsl:for-each>
-            </div>
-         </xsl:if>
-         <xsl:if test="levels">
-            <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
-               <xsl:for-each select="levels">
-                  <div id="levels" class="line" style="float: left;">
-                     <b>Level (<xsl:value-of select="@value" />)&#160;</b>
-                     <xsl:value-of select="." disable-output-escaping="yes" />
-                  </div>
-               </xsl:for-each>
-            </div>
-         </xsl:if>
-         <xsl:if test="traittext">
-            <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
-               <xsl:for-each select="traittext">
-                  <div id="traitbox" class="line" style="float:left;">
-                     <b><xsl:value-of select="name" /> </b><br/>
-                     <xsl:value-of select="text()" disable-output-escaping="yes" />
-                  </div>
-               </xsl:for-each>
-            </div>
-         </xsl:if>
-         <xsl:if test="variant">
-            <xsl:for-each select="variant">
-               <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
-                  <div id="variant" class="line" style="float: left;">
-                     <xsl:choose>
-                        <xsl:when test="child::*[1]/@italic">
-                           <b><span style="text-transform: capitalize;"><xsl:value-of select="name(child::*[1])" /></span><xsl:text> </xsl:text></b><i><xsl:value-of select="child::*[1]" disable-output-escaping="yes" /></i>
-                        </xsl:when>
-                        <xsl:otherwise>
-                           <b><span style="text-transform: capitalize;"><xsl:value-of select="name(child::*[1])" /></span><xsl:text> </xsl:text></b><xsl:value-of select="child::*[1]" disable-output-escaping="yes" />
-                        </xsl:otherwise>
-                     </xsl:choose>
-                     <xsl:if test="level">
-                        <xsl:text>; </xsl:text>
-                        <b>Level </b><xsl:value-of select="level" />
-                     </xsl:if>
-                  </div>
-                  <xsl:call-template name="topbox" />
+               </xsl:if>
 
-                  <xsl:call-template name="description" />
-
-               </div>
-            </xsl:for-each>
-         </xsl:if>
-
-      </div>
+            </div>
+         </xsl:otherwise>
+      </xsl:choose>
 
    </xsl:template>
 
@@ -694,6 +651,70 @@
             </xsl:otherwise>
          </xsl:choose>
       </xsl:for-each>
+
+      <xsl:if test="block">
+         <xsl:for-each select="block">
+            <div id="block" class="line" style="width:100%; box-sizing:border-box; padding-top:0.3em; padding-bottom:0.3em; float:left;">
+               <b><xsl:value-of select="name" disable-output-escaping="yes" /><xsl:text> </xsl:text></b>
+               <xsl:if test="action">
+                  <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="action" /> </span><xsl:text> </xsl:text>
+               </xsl:if>
+               <xsl:if test="type">
+                  <xsl:text> </xsl:text><xsl:value-of select="type" disable-output-escaping="yes" /><xsl:text>; </xsl:text>
+               </xsl:if>
+               <xsl:for-each select="part">
+                  <xsl:if test="@linebreak">
+                     <br />
+                  </xsl:if>
+                  <b><xsl:value-of select="name" disable-output-escaping="yes" /></b><xsl:text> </xsl:text>
+                  <xsl:value-of select="text()" disable-output-escaping="yes" />
+                  <xsl:if test="position()!=last()">
+                     <xsl:text>; </xsl:text>
+                  </xsl:if>
+               </xsl:for-each>
+            </div>
+         </xsl:for-each>
+      </xsl:if>
+      <xsl:if test="special">
+         <div id="special" class="line" style="float: left;">
+            <b>Special&#160;</b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
+         </div>
+         <xsl:for-each select="special[position()>1]">
+            <div id="special" class="line" style="float: left;">
+               <xsl:value-of select="." disable-output-escaping="yes"/>
+            </div>
+         </xsl:for-each>
+      </xsl:if>
+      <xsl:if test="heighten">
+         <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
+            <xsl:for-each select="heighten">
+               <div id="heighten" class="line" style="float: left;">
+                  <b>Heightened (<xsl:value-of select="@value" />)&#160;</b>
+                  <xsl:value-of select="." disable-output-escaping="yes" />
+               </div>
+            </xsl:for-each>
+         </div>
+      </xsl:if>
+      <xsl:if test="levels">
+         <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
+            <xsl:for-each select="levels">
+               <div id="levels" class="line" style="float: left;">
+                  <b>Level (<xsl:value-of select="@value" />)&#160;</b>
+                  <xsl:value-of select="." disable-output-escaping="yes" />
+               </div>
+            </xsl:for-each>
+         </div>
+      </xsl:if>
+      <xsl:if test="traittext">
+         <div id="topbox" style="width:100%; box-sizing:border-box; padding:0.1em; float:left; border-top: 0.1em solid black;">
+            <xsl:for-each select="traittext">
+               <div id="traitbox" class="line" style="float:left;">
+                  <b><xsl:value-of select="name" /> </b><br/>
+                  <xsl:value-of select="text()" disable-output-escaping="yes" />
+               </div>
+            </xsl:for-each>
+         </div>
+      </xsl:if>
    </xsl:template>
 
 </xsl:stylesheet>
