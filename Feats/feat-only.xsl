@@ -281,112 +281,118 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 				</div>
 			</xsl:if>
-         <div style="width:100%;">
+         <xsl:for-each select="benefit">
             <xsl:choose>
-               <xsl:when test="benefit[1]/@skill">
-                  <b>Benefit: </b><xsl:text>You gain training in the </xsl:text>
-                  <xsl:value-of select="benefit[1]/@skill" disable-output-escaping="yes"/>
-                  <xsl:text> skill.</xsl:text>
+               <xsl:when test="position()=1">
+                  <div style="width=100%;">
+                     <b>Benefit: </b>
+                     <xsl:choose>
+                        <xsl:when test="@skill">
+                           <xsl:text>You gain training in the </xsl:text>
+                           <xsl:value-of select="@skill" disable-output-escaping="yes"/>
+                           <xsl:text> skill.</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="@skill-class">
+                           <xsl:text>You gain training in  one skill from the </xsl:text>
+                           <xsl:value-of select="@skill-class" disable-output-escaping="yes"/>
+                           <xsl:text>'s class skill list.</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="@skills">
+                           <xsl:text>You gain training in the </xsl:text>
+                           <xsl:value-of select="@skills" disable-output-escaping="yes"/>
+                           <xsl:text> skill.</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="@skills-either">
+                           <xsl:text>You gain training in either the </xsl:text>
+                           <xsl:value-of select="benefit[1]/@skills-either" disable-output-escaping="yes"/>
+                           <xsl:text> skill.</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                           <xsl:apply-templates />
+                        </xsl:otherwise>
+                     </xsl:choose>
+                  </div>
                </xsl:when>
-               <xsl:when test="benefit[1]/@skill-class">
-                  <b>Benefit: </b><xsl:text>You gain training in  one skill from the </xsl:text>
-                  <xsl:value-of select="benefit[1]/@skill-class" disable-output-escaping="yes"/>
-                  <xsl:text>'s class skill list.</xsl:text>
-               </xsl:when>
-               <xsl:when test="benefit[1]/@skills">
-                  <b>Benefit: </b><xsl:text>You gain training in the </xsl:text>
-                  <xsl:value-of select="benefit[1]/@skills" disable-output-escaping="yes"/>
-                  <xsl:text> skill.</xsl:text>
-               </xsl:when>
-               <xsl:when test="benefit[1]/@skills-either">
-                  <b>Benefit: </b><xsl:text>You gain training in either the </xsl:text>
-                  <xsl:value-of select="benefit[1]/@skills-either" disable-output-escaping="yes"/>
-                  <xsl:text> skill.</xsl:text>
+               <xsl:when test="@name or bullet or @bullet">
+                  <div style="width:calc(100% - 2em); padding-left:1.5em;">
+                     <xsl:if test="@bullet or bullet">
+                        <xsl:text>&#9658; </xsl:text>
+                     </xsl:if>
+                     <xsl:choose>
+                        <xsl:when test="@style='i'">
+                           <i><xsl:value-of select="@name"/>: </i>
+                        </xsl:when>
+                        <xsl:when test="@name">
+                           <b><xsl:value-of select="@name"/>: </b>
+                        </xsl:when>
+                        <xsl:otherwise>
+                        </xsl:otherwise>
+                     </xsl:choose>
+                     <xsl:apply-templates />
+                  </div>
                </xsl:when>
                <xsl:otherwise>
-                  <b>Benefit: </b><xsl:value-of select="benefit[1]" disable-output-escaping="yes"/>
+                  <div style="width:100%; text-indent:0.7em;">
+                     <xsl:choose>
+                        <xsl:when test="@skill">
+                           <xsl:value-of select="." disable-output-escaping="yes"/>
+                           <xsl:text>, you gain training in the </xsl:text>
+                           <xsl:value-of select="@skill" disable-output-escaping="yes"/>
+                           <xsl:text> skill.</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="@skill-class">
+                           <xsl:value-of select="." disable-output-escaping="yes"/>
+                           <xsl:text>, you gain training in  one skill from the </xsl:text>
+                           <xsl:value-of select="@skill" disable-output-escaping="yes"/>
+                           <xsl:text>'s class skill list.</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="@skills">
+                           <xsl:value-of select="." disable-output-escaping="yes"/>
+                           <xsl:text>, you gain training in the </xsl:text>
+                           <xsl:value-of select="@skills" disable-output-escaping="yes"/>
+                           <xsl:text> skill.</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                           <xsl:apply-templates />
+                        </xsl:otherwise>
+                     </xsl:choose>
+                  </div>
                </xsl:otherwise>
             </xsl:choose>
-         </div>
-			<xsl:for-each select="benefit[position()>1]">
-         <xsl:choose>
-            <xsl:when test="@name or bullet or @bullet">
-               <div style="width:calc(100% - 2em); padding-left:1.5em;">
-                  <xsl:if test="@bullet or bullet">
-                     <xsl:text>&#9658; </xsl:text>
-                  </xsl:if>
-                  <xsl:choose>
-                     <xsl:when test="@style='i'">
-                        <i><xsl:value-of select="@name"/>: </i>
-                     </xsl:when>
-                     <xsl:when test="@name">
-                        <b><xsl:value-of select="@name"/>: </b>
-                     </xsl:when>
-                     <xsl:otherwise>
-                     </xsl:otherwise>
-                  </xsl:choose>
-                  <xsl:if test="trigger">
-                     <i>Trigger: </i>
-                     <xsl:value-of select="trigger" disable-output-escaping="yes"/>
-                     <xsl:text>; </xsl:text>
-                  </xsl:if>
-                  <xsl:if test="type">
-                     <i><xsl:value-of select="type" disable-output-escaping="yes"/></i>
-                     <xsl:text> </xsl:text>
-                  </xsl:if>
-                  <xsl:value-of select="text()" disable-output-escaping="yes"/> 
-               </div>
-            </xsl:when>
-            <xsl:when test="@skill">
-               <div style="width:100%; text-indent:0.7em;">
-                  <xsl:value-of select="." disable-output-escaping="yes"/>
-                  <xsl:text>, you gain training in the </xsl:text>
-                  <xsl:value-of select="@skill" disable-output-escaping="yes"/>
-                  <xsl:text> skill.</xsl:text>
-               </div>
-            </xsl:when>
-            <xsl:when test="@skill-class">
-               <div style="width:100%; text-indent:0.7em;">
-                  <xsl:value-of select="." disable-output-escaping="yes"/>
-                  <xsl:text>, you gain training in  one skill from the </xsl:text>
-                  <xsl:value-of select="@skill" disable-output-escaping="yes"/>
-                  <xsl:text>'s class skill list.</xsl:text>
-               </div>
-            </xsl:when>
-            <xsl:when test="@skills">
-               <div style="width:100%; text-indent:0.7em;">
-                  <xsl:value-of select="." disable-output-escaping="yes"/>
-                  <xsl:text>, you gain training in the </xsl:text>
-                  <xsl:value-of select="@skills" disable-output-escaping="yes"/>
-                  <xsl:text> skill.</xsl:text>
-               </div>
-            </xsl:when>
-            <xsl:otherwise>
-               <div style="width:100%; text-indent:0.7em;">
-                  <xsl:if test="trigger">
-                     <i>Trigger: </i>
-                     <xsl:value-of select="trigger" disable-output-escaping="yes"/>
-                     <xsl:text>; </xsl:text>
-                  </xsl:if>
-                  <xsl:if test="type">
-                     <i><xsl:value-of select="type" disable-output-escaping="yes"/></i>
-                     <xsl:text> </xsl:text>
-                  </xsl:if>
-                  <xsl:value-of select="." disable-output-escaping="yes"/>
-               </div>
-            </xsl:otherwise>
-         </xsl:choose>
-			</xsl:for-each>
-			<xsl:if test="special">
-					<div style="width:100%;">
-					<b>Special: </b><xsl:value-of select="special[1]" disable-output-escaping="yes"/>
-				</div>
-				<xsl:for-each select="special[position()>1]">
-					<div style="width:100%; text-indent:0.7em;">
-						<xsl:value-of select="." disable-output-escaping="yes"/>
-					</div>
-				</xsl:for-each>
-			</xsl:if>
+         </xsl:for-each>
+			<xsl:for-each select="special">
+            <xsl:choose>
+               <xsl:when test="position()=1">
+                  <div style="width=100%;">
+                     <b>Special: </b>
+                     <xsl:apply-templates />
+                  </div>
+               </xsl:when>
+               <xsl:when test="@name or bullet or @bullet">
+                  <div style="width:calc(100% - 2em); padding-left:1.5em;">
+                     <xsl:if test="@bullet or bullet">
+                        <xsl:text>&#9658; </xsl:text>
+                     </xsl:if>
+                     <xsl:choose>
+                        <xsl:when test="@style='i'">
+                           <i><xsl:value-of select="@name"/>: </i>
+                        </xsl:when>
+                        <xsl:when test="@name">
+                           <b><xsl:value-of select="@name"/>: </b>
+                        </xsl:when>
+                        <xsl:otherwise>
+                        </xsl:otherwise>
+                     </xsl:choose>
+                     <xsl:apply-templates />
+                  </div>
+               </xsl:when>
+               <xsl:otherwise>
+                  <div style="width:100%; text-indent:0.7em;">
+                     <xsl:apply-templates />
+                  </div>
+               </xsl:otherwise>
+            </xsl:choose>
+         </xsl:for-each>
 			<xsl:if test="associated">
 				<div style="width:100%;">
 					<b>Associated Powers: </b>
@@ -539,6 +545,33 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:for-each>
 		</div>
 
+</xsl:template>
+
+<xsl:template match="trigger">
+   <i>Trigger: </i>
+   <xsl:apply-templates />
+   <xsl:text>; </xsl:text>
+</xsl:template>
+
+<xsl:template match="type">
+   <i><xsl:apply-templates /></i>
+   <xsl:text> </xsl:text>
+</xsl:template>
+
+<xsl:template match="text()">
+   <xsl:value-of select="." disable-output-escaping="yes" />
+</xsl:template>
+
+<xsl:template match="b">
+   <b><xsl:apply-templates /></b>
+</xsl:template>
+
+<xsl:template match="i">
+   <i><xsl:apply-templates /></i>
+</xsl:template>
+
+<xsl:template match="br">
+   <br />
 </xsl:template>
 
 </xsl:stylesheet>
