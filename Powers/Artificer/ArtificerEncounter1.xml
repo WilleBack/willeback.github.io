@@ -12,22 +12,19 @@
          <action>Standard</action> <subaction>Action</subaction>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of your next turn, you and any ally within 2 squares of you deals extra fire damage with Weapon or Fire attacks. The extra damage equals your Constitution modifier.</text>
+            <name>Effect:</name>
+            <text>Until the end of your next turn, you and any ally within 2 squares of you deals extra fire damage with Weapon and Fire attacks. The extra damage equals your Constitution modifier.</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <type2>Ranged</type2> <range2>weapon </range2>
-            <text>One creature</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
+            <name>Hit:</name>
             <text>1[W] + Intelligence modifier fire damage. </text>
          </section>
          <section>
@@ -44,18 +41,19 @@
          <keyword>Arcane, Implement, Necrotic</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Ranged</type> <range>10</range>
-            <target>one enemy, and one ally within 5 squares of the enemy</target>
+            <target>one enemy</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
+            <name>Hit:</name>
             <text>1d10 + Intelligence modifier necrotic damage, and the target ally gains 5 temporary hit points.</text>
          </section>
-         <section>
-            <name>Effect:</name> <name-style>bold</name-style>
+         <section><name>Target Ally:</name><type>Ranged</type><range>10</range><target>one ally within 5 squares of the enemy</target></section>
+         <section shade="">
+            <name>Effect:</name>
             <text>Until the end of your next turn, the target enemy is slowed. As long as the enemy remains slowed, the target ally gains a +2 power bonus speed. </text>
          </section>
    </power>
@@ -68,19 +66,20 @@
          <keyword>Arcane, Poison, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Ranged</type> <range>weapon</range>
             <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
+            <name>Hit:</name>
             <text>2[W] + Intelligence modifier poison damage. </text>
          </section>
-         <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Choose one ally within 5 squares of the target. Until the end of your next turn, any creature that hits that ally with a melee attack takes poison damage equal to your Constitution modifier + your weapon's enhancement bonus. </text>
+         <section><name>Target Ally:</name><type>Ranged</type><range>10</range><target>one ally within 5 squares of the enemy</target></section>
+         <section shade="">
+            <name>Effect:</name>
+            <text>Until the end of your next turn, any creature that hits the target ally with a melee attack takes poison damage equal to your Constitution modifier + your weapon's enhancement bonus.</text>
          </section>
    </power>
 
@@ -92,13 +91,13 @@
          <keyword>Arcane, Cold, Conjuration, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
+            <name>Target:</name>
             <type>Close</type> <range>burst 5</range>
-            <target>Two unoccupied squares in the burst</target>
+            <target>two unoccupied squares in the burst</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>You conjure an ice shard trap in each target square until the end of your next turn. The traps do not occupy their space and are invisible to your enemies.</text>
          </section>
          <section>
@@ -107,11 +106,11 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Sustain Minor:</name> <name-style>bold</name-style>
+            <name>Sustain Minor:</name>
             <text>Any remaining traps persists until the end of your next turn.</text>
          </section>
          <section>
-            <name>Special:</name> <name-style>bold</name-style>
+            <name>Special:</name>
             <text>You can take 5 minutes to use this power. If you do, you target five squares instead of two, and the traps lasts for 1 hour or until you recover this power.</text>
          </section>
       <part>
@@ -120,17 +119,17 @@
          <keyword>Arcane, Cold</keyword>
          <action>Free</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
+            <name>Trigger:</name>
             <text>A creature enter's the ice shard trap's square</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>blast 1</range>
+            <name>Target:</name>
+            <type>Close</type> <range>blast special</range>
             <target>the triggering creature</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>The target takes cold damage equal to your 2 + Intelligence modifier, and is covered in icy crystals until the end of its next turn.</text>
          </section>
          <section>
@@ -138,7 +137,7 @@
             <text>While covered, the target has vulnerable 5 cold, and grants combat advantage.</text>
          </section>
          <section>
-            <name>Special:</name> <name-style>bold</name-style>
+            <name>Special:</name>
             <text>The ice shard trap is destroyed after this attack has been resolved.</text>
          </section>
       </part>
@@ -152,7 +151,7 @@
          <keyword>Acid, Arcane, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <type2>Ranged</type2> <range2>weapon</range2>
             <target>one creature</target>
@@ -160,11 +159,11 @@
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
+            <name>Hit:</name>
             <text>1[W] + Intelligence modifier acid damage, and the target takes a penalty to AC until the end of your next turn. The penalty equals 1 + one-half your Constitution modifier (minimum -2 penalty).</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
+            <name>Miss:</name>
             <text>One-half the penalty to AC.</text>
          </section>
    </power>
@@ -177,23 +176,23 @@
          <keyword>Arcane, Force, Implement, Zone</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Area</type> <range>burst 1 within 5 squares</range>
             <target>each enemy in the burst</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
+            <name>Hit:</name>
             <text>1d6 + Intelligence modifier force damage, and you push the target 2 squares from the burst's origin square.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
+            <name>Miss:</name>
             <text>You push the target 1 square from the burst's origin square.</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>You create a zone of protective force in the burst until the end of your next turn.</text>
          </section>
          <section>
@@ -210,23 +209,23 @@
          <keyword>Arcane, Force, Implement</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Ranged</type> <range>5/10</range>
             <target>one creature</target>
             <text>Intelligence vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
+            <name>Hit:</name>
             <text>2d6 + Intelligence modifier force damage.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
+            <name>Miss:</name>
             <text>Intelligence modifier + your implement's enhancement bonus force damage.</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
+            <name>Effect:</name>
             <text>Until the end of your next turn, the target takes additional damage each time it is hit. The additional damage equals your Wisdom modifier when the target is hit with a Weapon attack (or other physical attack at the DM's discretion) or half this amount otherwise.</text>
          </section>
    </power>
@@ -239,18 +238,18 @@
          <keyword>Arcane, Cold, Weapon</keyword>
          <action>Standard</action> <subaction>Action</subaction>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
             <text>Intelligence vs. AC</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
+            <name>Hit:</name>
             <text>2[W] + Intelligence modifier cold damage, and the target is weakened until the end of your next turn.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
+            <name>Miss:</name>
             <text>The target is weakened for the first attack it makes before the end of your next turn.</text>
          </section>
    </power>

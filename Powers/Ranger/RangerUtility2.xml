@@ -15,7 +15,7 @@
       <section shade=""><name>Effect:</name>Choose up to 5 contiguous squares of a vertical surface within your weapon range. You expend two pieces of ammunition for each square chosen.</section>
       <section shade="">Until the end of the encounter, the DC to climb the chosen squares is reduced by your Dexterity modifier + your weapon's enhancement bonus. If the DC is reduced to less then 0, a character climbing the chosen squares automatically succeeds on the Athletics check.</section>
    </power>
-   
+
    <power>
       <title>Avian Grace</title>
       <class>Ranger</class> <category>Utility</category> <level>2</level>
@@ -28,7 +28,7 @@
       <section shade=""><name>Effect:</name>Until the end of the encounter, you are considered to have a running start whenever you make a long jump.</section>
       <section shade="">Also, you gain a +2 power bonus to fly speed if you have it.</section>
    </power>
-   
+
    <power>
       <title>Begin the Hunt</title>
       <class>Ranger</class> <category>Utility</category> <level>2</level>
@@ -41,7 +41,7 @@
       <section shade=""><name>Effect:</name>You gain a +2 bonus to the triggering initiative check.</section>
       <section shade="">After initiative has been rolled, you use your <![CDATA[<i>designate quarry</i>]]> class power against one creature you can see. You gain a +2 power bonus to attack rolls against that creature until it is no longer your quarry.</section>
    </power>
-   
+
    <power>
       <title>Bending Branch</title>
       <class>Ranger</class> <category>Utility</category> <level>2</level>
@@ -54,7 +54,7 @@
       <section shade=""><name>Effect:</name>You negate the triggering forced movement.</section>
       <section shade="">Also, you gain a +2 bonus to the first melee attack roll you make before the end of your next turn.</section>
    </power>
-   
+
    <power>
       <title>Bridge of Roots</title>
       <class>Ranger</class> <category>Utility</category> <level>2</level>
@@ -68,7 +68,7 @@
       <section shade="">While the zone remains, you can take the following action at-will:</section>
       <section shade="" indent="1"><name>Move Action:</name>You move the zone up to 5 squares. At least one square of the zone must remain on a solid surface during the move.</section>
    </power>
-   
+
    <power>
       <title>Crucial Advice</title>
       <class>Ranger</class> <category>Utility</category> <level>2</level>
@@ -80,7 +80,7 @@
       <section><name>Target:</name><type>Ranged</type><range>5</range><target>the triggering ally</target></section>
       <section shade=""><name>Effect:</name>The triggering ally rerolls the triggering skill check with a power bonus equal to your Wisdom modifier.</section>
    </power>
-   
+
    <power>
       <title>Entangling Roots</title>
       <class>Ranger</class> <category>Utility</category> <level>2</level>
@@ -91,5 +91,265 @@
       <section><type>Area</type><range>burst 2 within 10 squares</range></section>
       <section shade=""><name>Effect:</name>The burst creates a zone of winding roots until the end of the encounter.</section>
       <section shade="">The ground in the zone is difficult terrain for your enemies. When an enemy charges, its movement cannot include any square of the ground in the zone.</section>
+   </power>
+
+   <power>
+      <title>Equestrian Maneuver</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>You guide your horse through tight spaces to reach that enemy who thought it was safe</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Prerequisite:</name>You must have a horse beast companion.</section>
+      <section><name>Requirement:</name>You must be mounted on your beast companion.</section>
+      <section><name>Target:</name><type>Special</type><target>you and your beast companion</target></section>
+      <section shade=""><name>Effect:</name>Until the end of your next turn, while you are are mounted on your beast companion, <![CDATA[<i>squeezing</i>]]> does not cause you or your beast companion to take a -5 penalty to attack rolls, to grant combat advantage, or to move at half speed.</section>
+   </power>
+
+   <power>
+      <title>Feline Escape</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Immediate</action> <subaction>Interrupt</subaction>
+      <fluff>You sidestep and attack as nimbly as your companion might</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Prerequisite:</name>You must have a cat beast companion.</section>
+      <section><name>Trigger:</name>You are hit by an attack against AC or Reflex</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>You gain a +4 power bonus to AC and Reflex until the end of your next turn.</section>
+      <section shade="">If the triggering attack misses you because of this bonus, you can shift a number of squares equal to 2 + one-half your Dexterity.</section>
+   </power>
+
+   <power>
+      <title>Ferret an Opening</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>With a keen eye, you leverage one moment of advantage to create another</fluff>
+      <keyword>Martial</keyword>
+      <section><name>Requirement:</name>You must be flanking an enemy.</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>Choose one enemy you are currently flanking.</section>
+      <section shade="">You have combat advantage against the chosen enemy until the end of your next turn.</section>
+   </power>
+
+   <power>
+      <title>Fox Shift</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Free</action> <subaction>Reaction</subaction>
+      <fluff>Distracted by your ally, your foe can't respond effective to your sly maneuvering</fluff>
+      <keyword>Martial</keyword>
+      <section><name>Trigger:</name>You hit an enemy with a melee attack on your turn; the enemy must be marked by an ally</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>You shift 1 square.</section>
+      <section shade="">Until the end of your next turn, you have a +2 power bonus to all defenses against attacks by the triggering enemy.</section>
+   </power>
+
+   <power>
+      <title>Hearten the Beast</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>At-Will</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>With an encouraging shout, you give your beast companion the will to keep fighting</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section auto="no-opportunity"/>
+      <section><name>Target:</name><type>Ranged</type><range>5</range><target>your beast companion</target></section>
+      <section shade=""><name>Effect:</name>The target makes a saving throw to end an effect that a save can end.</section>
+      <section shade="" indent="1"><name>Bear or Boar:</name>Your beast companion gains a bonus to the saving throw equal to your [Strength or Wisdom] modifier.</section>
+   </power>
+
+   <power>
+      <title>Hunter's Privilege</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Nonaction</action> <subaction>Reaction</subaction>
+      <fluff>Your keen senses and uncanny instincts give you an edge over your quarry</fluff>
+      <keyword>Martial</keyword> <keyword>Stance</keyword>
+      <section><name>Prerequisite:</name>You must have the Hunter's Quarry class feature.</section>
+      <section><name>Trigger:</name>You roll initiative at the start of an encounter</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>You enter the Hunter's Privilege stance.</section>
+      <section shade="">While you remain in the stance, the additional damage you deal against your quarry increases by 3.</section>
+      <section shade="" indent="1"><name>Level 11:</name>Increases by 4.</section>
+      <section shade="" indent="1"><name>Level 21:</name>Increases by 5.</section>
+   </power>
+
+   <power>
+      <title>Invigorating Stride</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Move</action> <subaction/>
+      <fluff>You back away from danger and catch your breath</fluff>
+      <keyword>Martial</keyword>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>You shift up to a number of squares equal to your [Strength or Wisdom] modifier. You must end this shift in a space that is not adjacent to any enemy.</section>
+      <section shade="">If your <![CDATA[<i>second wind</i>]]> is available, you can add the <key>Healing</key> keyword to this power and use your <![CDATA[<i>second wind</i>]]> without spending an action.</section>
+   </power>
+
+   <power>
+      <title>Oak Skin</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>Your skin takes on the texture of tough bark, protecting you from the worst of your enemies' attacks</fluff>
+      <keyword>Primal</keyword>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>You gain resist all until the end of the encounter. The resist equals your [Strength or Wisdom] modifier.</section>
+      <section shade="" indent="1"><name>Level 11:</name>Equals 2 + your [Strength or Wisdom] modifier.</section>
+      <section shade="" indent="1"><name>Level 21:</name>Equals 4 + your [Strength or Wisdom] modifier.</section>
+   </power>
+
+   <power>
+      <title>Pack Alertness</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>At-Will</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>Through subtle communications, you and your beast companion act almost as if you share senses</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Target:</name><type>Close</type><range>burst 10</range><target>you, and your beast companion in the burst</target></section>
+      <section shade=""><name>Effect:</name>Each target makes a Perception check and can use the higher result. If your beast companion becomes aware of a target, you do as well, and vice versa.</section>
+      <section shade="" indent="1"><name>Cat, Raptor, or Wolf:</name>Each target gains a +2 bonus to the Perception check.</section>
+   </power>
+
+   <power>
+      <title>Path of the Monkey</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>You and your companion take to the trees as if born there</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Prerequisite:</name>You must have a simian beast companion.</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>Until the end of the encounter or until your beast companion is killed or knocked unconscious, you gain the following benefits:</section>
+      <section shade="" indent="1" bullet="">A climb speed equal to your land speed.</section>
+      <section shade="" indent="1" bullet="">A +4 power bonus to Acrobatics checks.</section>
+   </power>
+
+   <power>
+      <title>Ranger's Agility</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>When you push yourself, you move with the speed and subtlety of the wind</fluff>
+      <keyword>Martial</keyword>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>Until the end of the encounter, you gain the following benefits:</section>
+      <section shade="" indent="1" bullet="">+2 power bonus to speed.</section>
+      <section shade="" indent="1" bullet="">When you shift, you can shift 1 additional square.</section>
+   </power>
+
+   <power>
+      <title>Reptilian Perseverance</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Free</action> <subaction>Interrupt</subaction>
+      <fluff>With the tenacity of the plodding giant lizard, you ignore those who would push you back</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Prerequisite:</name>You must have a lizard beast companion.</section>
+      <section><name>Trigger:</name>You or your beast companion is pushed, pulled, or slid</section>
+      <section><name>Target:</name><type>Close</type><range>burst 5</range><target>you, and your beast companion in the burst</target></section>
+      <section shade=""><name>Effect:</name>Each target reduces the maximum distance of the triggering forced movement by a number of squares equal to your [Strength or Wisdom] modifier.</section>
+   </power>
+
+   <power>
+      <title>Safe Passage</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>The spirits of earth, stone, and land accept your plea for assistance, allowing your and your allies to move unhindered and at great speed</fluff>
+      <keyword>Primal</keyword>
+      <section><name>Target:</name><type>Close</type><range>burst 5</range><target>you and each ally in the burst</target></section>
+      <section shade=""><name>Effect:</name>Until the end of the encounter, each target ignores difficult terrain and gains a +1 power bonus to speed.</section>
+   </power>
+
+   <power>
+      <title>Slither's Stride</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>You twist, contort, and scramble with surprising grace and speed to match your companion</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Prerequisite:</name>You must have a serpent beast companion.</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>Until the end of the encounter or until your beast companion is killed or is knocked unconscious, you and your beast companion gain the following benefits:</section>
+      <section shade="" indent="1" bullet="">When either of you shifts, that character can shift 1 additional square.</section>
+      <section shade="" indent="1" bullet="">Both of you ignore difficult terrain.</section>
+   </power>
+
+   <power>
+      <title>Stalker's Mist</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>A thick fog settles over the area, blocking sight and muffling sound - but only for your enemies</fluff>
+      <keyword>Primal</keyword> <keyword>Zone</keyword>
+      <section><type>Area</type><range>burst 1 within 10 squares</range></section>
+      <section shade=""><name>Effect:</name>The burst creates a zone of mist until the end of the encounter.</section>
+      <section shade="">Squares in the zone are heavily obscured to your enemies.</section>
+      <section shade="" indent="1"><name>Move Action:</name>You move the zone up to 5 squares.</section>
+   </power>
+
+   <power>
+      <title>Tenacity of the Tusked</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Immediate</action> <subaction>Interrupt</subaction>
+      <fluff>You shake off a wound by channeling the savagery of your companion</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Prerequisite:</name>You must have a boar companion.</section>
+      <section><name>Trigger:</name>You take damage from a melee attack</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>You reduce the triggering attack's damage by an amount equal to one-half your level + your [Strength or Wisdom] modifier.</section>
+      <section shade="">If you reduce the triggering attack's damage to 0, you are not affected by any conditions or effects of the attack that happen on a hit. If the triggering attack was a miss, you are not affected by any conditions or effects from it instead.</section>
+   </power>
+
+   <power>
+      <title>Terrain Advantage</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>You use the terrain around you as your first line of defense</fluff>
+      <keyword>Martial</keyword>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>Until the end of your next turn, you gain a +4 power bonus to all defenses while you occupy a square of difficult terrain.</section>
+   </power>
+
+   <power>
+      <title>Unbalancing Parry</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Encounter</frequency>
+      <action>Immediate</action> <subaction>Reaction</subaction>
+      <fluff>You deftly block your enemy's strike and turn its momentum against it, causing it to stumble</fluff>
+      <keyword>Martial</keyword>
+      <section><name>Trigger:</name>An adjacent enemy misses you with a melee attack</section>
+      <section><name>Target:</name><type>Melee</type><range>1</range><target>the triggering enemy</target></section>
+      <section shade=""><name>Effect:</name>You slide the target up to 3 squares to a space adjacent to you, and gain combat advantage against it until the end of your next turn.</section>
+   </power>
+
+   <power>
+      <title>Ursine Brutality</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>Daily</frequency>
+      <action>Minor</action> <subaction/>
+      <fluff>With a roar, you lunge forward, bullying your enemies backward</fluff>
+      <keyword>Beast</keyword> <keyword>Martial</keyword>
+      <section><name>Prerequisite:</name>You must have a bear beast companion.</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>Until the end of the encounter or until your beast companion is killed or knocked uncoscious, when you hit a creature with a melee attack, you can push that creature 1 square and shift 1 square into the space it vacated. If the creature is threatened by your beast companion, you can push it up to 2 squares instead.</section>
+   </power>
+
+   <power>
+      <title>Web Trick</title>
+      <class>Ranger</class> <category>Utility</category> <level>2</level>
+      <frequency>At-Will</frequency>
+      <action>Free</action> <subaction>Interrupt</subaction>
+      <fluff>Sticky webbing is a lifesaver in sticky situations</fluff>
+      <section><name>Prerequisite:</name>You must have a spider beast companion.</section>
+      <section><name>Requirement:</name>Your beast companion must be within 5 squares of you and able to make <![CDATA[<i>reactive strikes</i>]]>.</section>
+      <section><name>Trigger:</name>You make an Athletics check to climb or because you took damage while climbing, or</section>
+      <section>You make a saving throw to avoid being forced into hindering terrain or over an edge</section>
+      <section special=""/>
+      <section shade=""><name>Effect:</name>You gain a +4 power bonus to the triggering check or saving throw.</section>
    </power>
 </catalog>

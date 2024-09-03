@@ -264,7 +264,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</div>
 				<xsl:for-each select="benefit">
 					<div class="text">
-						<xsl:value-of select="." disable-output-escaping="yes" />
+						<xsl:apply-templates />
 					</div>
 				</xsl:for-each>
 
@@ -282,10 +282,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						</div>
 						<xsl:for-each select="benefit">
 							<div class="text">
-								<xsl:if test="name">
-									<b><xsl:value-of select="name"/><xsl:text> </xsl:text></b>
-								</xsl:if>
-								<xsl:value-of select="text()" disable-output-escaping="yes" />
+								<xsl:apply-templates />
 							</div>
 						</xsl:for-each>
 
@@ -305,6 +302,22 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</div>  <!-- container -->
 	</body>
 	</html>
+</xsl:template>
+
+<xsl:template match="text()">
+   <xsl:value-of select="." disable-output-escaping="yes" />
+</xsl:template>
+
+<xsl:template match="b">
+   <b><xsl:apply-templates /></b>
+</xsl:template>
+
+<xsl:template match="i">
+   <i><xsl:apply-templates /></i>
+</xsl:template>
+
+<xsl:template match="br">
+   <br />
 </xsl:template>
 
 </xsl:stylesheet>

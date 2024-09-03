@@ -5,31 +5,6 @@
 	<collection>Barbarian Lvl 1 Encounter Attack Evocations</collection>
 
 	<power>
-		<title>Great Cleave</title>
-		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>The numbers arrayed against you mean nothing as your weapon swings in a great arc, stopped by nothing so trivial as flesh and bone</fluff>
-			<frequency>Encounter</frequency>
-			<keyword>Primal, Weapon</keyword>
-			<action>Standard</action> <subaction>Action</subaction>
-			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Close</type> <range>weapon burst</range>
-				<target>each creature in the burst</target>
-				<text>Strength vs. AC</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>1[W] + Strength modifier damage, plus an additional +1 damage for each enemy adjacent to you.</text>
-			</section>
-			<section>
-				<name-style>bold</name-style>
-				<name>Miss:</name>
-				<text>Your Strength modifier + your weapon's enhancement bonus damage.</text>
-			</section>
-	</power>
-
-	<power>
 		<title>Avalanche Strike</title>
 		<class>Barbarian</class> <category>Attack</category> <level>1</level>
 		<fluff>You drop your guard and put all your strength into a devastating overhead swing</fluff>
@@ -37,58 +12,47 @@
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>3[W] + Strength modifier damage.</text>
+				<name>Hit:</name><text>3[W] + Strength modifier damage.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>The attack deals extra damage equal to your Constitution modifier.</text>
+				<name>Rageblood Vigor:</name><text>The attack deals extra damage equal to your Constitution modifier.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Whirling Frenzy:</name> <name-style>bold</name-style>
-				<text>The attack deals 2[W] (main) + 2[W] (off-hand) + Strength modifier damage instead.</text>
+				<name>Whirling Frenzy:</name><text>The attack deals 2[W] (main) + 2[W] (off-hand) + Strength modifier damage instead.</text>
 			</section>
 			<section>
-				<name-style>bold</name-style>
-				<name>Effect:</name>
-				<text>Until the start of your next turn, attack rolls against your AC or Reflex gain a +4 bonus.</text>
+				<name>Effect:</name><text>Until the start of your next turn, attack rolls against your AC or Reflex gain a +4 bonus.</text>
 			</section>
 	</power>
 
 	<power>
-		<title>Resurgent Strike</title>
+		<title>Batter Down</title>
 		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>You slash, the violence rejuvenating you</fluff>
+		<fluff>You hammer your enemy, knocking it to the ground or burying it even deeper</fluff>
 			<frequency>Encounter</frequency>
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>You either gain 5 + your Constitution modifier temporary hit points, or end one effect on yourself.</text>
+				<name>Hit:</name><text>2[W] + Strength modifier damage, and you knock the target prone.</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>The target takes 2[W] + Strength modifier damage.</text>
+				<text>If the target was already prone, this attack deals +1[W] damage.</text>
 			</section>
 			<section>
-				<name>Miss:</name> <name-style>bold</name-style>
-				<text>If you are bloodied, you can reroll the attack once.</text>
+				<name>Miss:</name><text>If the target is prone, you deal 2 + Strength modifier + your weapon's enhancement bonus damage.</text>
 			</section>
 	</power>
 
@@ -100,20 +64,16 @@
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>If the target is bloodied, the attack targets Fortitude instead</text>
+				<name>Rageblood Vigor:</name><text>If the target is bloodied, the attack targets Fortitude instead</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>2[W] + Strength modifier damage. </text>
+				<name>Hit:</name><text>2[W] + Strength modifier damage. </text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -121,109 +81,7 @@
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Thaneborn Triumph:</name> <name-style>bold</name-style>
-				<text>If this attack reduces an enemy to 0 hit points or less, allies within 5 squares of you gain a bonus to their first damage roll before the end of your next turn. This bonus is equal to one-half your Charisma modifier.</text>
-			</section>
-	</power>
-
-	<power>
-		<title>Vault the Fallen</title>
-		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>You leap from one foe to the next, leaving blood in your wake</fluff>
-			<frequency>Encounter</frequency>
-			<keyword>Primal, Weapon</keyword>
-			<action>Standard</action> <subaction>Action</subaction>
-			<section>
-				<name>Primary Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
-				<text>Strength vs. AC</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>1[W] + Strength modifier damage. </text>
-			</section>
-			<section>
-				<name>Effect:</name> <name-style>bold</name-style>
-				<text>You shift 2 squares. You must end this shift within reach of an enemy other than the primary target.</text>
-			</section>
-			<section>
-				<text>If you shifted, make a secondary attack.</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Thaneborn Triumph:</name> <name-style>bold</name-style>
-				<text>The number of squares you can shift equals your Charisma modifier.</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Whirling Frenzy:</name> <name-style>bold</name-style>
-				<text>The number of squares you can shift equals your Dexterity modifier.</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<text>If you end the shift within reach of two enemies other than the primary target, you can make the secondary attack against both, using your main weapon for one attack and your off-hand weapon for the other, but do not deal the additional +1d6 damage.</text>
-			</section>
-		<part>
-			<name>Secondary Attack</name>
-			<frequency>Automatic</frequency>
-			<keyword>Primal, Weapon</keyword>
-			<action>Nonaction</action>
-			<section>
-				<name>Secondary Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature other than the primary target</target>
-				<text>Strength vs. AC</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>1[W] + Strength modifier + 1d6 damage.</text>
-			</section>
-			<section>
-				<shade>true</shade> <indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>If the primary attack bloodied or reduced the target to 0 or less hit points, the secondary attack deals additional damage equal to your Constitution modifier.</text>
-			</section>
-		</part>
-	</power>
-
-	<power>
-		<title>Reckless Frenzy</title>
-		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>Someone will bleed after every strike of this frenzy - you would prefer to see your enemy's blood but are prepared to see your own</fluff>
-			<frequency>Encounter</frequency>
-			<keyword>Primal, Weapon</keyword>
-			<action>Standard</action> <subaction>Action</subaction>
-			<section>
-				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must be wielding two melee weapons</text>
-			</section>
-			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Close</type> <range>weapon burst</range>
-				<target>each creature in the burst</target>
-				<text>Strength (main) vs. AC</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Whirling Frenzy:</name> <name-style>bold</name-style>
-				<text>The attack can target Reflex instead</text>
-			</section>
-			<section>
-				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>1[W] (main) + 1[W] (off-hand) + Strength modifier damage. </text>
-			</section>
-			<section>
-				<name>Miss:</name> <name-style>bold</name-style>
-				<text>You take 1d6 damage for each miss. This damage cannot be reduced or negated. </text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>You gain a +1 cumulative bonus to your first damage roll before the end of your next turn for each miss.</text>
+				<name>Thaneborn Triumph:</name><text>If this attack reduces an enemy to 0 hit points or less, allies within 5 squares of you gain a bonus to their first damage roll before the end of your next turn. This bonus is equal to one-half your Charisma modifier.</text>
 			</section>
 	</power>
 
@@ -235,19 +93,15 @@
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>2[W] + Strength modifier damage. </text>
+				<name>Hit:</name><text>2[W] + Strength modifier damage. </text>
 			</section>
 			<section>
-				<name>Miss:</name> <name-style>bold</name-style>
-				<text>You can take 5 damage to reroll the attack. This damage cannot be reduced or negated. If the rerolled attack misses, you can continue to take 5 damage each time to reroll the attack again.</text>
+				<name>Miss:</name><text>You can take 5 damage to reroll the attack. This damage cannot be reduced or negated. If the rerolled attack misses, you can continue to take 5 damage each time to reroll the attack again.</text>
 			</section>
 			<section>
 				<text>If you become bloodied because of this damage, you gain a +2 bonus to further rerolled attack rolls.</text>
@@ -257,8 +111,7 @@
 			</section>
 			<section>
 				<indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>If you rerolled the attack at least once, it deals additional damage equal to your Constitution modifier.</text>
+				<name>Rageblood Vigor:</name><text>If you rerolled the attack at least once, it deals additional damage equal to your Constitution modifier.</text>
 			</section>
 			<section>
 				<indent>1</indent>
@@ -278,128 +131,103 @@
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>2[W] + Strength modifier damage. </text>
+				<name>Hit:</name><text>2[W] + Strength modifier damage. </text>
 			</section>
 			<section>
-				<name>Effect:</name> <name-style>bold</name-style>
+				<name>Effect:</name>
 				<text>If you take damage before the start of your next turn, you gain a +2 bonus to the attack rolls and damage rolls of your next attack. </text>
 			</section>
 			<section>
 				<indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>If you become bloodied before the start of your next turn, the bonus equals your Constitution modifier instead.</text>
+				<name>Rageblood Vigor:</name><text>If you become bloodied before the start of your next turn, the bonus equals your Constitution modifier instead.</text>
 			</section>
 			<section>
 				<indent>1</indent>
-				<name>Thaneborn Triumph:</name> <name-style>bold</name-style>
-				<text>If you take damage before the start of your next turn, one ally of your choice within 5 squares of you gains a bonus to their first damage roll against the creature that damaged you. The bonus equals your Charisma modifier, and lasts until the end of the ally's next turn.</text>
+				<name>Thaneborn Triumph:</name><text>If you take damage before the start of your next turn, one ally of your choice within 5 squares of you gains a bonus to their first damage roll against the creature that damaged you. The bonus equals your Charisma modifier, and lasts until the end of the ally's next turn.</text>
 			</section>
 			<section>
 				<indent>1</indent>
-				<text>If you take damage more than once before the start of your next turn, you can choose a different ally each time. The bonus does not stack against the same creature.</text>
+				<text>If you take damage more than once before the start of your next turn, you can choose the same or a different ally each time. The bonus does not stack against the same creature.</text>
 			</section>
 	</power>
 
 	<power>
-		<title>Shout of Terror</title>
+		<title>Great Cleave</title>
 		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>The primal storm that rages within you manifests as a terrifying battle scream that causes enemies to hesitate</fluff>
+		<fluff>The numbers arrayed against you mean nothing as your weapon swings in a great arc, stopped by nothing so trivial as flesh and bone</fluff>
 			<frequency>Encounter</frequency>
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Primary Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Attack:</name><type>Close</type> <range>weapon burst</range><target>each creature in the burst</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>1[W] (main) + Strength modifier damage, and you make the shout attack. </text>
+				<name>Hit:</name><text>1[W] + Strength modifier damage, plus an additional +1 damage for each enemy adjacent to you.</text>
 			</section>
 			<section>
-				<shade>true</shade>
-				<text>You must include the primary target in the shout attack's area.</text>
+				<name>Miss:</name><text>Your Strength modifier + your weapon's enhancement bonus damage.</text>
 			</section>
-			<section>
-				<name>Effect:</name> <name-style>bold</name-style>
-				<text>Until the end of your next turn, you gain a +2 bonus to damage rolls against creatures under a Fear effect. </text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Thaneborn Triumph:</name> <name-style>bold</name-style>
-				<text>One ally within 5 squares of you gains a bonus to his or her first damage roll against a creature under a Fear effect. The bonus equals your Charisma modifier and lasts until the end of the ally's next turn.</text>
-			</section>
-			<section>
-				<indent>1</indent>
-				<name>Thunderborn Wrath:</name> <name-style>bold</name-style>
-				<text>The bonus to damage rolls equals your Constitution modifier.</text>
-			</section>
-		<part>
-			<part-name>Shout Attack</part-name>
-			<frequency>Automatic</frequency>
-			<keyword>Fear, Primal</keyword>
-			<action>Nonaction</action>
-			<section>
-				<name>Shout Target:</name> <name-style>bold</name-style>
-				<type>Close</type> <range>blast 3</range>
-				<target>Each enemy in the blast</target>
-			</section>
-			<section shade="">
-				<name>Effect:</name>
-				<text>Each target is slowed until the end of your next turn.</text>
-			</section>
-			<section shade="">
-				<indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>If you are bloodied, the range increases to <![CDATA[<i>Close</i>]]> blast 4</text>
-			</section>
-		</part>
 	</power>
 
 	<power>
-		<title>Room for Carnage</title>
+		<title>Reckless Frenzy</title>
 		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>You drive your foes backward with the haft of your weapon, giving you enough room to deliver a mighty blow</fluff>
+		<fluff>Someone will bleed after every strike of this frenzy - you would prefer to see your enemy's blood but are prepared to see your own</fluff>
 			<frequency>Encounter</frequency>
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Requirement:</name> <name-style>bold</name-style>
-				<text>You must be wielding a two-handed reach weapon</text>
+				<name>Requirement:</name><text>You must be wielding two melee weapons</text>
 			</section>
 			<section>
-				<shade>true</shade>
-				<name>Effect:</name> <name-style>bold</name-style>
-				<text>You push each enemy adjacent to you 1 square.</text>
-			</section>
-			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
-				<text>Strength vs. AC</text>
+				<name>Attack:</name><type>Close</type> <range>weapon burst</range><target>each creature in the burst</target>
+				<text>Strength (main) vs. AC</text>
 			</section>
 			<section>
 				<indent>1</indent>
-				<text>You gain a +1 bonus to the attack roll for each enemy you pushed</text>
+				<name>Whirling Frenzy:</name><text>The attack can target Reflex instead</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>2[W] + Strength modifier damage. </text>
+				<name>Hit:</name><text>1[W] (main) + 1[W] (off-hand) + Strength modifier damage. </text>
+			</section>
+			<section>
+				<name>Miss:</name><text>You take 1d6 damage for each miss. This damage cannot be reduced or negated. </text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Rageblood Vigor:</name><text>You gain a +1 cumulative bonus to your first damage roll before the end of your next turn for each miss.</text>
+			</section>
+	</power>
+
+	<power>
+		<title>Resurgent Strike</title>
+		<class>Barbarian</class> <category>Attack</category> <level>1</level>
+		<fluff>You slash, the violence rejuvenating you</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Primal, Weapon</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<section>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>If the target was not adjacent to you when you used this power, the attack deals +1[W] damage.</text>
+				<name>Hit:</name><text>You either gain 5 + your Constitution modifier temporary hit points, or end one effect on yourself.</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>The target takes 2[W] + Strength modifier damage.</text>
+			</section>
+			<section>
+				<name>Miss:</name><text>If you are bloodied, you can reroll the attack once.</text>
 			</section>
 	</power>
 
@@ -411,15 +239,12 @@
 			<keyword>Fear, Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>2[W] + Strength modifier damage, and the target is subject to your rending until the start of your next turn. </text>
+				<name>Hit:</name><text>2[W] + Strength modifier damage, and the target is subject to your rending until the start of your next turn. </text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -427,51 +252,156 @@
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Rageblood Vigor:</name> <name-style>bold</name-style>
-				<text>If the target is bloodied, the vulnerable is equal to your Constitution modifier instead.</text>
+				<name>Rageblood Vigor:</name><text>If the target is bloodied, the vulnerable is equal to your Constitution modifier instead.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Thaneborn Triumph:</name> <name-style>bold</name-style>
-				<text>Your rending both makes the target vulnerable and allows hits to slide it.</text>
+				<name>Thaneborn Triumph:</name><text>Your rending both makes the target vulnerable and allows hits to slide it.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Thunderborn Wrath:</name> <name-style>bold</name-style>
-				<text>The slide is a number of squares equal to your Constitution modifier.</text>
+				<name>Thunderborn Wrath:</name><text>The slide is a number of squares equal to your Constitution modifier.</text>
 			</section>
 			<section>
-				<name>Miss (Whirling Frenzy):</name>
-				<text>If you are wielding two melee weapons, you can make the attack against the same target with the weapon you did not use the first time.</text>
+				<name>Miss (Whirling Frenzy):</name><text>If you are wielding two melee weapons, you can make the attack against the same target with the weapon you did not use the first time.</text>
 			</section>
 	</power>
 
 	<power>
-		<title>Batter Down</title>
+		<title>Room for Carnage</title>
 		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>You hammer your enemy, knocking it to the ground or burying it even deeper</fluff>
+		<fluff>You drive your foes backward with the haft of your weapon, giving you enough room to deliver a mighty blow</fluff>
 			<frequency>Encounter</frequency>
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction>Action</subaction>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
-				<type>Melee</type> <range>weapon</range>
-				<target>one creature</target>
+				<name>Requirement:</name><text>You must be wielding a two-handed reach weapon</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Effect:</name><text>You push each enemy adjacent to you 1 square.</text>
+			</section>
+			<section>
+				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<text>Strength vs. AC</text>
+			</section>
+			<section auto="">
+				<indent>1</indent>
+				<text>You gain a +1 bonus to the attack roll for each enemy you pushed</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name><text>2[W] + Strength modifier damage. </text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<text>If the target was not adjacent to you when you used this power, the attack deals +1[W] damage.</text>
+			</section>
+	</power>
+
+	<power>
+		<title>Shout of Terror</title>
+		<class>Barbarian</class> <category>Attack</category> <level>1</level>
+		<fluff>The primal storm that rages within you manifests as a terrifying battle scream that causes enemies to hesitate</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Primal, Weapon</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<section>
+				<name>Primary Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>2[W] + Strength modifier damage, and you knock the target prone.</text>
+				<name>Hit:</name><text>1[W] (main) + Strength modifier damage, and you make the shout attack. </text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>If the target was already prone, this attack deals +1[W] damage.</text>
+				<text>You must include the primary target in the shout attack's area.</text>
 			</section>
 			<section>
-				<name>Miss:</name> <name-style>bold</name-style>
-				<text>If the target is prone, you deal 2 + Strength modifier + your weapon's enhancement bonus damage.</text>
+				<name>Effect:</name><text>Until the end of your next turn, you gain a +2 bonus to damage rolls against creatures under a Fear effect. </text>
 			</section>
+			<section>
+				<indent>1</indent>
+				<name>Thaneborn Triumph:</name><text>One ally within 5 squares of you gains a bonus to his or her first damage roll against a creature under a Fear effect. The bonus equals your Charisma modifier and lasts until the end of the ally's next turn.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Thunderborn Wrath:</name><text>The bonus to damage rolls equals your Constitution modifier.</text>
+			</section>
+		<part>
+			<part-name>Shout Attack</part-name>
+			<frequency>Automatic</frequency>
+			<keyword>Fear, Primal</keyword>
+			<action>Nonaction</action>
+			<section>
+				<name>Shout Target:</name>
+				<type>Close</type> <range>blast 3</range>
+				<target>Each enemy in the blast</target>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Rageblood Vigor:</name>
+				<text>If you are bloodied, the range increases to <i>Close</i> blast 4</text>
+			</section>
+			<section shade="">
+				<name>Effect:</name>
+				<text>Each target is slowed until the end of your next turn.</text>
+			</section>
+		</part>
+	</power>
+
+	<power>
+		<title>Vault the Fallen</title>
+		<class>Barbarian</class> <category>Attack</category> <level>1</level>
+		<fluff>You leap from one foe to the next, leaving blood in your wake</fluff>
+			<frequency>Encounter</frequency>
+			<keyword>Primal, Weapon</keyword>
+			<action>Standard</action> <subaction>Action</subaction>
+			<section>
+				<name>Primary Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<text>Strength vs. AC</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name><text>1[W] + Strength modifier damage. </text>
+			</section>
+			<section>
+				<name>Effect:</name><text>You shift 2 squares. You must end this shift within reach of an enemy other than the primary target.</text>
+			</section>
+			<section>
+				<text>If you shifted, make the secondary attack.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Thaneborn Triumph:</name><text>The number of squares you can shift equals your Charisma modifier.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Whirling Frenzy:</name><text>The number of squares you can shift equals your Dexterity modifier.</text>
+			</section>
+			<section>
+				<indent>1</indent>
+				<text>If you end the shift within reach of two enemies other than the primary target, you can make the secondary attack against both, using your main weapon for one attack and your off-hand weapon for the other, but do not deal the additional +1d6 damage.</text>
+			</section>
+		<part>
+			<name>Secondary Attack</name>
+			<frequency>Automatic</frequency>
+			<keyword>Primal, Weapon</keyword>
+			<action>Nonaction</action>
+			<section>
+				<name>Secondary Attack:</name><type>Melee</type> <range>weapon</range><target>one creature other than the primary target</target>
+				<text>Strength vs. AC</text>
+			</section>
+			<section>
+				<shade>true</shade>
+				<name>Hit:</name><text>1[W] + Strength modifier + 1d6 damage.</text>
+			</section>
+			<section>
+				<shade>true</shade> <indent>1</indent>
+				<name>Rageblood Vigor:</name><text>If the primary attack bloodied or reduced the target to 0 or less hit points, the secondary attack deals additional damage equal to your Constitution modifier.</text>
+			</section>
+		</part>
 	</power>
 
 </catalog>
