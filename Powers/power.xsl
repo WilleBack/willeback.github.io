@@ -173,10 +173,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<span class="titletext" style="font-variant: small-caps; font-weight:bold; letter-spacing:1px;"><xsl:value-of select="title"/></span>
 				</div>
 
-				<xsl:if test="frequency">
+				<xsl:if test="frequency or action">
 					<div class="freqact" style="width:calc(100% - 7em); font-size:1.05em; margin:0.2em; margin-top:0.1em; float:left;">
-						<b><xsl:value-of select="frequency" /></b>
-						&#x25C6;
+						<xsl:if test="frequency">
+							<b><xsl:value-of select="frequency" /></b>
+							<xsl:if test="action">
+								&#x25C6;
+							</xsl:if>
+						</xsl:if>
 						<b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text>
 						<xsl:choose>
 							<xsl:when test="subaction=''">
@@ -209,18 +213,34 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="part">
 	<div id="part" style="width:100%; box-sizing:border-box; float:left; border-top: 0.5em solid white;">
-		<xsl:if test="name or part-name or frequency">
+		<xsl:if test="name or part-name or frequency or action">
 			<div class="header" style="float:left; width:100%; background:linear-gradient(to right, #D6D6C2, #ebebe0); ">
 				<div class="titlebox" style="float:left; margin:0.3em; vertical-align:middle; width: calc(100% - 1em);">
 			      <xsl:if test="name or part-name">
 			      	<div class="title" style="width:calc(100% - 1em); float:left; font-size:1.2em; text-indent:-1em; margin-left:1.2em;">
-			      		<span class="titletext" style="font-variant: small-caps; font-weight:bold; letter-spacing:1px;"><i><xsl:value-of select="name"/><xsl:value-of select="part-name"/></i></span>
+			      		<span class="titletext" style="font-variant: small-caps; font-weight:bold; letter-spacing:1px;"><i>
+								<xsl:choose>
+									<xsl:when test="name/@attack">
+										<xsl:value-of select="../title"/><xsl:text> Attack Technique</xsl:text>
+									</xsl:when>
+									<xsl:when test="name/@movement">
+										<xsl:value-of select="../title"/><xsl:text> Movement Technique</xsl:text>
+									</xsl:when>
+									<xsl:otherwise>
+										<xsl:value-of select="name"/><xsl:value-of select="part-name"/>
+									</xsl:otherwise>
+								</xsl:choose>
+							</i></span>
 						</div>
 				   </xsl:if>
-				   <xsl:if test="frequency">
+				   <xsl:if test="frequency or action">
 				   	<div class="freqact" style="width:calc(100% - 0.09em); font-size:1.05em; margin:0.2em; margin-top:0em; float:left;">
-						   <b><xsl:value-of select="frequency" /> </b>
-						   &#x25C6;
+							<xsl:if test="frequency">
+						   	<b><xsl:value-of select="frequency" /> </b>
+								<xsl:if test="action">
+						   		&#x25C6;
+								</xsl:if>
+							</xsl:if>
 						   <b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" />
 					   </div>
 				   </xsl:if>
@@ -512,7 +532,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:choose>
 	  		 	<xsl:when test="name or bullet or @bullet or @auto or @special or @personal or keyword or type">
 		  			<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
-						<xsl:if test="bullet or @style='bullet' or @bullet">
+						<xsl:if test="bullet or name/@style='bullet' or @bullet">
 							&#9658;<xsl:text> </xsl:text>
 						</xsl:if>
 

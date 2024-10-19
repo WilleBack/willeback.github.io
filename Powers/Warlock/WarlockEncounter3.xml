@@ -9,25 +9,21 @@
       <fluff>You breathe out a cloud of acidic black flies that streak across the battlefield, swarming your foe and attempting to enter its body</fluff>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>5</range>
-            <target>one creature</target>
+            <name>Attack:</name><type>Ranged</type> <range>5</range><target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
-         <section>
+         <section auto="">
             <indent>1</indent>
             <text>If the target is bloodied, you gain a +2 bonus to the attack rolls</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d8 + Charisma modifier acid damage, and the target grants combat advantage until the end of your next turn.</text>
+            <name>Hit:</name><text>2d8 + Charisma modifier acid damage, and the target grants combat advantage until the end of your next turn.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>The target grants combat advantage for the first attack made against it before the end of your next turn.</text>
+            <name>Miss:</name><text>The target grants combat advantage for the first attack made against it before the end of your next turn.</text>
          </section>
    </power>
 
@@ -39,23 +35,18 @@
          <keyword>Arcane, Implement, Necrotic</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An enemy in hits you with a melee attack</text>
+            <name>Trigger:</name><text>An enemy in hits you with a melee attack</text>
          </section>
          <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 4</range>
-            <target>the triggering enemy in the burst</target>
+            <name>Target:</name><type>Close</type> <range>burst 4</range><target>the triggering enemy in the burst</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target takes necrotic damage equal to 2 + your Charisma modifier + your implement's enhancement bonus. If the target is cursed by you, you can add your curse damage.</text>
+            <name>Effect:</name><text>The target takes necrotic damage equal to 2 + your Charisma modifier + your implement's enhancement bonus. If the target is cursed by you, you can add your curse damage.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Star Pact:</name> <name-style>bold</name-style>
-            <text>You add your Intelligence modifier to the necrotic damage.</text>
+            <name>Star Pact:</name><text>You add your Intelligence modifier to the necrotic damage.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -66,112 +57,81 @@
    <power>
       <title>Eldritch Claws</title>
       <class>Warlock</class> <category>Attack</category> <level>3</level>
-      <fluff>At your command, clawed hands crafted from eldritch energies wrap around your foe</fluff>
-         <frequency>Encounter</frequency>
-         <keyword>Arcane, Implement; Varies</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
-         <section>
-            <name>Prerequisite:</name> <name-style>bold</name-style>
-            <text>You must have the Eldritch Pact class feature.</text>
-         </section>
-         <section>
-            <name>Primary Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>touch</range>
-            <type2>Ranged</type2> <range2>10</range2>
-            <target>one creature</target>
-            <text>Charisma vs. Reflex</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d6 + Charisma modifier damage, and the primary target is slowed until the end of your next turn.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>The attack's damage type and keyword changes depending on your Eldritch Pact:</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Dark Pact, Sorcerer-King Pact:</name> <name-style>bold</name-style>
-            <text>Necrotic damage, and the <key>Necrotic</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Elemental Pact, Fey Pact, Vestige Pact:</name> <name-style>bold</name-style>
-            <text>Psychic damage, and the <key>Psychic</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Infernal Pact:</name> <name-style>bold</name-style>
-            <text>Fire damage, and the <key>Fire</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Star Pact:</name> <name-style>bold</name-style>
-            <text>Radiant damage, and the <key>Radiant</key> keyword.</text>
-         </section>
-         <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of your current turn, you can use the Eldritch Rake attack. If this attack was a critical hit, you can use it until the end of your next turn instead.</text>
-         </section>
-         <section>
-            <text>If this attack was a hit, you use the primary target as the origin square. If it was a miss, you use the space the target occupied when you made the attack.</text>
-         </section>
-      <part>
-         <part-name>Eldritch Rake</part-name>
-         <frequency>At-Will</frequency>
-         <keyword>Arcane, Implement; Varies</keyword>
-         <action>Minor</action> <subaction>Action</subaction>
-         <section>
-            <name>Target:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>1 from the origin square</range>
-            <target>one creature other than the primary target</target>
-         </section>
-         <section>
-            <indent>1</indent>
-            <text>You cannot target the same creature more than once per turn</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You deal damage depending on your Eldritch Pact.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Dark Pact:</name> <name-style>bold</name-style>
-            <text>Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus, and the <key>Necrotic</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Elemental Pact:</name> <name-style>bold</name-style>
-            <text>Damage equal to your Constitution modifier + your implement's enhancement bonus of the type and keyword matching your elemental affinity.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Fey Pact:</name> <name-style>bold</name-style>
-            <text>Psychic damage equal to your Dexterity modifier + your implement's enhancement bonus, and the <key>Psychic</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Infernal Pact:</name> <name-style>bold</name-style>
-            <text>Fire damage equal to your Constitution modifier + your implement's enhancement bonus, and the <key>Fire</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Sorcerer-King Pact:</name> <name-style>bold</name-style>
-            <text>Necrotic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the <key>Necrotic</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Star Pact:</name> <name-style>bold</name-style>
-            <text>Radiant damage equal to your Intelligence modifier + your implement's enhancement bonus, and the <key>Radiant</key> keyword.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Vestige Pact:</name> <name-style>bold</name-style>
-            <text>Psychic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the <key>Psychic</key> keyword.</text>
-         </section>
-      </part>
+      <fluff>At your command, clawed hands crafted from eldritch energies sprout from your foe</fluff>
+      <frequency>Encounter</frequency>
+      <keyword>Arcane, Implement; Varies</keyword>
+      <action>Standard</action> <subaction/>
+      <section>
+         <name>Prerequisite:</name><text>You must have the Eldritch Pact class feature.</text>
+      </section>
+      <section>
+         <name>Primary Attack:</name><type>Melee</type> <range>touch</range><type2>Ranged</type2> <range2>10</range2><target>one creature</target>
+         <text>Charisma vs. Reflex</text>
+      </section>
+      <section>
+         <shade>true</shade>
+         <name>Hit:</name><text>2d6 + Charisma modifier damage, and the primary target is slowed until the end of your next turn.</text>
+      </section>
+      <section>
+         <shade>true</shade>
+         <text>The attack's damage type and keyword changes depending on your Eldritch Pact:</text>
+      </section>
+      <section>
+         <shade>true</shade> <indent>1</indent>
+         <name>Dark Pact, Sorcerer-King Pact:</name><text>Necrotic damage, and the <key>Necrotic</key> keyword.</text>
+      </section>
+      <section>
+         <shade>true</shade> <indent>1</indent>
+         <name>Elemental Pact, Fey Pact, Vestige Pact:</name><text>Psychic damage, and the <key>Psychic</key> keyword.</text>
+      </section>
+      <section>
+         <shade>true</shade> <indent>1</indent>
+         <name>Infernal Pact:</name><text>Fire damage, and the <key>Fire</key> keyword.</text>
+      </section>
+      <section>
+         <shade>true</shade> <indent>1</indent>
+         <name>Star Pact:</name><text>Radiant damage, and the <key>Radiant</key> keyword.</text>
+      </section>
+      <section>
+         <name>Effect:</name> <name-style>bold</name-style>
+         <text>You activate an Aura 1 (<key>Arcane</key>) on the target until the end of your next turn. The target cannot dismiss this aura.</text>
+      </section>
+      <section>Each creature (including the target) that ends its turn in the aura takes damage depending on your Eldritch Pact and the aura has the corresponding keyword.</section>
+      <section>
+         <indent>1</indent>
+         <name>Dark Pact:</name> <name-style>bold</name-style>
+         <text>Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus, and the <key>Necrotic</key> keyword.</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <name>Elemental Pact:</name> <name-style>bold</name-style>
+         <text>Damage equal to your Constitution modifier + your implement's enhancement bonus of the type and keyword matching your elemental affinity.</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <name>Fey Pact:</name> <name-style>bold</name-style>
+         <text>Psychic damage equal to your Dexterity modifier + your implement's enhancement bonus, and the <key>Psychic</key> keyword.</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <name>Infernal Pact:</name> <name-style>bold</name-style>
+         <text>Fire damage equal to your Constitution modifier + your implement's enhancement bonus, and the <key>Fire</key> keyword.</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <name>Sorcerer-King Pact:</name> <name-style>bold</name-style>
+         <text>Necrotic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the <key>Necrotic</key> keyword.</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <name>Star Pact:</name> <name-style>bold</name-style>
+         <text>Radiant damage equal to your Intelligence modifier + your implement's enhancement bonus, and the <key>Radiant</key> keyword.</text>
+      </section>
+      <section>
+         <indent>1</indent>
+         <name>Vestige Pact:</name> <name-style>bold</name-style>
+         <text>Psychic damage equal to your Intelligence modifier + your implement's enhancement bonus, and the <key>Psychic</key> keyword.</text>
+      </section>
    </power>
 
    <power>
@@ -180,36 +140,29 @@
       <fluff>You fire purple rays of eldritch power at your foes</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>7/15</range>
-            <target>one creature, or two creatures no more than 5 squares apart from each other</target>
+            <name>Attack:</name><type>Ranged</type> <range>7/15</range><target>one creature, or two creatures no more than 5 squares apart from each other</target>
             <text>Charisma vs. Reflex</text>
          </section>
          <section>
             <indent>1</indent>
-            <name>Fey Pact:</name> <name-style>bold</name-style>
-            <text>You can choose to target three creatures no more than 5 squares apart from each other</text>
+            <name>Fey Pact:</name><text>You can choose to target three creatures no more than 5 squares apart from each other</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d6 + Charisma modifier damage.</text>
+            <name>Hit:</name><text>2d8 + Charisma modifier damage.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Elemental Pact:</name> <name-style>bold</name-style>
-            <text>You can choose to make this attack deal the type of damage matching your current elemental affinity and to gain the matching keyword.</text>
+            <name>Elemental Pact:</name><text>You can choose to make this attack deal the type of damage matching your current elemental affinity and to gain the matching keyword.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Fey Pact:</name> <name-style>bold</name-style>
-            <text>If you target only one creature, the attack deals additional damage equal to your Dexterity modifier.</text>
+            <name>Fey Pact:</name><text>If you target only one creature, the attack deals additional damage equal to your Dexterity modifier.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Your Charisma modifier + your implement's enhancement bonus damage if you only targeted one creature.</text>
+            <name>Miss:</name><text>Your Charisma modifier + your implement's enhancement bonus damage if you only targeted one creature.</text>
          </section>
    </power>
 
@@ -219,31 +172,25 @@
       <fluff>You call up a bolt of golden flame and hurl it at your foe, with anyone standing close to him ending up burned as well</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fire, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>10/20</range>
-            <target>one creature</target>
+            <name>Attack:</name><type>Ranged</type> <range>10/20</range><target>one creature</target>
             <text>Charisma vs. Reflex</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d8 + Charisma modifier fire damage, and each creature adjacent to the target takes fire damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
+            <name>Hit:</name><text>2d8 + Charisma modifier fire damage, and each creature adjacent to the target takes fire damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Infernal Pact:</name> <name-style>bold</name-style>
-            <text>Adjacent creatures take additional damage equal to your Constitution modifier.</text>
+            <name>Infernal Pact:</name><text>Adjacent creatures take additional damage equal to your Constitution modifier.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Charisma modifier + your implement's enhancement bonus fire damage.</text>
+            <name>Miss:</name><text>Charisma modifier + your implement's enhancement bonus fire damage.</text>
          </section>
          <section>
             <indent>1</indent>
-            <name>Infernal Pact:</name> <name-style>bold</name-style>
-            <text>Additional damage equal to your Constitution modifier.</text>
+            <name>Infernal Pact:</name><text>Additional damage equal to your Constitution modifier.</text>
          </section>
    </power>
 
@@ -253,18 +200,14 @@
       <fluff>You create ethereal black ropes that bind you to your enemy and as the ropes twist, your luck improves at the cost of your's enemy's</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>touch</range>
-            <type2>Ranged</type2> <range2>10</range2>
-            <target>one creature</target>
+            <name>Attack:</name><type>Melee</type> <range>touch</range><type2>Ranged</type2><target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d6 + Charisma modifier psychic damage.</text>
+            <name>Hit:</name><text>2d6 + Charisma modifier psychic damage.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -272,12 +215,10 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Vestige Pact:</name> <name-style>bold</name-style>
-            <text>If the condition you transferred allows saving throws, the target takes a -2 penalty on the first save it makes.</text>
+            <name>Vestige Pact:</name><text>If the condition you transferred allows saving throws, the target takes a -2 penalty on the first save it makes.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Charisma modifier + your implement's enhancement bonus psychic damage if you have a condition or effect on you that a save can end.</text>
+            <name>Miss:</name><text>Charisma modifier + your implement's enhancement bonus psychic damage if you have a condition or effect on you that a save can end.</text>
          </section>
    </power>
 
@@ -287,17 +228,14 @@
       <fluff>You create a freezing black shadow around your foe, a small taste of the icy darkness in the depths of the night sky that causes the foe to not see well enough to defend itself</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Fear, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>10</range>
-            <target>one creature</target>
+            <name>Attack:</name><type>Ranged</type> <range>10</range><target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d8 + Charisma modifier cold damage, and shadows cling to the target until the end of your next turn.</text>
+            <name>Hit:</name><text>2d8 + Charisma modifier cold damage, and shadows cling to the target until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -305,12 +243,10 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Star Pact:</name> <name-style>bold</name-style>
-            <text>While the shadows cling to the target, it takes a penalty to AC and Reflex equal to one-half your Intelligence modifier.</text>
+            <name>Star Pact:</name><text>While the shadows cling to the target, it takes a penalty to AC and Reflex equal to one-half your Intelligence modifier.</text>
          </section>
          <section>
-            <name>Miss (Infernal Pact):</name> <name-style>bold</name-style>
-            <text>If the target is bloodied, it grants you combat advantage to you until the end of  your next turn.</text>
+            <name>Miss (Infernal Pact):</name><text>If the target is bloodied, it grants you combat advantage to you until the end of  your next turn.</text>
          </section>
    </power>
 
@@ -320,31 +256,25 @@
       <fluff>Inky black, frigid tendrils emerge as if from your foes' bodies, curling and winding around their hosts to tightly that blood flow and movements are hampered</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Area</type> <range>burst 1 within 10 squares</range>
-            <target>each creature in the burst</target>
+            <name>Attack:</name><type>Area</type> <range>burst 1 within 10 squares</range><target>each creature in the burst</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d6 + Charisma modifier cold damage.</text>
+            <name>Hit:</name><text>1d6 + Charisma modifier cold damage.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Critical:</name> <name-style>bold</name-style>
-            <text>The target is slowed until the end of your next turn.</text>
+            <name>Critical:</name><text>The target is slowed until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Star Pact:</name> <name-style>bold</name-style>
-            <text>If the target has resist cold, you reduce it by one-half your level (save ends).</text>
+            <name>Star Pact:</name><text>If the target has resist cold, you reduce it by one-half your level (save ends).</text>
          </section>
          <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>A target in the center square is slowed until the end of your next turn.</text>
+            <name>Effect:</name><text>A target in the center square is slowed until the end of your next turn.</text>
          </section>
    </power>
 
@@ -354,18 +284,14 @@
       <fluff>You lay a wreath of confusion over your enemy, drawing it closer and commanding its temporary loyalty</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Charm, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>touch</range>
-            <type2>Ranged</type2> <range2>5</range2>
-            <target>one creature</target>
+            <name>Attack:</name><type>Melee</type> <range>touch</range><type2>Ranged</type2> <range2>5</range2><target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>You pull the target 4 squares to a square adjacent to you. If the target was already adjacent to you, you can slide it 2 squares to a square adjacent to you instead.</text>
+            <name>Hit:</name><text>You pull the target 4 squares to a square adjacent to you. If the target was already adjacent to you, you can slide it 2 squares to a square adjacent to you instead.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -373,22 +299,18 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Fey Pact:</name> <name-style>bold</name-style>
-            <text>You can slide the target 3 squares before it makes its attack.</text>
+            <name>Fey Pact:</name><text>You can slide the target 3 squares before it makes its attack.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Sorcerer-King Pact:</name> <name-style>bold</name-style>
-            <text>Instead of the target attacking, you can choose to use the following action instead:</text>
+            <name>Sorcerer-King Pact:</name><text>Instead of the target attacking, you can choose to use the following action instead:</text>
          </section>
          <section>
             <shade>true</shade> <indent>2</indent>
-            <name>Immediate Interrupt:</name> <name-style>bold</name-style>
-            <text><i>Trigger:</i> An enemy attacks you, but not the target of this power; The target of this power becomes the target of the triggering attack.</text>
+            <name>Immediate Interrupt:</name><text><i>Trigger:</i> An enemy attacks you, but not the target of this power; The target of this power becomes the target of the triggering attack.</text>
          </section>
          <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The target cannot make attacks against you until the end of your next turn.</text>
+            <name>Effect:</name><text>The target cannot make attacks against you until the end of your next turn.</text>
          </section>
    </power>
 
@@ -398,34 +320,28 @@
       <fluff>You whisper dark promises, sending them forth to pollute your enemy's mind with overwhelming terror and leaving them lingering around you</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Fear, Implement, Psychic</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>touch</range>
-            <type2>Ranged</type2> <range2>5</range2>
-            <target>one creature</target>
+            <name>Attack:</name><type>Melee</type> <range>touch</range><type2>Ranged</type2><target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d10 + Charisma modifier psychic damage.</text>
+            <name>Hit:</name><text>1d10 + Charisma modifier psychic damage.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>The target makes a <i>basic attack</i> against the creature closest to it as a free reaction. If more than one creature is equally close, you choose which it attacks. You do not count as a creature for this.</text>
          </section>
          <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You activate an Aura 1 (<key>Arcane</key>, <key>Fear</key>, <key>Implement</key>, <key>Psychic</key>) that lasts until the end of your next turn.</text>
+            <name>Effect:</name><text>You activate an Aura 1 (<key>Arcane</key>, <key>Fear</key>, <key>Implement</key>, <key>Psychic</key>) that lasts until the end of your next turn.</text>
          </section>
          <section>
             <text>Each time you take damage, each enemy in the aura takes psychic damage equal to your Charisma modifier + your implement's enhancement bonus. A creature does not take this damage if it is the source of the damage.</text>
          </section>
          <section>
             <indent>1</indent>
-            <name>Infernal Pact:</name> <name-style>bold</name-style>
-            <text>Bloodied enemies in the aura take additional damage equal to your Constitution modifier.</text>
+            <name>Infernal Pact:</name><text>Bloodied enemies in the aura take additional damage equal to your Constitution modifier.</text>
          </section>
    </power>
 
@@ -435,31 +351,25 @@
       <fluff>You call up an unseen maelstorm of power that lashes nearby creatures - you then step into the vortex and emerge somewhere a short distance away</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Teleportation</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>burst 1</range>
-            <target>each creature in the burst</target>
+            <name>Attack:</name><type>Close</type> <range>burst 1</range><target>each creature in the burst</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1d8 + Charisma modifier damage, and the target is immobilized until the end of your next turn.</text>
+            <name>Hit:</name><text>1d8 + Charisma modifier damage, and the target is immobilized until the end of your next turn.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>The target is slowed until the end of your next turn.</text>
+            <name>Miss:</name><text>The target is slowed until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You teleport up to 5 squares.</text>
+            <name>Effect:</name><text>You teleport up to 5 squares.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Fey Pact:</name> <name-style>bold</name-style>
-            <text>You can choose to teleport before making the attack instead of after.</text>
+            <name>Fey Pact:</name><text>You can choose to teleport before making the attack instead of after.</text>
          </section>
    </power>
 
@@ -469,36 +379,29 @@
       <fluff>Sometimes pain is the price of victory - to wrack your opponent's mind, you have to give up a fragment of your own sanity</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Before resolving the attack, you take psychic damage equal to the target's level. This damage cannot be reduced or negated.</text>
+            <name>Effect:</name><text>Before resolving the attack, you take psychic damage equal to the target's level. This damage cannot be reduced or negated.</text>
          </section>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>touch</range>
-            <type2>Ranged</type2> <range2>10</range2>
-            <target>one creature</target>
+            <name>Attack:</name><type>Melee</type> <range>touch</range><type2>Ranged</type2> <range2>10</range2><target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
-         <section>
+         <section auto="">
             <indent>1</indent>
             <text>You have combat advantage on the attack</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d12 + Charisma modifier psychic damage.</text>
+            <name>Hit:</name><text>2d12 + Charisma modifier psychic damage.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>You can take damage equal to one-half the target's level to reroll the attack.</text>
+            <name>Miss:</name><text>You can take damage equal to one-half the target's level to reroll the attack.</text>
          </section>
          <section>
             <indent>1</indent>
-            <name>Dark Pact:</name> <name-style>bold</name-style>
-            <text>If you reroll the attack, you deal additional damage equal to your Dexterity modifier for each time you choose to reroll it.</text>
+            <name>Dark Pact:</name><text>If you reroll the attack, you deal additional damage equal to your Dexterity modifier for each time you choose to reroll it.</text>
          </section>
    </power>
 
@@ -508,26 +411,21 @@
       <fluff>Your attack leaves your enemy reeling, unable to get its bearings without harming itself further</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Infernal Pact:</name> <name-style>bold</name-style>
-            <text>You can choose to give this power the <key>Fear</key> and <key>Psychic</key> keywords. If you do, the damage becomes psychic damage.</text>
+            <name>Infernal Pact:</name><text>You can choose to give this power the <key>Fear</key> and <key>Psychic</key> keywords. If you do, the damage becomes psychic damage.</text>
          </section>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>5</range>
-            <target>one creature</target>
+            <name>Attack:</name><type>Ranged</type> <range>5</range><target>one creature</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
             <indent>1</indent>
-            <name>Dark Pact:</name> <name-style>bold</name-style>
-            <text>You can choose to target Fortitude instead.</text>
+            <name>Dark Pact:</name><text>You can choose to target Fortitude instead.</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d4 + Charisma modifier damage, and the target is dazed until the start of your next turn.</text>
+            <name>Hit:</name><text>2d4 + Charisma modifier damage, and the target is dazed until the start of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -541,26 +439,21 @@
       <fluff>With a single word, you submerge your enemy in a deluge of chaotic energy</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Cold, Fire, Implement, Lightning, Thunder</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>10</range>
-            <target>one creature</target>
+            <name>Attack:</name><type>Ranged</type> <range>10</range><target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d6 + Charisma modifier cold, fire, lightning and thunder damage.</text>
+            <name>Hit:</name><text>2d6 + Charisma modifier cold, fire, lightning and thunder damage.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
+            <name>Miss:</name><text>Half damage.</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Each creature adjacent to the target and under your curse takes cold, fire, lightning and thunder damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
+            <name>Effect:</name><text>Each creature adjacent to the target and under your curse takes cold, fire, lightning and thunder damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
          </section>
    </power>
 
@@ -570,26 +463,21 @@
       <fluff>A mote of darkness appears before you, then explodes to envelop your foes in a field of shadow and madness</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic, Zone</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Close</type> <range>blast 3</range>
-            <target>each creature in the blast</target>
+            <name>Attack:</name><type>Close</type> <range>blast 3</range><target>each creature in the blast</target>
             <text>Charisma vs. Will</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d6 + Charisma modifier psychic damage.</text>
+            <name>Hit:</name><text>2d6 + Charisma modifier psychic damage.</text>
          </section>
          <section>
-            <name>Miss (Dark Pact):</name> <name-style>bold</name-style>
-            <text>Psychic damage equal to your Dexterity modifier + your implement's enhancement bonus.</text>
+            <name>Miss (Dark Pact):</name><text>Psychic damage equal to your Dexterity modifier + your implement's enhancement bonus.</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>The blast creates a zone of maddening shadows that lasts until the end of your next turn.</text>
+            <name>Effect:</name><text>The blast creates a zone of maddening shadows that lasts until the end of your next turn.</text>
          </section>
          <section>
             <shade>true</shade>
@@ -597,8 +485,7 @@
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Star Pact:</name> <name-style>bold</name-style>
-            <text>Any creature other than you that ends its turn in the zone takes psychic damage equal to your Intelligence + your implement's enhancement bonus.</text>
+            <name>Star Pact:</name><text>Any creature other than you that ends its turn in the zone takes psychic damage equal to your Intelligence + your implement's enhancement bonus.</text>
          </section>
    </power>
 
@@ -608,32 +495,25 @@
       <fluff>For a moment, your foe is covered in biting, swarming, and crushing maggots that make up the infinite extradimensional body of the Worm That Walks</fluff>
          <frequency>Encounter</frequency>
          <keyword>Acid, Arcane, Healing, Implement</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>touch</range>
-            <type2>Ranged</type2> <range2>5</range2>
-            <target>one creature</target>
+            <name>Attack:</name><type>Melee</type> <range>touch</range><type2>Ranged</type2> <range2>5</range2><target>one creature</target>
             <text>Charisma vs. Fortitude</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d6 + Charisma modifier acid damage, and you regain hit points equal to your Charisma modifier + your implement's enhancement bonus.</text>
+            <name>Hit:</name><text>2d6 + Charisma modifier acid damage, and you regain hit points equal to your Charisma modifier + your implement's enhancement bonus.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Critical:</name> <name-style>bold</name-style>
-            <text>You regain hit points equal to your Charisma modifier + twice your implement's enhancement bonus instead.</text>
+            <name>Critical:</name><text>You regain hit points equal to your Charisma modifier + twice your implement's enhancement bonus instead.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Star Pact:</name> <name-style>bold</name-style>
-            <text>Add your Intelligence modifier to the hit points regained, to a maximum equal to the damage dealt.</text>
+            <name>Star Pact:</name><text>Add your Intelligence modifier to the hit points regained, to a maximum equal to the damage dealt.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Acid damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
+            <name>Miss:</name><text>Acid damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
          </section>
    </power>
 
@@ -643,43 +523,37 @@
       <fluff>The voices whisper of the cold between stars, between lives, and you smile - the spell that surges out against your enemy bites down to their deepest weakness</fluff>
          <frequency>Encounter</frequency>
          <keyword>Arcane, Implement, Psychic; See text</keyword>
-         <action>Standard</action> <subaction>Action</subaction>
+         <action>Standard</action> <subaction/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>If the target is vulnerable to any damage types or has another weakness towards a damage type, this power instead deals damage of that type and gains the corresponding keyword instead of <key>Psychic</key>. If the target has more than one vulnerability or weakness, you choose which damage type to deal.</text>
+            <name>Effect:</name><text>If the target is vulnerable to any damage types or has another weakness towards a damage type, this power instead deals damage of that type and gains the corresponding keyword instead of <key>Psychic</key>. If the target has more than one vulnerability or weakness, you choose which damage type to deal.</text>
          </section>
          <section>
             <shade>true</shade>
             <text>This does not reveal to you what the vulnerabilities or weaknesses are, only the related damage types.</text>
          </section>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Ranged</type> <range>10</range>
-            <target>one creature</target>
+            <name>Attack:</name><type>Ranged</type> <range>10</range><target>one creature</target>
             <text>Charisma vs. Will (psychic damage), or</text>
          </section>
-         <section>
+         <section auto="">
             <indent>1</indent>
             <text>Charisma vs. Fortitude (cold, force, necrotic, poison or thunder damage), or</text>
          </section>
-         <section>
+         <section auto="">
             <indent>1</indent>
             <text>Charisma vs. Reflex (acid, fire, lightning or radiant damage)</text>
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2d8 + Charisma modifier psychic damage.</text>
+            <name>Hit:</name><text>2d8 + Charisma modifier psychic damage.</text>
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Dark Pact:</name> <name-style>bold</name-style>
-            <text>If this power deals damage of a type the target has a vulnerability or weakness to, you deal additional damage equal to your Dexterity modifier.</text>
+            <name>Dark Pact:</name><text>If this power deals damage of a type the target has a vulnerability or weakness to, you deal additional damage equal to your Dexterity modifier.</text>
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>If this power deals damage of a type the target has a vulnerability or weakness to, it takes half damage.</text>
+            <name>Miss:</name><text>If this power deals damage of a type the target has a vulnerability or weakness to, it takes half damage.</text>
          </section>
    </power>
 
