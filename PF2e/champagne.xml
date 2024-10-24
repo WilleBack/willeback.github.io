@@ -13,10 +13,10 @@
    <rule>
       <title>Aid</title> <action>R</action>
       <trigger>An ally is about to use an action that requires a skill check or attack roll</trigger>
-      <requirement>The ally is willing to accept your aid, and you have prepared to help (see below)</requirement>
+      <requirement>The ally is willing to accept your aid, and you have prepared to help (see text)</requirement>
 
       <line>You try to help your ally with a task. To use this reaction, you must first prepare to help, usually by using an action during your turn. You must explain to the GM exactly how you're trying to help, and they determine whether you can Aid your ally.</line>
-      <line>When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 20, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls.</line>
+      <line>When you use your Aid reaction, attempt a skill check or attack roll of a type decided by the GM. The typical DC is 15, but the GM might adjust this DC for particularly hard or easy tasks. The GM can add any relevant traits to your preparatory action or to your Aid reaction depending on the situation, or even allow you to Aid checks other than skill checks and attack rolls.</line>
       <line results="">
          <critsuccess>You grant your ally a +2 circumstance bonus to the triggering check. If you're a master with the check you attempted, the bonus is +3, and if you're legendary, it is +4.</critsuccess>
          <success>You grant your ally a +1 circumstance bonus to the triggering check.</success>
@@ -43,10 +43,19 @@
    </rule>
 
    <rule>
+      <title>Robust Recovery</title>
+      <type>Feat</type> <level>2</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>expert in Medicine</prereq>
+
+      <line>You learned folk medicine to help recover from diseases and poison, and using it diligently has made you especially resilient. When you Treat a Disease or a Poison, or someone else uses one of these actions on you, increase the circumstance bonus granted on a success to +4, and if the result of the patient's saving throw is a success, the patient gets a critical success.</line>
+   </rule>
+
+   <rule>
       <title>Treat Disease</title>
       <type>Medicine</type>
       <trait>Downtime</trait> <trait>Manipulate</trait>
-      <requirement>You are holding healer's tools, or you are wearing them and have a hand free</requirement>
+      <requirement>You're wearing or holding a healer's toolkit</requirement>
 
       <line>You spend at least 8 hours caring for a diseased creature. Attempt a Medicine check against the disease's DC. After you attempt to Treat a Disease for a creature, you can't try again until after that creature's next save against the disease.</line>
       <line results="">
@@ -59,59 +68,84 @@
    <rule>
       <title>Treat Wounds</title>
       <trait>Exploration</trait> <trait>Healing</trait> <trait>Manipulate</trait>
-      <requirements>You are holding healer's tools, or you are wearing them and have a hand free</requirements>
+      <requirement>You're wearing or holding a healer's toolkit</requirement>
 
       <line>You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes).</line>
-      <line>The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you're a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you're legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a critical failure remains the same.</line>
+      <line>The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert, master or legendary in Medicine, you can attempt the check with a higher DC to increase the healing (see list below). The damage dealt on a critical failure remains the same.</line>
+      <line list="Treat Wounds, healing by proficiency">
+         <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
+         <entry>Expert Proficiency (DC 20) - 2d8 + 10 / 4d8 + 10</entry>
+         <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
+         <entry>Legendary Proficiency (DC 40) - 2d8 + 50 / 4d8 + 50</entry>
+      </line>
+
+      <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
 
       <line results="">
          <critsuccess>The target regains the second healing value, and its wounded condition is removed.</critsuccess>
          <success>The target regains the first healing value, and its wounded condition is removed.</success>
          <critfail>The target takes 1d8 damage.</critfail>
       </line>
+   </rule>
 
-      <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
+   <rule>
+      <title>Battle Medicine</title>
+      <type>Feat</type> <level>1</level>
+      <action>1</action>
+      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
+      <prereq>trained in Medicine</prereq>
+      <requirement>You're wearing or holding a healer's toolkit</requirement>
 
-      <line><![CDATA[<b>Treat Wounds, healing by proficiency</b>]]></line>
-      <line list="">
-         <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
-         <entry>Expert Proficiency (DC 20) - 2d8 + 10 / 4d8 + 10</entry>
-         <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
-         <entry>Legendary Proficiency (DC 40) - 2d8 + 50 / 4d8 + 50</entry>
-      </line>
+      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day. This does not make them immune to, or otherwise count as, Treat Wounds.</line>
+      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
    </rule>
 
    <rule>
       <title>Sarenrae, the Dawnflower</title>
 
-      <line>Sarenrae is one of the most popular deities on Golarion by virtue of her association with the life-giving sun and her perpetual offer to help anyone be their best, even when they have made mistakes.</line>
+      <line>Sarenrae is one of the most popular deities on Golarion by virtue of her association with the life-giving sun and her perpetual offer to help anyone be their best, even when they have made mistakes. Most people thank her for her kind work to channel the sun’s power for everyone’s safety and livelihood, and thank her clergy for granting her healing power to all who need it. Mortals look to the Dawnflower as an example of boundless love, exquisite kindness, and true patience. They pray to her to heal the sick, lift up the downtrodden, and illuminate darkness of circumstance as well as darkness of spirit.</line>
+      <line>Her followers aspire to emulate her through generosity, nurturing, truthfulness, and selfless courage. They oppose evil everywhere with words first, and when necessary, with scimitar and flame.</line>
       <line list="Details">
          <entry name="Areas of Concern">healing, honesty, redemption, and the sun</entry>
          <entry name="Domains">fire, healing, sun, truth</entry>
-         <entry name="Edicts">destroy the Spawn of Rovagug, protect your allies, provide aid to the sick and wounded, seek and allow redemption</entry>
+         <entry name="Divine Sanctification">can choose holy</entry>
+         <entry name="Edicts">destroy the Spawn of Rovagug, protect allies, provide aid to the sick and wounded, seek and allow redemption</entry>
          <entry name="Anathema">create undead, lie, deny a repentant creature an opportunity for redemption, fail to strike down evil</entry>
       </line>
    </rule>
 
    <rule>
-      <title>Champion's Code</title>
-
-      <line>You follow a code of conduct, beginning with the tenets of good, and continuing with the tenets of the paladin cause. Deities also add additional strictures.</line>
-      <line>Tenets are listed in order of importance, starting with the most important. If a situation places two tenets in conflict, you aren't in a no-win situation; instead, follow the more important tenet. For instance, as a paladin, if an evil king asked you if you're hiding refugees so he could execute them, you could lie to him, since the tenet against lying is less important than preventing harm to innocents.</line>
-      <line>Trying to subvert your code by creating a situation that forces a higher tenet to override a lower tenet (for example, promising not to respect authorities and then, to keep your word, disrespecting authorities) is a violation of the champion code.</line>
-      <line>If you stray from your alignment or violate your code of conduct, you lose your focus pool and divine ally until you demonstrate your repentance by conducting an <![CDATA[<i>atone</i>]]> ritual, but you keep any other champion abilities that don't require those class features. If your alignment shifts but is still one allowed by your deity, your GM might let you retrain your caue while still following the same deity.</line>
+      <title>Sanctification</title>
+      <line>Depending on your deity, their sanctification can make you holy or unholy. This commits you to one side of a struggle over souls. Whether you become holy, unholy, or neither will limit your choice of causes, devotion spells, and feats.</line>
+      <line name="Holy">You chose holy. You gain the <u>holy</u> trait and add that trait to any Strikes you make.</line>
+      <line list="Holy edicts and anathema">
+         <entry name="Edicts">do not knowingly harm innocents or fail to prevent harm to an innocent if your direct intervention could save them</entry>
+         <entry name="Anathema">commit murder</entry>
+      </line>
    </rule>
 
    <rule>
-      <title>Tenets</title>
+      <title>Champion's Aura</title>
+      <line>You're surrounded by an aura in a 15-foot emanation. It has the <u>aura</u> and <u>divine</u> traits. Any follower of your deity within the aura immediately knows you're a champion of your deity. This aura is used as the range for your champion's reaction and for various other effects. You can suppress or resume the aura as a single action, which has the <u>concentrate</u> trait, and it ends if you fall unconscious.</line>
+   </rule>
 
-      <line>Below are the tenets of good and the paladin cause.</line>
-      <line list="">
-         <entry>You must never perform acts anathema to your deity or willingly commit an evil act, such as murder, torture, or the casting of an Evil spell.</entry>
-         <entry>You must never knowingly harm an innocent, or allow immediate harm to one through inaction when you know you could reasonably prevent it. This tenet doesn't force you to take action against possible harm to innocents at an indefinite time in the future, or to sacrifice your life to protect them.</entry>
-         <entry>You must act with honor, never taking advantage of others, lying, or cheating.</entry>
-         <entry>You must respect the lawful authority of legitimate leadership wherever you go, and follow its laws.</entry>
+   <rule>
+      <title>Cause</title>
+      <line>You devote yourself to a specific cause in your deity's name. Your cause adds to your edicts and anathema and grants you a special protective reaction called your champion's reaction.</line>
+      <line name="Justice">You chose justice. In your deity's name you seek justice, following the law and punishing those who transgress it. You gain the Retributive Strike champion's reaction.</line>
+      <line list="Justice edicts and anathema">
+         <entry name="Edicts">follow the law, respect legitimate authorities or leadership</entry>
+         <entry name="Anathema">take advantage of another, cheat</entry>
       </line>
+   </rule>
+
+   <rule>
+      <title>Retributive Strike</title>
+      <action>R</action>
+      <trait>Champion</trait> <trait>Divine</trait>
+      <trigger>An enemy damages your ally, and both are in your champion's aura</trigger>
+
+      <line>You protect your ally and strike your enemy. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within reach, make a melee Strike against it.</line>
    </rule>
 
    <rule>
@@ -125,19 +159,29 @@
    </rule>
 
    <rule>
-      <title>Retributive Strike</title>
-      <action>R</action>
+      <title>Aura of Courage</title>
+      <type>Feat</type> <level>4</level>
       <trait>Champion</trait>
-      <trigger>An enemy damages your ally, and both are within 15 feet of your</trigger>
+      <prerequisite>champion's aura, holy</prerequisite>
 
-      <line>You protect your ally and strike your foe. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within your reach, make a melee Strike against it.</line>
+      <line>You stand strong in the face of danager and inspire your allies to do the same. Whenever you become fightened, reduce the condition value by 1 (to a minimum of 0). At the end of your turn, each ally in your champion's aura reduces its frightened value by 1.</line>
    </rule>
 
    <rule>
-      <title>Divine Ally (Blade Ally)</title>
+      <title>Armor Expertise</title>
+      <line>You have spent so much time in armor that you know how to make the most of its protection. You gain the armor specialization effects of medium and heavy armor.</line>
+   </rule>
 
-      <line>A spirit of battle dwells within your armaments. Select one weapon or <![CDATA[<i>handwraps of mighty blows</i>]]> when you make your daily preparations. In your hands, the item gains the effect of a property rune and you also gain the weapon's critical specialization effect.</line>
-      <line>For a champion following the tenets of good, choose <![CDATA[<i>disrupting</i>, <i>ghost touch</i>, <i>returning</i>, or <i>shifting</i>]]>.</line>
+   <rule>
+      <title>Armor Specialization, Plate</title>
+      <line>The sturdy plate provides no purchase for a cutting edge. You gain resistance to slashing damage equal 1 + the value of the armor's <i>potency</i> rune for medium armor, or 2 + the value of the armor's <i>potency</i> rune for heavy armor.</line>
+   </rule>
+
+   <rule>
+      <title>Blessing of the devoted</title>
+
+      <line>Your deity blesses your service with a boon. This might come in the form of a spirit that visits you and inhabits your items or body, a mysterious divine tattoo upon your body, or the like. Choose one of the following blessings, or any other to which you have access.</line>
+      <line name="Blessed Armament">You chose blessed armament. Select one weapon or <i>handwraps of mighty blows</i>. You gain that armament's critical specialization effect, and you grant the armament a property rune of your choice from the following list: <i>fearsome</i>, <i>ghost touch</i>, <i>returning</i>, <i>shifting</i>, or <i>vitalizing</i>. During your daily preparations, you can change the spirit to inhabit a different armament, grant a different rune, or both.</line>
    </rule>
 
    <rule>
@@ -147,27 +191,33 @@
    </rule>
 
    <rule>
-      <title>Disrupting Rune</title>
+      <title>Critical Specialization, Shield</title>
+
+      <line>You knock the target back from you 5 feet. This is forced movement.</line>
+   </rule>
+
+   <rule>
+      <title>Fearsome Rune</title>
       <type>Item</type> <level>5</level>
-      <trait>Magical</trait> <trait>Necromancy</trait>
+      <trait>Emotion</trait> <trait>Fear</trait> <trait>Magical</trait> <trait>Mental</trait>
       <usage>etched onto a melee weapon</usage>
 
-      <line>A <![CDATA[<i>disrupting</i>]]> weapon pulses with positive energy, dealing an extra 1d6 positive damage to undead. On a critical hit, the undead is also enfeebled 1 until the end of your next turn.</line>
+      <line>When you critically hit with this weapon, the target becomes frightened 1.</line>
    </rule>
 
    <rule>
       <title>Ghost Touch Rune</title>
       <type>Item</type> <level>4</level>
-      <trait>Magical</trait> <trait>Transmutation</trait>
+      <trait>Magical</trait>
       <usage>etched onto a melee weapon</usage>
 
-      <line>The weapon can harm creatures without a physical form. A <![CDATA[<i>ghost touch</i>]]> weapon is particularly effective against incorporeal creatures, which almost always have a specific vulnerability to <![CDATA[<i>ghost touch</i>]]> weapons. Incorporeal creatures can touch, hold, and wield a <![CDATA[<i>ghost touch</i>]]> weapon (unlike most physical objects).</line>
+      <line>A weapon etched with this rune can harm creatures without a physical form. A <i>ghost touch</i> weapon is particularly effective against incorporeal creatures, which almost always have a specific vulnerability to <i>ghost touch</i> weapons. Incorporeal creatures can touch, hold, and wield a <i>ghost touch</i> weapon (unlike most physical objects).</line>
    </rule>
 
    <rule>
       <title>Returning Rune</title>
       <type>Item</type> <level>3</level>
-      <trait>Evocation</trait> <trait>Magical</trait>
+      <trait>Magical</trait>
       <usage>etched onto a thrown weapon</usage>
 
       <line>When you make a thrown Strike with this weapon, it flies back to your hand after the Strike is complate. If your hands are full when the weapon returns, it falls to the ground in your space.</line>
@@ -176,37 +226,24 @@
    <rule>
       <title>Shifting</title>
       <type>Item</type> <level>6</level>
-      <trait>Magical</trait> <trait>Magical</trait>
+      <trait>Magical</trait>
       <usage>etched onto a melee weapon</usage>
 
       <line>With a moment of manipulation, you can shift this weapon into a different weapon with a similar form.</line>
       <block>
-         <name>Activate</name> <action>1</action>
-         <type>Interact</type>
+         <name>Activate - Shift Weapon</name> <action>1</action>
+         <type>(manipulate)</type>
          <part><name>Effect</name>The weapon takes the shape of another melee weapon that requires the same number of hands to wield. The weapon's runes and any precious material it's made of apply to the weapon's new shape. Any property runes that can't apply to the new form are suppressed until the weapon takes a shape to which they can apply.</part>
       </block>
    </rule>
 
    <rule>
-      <title>Battle Medicine</title>
-      <type>Feat</type> <level>1</level>
-      <action>1</action>
-      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
-      <prereq>trained in Medicine</prereq>
-      <requirements>You are holding healder's tools, or you are wearing them and have a hand free</requirements>
+      <title>Vitalizing Rune</title>
+      <type>Item</type> <level>5</level>
+      <trait>Magical</trait> <trait>Vitality</trait>
+      <usage>etched onto a melee weapon</usage>
 
-      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day.</line>
-      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
-   </rule>
-
-   <rule>
-      <title>Aura of Courage</title>
-      <type>Feat</type> <level>4</level>
-      <trait>Champion</trait>
-      <prereq>tenets of good</prereq>
-
-      <line>You stand strong in the face of danger and inspire your allies to do the same. Whenever you become frightened, reduce the condition value by 1 (to a minimum of 0).</line>
-      <line>At the end of your turn, when you would reduce your frightened condition value by 1, you also reduce the value by 1 for all allies within 15 feet.</line>
+      <line>A <i>vitalizing</i> weapon pulses with vital energy, dealing an extra 1d6 persistent vitality damage to undead. On a critical hit, the undead is also enfeebled 1 until the end of your next turn.</line>
    </rule>
 
    <rule>
@@ -229,65 +266,73 @@
    <rule>
       <title>Refocus</title>
       <trait>Concentrate</trait> <trait>Exploration</trait>
-      <requirement>You have a focus pool, and you have spent at least 1 Focus Point</requirement>
+      <requirement>You have a focus pool</requirement>
 
-      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a good deity can usually Refocus while tending the wounds of their allies, and a wizard of the illusionist school might be able to Refocus while attempting to Identify Magic of the illusion school.</line>
+      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a holy deity can usually Refocus while tending the wounds of their allies.</line>
    </rule>
 
    <rule>
-      <title>Cast a Spell</title>
+      <title>Casting Spells</title>
 
-      <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
-      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity.</line>
-      <line name="Long Casting Times"> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes the required time with the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
-      <line name="Spell Components"> Each spell lists the spell components required to cast it, such as "material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
-      <line list="">
-         <entry name="Material (manipulate);">A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
-         <entry name="Somatic (manipulate);">A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
-         <entry name="Verbal (concentrate);">A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
-         <entry name="Focus (manipulate);">A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
-      </line>
-      <line name="Disrupted and Lost Spells">Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
+      <line>Casting a spell requires the caster to make gestures and utter incantations, so being unable to speak prevents spellcasting for most casters.</line>
+      <line>Spellcasting creates obvious sensory manifestations, such as bright lights, crackling sounds, and sharp smells from the gathering magic. Nearly all spells manifest a spell signature —a colorful, glowing ring of magical runes that appears in midair, typically around your hands, though what kind of spellcaster you are can affect this— academic wizards typically have neat and ordered signatures, while a druid's might be more organic and a cleric's might be inspired by their deity.</line>
+      <line>Spells can vary in how many actions they take. as shown in the spell's stat block. You cast cantrips, spells from spell slots, and focus spells using the same process, but must expend the spell when casting a spell from a spell slot and must spend 1 Focus Point to cast a focus spell. Some rules will refer to the Cast a Spell activity, such as "if the next action you use it to Cast a Spell." Any spell qualifies as a Cast a Spell activity, and any characteristics of the spell use those of the specific spell you're casting.</line>
+      <line name="Costs and Loci">Some spells require you to pay a cost or provide a locus. If the spell lists a <b>cost</b>, you must have the listed money, valuable materials, or other resources to cast the spell (such as gems or magical reagents), and they're expended during the casting. A <b>locus</b> is an object that funnels or directs the magical energy of the spell but is not consumed in its casting. As part of Casting the Spell, you retrieve the locus (if necessary, and if you have a hand free), and you can put it away again if you so choose. Loci tend to be expensive, and you need to acquire them in advance to cast the spell, but they aren't expended like costs are.</line>
+      <line name="Long Casting Times"> Some spells take minutes or hours to cast. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
+      <line name="Disrupted and Lost Spells">Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot and spent the spell's costs and actions. If a spell is disrupted during a Sustain action, the spell immediately ends.</line>
    </rule>
 
    <rule>
-      <title>Lay on Hands</title>
+      <title>Lay on Hands</title> <action>1</action>
       <type>Focus</type> <level>1</level>
-      <uncommon/> <trait>Champion</trait> <trait>Divine</trait> <trait>Healing</trait> <trait>Necromancy</trait> <trait>Positive</trait>
-      <cast action="1">somatic</cast>
+      <uncommon/> <trait>Champion</trait> <trait>Divine</trait> <trait>Focus</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Vitality</trait>
       <range>touch</range> <targets>1 willing living creature or 1 undead creature</targets>
 
-      <line>Your hands become infused with positive energy, healing a living creature or damaging an undead creature with a touch.</line>
-      <line>If you use <![CDATA[<i>lay on hands</i>]]> on a willing living target, you restore 6 Hit Points; if the target is one of your allies, they also gain a +2 status bonus to AC for 1 round.</line>
-      <line>Against an undead target, you deal 1d6 positive damage with a basic Fortitude damage; if the target fails, it also takes a -2 status penalty to AC for 1 round.</line>
+      <line>Your hands become infused with powerful vitality, capable of healing a living creature or damaging an undead creature with a touch.</line>
+      <line list="">
+         <entry name="Willing Living Creature">the target regains 6 Hit Points. If the target is someone other than yourself, it also gains a +2 status bonus to AC for 1 round.</entry>
+         <entry name="Undead Creature">the target takes 1d6 vitality damage with a basic Fortitude save; one a failure, the target also takes a -2 status penalty to AC for 1 round.</entry>
+      </line>
 
       <heighten value="+1">The amount of healing increases by 6, and the damage to an undead target increases by 1d6.</heighten>
    </rule>
 
    <rule>
-      <title>Fire Ray</title>
+      <title>Fire Ray</title> <action>2</action>
       <type>Focus</type> <level>1</level>
-      <uncommon/> <trait>Attack</trait> <trait>Champion</trait> <trait>Divine</trait> <trait>Evocation</trait> <trait>Fire</trait>
-      <cast action="2">somatic, verbal</cast>
+      <uncommon/> <trait>Attack</trait> <trait>Champion</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Fire</trait> <trait>Focus</trait> <trait>Manipulate</trait>
       <range>60 feet</range> <targets>1 creature</targets>
+      <duration>until the end of the target's next turn</duration>
+      <defense>AC</defense>
 
-      <line>A blazing band of fire arcs through the air. Make a ranged spell attack roll against the target. The ray deals 2d6 fire damage.</line>
+      <line>A blazing band of fire arcs through the air, lighting your opponent and the ground they stand upon on fire. Make a ranged spell attack roll against the target's AC. The ray deals 2d6 fire damage.</line>
       <line results="">
-         <critsuccess>The ray deals double damage and 1d4 persistent fire damage.</critsuccess>
-         <success>The ray deals full damage.</success>
+         <critsuccess>The target takes double damage.</critsuccess>
+         <success>The target takes full damage.</success>
       </line>
-      <heighten value="+1">The ray's initial damage increases by 2d6, and the persistent fire damage on a critical success increases by 1d4.</heighten>
+      <line>On any result other than a critical failure, the ground in the target's space catches fire, dealing 1d6 fire damage to each creature than ends its turn in one of the squares.</line>
+
+      <heighten value="+1">The ray's initial damage increases by 2d6, and the fire damage dealt by the burning space increases by 1d6.</heighten>
    </rule>
 
    <rule>
-      <title>Disrupt Undead</title>
-      <type>Cantrip</type> <level>1</level>
-      <trait>Cantrip</trait> <trait>Divine</trait> <trait>Necromancy</trait> <trait>Positive</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <targets>1 undead creature</targets>
-      <save>Fortitude</save>
+      <title>Light of Revelation</title> <action>2</action>
+      <type>Focus</type> <level>2</level>
+      <uncommon/> <trait>Champion</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Focus</trait> <trait>Light</trait> <trait>Manipulate</trait> <trait>Revelation</trait>
+      <area>30-foot emanation</area>
+      <duration>5 minutes</duration>
 
-      <line>You lance the target with energy. You deal 1d6 positive damage plus your spellcasting ability modifier. The target must attempt a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 for 1 round.</line>
+      <line>You shed a luminous aura, illuminating a 30-foot radius with bright light. You and allies in this light gain a +1 satus bonus to Perception checks to detect hidden or undetected creatures, as weall as hidden objects, doors, and other feature.</line>
+   </rule>
+
+   <rule>
+      <title>Vitality Lash</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Manipulate</trait> <trait>Vitality</trait>
+      <range>30 feet</range> <targets>1 creature that is undead or otherwise has void healing</targets>
+      <save>basic Fortitude</save>
+
+      <line>You demolish the target's corrupt essence with energy from Creation's Forge. You deal 2d6 vitality damage with a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 until the start of your next turn.</line>
 
       <heighten value="+1">The damage increases by 1d6.</heighten>
       <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate divine spell.</special>

@@ -33,6 +33,14 @@
    </rule>
 
    <rule>
+      <title>Diehard</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+
+      <line>It takes more to kill you than most. You die from the dying condition at dying 5, rather than dying 4.</line>
+   </rule>
+
+   <rule>
       <title>Cat Fall</title>
       <type>Feat</type> <level>1</level>
       <trait>General</trait> <trait>Skill</trait>
@@ -72,6 +80,7 @@
       <prereq>trained in Performance</prereq>
 
       <line>Your performances inspire admiration and win you fans. You can Make an Impression using Performance instead of Diplomacy.</line>
+      <line>If you spend at least 10 minutes performing in front of an audience, you can Make an Impression targeting up to 10 members of the audience who were there for the whole performance, without taking the normal penalty. The number of targets increases to 20 for a 1-hour performance and 50 for a 2-hour performance.</line>
    </rule>
 
    <rule>
@@ -79,12 +88,13 @@
       <type>Diplomacy</type>
       <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Exploration</trait> <trait>Linguistic</trait> <trait>Mental</trait>
 
-      <line>With at least 1 minute of conversation, during which you engage in charismatic overtures, flatter, and other acts of goodwill, you seek to make a good impression on someone to make them temporarily agreeable. At the end of the conversation, attempt a Diplomacy check against the Will DC of one target, modified by any circumstance the GM sees fit. Good impressions (or bad impressions, on a critical failure) last for only the current social interaction unless the GM decides otherwise.</line>
+      <line>With at least 1 minute of conversation, during which you engage in charismatic overtures, flatter, and other acts of goodwill, you seek to make a good impression on someone to make them temporarily agreeable. At the end of the conversation, attempt a Diplomacy check against the Will DC of one target. You can instead choose up to five targets if you take a -2 penalty. The GM might add other bonuses or penalties based on the situation.</line>
       <line results="">
          <critsuccess>The target's attitude toward you improves by two steps (such as from indifferent to helpful).</critsuccess>
          <success>The target's attitude toward you improves by one step (such as from indifferent to friendly).</success>
          <critfail>The target's attitude toward you decreases by one step (such as from indifferent to unfriendly).</critfail>
       </line>
+      <line>Any impression you make lasts for only the current social interaction unless the GM decides otherwise.</line>
    </rule>
 
    <rule>
@@ -117,18 +127,53 @@
    </rule>
 
    <rule>
-      <title>Anathema</title>
+      <title>Instinct</title>
+      <line>Your rage wells up from a dominant instinct -one you learned from a tradition or that comes naturally to you.</line>
+      <line name="Dragon Instinct">You summon the fury of a mighty dragon and manifest incredible abilities. Perhaps your culture reveres draconic majesty, or you gained insighty be drinking or bathing in dragon's blood or watching a marauding wyrm burn your village.</line>
+   </rule>
 
-      <line>Whenever you perform any of the following acts, you lose the Draconic Rage until you spend 1 day of downtime re-centering yourself, though you keep all of your other barbarian abilities.</line>
+   <rule>
+      <title>Furious Footfalls</title>
+      <line>The urge to fight drives you ever forward. You gain a +5-foot status bonus to your Speed. This bonus increases to +10 feet while you're raging.</line>
+   </rule>
+
+   <rule>
+      <title>Rage</title>
+      <action>1</action>
+      <trait>Barbarian</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Mental</trait>
+      <requirement>You aren't fatigued or raging.</requirement>
+
+      <line>You tap into your inner fury and begin raging. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. While you are raging:</line>
       <line list="">
-         <entry>You let a personal insult against you slide.</entry>
-         <entry>You fail to defeat a white dragon you come across.</entry>
+         <entry>You deal 2 additional damage with melee Strikes. This additional damage is halved if your weapon or unarmed attack is agile.</entry>
+         <entry>You can't use actions with the <u>concentrate</u> trait unless they also have the <u>rage</u> trait. You can Seek while raging.</entry>
       </line>
+      <line>Rage lasts for 1 minute, until you fall unconscious, or until the encounter ends, whichever comes first. You can't voluntarily stop raging.</line>
+      <line>When you stop raging, you lose any remaining temporary Hit Points from Rage, and you can't gain remporary Hit Points from using Rage again for 1 minute.</line>
+   </rule>
+
+   <rule>
+      <title>Draconic Rage (White Dragon)</title>
+
+      <line>When you you Rage, you can increase the additional damage from 2 to 4 and change it to cold damage instead of the damage type of your weapon or unarmed attack. If you do this, your Rage action gains the <u>arcane</u> and <u>cold</u> traits.</line>
+      <line name="Specialization Ability">When you use Draconic Rage, you increase the additional damage from Rage to 8. If you have greater weapon specialization, instead increase the damge from Rage to 16.</line>
+   </rule>
+
+   <rule>
+      <title>Quick-Tempered</title> <action>R</action>
+      <trait>Barbarian</trait>
+      <trigger>You roll initiative</trigger>
+      <requirements>You are not encumbered or wearing heavy armor</requirements>
+
+      <line>So long as you are able to move freely, your fury is instinctive and instantaneous. You Rage.</line>
    </rule>
 
     <rule>
-      <title>Deny Advantage</title>
-      <line>Your foes struggle to pass your defenses. You aren't flat-footed to hidden, undetected, or flanking creatures of your level or lower, or creatures of your or lower using Surprise Attack. However, they can still help their allies flank.</line>
+      <title>Acute Vision</title>
+      <type>Feat</type> <level>1</level>
+      <trait>Barbarian</trait>
+
+      <line>When you are raging, your visual senses improve, granting you darkvision.</line>
     </rule>
 
     <rule>
@@ -152,24 +197,30 @@
    </rule>
 
    <rule>
-      <title>Rage</title>
-      <action>1</action>
-      <trait>Barbarian</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Mental</trait>
-      <requirement>You aren't fatigued or raging.</requirement>
-
-      <line>You tap into your inner fury and begin raging. You gain a number of temporary Hit Points equal to your level plus your Constitution modifier. This frenzy lasts for 1 minute, until there are no enemies you can perceive, or until you fall unconscious, whichever comes first. You can voluntarily stop raging. While you are raging:</line>
-      <line list="">
-         <entry>You deal 2 additional damage with melee Strikes. This additional damage is halved if your weapon or unarmed attack is agile.</entry>
-         <entry>You take a -1 penalty to AC.</entry>
-         <entry>You can't use actions with the concentrate trait unless they also have the rage trait. You can Seek while raging.</entry>
-      </line>
-      <line>After you stop raging, you lose any remaining temporary Hit Points from Rage, and you can't Rage again for 1 minute.</line>
+      <title>Juggernaut</title>
+      <line>Your body is accustomed to physical hardship and resistant to ailments. When you roll a success on a Fortitude save, you get a critical success instead.</line>
    </rule>
 
    <rule>
-      <title>Draconic Rage (White Dragon)</title>
+      <title>Slippery Prey</title>
+      <type>Feat</type> <level>2</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Acrobatics or Athletics</prereq>
 
-      <line>When you you Rage, you can increase the additional damage from 2 to 4 and change it to cold damage instead of the damage type of your weapon or unarmed attack. If you do this, your Rage action gains the arcane, cold, and evocation traits.</line>
+      <line>You're able to escape bonds more easily than others. When you attempt to Escape using Acrobatics or Athletics, you reduce the multiple attack penalty for repeated attempts to -4 and -8 if you're trained in the skill. The penalty becomes -3 and -6 if you're a master in the appropriate skill.</line>
+      <line>If you're legendary in the skill, you don't take penalties for multiple Escape attempts in the same turn. Your attempts still have the <u>attack</u> trait and incur a multiple attack penalty for other actions.</line>
+   </rule>
+
+   <rule>
+      <title>Escape</title>
+      <trait>Attack</trait>
+
+      <line>You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC of a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose.</line>
+      <line results="">
+         <critsuccess>You get free and remove the grabbed, immobilized, or restrained condition imposed by your chosen target. You can then Stride up to 5 feet.</critsuccess>
+         <success>You get free and remove the grabbed, immobilized, or restrained conditions imposed by your chosen target.</success>
+         <critfail>You don't get free, and you can't attempt to Escape again until your next turn.</critfail>
+      </line>
    </rule>
 
     <rule>
@@ -178,7 +229,7 @@
       <trait>General</trait> <trait>Skill</trait>
       <prereq>trained in Athletics</prereq>
 
-      <line>You can attempt to Disarm, Grapple, Shover, or Trip creatures up to two sizes larger than you, or up to three sizes larger than you if you're legendary in Athletics.</line>
+      <line>You can attempt to Disarm, Grapple, Reposition, Shove, or Trip creatures up to two sizes larger than you, or up to three sizes larger than you if you're legendary in Athletics.</line>
    </rule>
 
    <rule>
@@ -197,21 +248,6 @@
    </rule>
 
    <rule>
-      <title>Trip</title>
-      <action>1</action>
-      <type>Athletics</type>
-      <trait>Attack</trait>
-      <requirement>You have at least one free hand. Your target isn't more than one size larger than you.</requirement>
-
-      <line>You try to knock a creature to the ground. Attempt an Athletics check against the target's Reflex DC.</line>
-      <line results="">
-         <critsuccess>The target falls and lands prone and takes 1d6 bludgeoning damage. The damage increases to 2d6 if you are a master in Athletics, and to 3d6 if you're legendary.</critsuccess>
-         <success>The target falls and lands prone.</success>
-         <critfail>You lose your balance, and fall prone.</critfail>
-      </line>
-   </rule>
-
-   <rule>
       <title>Grapple</title>
       <action>1</action>
       <type>Athletics</type>
@@ -224,6 +260,36 @@
          <success>Your target is grabbed until the end of your next turn unless you move or your target Escapes.</success>
          <fail>You fail to grab your target. If you already had the target grabbed or restrained using a Grapple, those conditions on that creature or object end.</fail>
          <critfail>If you already had the target grabbed or restrained, it breaks free. Your target can either grab you, as if it succeed at using the Grapple action against you, or force you to fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Reposition</title> <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand, or you're grabbing or restraining the target; The target can't be more than one size larger than you</requirement>
+
+      <line>You muscle a creature or object around. Attempt an Athletics check against the target's Fortitude DC.</line>
+      <line results="">
+         <critsuccess>You move the creature up to 10 feet.</critsuccess>
+         <success>You move the target up to 5 feet.</success>
+         <critfail>The target can move you up to 5 feet as though it successfully Repositioned you.</critfail>
+      </line>
+      <line>The target must remain within your reach during this movement, and you can't move it through or into obstacles.</line>
+   </rule>
+
+   <rule>
+      <title>Trip</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand. Your target isn't more than one size larger than you.</requirement>
+
+      <line>You try to knock a creature to the ground. Attempt an Athletics check against the target's Reflex DC.</line>
+      <line results="">
+         <critsuccess>The target falls and lands prone and takes 1d6 bludgeoning damage. The damage increases to 2d6 if you are a master in Athletics, and to 3d6 if you're legendary.</critsuccess>
+         <success>The target falls and lands prone.</success>
+         <critfail>You lose your balance, and fall prone.</critfail>
       </line>
    </rule>
 
@@ -247,20 +313,9 @@
       <type>Feat</type> <level>1</level>
       <action>2</action>
       <trait>Barbarian</trait> <trait>Flourish</trait>
-      <trait>Open</trait>
 
-      <line>With a quick sprint, you dash up to your foe and swing.</line>
-      <line>Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy.</line>
+      <line>With a quick sprint, you dash up to your foe and swing. Stride twice. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy.</line>
       <line>You can use Sudden Charge while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</line>
-   </rule>
-
-   <rule>
-      <title>Furious Finish</title>
-      <type>Feat</type> <level>2</level>
-      <action>1</action>
-      <trait>Barbarian</trait> <trait>Rage</trait>
-
-      <line>Desperate to finish the fight, you pour all your rage into one final blow. Make a Strike. If it hits, you gain a circumstance bonus to damage equal to the number of rounds remaining in your Rage (maximum 10). After this Strike, your Rage immediately ends, and you are fatigued until you rest for at least 10 minutes.</line>
    </rule>
 
    <rule>
@@ -270,6 +325,16 @@
       <trait>Barbarian</trait> <trait>Flourish</trait>
 
       <line>You make a wide, arcing swing. Make single melee Strike and compare the attack roll result to the ACs of up to two foes, each of whom must be within your melee reach and adjacent to the other. Roll damage only once and apply it to each creature you hit. A Swipe counts as two attacks for your multiple attack penalty.</line>
-      <line>If you're using a weapon with the sweep trait, its modifier applies to all your Swipe attacks.</line>
+      <line>If you're using a weapon with the <u>sweep</u> trait, its modifier applies to all your Swipe attacks.</line>
+   </rule>
+
+   <rule>
+      <title>Reactive Strike</title> <action>R</action>
+      <type>Feat</type> <level>6</level>
+      <trait>Barbarian</trait>
+      <trigger>A creature within your reach uses a <u>manipulate</u> action or a <u>move</u> action, makes a ranged attack, or leaves a square during a move action it's using</trigger>
+
+      <line>You lash out at a foe that leaves an opening. Make a melee Strike against the triggering creature. If your attack is a critical hit and the trigger was a <u>manipulate</u> action, you disrupt that action.</line>
+      <line>This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</line>
    </rule>
 </catalog>
