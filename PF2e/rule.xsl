@@ -248,6 +248,17 @@
          </div>
       </xsl:if>
 
+            <xsl:if test="tradition">
+               <div id="tradition" class="line" style="float: left;">
+                  <b>Traditions </b>
+                  <xsl:for-each select="tradition">
+                     <xsl:apply-templates/>
+                     <xsl:if test="position()!=last()">
+                        <xsl:text>, </xsl:text>
+                     </xsl:if>
+                  </xsl:for-each>
+               </div>
+            </xsl:if>
             <xsl:if test="prereq">
                <div id="prereq" class="line" style="float: left;">
                   <b>Prerequisites </b>
@@ -500,6 +511,14 @@
                <div id="activate" class="line" style="float: left;">
                   <b>Activate </b>
                   <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="activate/action" /></span>
+                  <xsl:if test="activate/action/@to">
+                     <xsl:text> to </xsl:text>
+                     <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="activate/action/@to" /></span>
+                  </xsl:if>
+                  <xsl:if test="activate/action/@or">
+                     <xsl:text> or </xsl:text>
+                     <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="activate/action/@or" /></span>
+                  </xsl:if>
                   <xsl:text> </xsl:text> <xsl:apply-templates select="activate/type"/>
                   <xsl:if test="activate/trigger">
                      <xsl:text>; </xsl:text><b>Trigger </b>
