@@ -43,41 +43,46 @@
       <line>Your elven magic manifests as a simple arcane spell, even if you aren't formally trained in magic. Choose one cantrip from the arcane spell list. You can cast this cantrip as an arcane innate spell at will. A cantrip is heighened to a spell level equal to half your level rounded up. Since this magic is innate, you can replace any material component with a somatic component.</line>
    </rule>
 
-      <rule>
-         <title>Prestidigitation</title>
-         <type>Cantrip</type> <level>1</level>
-         <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Evocation</trait>
-         <cast action="2">somatic, verbal</cast>
-         <range>10 feet</range> <targets>1 object (cook, lift, or tidy only)</targets>
-         <duration>sustained</duration>
-
-         <line>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the Spell. Each time you Sustain the Spell, you can choose one of four options.</line>
-         <line list="">
-            <entry><![CDATA[<b>Cook</b>]]> Cool, warm, or flavor 1 pound of nonliving material.</entry>
-            <entry><![CDATA[<b>Lift</b>]]> Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</entry>
-            <entry><![CDATA[<b>Make</b>]]> Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile; it can't be used as a tool, weapon, or spell component.</entry>
-            <entry><![CDATA[<b>Tidy</b>]]> Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.</entry>
-         </line>
-         <line><![CDATA[<i>Prestidigitation</i>]]> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the Spell.</line>
-         <line name="Otherwordly Magic:">You gained this cantrip from your Otherwordly Magic ancestry feat. It is an arcane innate spell.</line>
-      </rule>
-
    <rule>
-      <title>Raise a Shield</title>
-      <action>1</action>
-      <requirement>You are wielding a shield.</requirement>
+      <title>Prestidigitation</title>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Evocation</trait>
+      <cast action="2">somatic, verbal</cast>
+      <range>10 feet</range> <targets>1 object (cook, lift, or tidy only)</targets>
+      <duration>sustained</duration>
 
-      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
+      <line>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the Spell. Each time you Sustain the Spell, you can choose one of four options.</line>
+      <line list="">
+         <entry><![CDATA[<b>Cook</b>]]> Cool, warm, or flavor 1 pound of nonliving material.</entry>
+         <entry><![CDATA[<b>Lift</b>]]> Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</entry>
+         <entry><![CDATA[<b>Make</b>]]> Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile; it can't be used as a tool, weapon, or spell component.</entry>
+         <entry><![CDATA[<b>Tidy</b>]]> Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.</entry>
+      </line>
+      <line><![CDATA[<i>Prestidigitation</i>]]> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the Spell.</line>
+      <line name="Otherwordly Magic:">You gained this cantrip from your Otherwordly Magic ancestry feat. It is an arcane innate spell.</line>
+   </rule>
+   
+   <rule>
+      <title>Intimidating Glare</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Intimidation</prereq>
+
+      <line>You can Demoralize with a mere glare. When you do, Demoralize loses the auditory trait and gains the visual trait, and you don't take a penalty if the creature doesn't understand your language.</line>
    </rule>
 
    <rule>
-      <title>Shield Block</title>
-      <action>R</action>
-      <type>Feat</type> <level>1</level>
-      <trait>General</trait>
-      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+      <title>Demoralize</title>
+      <action>1</action>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
 
-      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
    </rule>
 
    <rule>
@@ -95,9 +100,7 @@
       </line>
 
       <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
-
-      <line><![CDATA[<b>Treat Wounds, healing by proficiency</b>]]></line>
-      <line list="">
+      <line list="Treat Wounds, healing by proficiency">
          <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
          <entry>Expert Proficiency (DC 20) - 2d8 + 10 / 4d8 + 10</entry>
          <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
@@ -124,6 +127,24 @@
       <prereq>expert in Medicine</prereq>
 
       <line>You zealously monitor a patient's progress to administer treatment faster. When you Treat Wounds, your patient becomes immune only for 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives.</line>
+   </rule>
+
+   <rule>
+      <title>Raise a Shield</title>
+      <action>1</action>
+      <requirement>You are wielding a shield.</requirement>
+
+      <line>You position your shield to protect yourself. When you have Raised a Shield, you gain its listed circumstance bonus to AC. Your shield remains raised until the start of your next turn.</line>
+   </rule>
+
+   <rule>
+      <title>Shield Block</title>
+      <action>R</action>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+
+      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
    </rule>
 
    <rule>
@@ -249,6 +270,15 @@
    </rule>
 
    <rule>
+      <title>Reach Spell</title>
+      <action>1</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
+
+      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
+   </rule>
+
+   <rule>
       <title>Order Spells</title>
 
       <line>Order spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you have a focus pool of 1 Focus Point for each focus spell you have, to a maximum of 3 Focus Points. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to commune with local nature spirits or otherwise tend to the wilderness in a way befitting your order.</line>
@@ -264,24 +294,29 @@
    </rule>
 
    <rule>
-      <title>Reach Spell</title>
-      <action>1</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
-
-      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
-   </rule>
-
-   <rule>
       <title>Tempest Surge</title>
       <type>Focus</type> <level>1</level>
       <uncommon /> <trait>Air</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Evocation</trait> <trait>Primal</trait>
       <cast action="2">somatic, verbal</cast>
       <range>30 feet</range> <targets>1 creature</targets>
-      <save>Reflex</save>
+      <save>basic Reflex</save>
 
       <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage. The Target must attempt a basic Reflex save. On a failure, the target also is clumsy 2 for 1 round and takes 1 persistent electricity damage.</line>
       <heighten value="+1">The initial damage increases by 1d12, and the persistent electricity damage on a failure increases by 1.</heighten>
+   </rule>
+   
+   <rule>
+      <title>Powerful Inhalation</title>
+      <type>Focus</type> <level>3</level>
+      <uncommon/> <trait>Air</trait> <trait>Druid</trait> <trait>Evocation</trait> <trait>Primal</trait>
+      <cast action="2">somatic, verbal</cast>
+      <area>10-foot emanation</area>
+      <save>basic Fortitude</save>
+      
+      <line>You rapidly draw the air from your surroundings, hoarding it for yourself. Creatures in the area when the spell is cast take 5d6 bludgeoning damage, with a basic Fortitude save. A creature that fails its save can't speak above a raspy whisper for 1 round. A creature that critically fails can't speak or use abilities that require it to breathe for 1 round. This prevents it from using effects that require speech, such as casting spells with verbal components, and from using a breath weapon or similar ability.</line>
+      <line>Creatures made of air (such as air elementals) attempting a save against this spell get a degree of success one worse than they rolled.</line>
+      
+      <heighten value="+1">The damage increases by by 2d6.</heighten>
    </rule>
 
    <rule>
@@ -331,7 +366,7 @@
          <entry>AC = 16 + your level. Ignore your armor check penalty and Speed reduction.</entry>
          <entry>5 temporary hit points.</entry>
          <entry>Low-light vision and imprecise scent 30 feet.</entry>
-         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
+         <entry>One or more unarmed melee attacks, which are the only attacks you can Strike with. You're trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
          <entry>Athletics modifier of +9, unless your own modifier is higher.</entry>
       </line>
       <line>You also gain specific abilities based on the type of animal you choose:</line>

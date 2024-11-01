@@ -61,6 +61,22 @@
    </rule>
 
    <rule>
+      <title>Ring of Energy Resistance</title>
+      <trait>Abjuration</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <type>Item</type> <level>6+</level>
+      <usage>worn</usage> <bulk>-</bulk>
+
+      <line>This ring grants you resistance against one type of energy damage: acid, cold, electricity, or sonic. Each ring is crafted to protect against a particular type of energy damage.</line>
+
+      <variant>
+         <type>acid resistance</type> <level>6</level>
+         <price>245 gp</price>
+
+         <line>This ring is adorned with an emerald. It grants resistance 5 acid.</line>
+      </variant>
+   </rule>
+
+   <rule>
       <title>Navigator's Star</title>
       <type>Item</type> <level>1</level>
       <trait>Divination</trait> <trait>Invested</trait> <trait>Magical</trait> <trait>Tattoo</trait>
@@ -100,22 +116,6 @@
    </rule>
 
    <rule>
-      <title>Ring of Energy Resistance</title>
-      <trait>Abjuration</trait> <trait>Invested</trait> <trait>Magical</trait>
-      <type>Item</type> <level>6+</level>
-      <usage>worn</usage> <bulk>-</bulk>
-
-      <line>This ring grants you resistance against one type of energy damage: acid, cold, electricity, or sonic. Each ring is crafted to protect against a particular type of energy damage.</line>
-
-      <variant>
-         <type>acid resistance</type> <level>6</level>
-         <price>245 gp</price>
-
-         <line>This ring is adorned with an emerald. It grants resistance 5 acid.</line>
-      </variant>
-   </rule>
-
-   <rule>
       <title>Gate Attenuator</title>
       <type>Item</type> <level>3</level>
       <trait>Invested</trait> <trait>Magical</trait>
@@ -136,104 +136,5 @@
          <part><name>water</name><![CDATA[<i>snowball</i>]]></part>
          <part><name>wood</name><![CDATA[<i>flourishing flora</i>]]></part>
       </block>
-   </rule>
-
-   <rule>
-      <title>Dehydrate</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Fire</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <area>5-foot burst</area>
-      <save>Fortitude (see text)</save> <duration>1 minute</duration>
-
-      <line>You stir the inner fire of all things within the area, driving out moisture. All creatures in the area take 1d6 persistent fire damage with a basic Fortitude save; creatures with the water or plant traits get a result one degree of success worse than they rolled. The spell ends for a creature when its persistent damage ends.</line>
-      <line>A creature affected by <![CDATA[<i>dehydrate</i>]]> attempts an additional Fortitude save at the end of each of its turns, before rolling to recover from the persistent damage. It can forgo this additional save if it consumed water or similar hydrating liquid within the last round (typically, drinking requires a single action).</line>
-      <line results="">
-         <success>The creature takes no additional effect.</success>
-         <fail>The creature is enfeebled 1 until the end of its next turn.</fail>
-         <critfail>The creature is enfeebled 2 until the end of its next turn.</critfail>
-      </line>
-      <!-- <heighten value="+2">The range increases by 10 feet, the burst increases by 5 feet, and the persistent fire damage increases by 3d6.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Flourishing Flora</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Conjuration</trait> <trait>Plant</trait> <trait>Wood</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <area>5-foot burst</area>
-      <save>basic Reflex</save>
-
-      <line>Plants rapidly grow up from the ground. All creatures in the target area take 2d4 damage. The type of damage depends on the type of plant you choose to grow. On a critical failure, targets experience additional effects, also depending on what you choose to grow. The type of plant and its effects are chosen when you Cast the Spell.</line>
-      <line list="">
-         <entry name="Cacti">Piercing damage, and 1 persistent bleed damage on a critical failure.</entry>
-         <entry name="Flowers">Poison damage, and dazzled for 2 rounds on a critical failure.</entry>
-         <entry name="Fruits">Bludgeoning damage, and clumsy 1 for 2 rounds on a critical failure.</entry>
-         <entry name="Roots">Bludgeoning damage, and the affected creatures fall prone on a critical failure.</entry>
-      </line>
-      <!-- <heighten value="+1">The damage increases by 1d4, and the persistent bleed damage from cacti increases by 1.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Gust of Wind</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Air</trait> <trait>Evocation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <area>60-foot line.</area>
-      <save>Fortitude</save> <duration>until the start of your next turn</duration>
-
-      <line>A violent wind issues forth from your palm, blowing from the point where you are when you cast the spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Large or smaller creatures in the area must attempt a Fortitude save. Large or smaller creatures that later move into the gust must attempt the save when entering.</line>
-      <line results="">
-         <critsuccess>The creature is unaffected.</critsuccess>
-         <success>The creature can't move against the wind.</success>
-         <fail>The creature is knocked prone. If it was flying, it suffers the effects of critical failure instead.</fail>
-         <critfail>The creature is pushed 30 feet in the wind's direction, knocked prone, and takes 2d6 bludgeoning damage.</critfail>
-      </line>
-   </rule>
-
-   <rule>
-      <title>Pummeling Rubble</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Earth</trait> <trait>Evocation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <area>15-foot cone</area>
-      <save>Reflex</save>
-
-      <line>A spray of heavy rocks flies through the air in front of you. The rubble deals 2d4 bludgeoning damage to each creature in the area. Each creature must attempt a Reflex save.</line>
-      <line results="">
-         <critsuccess>The creature is unaffected.</critsuccess>
-         <success>The creature takes half damage.</success>
-         <fail>The creature takes full damage and is pushed 5 feet away from you.</fail>
-         <critfail>The creature takes double damage and is pushed 10 feet away from you.</critfail>
-      </line>
-      <!-- <heighten value="+1">The damage increases by 2d4.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Snowball</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Attack</trait> <trait>Cold</trait> <trait>Evocation</trait> <trait>Water</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>30 feet</range> <targets>1 creature</targets>
-
-      <line>You throw a magically propelled and chilled ball of dense snow. The target takes 2d4 cold damage and potentially other effects, depending on the result of your ranged spell attack roll.</line>
-      <line results="">
-         <critsuccess>The target takes double damage and a -10-foot status penalty to its Speeds for 1 round.</critsuccess>
-         <success>The target takes full damage and a -5-foot status penalty to its Speeds for 1 round.</success>
-         <fail>No effect.</fail>
-      </line>
-      <!-- <heighten value="+1">The damage increases by 2d4.</heighten> -->
-   </rule>
-
-   <rule>
-      <title>Thunderstrike</title>
-      <type>Spell</type> <level>1</level>
-      <trait>Electricity</trait> <trait>Evocation</trait> <trait>Sonic</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>120 feet</range> <targets>1 creature</targets>
-      <save>basic Reflex</save>
-
-      <line>You call down a tendril of lightning that cracks with thunder, dealing 1d12 electricity damage and 1d4 sonic damage to the target with a basic Reflex save. A target wearing metal armor or made of metal takes a -1 circumstance penalty to its save and, if damaged by the spell, is clumsy 1 for 1 round.</line>
-      <!-- <heighten value="+1">The damage increases by 1d12 electricity and 1d4 sonic.</heighten> -->
    </rule>
 </catalog>
