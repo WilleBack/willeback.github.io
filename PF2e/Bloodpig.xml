@@ -1,0 +1,91 @@
+@ -0,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Game rules</title>
+      <line>The aim of the game is to get the pig into the goal, which scores your team 1 point. The first team to 5 points wins.</line>
+      <line>At the start of a round, all contestants start in the central circle on their side of the field. The first pig of the round is released at a random end, following ones from the end opposite the scoring goal.</line>
+      <line>A round ends after a total of 3 scored points. There is a 20-minute break between rounds.</line>
+      <line>Weapons and attack spells are not allowed during a match, though unarmed strikes are allowed - encouraged, even.</line>
+   </rule>
+
+   <rule>
+      <title>The pig</title>
+      <line>If the pig is unattended at initiative score 10, it moves up to 30 feet to be as far away from all contestants as it can. The pig will not enter a space adjacent to a contestants unless it has no other route to move.</line>
+      <line>If you hold the pig at the start of your turn and it is not restrained, you must roll 1d6 on the Pig Action table.</line>
+      <line list="Pig Action">
+         <entry name="1 - Slump">The pig does nothing.</entry>
+         <entry name="2 - Squirm">You must succeed at an Acrobatics DC 15 check, or you drop the pig in a random adjacent square.</entry>
+         <entry name="3 - Squeal">You gain a +2 circumstance bonus to Work the Crowd until the end of your next turn.</entry>
+         <entry name="4 - Kick">You must succeed at an Athletics DC 15 check, or you drop the pig in a random adjacent square.</entry>
+         <entry name="5 - Bite">The pig makes an unarmed melee Strike against you. It has a +7 attack bonus and deals 1d6+1 piercing damage.</entry>
+         <entry name="6 - Panic">All the other results, in order.</entry>
+      </line>
+      <line>The pig has 6 HP, AC 15, and all its saves are +4. An unconscious pig does not move when unattended, and does not perform an action.</line>
+      <line>You can catch an unattended pig by Grappling it, or a pig held by another contestant by Disarming them of the pig.</line>
+   </rule>
+
+   <rule>
+      <title>Throw the Pig</title>
+      <action>1</action>
+      <trait>Attack</trait>
+
+      <line>You throw the pig. It counts as an improvised thrown weapon and has a range increment of 10ft., or 20ft. if it slumped or you have it restrained.</line>
+      <line>Make a ranged attack roll (with a -2 penalty for using an improvised weapon). You need to hit AC 10 for a specific square, or AC 16 for the goal.</line>
+      <line results="">
+         <critsuccess>The pig lands where you intended for it to. The DC to Intercept the Pig is 25.</critsuccess>
+         <success>As critical success, but the DC to Intercept the Pig is 20.</success>
+         <fail>The pig lands in a random square adjacent to the square you aimed at.</fail>
+         <critfail>The pig lands in a random square 10ft. away from the square you aimed at.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Intercept the Pig</title>
+      <trait>Manipulate</trait>
+      <trigger>A thrown pig passes through a square adjacent to you or through your square</trigger>
+
+      <line>Make an Athletics check to stop the pig. The DC depends on the result of the check made to Throw the Pig.</line>
+      <line results="">
+         <critsuccess>You catch the pig, and must roll 1d6 on the Pig Action table.</critsuccess>
+         <success>You stop the pig. It lands in a random space adjacent to you.</success>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Catch the Pig</title>
+      <action>R</action>
+      <trait>Manipulate</trait>
+      <trigger>A thrown pig lands in your square</trigger>
+
+      <line>Make an Acrobatics or Athletics check to catch the pig. The DC is 15 if the pig accidentally landed in your square, or 10 if it was aimed at your square.</line>
+      <line results="">
+         <critsuccess>You catch the pig.</critsuccess>
+         <success>You catch the pig, but must roll 1d6 on the Pig Action table.</success>
+         <fail>You don't catch the pig.</fail>
+         <critfail>The pig lands in a random square adjacent to you instead of in your square.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Work the Crowd</title>
+      <action>1</action>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Linguistic</trait>
+
+      <line>You work the crowd. Choose one of the following options:</line>
+      <line list="">
+         <entry name="Support Your Team">You coax the crowd take your side. The crowd's cheers grant your members of your team a status bonus to attack rolls to Throw the Pig and checks to Catch the Pig.</entry>
+         <entry name="Rile the Opposing Team">You turn the crowd against your opponents. The jeering gives the opposing team a status penalty to attack rolls to Throw the Pig and checks to Catch the Pig.</entry>
+         <entry name="Call for Blood">You make the crowd want to see a fight. The hooting and hollering gives all contestants a status bonus to attack rolls against other contestants and to checks to Intercept the Pig.</entry>
+      </line>
+      <line>All effects last until the start of your next turn. You can make a Performance check for any option, a Diplomacy check to Support Your Team, or an Intimidate check to Call for Blood. The DC is equal to 25 - the total number of points scored. If the crowd is currently against your team, the DC is the higher of this DC or the opponent's Performance DC.</line>
+      <line results="">
+         <critsuccess>The crowd grants a +2 status bonus or -2 status penalty.</critsuccess>
+         <success>The crowd grants a +1 status bonus or -1 status penalty.</success>
+         <fail>You do not impress the crowd.</fail>
+         <critfail>You strike a nerve with the crowd. The crowd's boos give you (but not your team) a -1 status penalty to the checks or attack rolls you attempted to affect.</critfail>
+      </line>
+   </rule>
+</catalog>

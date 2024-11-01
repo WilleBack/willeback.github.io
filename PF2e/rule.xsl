@@ -538,10 +538,7 @@
    </xsl:template>
 
    <xsl:template name="description">
-      <div id="description" class="line" style="float: left;">
-         <xsl:apply-templates select="line[1]"/>
-      </div>
-      <xsl:for-each select="line[position()>1]">
+      <xsl:for-each select="line">
          <xsl:choose>
             <xsl:when test="@results">
                <div id="resultblock" class="line" style="float: left, padding: 0.4em;">
@@ -728,6 +725,14 @@
 
    <xsl:template match="text()">
       <xsl:value-of select="." disable-output-escaping="yes"/>
+   </xsl:template>
+
+   <xsl:template match="act">
+      <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:apply-templates/></span>
+   </xsl:template>
+
+   <xsl:template match="br">
+      <br/>
    </xsl:template>
 
    <xsl:template match="b">

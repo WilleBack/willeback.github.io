@@ -1,0 +1,234 @@
+@ -0,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <category>Circus Performance</category>
+      <line>A circus performance consists of two parts: Preshow Activities, and the Big Show. During these parts you build up Anticipation and Excitement, which determine the how successful your show is in the end.</line>
+      <block><name>Anticipation</name>
+         <part>Anticipation represents the interest in the show, which can loosely describe the size of the audience and the amount of money they are willing to spend on the show if they are entertained. Without a large circus tent or other venue, the maximum Anticipation is 20.
+         <![CDATA[<br/>]]>Increasing Anticipation is mainly done in the lead-up to the show with the Promote the Show activity. During a show, particularly impressive and successful performances can also create Anticipation, while abysmal performances can decrease Anticipation.</part>
+      </block>
+      <block><name>Excitement</name>
+         <part>Excitement represents how much fun and entertainment the crowd is having at the show. Excitement is gained and lost through Acts in the show.
+         <![CDATA[<br/>]]>If the amount of Excitement generated equals or exceeds the Anticipation for the show, the show can be considered a success (see Payout), or a critical success if the Excitement exceeds the Anticipation by 10 or more.</part>
+      </block>
+      <block><name>Payout</name>
+         <part>If at least one successful trick was performed in each Act and the Excitement equals or exceeds the Anticipation, the show is a success and generates gold pieces equal to the Anticipation. On a critical success, you earn an additional 50% gold pieces, and on a failure, you only earn 25% of the gold pieces.</part>
+      </block>
+      <block><name>Preshow Activities</name>
+         <part>You can build anticipation for up to a week leading to the performance. Building anticipation involves spreading flyers, talking up the people, and otherwise selling the populace on the wonders they will see at the performance.
+         <![CDATA[<br/>]]>Alternatively, you can spend time practicing or learning a trick.</part>
+      </block>
+   </rule>
+
+   <rule>
+      <title>Promote the Show</title>
+      <type>Preshow Activity</type>
+      <trait>Circus</trait> <trait>Downtime</trait>
+
+      <line>You spend 2 consecutive days in a settlement generating Anticipation for your next show. Attempt a Diplomacy check, Society check, or an appropriate Lore check. The DC for the check is the standard DC of the settlement's level if you make a Society or Lore check, standard DC +2 for a Diplomacy check, or standard DC -2 for an especially appropriate Lore check.</line>
+      <line>Another character can spend the same 2 days to Aid your check. Only one character can Promote the Show at a time.</line>
+      <line results="">
+         <critsuccess>You generate Anticipation equal to twice your level or the settlement's level, whichever is lower, plus your Charisma modifier (minimum 2 Anticipation).</critsuccess>
+         <success>You generate Anticipation equal to your level or the settlement's level, whichever is lower, plus your Charisma modifier (minimum 1 Anticipation).</success>
+         <fail>You generate Anticipation equal to your Charisma modifier (minimum 1 Anticipation).</fail>
+         <critfail>You generate no Anticipation.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Group Rehearsal</title>
+      <type>Preshow Activity</type>
+      <trait>Circus</trait> <trait>Downtime</trait> <trait>Practice</trait>
+      <requirement>trained in Performance or an applicable Lore</requirement>
+
+      <line>You spend 2 days to help another performer hone their performance. The chosen performer must spend the same 2 days doing Group Rehearsal, helping either you or another performer. Make a Performance check or an applicable Lore check against the standard DC of the other performer's level.</line>
+      <line results="">
+         <critsuccess>The other performer gains a +2 circumstance bonus to one Perform a Trick check during the next show.</critsuccess>
+         <success>The other performer gains a +1 circumstance bonus to one Perform a Trick check during the next show.</success>
+         <critfail>The other performer suffers a -1 circumstance penalty to the first Perform a Trick check during the next show.</critfail>
+      </line>
+      <line>The other performer can choose to gain the bonus after making the check.</line>
+   </rule>
+
+   <rule>
+      <title>Learn a Trick</title>
+      <type>Preshow Activity</type>
+      <trait>Circus</trait> <trait>Downtime</trait> <trait>Practice</trait>
+
+      <line>You spend time learning to perform a single, specific trick. Choose one or more trick traits, including specialized traits, for your trick. You can perform the trick for one week after you learn it.</line>
+      <line>Make a check against the standard DC of the trick's level using Perform, an appropriate Lore, or another skill associated with the trick to determine how long it takes for you to learn the trick. The DC increases by +2 if the trick has three traits, or +5 if it has four traits. Use the same skill that will be used for the trick. You can choose to stop this activity when you have spent half the time, but the time spent will have no effect.</line>
+      <line results="">
+         <critsuccess>You learn the trick in 1 day.</critsuccess>
+         <success>You learn the trick in 2 days.</success>
+         <fail>You learn the trick in 4 days.</fail>
+         <critfail>You learn the trick in 4 days, but have a -2 circumstance penalty to checks to perform it.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Practice a Trick</title>
+      <type>Preshow Activity</type>
+      <trait>Circus</trait> <trait>Downtime</trait> <trait>Practice</trait>
+      <requirement>trained in Performance or an applicable Lore</requirement>
+
+      <line>With a bit of repetition and 2 days of time, you hone your performance. Choose one specific trick, including the trick traits and skill used for it. If you are an expert at Performance or an applicable Lore, you can choose two tricks, if you are a master, you can choose three tricks, or if you are legendary, you can choose four.</line>
+      <line>Make a check against the standard DC -2 of the trick's level, or the standard DC if the highest-level trick's level if you are practicing more than one. You can use Performance, or the skill used for the trick.</line>
+      <line results="">
+         <critsuccess>You gain a +4 circumstance bonus to the first Perform a Trick action you use the perform the chosen trick.</critsuccess>
+         <success>You gain a +2 circumstances bonus to the first Perform a Trick action you use to perform the chosen trick.</success>
+         <critfail>You suffer a -2 circumstance penalty to the first Perform a Trick action you use to perform the chosen trick.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <category>The Show</category>
+      <line>During a show, most characters will be performers who perform their tricks to entertain the audience and generate Excitement. Shows usually also have a ringmaster who brings the hype, and often have a medic or stagehand. A character can only have one of the these roles for a given show. Each role has one or more show actions they can perform. A performer has three actions and a reaction during each act, and the other roles have three actions and a reaction during the whole show.</line>
+      <line>A full show consists of four acts: an Opener, a Build-up, the Big Number, and the Grand Finale.</line>
+      <block><name>Performer</name>
+         <part>The performers are the stars of the show. A show must have at least one performer, and having more then one makes successful shows more likely.</part>
+      </block>
+      <block><name>Ringmaster</name>
+         <part>The ringmaster is there to hype up the audience. The ringmaster can Costar any performance using their reaction, and always uses Diplomacy for their check.</part>
+      </block>
+      <block><name>Medic</name>
+         <part>When a performer gets injured, the medic is there to help them out.</part>
+      </block>
+      <block><name>Stagehand</name>
+         <part>The stagehand is every performer's best friend.</part>
+      </block>
+   </rule>
+
+   <rule>
+      <category>The Four Acts</category>
+      <line>The four acts that make up a show are Opener, Build-up, the Big Number, and the Grand Finale. For a show to be successful, at least one Perform a Trick must succeed in each act. Each act also has additional rules.</line>
+      <line name="Opener">The Opener can only have one performer. If the performer succeeds in Performing a Trick at least twice, he or she gains either:</line>
+      <line list="">
+         <entry>2 maximum Anticipation.</entry>
+         <entry>1 Excitement for the first successful Perform a Trick in each of the other acts.</entry>
+         <entry>Reduces the amount of Anticipation lost by 1 for the rest of the show.</entry>
+      </line>
+      <line name="Build-up">The Build-up must have at least two performers. One of the performers in this act is the lead performer. If the lead performer successfully Performs a Trick, and all performed successfully Perform a number of Tricks equal to 1.5x the number of performers, rounded up, the lead performer generates Anticipation equal to the level of the highest-level trick he or she successfully performed.</line>
+      <line name="Big Number">Only one performer can be part of the Big Number. If the performer succeeds in Performing a Trick at least twice, he or she gains Excitement equal to the level of the highest-level trick he or she succeeded on, and increases the maximum Anticipation by 2.</line>
+      <line name="Grand Finale">The Grand Finale must have at least two performers. If the performers successfully Perform three Tricks that each have at least one trait that is not shared by other tricks in this act, the act generates additional Excitement equal to the highest amount of Excitement generated during the act, plus 1 Excitement for each performer.</line>
+   </rule>
+
+   <rule>
+      <title>Perform a Trick</title> <action>1</action>
+      <type>Performer</type>
+      <trait>Circus</trait>
+
+      <line>You perform a trick. This action has the same traits as the trick you perform.</line>
+      <line>Make the check associated with your trick. You take a -5 penalty to the second check you make during the same act, or a -10 penalty to the third check.</line>
+      <line>If you Perform the exact same Trick during a show, previous checks always count towards this penalty, even if they were made in a different act. For example, if you performed a trick once in a previous act, you would take a -5 penalty when you Perform the Trick as the first trick in an act, or a -10 penalty as the second trick.</line>
+      <line results="">
+         <critsuccess>You generate Excitement equal to twice the trick's level, and Anticipation equal to the trick's level.</critsuccess>
+         <success>You generate Excitement equal to the trick's level.</success>
+         <fail>You lose Excitement equal one-half the trick's level.</fail>
+         <critfail>You lose Excitement equal to the trick's level, and 1 Anticipation.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Take a Risk</title> <action>1</action>
+      <type>Performer</type>
+      <trait>Circus</trait>
+
+      <line>You push your next trick to the limits, overexerting yourself or inviting terrible consequences to failure. Your next trick gains the <![CDATA[<u>injury</u>]]> trait. If it already has the trait, increase the DC of the flat check by 2 instead. If you successfully Perform the Trick, you generate additional Excitement equal to one-half the trick's level.</line>
+   </rule>
+
+   <rule>
+      <title>Costar</title> <action>R</action>
+      <type>Performer</type>
+      <trait>Circus</trait>
+      <trigger>Another performer in the same act as you is about to Perform a Trick</trigger>
+      <requirement>The performer is willing to accept your aid, and you are trained in the skill associated with the trick</requirement>
+
+      <line>You help another performer to pull off their trick, possibly granting them a bonus to the triggering check. Attempt a DC 15 check with the same skill associate with the triggering trick. This counts as the Aid action.</line>
+      <line results="">
+         <critsuccess>You grant the performer a +2 circumstance bonus to his or her check. If you are a master in the skill, you grant a +3 circumstance bonus instead, or a +4 circumstance bonus if you are legendary.</critsuccess>
+         <success>You grant the performer a +1 circumstance bonus to his or her check.</success>
+         <critfail>You lose 1 Excitement.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Hype Performance</title> <action>1</action>
+      <type>Ringmaster</type>
+      <trait>Circus</trait>
+      <requirement>trained in Diplomacy, Deception, or Society</requirement>
+
+      <line>You call extra attention to a performance. You must use this action at the start of an act.</line>
+      <line>Choose a number of Anticipation up to one-half your level. You immediately lose this much Anticipation and increase the maximum Anticipation by that amount. Until the end of the act, for each successful Perform a Trick, you generate this much Anticipation. For each Perform a Trick that critically fails, you lose this much Anticipation again.</line>
+   </rule>
+
+   <rule>
+      <title>Highlight Performance</title> <action>1</action>
+      <type>Ringmaster</type>
+      <trait>Circus</trait>
+      <requirement>trained in Diplomacy or Performance</requirement>
+
+      <line>You remind the audience of a successful performance. You must use this action at the end of an act.</line>
+      <line>Choose one successful performance from the current act and make a Diplomacy or Performance check against the standard DC of the trick's level. This action takes a -5 penalty if you take it a second time during the show, and a -10 penalty if you take it a third time.</line>
+      <line results="">
+         <critsuccess>You generate Excitement equal to the trick's level plus your Charisma modifier (minimum 2 Excitement), and Anticipation equal to the trick's level.</critsuccess>
+         <success>You generate Excitement equal to one-half the trick's level plus your Charisma modifier (minimum 1 Excitement).</success>
+         <critfail>You lose Excitement equal to the trick's level.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Mitigate Risk</title> <action>1</action>
+      <type>Medic</type>
+      <trait>Circus</trait>
+      <requirement>trained in Medicine; the next performer is willing to accept your aid</requirement>
+
+      <line>The next performer can roll twice for the flat check to see if they are injured, and keeps the higher result.</line>
+   </rule>
+
+   <rule>
+      <title>Treat Injury</title> <action>1</action>
+      <type>Medic</type>
+      <trait>Circus</trait>
+      <requirement>trained in Medicine</requirement>
+
+      <line>You attempt to treat one injured performer. Make a Medicine check against the standard DC of the trick that caused the injury. On a success, you remove the injury.</line>
+   </rule>
+
+   <rule>
+      <title>Assist a Performer</title> <action>1</action>
+      <type>Stagehand</type>
+      <trait>Circus</trait>
+      <requirement>the next performer is willing to accept your aid</requirement>
+
+      <line>You focus on helping the next performer. Make a DC 15 Performance check. If the next performer is willing to lock in which trick they will perform, you can use the skill associated with that trick instead. This counts as the Aid action.</line>
+      <line results="">
+         <critsuccess>You grant the performer a +2 circumstance bonus to his or her check. If you are a master in the skill, you grant a +3 circumstance bonus instead, or a +4 circumstance bonus if you are legendary.</critsuccess>
+         <success>You grant the performer a +1 circumstance bonus to his or her check.</success>
+         <critfail>You lose 1 Excitement.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Distract the Audience</title> <action>1</action>
+      <type>Stagehand</type>
+      <trait>Circus</trait>
+      <requirement>a performer just failed or critically failed to Perform a Trick</requirement>
+
+      <line>You cover up for the shortcomings of a performer. If the last check to Perform a Trick was a failure, it counts as a success instead. If it was a critical failure, it counts as a failure instead.</line>
+      <line name="Special">You can use this action only once per act.</line>
+   </rule>
+
+   <rule>
+      <title>Deliver Props</title> <action>R</action>
+      <type>Stagehand</type>
+      <trait>Circus</trait> <trait>Prop</trait>
+      <trigger>A performer is about to Perform a Trick with the <![CDATA[<u>prop</u>]]> trait</trigger>
+      <requirement>the next performer is willing to accept your aid</requirement>
+
+      <line>You deliver the necessary props to the next performer, allowing him or her to focus on the trick itself. He or she can roll twice and use the higher result for the triggering check.</line>
+   </rule>
+
+</catalog>

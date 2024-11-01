@@ -11,28 +11,28 @@
    <rule>
       <title>Whisper Elf</title>
 
-      <line>Your ears are finely tuned, able to detect even the slightest whisper of sound. As long as you can hear normally, you can use the Seek action to sense undetected creatures in a 60-foot cone instead of a 30-foot cone. You also gain a +2 circumstance bonus to locate undetected creatures that you could hear within 30 feet with a Seek action.</line>
+      <line>Your ears are finely tuned, able to detect even the slightest whisper of sound. You gain a +2 circumstance bonus when using the Seek action to find hidden or undetected creatures within 30 feet of you. When you target an opponent that is concealed from you or hidden from you, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one. This benefit doesn't apply if you can't hear or if the creature is incapable of making sound (for example, it's affected by a <i>silence</i> spell).</line>
    </rule>
 
    <rule>
-      <title>Seek</title>
-      <action>1</action>
+      <title>Seek</title> <action>1</action>
+      <trait>Concentrate</trait> <trait>Secret</trait>
 
-      <line>You scan an area for signs of creatures of objects. If you're looking for creatures, choose an area you're scanning. If precision is necessary, the GM can have you select a 30-foot cone or a 15-foot burst within line of sight. You might take a penalty if you choose an area that's far away.</line>
-      <line>If you're using Seek to search for objects (including secret doors and hazards), you search up to a 10-foot square adjacent to you. The GM might determine you need to Seek as an activity, taking more actions or even minutes or hours if you're searching a particularly cluttered area.</line>
-      <line>The GM attempts a single secret Perception check for you and compares the result to the Stealth DCs of any undetected or hidden creatures in the area or the DC to detect each object in the area (as determined by the GM or by someone Concealing the Object). A creature you detect might remain hidden, rather than becoming observed, if you're using an imprecise sense (such as hearing) or if an effect (such as an <![CDATA[<i>invisibility</i>]]> spell) prevents it from being observed.</line>
+      <line>You scan an area for signs of creatures of objects, possibly including secret doors or hazards. Choose an area to scan. The GM determines the area you can scan with one Seek action -almost always 30 feet or less in any dimension. The GM might impose a penalty if you search far away from you or adjust the number of actions it takes to Seek a particularly cluttered area.</line>
+      <line>The GM attempts a single secret Perception check for you and compares the result to the Stealth DCs of any undetected or hidden creatures in the area, or the DC to detect each object in the area (as determined by the GM or by someone Concealing the Object). A creature you detect might remain hidden, rather than becoming observed, if you're using an imprecise sense (such as hearing) or if an effect (such as <i>invisibility</i>) prevents the subject from being observed.</line>
       <line results="">
-         <critsuccess>If you were searching for creatures, any undetected or hidden creature you critically succeeded against becomes observed by you. If you were searching for an object, you learn its location.</critsuccess>
-         <success>If you were searching for creatures, any undetected creature you succeeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. If you were searching for an object, you learn its location or get a clue to its whereabouts, as determined by the GM.</success>
+         <critsuccess>Any undetected or hidden creature you critically succeeded against becomes observed by you. You learn the location of objects in the area you critically succeeded against.</critsuccess>
+         <success>Any undetected creature you succeeded against becomes hidden from you instead of undetected, and any hidden creature you succeeded against becomes observed by you. You learn the location of any object or get a clue to its whereabouts, as determined by the GM.</success>
       </line>
    </rule>
 
    <rule>
-      <title>Elven Verve</title>
+      <title>Unwavering Mien</title>
       <type>Feat</type> <level>1</level>
       <trait>Elf</trait>
 
-      <line>While all elves are immune to the paralyzing touch of ghouls, you can shake off flesh-numbing magic of all kinds. You gain a +1 circumstance bonus to saves against effect that would impose the immobilized, paralyzed, or slowed conditions. When you would be immobilized, paralyzed, or slowed for at least 2 rounds, reduce that duration by 1 round.</line>
+      <line>Your mystic control and meditations allow you to resist external influences upon your conciousness. Whenever you are affected by a <u>mental</u> effect that lasts at least 2 rounds, you can reduce the duration by 1 round.</line>
+      <line>You still require natural sleep, but you treat your saving throws against effects that would cause you to fall asleep as one degree of success better. This protects only against <u>sleep</u> effects, not against other forms of falling unconscious.</line>
    </rule>
 
    <rule>
@@ -43,24 +43,46 @@
       <line>Your elven magic manifests as a simple arcane spell, even if you aren't formally trained in magic. Choose one cantrip from the arcane spell list. You can cast this cantrip as an arcane innate spell at will. A cantrip is heighened to a spell level equal to half your level rounded up. Since this magic is innate, you can replace any material component with a somatic component.</line>
    </rule>
 
-      <rule>
-         <title>Prestidigitation</title>
-         <type>Cantrip</type> <level>1</level>
-         <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Evocation</trait>
-         <cast action="2">somatic, verbal</cast>
-         <range>10 feet</range> <targets>1 object (cook, lift, or tidy only)</targets>
-         <duration>sustained</duration>
+   <rule>
+      <title>Prestidigitation</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Manipulate</trait>
+      <range>10 feet</range> <targets>1 object (cook, lift, or tidy only)</targets>
+      <duration>sustained</duration>
 
-         <line>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the Spell. Each time you Sustain the Spell, you can choose one of four options.</line>
-         <line list="">
-            <entry><![CDATA[<b>Cook</b>]]> Cool, warm, or flavor 1 pound of nonliving material.</entry>
-            <entry><![CDATA[<b>Lift</b>]]> Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</entry>
-            <entry><![CDATA[<b>Make</b>]]> Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile; it can't be used as a tool, weapon, or spell component.</entry>
-            <entry><![CDATA[<b>Tidy</b>]]> Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.</entry>
-         </line>
-         <line><![CDATA[<i>Prestidigitation</i>]]> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the Spell.</line>
-         <line name="Otherwordly Magic:">You gained this cantrip from your Otherwordly Magic ancestry feat. It is an arcane innate spell.</line>
-      </rule>
+      <line>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the spell. Each time you Sustain the spell, you can choose one of four options.</line>
+      <line list="">
+         <entry name="Cook">Cool, warm, or flavor 1 pound of nonliving material.</entry>
+         <entry name="Lift">Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</entry>
+         <entry name="Make">Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile — it can't be used as a tool, weapon, or spell component.</entry>
+         <entry name="Tidy">Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.</entry>
+      </line>
+      <line><i>Prestidigitation</i> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the spell.</line>
+      <line name="Otherwordly Magic:">You gained this cantrip from your Otherwordly Magic ancestry feat. It is an arcane innate spell.</line>
+   </rule>
+
+   <rule>
+      <title>Intimidating Glare</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Intimidation</prereq>
+
+      <line>You can Demoralize with a mere glare. When you do, Demoralize loses the <u>auditory</u> trait and gains the <u>visual</u> trait, and you don't take a penalty if the creature doesn't understand your language.</line>
+   </rule>
+
+   <rule>
+      <title>Demoralize</title>
+      <action>1</action>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
+
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
+   </rule>
 
    <rule>
       <title>Raise a Shield</title>
@@ -75,7 +97,7 @@
       <action>R</action>
       <type>Feat</type> <level>1</level>
       <trait>General</trait>
-      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+      <trigger>While you have your shield raised, you would take physical damage from an attack</trigger>
 
       <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
    </rule>
@@ -83,38 +105,24 @@
    <rule>
       <title>Treat Wounds</title>
       <trait>Exploration</trait> <trait>Healing</trait> <trait>Manipulate</trait>
-      <requirements>You are holding healer's tools, or you are wearing them and have a hand free</requirements>
+      <requirement>You're wearing or holding a healer's toolkit</requirement>
 
       <line>You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes).</line>
-      <line>The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert in Medicine, you can instead attempt a DC 20 check to increase the Hit Points regained by 10; if you're a master of Medicine, you can instead attempt a DC 30 check to increase the Hit Points regained by 30; and if you're legendary, you can instead attempt a DC 40 check to increase the Hit Points regained by 50. The damage dealt on a critical failure remains the same.</line>
+      <line>The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert, master or legendary in Medicine, you can attempt the check with a higher DC to increase the healing (see list below). The damage dealt on a critical failure remains the same.</line>
+      <line list="Treat Wounds, healing by proficiency">
+         <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
+         <entry>Expert Proficiency (DC 20) - 2d8 + 10 / 4d8 + 10</entry>
+         <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
+         <entry>Legendary Proficiency (DC 40) - 2d8 + 50 / 4d8 + 50</entry>
+      </line>
+
+      <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
 
       <line results="">
          <critsuccess>The target regains the second healing value, and its wounded condition is removed.</critsuccess>
          <success>The target regains the first healing value, and its wounded condition is removed.</success>
          <critfail>The target takes 1d8 damage.</critfail>
       </line>
-
-      <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
-
-      <line><![CDATA[<b>Treat Wounds, healing by proficiency</b>]]></line>
-      <line list="">
-         <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
-         <entry>Expert Proficiency (DC 20) - 2d8 + 10 / 4d8 + 10</entry>
-         <entry>Master Proficiency (DC 30) - 2d8 + 30 / 4d8 + 30</entry>
-         <entry>Legendary Proficiency (DC 40) - 2d8 + 50 / 4d8 + 50</entry>
-      </line>
-   </rule>
-
-   <rule>
-      <title>Battle Medicine</title>
-      <type>Feat</type> <level>1</level>
-      <action>1</action>
-      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
-      <prereq>trained in Medicine</prereq>
-      <requirements>You are holding healder's tools, or you are wearing them and have a hand free</requirements>
-
-      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day.</line>
-      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
    </rule>
 
    <rule>
@@ -124,6 +132,32 @@
       <prereq>expert in Medicine</prereq>
 
       <line>You zealously monitor a patient's progress to administer treatment faster. When you Treat Wounds, your patient becomes immune only for 10 minutes instead of 1 hour. This applies only to your Treat Wounds activities, not any other the patient receives.</line>
+   </rule>
+
+   <rule>
+      <title>Battle Medicine</title>
+      <type>Feat</type> <level>1</level>
+      <action>1</action>
+      <trait>General</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Skill</trait>
+      <prereq>trained in Medicine</prereq>
+      <requirement>You're wearing or holding a healer's toolkit</requirement>
+
+      <line>You can patch up wounds, even in combat. Attempt a Medicine check with the same DC as for Treat Wounds and restore the corresponding amount of HP; this doesn't remove the wounded condition. The target is then immune to your Battle Medicine for 1 day. This does not make them immune to, or otherwise count as, Treat Wounds.</line>
+      <line>As with Treat Wounds, you can attempt a check against higher DCs if you have the minimum proficiency rank.</line>
+   </rule>
+
+   <rule>
+      <title>Wildsong</title>
+
+      <line>You know the Wildsong, a secret language known within druid orders, in addition to any languages you know through your ancestry. The Wildsong is a melodic and tonal language sounding more like animal calls than a spoken tongue, and its alphabet involves fractals and spirals, like the arrangement of a seashell's chambers, a snowflake's crystals, or a fern's fronds.</line>
+   </rule>
+
+   <rule>
+      <title>Animal Empathy</title>
+      <type>Feat</type> <level>1</level>
+      <trait>Druid</trait>
+
+      <line>You have a connection to the creatures of the natural world that allows you to communicate with them on a rudimentary level. You can cast questions, receive answers from, and use the Diplomacy skill with animals. In most cases, wild anomals will give you time to make your case.</line>
    </rule>
 
    <rule>
@@ -140,56 +174,40 @@
       <type>Survival</type>
       <trait>Concentrate</trait> <trait>Exploration</trait> <trait>Move</trait>
 
-      <line>You follow tracks, moving at up to half your travel speed. After a successful check to Track, you can continue following the tracks at half your Speed without attempting additional checks for up to 1 hour.</line>
+      <line>You follow tracks, moving at up to half your travel Speed. After a successful check to Track, you can continue following the tracks at half your Speed without attempting additional checks for up to 1 hour.</line>
       <line>In some cases, you might Track in an encounter. In this case, Track is a single action and doesn't have the exploration trait, but you might need to roll more often because you're in a tense situation. The GM determines how often you must attempt this check.</line>
-      <line>You attempt your Survival check when you start Tracking, once every hour you continue tracking, and any time something significant changes in the trail. The GM determines the DCs for such checks, depending on the freshness of the trail, the weather, and the type of ground and whether your targets attempts to Cover Tracks.</line>
+      <line>You attempt your Survival check when you start Tracking, once every hour you continue tracking, and any time something significant changes in the trail. The GM determines the DCs for such checks, depending on the freshness of the trail, the weather, and the type of ground.</line>
       <line results="">
          <success>You find the trail or continue to follow the one you're already following.</success>
          <fail>You lose the trail but can try again after a 1-hour delay.</fail>
          <critfail>You lose the trail and can't try again for 24 hours.</critfail>
       </line>
-      <line><![CDATA[<b>Sample Track Task Difficulties</b>]]></line>
-      <line list="">
-         <entry><![CDATA[<b>Untrained (DC 10):</b>]]> the path of a large army following a road</entry>
-         <entry><![CDATA[<b>Trained (DC 15):</b>]]> relatively fresh tracks of a rampaging bear through the plains</entry>
-         <entry><![CDATA[<b>Expert (DC 20):</b>]]> a nimble panther's tracks through a jungle; tracks obscured by rainfall</entry>
-         <entry><![CDATA[<b>Master (DC 30):</b>]]> tracks obscured by winter snow; tracks of a mouse or smaller creature; tracks left on surfaces that can't hold prints like bare rock</entry>
-         <entry><![CDATA[<b>Legendary (DC 40):</b>]]> old tracks through a windy desert's sands; tracks after a major blizzard or hurricane</entry>
+      <line list="Sample Track Task Difficulties">
+         <entry name="Untrained (DC 10)">the path of a large army following a road</entry>
+         <entry name="Trained (DC 15)">relatively fresh tracks of a rampaging bear through the plains</entry>
+         <entry name="Expert (DC 20)">a nimble panther's tracks through a jungle; tracks obscured by rainfall</entry>
+         <entry name="Master (DC 30)">tracks obscured by winter snow; tracks of a mouse or smaller creature; tracks left on surfaces that can't hold prints like bare rock</entry>
+         <entry name="Legendary (DC 40)"> old tracks through a windy desert's sands; tracks after a major blizzard or hurricane</entry>
       </line>
    </rule>
 
    <rule>
-      <title>Anathema</title>
+      <title>Incredible Initiative</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
 
-      <line>As stewards of the natural order, druids find affronts to nature anathema. If you perform acts that are anatheme to nature, you lose your magical abilities that come from the druid class, including your primal spellcasting and the benefits of your order. These abilities can be regained only if you demonstrate your repentance by conducting an <![CDATA[<i>atone</i>]]> ritual.</line>
-      <line>The following acts are anathema to all druids:</line>
-      <line list="">
-         <entry>Using metal armor or shields.</entry>
-         <entry>Despoiling natural places.</entry>
-         <entry>Teaching the Druidic language to non-druids.</entry>
-      </line>
-      <line>The following acts are anathema to druids of the storm order:</line>
-      <line list="">
-         <entry>Polluting the air.</entry>
-         <entry>Allowing those who cause major air pollution or climate shifts to go unpunished. This doesn't force you to take action against merely potential harm to the environment or to sacrifice yourself against an obviously superior foe.</entry>
-      </line>
-      <line>The following act is anathema to druids of the wild order:</line>
-      <line list="">
-         <entry>Becoming fully domesticated by the temptations of civilization. This doesn't prevent you from buying and using processed goods or staying in a city for an adventure, but you can never come to rely on these conveniences or truly call such a place your permanent home.</entry>
-      </line>
-   </rule>
-
-   <rule>
-      <title>Druidic Language</title>
-
-      <line>You know Druidic, a secret language known only to druids, in addition to any languages you know through your ancestry. Druidic has its own alphabet.</line>
+      <line>You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls.</line>
    </rule>
 
    <rule>
       <title>Storm Order</title>
 
-      <line>You carry the fury of the storm with you, channeling it to terrifying effect and riding the winds through the sky.</line>
-      <line>You are trained in Acrobatics. You also gain the Storm Born druid feat. You gain the <![CDATA[<i>tempest surge</i>]]> order spell, and you increase the number of Focus Points in your focus pool by 1.</line>
+      <line>Whether you were born under a tempest or survived a bolt of lightning from a clear blue sky, you now carry the fury of the storm in your heart, channeling thunder to terrifying destructive effect and riding the winds through the air.</line>
+      <line list="">
+         <entry name="Order Skill">Acrobatics</entry>
+         <entry name="Druid Feat">Storm Born</entry>
+         <entry name="Order Spell"><i>tempest surge</i></entry>
+      </line>
    </rule>
 
    <rule>
@@ -209,103 +227,115 @@
       <line>You have learned the secrets of another druidic order, passing whatever rites of initiation that order requires and gaining access to its secrets. Choose an order other than your own.</line>
       <line>You gain a 1st-level feat that lists that order as a prerequisite, and you are now a member of that order for the purpose of meeting feat prerequisites.</line>
       <line>If you commit acts anathema to your new order, you lose all feats and abilities requiring that order but retain your other druid feats and abilities. You don't gain any of the other benefits of the order you chose.</line>
-      <line name="Choice">You chose the wild order, and gained the Wild Shape feat.</line>
+      <line name="Choice">You chose the untamed order, and gained the Untamed Form feat.</line>
       <special>You can take this feat multiple times. Each time you do, you must choose a different order other than your own.</special>
    </rule>
 
    <rule>
-      <title>Wild Shape</title>
+      <title>Untamed Order</title>
+      <line>The uncontrollable call of the natural world courses through your body. You might have been raised by a wild animal, or you might have come to reject the artifices of cities after growing up in one. Now, primal magic grants you the ability to wear the from of an untamed creature.</line>
+   </rule>
+
+   <rule>
+      <title>Untamed Form</title>
       <type>Feat</type> <level>1</level>
       <trait>Druid</trait>
-      <prereq>wild order</prereq>
+      <prereq>untamed order</prereq>
 
-      <line>You are one with the wild, always changing and adapting to meet any challenge. You gain the <![CDATA[<i>wild shape</i>]]> order spell, which lets you transform into a variety of forms that you can expand with druid feats.</line>
+      <line>You are one with the wild, always changing and adapting to meet any challenge. You gain the <i>untamed form</i> order spell, which lets you transform into a variety of forms that you can expand with druid feats.</line>
    </rule>
 
    <rule>
-      <title>Primal Spellcasting</title>
+      <title>Anathema</title>
 
-      <line>The power of the wild world flows through you. You can cast primal spells using the Cast a Spell activity, and you can supply material, somatic, and verbal components when casting spells. Because you're a druid, you can usually hold a primal focus (such as holly and mistletoe) for spells requiring material components instead of needing to use a material component pouch.</line>
-      <line>You can prepare spells and five cantrips each morning from the common spells on the primal spell list, or from other primal spells to which you gain access. Prepared spells remain available to you until you cast them or until you prepare your spells again. The number of spells you can prepare is called your spells slots.</line>
-      <line>Some of your spells require you to attempt a spell attack roll to see how effective they are, or have your enemies roll against your spell DC. Since your key ability is Wisdom, your spell attack rolls and spell DCs use your Wisdom modifier.</line>
-      <line><![CDATA[<b>Cantrips</b>]]></line>
-      <line>Some of your spells are cantrips. A cantrip is a special type of spell that doesnt use spell slots. You can cast a cantrip at will, any number of times per day.</line>
-   </rule>
-
-   <rule>
-      <title>Cast a Spell</title>
-
-      <line>You cast a spell you have prepared or in your repertoire. Casting a Spell is a special activity that takes a variable number of actions depending on the spell, as listed in each spell's stat block. As soon as the spellcasting actions are complete, the spell effect occurs.</line>
-      <line>Some spells are cast as a reaction or free action. In those cases, you Cast the Spell as a reaction or free action (as appropriate) instead of as an activity.</line>
-      <line name="Long Casting Times"> Some spells take minutes or hours to cast. The Cast a Spell activity for these spells includes the required time with the listed spell components, but it's not necessary to break down which one you're providing at a given time. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
-      <line name="Spell Components"> Each spell lists the spell components required to cast it, such as "material, somatic, verbal". The spell components, described in detail below, add traits (listed in parenthesis) and requirements to the Cast a Spell activity. If you can't provide the components, you fail to Cast the Spell.</line>
-      <line list="">
-         <entry name="Material (manipulate);">A material component is a bit of physical matter consumed in the casting of the spell, and requires you to have a free hand to retrieve and manipulate the material component. The component is expended in the casting (even if the spell is disrupted).<![CDATA[<br/>]]>Except in extreme circumstances, you can assume all common components are included in a material component pouch.</entry>
-         <entry name="Somatic (manipulate);">A somatic component is a specific hand movement or gesture that generates a magical nexus. You can use this component while holding something in your hand, but not if you are restrained or otherwise unable to gesture freely.<![CDATA[<br/>]]> Spells that require you to touch the target require a somatic component. You can do so while holding something as long as part of your hand is able to touch the target (even if it's through a glove or gauntlet).</entry>
-         <entry name="Verbal (concentrate);">A verbal component is a vocalization of words of power. You must speak them in a strong voice, so it's hard to conceal that you're Casting a Spell. You must be able to speak to provide this component.</entry>
-         <entry name="Focus (manipulate);">A focus is an object that funnels the magical energy of the spell. The spell requires you to either have a free hand to retrieve the focus listed in the spell or already holding the focus in your hand. As part of Casting the spell, you retrieve the focus (if necessary), manipulate it, and can stow it again if you so choose.<![CDATA[<br/>]]> Foci tend to be expensive, and you need to acquire them in advance to Cast the Spell.</entry>
+      <line>As stewards of the natural order, druids find affronts to nature anathema. If you repeatedly perform these acts, you lose your magical abilities that come from the druid class, including your druid spellcasting and the benefits of your order. These abilities can be regained only if you demonstrate your repentance by conducting an <i>atone</i> ritual.</line>
+      <line list="Druid anathema">
+         <entry>Despoil natural places.</entry>
+         <entry>Consume more natural resources than you require to live comfortably.</entry>
+         <entry>Teach the Wildsong to non-druids.</entry>
       </line>
-      <line name="Disrupted and Lost Spells">Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot, spent the spell's costs and actions, and used the Cast a Spell activity. If a spell is disrupted during a Sustain a Spell action, the spell immediately ends. See the full rules for more information.</line>
+      <line list="Storm order anathema">
+         <entry>Pollute the air.</entry>
+         <entry>Allow those who cause major air pollution or climate shifts to go unpunished. This doesn't force you to take action against merely potential harm to the environment or to sacrifice yourself against an obviously superior foe.</entry>
+      </line>
+      <line list="Untamed order anathema">
+         <entry>Become fully domesticated by the temptations of civilization. This doesn't prevent you from buying and using processed goods or staying in a city for an adventure, but you can never come to rely on these conveniences or truly call such a place your permanent home.</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Druid Spellcasting</title>
+
+      <line>The power of the wild world flows through you. You are a spellcaster and can cast spells of the primal tradition using the Cast a Spell activity. As a druid, your spellcasting incantations might be pleas to the environment around you or the invocation of ancient vows; your hands might sway like willows or curl into clawlike shapes as your gestures direct your magic.</line>
+      <line>You can prepare spells and five cantrips each morning from the common spells on the primal spell list, or from other primal spells to which you gain access and learn via Learn a Spell. Prepared spells remain available to you until you cast them or until you prepare your spells again. The number of spells you can prepare each day is called your spell slots.</line>
+      <line>Some of your spells require you to attempt a spell attack roll to see how effective they are, or have your enemies roll against your spell DC (typically by attempting a saving throw). Since your key ability is Wisdom, your spell attack rolls and spell DCs use your Wisdom modifier.</line>
+      <line name="Heighening Spells">You can fill spell slots of 2nd rank or higher with stronger versions of lower-rank spells. This increases the spell's rank, heightening it to match the spell slot. Many spells have specific improvements when they are heightened to certain ranks.</line>
+      <line name="Cantrips">Some of your spells are cantrips. A cantrip is a special type of spell that doesnt use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is automatically heightened to half your level rounded up.</line>
+   </rule>
+
+   <rule>
+      <title>Casting Spells</title>
+
+      <line>Casting a spell requires the caster to make gestures and utter incantations, so being unable to speak prevents spellcasting for most casters.</line>
+      <line>Spellcasting creates obvious sensory manifestations, such as bright lights, crackling sounds, and sharp smells from the gathering magic. Nearly all spells manifest a spell signature —a colorful, glowing ring of magical runes that appears in midair, typically around your hands, though what kind of spellcaster you are can affect this— academic wizards typically have neat and ordered signatures, while a druid's might be more organic and a cleric's might be inspired by their deity.</line>
+      <line>Spells can vary in how many actions they take. as shown in the spell's stat block. You cast cantrips, spells from spell slots, and focus spells using the same process, but must expend the spell when casting a spell from a spell slot and must spend 1 Focus Point to cast a focus spell. Some rules will refer to the Cast a Spell activity, such as "if the next action you use it to Cast a Spell." Any spell qualifies as a Cast a Spell activity, and any characteristics of the spell use those of the specific spell you're casting.</line>
+      <line name="Costs and Loci">Some spells require you to pay a cost or provide a locus. If the spell lists a <b>cost</b>, you must have the listed money, valuable materials, or other resources to cast the spell (such as gems or magical reagents), and they're expended during the casting. A <b>locus</b> is an object that funnels or directs the magical energy of the spell but is not consumed in its casting. As part of Casting the Spell, you retrieve the locus (if necessary, and if you have a hand free), and you can put it away again if you so choose. Loci tend to be expensive, and you need to acquire them in advance to cast the spell, but they aren't expended like costs are.</line>
+      <line name="Long Casting Times"> Some spells take minutes or hours to cast. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
+      <line name="Disrupted and Lost Spells">Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot and spent the spell's costs and actions. If a spell is disrupted during a Sustain action, the spell immediately ends.</line>
    </rule>
 
    <rule>
       <title>Order Spells</title>
 
       <line>Order spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you have a focus pool of 1 Focus Point for each focus spell you have, to a maximum of 3 Focus Points. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to commune with local nature spirits or otherwise tend to the wilderness in a way befitting your order.</line>
-      <line>Focus spells don't require spell slots to cast, and you can't cast them using spell slots. They are automatically heightened half your level rounded up. You gain the order spell for your druidic order.</line>
+      <line>Focus spells are automatically heightened to half your level rounded up, much like cantrips. Focus spells don't require spell slots to cast, and you can't cast them using spell slots. You gain the order spell for your druidic order, and certain feats give you more focus spells.</line>
    </rule>
 
    <rule>
       <title>Refocus</title>
       <trait>Concentrate</trait> <trait>Exploration</trait>
-      <requirement>You have a focus pool, and you have spent at least 1 Focus Point</requirement>
+      <requirement>You have a focus pool</requirement>
 
-      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a good deity can usually Refocus while tending the wounds of their allies, and a wizard of the illusionist school might be able to Refocus while attempting to Identify Magic of the illusion school.</line>
+      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a holy deity can usually Refocus while tending the wounds of their allies.</line>
    </rule>
 
    <rule>
-      <title>Reach Spell</title>
-      <action>1</action>
+      <title>Reach Spell</title> <action>1</action>
       <type>Feat</type> <level>1</level>
-      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Metamagic</trait>
+      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Spellshape</trait>
 
-      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. As is standard for increasing spell ranges, if the spell normally has a range of touch, you extend its range to 30 feet.</line>
+      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. If the spell normally has a range of touch, you extend its range to 30 feet.</line>
    </rule>
 
    <rule>
-      <title>Tempest Surge</title>
+      <title>Tempest Surge</title> <action>2</action>
       <type>Focus</type> <level>1</level>
-      <uncommon /> <trait>Air</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Evocation</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <uncommon /> <trait>Air</trait> <trait>Concentrate</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Manipulate</trait> <trait>Primal</trait>
       <range>30 feet</range> <targets>1 creature</targets>
-      <save>Reflex</save>
+      <save>basic Reflex</save>
 
-      <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage. The Target must attempt a basic Reflex save. On a failure, the target also is clumsy 2 for 1 round and takes 1 persistent electricity damage.</line>
-      <heighten value="+1">The initial damage increases by 1d12, and the persistent electricity damage on a failure increases by 1.</heighten>
+      <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage to the target with a basic Reflex save. On a failure, the target also is clumsy 2 for 1 round.</line>
+      <heighten value="+1">The damage increases by 1d12.</heighten>
    </rule>
 
    <rule>
-      <title>Wild Shape</title>
+      <title>Untamed Form</title> <action>2</action>
       <type>Focus</type> <level>1</level>
-      <uncommon /> <trait>Druid</trait> <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <duration>1 minute (or longer)</duration>
+      <uncommon /> <trait>Concentrate</trait> <trait>Druid</trait> <trait>Focus</trait> <trait>Manipulate</trait> <trait>Polymorph</trait> <trait>Primal</trait>
+      <duration>varies</duration>
 
-      <line>You infuse yourself with primal essence and transform yourself into another form. You can polymorph into any form listed in <![CDATA[<i>pest form</i>]]>, which lasts for 10 minutes. All other <![CDATA[<i>wild shape</i>]]> forms last 1 minute.</line>
-      <line>You can add more forms to your <![CDATA[<i>wild shape</i>]]> list with druid feats; your feat might grant you some or all of the forms from a given polymorph spell. When you transform into a form from a spell, you gain all the effects of the form you choose from a version of the spell heightened to <![CDATA[<i>wild shape</i>]]>'s level.</line>
-      <line><![CDATA[<i>Wild shape</i>]]> allows you to use your own shapeshifting training more easily than most polymorph spells. When you choose to use your own attack modifier while polymorphed instead of the form's default attack modifier, you gain a +2 status bonus to your attack rolls.</line>
+      <line>You reach within for a different part of yourself, and you set it free, transforming your body into another form. You polymorph into any form listed in <i>pest form</i>, which lasts for 10 minutes. All other <i>untamed form</i> shapes last 1 minute.</line>
+      <line>You can add more forms to your <i>untamed form</i> list with druid feats; your feat might grant you some or all of the forms from a given <u>polymorph</u> spell. When you transform into a shape granted by a spell, you gain all the effects of the shape you chose from a version of the spell heightened to <i>untamed form</i>'s rank.</line>
+      <line><i>Untamed form</i> allows you to use your own shapeshifting training more easily than most <u>polymorph</u> spells. When you choose to use your own attack modifier while polymorphed instead of the form's default attack modifier, you gain a +2 status bonus to your attack rolls.</line>
 
-      <heighten value="2nd">You can also <![CDATA[<i>wild shape</i>]]> into the forms listed in <![CDATA[<i>animal form</i>]]>.</heighten>
+      <heighten value="2nd">You can transform into the shapes listed in <i>animal form</i>.</heighten>
    </rule>
 
    <rule>
-      <title>Pest Form</title>
+      <title>Pest Form shapes</title>
       <type>Spell</type> <level>1</level>
-      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <duration>10 minutes</duration>
 
-      <line>You transform into the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on the form's Size or statistics. While in this form, you gain the animal trait, and you can't make Strikes. You can Dismiss the spell.</line>
+      <line>You transform into the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on your Size or statistics. While in this form, you gain the <u>animal</u> trait, and you can't make Strikes. You can Dismiss the spell.</line>
       <line>You gain the following statistics and abilities:</line>
       <line list="">
          <entry>AC = 15 + your level. You ignore your armor's check penalty and Speed reduction.</entry>
@@ -321,46 +351,61 @@
    <rule>
       <title>Animal Form</title>
       <type>Spell</type> <level>2</level>
-      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
-      <duration>1 minute</duration>
 
-      <line>You call upon primal energy to transform yourself into a Medium animal battle form. When you cast this spell, choose ape, bear, bull, canine, cat, deer, frog, shark, or snake. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form's Size or statistics. While in this form, you gain the Animal trait. You can Dismiss the spell.</line>
+      <line>You call upon primal energy to transform yourself into a Medium animal battle form. When you cast this spell, choose a listed battle form. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form's Size or statistics. While in this form, you gain the <u>animal</u> trait. You can Dismiss the spell.</line>
       <line>You gain the following statistics and abilities regardless of which battle form you choose:</line>
       <line list="">
          <entry>AC = 16 + your level. Ignore your armor check penalty and Speed reduction.</entry>
          <entry>5 temporary hit points.</entry>
          <entry>Low-light vision and imprecise scent 30 feet.</entry>
-         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them. Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
+         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them.<br/>
+         Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
          <entry>Athletics modifier of +9, unless your own modifier is higher.</entry>
       </line>
-      <line>You also gain specific abilities based on the type of animal you choose:</line>
-      <line list="">
-         <entry name="Ape">Speed 25 feet, climb Speed 20 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fist, <b>Damage </b>]]> 2d6 bludgeoning.</entry>
-         <entry name="Bear">Speed 30 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d8 piercing; <br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]> 1d8 slashing.</entry>
-         <entry name="Bull">Speed 30 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> horn, <b>Damage </b>]]>2d8 piercing.</entry>
-         <entry name="Canine">Speed 40 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing.</entry>
-         <entry name="Cat">Speed 40 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 pierching; <br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> claw (agile), <b>Damage </b>]]>1d10 slashing.</entry>
-         <entry name="Deer">Speed 50 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> antler, <b>Damage </b>]]> 2d6 piercing.</entry>
-         <entry name="Frog">Speed 25 feet, swim Speed 25 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>2d6 bludgeoning; <br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> tongue (reach 15 feet), <b>Damage </b>]]>2d4 bludgeoning.</entry>
-         <entry name="Shark">swim Speed 35 feet, breathe underwater but not in air; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> jaws, <b>Damage </b>]]>2d8 piercing.</entry>
-         <entry name="Snake">Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; <![CDATA[<br/>
-         <b>Melee </b><span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;">1</span> fangs, <b>Damage </b>]]>2d4 piercing plus 1d6 poison.</entry>
-      </line>
+      <line>You also gain specific abilities based on the type of animal you choose</line>
 
       <heighten value="3rd">You instead gain 10 temporary HP, AC = 17 + your level, attack modifier +14, damage bonus +5, and Athletics +14.</heighten>
       <heighten value="4th">You can choose to make your battle form Large and your attacks have 10-foot reach (20-foot reach for the frog's tongue Strike); You must have enough space to expand into or the spell is lost. You instead gain 15 temporary HP, AC = 18 + your level, attack modifier +16, damage bonus +9, and Athletics +16.</heighten>
       <heighten value="5th">You can choose to make your battle form Huge and your attacks have 15-foot reach (30-foot reach for the frog's tongue Strike); You must have enough space to expand into or the spell is lost. You instead gain 20 temporary HP, AC = 18 + your level, attack modifier +18, damage bonus +7 and double the number of damage dice, and Athletics +20.</heighten>
+   </rule>
+
+   <rule>
+      <title>Animal Form shapes</title>
+
+      <line list="Player Core">
+         <entry name="Ape">Speed 25 feet, climb Speed 20 feet;<br/>
+         <b>Melee </b><act>1</act> fist, <b>Damage </b> 2d6 bludgeoning.</entry>
+         <entry name="Bear">Speed 30 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 piercing; <br/>
+         <b>Melee </b><act>1</act> claw (agile), <b>Damage </b> 1d8 slashing.</entry>
+         <entry name="Bull">Speed 30 feet; <br/>
+         <b>Melee </b><act>1</act> horn, <b>Damage </b>2d8 piercing.</entry>
+         <entry name="Canine">Speed 40 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 piercing.</entry>
+         <entry name="Cat">Speed 30 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 pierching; <br/>
+         <b>Melee </b><act>1</act> claw (agile), <b>Damage </b>2d4 slashing.</entry>
+         <entry name="Deer">Speed 50 feet; <br/>
+         <b>Melee </b><act>1</act> antler, <b>Damage </b> 2d4 piercing.</entry>
+         <entry name="Frog">Speed 25 feet, swim Speed 25 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 bludgeoning; <br/>
+         <b>Melee </b><act>1</act> tongue (reach 15 feet), <b>Damage </b>2d4 bludgeoning.</entry>
+         <entry name="Shark">swim Speed 35 feet, breathe underwater but not in air; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d8 piercing.</entry>
+         <entry name="Snake">Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; <br/>
+         <b>Melee </b><act>1</act> fangs, <b>Damage </b>2d4 piercing plus 1d6 poison.</entry>
+      </line>
+      <line list="Howl of the Wild">
+         <entry name="Crab">Speed 25 feet, swim Speed 15 feet; can breathe in water and air<br/>
+         <b>Melee </b><act>1</act> big claw, <b>Damage </b> 2d8 piercing; <br/>
+         <b>Melee </b><act>1</act> little claw (agile), <b>Damage </b> 2d4 piercing</entry>
+         <entry name="Crocodile">Speed 20 feet, swim Speed 30 feet; can hold your breath for the duration of the transformation; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b> 2d8 piercing; <br/>
+         <b>Melee </b><act>1</act> tail (agile), <b>Damage </b> 2d4 bludgeoning</entry>
+         <entry name="Orca">swim Speed 35 feet; can hold your breath for the duration of the transformation; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b> 2d8 piercing</entry>
+         <entry name="Seal">Speed 20 feet, swim Speed 25 feet; can hold your breath for the duration of the transformation; <br/>
+         <b>Melee </b><act>1</act> jaws (grapple), <b>Damage </b> 2d6 piercing</entry>
+      </line>
    </rule>
 </catalog>
