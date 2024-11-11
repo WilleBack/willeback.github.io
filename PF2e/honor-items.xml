@@ -5,14 +5,14 @@
    <rule>
       <title>Healing Potion</title>
       <type>Item</type> <level>1+</level>
-      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Potion</trait>
+      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Potion</trait> <trait>Vitality</trait>
       <usage>held in 1 hand</usage> <bulk>L</bulk>
       <activate>
          <action>1</action>
-         <type>Interact</type>
+         <type>(manipulate)</type>
       </activate>
 
-      <line>A <![CDATA[<i>healing potion</i>]]> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <![CDATA[<i>healing potion</i>]]>, you regain the listed number of Hit Points.</line>
+      <line>A <i>healing potion</i> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <i>healing potion</i>, you regain the listed number of Hit Points.</line>
 
       <variant>
          <type>Minor</type> <level>1</level>
@@ -41,28 +41,28 @@
       <usage>worn headwear</usage> <bulk>-</bulk>
       <price>30 gp</price>
 
-      <line>This ordinary-looking hat allows you to cloak yourself in illusions.</line>
+      <line>This ordinary-looking hat can complete a costume or disguise with illusions.</line>
       <block>
-         <name>Activate</name> <type>1 minute (Interact)</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Effect</name>The hat casts a 1st-level <![CDATA[<i>illusory disguise</i>]]> spell on you. While setting up the disguise, you can magically alter the hat to appear as a comb, ribbon, helm, or other piece of headwear.</part>
+         <name>Activate—Masquarade</name> <type>1 minute (Interact)</type>
+         <part linebreak=""><name>Frequency</name>once per day</part>
+         <part><name>Effect</name>You adjust the hat on your head, and it casts a 1st-rank <i>illusory disguise</i> spell on you, which ends immediately if the hat is removed. You can alter the hat's appearance or make it invisible as part of the <i>illusory disguise</i>, but it can still be touched.</part>
       </block>
    </rule>
 
    <rule>
-      <title>Illusory Disguise</title>
+      <title>Illusory Disguise</title> <action>2</action>
       <type>Spell</type> <level>1</level>
-      <trait>Illusion</trait> <trait>Visual</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Illusion</trait> <trait>Manipulate</trait> <trait>Visual</trait>
+      <range>30 feet</range> <targets>1 willing creature</targets>
       <duration>1 hour</duration>
 
       <line>You create an illusion that cause you to appear as another creature of the same body shape, and with roughly similar height (within 6 inches) and weight (within 50 pounds), as yourself. The disguise is typically good enough to hide your identity, but not to impersonate a specific individual. The spell doesn't change your voice, scent, or mannerisms. You can change the appearance of your clothing and worn items, such as making your armor look like a dress. Held items are unaffected, and any worn item you remove returns to its true appearance.</line>
-      <line>Casting <![CDATA[<i>illusory disguise</i>]]> counts as setting up a disguise for the Impersonate use of Deception; it ignores any circumstance penalties you might take for disguising yourself as a dissimilar creature, it gives you a +4 status bonus to Deception checks to prevent others from seeing through your disguise, and you add your level even if you're untrained. You can Dismiss this spell.</line>
+      <line>Casting <i>illusory disguise</i> counts as setting up a disguise for the Impersonate use of Deception; it ignores any circumstance penalties the target might take for disguising itself as a dissimilar creature, gives a +4 status bonus to Deception checks to prevent others from seeing through your disguise, and lets the target add its level to such Deception checks even if untrained. You can Dismiss this spell.</line>
    </rule>
 
    <rule>
       <title>Ring of Energy Resistance</title>
-      <trait>Abjuration</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <trait>Invested</trait> <trait>Magical</trait>
       <type>Item</type> <level>6+</level>
       <usage>worn</usage> <bulk>-</bulk>
 
@@ -79,25 +79,34 @@
    <rule>
       <title>Navigator's Star</title>
       <type>Item</type> <level>1</level>
-      <trait>Divination</trait> <trait>Invested</trait> <trait>Magical</trait> <trait>Tattoo</trait>
+      <trait>Invested</trait> <trait>Magical</trait> <trait>Tattoo</trait>
       <price>18 gp</price>
       <usage>tattooed on the body</usage> <bulk>-</bulk>
 
       <line>A star inked on the back of the hand, usually between the thumb and forefinger, keeps you on the right path.</line>
       <block>
-         <name>Activate</name> <action>2</action> <type>Envision, Interact</type>
+         <name activate="">Align the Star</name> <action>2</action> <type>(concentrate, manipulate)</type>
          <part><name>Effect</name>As you hold up your hand and align the star in view, you learn which direction you're facing.</part>
       </block>
    </rule>
 
    <rule>
-      <title>Hide Armor</title>
-      <price>2 gp</price>
-      <ac>03</ac> <dexcap>+2</dexcap> <checkpenalty>-2</checkpenalty> <spdpenalty>-5 ft.</spdpenalty>
-      <strreq>14</strreq> <bulk>2</bulk>
-      <armorcat>Medium</armorcat> <armorgroup>Leather</armorgroup>
+      <title>Studded Leather Armor</title>
+      <price>3 gp</price>
+      <ac>+2</ac> <dexcap>+3</dexcap> <checkpenalty>-1</checkpenalty>
+      <strreq>+1</strreq> <bulk>1</bulk>
+      <armorcat>Light</armorcat> <armorgroup>Leather</armorgroup>
 
-      <line>A mix of furs, sturdy hide, and sometimes molded boiled leather, this armor provides protection due to its layers of leather, though its bulkiness slows the wearer down and decreases mobility.</line>
+      <line>This leather armor is reinforced with metal studs and sometimes small metal plates, providing most of the flexibility of leather armor with more robust protection.</line>
+
+      <variant>
+         <rune italic="">+1 potency</rune> <level>5</level>
+         <trait>Invested</trait> <trait>Magical</trait>
+         <price>160 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
+      </variant>
    </rule>
 
    <rule>
@@ -116,25 +125,61 @@
    </rule>
 
    <rule>
+      <title>Bracers of Missile Deflection</title>
+      <type>Item</type> <level>3</level>
+      <trait>Invested</trait> <trait>Magical</trait>
+      <usage>worn bracers</usage> <bulk>L</bulk>
+      <price>52 gp</price>
+
+      <line>These bracers are made from plates of durable dawnsilver and gleam like the summer sun.</line>
+      <block>
+         <name>Activate</name>
+         <action>R</action>
+         <type>(manipulate)</type>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Trigger</name>A ranged weapon attack hits you but doesn't critically hit</part>
+         <part><name>Requirements</name>You are aware of the attack and not off-guard</part>
+         <part><name>Effect</name>The bracers send the missle off-course. You gain a +2 circumstance bonus to AC against the triggering attack. If this attack would cause the attack to be a failure, the attack misses you.</part>
+      </block>
+   </rule>
+
+   <rule>
+      <title>Spacious Pouch</title>
+      <type>Item</type> <level>4+</level>
+      <trait>Extradimension</trait> <trait>Magical</trait>
+      <usage>held in 2 hands</usage> <bulk>1</bulk>
+
+      <line>Though it appears to be a cloth bag decorated with panels of richly colored silk or stylish embroidery, a <i>spacious pouch</i> opens into a magical space larger than its outside dimensions. The Bulk held inside the bag doesn't change the Bulk of the <i>spacious pouch</i> itself. The amount of Bulk the pouch's extradimensional space can hold depends on its type. You can Interact with the <i>spacious pouch</i> to stow items in it or remove them just like a mundane sack. Though the bag can hold a great amount of material, an object still needs to be able to fit through the opening of the sack to be stored inside.</line>
+      <line>If the bag is overloaded or broken, it ruptures and is ruined, causing the items inside to be lost forever. If it's turned inside out, the items inside spill out unharmed, but the pouch must be put right beofre it can be used again. A living creature placed inside the pouch has enough air for 10 minutes before it begins to suffocate, and it can attempt to Escape against a DC of 13. An item inisde the pouch provides no benefits unless it's retrieved first. An item in the pouch can't be detected by magic that detects only things on the same plane.</line>
+
+      <variant>
+         <type>Type I</type> <level>4</level>
+         <price>75 gp</price>
+
+         <line>A type I pouch can hold up to 25 Bulk.</line>
+      </variant>
+   </rule>
+
+   <rule>
       <title>Gate Attenuator</title>
       <type>Item</type> <level>3</level>
       <trait>Invested</trait> <trait>Magical</trait>
       <usage>worn</usage> <bulk>-</bulk>
       <price>60 gp</price>
 
-      <line><![CDATA[<i>gate attenuators</i>]]> are typically worn near the body's core and are shaped like portals or passageways, making literal the elemental gates kineticists posses within their bodies. The appearance can vary from a simple disk with a hole in the middle to a design matching a cirty gate of a particular settlement.</line>
+      <line><i>gate attenuators</i> are typically worn near the body's core and are shaped like portals or passageways, making literal the elemental gates kineticists posses within their bodies. The appearance can vary from a simple disk with a hole in the middle to a design matching a cirty gate of a particular settlement.</line>
       <line>If you're a kineticist, the attenuator grants you a +1 item bonus to your impulse attack modifier (but not your impulse DC).</line>
-      <line>When you invest a <![CDATA[<i>gate attenuator</i>]]> (usually as part of your daily preparations), attune it to an element of your choice. Designs on the attenuator's surface transform to match that element, and the attenuator gains the element's trait until it's no longer invested or is attuned to a different element.</line>
+      <line>When you invest a <i>gate attenuator</i> (usually as part of your daily preparations), attune it to an element of your choice. Designs on the attenuator's surface transform to match that element, and the attenuator gains the element's trait until it's no longer invested or is attuned to a different element.</line>
       <block>
-         <name>Activate</name> <action>2</action> <type>Envision</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Effect</name>The <![CDATA[<i>gate attenuator</i>]]> casts a 1st-level spell, with an spell attack modifier of +7 and spell DC of 17. If you're a kineticist and the spell's element matches one of your kinetic elements, you can use your impulse attack modifier instead of the spell's attack modifier or your impulse DC instead of the spell DC. The spell corresponds to the element the item is attuned to, and it gains that element's trait if it doesn't already have it</part>
-         <part linebreak=""><name>air</name><![CDATA[<i>gust of wind</i>]]></part>
-         <part><name>earth</name><![CDATA[<i>pummeling rubble</i>]]></part>
-         <part><name>fire</name><![CDATA[<i>dehydrate</i>]]></part>
-         <part><name>metal</name><![CDATA[<i>thunderstrike</i>]]></part>
-         <part><name>water</name><![CDATA[<i>snowball</i>]]></part>
-         <part><name>wood</name><![CDATA[<i>flourishing flora</i>]]></part>
+         <name activate="">Elemental Spell</name> <action>2</action> <type>(concentrate)</type>
+         <part linebreak=""><name>Frequency</name>once per day</part>
+         <part><name>Effect</name>The <i>gate attenuator</i> casts a 1st-rank spell, with a spell attack modifier of +7 and spell DC of 17. If you're a kineticist and the spell's element matches one of your kinetic elements, you can use your impulse attack modifier instead of the spell's attack modifier or your impulse DC instead of the spell DC. The spell corresponds to the element the item is attuned to, and it gains that element's trait if it doesn't already have it</part>
+         <part linebreak=""><name>air</name><i>gust of wind</i></part>
+         <part><name>earth</name><i>pummeling rubble</i></part>
+         <part><name>fire</name><i>dehydrate</i></part>
+         <part><name>metal</name><i>thunderstrike</i></part>
+         <part><name>water</name><i>snowball</i></part>
+         <part><name>wood</name><i>flourishing flora</i></part>
       </block>
    </rule>
 </catalog>

@@ -3,17 +3,16 @@
 <catalog>
 
    <rule>
-      <category>2nd-level Druid Spells</category>
-      <title>Ash Cloud</title>
+      <category>2nd-rank Druid Spells</category>
+      <title>Ash Cloud</title> <action>3</action>
       <type>Spell</type> <level>2</level>
-      <trait>Air</trait> <trait>Conjuration</trait> <trait>Fire</trait> <trait>Primal</trait>
-      <cast action="3">material, somatic, verbal</cast>
+      <trait>Air</trait> <trait>Concentrate</trait> <trait>Fire</trait> <trait>Manipulate</trait> <trait>Primal</trait>
       <range>120 feet</range> <area>20-foot burst</area>
       <save>Fortitude</save> <duration>1 minute</duration>
 
       <line>You summon a tumultuous cloud of ash and smoke. The cloud is difficult terrain for flying creatures, and creatures in the cloud can't detect anything using their sense of smell. Creatures that start their turn within the cloud take 2d4 fire damage as their lungs fill with the hot, acrid smoke, with a Fortitude save.</line>
       <line results="">
-         <critsuccess>The target is unaffected.</critsuccess>
+         <critsuccess/>
          <success>The target takes half damage.</success>
          <fail>The target takes full damage, and is dazzled for 1 round.</fail>
          <critfail>The target takes double damage and is blinded for 1 round.</critfail>
@@ -23,39 +22,72 @@
    </rule>
 
    <rule>
-      <title>Barkskin</title>
+      <title>Blazing Bolt</title> <action to="3">1</action>
       <type>Spell</type> <level>2</level>
-      <trait>Abjuration</trait> <trait>Plant</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>touch</range> <targets>1 willing creature</targets>
-      <duration>10 minutes</duration>
+      <trait>Attack</trait> <trait>Concentrate</trait> <trait>Fire</trait> <trait>Manipulate</trait> <trait>Primal</trait>
+      <range>60 feet</range> <targets>1 or more creatures</targets>
+      <defense>AC</defense>
 
-      <line>The target's skin becomes covered in bark. The target gains resistance 2 to bludgeoning and piercing damage and weakness 3 to fire. After the target takes fire damage, it can Dismiss the spell as a free action triggered by taking the damage; doing so doesn't reduce the fire damage the target was dealt.</line>
+      <line>You fire a ray of heat and flame. Make a ranged spell attack roll against a single creature. On a hit, the target takes 2d6 fire damage, and on a critical hit, the target takes double damage.</line>
+      <line>For each additional action you use when Casting the Spell, you can fire an additional ray at a different targget, to a maximum of three rays targeting three different targets for 3 actions.</line>
+      <line>These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make all the attack rolls for <i>blazing bolt</i>. If you spend 2 or more actions Casting the Spell, the damage increases to 4d6 fire damage on a hit.</line>
 
-      <heighten value="+2">The resistance increases by 2, and the weakness increases by 3.</heighten>
+      <heighten value="+1">The damage to each target increases by 1d6 for the 1-action version, or by 2d6 for the 2- and 3-action versions.</heighten>
    </rule>
 
    <rule>
-      <title>Brine Dragon Bile</title>
+      <title>Brine Dragon Bile</title> <action>R</action>
       <type>Spell</type> <level>2</level>
-      <trait>Acid</trait> <trait>Evocation</trait> <trait>Primal</trait> <trait>Water</trait>
-      <cast action="R">verbal</cast>
+      <trait>Acid</trait> <trait>Concentrate</trait> <trait>Primal</trait> <trait>Water</trait>
       <trigger>A creature within range takes damage from a slashing or piercing attack, or one that inflicts persistent bleed damage</trigger>
       <range>30 feet</range> <targets>the creature that took damage</targets>
+      <defense>AC</defense>
 
-      <line>You spit a glob of caustic saltwater that stings the wounds of the creature. Make a ranged spell attack against the triggering creature's AC. On a hit, salt scours its open wound, dealing 2d6 persistent acid damage, or 2d10 persistent acid damage on a critical hit.</line>
+      <line>You spit a glob of caustic saltwater that stings the wounds of the creature. Make a ranged spell attack against the triggering creature's AC.</line>
+      <line results="">
+         <critsuccess>Salt scours the target's open wound, dealing 2d10 persistent acid damage.</critsuccess>
+         <success>Salt stings the target's open wound, dealing 2d6 persistent acid damage.</success>
+      </line>
 
       <heighten value="+2">The persistent damage increases by two dice.</heighten>
    </rule>
 
    <rule>
+      <title>Cleanse Affliction</title> <action>2</action>
+      <type>Spell</type> <level>2</level>
+      <trait>Concentrate</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Primal</trait>
+      <range>touch</range> <targets>1 willing creature</targets>
+
+      <line>Gentle restorative magic pushes back against the effects of toxins and more complex maladies. Choose an affliction on the target, such as a <u>curse</u>, <u>disease</u>, or <u>poison</u>. If it has advanced past stage one, reduce the stage by one. This reduction can be applied only once to a given case of an affliction, with the case ending when it's completely cured.</line>
+
+      <heighten value="3rd">Attempt to counteract the affliction if it is a <u>disease</u> or <u>poison</u>. Even though the reduction can't occur again, you can keep attempting to counteract the affliction.</heighten>
+      <heighten value="4th">Attempt to counteract the affliction if it is a <u>curse</u>, <u>disease</u>, or <u>poison</u>. Even though the reduction can't occur again, you can keep attemping to counteract the affliction.</heighten>
+   </rule>
+
+   <rule>
+      <title>Clear Mind</title> <action>2</action>
+      <type>Spell</type> <level>2</level>
+      <trait>Concentrate</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Mental</trait> <trait>Primal</trait>
+      <range>touch</range> <targets>1 willing creature</targets>
+
+      <line>You drive mental contimaniation from the target's mind. Attempt to counteract an effect of your choice imposing one of these conditions on the target: fleeing, frightened, and stupefied.</line>
+      <line>If you failed to counteract the effect but you would have if its counteract rank were 2 lower, instead suppress the effect until the beginning of your next turn. The effect's duration doesn't elapse while it is suppressed.</line>
+      <line>This spell can't counteract or suppress conditions that are part of <u>curses</u>, <u>diseases</u>, or a natural state of the target.</line>
+
+      <heighten value="4th">Add confused, controlled, and slowed to the list of conditions.</heighten>
+      <heighten value="6th">Add doomed to the list of conditions.</heighten>
+      <heighten value="8th">Add stunned to the list of conditions.</heighten>
+   </rule>
+
+   <rule>
       <title>Create Food</title>
       <type>Spell</type> <level>2</level>
-      <trait>Conjuration</trait> <trait>Primal</trait>
-      <cast>1 hour (somatic, verbal)</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait>
+      <cast>1 hour</cast>
       <range>30 feet</range>
 
-      <line>You create enough food to feed six Medium creatures for a day. This food is bland and unappealing, but it is nourishing. After 1 day, if no one has eaten the food, it decause and becomes inedible. Most Small creatures eat one-quarter as much as a Medium creature (one-sixteenth as much for most Tiny creatures), and most Large creatures eat 10 times as much (100 times as much for Huge creatures and so on).</line>
+      <line>You create enough food to feed six Medium creatures for a day. This food is bland and unappealing, but it is nourishing. After 1 day, if no one has eaten the food, it decays and becomes inedible.</line>
+      <line>Most Small creatures eat one-quarter as much as a Medium creature (one-sixteenth as much for most Tiny creatures), and most Large creatures eat 10 times as much (100 times as much for Huge creatures, and so on).</line>
 
       <heighten value="4th">You can feed 12 Medium creatures.</heighten>
       <heighten value="6th">You can feed 50 Medium creatures.</heighten>
@@ -63,10 +95,9 @@
    </rule>
 
    <rule>
-      <title>Darkvision</title>
+      <title>Darkvision</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Divination</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait>
       <duration>1 hour</duration>
 
       <line>You grant yourself supernatural sight in areas of darkness. You gain darkvision.</line>
@@ -76,10 +107,9 @@
    </rule>
 
    <rule>
-      <title>Dispel Magic</title>
+      <title>Dispel Magic</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Abjuration</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait>
       <range>120 feet</range> <targets>1 spell effect or unattended magic item</targets>
 
       <line>You unravel the magic behind a spell or effect. Attempt a counteract check against the target. If you successfully counteract a magic item, it becomes a mundane item of its type for 10 minutes. This doesn't change the item's non-magical properties.</line>
@@ -87,24 +117,22 @@
    </rule>
 
    <rule>
-      <title>Enlarge</title>
+      <title>Enlarge</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Polymorph</trait> <trait>Primal</trait> <trait>Transmutation</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Polymorph</trait> <trait>Primal</trait>
       <range>30 feet</range> <targets>1 willing creature</targets>
       <duration>5 minutes</duration>
 
       <line>Bolstered by magical power, the target grows to size Large. Its equipment grows with it but returns to natural size if removed. The creature is clumsy 1. Its reach increases by 5 feet (or by 10 feet if it started out Tiny), and it gains a +2 status bonus to melee damage. This spell has no effect on a Large or larger creature.</line>
 
       <heighten value="4th">The creature instead grows to size Huge. The status bonus to melee damage is +4 and the creature's reach increases by 10 feet (or 15 feet if the creature started out Tiny). The spell has no effect on a Huge or larger creatures.</heighten>
-      <heighten value="6th">Choose either the 2nd-level or 4th-level version of this spell and apply its effects to up to 10 willing creatures.</heighten>
+      <heighten value="6th">Choose either the 2nd-rank or 4th-rank version of this spell and apply its effects to up to 10 willing creatures.</heighten>
    </rule>
 
    <rule>
-      <title>Entangling Flora</title>
+      <title>Entangling Flora</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
       <range>120 feet</range> <area>All squares in a 20-foot burst</area>
       <duration>1 minute</duration>
 
@@ -112,11 +140,11 @@
    </rule>
 
    <rule>
-      <title>Exploding Earth</title>
+      <title>Exploding Earth</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Earth</trait> <trait>Evocation</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Earth</trait> <trait>Manipulate</trait> <trait>Primal</trait>
       <range>120 feet</range> <targets>1 creature</targets>
+      <defense>AC</defense>
 
       <line>You throw a hard-packed ball of earth and stone at a creature, and the projectile explodes upon impact. Make a ranged spell attack roll against the target's AC. On a hit, the projectile deals 3d6 bludeoning damage. On a critical hit, the projectile deals double damage, and the target must succeed at a Fortitude saving throw or fall prone.</line>
       <line>On a miss, hit, or critical hit, the projectile deals 1d6 splash damage to all creatures within 5 feet of the target (including the target). Splash damage is not doupled on a critical hit, and you add it together with the initial damage against the target before applying the target's resistance or weakness.</line>
@@ -125,34 +153,32 @@
    </rule>
 
    <rule>
-      <title>Flaming Sphere</title>
+      <title>Floating Flame</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Evocation</trait> <trait>Fire</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Fire</trait> <trait>Manipulate</trait> <trait>Primal</trait>
       <range>30 feet</range> <area>1 5-foot square</area>
-      <save>Reflex</save>
+      <save>basic Reflex</save>
       <duration>sustained up to 1 minute</duration>
 
-      <line>You create a sphere of flame in a square within range. The sphere deals 3d6 fire damage to each creature in the square where it first appears, with a basic Reflex save.</line>
-      <line>When you Sustain this spell, you can move the sphere up to 10 feet. It then deals damage to each creature whose space it shared at any point during the move. This uses the same damage and save, and you roll the damage once each time you Sustain.</line>
-      <line>A given creature can take damage from the flaming sphere only once per round.</line>
+      <line>You create a that burns without fuel and moves to your commands. The flame deals 3d6 fire damage to each creature in the square where it first appears, with a basic Reflex save.</line>
+      <line>When you Sustain this spell, you can levitate the sphere up to 10 feet. It then deals damage to each creature whose space it shared at any point during the move. This uses the same damage and save, and you roll the damage once each time you Sustain.</line>
+      <line>A given creature can take damage from the <i>floating flame</i> only once per round.</line>
 
       <heighten value="+1">The damage increases by 1d6.</heighten>
    </rule>
 
    <rule>
-      <title>Fungal Infestation</title>
+      <title>Fungal Infestation</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Conjuration</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Fungus</trait> <trait>Manipulate</trait> <trait>Poison</trait> <trait>Primal</trait>
       <area>15-foot cone</area>
       <save>Fortitude</save>
 
       <line>Toxic spores swarm over creatures in the area, causing them to erupt in grotesque fungal growths. These noxious growths deal 2d6 persistent poison damage, and each creature must attempt a Fortitude save.</line>
       <line results="">
-         <critsuccess>The creature is unaffected.</critsuccess>
+         <critsuccess/>
          <success>The target takes half the persistent damage.</success>
-         <fail>The target takes the full persistent poison damage. While it is taking this persistent poison damage, it has weakness 1 to fire and weakness 1 to slashing.</fail>
+         <fail>The target takes the full persistent damage. While it is taking this persistent poison damage, it has weakness 1 to fire and weakness 1 to slashing.</fail>
          <critfail>The target takes double the persistent damage. While it is taking this persistent poison damage, it has weakness 2 to fire and weakness 2 to slashing.</critfail>
       </line>
 
@@ -160,10 +186,9 @@
    </rule>
 
    <rule>
-      <title>Gentle Breeze</title>
+      <title>Gentle Breeze</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Air</trait> <trait>Healing</trait> <trait>Positive</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Air</trait> <trait>Concentrate</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Primal</trait> <trait>Vitality</trait>
       <range>60 feet</range> <area>40-foot burst</area>
       <duration>10 minutes</duration>
 
@@ -174,28 +199,9 @@
    </rule>
 
    <rule>
-      <title>Glitterdust</title>
+      <title>Mist</title> <action>3</action>
       <type>Spell</type> <level>2</level>
-      <trait>Evocation</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
-      <range>120 feet</range> <area>10-foot burst</area>
-      <save>Reflex</save>
-
-      <line>Creatures in the area are outlined by glittering dust. Each creature must attempt a Reflex save.</line>
-      <line results="">
-         <critsuccess>The target is unaffected.</critsuccess>
-         <success>The target's invisibility is negated for 2 rounds.</success>
-         <fail>The target is dazzled for 1 minute and its invisibility is negated for 1 minute.</fail>
-         <critfail>The target is blinded for 1 round and dazzled for 10 minutes. Its invisibility is negated for 10 minutes.</critfail>
-      </line>
-      <line>If a creature has its invisibility negated by this spell, it is concealed instead of invisible. This applies both if the creature was already invisible and if it benefits from new invisibility effects before the end of the invisibility negation from this spell.</line>
-   </rule>
-
-   <rule>
-      <title>Obscuring Mist</title>
-      <type>Spell</type> <level>2</level>
-      <trait>Conjuration</trait> <trait>Primal</trait> <trait>Water</trait>
-      <cast action="3">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait> <trait>Water</trait>
       <range>120 feet</range> <area>20-foot burst</area>
       <duration>1 minute</duration>
 
@@ -204,127 +210,109 @@
    </rule>
 
    <rule>
-      <title>Propulsive Breeze</title>
+      <title>Oaken Skin</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Air</trait> <trait>Conjuration</trait> <trait>Move</trait> <trait>Primal</trait>
-      <cast action="R">somatic</cast> <trigger>An ally in range Strides or Leaps</trigger>
-      <range>60 feet</range> <targets>the triggering creature</targets>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Plant</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <range>touch</range> <targets>1 willing creature</targets>
+      <duration>10 minutes</duration>
 
-      <line>You create a current of wind at your ally's back, propelling their movement. When your ally's Stride or Leap ends, the current propels them an additional 15 feet in the same direction as the last 5 feet of their Stride or Leap.</line>
+      <line>The target's skin becomes tough, with a consistency like bark or wood. The target gains resistance 2 to bludgeoning and piercing damage, and weakness 3 to fire. After the target takes fire damage, it can Dismiss the spell as a free action triggered by taking the damage; doing so doesn't reduce the fire damage the target was dealt.</line>
+
+      <heighten value="+2">The resistance increases by 2, and the weakness increases by 3.</heighten>
    </rule>
 
    <rule>
-      <title>Resist Energy</title>
+      <title>Resist Energy</title> <action>2</action>
       <type>Spell</type> <level>2</level>
       <trait>Abjuration</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
       <range>touch</range> <targets>1 creature</targets>
       <duration>10 minutes</duration>
 
-      <line>A shield of shimmering elemental energy protects a creature against one type of energy damage. Choose acid, cold, electricity, fire, or sonic damage. The target and its gear gain resistance 5 against the damage type you chose.</line>
+      <line>A shield of elemental energy protects a creature against one type of energy damage. Choose acid, cold, electricity, fire, or sonic damage. The target and its gear gain resistance 5 against the damage type you chose.</line>
 
       <heighten value="4th">The resistance increases to 10, and you can target up to two creatures.</heighten>
       <heighten value="7th">The resistance increases to 15, and you can target up to five creatures.</heighten>
    </rule>
 
    <rule>
-      <title>Restoration</title>
+      <title>Revealing Light</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Healing</trait> <trait>Necromancy</trait> <trait>Primal</trait>
-      <cast>1 minute (somatic, verbal)</cast>
-      <range>touch</range> <targets>1 creature</targets>
+      <trait>Concentrate</trait> <trait>Light</trait> <trait>Manipulate</trait> <trait>Primal</trait>
+      <range>120 feet</range> <area>10-foot burst</area>
+      <save>Reflex</save> <duration>varies</duration>
 
-      <line>Restorative magic counters the effects of toxins or conditions that prevent a creature from functioning at its best. When you cast <![CDATA[<i>restoration</i>]]>, choose to either reduce a condition or lessen the effect of a toxin. A creature can benefit from one one <![CDATA[<i>restoration</i>]]> spell each day, and it can't benefit from <![CDATA[<i>restoration</i>]]> more than once to reduce the stage of the same exposure to a given toxin.</line>
-      <line list="">
-         <entry name="Lessen a Toxin">Reduce the stage of one toxin the target suffers from by one stage. This can't reduce the stage below stage 1 or cure the affliction.</entry>
-         <entry name="Reduce a Condition">Reduce the value of the target's clumsy, enfeebled, or stupefied condition by 2. You can instead reduce two of the listed conditions by 1 each.</entry>
+      <line>A wave of magical light washes over the area. You choose the appearance of the light, such as colorful, heatless flames, or sparkling motes. A creature affected by <i>revealing light</i> is dazzled. If the creature was invisible, it becomes concealed instead. If the creature was already concealed for any reason, it is no longer concealed. Each creature must attempt a Reflex save.</line>
+      <line results="">
+         <critsuccess/>
+         <success>The light affects the creature for 2 rounds.</success>
+         <fail>The light affects the creature for 1 minute.</fail>
+         <critfail>The light affects the creature for 10 minutes.</critfail>
       </line>
-
-      <heighten value="4th">Add drained to the list of conditions you can reduce. When you lessen a toxin, reduce the stage by two. You also gain a third option that allows you to reduce the target's doomed value by 1. You can't use this to reduce a permanent doomed condition.</heighten>
-      <heighten value="6th">As the 4th-level <![CDATA[<i>restoration</i>]]>, but you can reduce a permanent doomed condition if you add a material component to Casting the Spell, providing 100 gp worth of diamond dust as a cost.</heighten>
    </rule>
 
    <rule>
-      <title>Slough Skin</title>
+      <title>Sound Body</title>
       <type>Spell</type> <level>2</level>
-      <trait>Necromancy</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
-      <duration>1 hour</duration>
+      <trait>Concentrate</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Primal</trait> <trait>Vitality</trait>
+      <range>touch</range> <targets>1 willing creature</targets>
 
-      <line>You continually and harmlessly slough off the top layer of your skin while new skin regenerates immediately, quickly moving damaging substances away from your body. The flat check to remove persistent damage from effects that coat your skin (such as most persistent acid damage) is reduced to 5, and you gain a +2 status bonus to your initial save against contact poison (but not further saves, since by that point, the toxin has already entered your system).</line>
-      <line>If you're suffering from an effect other than persistent damage that depends on continuous contact with your skin, if that effect allows a saving throw, you receive a new saving throw against that effect at the end of each of your turn when you attempt your flat checks against persistent damage, and you also receive a +2 status bonus to these saving throws.</line>
-      <line>While affected by this spell, your continually shedding skin makes you much easier to Track. Anyone Tracking you gains a +2 circumstance bonus to do so, and you cannot Hide your Tracks.</line>
+      <line>You send a surge of healing energy to restore the targetss body. Attempt to counteract an effect of your choice imposing one of these conditions on the target: blinded, dazzled, deafened, enfeebled, or sickened.</line>
+      <line>If you didn't counteract the effect, but you would have if its counteract rank were 2 lower, instead suppress the effect until the beginning of your next turn. The effect's duration doesn't elapse while it's suppressed.</line>
+      <line>This spell can't counteract or suppress <u>curses</u>, <u>diseases</u>, or conditions that are part of the target's normal state.</line>
+
+      <heighten value="4th">Add drained and slowed to the list of conditions.</heighten>
+      <heighten value="8th">Add stunned to the list of conditions.</heighten>
    </rule>
 
    <rule>
-      <title>Splinter Volley</title>
+      <title>Splinter Volley</title> <action or="3">2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Attack</trait> <trait>Evocation</trait> <trait>Primal</trait> <trait>Wood</trait>
-      <cast action="2" or="3">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait> <trait>Wood</trait>
       <range>60 feet</range> <targets>1 or 2 creatures</targets>
+      <defense>AC</defense>
 
       <line>You launch a volley of splinters at your foes. Make a ranged spell attack roll against a single creature's AC. On a hit, the splinters deal 4d6 piercing damage. On a critical hit, the splinters deal double damage and 1 persistent bleed damage.</line>
-      <line>You can spend a third action while casting this spell to fire splinters at two different targets instead of one. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make both spell attack rolls for <![CDATA[<i>splinter volley</i>]]>.</line>
+      <line>You can spend a third action while casting this spell to fire splinters at two different targets instead of one. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make both spell attack rolls for <i>splinter volley</i>.</line>
 
-      <heighten value="+2">Increase the damage dealt to each target by 4d6, and the persistent bleed damage on a critical hit by 1.</heighten>
+      <heighten value="+1">Increase the damage dealt to each target by 2d6. For every two ranks, also increase the persistent bleed damage on a critical hit by 1.</heighten>
    </rule>
 
    <rule>
-      <title>Sudden Blight</title>
+      <title>Sudden Blight</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Necromancy</trait> <trait>Negative</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait> <trait>Void</trait>
       <range>120 feet</range> <area>20-foot burst</area>
       <save>basic Fortitude</save>
 
-      <line>You accelerate the processes of decay in an area. Each living creature in the area takes 2d10 negative damage, with a basic Fortitude save. A creature affected by a disease takes a -2 circumstance penalty to this save.</line>
-      <line>You can also direct the blight to rot Small and smaller non-creature plants in the area, eliminating non-magical undergrowth and any resulting difficult terrain, cover, and concealment. <![CDATA[<i>Sudden blight</I>]]> attempts to counteract any magical effect on the plants before withering them.</line>
+      <line>You accelerate the processes of decay in an area. Each living creature in the area takes 2d10 void damage, with a basic Fortitude save. A creature affected by a disease takes a -2 circumstance penalty to this save.</line>
+      <line>You can also direct the blight to rot Small and Tiny non-creature plants in the area, eliminating non-magical undergrowth and any resulting difficult terrain, cover, and concealment. <i>Sudden blight</i> attempts to counteract any magical effect on the plants before withering them.</line>
 
       <heighten value="+1">The damage increases by 1d10.</heighten>
    </rule>
 
    <rule>
-      <title>Thermal Remedy</title>
+      <title>Sure Footing</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Fire</trait> <trait>Primal</trait> <trait>Transmutation</trait>
-      <cast>1 minute (somatic, verbal)</cast>
-      <range>touch</range> <targets>up to 1 gallon of non-magical liquid or up to 5 pounds of food</targets>
-      <duration>1 hour</duration>
+      <trait>Concentrate</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Primal</trait>
+      <range>touch</range> <targets>1 willing creature</targets>
 
-      <line>You adjust the delicate levels of bitter ingredients in food and drink to draw out their full restorative and fortifying properties. Choose one of the benefits listed below. Any creature that consumes the targeted drink or food gains that benefit. Up to 10 creatures can partake in the meal, and a creature gets no extra benefit for consuming more than one portion.</line>
-      <line list="">
-         <entry>Gain 5 temporary Hit Points.</entry>
-         <entry>Gain resistance 2 to fire.</entry>
-         <entry>Gain a +1 circumstance bonus to saves against disease.</entry>
-      </line>
+      <line>You free the target's limbs from ailments that impede mobility. Attempt to counteract an effect of your choice imposing one of these conditions on the target: clumsy, grabbed, or paralyzed.</line>
+      <line>If you didn't counteract the effect, but you would have if its counteract rank were 2 lower, instead suppress the effect until the beginning of your next turn. The effect's duration doesn't elapse while it's suppressed.</line>
+      <line>This spell can't counteract or suppress <u>curses</u>, <u>diseases</u>, or conditions that are part of the target's normal state.</line>
 
-      <heighten value="4th">The remedy provides two benefits of your choice instead of one. The temporary Hit Points increase to 10, the resistance to fire increases to 3, the bonus against disease increases to +2, and the duration is 2 hours.</heighten>
-      <heighten value="7th">The remedy provides all three benefits. The temporary Hit Points increase to 15, the resistance to fire increases to 5, the bonus against disease increases to +3, and the duration is 8 hours.</heighten>
+      <heighten value="4th">Add immobilized, slowed, and restrained to the list of conditions.</heighten>
+      <heighten value="6th">Add petrified to the list of conditions.</heighten>
+      <heighten value="8th">Add stunned to the list of conditions.</heighten>
    </rule>
 
    <rule>
-      <title>Vomit Swarm</title>
+      <title>Water Walk</title> <action>2</action>
       <type>Spell</type> <level>2</level>
-      <trait>Evocation</trait> <trait>Primal</trait>
-      <cast action="2">somatic, verbal</cast>
-      <area>30-foot cone</area>
-      <save>basic Reflex</save>
-
-      <line>You belch forth a swarm of magical vermin. You evoke and shape the creatures from your imagination, allowing you to change the appearance of the creatures (typically a mix of centipedes, roaches, wasps, and worms), but this doesn't change the effect of the spell.</line>
-      <line>The vermin swarm over anyone in the area, their bites and stings dealing 2d8 piercing damage, with a basic Reflex save. A creature that fails its saving throw also becomes sickened 1. The swarm disappears as soon as the spell ends.</line>
-
-      <heighten value="+1">Increase the damage by 1d8.</heighten>
-   </rule>
-
-   <rule>
-      <title>Water Walk</title>
-      <type>Spell</type> <level>2</level>
-      <trait>Primal</trait> <trait>Transmutation</trait> <trait>Water</trait>
-      <cast action="2">somatic, verbal</cast>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait> <trait>Water</trait>
       <range>touch</range> <targets>1 creature</targets>
       <duration>10 minutes</duration>
 
-      <line>The target can walk on the surface of the water and other liquids without falling through. It can go underwater if it wishes, but in that case it must Swim normally. This spell doesn't grant the ability to breathe underwater.</line>
+      <line>The target can walk on the surface of water and other liquids without falling through. It can go underwater if it wishes, but in that case it must Swim normally. This spell doesn't grant the ability to breathe underwater.</line>
 
       <heighten value="4th">The spell's range increases to 30 feet, the duration increases to 1 hour, and you can target up to 10 creatures.</heighten>
    </rule>

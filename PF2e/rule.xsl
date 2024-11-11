@@ -204,17 +204,17 @@
          <div>
             <div id="traits" style="width: 100%; float: left; margin: 0.1em; margin-bottom:0em; color: white;">
                <xsl:if test="uncommon" >
-                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #c45500; font-variant: small-caps; padding: 0.3em 0.3em;">
+                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #c45500; font-variant: small-caps; padding: 0.3em 0.25em;">
                      <xsl:text>Uncommon</xsl:text>
                   </div>
                </xsl:if>
                <xsl:if test="rare" >
-                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #0c1466; font-variant: small-caps; padding: 0.3em 0.3em;">
+                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #0c1466; font-variant: small-caps; padding: 0.3em 0.25em;">
                      <xsl:text>Rare</xsl:text>
                   </div>
                </xsl:if>
                <xsl:for-each select="trait">
-                  <div id="trait" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #5d0000; font-variant: small-caps; padding: 0.3em 0.25em;">
+                  <div id="trait" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #5d0000; font-variant: small-caps; padding: 0.25em;">
                      <xsl:value-of select="." />
                   </div>
                </xsl:for-each>
@@ -300,7 +300,10 @@
                      <b>Dex Cap </b>
                      <xsl:apply-templates select="dexcap"/>
                      <xsl:if test="checkpenalty or spdpenalty">
-                        <xsl:text>; </xsl:text><br/>
+                        <xsl:text>; </xsl:text>
+                        <xsl:if test="checkpenalty and spdpenalty">
+                           <br/>
+                        </xsl:if>
                      </xsl:if>
                   </xsl:if>
                   <xsl:if test="checkpenalty">
@@ -611,6 +614,11 @@
                   <xsl:apply-templates/>
                </div>
             </xsl:when>
+            <xsl:when test="@toolkit">
+               <div id="description" class="line" style="float: left;">
+                  <xsl:text>You can use a toolkit with 1 hand if you're wearing it, or 2 if you're holding it. You can wear up to 2 Bulk of tools.</xsl:text>
+               </div>
+            </xsl:when>
             <xsl:otherwise>
                <div id="description" class="line" style="float: left;">
                   <xsl:if test="@name">
@@ -625,19 +633,18 @@
 
    <xsl:template match="block">
       <div id="block" class="line" style="width:100%; box-sizing:border-box; padding-top:0.3em; padding-bottom:0.3em; float:left;">
-         <b><xsl:value-of select="name" disable-output-escaping="yes" /><xsl:text> </xsl:text></b>
+         <b><xsl:apply-templates select="name"/><xsl:text> </xsl:text></b>
          <xsl:if test="action">
-            <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:value-of select="action" /> </span><xsl:text> </xsl:text>
+            <span style="font-family: 'pfactions'; font-size: 1.3em; text-align: center;"><xsl:apply-templates select="action" /> </span><xsl:text> </xsl:text>
          </xsl:if>
          <xsl:if test="type">
-            <xsl:text> </xsl:text><xsl:value-of select="type" disable-output-escaping="yes" /><xsl:text>; </xsl:text>
+            <xsl:text> </xsl:text><xsl:apply-templates select="type" /><xsl:text>; </xsl:text>
          </xsl:if>
          <xsl:for-each select="part">
             <xsl:if test="@linebreak">
                <br />
             </xsl:if>
-            <b><xsl:value-of select="name" disable-output-escaping="yes" /></b><xsl:text> </xsl:text>
-            <xsl:value-of select="text()" disable-output-escaping="yes" />
+            <xsl:apply-templates />
             <xsl:if test="position()!=last()">
                <xsl:text>; </xsl:text>
             </xsl:if>
@@ -721,6 +728,14 @@
             <xsl:apply-templates/>
          </xsl:otherwise>
       </xsl:choose>
+   </xsl:template>
+
+   <xsl:template match="name">
+      <b>
+         <xsl:if test="@activate">
+            <xsl:text>Activate—</xsl:text>
+         </xsl:if>
+         <xsl:apply-templates /><xsl:text> </xsl:text></b>
    </xsl:template>
 
    <xsl:template match="text()">

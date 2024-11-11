@@ -5,14 +5,14 @@
    <rule>
       <title>Healing Potion</title>
       <type>Item</type> <level>1+</level>
-      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Potion</trait>
+      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Potion</trait> <trait>Vitality</trait>
       <usage>held in 1 hand</usage> <bulk>L</bulk>
       <activate>
          <action>1</action>
-         <type>Interact</type>
+         <type>(manipulate)</type>
       </activate>
 
-      <line>A <![CDATA[<i>healing potion</i>]]> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <![CDATA[<i>healing potion</i>]]>, you regain the listed number of Hit Points.</line>
+      <line>A <i>healing potion</i> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <i>healing potion</i>, you regain the listed number of Hit Points.</line>
 
       <variant>
          <type>Minor</type> <level>1</level>
@@ -38,18 +38,27 @@
       <title>Studded Leather Armor</title>
       <price>3 gp</price>
       <ac>+2</ac> <dexcap>+3</dexcap> <checkpenalty>-1</checkpenalty> <spdpenalty>-</spdpenalty>
-      <strreq>12</strreq> <bulk>1</bulk>
+      <strreq>+1</strreq> <bulk>1</bulk>
       <armorcat>Light</armorcat> <armorgroup>Leather</armorgroup>
 
       <line>This leather armor is reinforced with metal studs and sometimes small metal plates, providing most of the flexibility of leather armor with more robust protection.</line>
+
+      <variant>
+         <rune italic="">+1 potency</rune> <level>5</level>
+         <trait>Magical</trait>
+         <price>160 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
+      </variant>
    </rule>
 
    <rule>
-      <title>Wooden Shield</title>
-      <price>1 gp</price>
+      <title>Steel Shield</title>
+      <price>2 gp</price>
       <ac>+2</ac>
-      <bulk>1</bulk> <hardness>3</hardness>
-      <shieldhp>12</shieldhp> <shieldbt>6</shieldbt>
+      <bulk>1</bulk> <hardness>5</hardness>
+      <shieldhp>20</shieldhp> <shieldbt>10</shieldbt>
 
       <line>Though they come in a variety of shapes and sizes, the protection offered by wooden shields comes from the stoutness of their materials. While wooden shields are less expensive than steel shields, they break more easily.</line>
 
@@ -59,42 +68,39 @@
          <price>75 gp</price>
          <usage>etched onto the shield</usage>
 
-         <line><![CDATA[<i>Reinforcing runes</i>]]> make a shield significantly more durable, allowing it to effectively block more powerful attacks.</line>
-         <line>A <![CDATA[<i>minor reinforcing rune</i>]]> increases the shield's Hardness by 3, Hit Points by 44, and its BT by 22 (maximum 8 Hardness, 64 HP, 32 BT).</line>
+         <line><i>Reinforcing runes</i> make a shield significantly more durable, allowing it to effectively block more powerful attacks.</line>
+         <line>A <i>minor reinforcing rune</i> increases the shield's Hardness by 3, Hit Points by 44, and its BT by 22 (maximum 8 Hardness, 64 HP, 32 BT).</line>
       </variant>
    </rule>
 
    <rule>
-      <title>Bracers of Missile Deflection</title>
-      <type>Item</type> <level>3</level>
-      <trait>Abjuration</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <title>Clawed Bracers</title>
+      <type>Item</type> <level>7</level>
+      <trait>Invested</trait> <trait>Magical</trait>
       <usage>worn bracers</usage> <bulk>L</bulk>
-      <price>52 gp</price>
+      <price>325 gp</price>
 
-      <line>These bracers are made from plates of durable mithral and gleam like the summer sun.</line>
+      <line>Animal claws are woven into the thick leather of these bracers.</line>
+
       <block>
-         <name>Activate</name>
-         <action>R</action>
-         <type>Interact</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Trigger</name>A ranged weapon attack hits you but doesn't critically hit</part>
-         <part><name>Requirements</name>You are aware of the attack and not flat-footed</part>
-         <part><name>Effect</name>The bracers send the missle off-course. You gain a +2 circumstance bonus to AC against the triggering attack. If this attack would cause the attack to be a failure, the attack misses you.</part>
+         <name activate="">Extend Claws</name> <action>1</action> <type>(manipulate, morph)</type>
+         <part><name>Frequency</name>once per hour</part>
+         <part><name>Effect</name>The bracers fuse temporarily with your forearms, with the claws extending to your fingertips. You gain a climb Speed of 20 feet and a claw unarmed attack with the Agile and Finesse traits that deals 1d6 damage and is in the Brawling group. This lasts for 10 minutes or until you Dismiss it.</part>
       </block>
    </rule>
 
    <rule>
-      <title>Magic Wand of Heal</title>
+      <title>Magic Wand of Heal (rank 1)</title>
       <type>Item</type> <level>3</level>
-      <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Wand</trait>
+      <trait>Healing</trait> <trait>Magical</trait> <trait>Vitality</trait> <trait>Wand</trait>
       <price>60 gp</price>
       <usage>held in 1 hand</usage> <bulk>L</bulk>
 
-      <line>This baton is about a foot long and contains a 1st-rank <![CDATA[<i>heal</i>]]> that can be cast once per day. The golden end caps on this white wooden wand are adorned with ruby cabochons.</line>
+      <line>This baton is about a foot long and contains a 1st-rank <i>heal</i> that can be cast once per day. The golden end caps on this white wooden wand are adorned with ruby cabochons.</line>
       <block>
          <name>Activate</name>
          <type>Cast a Spell</type>
-         <part><name>Requirement</name>You must have <![CDATA[<i>heal</i>]]> on your spell list</part>
+         <part><name>Requirement</name>You must have <i>heal</i> on your spell list</part>
          <part><name>Effect</name>You Cast the Spell from the wand</part>
          <part linebreak=""><name>Overcharge</name>If the spell has been cast from the wand for the day, you can cast it one more time by overcharging the wand at the risk of destroying it. After you Cast the Spell, make a DC 10 flat check. On a success, the wand is broken and can be repaired. On a failure, the wand is destroyed.</part>
          <part>Activating a wand that has been overcharged for the day automatically destroys it, and no spell is cast.</part>
@@ -110,9 +116,9 @@
 
       <line>This staff is tapered at the base and carved into a gem-studded twist at the top. While wielding the staff, you gain a +2 circumstance bonus checks to identify elemental creatures.</line>
       <line list="Contained Spells">
-         <entry name="Cantrip"><![CDATA[<i>frostbite</i>]]></entry>
-         <entry name="1st"><![CDATA[<i>burning hands</i>, <i>pummeling rubble</i>, <i>thunderstike</i>]]></entry>
-         <entry name="2nd"><![CDATA[<i>flaming sphere</i>, <i>resist energy</i>]]></entry>
+         <entry name="Cantrip"><i>frostbite</i></entry>
+         <entry name="1st"><i>breathe fire</i>, <i>pummeling rubble</i>, <i>thunderstike</i></entry>
+         <entry name="2nd"><i>floating flame</i>, <i>resist energy</i></entry>
       </line>
       <block>
          <name>Activate</name> <type>Cast a Spell</type>
@@ -143,7 +149,7 @@
       <price>15 gp</price>
       <usage>worn</usage>
 
-      <line>A <![CDATA[<i>ring of discretion</i>]]> magically conceals any armor and sheathed weapons you're wearing by either turning them invisible or creating the illusion of ordinary clothes. The ring doesn't change your appearance beyond concealing weapons and armor.</line>
+      <line>A <i>ring of discretion</i> magically conceals any armor and sheathed weapons you're wearing by either turning them invisible or creating the illusion of ordinary clothes. The ring doesn't change your appearance beyond concealing weapons and armor.</line>
       <line>As soon as you wield a weapon affected by the ring, the weapon becomes obvious to onlookers and is no longer affected until you sheathe the weapon for at least 1 minute. A creature can use the Seek action to examine you and disbelieve this illusion (DC 15), and it can attempt to do so without using an action each time it hits you with an attack.</line>
    </rule>
 
@@ -153,7 +159,7 @@
       <hands>2</hands> <bulk>1</bulk>
 
       <line>This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds. If you wear your healer's tools, you can draw and replace them as part of the action that uses them.</line>
-      <line>You can use a set of tools with 1 hand if you're wearing them, or 2 if you're holding them. You can wear up to 2 Bulk of tools.</line>
+      <line toolkit=""/>
    </rule>
 
    <rule>
@@ -163,16 +169,5 @@
 
       <line>A repair kit allows you to perform simple repairs while traveling. It contains a portable anvil, tongs, woodworking tools, a whetstone, and oils for conditioning leather and wood. You can use a repair kit to Repair items using the Crafting skill. If you wear your repair kit, you can draw and replace them as part of the action to use them.</line>
       <line>You can use a set of tools with 1 hand if you're wearing them, or 2 if you're holding them. You can wear up to 2 Bulk of Tools.</line>
-   </rule>
-
-   <rule>
-      <title>Crafter's Eyepiece</title>
-      <type>Item</type> <level>3</level>
-      <trait>Invested</trait> <trait>Magical</trait> <trait>Transmutation</trait>
-      <usage>worn eyepiece</usage> <bulk>-</bulk>
-      <price>60 gp</price>
-
-      <line>This rugged metal eyepiece etched with sqare patterns is designed to be worn over a single eye. Twisting the lens reveals a faint three-dimensional outline of an item you plan to build or repair, with helpful labels on the component parts. You gain a +1 item bonus to Crafting checks.</line>
-      <line>When you Repair an item, increase the Hit Points restored to 10 + 10 per proficiency rank on a success or 15 + 15 per proficiency rank on a critical success.</line>
    </rule>
 </catalog>

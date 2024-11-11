@@ -5,14 +5,14 @@
    <rule>
       <title>Healing Potion</title>
       <type>Item</type> <level>1+</level>
-      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Potion</trait>
+      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Potion</trait> <trait>Vitality</trait>
       <usage>held in 1 hand</usage> <bulk>L</bulk>
       <activate>
          <action>1</action>
-         <type>Interact</type>
+         <type>(manipulate)</type>
       </activate>
 
-      <line>A <![CDATA[<i>healing potion</i>]]> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <![CDATA[<i>healing potion</i>]]>, you regain the listed number of Hit Points.</line>
+      <line>A <i>healing potion</i> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <i>healing potion</i>, you regain the listed number of Hit Points.</line>
 
       <variant>
          <type>Minor</type> <level>1</level>
@@ -49,20 +49,20 @@
       <traittext><name>Sweep</name>This weapon makes wide sweeping or spinning attacks, making it easier to attack multiple enemies. When you attack with this weapon, you gain a +1 circumstance bonus to your attack roll if you already attempted to attack a different target this turn using this weapon.</traittext>
 
       <variant>
-         <rune><![CDATA[<i>+1 Potency</i>]]></rune> <level>2</level>
-         <trait>Evocation</trait> <trait>Magical</trait>
+         <rune italic="">+1 Potency</rune> <level>2</level>
+         <trait>Magical</trait>
          <usage>etched onto the weapon</usage>
          <price>35 gp</price>
 
          <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +1 item bonus, and the weapon can be etched with one property rune.</line>
       </variant>
       <variant>
-         <rune><![CDATA[<i>Striking</i>]]></rune> <level>4</level>
+         <rune italic="">Striking</rune> <level>4</level>
          <trait>Evocation</trait> <trait>Magical</trait>
          <usage>etched onto the weapon</usage>
          <price>65 gp</price>
 
-         <line>A <![CDATA[<i>striking</i>]]> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one.</line>
+         <line>A <i>striking</i> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one.</line>
       </variant>
    </rule>
 
@@ -71,7 +71,7 @@
       <type>Item</type> <level>2</level>
       <price>30 gp</price>
       <ac>+6</ac> <dexcap>+0</dexcap> <checkpenalty>-3</checkpenalty> <spdpenalty>-10 ft.</spdpenalty>
-      <strreq>18</strreq>
+      <strreq>+4</strreq>
       <bulk>4</bulk>
       <armorcat>Heavy</armorcat> <armorgroup>Plate</armorgroup>
 
@@ -81,7 +81,7 @@
 
       <variant>
          <rune italic="">+1 potency</rune> <level>5</level>
-         <trait>Abjuration</trait> <trait>Magical</trait>
+         <trait>Invested</trait> <trait>Magical</trait>
          <price>160 gp</price>
          <usage>etched onto the armor</usage>
 
@@ -92,7 +92,7 @@
    <rule>
       <title>Sturdy Shield</title>
       <type>Item</type> <level>4+</level>
-      <trait>Abjuration</trait> <trait>Magical</trait>
+      <trait>Magical</trait>
       <usage>held in 1 hand</usage> <bulk>1</bulk>
       <base item="Shield">Steel Shield</base>
 
@@ -117,7 +117,7 @@
    <rule>
       <title>Doubling Rings</title>
       <type>Item</type> <level>3</level>
-      <trait>Evocation</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <trait>Invested</trait> <trait>Magical</trait>
       <usage>worn</usage> <bulk>-</bulk>
       <price>50</price>
 
@@ -128,13 +128,13 @@
    <rule>
       <title>Obsidian Goggles</title>
       <type>Item</type> <level>5</level>
-      <trait>Divination</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <trait>Invested</trait> <trait>Magical</trait>
       <price>150 gp</price>
       <usage>worn eyepiece</usage> <bulk>-</bulk>
 
       <line>The sleek, black lenses of these goggles somehow make everything seem more brightly lit. While wearing the goggles, you gain a +1 item bonus to Perception checks involving sight.</line>
       <block>
-         <name>Activate - Darkvision</name> <action>1</action> <type>(manipulate)</type>
+         <name activate="">Darkvision</name> <action>1</action> <type>(manipulate)</type>
          <part linebreak=""><name>Frequency</name>once per day</part>
          <part><name>Effect</name>Adjusting the goggles, you gain darkvision for 1 hour.</part>
       </block>
@@ -143,11 +143,11 @@
    <rule>
       <title>Everburning Torch</title>
       <type>Item</type> <level>1</level>
-      <trait>Evocation</trait> <trait>Light</trait> <trait>Magical</trait>
+      <trait>Light</trait> <trait>Magical</trait>
       <price>15 gp</price>
       <usage>held in 1 hand</usage> <bulk>L</bulk>
 
-      <line>An <![CDATA[<i>everburning torch</i>]]> is one of the most common applications of permanent magic. This torch sheds light constantly, requiring no oxygen and generating no heat. The flame can be covered or hidden, but can't be smothered or quenched.</line>
+      <line>An <i>everburning torch</i> is one of the most common applications of permanent magic. This torch sheds light constantly, requiring no oxygen and generating no heat. The flame can be covered or hidden, but can't be smothered or quenched.</line>
    </rule>
 
    <rule>
@@ -167,20 +167,31 @@
    </rule>
 
    <rule>
-      <title>Healer's Tools</title>
+      <title>Healer's Toolkit</title>
       <price>5 gp</price>
-      <hands>2</hands> <bulk>1</bulk>
+      <hands>1 or 2</hands> <bulk>1</bulk>
 
       <line>This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds. If you wear your healer's tools, you can draw and replace them as part of the action that uses them.</line>
-      <line>You can use a set of tools with 1 hand if you're wearing them, or 2 if you're holding them. You can wear up to 2 Bulk of tools.</line>
+      <line toolkit=""/>
    </rule>
 
    <rule>
       <title>Repair Kit</title>
       <price>2 gp</price>
-      <hands>2</hands> <bulk>1</bulk>
+      <hands>1 or 2</hands> <bulk>1</bulk>
 
       <line>A repair kit allows you to perform simple repairs while traveling. It contains a portable anvil, tongs, woodworking tools, a whetstone, and oils for conditioning leather and wood. You can use a repair kit to Repair items using the Crafting skill. If you wear your repair kit, you can draw and replace them as part of the action to use them.</line>
-      <line>You can use a set of tools with 1 hand if you're wearing them, or 2 if you're holding them. You can wear up to 2 Bulk of Tools.</line>
+      <line toolkit=""/>
+   </rule>
+
+   <rule>
+      <title>Crafter's Eyepiece</title>
+      <type>Item</type> <level>3</level>
+      <trait>Invested</trait> <trait>Magical</trait>
+      <usage>worn eyepiece</usage> <bulk>-</bulk>
+      <price>60 gp</price>
+
+      <line>This rugged metal eyepiece etched with sqare patterns is designed to be worn over a single eye. Twisting the lens reveals a faint three-dimensional outline of an item you plan to build or repair, with helpful labels on the component parts. You gain a +1 item bonus to Crafting checks.</line>
+      <line>When you Repair an item, increase the Hit Points restored to 10 + 10 per proficiency rank on a success or 15 + 15 per proficiency rank on a critical success.</line>
    </rule>
 </catalog>

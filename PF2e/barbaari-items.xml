@@ -5,14 +5,14 @@
    <rule>
       <title>Healing Potion</title>
       <type>Item</type> <level>1+</level>
-      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Positive</trait> <trait>Potion</trait>
+      <trait>Consumable</trait> <trait>Healing</trait> <trait>Magical</trait> <trait>Potion</trait> <trait>Vitality</trait>
       <usage>held in 1 hand</usage> <bulk>L</bulk>
       <activate>
          <action>1</action>
-         <type>Interact</type>
+         <type>(manipulate)</type>
       </activate>
 
-      <line>A <![CDATA[<i>healing potion</i>]]> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <![CDATA[<i>healing potion</i>]]>, you regain the listed number of Hit Points.</line>
+      <line>A <i>healing potion</i> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <i>healing potion</i>, you regain the listed number of Hit Points.</line>
 
       <variant>
          <type>Minor</type> <level>1</level>
@@ -47,7 +47,7 @@
 
       <variant>
          <rune italic="">+1 Potency</rune> <level>2</level>
-         <trait>Evocation</trait> <trait>Magical</trait>
+         <trait>Magical</trait>
          <usage>etched onto the weapon</usage>
          <price>35 gp</price>
 
@@ -55,15 +55,15 @@
       </variant>
       <variant>
          <rune italic="">Striking</rune> <level>4</level>
-         <trait>Evocation</trait> <trait>Magical</trait>
+         <trait>Magical</trait>
          <usage>etched onto the weapon</usage>
          <price>65 gp</price>
 
-         <line>A <![CDATA[<i>striking</i>]]> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one.</line>
+         <line>A <i>striking</i> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one.</line>
       </variant>
       <variant>
          <rune italic="">Fearsome</rune> <level>5</level>
-         <trait>Emotion</trait> <trait>Enchantment</trait> <trait>Fear</trait> <trait>Magical</trait> <trait>Mental</trait>
+         <trait>Emotion</trait> <trait>Fear</trait> <trait>Magical</trait> <trait>Mental</trait>
          <usage>etched onto the weapon</usage>
          <price>160 gp</price>
 
@@ -74,19 +74,27 @@
    <rule>
       <title>Hide Armor</title>
       <price>2 gp</price>
-      <ac>03</ac> <dexcap>+2</dexcap> <checkpenalty>-2</checkpenalty> <spdpenalty>-5 ft.</spdpenalty>
-      <strreq>14</strreq> <bulk>2</bulk>
+      <ac>+3</ac> <dexcap>+2</dexcap> <checkpenalty>-2</checkpenalty> <spdpenalty>-5 ft.</spdpenalty>
+      <strreq>+2</strreq> <bulk>2</bulk>
       <armorcat>Medium</armorcat> <armorgroup>Leather</armorgroup>
 
       <line>A mix of furs, sturdy hide, and sometimes molded boiled leather, this armor provides protection due to its layers of leather, though its bulkiness slows the wearer down and decreases mobility.</line>
 
       <variant>
          <rune italic="">+1 potency</rune> <level>5</level>
-         <trait>Abjuration</trait> <trait>Magical</trait>
+         <trait>Invested</trait> <trait>Magical</trait>
          <price>160 gp</price>
          <usage>etched onto the armor</usage>
 
          <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
+      </variant>
+      <variant>
+         <rune italic="">quenching</rune> <level>6</level>
+         <trait>Magical</trait>
+         <price>250 gp</price>
+         <usage>etched onto an armor</usage>
+
+         <line>This rune counters burning and corrosive agents. Armor with this rune reduces the DC of the flat check to end persistent acid or fire damage affecting you from 15 to 12 (from 10 to 7 with particularly effective assistance).</line>
       </variant>
    </rule>
 
@@ -103,7 +111,7 @@
    </rule>
 
    <rule>
-      <title>Dagger</title>
+      <title>Piki's Dagger</title>
       <trait>Agile</trait> <trait>Finesse</trait> <trait>Thrown 10 ft.</trait> <trait>Versatile S</trait>
       <price>2 sp</price> <damage>1d4 P</damage>
       <hands>1</hands> <bulk>L</bulk>
@@ -125,9 +133,20 @@
    </rule>
 
    <rule>
+      <title>Boots of Bounding</title>
+      <type>Item</type> <level>7+</level>
+      <trait>Invested</trait> <trait>Magical</trait>
+      <usage>worn shoes</usage> <bulk>L</bulk>
+      <price>340 gp</price>
+
+      <line>The springy soles of these sturdy leather boots cushion your feet and make each step lighter. These boots give you a +5-foot item bonus to your Speed and a +2 item bonus to Athletics checks to High Jump and Long Jump.</line>
+      <line>In addition, when you use the Leap action, you can move 5 feet further if jumping horizontally or 3 feet higher if jumping vertically.</line>
+   </rule>
+
+   <rule>
       <title>Flask of Fellowship</title>
       <type>Item</type> <level>2</level>
-      <trait>Conjuration</trait> <trait>Magical</trait>
+      <trait>Magical</trait>
       <price>25 gp</price>
       <usage>held in 2 hands</usage> <bulk>L</bulk>
 
@@ -159,7 +178,7 @@
    <rule>
       <title>Everyneed Pack</title>
       <type>Item</type> <level>3</level>
-      <uncommon/> <trait>Conjuration</trait> <trait>Invested</trait> <trait>Magical</trait>
+      <uncommon/> <trait>Invested</trait> <trait>Magical</trait>
       <price>20 gp</price>
       <usage>worn backpack</usage> <bulk>1</bulk>
 
