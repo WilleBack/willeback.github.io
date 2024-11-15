@@ -468,18 +468,22 @@
                   <xsl:value-of select="craft" disable-output-escaping="yes" />
                </div>
             </xsl:if>
-            <xsl:if test="range or targets or reload or area">
+            <xsl:if test="range or target or targets or reload or area">
                <div id="rangereload" class="line" style="float: left;">
                   <xsl:if test="range">
                      <b>Range </b>
                      <xsl:value-of select="range" disable-output-escaping="yes" />
-                     <xsl:if test="reload or targets or area">
+                     <xsl:if test="reload or target or targets or area">
                         <xsl:text>; </xsl:text>
                      </xsl:if>
                   </xsl:if>
-                  <xsl:if test="targets">
+                  <xsl:if test="targets or target">
                      <b>Targets </b>
-                     <xsl:value-of select="targets" disable-output-escaping="yes" />
+                     <xsl:apply-templates select="target" />
+                     <xsl:apply-templates select="targets" />
+                     <xsl:if test="area or reload">
+                        <xsl:text>; </xsl:text>
+                     </xsl:if>
                   </xsl:if>
                   <xsl:if test="area">
                      <b>Area </b>
@@ -521,11 +525,12 @@
                   </xsl:if>
                </div>
             </xsl:if>
-            <xsl:if test="save or duration">
+            <xsl:if test="save or defense or duration">
                <div id="savedura" class="line" style="float: left;">
-                  <xsl:if test="save">
-                     <b>Saving Throw </b>
-                     <xsl:value-of select="save" disable-output-escaping="yes" />
+                  <xsl:if test="save or defense">
+                     <b>Defense </b>
+                     <xsl:apply-templates select="save" />
+                     <xsl:apply-templates select="defense" />
                      <xsl:if test="duration">
                         <xsl:text>; </xsl:text>
                      </xsl:if>

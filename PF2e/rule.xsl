@@ -204,12 +204,12 @@
          <div>
             <div id="traits" style="width: 100%; float: left; margin: 0.1em; margin-bottom:0em; color: white;">
                <xsl:if test="uncommon" >
-                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #c45500; font-variant: small-caps; padding: 0.3em 0.25em;">
+                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #c45500; font-variant: small-caps; padding: 0.25em;">
                      <xsl:text>Uncommon</xsl:text>
                   </div>
                </xsl:if>
                <xsl:if test="rare" >
-                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #0c1466; font-variant: small-caps; padding: 0.3em 0.25em;">
+                  <div id="rarity" style="float:left; margin: 0.1em 0em; border: 0.2em solid gold; background-color: #0c1466; font-variant: small-caps; padding: 0.25em;">
                      <xsl:text>Rare</xsl:text>
                   </div>
                </xsl:if>
