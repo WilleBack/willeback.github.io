@@ -719,7 +719,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="type">
 	<xsl:choose>
 		<xsl:when test="not(../name) or @style='bold'">
-			<b><xsl:apply-templates/></b>
+			<xsl:choose>
+            <xsl:when test="../@name">
+               <i><xsl:apply-templates/></i>
+            </xsl:when>
+            <xsl:otherwise>
+               <b><xsl:apply-templates/></b>
+            </xsl:otherwise>
+         </xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
 			<i><xsl:apply-templates/></i>
@@ -742,7 +749,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:text> or </xsl:text>
 	<xsl:choose>
 		<xsl:when test="not(../name) or @style='bold'">
-			<b><xsl:apply-templates/></b>
+			<xsl:choose>
+            <xsl:when test="../@name">
+               <i><xsl:apply-templates/></i>
+            </xsl:when>
+            <xsl:otherwise>
+               <b><xsl:apply-templates/></b>
+            </xsl:otherwise>
+         </xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
 			<i><xsl:apply-templates/></i>
