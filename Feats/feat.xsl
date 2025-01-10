@@ -417,16 +417,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<xsl:with-param name="featbg">MediumBlue</xsl:with-param>
 				</xsl:call-template>
 			</xsl:when>
-			<xsl:when test="tier = 'Epic'">
+			<xsl:otherwise>
 				<xsl:call-template name="featheader" >
 					<xsl:with-param name="featbg">Navy</xsl:with-param>
 				</xsl:call-template>
-			</xsl:when>
-         <xsl:otherwise>
-            <xsl:call-template name="featheader">
-               <xsl:with-param name="featbg">Yellow</xsl:with-param>
-            </xsl:call-template>
-         </xsl:otherwise>
+			</xsl:otherwise>
 		</xsl:choose>
 		<div id="categroup" style="background:linear-gradient(to right,LightGrey, LightGrey,Gainsboro); width:100%; box-sizing:border-box; padding:0.3em; float:left;">
 			<xsl:choose>
@@ -519,7 +514,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					</xsl:for-each>
 				</div>
 			</xsl:if>
-			<xsl:for-each select="benefit">
+         <xsl:for-each select="benefit">
             <xsl:choose>
                <xsl:when test="position()=1">
                   <div style="width=100%;">
@@ -531,14 +526,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                            <xsl:text> skill.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skill-class">
-                           <xsl:text>You gain training in  one skill from the </xsl:text>
+                           <xsl:text>You gain training in one skill from the </xsl:text>
                            <xsl:value-of select="@skill-class" disable-output-escaping="yes"/>
                            <xsl:text>'s class skill list.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skills">
                            <xsl:text>You gain training in the </xsl:text>
                            <xsl:value-of select="@skills" disable-output-escaping="yes"/>
-                           <xsl:text> skill.</xsl:text>
+                           <xsl:text> skills.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skills-either">
                            <xsl:text>You gain training in either the </xsl:text>
@@ -551,7 +546,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      </xsl:choose>
                   </div>
                </xsl:when>
-               <xsl:when test="@name or bullet or @bullet">
+               <xsl:when test="@name or bullet or @bullet or @vestige">
                   <div style="width:calc(100% - 2em); padding-left:1.5em;">
                      <xsl:if test="@bullet or bullet">
                         <xsl:text>&#9658; </xsl:text>
@@ -562,6 +557,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:when>
                         <xsl:when test="@name">
                            <b><xsl:value-of select="@name"/>: </b>
+                        </xsl:when>
+                        <xsl:when test="@vestige">
+                           <b><i>Eyes of the Vestige</i> Augment: </b>
                         </xsl:when>
                         <xsl:otherwise>
                         </xsl:otherwise>
@@ -580,7 +578,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:when>
                         <xsl:when test="@skill-class">
                            <xsl:value-of select="." disable-output-escaping="yes"/>
-                           <xsl:text>, you gain training in  one skill from the </xsl:text>
+                           <xsl:text>, you gain training in one skill from the </xsl:text>
                            <xsl:value-of select="@skill" disable-output-escaping="yes"/>
                            <xsl:text>'s class skill list.</xsl:text>
                         </xsl:when>
@@ -588,6 +586,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                            <xsl:value-of select="." disable-output-escaping="yes"/>
                            <xsl:text>, you gain training in the </xsl:text>
                            <xsl:value-of select="@skills" disable-output-escaping="yes"/>
+                           <xsl:text> skills.</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="@skills-either">
+                           <xsl:value-of select="." disable-output-escaping="yes"/>
+                           <xsl:text>, you gain training in either the </xsl:text>
+                           <xsl:value-of select="benefit[1]/@skills-either" disable-output-escaping="yes"/>
                            <xsl:text> skill.</xsl:text>
                         </xsl:when>
                         <xsl:otherwise>
@@ -644,7 +648,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</xsl:if>
 		</div> <!-- content -->
 
-
 			<xsl:apply-templates select="power" />
 
 	</div> <!-- feat -->
@@ -681,7 +684,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:if test="count(//catalog/feat[category=current()/@selection and tier=$tier])>0">
 		<div class="list">
 			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - </xsl:text> <xsl:value-of select="$tier"/></div>
-			<xsl:for-each select="//catalog/feat[category=current()/@selection and tier=$tier]">
+			<xsl:for-each select="//catalog/feat[category=current()/@selection and tier='Heroic']">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
 		</div>
@@ -750,12 +753,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template name="line">
 	<xsl:choose>
 		<xsl:when test="position() mod 2 = 1">
-			<div id="line" style="width:100%; padding: 0.2em; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
+			<div id="line" style="width:100%; padding: 0.1.em; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro);">
 				<xsl:call-template name="linecontent" />
 			</div>
 		</xsl:when>
 		<xsl:otherwise>
-			<div id="line" style="width:100%; padding: 0.1em; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
+			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow);">
 				<xsl:call-template name="linecontent" />
 			</div>
 		</xsl:otherwise>
@@ -786,20 +789,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 </xsl:template>
 
-<xsl:template match="text()">
-   <xsl:value-of select="." disable-output-escaping="yes" />
+<xsl:template match="trigger">
+   <i>Trigger: </i>
+   <xsl:apply-templates />
+   <xsl:text>; </xsl:text>
 </xsl:template>
 
-<xsl:template match="b">
-   <b><xsl:apply-templates /></b>
-</xsl:template>
-
-<xsl:template match="i">
-   <i><xsl:apply-templates /></i>
-</xsl:template>
-
-<xsl:template match="br">
-   <br />
+<xsl:template match="aug">
+   <span class="augment" style="float:none; font-variant: small-caps; font-size: 1.1em; width:calc(100% - 0.5em); margin:0.2em;"><b><xsl:apply-templates/></b></span>
 </xsl:template>
 
 </xsl:stylesheet>

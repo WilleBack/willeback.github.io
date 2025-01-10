@@ -162,27 +162,11 @@
    <feat>
       <title>Agile Stand</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="class" combine="or">Ranger</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Mobility</group>
       <benefit>Once per turn when you stand up from prone, you can also shift 1 square.</benefit>
       <benefit>This increases to up to 2 squares at 21st level.</benefit>
    </feat>
@@ -190,33 +174,57 @@
    <feat>
       <title>Autohypnosis</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Arcana</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing Surge</group>
-      <group>Skill Enhancement</group>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="skill">Arcana</prereq>
+      <group>Class</group> <group>Healing Surge</group> <group>Skill Enhancement</group>
       <benefit>Your number of healing surges increases by 1.</benefit>
       <benefit>While you are not bloodied, when you would make an Endurance check, you can make an Arcana check instead.</benefit>
    </feat>
    <feat>
+      <title>Beguiling Torment</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Forced Movement</group> <group>Psionics</group>
+      <benefit>Whenever you daze or stun and enemy using a psionic power, you can spend 1 power point slide that enemy 1 square.</benefit>
+      <benefit>This forced movement increases to 2 squares at 11th level. Starting at 21st level, you can automatically slide an enemy 1 square when you daze or stun that enemy, and can spend 1 power point to increase the forced movement to 3 squares.</benefit>
+   </feat>
+
+   <feat>
+      <title>Bloodied Concentration</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Attack Bonus</group> <group>Bloodied</group> <group>Class</group> <group>Psionics</group>
+      <benefit>While you are bloodied, you gain a +1 bonus to attack rolls with augmented at-will psionic attack powers.</benefit>
+   </feat>
+
+   <feat>
+      <title>Body Fuel</title>
+      <tier>Paragon</tier>
+      <category>Bloodline</category>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <prereq type="feat">Elan Heritage</prereq>
+      <group>Class</group> <group>Elan Heritage</group> <group>Psionics</group> <group>Second Wind</group>
+      <benefit>Once per encounter when you use your <i>second wind</i>, you also regain 1 power point.</benefit>
+   </feat>
+
+   <feat>
+      <title>Boundless Enthusiasm</title>
+      <tier>Epic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Critical</group> <group>Psionics</group>
+      <benefit>The first time during an encounter that you score a critical hit, you regain 2 power points.</benefit>
+   </feat>
+
+   <feat>
       <title>Brutal Flurry</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Damage Bonus</group>
       <benefit>Whenever you target only one creature with your Flurry of Blows power, the creature takes 3 extra damage.</benefit>
       <benefit>The extra damage increases to 5 at 21st level.</benefit>
    </feat>
@@ -224,46 +232,26 @@
    <feat>
       <title>Centered Intuition</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Centered Breath</name>
-      </prereq>
-      <group>Class</group>
-      <group>Initiative</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Centered Breath</prereq>
+      <group>Class</group> <group>Initiative</group>
       <benefit>When you roll initiative, you can roll twice and use either result. If you roll the same number both times, you can choose gain a +5 bonus to the check.</benefit>
    </feat>
 
    <feat>
       <title>Centered Master</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Centered Breath</name>
-      </prereq>
-      <group>Class</group>
-      <group>Forced Movement</group>
-      <group>Power Enhancement</group>
-      <benefit>Your &lt;i&gt;centered flurry of blows&lt;/i&gt; can slide each target 2 squares instead of 1.</benefit>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Centered Breath</prereq>
+      <group>Class</group> <group>Forced Movement</group> <group>Power Enhancement</group>
+      <benefit>Your <i>centered flurry of blows</i> can slide each target 2 squares instead of 1.</benefit>
    </feat>
 
    <feat>
       <title>Confounding Technique</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Teamwork</group>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Teamwork</group>
       <benefit>You can use a move action to switch places with an adjacent ally. This counts as a shift for both of you.</benefit>
       <benefit>If one of you has a larger space than the other, he or she can choose how to position as long as as long as he or she covers all of the other's previous space. The one with the smaller space can position himself or herself anywhere inside the larger one's previous space.</benefit>
    </feat>
@@ -271,18 +259,9 @@
    <feat>
       <title>Crack the Mountain</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Stone Fist</name>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Forced Movement</group>
-      <group>Power Enhancement</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Stone Fist</prereq>
+      <group>Class</group> <group>Condition Infliction</group> <group>Forced Movement</group> <group>Power Enhancement</group>
       <benefit>When you hit an enemy with a daily attack power, the enemy is also slowed (save ends).</benefit>
       <benefit>If the attack already slows the enemy, you instead slide the enemy 2 squares.</benefit>
    </feat>
@@ -290,34 +269,27 @@
    <feat>
       <title>Crashing Tempest Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Weapon Specialization</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Weapon Specialization</group>
       <benefit>While you are wielding a club, you gain a +2 bonus to the damage deals by your Flurry of Blows power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Critical Reserve</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Critical</group> <group>Power Recovery</group> <group>Psionics</group>
+      <benefit>Once per encounter, when you score a critical hit with an at-will psionic power that is unaugmented, you regain 1 power point.</benefit>
    </feat>
 
    <feat>
       <title>Crystalline Auger</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shardmind</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Class</group>
-      <group>Psychic Specialization</group>
-      <group>Racial</group>
+      <prereq type="race">Shardmind</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Class</group> <group>Psychic</group> <group>Racial</group>
       <benefit>Your attacks ignore 5 points of resist psychic.</benefit>
       <benefit>This increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
@@ -325,14 +297,8 @@
    <feat>
       <title>Cull the Weak</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Bonus</group>
+      <prereq type="role">Striker</prereq>
+      <group>Bloodied Enemy</group> <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group>
       <benefit>When you have combat advantage against a bloodied or weakened enemy, you gain a +2 bonus to melee damage rolls against that enemy.</benefit>
       <benefit>This bonus increases to +4 at 21st level.</benefit>
    </feat>
@@ -340,23 +306,10 @@
    <feat>
       <title>Dancing Thorn Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>While wielding a longsword, you gain a +1 bonus to attack rolls with Monk attack powers.</benefit>
       <benefit>Also, if you wield a longsword in two hands, you add +1 to the damage dealt by your Flurry of Blows power.</benefit>
    </feat>
@@ -364,125 +317,78 @@
    <feat>
       <title>Daring Warrior</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>13</value>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Bonus</group>
-      <group>Triggered</group>
+      <prereq type="ability" combine=";">Charisma<value>13</value></prereq>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group> <group>Triggered</group>
       <benefit>You gain the following benefits with at-will Martial attacks or monk at-will attacks:</benefit>
-      <benefit>&#9658; If an enemy hits you with an attack triggered by your movement, you gain a +1 bonus to damage against that creature until the end of your current turn.</benefit>
-      <benefit>&#9658; If an enemy hits you when it has combat advantage for the attack, you gain a +1 bonus to damage against that creature until the end of your next turn.</benefit>
+      <benefit><bullet />If an enemy hits you with an attack triggered by your movement, you gain a +1 bonus to damage against that creature until the end of your current turn.</benefit>
+      <benefit><bullet />If an enemy hits you when it has combat advantage for the attack, you gain a +1 bonus to damage against that creature until the end of your next turn.</benefit>
       <benefit>These bonuses stack with each other. Both bonuses increase to +2 at 11th level, and to +3 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Darkening Mind</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shadar-kay</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>shadow jaunt</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Psionics</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>Your &lt;i&gt;shadow jaunt&lt;/i&gt; racial power gains the Augmentable keyword and the following augmentation:</benefit>
-      <benefit>&lt;span style="font-variant:small-caps;"&gt;&lt;b&gt;Augment 1:&lt;/b&gt;&lt;/span&gt; You add 2 squares to the distance you can teleport, and you remain insubstantial until the end of your next turn.</benefit>
+      <prereq type="race">Shadar-kay</prereq>
+      <prereq type="power" kind="racial">shadow jaunt</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>Your <i>shadow jaunt</i> racial power gains the <key>Augmentable</key> keyword and the following augmentation:</benefit>
+      <benefit><aug>Augment 1:</aug> You add 2 squares to the distance you can teleport, and you remain insubstantial until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Darkfire Reaper</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>darkfire</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Class</group>
-      <group>Kill Effect</group>
-      <group>Power Recovery</group>
-      <group>Racial</group>
-      <benefit>When you reduce the target of your &lt;i&gt;darkfire&lt;/i&gt; racial power to 0 hit points or less with a melee or ranged attack, you regain the use of &lt;i&gt;darkfire&lt;/i&gt;.</benefit>
+      <prereq type="race">Drow</prereq>
+      <prereq type="power" kind="racial" combine=";">darkfire</prereq>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Kill Effect</group> <group>Power Recovery</group> <group>Racial</group>
+      <benefit>When you reduce the target of your <i>darkfire</i> racial power to 0 hit points or less with a melee or ranged attack, you regain the use of <i>darkfire</i>.</benefit>
    </feat>
 
    <feat>
       <title>Dazing Fist</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Stone Fist</name>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Power Enhancement</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Stone Fist</prereq>
+      <group>Class</group> <group>Condition Infliction</group> <group>Power Enhancement</group>
       <benefit>When you hit an enemy with a daily attack power, you also daze the enemy (save ends).</benefit>
       <benefit>If the attack already dazes an enemy, it instead deals 5 additional damage.</benefit>
       <benefit>This additional damage increases to 10 at 21st level.</benefit>
    </feat>
 
    <feat>
+      <title>Defiler's Rejuvenation</title>
+      <tier>Epic</tier>
+      <category>Arcane Defiling</category>
+      <prereq type="power">arcane defiling</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Arcane Defiling</group> <group>Class</group> <group>Power Recovery</group> <group>Psionics</group> <group>Triggered</group>
+      <benefit>When your <i>arcane defiling</i> power deals damage to one or more of your allies, you regain 2 power points.</benefit>
+   </feat>
+
+   <feat>
+      <title>Desperate Renewal</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Power Recovery</group> <group>Psionics</group> <group>Second Wind</group>
+      <benefit>If you are bloodied when you use your <i>second wind</i>, you can choose to regain 2 power points instead of regaining hit points.</benefit>
+   </feat>
+
+   <feat>
       <title>Destructive Power</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>level</type>
-         <name>6th</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Controller</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Repertoire</group>
-      <benefit>You can exchange any 6th-level or higher utility power you know for &lt;i&gt;destructive power&lt;/i&gt;.</benefit>
+      <prereq type="level">6th</prereq>
+      <prereq type="role" combine="or">Controller</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Repertoire</group>
+      <benefit>You can exchange any 6th-level or higher utility power you know for <i>destructive power</i>.</benefit>
 
       <power>
          <title>Destructive Power</title>
@@ -507,26 +413,11 @@
    <feat>
       <title>Disciplined Killer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>assassin's shroud</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>class power</type>
-         <name>a Flurry of Blows</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="power" kind="class">assassin's shroud</prereq>
+      <prereq type="class power">a Flurry of Blows</prereq>
+      <group>Class Combination</group> <group>Damage Bonus</group> <group>Power Enhancement</group>
       <benefit>When you use your Flurry of Blows against a creature that has any of your shrouds on it, you deal +1 additional damage to it for each shroud.</benefit>
       <benefit>This additional damage increases to +2 at 21st level.</benefit>
       <benefit>Also, once per round when you use your Flurry of Blows against just one creature that does not have your shrouds on it, you can add 1 shroud to it.</benefit>
@@ -535,73 +426,48 @@
    <feat>
       <title>Dragon's Grasp</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Grapple</group>
-      <group>Reactive Strikes</group>
-      <benefit>You gain a +2 feat bonus to attack rolls with &lt;i&gt;grab&lt;/i&gt;.</benefit>
-      <benefit>In addition, when you are wielding no weapons, you can make a &lt;i&gt;grab&lt;/i&gt; in place of a &lt;i&gt;melee basic attack&lt;/i&gt; on a &lt;i&gt;reactive strike&lt;/i&gt;.</benefit>
+      <prereq type="class">Monk</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Grapple</group> <group>Reactive Strikes</group>
+      <benefit>You gain a +2 feat bonus to attack rolls with <i>grab</i>.</benefit>
+      <benefit>In addition, when you are wielding no weapons, you can make a <i>grab</i> in place of a <i>melee basic attack</i> on a <i>reactive strike</i>.</benefit>
    </feat>
 
    <feat>
       <title>Draw First Blood</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Intelligence</name>
-         <value>13</value>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Basic Attack</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <benefit>Your &lt;i&gt;basic attacks&lt;/i&gt; against enemies at full hit points deal additional damage equal to your Intelligence modifier.</benefit>
+      <prereq type="ability" combine=";">Intelligence<value>13</value></prereq>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Basic Attack</group> <group>Class</group> <group>Damage Bonus</group>
+      <benefit>Your <i>basic attacks</i> against enemies at full hit points deal additional damage equal to your Intelligence modifier.</benefit>
       <benefit>This additional damage increases to 2 + your Intelligence modifier at 11th level, and to 4 + your Intelligence modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Driving Rain</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Forced Movement</group>
-      <benefit>You gain a +2 feat bonus to attack rolls with &lt;i&gt;bull rush&lt;/i&gt;.</benefit>
-      <benefit>Also, when you hit with &lt;i&gt;bull rush&lt;/i&gt;, you push the target a number of squares equal to your speed. For each square you push the target, you can shift 1 square to a square adjacent to the target.</benefit>
+      <prereq type="class">Monk</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Forced Movement</group>
+      <benefit>You gain a +2 feat bonus to attack rolls with <i>bull rush</i>.</benefit>
+      <benefit>Also, when you hit with <i>bull rush</i>, you push the target a number of squares equal to your speed. For each square you push the target, you can shift 1 square to a square adjacent to the target.</benefit>
+   </feat>
+
+   <feat>
+      <title>Dual Mind Reserves</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Kalashtar</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Power Recovery</group> <group>Psionics</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you also regain 1 power point.</benefit>
    </feat>
 
    <feat>
       <title>Eager Mind</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Human</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Class</group>
-      <group>Initiative</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
+      <prereq type="race">Human</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Initiative</group> <group>Racial</group> <group>Saving Throws</group>
       <benefit>You gain a +2 bonus to Initiative.</benefit>
       <benefit>In addition, you gain a +1 bonus to saving throws while you are bloodied.</benefit>
    </feat>
@@ -609,183 +475,114 @@
    <feat>
       <title>Effortless Motion</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Defense</group> <group>Power Enhancement</group>
       <benefit>Whenever you use a Movement Technique from an monk at-will power, you gain a +1 bonus to AC until the end of your next turn.</benefit>
       <benefit>When you reach 21st level, choose Fortitude, Reflex, or Will. You also gain a +1 bonus to that defense when you gain the bonus to AC from this feat.</benefit>
    </feat>
 
    <feat>
+      <title>Elemental Recovery</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Genasi</prereq>
+      <prereq type="trait">Elemental Manifestation</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Psionics</group> <group>Triggered</group>
+      <benefit>When you would take damage that has a type and you have not yet expended the racial power from your Elemental Manifestation racial trait, you can expend 1 power point as an immediate interrupt to gain resist 5 to the triggering damage type or types until the start of your next turn.</benefit>
+      <benefit>The resist increases to 10 at 11th level, and to 15 at 21st level.</benefit>
+   </feat>
+
+   <feat>
       <title>Elusive Movement</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Mobility</group>
+      <prereq type="class">any shadow</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="class" combine="or">Ranger</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Defense</group> <group>Mobility</group>
       <benefit>Whenever you end your turn at least 3 squares away from where you began your turn, you gain a +1 bonus to AC and Reflex until the start of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Empty Vessel</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Defense</group> <group>Psionics</group> <group>Triggered</group>
+      <benefit>The first time you drop to 0 power points during an encounter, you gain a +2 bonus to attack rolls, and to Fortitude, Reflex and Will. These bonuses last until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Enlightened Stone</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Goliath</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>stone's endurance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <group>Psionics</group>
-      <group>Skill Enhancement</group>
+      <prereq type="race">Goliath</prereq>
+      <prereq type="power" kind="racial">stone's endurance</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Class</group> <group>Defense</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Skill Enhancement</group>
       <benefit>When you make an Athletics check, you can use your Constitution modifier instead of your Strength modifier.</benefit>
-      <benefit>Also, if you have at least 1 power point when you use your &lt;i&gt;stone's endurance&lt;/i&gt; racial power, you also gain a +2 bonus to Will until the end of your next turn.</benefit>
+      <benefit>Also, if you have at least 1 power point when you use your <i>stone's endurance</i> racial power, you also gain a +2 bonus to Will until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Enlightened Transformation</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shifter</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>razorclaw shifting</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Shapechange</group>
-      <group>Skill Enhancement</group>
-      <benefit>While under the effects of your &lt;i&gt;razorclaw shifting&lt;/i&gt; racial power, you also gain a +1 bonus to Will and a +3 bonus to Insight checks.</benefit>
+      <prereq type="race">Shifter</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="power" kind="racial">razorclaw shifting</prereq>
+      <group>Class</group> <group>Defense</group> <group>Power Enhancement</group> <group>Racial</group> <group>Shapechange</group> <group>Skill Enhancement</group>
+      <benefit>While under the effects of your <i>razorclaw shifting</i> racial power, you also gain a +1 bonus to Will and a +3 bonus to Insight checks.</benefit>
+   </feat>
+
+   <feat>
+      <title>Far Realm's Blessing</title>
+      <tier>Epic</tier>
+      <category>Bloodline</category>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <prereq type="feat">Foulborn Heritage</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Foulborn Heritage</group> <group>Power Recovery</group> <group>Psionics</group> <group>Triggered</group>
+      <benefit>The first time you become bloodied in an encounter, you regain 1 power point.</benefit>
    </feat>
 
    <feat>
       <title>Fearsome Flurry</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Foulborn Heritage</name>
-      </prereq>
-      <group>Attack Penalty</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <prereq type="feat">Foulborn Heritage</prereq>
+      <group>Attack Penalty</group> <group>Class</group> <group>Power Enhancement</group>
       <benefit>When you use the power granted by your Flurry of Blows class feature, you can choose to have a target take a -2 penalty to attack rolls until the end of your next turn instead of the normal effect.</benefit>
    </feat>
 
    <feat>
       <title>Fey Gambit</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power to teleport adjacent to an enemy, you gain combat advantage against that enemy until the end of your next turn.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial" combine=";">fey step</prereq>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="class" combine="or">Monk</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power to teleport adjacent to an enemy, you gain combat advantage against that enemy until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Flowing River Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>second chance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When a Monk power allows you to shift and you have not expended your &lt;i&gt;second chance&lt;/i&gt; racial power, you can enter enemies' spaces during this shift. You must still end the movement in an unoccupied square.</benefit>
+      <prereq type="race">Halfling</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="power" kind="racial">second chance</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When a Monk power allows you to shift and you have not expended your <i>second chance</i> racial power, you can enter enemies' spaces during this shift. You must still end the movement in an unoccupied square.</benefit>
    </feat>
 
    <feat>
       <title>Fluid Motion</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group>
       <benefit>You gain a +1 feat bonus to speed.</benefit>
       <benefit>This bonus increases to +2 at 11th level.</benefit>
    </feat>
@@ -793,30 +590,17 @@
    <feat>
       <title>Flurry Resounding</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Action Point</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Action Point</group> <group>Class</group> <group>Damage Bonus</group>
       <benefit>When you spend an action point to take an extra action and use your Flurry of Blows as part of that action, it does not count towards your normal limit of using it only once per turn.</benefit>
    </feat>
 
    <feat>
       <title>Form Mastery</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Action Point</group>
-      <group>Class</group>
-      <group>Power Recovery</group>
+      <prereq type="class">Monk</prereq>
+      <group>Action Point</group> <group>Class</group> <group>Power Recovery</group>
       <benefit>When you spend an action point to take an extra action, you also regain the use of a monk encounter attack power you have expended.</benefit>
       <benefit>You can use the recovered attack as your extra action.</benefit>
    </feat>
@@ -824,22 +608,10 @@
    <feat>
       <title>Four-Armed Flurry</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Thri-kreen</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
+      <prereq type="race">Thri-kreen</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
       <benefit>When you use the power granted by your Flurry of Blows class feature, your attack deals 2 extra damage to one of the power's targets.</benefit>
       <benefit>The extra damage increases to 4 at 11th level.</benefit>
       <benefit>Starting at 21st level, you can apply the extra damage to two of the power's targets.</benefit>
@@ -848,146 +620,106 @@
    <feat>
       <title>Get in Your Head</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Gnome</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fade away</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Psionics</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>Your &lt;i&gt;fade away&lt;/i&gt; racial power gains the Augmentable keyword and the following augmentation:</benefit>
-      <benefit>&lt;span style="font-variant:small-caps;"&gt;&lt;b&gt;Augment 1:&lt;/b&gt;&lt;/span&gt; The power gains the Teleportation keyword, and you can teleport 3 squares after becoming invisible.</benefit>
+      <prereq type="race">Gnome</prereq>
+      <prereq type="power" kind="racial">fade away</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>Your <i>fade away</i> racial power gains the <key>Augmentable</key> keyword and the following augmentation:</benefit>
+      <benefit><aug>Augment 1:</aug> The power gains the <key>Teleportation</key> keyword, and you can teleport 3 squares after becoming invisible.</benefit>
+   </feat>
+
+   <feat>
+      <title>Gift of the Eternal</title>
+      <tier>Epic</tier>
+      <category>Bloodline</category>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <prereq type="feat">Elan Heritage</prereq>
+      <group>Class</group> <group>Elan Heritage</group> <group>Power Recovery</group> <group>Psionics</group>
+      <benefit>At the end of your first turn in each encounter, you regain 1 power point.</benefit>
    </feat>
 
    <feat>
       <title>Grave Flurry</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Necrotic Specialization</group>
-      <group>Racial</group>
-      <group>Triggered</group>
+      <prereq type="race">Revenant</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Necrotic</group> <group>Racial</group> <group>Triggered</group>
       <benefit>Whenever you use your Flurry of Blows power, you can choose to forgo dealing damage to instead negate the target's necrotic damage (if any) until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Guarded Practice</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <group>Skill Enhancement</group>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Defense</group> <group>Power Enhancement</group> <group>Skill Enhancement</group>
       <benefit>You gain a +2 feat bonus to Insight checks.</benefit>
       <benefit>Also, whenever you hit an enemy with a martial at-will attack or a monk at-will attack, until the start of your next turn, you do not count as flanked by the target you hit. Other creatures can still flank you, including with the target you hit.</benefit>
    </feat>
 
    <feat>
+      <title>Haunting Sounds</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Gnome</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <prereq type="power" kind="Cantrip">ghost sound</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>While you have at least 1 power point remaining, you can use your <i>ghost sound</i> racial power at-will.</benefit>
+      <benefit>Also, your <i>ghost sound</i> racial power gains the <key>Augmentable</key> keyword and the following augment:</benefit>
+      <benefit><aug>Augment 1:</aug> You gain combat advantage against one enemy adjacent to the target object or square on the first attack you make before the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
       <title>Healing Fist</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Githzerai</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Second Wind</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt;, you gain a bonus to damage rolls with monk attacks equal to your Wisdom modifier. The bonus to damage remains until the end of your next turn.</benefit>
+      <prereq type="race">Githzerai</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you gain a bonus to damage rolls with monk attacks equal to your Wisdom modifier. The bonus to damage remains until the end of your next turn.</benefit>
       <benefit>The bonus to damage increases to 2 + your Wisdom modifier at 11th level, and to 5 + your Wisdom modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Heedless Thought</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Minotaur</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Heedless Charge</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Charge</group>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Racial</group>
-      <benefit>The bonus to AC granted by your Heedless Charge racial trait increases by one-half your Constitution modifier or Wisdom modifier (minimum +1).</benefit>
+      <prereq type="race">Minotaur</prereq>
+      <prereq type="trait">Heedless Charge</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Charge</group> <group>Class</group> <group>Defense</group> <group>Racial</group>
+      <benefit>The bonus to AC granted by your Heedless Charge racial trait increases by one-half your [Constitution or Wisdom] modifier (minimum +1).</benefit>
    </feat>s
 
    <feat>
       <title>Hellmind Scorn</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Tiefling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Forced Movement</group>
-      <group>Psychic Specialization</group>
-      <group>Racial</group>
-      <benefit>When an enemy successfully saves against a Psychic effect bestowed by you, you can use a free reaction to slide that enemy 1 square and make it gain vulnerable 5 psychic until the end of your next turn.</benefit>
+      <prereq type="race">Tiefling</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Forced Movement</group> <group>Psychic</group> <group>Racial</group>
+      <benefit>When an enemy successfully saves against a <key>Psychic</key> effect bestowed by you, you can use a free reaction to slide that enemy 1 square and make it gain vulnerable 5 psychic until the end of your next turn.</benefit>
       <benefit>Starting at 11th level, the vulnerable increases to 7.</benefit>
       <benefit>Starting at 21st level, you can slide the enemy up to 2 squares, and the vulnerable increases to 10.</benefit>
    </feat>
 
    <feat>
+      <title>Human Ingenuity</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Human</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Action Point</group> <group>Class</group> <group>Power Recovery</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>When you spend an action point, you regain 1 power point.</benefit>
+   </feat>
+
+   <feat>
       <title>Improved Monk Unarmed Strike</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Unarmed Combatant</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Unarmed Combat</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Unarmed Combatant</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Unarmed Combat</group>
       <benefit>You gain a +1 feat bonus to damage rolls with Weapon attacks using your Monk Unarmed Strike and with Monk Implement powers when using your unarmed strike as an implement, and to the damage dealt by your Flurry of Blows power when using your unarmed strike to deliver it.</benefit>
       <benefit>This bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
    </feat>
@@ -995,132 +727,72 @@
    <feat>
       <title>Infectious Wrath</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dragonborn Fury</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Bloodied</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>The first in an encounter that you are bloodied, each ally within 5 squares of you gains a +1 bonus to attack rolls until the end of his or her next turn.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="trait">Dragonborn Fury</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Attack Bonus</group> <group>Bloodied</group> <group>Racial</group> <group>Support</group>
+      <benefit>The first time in an encounter that you are bloodied, each ally within 5 squares of you gains a +1 bonus to attack rolls until the end of his or her next turn.</benefit>
    </feat>
 
    <feat>
       <title>Internalize the Basic Kata</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Unarmed Combatant</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Basic Attack</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Reactive Strikes</group>
-      <group>Unarmed Combat</group>
-      <benefit>You can use your Dexterity modifier instead of your Strength modifier for attack rolls and damage rolls when making a &lt;i&gt;melee basic attack&lt;/i&gt; with your monk unarmed strike.</benefit>
-      <benefit>Also, your Flurry of Blows power can be triggered when you hit with a &lt;i&gt;reactive strike&lt;/i&gt; made with your monk unarmed strike.</benefit>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <prereq type="feature">Unarmed Combatant</prereq>
+      <group>Attack Bonus</group> <group>Basic Attack</group> <group>Class</group> <group>Damage Bonus</group> <group>Reactive Strikes</group> <group>Unarmed Combat</group>
+      <benefit>You can use your Dexterity modifier instead of your Strength modifier for attack rolls and damage rolls when making a <i>melee basic attack</i> with your monk unarmed strike.</benefit>
+      <benefit>Also, your Flurry of Blows power can be triggered when you hit with a <i>reactive strike</i> made with your monk unarmed strike.</benefit>
    </feat>
 
    <feat>
       <title>Io's Roar</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragonfear</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Psychic Specialization</group>
-      <benefit>Any target hit by your &lt;i&gt;dragon breath&lt;/i&gt; racial power or your &lt;i&gt;dragonfear&lt;/i&gt; racial power gains vulnerable 5 psychic until the end of your current turn.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class" combine=";">any psionic</prereq>
+      <prereq type="power" kind="racial" combine="or">dragon breath</prereq>
+      <prereq type="power" kind="racial">dragonfear</prereq>
+      <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group> <group>Psychic</group>
+      <benefit>Any target hit by your <i>dragon breath</i> racial power or your <i>dragonfear</i> racial power gains vulnerable 5 psychic until the end of your current turn.</benefit>
       <benefit>This vulnerable increases to 7 at 11th level, and to 10 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Iron Parry</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Iron Soul</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Iron Soul</prereq>
+      <group>Class</group> <group>Defense</group>
       <benefit>When you are wielding a weapon (other than your monk unarmed strike), and wearing cloth armor or no armor, and not using a shield, you gain a +1 bonus to AC.</benefit>
+   </feat>
+
+   <feat>
+      <title>Iron Resolve of Zerthadlun</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Githzerai</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Psionics</group> <group>Racial</group> <group>Saving Throws</group>
+      <benefit>While you have at least 1 power point, you gain a +1 feat bonus to saving throws.</benefit>
+      <benefit>This increases to +2 while you are bloodied.</benefit>
    </feat>
 
    <feat>
       <title>Keep Your Feet</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Negation</group>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Condition Negation</group>
       <benefit>When you are knocked prone, you can use an immediate reaction to stand up.</benefit>
    </feat>
 
    <feat>
       <title>Ki Focus Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>Assassin</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>13</value>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Damage Bonus</group>
-      <group>Implement Specialization</group>
+      <prereq type="hidden">Assassin</prereq>
+      <prereq type="hidden">Monk</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="ability">Dexterity<value>13</value></prereq>
+      <group>Bloodied Enemy</group> <group>Damage Bonus</group> <group>Implement Specialization</group>
       <benefit>You gain a +1 bonus to damage rolls against bloodied enemies with attacks you make using a ki focus.</benefit>
       <benefit>The bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
    </feat>
@@ -1128,59 +800,41 @@
    <feat>
       <title>Martial Alacrity</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>15</value>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Initiative</group>
-      <group>Mobility</group>
+      <prereq type="ability" combine=";">Dexterity<value>15</value></prereq>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Initiative</group> <group>Mobility</group>
       <benefit>You gain a +2 feat bonus to initiative checks.</benefit>
-      <benefit>Also, during your first turn you can &lt;i&gt;step&lt;/i&gt; as a minor action.</benefit>
+      <benefit>Also, during your first turn you can <i>step</i> as a minor action.</benefit>
    </feat>
 
    <feat>
       <title>Master's Instruction</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Miss Mitigation</group>
-      <group>Support</group>
+      <prereq type="class">Monk</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Miss Mitigation</group> <group>Support</group>
       <benefit>When you use a monk encounter attack power and miss at least one target, choose one ally you can see and one target you missed.</benefit>
       <benefit>The chosen ally gains a +2 bonus to his or her first attack roll against the chosen target before the end of your next turn.</benefit>
    </feat>
 
    <feat>
+      <title>Mindfire</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Drow</prereq>
+      <prereq type="power" kind="racial">darkfire</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>Your <i>darkfire</i> racial power gains the <key>Augmentable</key> keyword and the following augmentation:</benefit>
+      <benefit><aug>Augment 1:</aug> You can target Reflex or Will, your choice, and on a hit the target also treats creatures more than 5 squares away from it as having total concealment until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
       <title>Monastic Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Defense</group>
-      <group>Healing Surge</group>
-      <group>Mobility</group>
-      <group>Triggered</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="class">Vampire</prereq>
+      <group>Class Combination</group> <group>Defense</group> <group>Healing Surge</group> <group>Mobility</group> <group>Triggered</group>
       <benefit>Once per encounter, when you hit at least one enemy with a monk encounter attack, you gain a healing surge.</benefit>
       <benefit>Also, when you spend a healing surge, you become invigorated until the end of your next turn. While invigorated, you gain a +2 bonus to speed and a +4 bonus to all defenses against attacks triggered by your movement.</benefit>
    </feat>
@@ -1188,68 +842,31 @@
    <feat>
       <title>Opportunistic Footwork</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>13</value>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Reactive Strikes</group>
-      <benefit>When an enemy provokes a &lt;i&gt;reactive strike&lt;/i&gt; from you, you can choose to shift 1 square instead of making a &lt;i&gt;melee basic attack&lt;/i&gt;.</benefit>
+      <prereq type="ability" combine=";">Dexterity<value>13</value></prereq>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Reactive Strikes</group>
+      <benefit>When an enemy provokes a <i>reactive strike</i> from you, you can choose to shift 1 square instead of making a <i>melee basic attack</i>.</benefit>
       <benefit>This increases to shift 2 squares at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Opportunity Knocks</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Reactive Strikes</group>
-      <group>Triggered</group>
-      <benefit>When you either hit with an enemy with a &lt;i&gt;reactive strike&lt;/i&gt; or an enemy misses you with a &lt;i&gt;reactive strike&lt;/i&gt;, that enemy grants combat advantage to you until the end of your next turn.</benefit>
+      <prereq type="class" combine="or">Rogue</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Reactive Strikes</group> <group>Triggered</group>
+      <benefit>When you either hit with an enemy with a <i>reactive strike</i> or an enemy misses you with a <i>reactive strike</i>, that enemy grants combat advantage to you until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Piercing Palm</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Monk Unarmed Strike</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Sneak Attack</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Unarmed Combat</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Monk Unarmed Strike</prereq>
+      <prereq type="class">Rogue</prereq>
+      <prereq type="feature">Sneak Attack</prereq>
+      <group>Class Combination</group> <group>Unarmed Combat</group>
       <benefit>You can deal your Sneak Attack damage with your monk unarmed strike, including with Monk attacks when you use your monk unarmed strike as the implement for them.</benefit>
       <benefit>Also, you can use your monk unarmed strike with Rogue and Rogue paragon path powers and features that require the use of a Light Blade.</benefit>
    </feat>
@@ -1257,195 +874,271 @@
    <feat>
       <title>Pointed Step Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Weapon Specialization</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Weapon Specialization</group>
       <benefit>When your Flurry of Blows power is triggered by an attack you make with a Spear, one target of that power can be up to 2 squares away from you.</benefit>
    </feat>
 
    <feat>
       <title>Precision Throw</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Basic Attack</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Weapon Specialization</group>
-      <benefit>Whenever you make a &lt;i&gt;ranged basic attack&lt;/i&gt; using a thrown weapon that you have proficiency with, you can always use Dexterity for the attack roll and damage roll, even if the weapon has the Heavy Thrown property.</benefit>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Attack Bonus</group> <group>Basic Attack</group> <group>Class</group> <group>Damage Bonus</group> <group>Weapon Specialization</group>
+      <benefit>Whenever you make a <i>ranged basic attack</i> using a thrown weapon that you have proficiency with, you can always use Dexterity for the attack roll and damage roll, even if the weapon has the Heavy Thrown property.</benefit>
+   </feat>
+
+   <feat>
+      <title>Prescient Dodge</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Defense</group> <group>Initiative</group> <group>Psionics</group>
+      <benefit>At the start of each encounter, you gain a +2 bonus to all defenses until the start of your first turn (after any surprise round, if applicable).</benefit>
+      <benefit>Also, whenever you hit an enemy with an unaugmented psionic at-will attack power, you can spend 1 power point to gain a +2 power bonus to all defenses until the start of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psiforged Resolve</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Warforged</prereq>
+      <prereq type="power" kind="racial">warforged resolve</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>When you are bloodied and use your <i>warforged resolve</i> racial power, you can choose to regain 1 power point instead of regaining hit points.</benefit>
+      <benefit>The number of power points you regain increases to 2 at 21st level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Accuracy</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>Your <i>elven accuracy</i> racial power gains the <key>Augmentable</key> keyword with the following augment:</benefit>
+      <benefit><aug>Augment 1:</aug> You gain combat advantage against the target of the triggering attack roll until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Celerity</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Charge</group> <group>Class</group> <group>Mobility</group> <group>Psionics</group>
+      <benefit>Whenever you run or charge, you gain a +2 bonus to speed. This does not stack with the Fast Runner feat.</benefit>
+      <benefit>As part of any movement, you can spend 1 power point to gain a +2 bonus to speed until the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Defiling</title>
+      <tier>Paragon</tier>
+      <category>Arcane Defiling</category>
+      <prereq type="hidden">any psionic</prereq>
+      <prereq type="daily attack power">any psionic</prereq>
+      <group>Arcane Defiling</group> <group>Power Enhancement</group>
+      <benefit>You gain the <i>arcane defiling</i> power and can use it with psionic daily attack powers. If you have other feats or abilities that affect your <i>arcane defiling</i>, those now affect your psionic powers in addition to arcane powers.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Ferocity</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Minotaur</prereq>
+      <prereq type="trait">Ferocity</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Psionics</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>When you make an attack as part of your Ferocity racial trait, you can spend 1 power point to deal +1[W] extra damage, or +1d8 extra damage if your attack is not a Weapon attack.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Fortune</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Psionics</group> <group>Saving Throws</group>
+      <benefit>While you have at least 1 power point, you gain a +1 bonus to saving throws.</benefit>
+      <benefit>Also, when you make a saving throw on your turn, you can spend 1 power point to gain a +2 feat bonus to saving throws until the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Fury</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="power" kind="racial">furious assault</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>Your <i>furious assault</i> racial power gains the <key>Augmentable</key> keyword, and the following augment:</benefit>
+      <benefit><aug>Augment 1:</aug>You deal damage to each enemy adjacent to you equal to your [Strength or Dexterity] modifier. If the triggering attack was made with a Weapon or Implement, you add its enhancement bonus to the damage. If the triggering attack deals a type of damage, your <i>furious assault</i> gains the corresponding keyword and this damage is of the same time.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Initiative</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Initiative</group> <group>Psionics</group>
+      <benefit>You gain a +3 feat bonus to Initiative checks.</benefit>
+      <benefit>Also, when you roll initiative, you can spend 1 power point to increase this to a +6 feat bonus.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Reflexes</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Psionics</group> <group>Reactive Strikes</group>
+      <benefit>You gain a +1 bonus to attack rolls with <i>reactive strikes</i>.</benefit>
+      <benefit>Also, when you make a <i>reactive strike</i>, you can spend 1 power point to gain a +2 power bonus to the attack roll.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Rejuvenation</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Shardmind</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Power Recovery</group> <group>Psionics</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you also regain 1 power point.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Rush</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Action Point</group> <group>Class</group> <group>Psionics</group>
+      <benefit>When you spend an action point to take an extra action, you can reduce the cost to augment any augmentable power you use during that action by 1 power point.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Scorn</title>
+      <tier>Heroic</tier>
+      <prereq type="class">Warlock</prereq>
+      <prereq type="feature">Sorcer-King Pact</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class Combination</group> <group>Power Recovery</group> <group>Psionics</group>
+      <benefit>When you use your <i>fell might recovery</i> class power, you can choose to regain 1 power point instead of regaining your fell might.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Skill</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Psionics</group> <group>Skill Enhancement</group>
+      <benefit>Choose any skill. You gain a +2 feat bonus to checks with that skill.</benefit>
+      <benefit>Also, when you make a check with the chosen skill, you can spend 1 power point to gain a +3 power bonus to that check.</benefit>
+      <special>You can take this feat more than one. Each time you take this feat, you must choose a different skill.</special>
+   </feat>
+
+   <feat>
+      <title>Psionic Toughness</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Hit Points</group> <group>Psionics</group> <group>Second Wind</group>
+      <benefit>You gain 3 additional hit points.</benefit>
+      <benefit>These additional hit points increase to 6 at 11th level, and to 10 at 21st level.</benefit>
+      <benefit>Also, your when you use your <i>second wind</i>, you regain an additional 5 hit points.</benefit>
+      <benefit>These additional hit points regained increase to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Psionic Trick</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Changeling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>changeling trick</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Defense</group>
-      <group>Movement</group>
-      <group>Power</group>
-      <group>Racial</group>
-      <benefit>Your movement does not provoke &lt;i&gt;reactive strikes&lt;/i&gt; from enemies granting combat advantage to you.</benefit>
-      <benefit>Also, you do not provoke &lt;i&gt;reactive strikes&lt;/i&gt; at all from a target under the effects of your &lt;i&gt;changeling trick&lt;/i&gt; racial power.</benefit>
+      <prereq type="race">Changeling</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="power" kind="racial">changeling trick</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Defense</group> <group>Movement</group> <group>Power</group> <group>Racial</group>
+      <benefit>Your movement does not provoke <i>reactive strikes</i> from enemies granting combat advantage to you.</benefit>
+      <benefit>Also, you do not provoke <i>reactive strikes</i> at all from a target under the effects of your <i>changeling trick</i> racial power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psionic Vampire</title>
+      <tier>Heroic</tier>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class" combine=";">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class Combination</group> <group>Healing Surge</group> <group>Psionics</group>
+      <benefit>Once per encounter, when you hit at least one enemy with an augmented psionic attack, you gain a healing surge.</benefit>
+      <benefit>Once per encounter, you can use a minor action to spend a healing surge to gain 2 power points. These power points expire at the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Psychic Corruption of Malbolge</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Tiefling</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Fire</group> <group>Racial</group> <group>Psychic</group>
+      <benefit>After you hit an enemy with an augmented psionic power, that enemy gains vulnerable 2 fire and vulnerable 2 psychic against your powers until the end of your next turn.</benefit>
+      <benefit>Both of these vulnerables increase to 4 at 11th level, and to 6 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Psychic Feast</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shifter</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>longtooth shifting</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>Once per turn while you are under the effects of your &lt;i&gt;longtooth shifting&lt;/i&gt; racial power and hit with a psionic attack on your, you immediately regain a number of hit points equal to one-half your regeneration value.</benefit>
+      <prereq type="race">Shifter</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="power" kind="racial">longtooth shifting</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>Once per turn while you are under the effects of your <i>longtooth shifting</i> racial power and hit with a psionic attack on your, you immediately regain a number of hit points equal to one-half your regeneration value.</benefit>
    </feat>
 
    <feat>
       <title>Psychic Wail</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Kill Effect</group>
-      <group>Psychic Specialization</group>
-      <benefit>When you reduce an enemy to 0 hit points or fewer on your turn with a power that has the Psychic keyword, choose one other enemy you can see within 5 squares of the first enemy. You gain combat advantage against the chosen enemy until the end of your next turn.</benefit>
+      <prereq type="class">any psionic</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Kill Effect</group> <group>Psychic</group>
+      <benefit>When you reduce an enemy to 0 hit points or fewer on your turn with a power that has the <key>Psychic</key> keyword, choose one other enemy you can see within 5 squares of the first enemy. You gain combat advantage against the chosen enemy until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Resurgent Memory</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>memory of a thousand lifetimes</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <benefit>When you use your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power to enhance an Arcana check, or to enhance an attack roll of a psionic power, you add +1 to the result.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="power" kind="racial">memory of a thousand lifetimes</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Skill Enhancement</group>
+      <benefit>When you use your <i>memory of a thousand lifetimes</i> racial power to enhance an Arcana check, or to enhance an attack roll of a psionic power, you add +1 to the result.</benefit>
    </feat>
 
    <feat>
       <title>Risky Shift</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class">Ranger</prereq>
+      <prereq type="class" combine="or">Rogue</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group>
       <benefit>Whenever you shift, you can choose to increase the maximum distance by 1 square. If you do, you grant combat advantage until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Roundabout Charge</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Acrobatics</name>
-      </prereq>
-      <group>Charging</group>
-      <group>Class</group>
+      <prereq type="class" combine="or">Monk</prereq>
+      <prereq type="class" combine=";">Rogue</prereq>
+      <prereq type="skill">Acrobatics</prereq>
+      <group>Charging</group> <group>Class</group>
       <benefit>When you charge, each square of your movement need not bring you closer to the target of your charge, but you must start the charge at least 3 squares away from the target.</benefit>
    </feat>
 
    <feat>
       <title>Seeking Power</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>level</type>
-         <name>6th</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Controller</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <benefit>You can exchange any 6th-level or higher utility power you know for &lt;i&gt;seeking power&lt;/i&gt;.</benefit>
+      <prereq type="level" combine=";">6th</prereq>
+      <prereq type="role" combine="or">Controller</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Repertoire</group>
+      <benefit>You can exchange any 6th-level or higher utility power you know for <i>seeking power</i>.</benefit>
 
       <power>
          <title>Seeking Power</title>
@@ -1467,192 +1160,292 @@
    <feat>
       <title>Serenity in Simplicity</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
+      <prereq type="class">Monk</prereq>
+      <group>Attack Bonus</group> <group>Class</group>
       <benefit>When all your monk daily attack powers are expended, you gain a +1 bonus to attack rolls with monk at-will attack powers.</benefit>
-      <benefit>If you have the Internalize the Basic Kata feat, you also gain the bonus to attack rolls with &lt;i&gt;melee basic attacks&lt;/i&gt; using your monk unarmed strike.</benefit>
+      <benefit>If you have the Internalize the Basic Kata feat, you also gain the bonus to attack rolls with <i>melee basic attacks</i> using your monk unarmed strike.</benefit>
    </feat>
 
    <feat>
       <title>Shard Link</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shardmind</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Telepathy</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Telepathy</group>
-      <benefit>Once during each of your turns, when you make an attack against an enemy that you have combat advantage against, choose one ally within the range of your telepathy.</benefit>
+      <prereq type="race">Shardmind</prereq>
+      <prereq type="trait">Telepathy</prereq>
+      <prereq type="class">any psionic</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Racial</group> <group>Support</group> <group>Telepathy</group>
+      <benefit>Once during each of your turns, when you make an attack against an enemy that you have combat advantage against, choose one ally within the range of your Telepathy racial trait.</benefit>
       <benefit>The chosen ally gains combat advantage on the first attack he or she makes against the same enemy before the start of your next turn.</benefit>
    </feat>
-
+   
    <feat>
       <title>Shielding Whirlwind Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Weapon Specialization</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Defense</group> <group>Weapon Specialization</group>
       <benefit>When you use your Flurry of Blows power while you are wielding a quarterstaff, you gain cover against ranged attack and area attacks until the end of your next turn or until you are no longer wielding a quarterstaff. You also do not grant combat advantage for being flanked while you have this benefit, though you still count as being flanked for other purposes.</benefit>
    </feat>
 
    <feat>
       <title>Shifting Stone</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Stand Your Ground</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Racial</group>
-      <group>Triggered</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Stand Your Ground</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Racial</group> <group>Triggered</group>
       <benefit>When you succeed in a saving throw to avoid being knocked prone, you can shift a number of squares equal to your Wisdom modifier as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Simple Precision</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <benefit>Whenever you hit with a monk at-will attack power or a &lt;i&gt;melee basic attack&lt;/i&gt;, you gain a +1 bonus to attack rolls with monk attacks until the end of your next turn.</benefit>
+      <prereq type="class">Monk</prereq>
+      <group>Attack Bonus</group> <group>Class</group>
+      <benefit>Whenever you hit with a monk at-will attack power or a <i>melee basic attack</i>, you gain a +1 bonus to attack rolls with monk attacks until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Skipping Stone Flurry</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Weapon Specialization</group>
-      <benefit>When you use your Flurry of Blows power and are wielding a loaded Sling, one of the targets can be within 10 squares of you. This counts as a ranged attack that does not provoke &lt;i&gt;reactive strikes&lt;/i&gt; and uses the ammunition from your Sling.</benefit>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Weapon Specialization</group>
+      <benefit>When you use your Flurry of Blows power and are wielding a loaded Sling, one of the targets can be within 10 squares of you. This counts as a ranged attack that does not provoke <i>reactive strikes</i> and uses the ammunition from your Sling.</benefit>
    </feat>
-
+   
    <feat>
       <title>Skittering Mouse Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>size</type>
-         <name>Small or smaller</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Size-based</group>
+      <prereq type="size">Small or smaller</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Size-based</group>
       <benefit>When you use a monk power to shift 3 or more squares, you can shift through enemies' spaces.</benefit>
    </feat>
 
    <feat>
       <title>Slashing Kama Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Class</group>
-      <group>Ongoing Damage</group>
-      <group>Power Enhancement</group>
-      <group>Proficiency Gain</group>
-      <group>Weapon Specialization</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Ongoing Damage</group> <group>Power Enhancement</group> <group>Proficiency Gain</group> <group>Weapon Specialization</group>
       <benefit>You gain proficiency with the sickle</benefit>
       <benefit>Also, when you use your Flurry of Blows power and are wielding a sickle, you can choose one of the targets.</benefit>
       <benefit>If you do, the chosen target instead takes ongoing damage (save ends) equal to the damage you would normally deal to it.</benefit>
    </feat>
 
    <feat>
+      <title>Speedy Response</title>
+      <tier>Heroic</tier>
+      <prereq type="ability" combine=";">Dexterity<value>15</value></prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class" combine="or">Rogue</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Triggered</group>
+      <benefit>If you are hit by an attack while moving, you gain a +1 bonus to speed for that movement. This bonus is cumulative if you are hit multiple times.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Starblade Flurry</title>
+      <tier>Paragon</tier>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Class</group> <group>Weapon Specialization</group>
+      <benefit>When you use your Flurry of Blows class power, one of the targets can be within 5 squares of you. This is a ranged attack with a Dagger or a shuriken, and doesn't trigger <i>reactive strikes</i> for making a ranged attack.</benefit>
+      <benefit>Starting at 21st level, the one ranged target is in addition to enemies adjacent to you.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Still Water</title>
+      <tier>Paragon</tier>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Defense</group>
+      <benefit>If all your monk encounter attack powers are expended and you hit with a monk at-will attack, you gain a +2 bonus to AC until the start of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Stone Fist Master</title>
+      <tier>Epic</tier>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Stone Fist</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group>
+      <benefit>Each target of your <i>stone fist flurry of blows</i> class power grants combat advantage for the first attack made against that creature before the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Surprise Action</title>
+      <tier>Epic</tier>
+      <prereq type="ability" combine=";">Wisdom<value>19</value></prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="class" combine="or">Ranger</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Initiative</group>
+      <benefit>During the surprise round, if you aren't surprised, you can a standard action, a move action, and a minor action.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Sword of Civilization</title>
+      <tier>Heroic</tier>
+      <prereq type="role">Striker</prereq>
+      <prereq type="deity">Erathis</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group> <group>Support</group> <group>Worship</group>
+      <benefit>When you have combat advantage against an enemy, allies adjacent to you have a +2 bonus to damage rolls against that enemy.</benefit>
+      <benefit>This bonus to damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Threefold Fortitude</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Defense</group> <group>Psionics</group>
+      <benefit>You gain a +1 bonus to Fortitude.</benefit>
+      <benefit>On your turn as a free action, you can spend 1 power point to gain an additional +2 bonus to Fortitude until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Threefold Reflex</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Defense</group> <group>Psionics</group>
+      <benefit>You gain a +1 bonus to Reflex.</benefit>
+      <benefit>On your turn as a free action, you can spend 1 power point to gain an additional +2 bonus to Reflex until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Threefold Will</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Defense</group> <group>Psionics</group>
+      <benefit>You gain a +1 bonus to Will.</benefit>
+      <benefit>On your turn as a free action, you can spend 1 power point to gain an additional +2 bonus to Will until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Thri-Kreen Wild Talent</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Thri-kreen</prereq>
+      <prereq type="power" kind="racial">thri-kreen claws</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Power Recovery</group> <group>Power Repertoire</group> <group>Psionics</group>
+      <benefit>You gain one Wild Talent power of your choice.</benefit>
+      <benefit>Also, once per encounter, you can use the following action:</benefit>
+      <benefit name="Minor Action">You expend your <i>thri-kreen claws</i> racial power to regain 1 power point.</benefit>
+   </feat>
+   
+   <feat>
+      <title>True Freedom</title>
+      <tier>Epic</tier>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Grapple</group> <group>Triggered</group>
+      <benefit>You can use the following action at-will:</benefit>
+      <benefit name="Immediate Interrupt"><trigger>You are grabbed</trigger>You take the <i>escape</i> action.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Ubiquitous Fey Step</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Power Recovery</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>When you first drop to 0 power points during an encounter, you regain the use of your <i>fey step</i> racial power.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unarmed Mastery</title>
+      <tier>Epic</tier>
+      <prereq type="ability">Dexterity<value>23</value></prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature" combine=";">Unarmed Combatant</prereq>
+      <prereq type="ability">Strength<value>17</value></prereq>
+      <prereq type="ability">Constitution<value>17</value></prereq>
+      <prereq type="ability" combine="or">Wisdom<value>17</value></prereq>
+      <prereq type="ability">Charisma<value>17</value></prereq>
+      <group>Class</group> <group>Critical</group> <group>Unarmed Combat</group>
+      <benefit>When you make make a Weapon attack using your monk unarmed strike or a monk Implement attack, you can score a critical hit on a natural roll of 19 or 20.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unstoppable Drive</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine=";">Dwarf</prereq>
+      <prereq type="role" combine="or">Defender</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you can shift 1 square as a free reaction. You must end this movement in a space adjacent to at least one enemy.</benefit>
+      <benefit>This increases to shift up to 2 squares at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Untraceable Flurry</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <prereq type="feat">Elan Heritage</prereq>
+      <group>Class</group> <group>Elan Heritage</group> <group>Power Enhancement</group> <group>Psychic</group>
+      <benefit>You can choose to deal psychic damage with your Flurry of Blows power. If you do, the power gains the <key>Psychic</key> keyword and deals full damage to insubstantial targets.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Violent Awakening</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="power" kind="racial">furious assault</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurrty of Blows</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>You can trigger your <i>furious assault</i> racial power and the power granted by your Flurry of Blows class feature on the same attack, despite them being free actions with the same trigger.</benefit>
+      <benefit>When you do, one target of your Flurry of Blows power takes additional damage equal to your Strength modifier.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Waking Sense</title>
+      <tier>Paragon</tier>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Perception</group> <group>Skill Enhancement</group>
+      <benefit>You never take a penalty to Perception check checks for being blinded, deafened, or sleeping.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Water Splitting Stone</title>
+      <tier>Heroic</tier>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Critical</group> <group>Damage Bonus</group> <group>Unarmed Combat</group>
+      <benefit>When you score a critical hit using your Monk Unarmed Strike, the target loses any resists it might have. This lasts until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Whirling Iron Defense</title>
+      <tier>Paragon</tier>
+      <prereq type="class">Monk</prereq>
+      <prereq type="power" kind="class">iron soul flurry of blows</prereq>
+      <group>Class</group> <group>Defense</group> <group>Triggered</group>
+      <benefit>When you use your <i>iron soul flurry of blows</i> class power, you gain a +1 bonus to all defenses against each target.</benefit>
+   </feat>
+   
+   <feat>
       <title>Zerth Instincts</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Githzerai</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>iron mind</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Initiative</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;iron mind&lt;/i&gt; racial power, you can also shift 1 square.</benefit>
-      <benefit>In addition, when you are surprised, you can use &lt;i&gt;iron mind&lt;/i&gt; as a free interrupt to not be surprised.</benefit>
+      <prereq type="race">Githzerai</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="power" kind="racial">iron mind</prereq>
+      <group>Class</group> <group>Initiative</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>iron mind</i> racial power, you can also shift 1 square.</benefit>
+      <benefit>In addition, when you are surprised, you can use <i>iron mind</i> as a free interrupt to not be surprised.</benefit>
    </feat>
 
    <feat>
       <title>Zuoken's Centering</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Githzerai</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing Surge</group>
-      <group>Hit Points</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
+      <prereq type="ability">Wisdom<value>15</value></prereq>
+      <prereq type="race">Githzerai</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Healing Surge</group> <group>Hit Points</group> <group>Racial</group> <group>Skill Enhancement</group>
       <benefit>Your hit points and number of healing surges are based on your Wisdom instead of your Constitution.</benefit>
       <benefit>Also, when you make a Strength check, you can use Wisdom instead.</benefit>
       <benefit>In addition, your Athletics checks are based on Wisdom instead of Strength.</benefit>

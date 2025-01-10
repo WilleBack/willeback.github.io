@@ -313,7 +313,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                      </xsl:choose>
                   </div>
                </xsl:when>
-               <xsl:when test="@name or bullet or @bullet">
+               <xsl:when test="@name or bullet or @bullet or @vestige">
                   <div style="width:calc(100% - 2em); padding-left:1.5em;">
                      <xsl:if test="@bullet or bullet">
                         <xsl:text>&#9658; </xsl:text>
@@ -324,6 +324,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:when>
                         <xsl:when test="@name">
                            <b><xsl:value-of select="@name"/>: </b>
+                        </xsl:when>
+                        <xsl:when test="@vestige">
+                           <b><i>Eyes of the Vestige</i> Augment: </b>
                         </xsl:when>
                         <xsl:otherwise>
                         </xsl:otherwise>
@@ -343,7 +346,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:when test="@skill-class">
                            <xsl:value-of select="." disable-output-escaping="yes"/>
                            <xsl:text>, you gain training in  one skill from the </xsl:text>
-                           <xsl:value-of select="@skill" disable-output-escaping="yes"/>
+                           <xsl:value-of select="@skill-class" disable-output-escaping="yes"/>
                            <xsl:text>'s class skill list.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skills">
@@ -553,25 +556,8 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    <xsl:text>; </xsl:text>
 </xsl:template>
 
-<xsl:template match="type">
-   <i><xsl:apply-templates /></i>
-   <xsl:text> </xsl:text>
-</xsl:template>
-
-<xsl:template match="text()">
-   <xsl:value-of select="." disable-output-escaping="yes" />
-</xsl:template>
-
-<xsl:template match="b">
-   <b><xsl:apply-templates /></b>
-</xsl:template>
-
-<xsl:template match="i">
-   <i><xsl:apply-templates /></i>
-</xsl:template>
-
-<xsl:template match="br">
-   <br />
+<xsl:template match="aug">
+   <span class="augment" style="float:none; font-variant: small-caps; font-size: 1.1em; width:calc(100% - 0.5em); margin:0.2em;"><b><xsl:apply-templates/></b></span>
 </xsl:template>
 
 </xsl:stylesheet>

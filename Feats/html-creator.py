@@ -282,6 +282,7 @@ print(str(output_doc))
 output_doc.write("epicgenlist.html", pretty_print=True)
 
 ## Group list
+source_doc = etree.parse("description.xml")
 xslt_doc = etree.parse("feat-groups.xsl")
 xslt_transformer = etree.XSLT(xslt_doc)
 output_doc = xslt_transformer(source_doc)

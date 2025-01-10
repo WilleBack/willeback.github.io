@@ -8,25 +8,25 @@ fullRoot = fullTree.getroot()
 def create_feat_file(targetClass, targetRole, targetSource):
     data = []
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetClass + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetClass + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetRole + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetRole + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetSource + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetSource + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    if targetClass == 'Fighter':
-        for feat in fullRoot.findall(".feat/prereq[name='power strike']..."):
+    if targetClass == 'Fighter' or targetClass == 'Ranger':
+        for feat in fullRoot.findall(".feat[prereq='power strike']"):
             key = feat.findtext("title")
             data.append((key, feat))
 
     if targetClass == 'Gnome' or targetClass == 'Goblin' or targetClass == 'Halfling' or targetClass == 'Kobold' or targetClass == 'Pixie' or targetClass == 'Svirfneblin':
-        for feat in fullRoot.findall(".feat/prereq[name='Small or smaller']..."):
+        for feat in fullRoot.findall(".feat[prereq='Small or smaller']"):
             key = feat.findtext("title")
             data.append((key, feat))
 
@@ -37,37 +37,37 @@ def create_feat_file(targetClass, targetRole, targetSource):
 def create_character_file(targetClass, targetRole, targetSource, targetRace, targetOrigin, targetType):
     data = []
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetClass + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetClass + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetRole + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetRole + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetSource + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetSource + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetRace + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetRace + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetOrigin + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetOrigin + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    for feat in fullRoot.findall(".feat/prereq[name='" + targetType + "']..."):
+    for feat in fullRoot.findall(".feat[prereq='" + targetType + "']"):
         key = feat.findtext("title")
         data.append((key, feat))
 
     if targetClass == 'Fighter' or targetClass == 'Ranger':
-        for feat in fullRoot.findall(".feat/prereq[name='power strike']..."):
+        for feat in fullRoot.findall(".feat[prereq='power strike']"):
             key = feat.findtext("title")
             data.append((key, feat))
 
     if targetRace == 'Gnome' or targetRace == 'Goblin' or targetRace == 'Halfling' or targetRace == 'Kobold' or targetRace == 'Pixie' or targetRace == 'Svirfneblin':
-        for feat in fullRoot.findall(".feat/prereq[name='Small or smaller']..."):
+        for feat in fullRoot.findall(".feat[prereq='Small or smaller']"):
             key = feat.findtext("title")
             data.append((key, feat))
 
@@ -103,135 +103,13 @@ collate = create_character_file("Warlord", "Leader", "any martial", "Human", "na
 for item in collate:
     victoriaRoot.append(item[-1])
 
-# Remove known false feats
-extra = victoriaRoot.find(".feat[title='Action Rush']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Arcane Reserves']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Avalanche Reaver']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Avenging Opportunist']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Bloody Inspiration']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Boldness Through Luck']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Bolstering Breath']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Bolstering Inspiration']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Bravura Shroud']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Bravura Spirit']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Commander of a Thousand Lifetimes']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Common Cause']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Cragborn Courage']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Darkfire Reaper']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Divine Approval']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Divine Perseverance']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Draconic Arrogance']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Draconic Healing']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Draconic Incitement']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Dragon Breath Channeling']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Dragon Breath Strike']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Dragon Breath Tactician']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Dragon Warrior']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Dwarven Recovery']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Crimson Eye Action']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Devout Protector Expertise']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Eager Mind']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Elemental Comrades']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Elemental Warrior']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Explosive Leader']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Fading Forces']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Fey Command']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Fey Tactics']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Feyborn Shrouding']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Feyborn Stratagem']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Feywild Flanker']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Feywild Warrior']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Fortunate Warrior']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Glorious Victory']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Guiding Step']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Hawkeye Warrior']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Human Beast Mastery']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Human Ingenuity']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Human Innovation']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Human Nature Lore']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Infernal Might']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Infernal Warrior']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Invigorated Healing']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Invoke Resilience']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Leading Shot']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Lineage of Warriors']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Lolthdark Commander']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Martial Accuracy']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Martial Dilettante']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Nimble Dodge']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Rash Sneak Attack']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Resilience of Stone']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Risky Aegis']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Rousing Voice']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Rumbling Earthshock']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Shared Memories']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Sideways Defense']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Warborn Fury']")
-victoriaRoot.remove(extra)
-extra = victoriaRoot.find(".feat[title='Wrath of the Forester']")
-victoriaRoot.remove(extra)
+for feat in victoriaRoot.findall(".feat[group='Class' ]"):
+    if not(feat.findall(".//prereq") == 'Warlord' or feat.findtext("prereq") == 'Leader' or feat.findtext("prereq") == 'any martial'):
+        victoriaRoot.remove(feat)
+
+for feat in victoriaRoot.findall(".feat[group='Racial']"):
+    if not(feat.findtext("prereq") == 'Human'):
+        victoriaRoot.remove(feat)
 
 # Save file
 victoriaTree.write("victoria.xml")
