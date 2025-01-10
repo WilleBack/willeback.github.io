@@ -162,95 +162,45 @@
    <feat>
       <title>Admixture Breath</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Adaptable Breath</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Radiant Breath</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt;, you can choose for it to deal two types of damage and gain both keywords. Both damage types must be ones you are capable of delivering with your &lt;i&gt;dragon breath&lt;/i&gt;.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="power" kind="racial" combine=";">dragon breath</prereq>
+      <prereq type="feat" combine="or">Adaptable Breath</prereq>
+      <prereq type="feat">Radiant Breath</prereq>
+      <prereq type="hidden">any divine</prereq>
+      <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>dragon breath</i>, you can choose for it to deal two types of damage and gain both keywords. Both damage types must be ones you are capable of delivering with your <i>dragon breath</i>.</benefit>
    </feat>
    <feat>
       <title>Armored by Faith</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Temporary Hit Points</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Temporary Hit Points</group>
       <benefit>When you use a Channel Divinity power, you gain temporary hit points equal to 3 + your Wisdom modifier.</benefit>
       <benefit>These temporary hit points increase to 6 + your Wisdom modifier at 21st level.</benefit>
    </feat>
    <feat>
       <title>Assured Healing</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Miss Mitigation</group>
-      <benefit>When you miss with a divine attack power with the Healing keyword, and that power does nothing on a miss, you or one ally within 5 squares of you regains regains hit points equal to your Charisma modifier.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <group>Class</group> <group>Healing</group> <group>Miss Mitigation</group>
+      <benefit>When you miss with a divine attack power with the <key>Healing</key> keyword, and that power does nothing on a miss, you or one ally within 5 squares of you regains regains hit points equal to your Charisma modifier.</benefit>
       <benefit>The hit points regained increase to 5 + your Charisma modifier at 21st level.</benefit>
    </feat>
    <feat>
       <title>Avandra's Boon</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Avandra</name>
-      </prereq>
-      <group>Class</group>
-      <group>Miss Mitigation</group>
-      <group>Saving Throws</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Class</group> <group>Miss Mitigation</group> <group>Saving Throws</group> <group>Worship</group>
       <benefit>When you roll a natural 1 on an attack roll or saving throw, you gain a +2 bonus to your next roll of the same type you make before the end of your next turn.</benefit>
    </feat>
    <feat>
       <title>Battle Cleric Armaments</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Strength</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <group>Class</group>
-      <group>Proficiency Gain</group>
-      <group>Shield</group>
+      <prereq type="ability">Strength<value>15</value></prereq>
+      <prereq type="class">Cleric</prereq>
+      <group>Class</group> <group>Proficiency Gain</group> <group>Shield</group>
       <benefit>You gain proficiency with light shields, and with one military weapon of your choice.</benefit>
       <benefit>If you already have proficiency with light shields, you instead gain proficiency with heavy shields.</benefit>
    </feat>
@@ -258,311 +208,137 @@
    <feat>
       <title>Battle Healer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Triggered</group>
-      <benefit>When you use your &lt;i&gt;healing word&lt;/i&gt; power, you regain hit points equal to your Strength modifier after the power has been resolved.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Healing</group> <group>Triggered</group>
+      <benefit>When you use your <i>healing word</i> power, you regain hit points equal to your Strength modifier after the power has been resolved.</benefit>
       <benefit>This increases to 3 + Strength modifier at 11th level, and to 6 + Strength modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Beatific Healer</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Heal</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <benefit>When you use a divine Healing power, add your Charisma modifier to the hit points the recipient regains.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="skill">Heal</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group>
+      <benefit>When you use a divine <key>Healing</key> power, add your Charisma modifier to the hit points the recipient regains.</benefit>
    </feat>
 
    <feat>
       <title>Bitter Cold</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-         <combine>or both</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Cold Specialization</group>
-      <group>Defense Penalty</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">any arcane</prereq>
+      <prereq type="class" combine="that">any divine</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Cold</group> <group>Defense Penalty</group> <group>Worship</group>
       <benefit>When you hit a creature with a Cold power from any class that allows you to qualify for this feat, that creature takes a -2 penalty to Fortitude defense until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Blessed Scoundrel</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>second chance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>When you use your &lt;i&gt;second chance&lt;/i&gt; racial power and the enemy misses with the triggering attack, you can spend a healing surge to regain a number of hit points equal to your healing surge value.</benefit>
+      <prereq type="race">Halfling</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">second chance</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>When you use your <i>second chance</i> racial power and the enemy misses with the triggering attack, you can spend a healing surge to regain a number of hit points equal to your healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Blessing of Avandra</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>second chance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Avandra</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Triggered</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;second chance&lt;/i&gt; racial power and the triggering attack misses, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
+      <prereq type="race">Halfling</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">second chance</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Support</group> <group>Triggered</group> <group>Worship</group>
+      <benefit>When you use your <i>second chance</i> racial power and the triggering attack misses, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Blessing of Corellon</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Triggered</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power and the triggering attack roll hits, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Support</group> <group>Triggered</group> <group>Worship</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power and the triggering attack roll hits, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Bolstering Breath</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>Your &lt;i&gt;dragon breath&lt;/i&gt;'s attack targets only enemies instead of all creatures in the area.</benefit>
-      <benefit>In addition, allies in the area of your &lt;i&gt;dragon breath&lt;/i&gt; gain a +1 bonus to attack rolls until the end of your next turn.</benefit>
+      <prereq type="role">Leader</prereq>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="power" kind="racial">dragon breath</prereq>
+      <group>Attack Bonus</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>Your <i>dragon breath</i>'s attack targets only enemies instead of all creatures in the area.</benefit>
+      <benefit>In addition, allies in the area of your <i>dragon breath</i> gain a +1 bonus to attack rolls until the end of your next turn.</benefit>
    </feat>
 
    <feat>
-      <title>Bolstering Step</title>
+      <title>Bolstering Fey Step</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Temporary Hit Points</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, choose one ally adjacent to either your original space or your destination space. The chosen ally gains temporary hit points equal to your Intelligence modifier, and can then shift 1 square as a free reaction.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group> <group>Temporary Hit Points</group> <group>Support</group>
+      <benefit>When you use your <i>fey step</i> racial power, choose one ally adjacent to either your original space or your destination space. The chosen ally gains temporary hit points equal to your Intelligence modifier, and can then shift 1 square as a free reaction.</benefit>
       <benefit>These temporary hit points increase to 4 + your Intelligence modifier at 11th level, and to 8 + your Intelligence modifier at 21st level, and the shift inreases to 2 squares at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Bountiful Fortune</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine fortune</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Avandra</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Support</group>
-      <group>Temporary Hit Points</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power, you and each ally adjacent to gain temporary hit points equal to your Charisma modifier.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">divine fortune</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Support</group> <group>Temporary Hit Points</group> <group>Worship</group>
+      <benefit>When you use your <i>divine fortune</i> Channel Divinity power, you and each ally adjacent to gain temporary hit points equal to your Charisma modifier.</benefit>
       <benefit>The temporary hit points increase to 2 + your Charisma modifier at 11th level, and to 5 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Breath of Life</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Temporary Hit Points</group>
-      <benefit>Your &lt;i&gt;dragon breath&lt;/i&gt; racial power targets only enemies for the attack.</benefit>
-      <benefit>In addition, allies within the area gain temporary hit points equal to your Strength modifier or your Constitution modifier.</benefit>
-      <benefit>These temporary hit points increase to 3 + your Strength modifier or your Consitution modifier at 11th level, and to 6 + your Strength modifier or your Constitution modifier at 21st level.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="racial">dragon breath</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group> <group>Temporary Hit Points</group>
+      <benefit>Your <i>dragon breath</i> racial power targets only enemies for the attack.</benefit>
+      <benefit>In addition, allies within the area gain temporary hit points equal to your [Strength or Constitution] modifier.</benefit>
+      <benefit>These temporary hit points increase to 3 + your [Strength or Consitution] modifier at 11th level, and to 6 + your [Strength or Constitution] modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Brilliant Darkfire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>darkfire</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Radiant Specialization</group>
-      <benefit>When you hit a target with your &lt;i&gt;darkfire&lt;/i&gt; racial power, the target gains vulnerability to radiant damage equal to your Charisma modifier until the end of your next turn.</benefit>
+      <prereq type="race">Drow</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">darkfire</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group> <group>Radiant</group>
+      <benefit>When you hit a target with your <i>darkfire</i> racial power, the target gains vulnerability to radiant damage equal to your Charisma modifier until the end of your next turn.</benefit>
       <benefit>This vulnerability increases to 2 + your Charisma modifier at 11th level, and to 4 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Clarity of Spirit</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Kalashtar</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>bastion of mental clarity</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Healing Surge</group>
-      <group>Power Enhancement</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;bastion of mental clarity&lt;/i&gt; racial power, you or one ally in the burst can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
+      <prereq type="race">Kalashtar</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">bastion of mental clarity</prereq>
+      <group>Class</group> <group>Healing</group> <group>Healing Surge</group> <group>Power Enhancement</group> <group>Support</group>
+      <benefit>When you use your <i>bastion of mental clarity</i> racial power, you or one ally in the burst can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Cleanse the Mind</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Condition Negation</group>
-      <group>Power Repertoire</group>
-      <group>Support</group>
-      <benefit>You gain the &lt;i&gt;cleanse the mind&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Condition Negation</group> <group>Power Repertoire</group> <group>Support</group>
+      <benefit>You gain the <i>cleanse the mind</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Cleanse the Mind</title>
@@ -579,15 +355,15 @@
          </section>
          <section indent="1">
             <name style="italic">Level 11:</name>
-            <text>&lt;i&gt;Close&lt;/i&gt; burst 4</text>
+            <text><i>Close</i> burst 4</text>
          </section>
          <section indent="1">
             <name style="italic">Level 21:</name>
-            <text>&lt;i&gt;Close&lt;/i&gt; burst 5</text>
+            <text><i>Close</i> burst 5</text>
          </section>
          <section shade="">
             <name>Effect:</name>
-            <text>Each target can make a saving throw against a Charm effect, Fear effect, or Psychic effect.</text>
+            <text>Each target can make a saving throw against a <key>Charm</key> effect, <key>Fear</key> effect, or <key>Psychic</key> effect.</text>
          </section>
          <section shade="">
             <text>A target that succeeds at the saving throw gains temporary hit points equal to your Charisma modifier.</text>
@@ -606,15 +382,9 @@
    <feat>
       <title>Clinging Radiance</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Illumination</group>
-      <group>Radiant Specialization</group>
-      <group>Support</group>
-      <benefit>When you hit a target with a divine attack power that has the Radiant keyword, the target loses any concealment or total concealment it has and cannot gain concealment or total concealment until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Illumination</group> <group>Radiant</group> <group>Support</group>
+      <benefit>When you hit a target with a divine attack power that has the <key>Radiant</key> keyword, the target loses any concealment or total concealment it has and cannot gain concealment or total concealment until the end of your next turn.</benefit>
       <benefit>Also, the target's space is dimly lit until the end of your next turn.</benefit>
       <benefit>On a critical hit, this increases to brightly lit, and spaces adjacent to the target being dimly lit.</benefit>
    </feat>
@@ -622,23 +392,11 @@
    <feat>
       <title>Command Undead</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <prereq>
-         <name>Channel Divinity power that targets undead</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
-      <benefit>You gain the &lt;i&gt;command undead&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <prereq>Channel Divinity power that targets undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Repertoire</group> <group>Undead-hunting</group> <group>Worship</group>
+      <benefit>You gain the <i>command undead</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Command Undead</title>
@@ -656,20 +414,20 @@
          <section>
             <indent>1</indent>
             <name>Level 21:</name> <name-style>italic</name-style>
-            <text>&lt;b&gt;Close&lt;/b&gt; burst 10</text>
+            <text><b>Close</b> burst 10</text>
          </section>
             <section>
                <shade>true</shade>
                <name>Hit:</name> <name-style>bold</name-style>
-               <text>You slide the target up to a number of squares equal to 2 + your Wisdom modifier or your Charisma modifier, and the target is immobilized until the end of your next turn.</text>
+               <text>You slide the target up to a number of squares equal to 2 + your [Wisdom or Charisma] modifier, and the target is immobilized until the end of your next turn.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>The target makes a &lt;i&gt;melee basic attack&lt;/i&gt; against one target of your choice.</text>
+               <text>The target makes a <i>melee basic attack</i> against one target of your choice.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>Until the end of your next turn, any enemies that ends its turn adjacent to the target takes damage equal to 5 + your implement's enhancement bonus. If the target's &lt;i&gt;melee basic attack&lt;/i&gt; has a damage type, this damage is of the same type or types.</text>
+               <text>Until the end of your next turn, any enemies that ends its turn adjacent to the target takes damage equal to 5 + your implement's enhancement bonus. If the target's <i>melee basic attack</i> has a damage type, this damage is of the same type or types.</text>
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
@@ -692,105 +450,39 @@
    <feat>
       <title>Common Cause</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-elf</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Group Diplomacy</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Second Wind</group>
-      <group>Support</group>
-      <group>Temporary Hit Points</group>
-      <benefit>Whenever an ally within 10 squares of you uses his or her &lt;i&gt;second wind&lt;/i&gt;, that ally also gains 4 temporary hit points.</benefit>
+      <prereq type="race">Half-elf</prereq>
+      <prereq type="role">Leader</prereq>
+      <prereq type="trait">Group Diplomacy</prereq>
+      <group>Class</group> <group>Racial</group> <group>Second Wind</group> <group>Support</group> <group>Temporary Hit Points</group>
+      <benefit>Whenever an ally within 10 squares of you uses his or her <i>second wind</i>, that ally also gains 4 temporary hit points.</benefit>
       <benefit>The temporary hit points increase to 8 at 11th level, and to 12 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Consuming the Weak</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Sorcerer</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Dragon Magic</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlock</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Infernal Pact</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Wizard</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Evocation Specialization</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>that</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with either the Destruction or Fire domain</name>
-      </prereq>
-      <group>Class</group>
-      <group>Fire Specialization</group>
-      <group>Ongoing Damage</group>
-      <group>Triggered</group>
-      <benefit>Whenever you hit a target vulnerable to or another weakness to fire with a Fire attack power from a qualifying class, the target takes ongoing 5 fire damage (save ends) in addition to the attack's normal effects. If the attack already causes ongoing fire damage, increase it by 5 instead.</benefit>
+      <prereq type="class" combine="with">Sorcerer</prereq>
+      <prereq type="feature">Dragon Magic</prereq>
+      <prereq type="class" combine="with">Warlock</prereq>
+      <prereq type="feature">Infernal Pact</prereq>
+      <prereq type="class" combine="with">Wizard</prereq>
+      <prereq type="feature" combine="or">Evocation Specialization</prereq>
+      <prereq type="class" combine="that">any divine</prereq>
+      <prereq type="deity">a deity with either the Destruction or Fire domain</prereq>
+      <group>Class</group> <group>Fire</group> <group>Ongoing Damage</group> <group>Triggered</group>
+      <benefit>Whenever you hit a target vulnerable to or another weakness to fire with a <key>Fire</key> attack power from a qualifying class, the target takes ongoing 5 fire damage (save ends) in addition to the attack's normal effects. If the attack already causes ongoing fire damage, increase it by 5 instead.</benefit>
       <benefit>This ongoing damage increases to 10 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Corellon's Blessing of Carrying Winds</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Paladin</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>longsword</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Weapon Specialization</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class" combine="or">Cleric</prereq>
+      <prereq type="class" combine=";">Paladin</prereq>
+      <prereq type="proficiency">the longsword</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Weapon Specialization</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Athletics checks.</benefit>
       <benefit>Also, once per turn when you hit an enemy with an attack power associated with this feat while using a longsword, you can move 2 squares as a free reaction.</benefit>
       <benefit>If you are immobilized or restrained, you can instead use a move action to move 2 squares, despite those conditions.</benefit>
@@ -800,32 +492,13 @@
    <feat>
       <title>Corellon's Blessing of Communal Recovery</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Bard</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>longsword</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Weapon Specialization</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">Bard</prereq>
+      <prereq type="class" combine=";">Cleric</prereq>
+      <prereq type="proficiency">the longsword</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Healing</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Weapon Specialization</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Endurance checks.</benefit>
-      <benefit>Also, when you hit an enemy with an attack power associated with this feat while using a longsword, you activate an Aura 1 (Divine, Healing) until the end of your next turn.</benefit>
+      <benefit>Also, when you hit an enemy with an attack power associated with this feat while using a longsword, you activate an Aura 1 (<key>Divine</key>, <key>Healing</key>) until the end of your next turn.</benefit>
       <benefit>Whenever you or an ally in the aura spends a healing surge, you and each ally in the aura regain 1 hit point.</benefit>
       <benefit>If you ended your turn more than 2 squares away from where you started, this becomes an Aura 2 instead.</benefit>
       <benefit>The hit points regained increase to 2 at 11th level, and to 3 at 21st level.</benefit>
@@ -835,32 +508,11 @@
    <feat>
       <title>Corellon's Blessing of Spring Blooming</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Bard</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>longsword</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Dying</group>
-      <group>Mobility</group>
-      <group>Saving Throws</group>
-      <group>Skill Enhancement</group>
-      <group>Support</group>
-      <group>Weapon Specialization</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">Bard</prereq>
+      <prereq type="class" combine=";">Cleric</prereq>
+      <prereq type="proficiency">the longsword</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Dying</group> <group>Mobility</group> <group>Saving Throws</group> <group>Skill Enhancement</group> <group>Support</group> <group>Weapon Specialization</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Heal checks.</benefit>
       <benefit>Also, when you hit with an attack power associated with this feat while using a longsword, dying allies adjacent to you gain a +5 power bonus to their next death saving throw.</benefit>
       <benefit>If you moved more than 2 squares away from where you started your turn before making the attack, the allies can roll twice and use the higher result.</benefit>
@@ -870,112 +522,52 @@
    <feat>
       <title>Corrupting Presence</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Necrotic Specialization</group>
-      <group>Support</group>
-      <group>Worship</group>
-      <benefit>When you use a divine encounter or daily attack power that has the Necrotic keyword, you also create a zone of corruption in a close burst 1. The zone lasts until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Necrotic</group> <group>Support</group> <group>Worship</group>
+      <benefit>When you use a divine encounter or daily attack power that has the <key>Necrotic</key> keyword, you also create a zone of corruption in a close burst 1. The zone lasts until the end of your next turn.</benefit>
       <benefit>Bright light in the zone is reduced to dim light.</benefit>
-      <benefit>Allies in the zone gain a +1 power bons to attack rolls with Necrotic powers.</benefit>
+      <benefit>Allies in the zone gain a +1 power bons to attack rolls with <key>Necrotic</key> powers.</benefit>
    </feat>
 
    <feat>
       <title>Dark Mantle</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;healing word&lt;/i&gt; class power, you can choose to forgo the additional dice of healing to instead grant the target resist 5 necrotic until the end of your turn.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Power Enhancement</group> <group>Worship</group>
+      <benefit>When you use your <i>healing word</i> class power, you can choose to forgo the additional dice of healing to instead grant the target resist 5 necrotic until the end of your turn.</benefit>
       <benefit>This resistance increases to 10 at 11th level, and to 20 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Darkfire Vitality</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>darkfire</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Teamwork</group>
-      <group>Temporary Hit Points</group>
-      <benefit>Whenever an ally hits an enemy that is under the effect of your &lt;i&gt;darkfire&lt;/i&gt; racial power, he or she gains temporary hit points equal to your Charisma modifier.</benefit>
+      <prereq type="ability">Charisma<value>15</value></prereq>
+      <prereq type="race">Drow</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">darkfire</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Teamwork</group> <group>Temporary Hit Points</group>
+      <benefit>Whenever an ally hits an enemy that is under the effect of your <i>darkfire</i> racial power, he or she gains temporary hit points equal to your Charisma modifier.</benefit>
       <benefit>These temporary hit points increase to 4 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Dazing Rebuke</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>turn undead</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Power Enhancement</group>
-      <group>Undead-hunting</group>
-      <benefit>Whenever you hit an undead creature with your &lt;i&gt;turn undead&lt;/i&gt; Channel Divinity power, you can choose to make the target dazed instead of immobilized.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">turn undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Condition Infliction</group> <group>Power Enhancement</group> <group>Undead-hunting</group>
+      <benefit>Whenever you hit an undead creature with your <i>turn undead</i> Channel Divinity power, you can choose to make the target dazed instead of immobilized.</benefit>
    </feat>
 
    <feat>
       <title>Death Ward</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Support</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Resistance</group> <group>Support</group>
       <benefit>When you use a Channel Divinity power on your turn, you and each ally within 5 squares of you gain resist necrotic equal to 5 + your Wisdom modifier until the start of your next turn.</benefit>
       <benefit>Starting at 21st level, you and each ally within 10 squares gains the benefit.</benefit>
       <benefit>The resistance increases to 8 + your Wisdom modifier at 21st level.</benefit>
@@ -984,73 +576,37 @@
    <feat>
       <title>Deepstone Blessing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Svirfneblin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Temporary Hit Points</group>
-      <benefit>When you use your &lt;i&gt;healing word&lt;/i&gt; class power, the target also gains temporary hit points equal to your Constitution modifier.</benefit>
+      <prereq type="race">Svirfneblin</prereq>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Temporary Hit Points</group>
+      <benefit>When you use your <i>healing word</i> class power, the target also gains temporary hit points equal to your Constitution modifier.</benefit>
       <benefit>These temporary hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Defensive Grace</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healer's mercy</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Triggered</group>
-      <benefit>When you use your &lt;i&gt;healer's mercy&lt;/i&gt; Channel Divinity power, you gain a power bonus to all defenses equal to your Charisma modifier until the end of your next turn.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">healer's mercy</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Defense</group> <group>Triggered</group>
+      <benefit>When you use your <i>healer's mercy</i> Channel Divinity power, you gain a power bonus to all defenses equal to your Charisma modifier until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Defensive Healing Word</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <benefit>When you use your &lt;i&gt;healing word&lt;/i&gt; class power, the target also gains a bonus to all defenses against the next attack made against him or her before the end of your next turn. The bonus equals your Charisma modifier.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Defense</group> <group>Power Enhancement</group>
+      <benefit>When you use your <i>healing word</i> class power, the target also gains a bonus to all defenses against the next attack made against him or her before the end of your next turn. The bonus equals your Charisma modifier.</benefit>
    </feat>
 
    <feat>
       <title>Demonbane</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Demon-hunting</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Demon-hunting</group>
       <benefit>When you use a divine power that normally targets undead, you can also target creatures of the elemental origin.</benefit>
       <benefit>Also, if a divine power you use has special effects against undead creatures, you can also apply those against demons.</benefit>
    </feat>
@@ -1058,12 +614,8 @@
    <feat>
       <title>Devilbane</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Devil-hunting</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Devil-hunting</group>
       <benefit>When you use a divine power that normally targets undead, you can also target creatures of the immortal origin.</benefit>
       <benefit>Also, if a divine power you use has special effects against undead creatures, you can also apply those against devils.</benefit>
    </feat>
@@ -1071,50 +623,21 @@
    <feat>
       <title>Devout Protector Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>holy symbols</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Defender</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Implement Specialization</group>
-      <group>Support</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="proficiency" combine=";">holy symbols</prereq>
+      <prereq type="role" combine="or">Defender</prereq>
+      <prereq type="role">Leader</prereq>
+      <group>Class</group> <group>Defense</group> <group>Implement Specialization</group> <group>Support</group>
       <benefit>When you use a divine power with a holy symbol you are proficient with, until the end of your next turn allies gain a +1 bonus to AC while within 5 squares of you.</benefit>
    </feat>
 
    <feat>
       <title>Divine Approval</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Human</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
+      <prereq type="race">Human</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Racial</group> <group>Saving Throws</group>
       <benefit>When you use a Channel Divinity power, you can also make a saving throw against an effect that a save can end before resolving that power.</benefit>
       <benefit>Starting at 21st level, if you are not affected by an effect that a save can end, you can make a saving throw to end any one condition on you, even if that condition cannot normally be ended by a save.</benefit>
    </feat>
@@ -1122,92 +645,40 @@
    <feat>
       <title>Divine Boon</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine fortune</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Radiant Specialization</group>
-      <group>Undead-hunting</group>
-      <benefit>Whenever you hit an undead creature with an attack for which you gained a bonus from your &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power, your attack deals an extra 5 radiant damage and gains the Radiant keyword.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">divine fortune</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Radiant</group> <group>Undead-hunting</group>
+      <benefit>Whenever you hit an undead creature with an attack for which you gained a bonus from your <i>divine fortune</i> Channel Divinity power, your attack deals an extra 5 radiant damage and gains the <key>Radiant</key> keyword.</benefit>
       <benefit>This extra damage increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Divine Cleansing</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>turn undead</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <group>Undead-hunting</group>
-      <benefit>When you deal damage to at least one undead with your &lt;i&gt;turn undead&lt;/i&gt; Channel Divinity power, each ally in the power's burst can make a saving throw to end one effect on him or her that a save can end.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">turn undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Saving Throws</group> <group>Support</group> <group>Undead-hunting</group>
+      <benefit>When you deal damage to at least one undead with your <i>turn undead</i> Channel Divinity power, each ally in the power's burst can make a saving throw to end one effect on him or her that a save can end.</benefit>
    </feat>
 
    <feat>
       <title>Divine Connection</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>memory of a thousand lifetimes</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <benefit>When you use your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power to enhance a Religion check, or to enhance an attack roll of a divine power, you add +1 to the result.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="power" kind="racial">memory of a thousand lifetimes</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Skill Enhancement</group>
+      <benefit>When you use your <i>memory of a thousand lifetimes</i> racial power to enhance a Religion check, or to enhance an attack roll of a divine power, you add +1 to the result.</benefit>
    </feat>
 
    <feat>
       <title>Divine Fate</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Skill Enhancement</group>
-      <group>Support</group>
-      <benefit>You gain the &lt;i&gt;divine fate&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="race">Revenant</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Repertoire</group> <group>Racial</group> <group>Saving Throws</group> <group>Skill Enhancement</group> <group>Support</group>
+      <benefit>You gain the <i>divine fate</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Divine Fate</title>
@@ -1239,12 +710,8 @@
    <feat>
       <title>Divine Health</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group>
       <benefit>You gain resist poison equal to one-half your level + your Wisdom modifier.</benefit>
       <benefit>Also, you can't become infected by any disease of level 30 or lower.</benefit>
    </feat>
@@ -1252,30 +719,17 @@
    <feat>
       <title>Divine Mastery</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Action Point</group>
-      <group>Class</group>
-      <group>Power Recovery</group>
+      <prereq type="class">any divine</prereq>
+      <group>Action Point</group> <group>Class</group> <group>Power Recovery</group>
       <benefit>When you spend an action point, in addition to other effects of that action point, you also regain the use of a divine encounter power you have used during this encounter.</benefit>
    </feat>
 
    <feat>
       <title>Divine Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class Combination</group> <group>Healing Surge</group>
       <benefit>Once per encounter, when you hit at least one enemy with a divine encounter attack, you gain a healing surge.</benefit>
       <benefit>Once per encounter, when you use a divine power that allows a target to spend a healing surge to regain hit points, the target can choose to instead spend a healing surge to allow you to regain a healing surge.</benefit>
       <benefit>Also, you lose the vulnerable radiant granted by your Child of the Night class feature, and you do not take damage from direct sunlight.</benefit>
@@ -1284,69 +738,31 @@
    <feat>
       <title>Domain Synergy</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Divine Domain</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Triggered</group>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <prereq type="feature">Divine Domain</prereq>
+      <group>Attack Bonus</group> <group>Channel Divinity</group> <group>Class</group> <group>Triggered</group>
       <benefit>When you the Channel Divinity power associated with a Divine Domain, you gain a +2 bonus to attack rolls with the at-will attack power associated with that Domain until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Draconic Healing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dragonborn Fury</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you are bloodied, the Healing power you gained as a feature of your Leader class (&lt;i&gt;healing word&lt;/i&gt;, &lt;i&gt;healing infusion&lt;/i&gt;, &lt;i&gt;majestic word&lt;/i&gt;, the Draw Inspiration action of &lt;i&gt;warlord's aura&lt;/i&gt;, etc.) heals additional hit points equal to your Constitution modifier.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="trait">Dragonborn Fury</prereq>
+      <prereq type="role">Leader</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Healing</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you are bloodied, the <key>Healing</key> power you gained as a feature of your Leader class (<i>healing word</i>, <i>healing infusion</i>, <i>majestic word</i>, <i>draw inspiration</i>, etc.) heals additional hit points equal to your Constitution modifier.</benefit>
       <benefit>These additional hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Draconic Majesty</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Defense Penalty</group>
-      <group>Racial</group>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Bloodied Enemy</group> <group>Channel Divinity</group> <group>Class</group> <group>Defense Penalty</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power, after the power has been resolved, bloodied enemies within 5 squares of you take a -2 penalty to all defenses until the end of your next turn.</benefit>
       <benefit>Starting at 21st level,  you can choose whether to apply the penalty before or after resolving your Channel Divinity power.</benefit>
    </feat>
@@ -1354,12 +770,8 @@
    <feat>
       <title>Dragonbane</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Dragon-hunting</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Dragon-hunting</group>
       <benefit>When you use a divine power that normally targets undead, you can also target dragons.</benefit>
       <benefit>Also, if a divine power you use has special effects against undead creatures, you can also apply those against dragons.</benefit>
    </feat>
@@ -1367,91 +779,42 @@
    <feat>
       <title>Dwarf Battle Priest</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Temporary Hit Points</group>
-      <benefit>When you use your &lt;i&gt;healing word&lt;/i&gt; class power on an ally, you gain temporary hit points equal to your Constitution modifier.</benefit>
+      <prereq type="ability">Constitution<value>13</value></prereq>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Temporary Hit Points</group>
+      <benefit>When you use your <i>healing word</i> class power on an ally, you gain temporary hit points equal to your Constitution modifier.</benefit>
       <benefit>These temporary hit points increase to 4 + your Constitution modifier at 11th level, and to 8 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Echo of Letherna</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Necrotic Specialization</group>
-      <group>Worship</group>
-      <benefit>Your divine powers that deal radiant damage instead deal necrotic and radiant damage, and gain the Necrotic keyword.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Necrotic</group> <group>Worship</group>
+      <benefit>Your divine powers that deal radiant damage instead deal necrotic and radiant damage, and gain the <key>Necrotic</key> keyword.</benefit>
    </feat>
 
    <feat>
       <title>Elemental Blessing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Genasi</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Elemental Manifestation</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Temporary Hit Points</group>
-      <group>Triggered</group>
-      <benefit>When you use the racial power granted by your Elemental Manifestation racial trait, you or one ally within 5 squares of you gains temporary hit points equal to your Strength modifier or your Constitution modifier.</benefit>
-      <benefit>These temporary hit points increase to 4 + your Strength modifier or your Constitution modifier at 11th level, and to 8 + your Strength modifier or your Constitution modifier at 21st level.</benefit>
+      <prereq type="race">Genasi</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="trait">Elemental Manifestation</prereq>
+      <group>Class</group> <group>Racial</group> <group>Support</group> <group>Temporary Hit Points</group> <group>Triggered</group>
+      <benefit>When you use the racial power granted by your Elemental Manifestation racial trait, you or one ally within 5 squares of you gains temporary hit points equal to your [Strength or Constitution] modifier.</benefit>
+      <benefit>These temporary hit points increase to 4 + your [Strength or Constitution] modifier at 11th level, and to 8 + your [Strength or Constitution] modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Elemental Comrades</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Genasi</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Elemental Manifestation</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
+      <prereq type="race">Genasi</prereq>
+      <prereq type="role">Leader</prereq>
+      <prereq type="trait">Elemental Manifestation</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Racial</group> <group>Saving Throws</group>
       <benefit>Allies that are adjacent to you gain any resistances or bonuses to saving throws that you have because of your Elemental Manifestation racial trait.</benefit>
       <benefit>If your Elemental Manifestation gives you the ability to breath underwater, you can share this ability as a minor action with anyone you touch. You must remain touching the recipient, and must use a minor action to sustain the effect each round.</benefit>
    </feat>
@@ -1459,120 +822,56 @@
    <feat>
       <title>Epic Turning</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>turn undead</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Undead-hunting</group>
-      <benefit>When you use your &lt;i&gt;turn undead&lt;/i&gt; Channel Divinity power, you can increase the size of the burst by 2.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">turn undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Undead-hunting</group>
+      <benefit>When you use your <i>turn undead</i> Channel Divinity power, you can increase the size of the burst by 2.</benefit>
       <benefit>Also, you push each target half the distance on a miss.</benefit>
    </feat>
 
    <feat>
       <title>Extended Healing Word</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <benefit>The burst of your &lt;i&gt;healing word&lt;/i&gt; class power increases by 5.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group>
+      <benefit>The burst of your <i>healing word</i> class power increases by 5.</benefit>
    </feat>
 
    <feat>
       <title>Eye of Judgement</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Skill Enhancement</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Skill Enhancement</group>
       <benefit>Whenever you make an Insight check, you can roll twice and use either result.</benefit>
    </feat>
 
    <feat>
       <title>Fate's Warning</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine fortune</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Triggered</group>
-      <benefit>Whenever you hit with an attack or succeed on a saving throw benefiting from your the &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power, you also gain a +2 bonus to all defenses until the end of your next turn.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">divine fortune</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Defense</group> <group>Triggered</group>
+      <benefit>Whenever you hit with an attack or succeed on a saving throw benefiting from your the <i>divine fortune</i> Channel Divinity power, you also gain a +2 bonus to all defenses until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Feyborn Fortune</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Gnome</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine fortune</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power, you also grant the bonus to an ally within 5 squares of you.</benefit>
+      <prereq type="race">Gnome</prereq>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">divine fortune</prereq>
+      <group>Attack Bonus</group> <group>Channel Divinity</group> <group>Class</group> <group>Racial</group> <group>Support</group>
+      <benefit>When you use your <i>divine fortune</i> Channel Divinity power, you also grant the bonus to an ally within 5 squares of you.</benefit>
    </feat>
 
    <feat>
       <title>Fickle Servant</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Changeling</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>doppelganger</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
+      <prereq type="race">Changeling</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Racial</group> <group>Skill Enhancement</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, you can select feats for any domain, not just those for domains associated with your deity.</benefit>
    </feat>
@@ -1580,57 +879,27 @@
    <feat>
       <title>Fires of Heaven</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Fire Specialization</group>
-      <group>Ongoing Damage</group>
-      <group>Radiant Specialization</group>
-      <benefit>Whenever one of your divine attack powers deals ongoing radiant damage, the ongoing damage increases by 5 and becomes fire and radiant. The power gains the Fire keyword.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Fire</group> <group>Ongoing Damage</group> <group>Radiant</group>
+      <benefit>Whenever one of your divine attack powers deals ongoing radiant damage, the ongoing damage increases by 5 and becomes fire and radiant. The power gains the <key>Fire</key> keyword.</benefit>
    </feat>
 
    <feat>
       <title>Fortifying Word</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <group>Saving Throws</group>
-      <benefit>The target of your &lt;i&gt;healing word&lt;/i&gt; class power also gains a +2 bonus to Fortitude, and a +5 bonus to saving throws against Poison. These bonuses last until the end of your next turn.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Defense</group> <group>Power Enhancement</group> <group>Saving Throws</group>
+      <benefit>The target of your <i>healing word</i> class power also gains a +2 bonus to Fortitude, and a +5 bonus to saving throws against <key>Poison</key> effects. These bonuses last until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Furious Devotion</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-orc</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Triggered</group>
-      <group>Racial</group>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Triggered</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power, you gain a +2 bonus to damage rolls with divine attack powers until the end of your next turn.</benefit>
       <benefit>This bonus to damage rolls increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
@@ -1638,122 +907,57 @@
    <feat>
       <title>Gambler's Word</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with the Luck domain</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Power Recovery</group>
-      <benefit>Once per encounter, when you score a critical hit, you gain an additional use of your &lt;i&gt;healing word&lt;/i&gt; class power during this encounter.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <prereq type="deity">a deity with the Luck domain</prereq>
+      <group>Class</group> <group>Critical</group> <group>Power Recovery</group>
+      <benefit>Once per encounter, when you score a critical hit, you gain an additional use of your <i>healing word</i> class power during this encounter.</benefit>
    </feat>
 
    <feat>
       <title>Glorious Channeler</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group>
       <benefit>You can use two Channel Divinity powers in an encounter, though you cannot use the same power twice.</benefit>
    </feat>
 
    <feat>
       <title>Grave Fortune</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine fortune</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Necrotic Specialization</group>
-      <group>Power Enhancement</group>
-      <benefit>When you hit with an attack benefiting from your &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power, your attack deals extra necrotic damage equal to your Constitution modifier or Dexterity modifier.</benefit>
-      <benefit>This bonus damage increases to 3 + your Constitution modifier or Dexterity modifier at 11th level, and to 6 + your Constitution modifier or Dexterity modifier at 21st level.</benefit>
+      <prereq type="race">Revenant</prereq>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">divine fortune</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Necrotic</group> <group>Power Enhancement</group>
+      <benefit>When you hit with an attack benefiting from your <i>divine fortune</i> Channel Divinity power, your attack deals extra necrotic damage equal to your [Constitution or Dexterity] modifier.</benefit>
+      <benefit>This bonus damage increases to 3 + your [Constitution or Dexterity] modifier at 11th level, and to 6 + your [Constitution or Dexterity] modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Greater Divine Fortune</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine fortune</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Saving Throws</group>
-      <benefit>The bonus granted by your &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power increases to +3.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">divine fortune</prereq>
+      <group>Attack Bonus</group> <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Saving Throws</group>
+      <benefit>The bonus granted by your <i>divine fortune</i> Channel Divinity power increases to +3.</benefit>
    </feat>
 
    <feat>
       <title>Greater Turning</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>turn undead</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Mobility Hindrance</group>
-      <group>Power Enhancement</group>
-      <group>Undead-hunting</group>
-      <benefit>When you miss a target with your &lt;i&gt;turn undead&lt;/i&gt; Channel Divinity power, until the end of your next turn, the target must pay an additional square of movement for each square it moves closer to you.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">turn undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Mobility Hindrance</group> <group>Power Enhancement</group> <group>Undead-hunting</group>
+      <benefit>When you miss a target with your <i>turn undead</i> Channel Divinity power, until the end of your next turn, the target must pay an additional square of movement for each square it moves closer to you.</benefit>
    </feat>
 
    <feat>
       <title>Group Vigor</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Diplomacy</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Healing Surge</group>
-      <group>Support</group>
-      <group>Triggered</group>
+      <prereq type="role">Leader</prereq>
+      <prereq type="skill">Diplomacy</prereq>
+      <group>Class</group> <group>Healing</group> <group>Healing Surge</group> <group>Support</group> <group>Triggered</group>
       <benefit>When an ally within 10 squares of you that can see or hear you spends a healing surge to regain hit points, he or she regains 1 additional hit point for each healing surge spent.</benefit>
       <benefit>The additional hit points regained increase to 2 at 21st level.</benefit>
    </feat>
@@ -1761,18 +965,9 @@
    <feat>
       <title>Harbinger of Recovery</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Heal</name>
-      </prereq>
-      <group>Class</group>
-      <group>Dying</group>
-      <group>Skill Enhancement</group>
-      <group>Support</group>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="skill">Heal</prereq>
+      <group>Class</group> <group>Dying</group> <group>Skill Enhancement</group> <group>Support</group>
       <benefit>You gain a +2 bonus to Heal checks made to aid others.</benefit>
       <benefit>Also, allies within 5 squares of you have a +5 feat bonus to death saving throws.</benefit>
    </feat>
@@ -1780,293 +975,137 @@
    <feat>
       <title>Hasten the Rot</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Mobility Hindrance</group>
-      <group>Necrotic Specialization</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <group>Class</group> <group>Condition Infliction</group> <group>Mobility Hindrance</group> <group>Necrotic</group> <group>Undead-hunting</group> <group>Worship</group>
       <benefit>When you hit an undead enemy with a Necrotic divine encounter attack or a Necrotic divine daily attack, that undead becomes slowed until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Healer's Symbol</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>holy symbols</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Healing Surge</group>
-      <group>Implement Specialization</group>
-      <benefit>When you let a creature spend a healing surge to regain hit points with any of your cleric Healing powers, you add your holy symbol's enhancement bonus (minimum +1) to the number of hit points regained.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="proficiency">holy symbols</prereq>
+      <group>Class</group> <group>Healing</group> <group>Healing Surge</group> <group>Implement Specialization</group>
+      <benefit>When you let a creature spend a healing surge to regain hit points with any of your cleric <key>Healing</key> powers, you add your holy symbol's enhancement bonus (minimum +1) to the number of hit points regained.</benefit>
    </feat>
 
    <feat>
       <title>Hidden Channeling</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Gnome</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Concealment</group>
-      <group>Racial</group>
+      <prereq type="race">Gnome</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Concealment</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power, you gain concealment until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Holy Dilettante</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dilettante</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Radiant Specialization</group>
-      <benefit>Once per encounter, when you use the power you gained through your Dilettante racial trait, you can choose to deal radiant damage with that power instead of its normal damage type. If you do, the power gains the Radiant keyword and loses any damage type keywords it normally has.</benefit>
+      <prereq type="race">Half-elf</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="trait">Dilettante</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Radiant</group>
+      <benefit>Once per encounter, when you use the power you gained through your Dilettante racial trait, you can choose to deal radiant damage with that power instead of its normal damage type. If you do, the power gains the <key>Radiant</key> keyword and loses any damage type keywords it normally has.</benefit>
    </feat>
 
    <feat>
       <title>Holy Resolve</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Warforged</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>warforged resolve</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;warforged resolve&lt;/i&gt; racial power, until the end of your next turn, you can add your Strength modifier to the number of hit points regained by target of your cleric Healing powers.</benefit>
+      <prereq type="race">Warforged</prereq>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="racial">warforged resolve</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>warforged resolve</i> racial power, until the end of your next turn, you can add your Strength modifier to the number of hit points regained by target of your cleric <key>Healing</key> powers.</benefit>
       <benefit>This additional healing increases to 2 + your Strength modifier at 11th level, and to 4 + your Strength modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Holy Savagery</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shifter</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Bloodied</group>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Racial</group>
+      <prereq type="race">Shifter</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Attack Bonus</group> <group>Bloodied</group> <group>Channel Divinity</group> <group>Class</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power while you are bloodied, you gain a +1 bonus to melee attack rolls until the end of your next turn. If the Channel Divinity power you use has melee attack rolls, you gain the bonus on that power as well.</benefit>
    </feat>
 
    <feat>
       <title>Holy Speech</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>language</type>
-         <name>Supernal</name>
-      </prereq>
-      <group>Class</group>
-      <group>Languages</group>
-      <group>Skill Enhancement</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="language">Supernal</prereq>
+      <group>Class</group> <group>Languages</group> <group>Skill Enhancement</group>
       <benefit>The first time during a skill challenge that you succeed in a Bluff check, a Diplomacy check, or an Intimidate check, you gain an extra success towards completing the skill challenge.</benefit>
    </feat>
 
    <feat>
       <title>Holy Symbol Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Paladin</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>13</value>
-      </prereq>
-      <group>Defense</group>
-      <group>Implement Specialization</group>
+      <prereq type="hidden">Cleric</prereq>
+      <prereq type="hidden">Paladin</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="ability" combine="or">Wisdom<value>13</value></prereq>
+      <prereq type="ability">Charisma<value>13</value></prereq>
+      <group>Defense</group> <group>Implement Specialization</group>
       <benefit>When you make an Implement attack using a holy symbol you have proficiency with, the enemies you target with that attack cannot gain combat advantage against you until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Holy Symbol Mastery</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Paladin</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>19</value>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>19</value>
-      </prereq>
-      <group>Critical</group>
-      <group>Implement Specialization</group>
+      <prereq type="hidden">Cleric</prereq>
+      <prereq type="hidden">Paladin</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="ability">Wisdom<value>19</value></prereq>
+      <prereq type="ability">Charisma<value>19</value></prereq>
+      <group>Critical</group> <group>Implement Specialization</group>
       <benefit>When you make an Implement attack using a holy symbol you have proficiency with, you can score a critical hit on a natural roll of 19 or 20.</benefit>
    </feat>
 
    <feat>
       <title>Icon of Hope</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Class</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
+      <prereq type="class">any divine</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Saving Throws</group> <group>Support</group>
       <benefit>Bloodied allies within 10 squares of you gain a +1 bonus to saving throws.</benefit>
    </feat>
 
    <feat>
       <title>Icon of Purity</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group>
       <benefit>You resist necrotic equal to your Wisdom modifier + one-half your level.</benefit>
    </feat>
 
    <feat>
       <title>Infernal Blessing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Tiefling</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>infernal wrath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;infernal wrath&lt;/i&gt; racial power, one ally adjacent to you regains hit points equal to your Charisma modifier and gains a +1 power bonus to his or her first attack roll against the target of the power before the end of his or her next turn. This is a Divine, Healing effect.</benefit>
+      <prereq type="race">Tiefling</prereq>
+      <prereq type="power" kind="racial">infernal wrath</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Support</group>
+      <benefit>When you use your <i>infernal wrath</i> racial power, one ally adjacent to you regains hit points equal to your Charisma modifier and gains a +1 power bonus to his or her first attack roll against the target of the power before the end of his or her next turn. This is a <key>Divine</key>, <key>Healing</key> effect.</benefit>
       <benefit>The number of hit points regained increases to 3 + your Charisma modifier at 11th level, and to 6 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Invigorated Healing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-orc</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Half-Orc Resilience</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Class</group>
-      <group>Healing</group>
-      <benefit>When you are first bloodied in an encounter, until the end of your next turn, whenever you use a Healing power, the targets of that power regain additional hit points. The additional hit points regained are equal the temporary hit points you gained from the Half-Orc Resilience racial trait if the target spends a healing surge to regain hit points, or half this amount if not.</benefit>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="trait">Half-Orc Resilience</prereq>
+      <prereq type="role">Leader</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Healing</group>
+      <benefit>When you are first bloodied in an encounter, until the end of your next turn, whenever you use a <key>Healing</key> power, the targets of that power regain additional hit points. The additional hit points regained are equal the temporary hit points you gained from the Half-Orc Resilience racial trait if the target spends a healing surge to regain hit points, or half this amount if not.</benefit>
    </feat>
 
    <feat>
       <title>Invigorating Critical</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Healing</group>
-      <group>Support</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Critical</group> <group>Healing</group> <group>Support</group>
       <benefit>The first in an encounter that you score a critical hit with a divine attack power, an ally adjacent to either you or the target regains hit points equal to 5 + your Wisdom modifier.</benefit>
       <benefit>This hit points regained increase to 10 + your Wisdom modifier at 21st level.</benefit>
    </feat>
@@ -2074,53 +1113,28 @@
    <feat>
       <title>Justice Hammer</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Critical</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Condition Infliction</group> <group>Critical</group>
       <benefit>When you score a critical hit with a divine at-will attack, the target is dazed until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Kord's Resilience</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Goliath</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>stone's endurance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>While your &lt;i&gt;stone's endurance&lt;/i&gt; racial power is active, allies adjacent to you have the same resistance that the power grants you.</benefit>
+      <prereq type="race">Goliath</prereq>
+      <prereq type="power" kind="racial">stone's endurance</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>While your <i>stone's endurance</i> racial power is active, allies adjacent to you have the same resistance that the power grants you.</benefit>
    </feat>
 
    <feat>
       <title>Light of Conviction</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Illumination</group>
-      <group>Power Repertoire</group>
-      <group>Radiant Specialization</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Illumination</group> <group>Power Repertoire</group> <group>Radiant</group>
       <benefit>As a minor action, you can shed bright light out to 4 squares, and dim light out to 4 squares further. The light ends 24 hours after you die, or if you end it as a free action on your turn.</benefit>
-      <benefit>Also, you gain the &lt;i&gt;punitive radiance&lt;/i&gt; attack power. This power counts as a power of your divine class.</benefit>
+      <benefit>Also, you gain the <i>punitive radiance</i> attack power. This power counts as a power of your divine class.</benefit>
 
       <power>
          <title>Punitive Radiance</title>
@@ -2159,22 +1173,10 @@
    <feat>
       <title>Majestic Presence</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Astral Resistance</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Racial</group>
-      <group>Support</group>
+      <prereq type="race">Deva</prereq>
+      <prereq type="trait">Astral Resistance</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Racial</group> <group>Support</group>
       <benefit>Allies adjacent to you gain resist 3 necrotic, 3 radiant.</benefit>
       <benefit>These resists increase to 5 at 11th level, and to 10 at 21st level.</benefit>
    </feat>
@@ -2182,101 +1184,47 @@
    <feat>
       <title>Master of Secrets</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <group>Class</group> <group>Power Repertoire</group> <group>Worship</group>
       <benefit>You can learn skill powers associated with Arcana, Dungeoneering, History, Nature, and Religion as if you were trained in those skills.</benefit>
    </feat>
 
    <feat>
       <title>Merciful Power</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healer's mercy</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <benefit>Each target of your &lt;i&gt;healer's mercy&lt;/i&gt; class power can make a saving throw against one effect that a save can end.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">healer's mercy</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Saving Throws</group> <group>Support</group>
+      <benefit>Each target of your <i>healer's mercy</i> class power can make a saving throw against one effect that a save can end.</benefit>
    </feat>
 
    <feat>
       <title>Merciful Shift</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healer's mercy</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Support</group>
-      <benefit>Each target of your &lt;i&gt;healer's mercy&lt;/i&gt; class power can shift 1 square as a free reaction.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">healer's mercy</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Support</group>
+      <benefit>Each target of your <i>healer's mercy</i> class power can shift 1 square as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Mighty Crusader Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>holy symbols</name>
-      </prereq>
-      <group>Defense</group>
-      <group>Implement Specialization</group>
-      <group>Weapon Specialization</group>
-      <benefit>While you wield a two-handed melee weapon that you have proficiency with, you gain a +4 bonus to all defenses against &lt;i&gt;reactive strikes&lt;/i&gt; triggered for making a ranged or area attack using a holy symbol you have proficiency with.</benefit>
+      <prereq type="hidden">any divine</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="proficiency">holy symbols</prereq>
+      <group>Defense</group> <group>Implement Specialization</group> <group>Weapon Specialization</group>
+      <benefit>While you wield a two-handed melee weapon that you have proficiency with, you gain a +4 bonus to all defenses against <i>reactive strikes</i> triggered for making a ranged or area attack using a holy symbol you have proficiency with.</benefit>
    </feat>
 
    <feat>
       <title>Moonbow Dedicate</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Sehanine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Implement Specialization</group>
-      <group>Proficiency Gain</group>
-      <group>Weapon Specialization</group>
+      <prereq type="class" combine="or">any arcane</prereq>
+      <prereq type="class" combine=";">any divine</prereq>
+      <prereq type="deity">Sehanine</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Implement Specialization</group> <group>Proficiency Gain</group> <group>Weapon Specialization</group>
       <benefit>You gain proficiency with the shortbow as both a weapon and an implement.</benefit>
       <benefit>Also, you gain a +1 feat bonus to Weapon damage rolls and Implement damage rolls you make while wielding a shortbow.</benefit>
       <benefit>This bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
@@ -2285,57 +1233,29 @@
    <feat>
       <title>Moonbow Prelate</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Sehanine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Implement Specialization</group>
-      <group>Power Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">any arcane</prereq>
+      <prereq type="class" combine=";">any divine</prereq>
+      <prereq type="deity">Sehanine</prereq>
+      <group>Class</group> <group>Implement Specialization</group> <group>Power Enhancement</group> <group>Worship</group>
       <benefit>When you use a shortbow as an implement for a ranged divine power, area divine power, ranged arcane power, or area arcane power, you can extend the power's range by 5 squares.</benefit>
    </feat>
 
    <feat>
       <title>Nimbus of Light</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Radiant Specialization</group>
-      <group>Support</group>
-      <benefit>When you use a divine encounter power or a divine daily power with the Radiant keyword, you can choose to create a zone of  light in a close burst 1 until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Radiant</group> <group>Support</group>
+      <benefit>When you use a divine encounter power or a divine daily power with the <key>Radiant</key> keyword, you can choose to create a zone of light in a close burst 1 until the end of your next turn.</benefit>
       <benefit>The zone is brightly lit, and squares adjacent to it are dimly lit. Allies in the zone gain a +1 power bonus to attack rolls with Radiant powers.</benefit>
    </feat>
 
    <feat>
       <title>Pacifist Healer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <benefit>When you use your &lt;i&gt;healing word&lt;/i&gt; class power or another divine Healing power that allows a target to spend a healing surge to regain hit points, the target regains additional hit points equal to 1d6 + your Charisma modifier.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Healing</group>
+      <benefit>When you use your <i>healing word</i> class power or another divine <key>Healing</key> power that allows a target to spend a healing surge to regain hit points, the target regains additional hit points equal to 1d6 + your Charisma modifier.</benefit>
       <benefit>These additional hit points regained increase to 2d6 + your charisma modifier at 11th level, and to 3d6 + your Charisma modifier at 21st level.</benefit>
       <benefit>Also, whenever you deal damage to a bloodied enemy, use forced movement to move a bloodied enemy into damaging terrain, or prevent a bloodied enemy from leaving damaging terrain, you are stunned until the end of your next turn. Your DM might deem other actions against bloodied enemies as stunning you as well.</benefit>
    </feat>
@@ -2343,13 +1263,8 @@
    <feat>
       <title>Pacifist's Reward</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <group>Class</group>
-      <group>Temporary Hit Points</group>
-      <group>Triggered</group>
+      <prereq type="class">Cleric</prereq>
+      <group>Class</group> <group>Temporary Hit Points</group> <group>Triggered</group>
       <benefit>At the end of your turn, if you hit with an attack and have dealt no damage during the turn, you gain 3 temporary hit points.</benefit>
       <benefit>These temporary hit points increase to 6 at 11th level, and to 10 at 21st level.</benefit>
    </feat>
@@ -2357,116 +1272,74 @@
    <feat>
       <title>Pervasive Light</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Bonus</group>
       <benefit>When you hit a target that has vulnerable radiant with a divine attack that does not deal radiant damage, you still trigger that vulnerability.</benefit>
+   </feat>
+
+   <feat>
+      <title>Piercing Decay</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Necrotic</group>
+      <benefit>Your divine Necrotic powers ignore an amount of resist necrotic. The amount equals one-half the ability modifier of the ability you use to make the attack.</benefit>
+      <benefit>The amount you ignore increases by 5 at 11th level, and by 10 at 21st level.</benefit>
+      <benefit>In addition, you treat a creature that is immune to necrotic as instead having resist necrotic equal to 15 + one-half its level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Piercing Radiance</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Radiant</group>
+      <benefit>Your divine Radiant powers ignore an amount of resist radiant. The amount equals one-half the ability modifier of the ability you use to make the attack.</benefit>
+      <benefit>The amount you ignore increases by 5 at 11th level, and by 10 at 21st level.</benefit>
+      <benefit>In addition, you treat a creature that is immune to radiant as instead having resist radiant equal to 15 + one-half its level.</benefit>
    </feat>
 
    <feat>
       <title>Protector's Atonement</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with the Protection domain</name>
-      </prereq>
-      <group>Class</group>
-      <group>Support</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">a deity with the Protection domain</prereq>
+      <group>Class</group> <group>Support</group> <group>Worship</group>
       <benefit>Whenever an attack you make would damage an ally, you can choose to take the damage instead. You have resist 5 all against damage taken this way, though your other resists or immunities do not apply. You can choose to take the damage even when you are dominated.</benefit>
       <benefit>The resist against this damage increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
 
    <feat>
-      <title>Psionic Vampire</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
-      <group>Psionics</group>
-      <benefit>Once per encounter, when you hit at least one enemy with an augmented psionic attack, you gain a healing surge.</benefit>
-      <benefit>Once per encounter, you can use a minor action to spend a healing surge to gain 2 power points. These power points expire at the end of your current turn.</benefit>
-   </feat>
-
-   <feat>
       <title>Punishing Radiance</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Damage Bonus</group>
-      <group>Radiant Specialization</group>
-      <benefit>Whenever you score a critical hit with a divine power that has the Radiant keyword, the target and each enemy within 5 squares of it gain vulnerable 5 radiant. If a creature already has vulnerable radiant, the value instead increases by 5. This lasts until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Critical</group> <group>Damage Bonus</group> <group>Radiant</group>
+      <benefit>Whenever you score a critical hit with a divine power that has the <key>Radiant</key> keyword, the target and each enemy within 5 squares of it gain vulnerable 5 radiant. If a creature already has vulnerable radiant, the value instead increases by 5. This lasts until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Pupil of the All-Father</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Moradin</name>
-      </prereq>
-      <group>Class</group>
-      <group>Equipment</group>
-      <group>Rituals</group>
-      <group>Worship</group>
-      <benefit>You have mastered the &lt;i&gt;enchant magic item&lt;/i&gt; and &lt;i&gt;make whole&lt;/i&gt; rituals, and can perform them without a ritual book.</benefit>
-      <benefit>Also, when using the &lt;i&gt;enchant magic item&lt;/i&gt; ritual to enchant weapons or armor, you count as being three levels higher than you are.</benefit>
-      <benefit>In addition, once per day, you can perform the &lt;i&gt;make whole&lt;/i&gt; ritual without expending components as long as the component cost would have been 100 gp or fewer.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Class</group> <group>Equipment</group> <group>Rituals</group> <group>Worship</group>
+      <benefit>You have mastered the <i>enchant magic item</i> and <i>make whole</i> rituals, and can perform them without a ritual book.</benefit>
+      <benefit>Also, when using the <i>enchant magic item</i> ritual to enchant weapons or armor, you count as being three levels higher than you are.</benefit>
+      <benefit>In addition, once per day, you can perform the <i>make whole</i> ritual without expending components as long as the component cost would have been 100 gp or fewer.</benefit>
    </feat>
 
    <feat>
       <title>Purifying Light</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Radiant Specialization</group>
-      <group>Undead-hunting</group>
-      <benefit>You gain a +1 bonus to attack rolls against undead with Radiant powers.</benefit>
+      <prereq type="ability">Charisma<value>15</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Radiant</group> <group>Undead-hunting</group>
+      <benefit>You gain a +1 bonus to attack rolls against undead with <key>Radiant</key> powers.</benefit>
    </feat>
 
    <feat>
       <title>Radiant Advantage</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Radiant Specialization</group>
-      <group>Support</group>
+      <prereq type="class">Cleric</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Radiant</group> <group>Support</group>
       <benefit>When you deal radiant damage to a creature that has vulnerable radiant, you can choose to not deal the additional damage.</benefit>
       <benefit>If you do, you and your allies gain combat advantage against that creature until the end of your next turn.</benefit>
    </feat>
@@ -2474,41 +1347,19 @@
    <feat>
       <title>Radiant Breath</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Radiant Specialization</group>
-      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt; racial power, you can choose to deal radiant damage rather than the normal damage dealt by the power, and replace the damage type keyword with the Radiant keyword.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">dragon breath</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Radiant</group>
+      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to deal radiant damage rather than the normal damage dealt by the power, and replace the damage type keyword with the <key>Radiant</key> keyword.</benefit>
    </feat>
 
    <feat>
       <title>Radiant Rage</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Barbarian</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Damage Bonus</group>
-      <group>Healing Surge</group>
-      <group>Radiant Specialization</group>
+      <prereq type="class">Barbarian</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class Combination</group> <group>Damage Bonus</group> <group>Healing Surge</group> <group>Radiant</group>
       <benefit>When you spend a healing surge while you are raging, you can choose to deal additional radiant damage with first melee attack you make before the end of your next turn. The additional radiant damage equals your Charisma modifier.</benefit>
       <benefit>The additional radiant damage increases to 2 + your Charisma modifier at 11th level, and to 5 + your Charisma modifier at 21st level.</benefit>
    </feat>
@@ -2516,151 +1367,74 @@
    <feat>
       <title>Radiant Vessel</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <group>Radiant Specialization</group>
-      <benefit>If you hit an enemy with a cleric attack that has the Radiant keyword, the first time you use your &lt;i&gt;healing word&lt;/i&gt; class power before the end of your next turn, the target regains an additional 1d6 hit points.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group> <group>Radiant</group>
+      <benefit>If you hit an enemy with a cleric attack that has the <key>Radiant</key> keyword, the first time you use your <i>healing word</i> class power before the end of your next turn, the target regains an additional 1d6 hit points.</benefit>
       <benefit>These additional hit points regained increase to 2d6 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Raven Queen Devotee</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Skill Enhancement</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
+      <prereq type="ability">Wisdom<value>15</value></prereq>
+      <prereq type="ability">Charisma<value>15</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Resistance</group> <group>Power Enhancement</group> <group>Skill Enhancement</group> <group>Undead-hunting</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Intimidate checks.</benefit>
       <benefit>Also, you gain the following benefits with divine at-will attacks:</benefit>
-      <benefit>&#9658; When you target an undead creature and would make the target takes a penalty to attack rolls, you can choose to instead make the target grant combat advantage for the same duration. If the penalty is only for one attack roll, the target only grants combat advantage for the first attack roll against it.</benefit>
-      <benefit>&#9658; When you would grant an ally a bonus to AC, you can choose to instead grant that ally resist necrotic for the same duration. The resist equals one-half your level + one-half the higher of your Wisdom modifier or Charisma modifier.</benefit>
+      <benefit><bullet />When you target an undead creature and would make the target takes a penalty to attack rolls, you can choose to instead make the target grant combat advantage for the same duration. If the penalty is only for one attack roll, the target only grants combat advantage for the first attack roll against it.</benefit>
+      <benefit><bullet />When you would grant an ally a bonus to AC, you can choose to instead grant that ally resist necrotic for the same duration. The resist equals one-half your level + one-half your [Wisdom or Charisma] modifier.</benefit>
    </feat>
 
    <feat>
       <title>Raven Queen's Outrage</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Forced Movement</group>
-      <group>Undead-hunting</group>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Forced Movement</group> <group>Undead-hunting</group>
       <benefit>Whenever you hit an undead creature with a divine encounter attack or a divine daily attack, you can also slide that creature 1 square as part of the hit. If the power already has forced movement, increase that forced movement by 1 square instead.</benefit>
    </feat>
 
    <feat>
       <title>Reactive Healing</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <group>Triggered</group>
-      <benefit>You can use your &lt;i&gt;healing word&lt;/i&gt; class power as an immediate reaction with the following trigger and target:</benefit>
-      <benefit>&lt;b&gt;Trigger:&lt;/b&gt; An ally within 5 squares of you drops to 0 hit points or fewer</benefit>
-      <benefit>&lt;b&gt;Target:&lt;/b&gt; &lt;i&gt;Close&lt;/i&gt; burst 5 (the triggering ally)</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group> <group>Triggered</group>
+      <benefit>You can use your <i>healing word</i> class power as an immediate reaction with the following trigger and target:</benefit>
+      <benefit name="Trigger">An ally within 5 squares of you drops to 0 hit points or fewer</benefit>
+      <benefit name="Target"><type>Close</type><range>burst 5</range><target>the triggering ally</target></benefit>
       <benefit>If you have the Supreme Healer feat, you can also target another ally that took damage from the same source.</benefit>
    </feat>
 
    <feat>
       <title>Religious Dabbler</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dilettante</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Racial</group>
+      <prereq type="race">Half-elf</prereq>
+      <prereq type="trait">Dilettante</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Power Repertoire</group> <group>Racial</group>
       <benefit>Choose a 1st-level at-will attack power from a divine class other than your own. You can use the chosen power as an encounter power instead of using the power you gained from your Dilettante racial trait.</benefit>
    </feat>
 
    <feat>
       <title>Retribution Seeker</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Bloodied</group>
-      <group>Class</group>
-      <group>Teamwork</group>
-      <benefit>You gain a +1 bonus to attack rolls with powers from your leader class against enemies adjacent to bloodied allies.</benefit>
+      <prereq type="role">Leader</prereq>
+      <group>Attack Bonus</group> <group>Bloodied</group> <group>Class</group> <group>Teamwork</group>
+      <benefit>You gain a +1 bonus to attack rolls with <i>basic attacks</i> and powers from your leader class against enemies adjacent to bloodied allies.</benefit>
    </feat>
 
    <feat>
       <title>Righteous Rage</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with the Strength or War domain</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Repertoire</group>
-      <benefit>You gain the &lt;i&gt;righteous rage&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <prereq type="deity">a deity with the Strength or War domain</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Power Repertoire</group>
+      <benefit>You gain the <i>righteous rage</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Righteous Rage</title>
@@ -2687,19 +1461,9 @@
    <feat>
       <title>Saving Grace</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <group>Triggered</group>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Saving Throws</group> <group>Support</group> <group>Triggered</group>
       <benefit>When you succeed on a saving throw, you can choose to not end the effect you saved against.</benefit>
       <benefit>If you do, choose an ally within 5 squares of you. The chosen ally can make a saving throw against an effec that a save can end, and gains a bonus to the saving throw equal to your Wisdom modifier.</benefit>
    </feat>
@@ -2707,200 +1471,266 @@
    <feat>
       <title>Shared Channeling</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>You can choose to use your personal Channel Divinity powers as &lt;i&gt;Close&lt;/i&gt; burst 5 powers instead, targeting you or an ally in the burst. If such a power has a trigger dependent on your, it can now be triggered by an ally within 5 squares of you, but the triggering ally must also be the target.</benefit>
-      <benefit>Your DM might allow this feat to extend some effects from a non-personal power to al ally in a &lt;i&gt;Close&lt;/i&gt; burst 5.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>You can choose to use your personal Channel Divinity powers as <i>Close</i> burst 5 powers instead, targeting you or an ally in the burst. If such a power has a trigger dependent on you, it can now be triggered by an ally within 5 squares of you, but the triggering ally must also be the target.</benefit>
+      <benefit>Your DM might allow this feat to extend some effects from a non-personal power to an ally in a <i>Close</i> burst 5.</benefit>
    </feat>
 
    <feat>
       <title>Shared Fortune</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine fortune</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Support</group>
-      <benefit>You can use your &lt;i&gt;divine fortune&lt;/i&gt; Channel Divinity power as a close burst 1 instead of personal power. If you do, the power targets you and each ally in the burst.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">divine fortune</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Support</group>
+      <benefit>You can use your <i>divine fortune</i> Channel Divinity power as a close burst 1 instead of personal power. If you do, the power targets you and each ally in the burst.</benefit>
    </feat>
 
    <feat>
       <title>Shared Healing</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Healing Surge</group>
-      <group>Teamwork</group>
+      <prereq type="class">Cleric</prereq>
+      <group>Class</group> <group>Healing</group> <group>Healing Surge</group> <group>Teamwork</group>
       <benefit>When you use a divine power that allows an ally to spend a healing surge, you can instead choose yourself or an ally within 5 squares of you to spend the healing surge in the original ally's stead.</benefit>
    </feat>
 
    <feat>
       <title>Shared Memories</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>memory of a thousand lifetimes</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Saving Throw</group>
-      <group>Skill Enhancement</group>
-      <group>Support</group>
-      <benefit>When an ally adjacent to you makes an attack roll, a saving throw, or a skill check, you can expend your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power as a free interrupt to add a +1d6 bonus to the triggering roll.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="power" kind="racial">memory of a thousand lifetimes</prereq>
+      <prereq type="role">Leader</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Saving Throw</group> <group>Skill Enhancement</group> <group>Support</group>
+      <benefit>When an ally adjacent to you makes an attack roll, a saving throw, or a skill check, you can expend your <i>memory of a thousand lifetimes</i> racial power as a free interrupt to add a +1d6 bonus to the triggering roll.</benefit>
    </feat>
 
    <feat>
       <title>Shared Perseverance</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Human</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Leader</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
+      <prereq type="race">Human</prereq>
+      <prereq type="role">Leader</prereq>
+      <group>Class</group> <group>Racial</group> <group>Saving Throws</group> <group>Support</group>
       <benefit>When you use a power that allows an ally to make a saving throw, that ally gains a +1 bonus to the saving throw.</benefit>
    </feat>
 
    <feat>
       <title>Shared Vitality</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Moradin</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Second Wind</group>
-      <group>Support</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt;, you can choose an ally within 5 squares of you. The chosen ally regains the hit points instead of you.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Class</group> <group>Healing</group> <group>Second Wind</group> <group>Support</group> <group>Worship</group>
+      <benefit>When you use your <i>second wind</i>, you can choose an ally within 5 squares of you. The chosen ally regains the hit points instead of you.</benefit>
    </feat>
 
    <feat>
       <title>Shield of Civilization</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>deity</type>
-         <name>Erathis</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Defender</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Battle Lore</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Mark Punishment</group>
-      <group>Support</group>
-      <benefit>While adjacent to you, allies adjacent to you gain resist 2 all against attack from enemies marked by you.</benefit>
+      <prereq type="deity" combine=";">Erathis</prereq>
+      <prereq type="role" combine="or">Defender</prereq>
+      <prereq type="class" combine="with">Cleric</prereq>
+      <prereq type="feature">Battle Lore</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Mark Punishment</group> <group>Support</group>
+      <benefit>While adjacent to you, allies have resist 2 all against attacks from enemies marked by you.</benefit>
       <benefit>This increases to resist 4 at 11th level, and to 8 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Shielding Word</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with the Protection domain</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <group>Worship</group>
-      <benefit>The target of your &lt;i&gt;healing word&lt;/i&gt; class power also gain a +2 bonus to AC and Reflex until the end of your next turn.</benefit>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <prereq type="deity">a deity with the Protection domain</prereq>
+      <group>Class</group> <group>Defense</group> <group>Power Enhancement</group> <group>Worship</group>
+      <benefit>The target of your <i>healing word</i> class power also gain a +2 bonus to AC and Reflex until the end of your next turn.</benefit>
    </feat>
 
    <feat>
+      <title>Speed of Sea and Sky</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Genasi</prereq>
+      <prereq type="role" combine=";">Leader</prereq>
+      <prereq type="power" kind="racial" combine="or">swiftcurrent</prereq>
+      <prereq type="power" kind="racial">windwalker</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>When you use your <i>swiftcurrent</i> racial power or your <i>windwalker</i> racial power, each ally within 5 squares of you gains a +2 power bonus to speed until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Spellcharged Channel</title>
+      <tier>Heroic</tier>
+      <category>Spellscar</category>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Defense Penalty</group> <group>Fire</group> <group>Necrotic</group> <group>Spellscar</group>
+      <benefit>When you use a Channel Divinity power, choose one of the following two effects:</benefit>
+      <benefit bullet="">One enemy adjacnet to you takes a -2 penalty to all defenses until the end of your next turn.</benefit>
+      <benefit bullet="">One ally adjacent to you deals 4 extra fire and necrotic damage with all attacks until the end of your next turn, or half this extra damage for multiattacks.</benefit>
+      <benefit>The extra damage increases to 6 at 11th level, and to 8 at 21st level.</benefit>
+      <benefit>If you have the Student of the Plague feat, you gain both effects.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Spirit of Cooperation</title>
+      <tier>Heroic</tier>
+      <prereq type="role">Leader</prereq>
+      <prereq type="deity">Erathis</prereq>
+      <group>Class</group> <group>Healing</group> <group>Support</group> <group>Worship</group>
+      <benefit>While adjacent to you, allies gain a +2 feat bonus to their healing surge value. If you perform no actions as part of a short rest, you can grant this bonus to your allies during that rest.</benefit>
+      <benefit>This bonus increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Staff of Knowledge</title>
+      <tier>Heroic</tier>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <group>class</group> <group>Combat Advantage</group> <group>Weapon Specialization</group>
+      <benefit>You gain combat advantage on the first divine Weapon attack you make during an encounter using a Staff you have proficiency with.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Storm's Vengeance</title>
+      <tier>Heroic</tier>
+      <prereq type="class" combine="or">any primal</prereq>
+      <prereq type="class" combine="and">any divine</prereq>
+      <prereq type="deity" combine="or">a deity of the Storm domain</prereq>
+      <prereq type="class" combine="with">Sorcerer</prereq>
+      <prereq type="feature">Storm Magic</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Dying</group> <group>Thunder</group>
+      <benefit>When an enemy reduces you to 0 hit points or fewer, it takes 10 thunder damage after the attack has been resolved.</benefit>
+      <benefit>This thunder damage increases to 20 at 11th level, and to 30 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Supreme Healer</title>
+      <tier>Epic</tier>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group>
+      <benefit>When you use your <i>healing word</i> class power, you can target you and one ally in the burst, or two allies in the burst.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Swift Destruction</title>
+      <tier>Paragon</tier>
+      <prereq type="class" combine=";">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity" combine="or">smite undead</prereq>
+      <prereq type="power" kind="Channel Divinity">turn undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Undead-hunting</group>
+      <benefit>You can use your <i>smite undead</i> or <i>turn undead</i> Channel Divinity power as a minor action instead of a standard action.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Symbol of the Soul Forger</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Class</group> <group>Implement Specialization</group> <group>Proficiency Gain</group> <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with all simple and military Hammers, Axes, and Picks.</benefit>
+      <benefit>Also, you gain proficiency as an implement with all Hammers, Axes, and Picks you have proficiency with.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unbalancing Wrath</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Tiefling</prereq>
+      <prereq type="power" kind="racial">infernal wrath</prereq>
+      <prereq type="role">Leader</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>When you use your <i>infernal wrath</i> racial power, the target grants combat advantage to your allies until the end of its next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Undead Hunter</title>
+      <tier>Heroic</tier>
+      <prereq type="ability">Constitution<value>13</value></prereq>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="skill" combine=";">Religion</prereq>
+      <prereq type="class" combine="or">any divine</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Healing Surges</group> <group>Temporary Hit Points</group> <group>Undead-hunting</group>
+      <benefit>Your number of healing surges increases by one.</benefit>
+      <benefit>Also, you gain the following benefits with martial and divine at-will melee and at-will ranged attacks against undead:</benefit>
+      <benefit bullet="">You deal an additional +2 damage.</benefit>
+      <benefit bullet="">If the attack grants temporary hit points, you increase the number of temporary hit points by your Wisdom modifier.</benefit>
+      <benefit bullet="">If the attack doesn't deal damage on a miss, you deal damage equal to one-half your Constitution modifier + the enhancement bonus of the weapon or implement you used to make the attack.</benefit>
+      <benefit>In addition, if you grant an ally a melee attack against an undead, he or she deals +2 additional damage.</benefit>
+      <benefit>Both additional damage increase to +3 at 11th level, and to +4 at 21st level.</benefit>
+      <benefit>The damage on a miss increases to your Constitution modifier + the enhancement bonus at 11th level, and to 2 + your Constitution modifier + the enhancement bonus at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Undead Ward</title>
+      <tier>Paragon</tier>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="Channel Divinity">turn undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Radiant</group> <group>Undead-hunting</group>
+      <benefit>You can choose to add the <key>Zone</key> keyword to your <i>turn undead</i> Channel Divinity power. When you do, the burst creates a zone of radiant energy until the end of your next turn.</benefit>
+      <benefit>Any undead creature that enters the zone or ends its turn in it takes radiant damage equal to you 2 + your Wisdom modifier + your implement's enhancement bonus. A creature can take this damage only once per turn.</benefit>
+      <benefit>The radiant damage increases to 5 + your Wisdom modifier + your implement's enhancement bonus at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Vengeful Shade</title>
+      <tier>Heroic</tier>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="feature">Assassin's Shrounds</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class Combination</group> <group>Radiant</group>
+      <benefit>When you invoke your shrouds when making a divine attack, you can choose to additional damage be radiant damage.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Versatile Channeler</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Repertoire</group>
+      <benefit>Choose a Channel Divinity power available to a divine class other than your own. You gain the chosen Channel Divinity power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Vitalizing Leader</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Half-elf</prereq>
+      <prereq type="role">Leader</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Second Wind</group> <group>Support</group>
+      <benefit>Any ally who can see and hear you when they use their <i>second wind</i> adds your Charisma modifier to the hit points he or she regains.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Warding Shield</title>
+      <tier>Paragon</tier>
+      <prereq type="class" combine="or">Paladin</prereq>
+      <prereq type="class" combine=";">Cleric</prereq>
+      <prereq type="proficiency">any shield</prereq>
+      <group>Class</group> <group>Defense</group> <group>Shield</group> <group>Support</group>
+      <benefit>When you are using a shield that you have proficiency with, allies adjacent to you have a +2 bonus to Reflex.</benefit>
+   </feat>
+   
+   <feat>
       <title>Warforged Faith</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Warforged</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>warforged resolve</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <group>Temporary Hit Points</group>
-      <benefit>When you use your &lt;i&gt;warforged resolve&lt;/i&gt; racial power, one ally adjacent to you gains temporary hit points equal to your Constitution modifier (minimum 0) and can make a saving throw against one effect that deals ongoing damage.</benefit>
+      <prereq type="race">Warforged</prereq>
+      <prereq type="power" kind="racial">warforged resolve</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Saving Throws</group> <group>Support</group> <group>Temporary Hit Points</group>
+      <benefit>When you use your <i>warforged resolve</i> racial power, one ally adjacent to you gains temporary hit points equal to your Constitution modifier (minimum 0) and can make a saving throw against one effect that deals ongoing damage.</benefit>
       <benefit>The temporary hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
+   <feat>
+      <title>Words of Retaliation</title>
+      <tier>Heroic</tier>
+      <prereq type="class" combine="with">Cleric</prereq>
+      <prereq type="power" kind="class" combine="or">healing word</prereq>
+      <prereq type="class" combine="with">Warlord</prereq>
+      <prereq type="power" kind="class">draw inspiration</prereq>
+      <group>Class</group> <group>Healing</group>
+      <benefit>The target of your <i>healing word</i> class power or the character using your <i>draw inspiration</i> class power regains additional hit points equal to the number of enemies adjacent to him or her.</benefit>
+      <benefit>The additional hit points regained inscrease to be equal to 1,5 times the number of adjacent enemies at 11th level, and to be equal to twice the number of adjacent enemies at 21st level.</benefit>
+   </feat>
+   
    </catalog>

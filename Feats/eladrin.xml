@@ -156,67 +156,31 @@
    <feat>
       <title>Academy Prodigy</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Artificer</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Artificer</prereq>
+      <group>Class</group> <group>Racial</group> <group>Skill Enhancement</group>
       <benefit>You gain a +3 feat bonus to two skills from the artificer's class skill list. This counts as the Skill Focus feat for these skills. </benefit>
    </feat>
    <feat>
       <title>Arcane Repositioning</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Summoning</group>
-      <group>Teleportation</group>
-      <benefit>On your turn, you can use a free action to expend your &lt;i&gt;fey step&lt;/i&gt; to teleport one of your conjurations or a creature you have summoned rather than yourself.</benefit>
-      <benefit>If you do so, select one conjuration or summoned creature within 5 squares of you and teleport it 5 squares.</benefit>
-      <benefit>You cannot teleport a conjuration larger than 1 square or a summoned creature that size Large or larger.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">any arcane</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Class</group> <group>Racial</group> <group>Summoning</group> <group>Teleportation</group>
+      <benefit>On your turn, you can use your <i>fey step</i> as a free action with the following target and effect:</benefit>
+      <benefit name="Target"><type>Close</type><range>burst 5</range><target>one conjuration of 1 square or smaller, or one Medium or smaller creature summoned by you</target></benefit>
+      <benefit name="Effect">You teleport the target up to 5 squares.</benefit>
    </feat>
 
    <feat>
-      <title>Bolstering Step</title>
+      <title>Bolstering Fey Step</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Temporary Hit Points</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, choose one ally adjacent to either your original space or your destination space. The chosen ally gains temporary hit points equal to your Intelligence modifier, and can then shift 1 square as a free reaction.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group> <group>Temporary Hit Points</group> <group>Support</group>
+      <benefit>When you use your <i>fey step</i> racial power, choose one ally adjacent to either your original space or your destination space. The chosen ally gains temporary hit points equal to your Intelligence modifier, and can then shift 1 square as a free reaction.</benefit>
       <benefit>These temporary hit points increase to 4 + your Intelligence modifier at 11th level, and to 8 + your Intelligence modifier at 21st level, and the shift inreases to 2 squares at 21st level.</benefit>
    </feat>
 
@@ -224,58 +188,25 @@
       <title>Chilling Presence</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Winterkin Heritage</name>
-      </prereq>
-      <group>Cold Specialization</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Winterkin Heritage</group>
-      <benefit>When you use your &lt;i&gt;winter's shroud&lt;/i&gt; heritage power, you can deal 5 cold damage to the triggering enemy instead of teleporting.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="feat">Winterkin Heritage</prereq>
+      <group>Cold</group> <group>Power Enhancement</group> <group>Racial</group> <group>Winterkin Heritage</group>
+      <benefit>When you use your <i>winter's shroud</i> heritage power, you can deal 5 cold damage to the triggering enemy instead of teleporting.</benefit>
       <benefit>This damage increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Corellon's Wrath Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Intelligence</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Defense</group>
-      <group>Demon-hunting</group>
-      <group>Drow-hunting</group>
-      <group>Flanking</group>
-      <group>Orc-hunting</group>
-      <group>Spider-hunting</group>
-      <group>Support</group>
+      <prereq type="ability">Intelligence<value>15</value></prereq>
+      <prereq type="race" combine="or">Eladrin</prereq>
+      <prereq type="race" combine=";">Elf</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Damage Bonus</group> <group>Defense</group> <group>Demon-hunting</group> <group>Drow-hunting</group> <group>Flanking</group> <group>Orc-hunting</group> <group>Spider-hunting</group> <group>Support</group>
       <benefit>You gain the following benefits with at-will melee Weapon attacks against demons, drow, orcs and spiders:</benefit>
-      <benefit>&#9658; You deal an additional +2 damage.</benefit>
-      <benefit>&#9658; You add one-half your Intelligence modifier (minimum +1) on attack rolls when flanking.</benefit>
-      <benefit>Also, you add your Intelligence modifier (minimum +2) as a bonus to to AC against &lt;i&gt;reactive strikes&lt;/i&gt; by demons, drow, orcs and spiders.</benefit>
+      <benefit><bullet />You deal an additional +2 damage.</benefit>
+      <benefit><bullet />You add one-half your Intelligence modifier (minimum +1) on attack rolls when flanking.</benefit>
+      <benefit>Also, you add your Intelligence modifier (minimum +2) as a bonus to to AC against <i>reactive strikes</i> by demons, drow, orcs and spiders.</benefit>
       <benefit>In addition, if you grant an ally a melee attack against a demon, drow, orc, or spider, he or she deals +2 additional damage.</benefit>
       <benefit>Both additional damages increase to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
@@ -283,23 +214,10 @@
    <feat>
       <title>Dancing Thorn Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Flurry of Blows</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="feature">Flurry of Blows</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>While wielding a longsword, you gain a +1 bonus to attack rolls with Monk attack powers.</benefit>
       <benefit>Also, if you wield a longsword in two hands, you add +1 to the damage dealt by your Flurry of Blows power.</benefit>
    </feat>
@@ -307,22 +225,10 @@
    <feat>
       <title>Eladrin Finesse</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Weapon Proficiency</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="trait">Eladrin Weapon Proficiency</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>You can use a longsword or a one-handed Spear with rogue powers that require a Light Blade.</benefit>
       <benefit>Also, you can deal Sneak Attack damage with a longsword or a one-handed Spear. When you do, you deal +1 damage.</benefit>
       <benefit>This damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
@@ -331,21 +237,11 @@
    <feat>
       <title>Eladrin Soldier</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Weapon Proficiency</name>
-      </prereq>
-      <group>Damage Bonus</group>
-      <group>Implement Specialization</group>
-      <group>Proficiency Gain</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="trait">Eladrin Weapon Proficiency</prereq>
+      <group>Damage Bonus</group> <group>Implement Specialization</group> <group>Proficiency Gain</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>You gain proficiency with all spears.</benefit>
-      <benefit>Also, you gain a +2 feat bonus to Weapon damage rolls with longswords and all spears.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to Weapon damage rolls with longswords and all Spears.</benefit>
       <benefit>If you have the ability to use a longsword as an implement, you also gain the bonus to Implement damage rolls when wielding one.</benefit>
       <benefit>This bonus to damage rolls increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
@@ -353,348 +249,165 @@
    <feat>
       <title>Eladrin Sword Wizardry</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Wizard</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Weapon Proficiency</name>
-      </prereq>
-      <group>Class</group>
-      <group>Implement Specialization</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="ability">Dexterity<value>15</value></prereq>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Wizard</prereq>
+      <prereq type="trait">Eladrin Weapon Proficiency</prereq>
+      <group>Class</group> <group>Implement Specialization</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>You can use a longsword as an implement for Wizard powers. You do not count as having implement proficiency with a longsword for other purposes.</benefit>
       <benefit>When using a longsword as an implement, you treat it as a wand for all purposes, including Arcane Implement Mastery if you have that class feature.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Eladrin Swordmage Advance</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">Swordmage</prereq>
+      <group>Class</group> <group>Extra Attack</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power to teleport to a space within reach of an enemy, you can make a <i>melee basic attack</i> as a free reaction against that enemy. If multiple enemies are within your reach, you can only make one attack.</benefit>
    </feat>
 
    <feat>
       <title>Eladrin's Challenge</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Weapon Proficiency</name>
-      </prereq>
-      <group>Attack Penalty</group>
-      <group>Class</group>
-      <group>Mark Punishment</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
-      <benefit>When you are wielding a longsword or any spear, enemies marked by you take a -3 penalty to attack rolls for being marked instead of a -2 penalty.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Fighter</prereq>
+      <prereq type="trait">Eladrin Weapon Proficiency</prereq>
+      <group>Attack Penalty</group> <group>Class</group> <group>Mark Punishment</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>When you are wielding a longsword or any Spear, enemies marked by you take a -3 penalty to attack rolls for being marked instead of a -2 penalty.</benefit>
    </feat>
 
    <feat>
       <title>Elusive Hexer</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlock</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Warlock's Curse</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Fey Pact</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Stealth</group>
-      <benefit>When an enemy takes damage from your Warlock's Curse on your turn, you become invisible until the end of your current turn.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Warlock</prereq>
+      <prereq type="feature">Warlock's Curse</prereq>
+      <prereq type="feature">Fey Pact</prereq>
+      <group>Class</group> <group>Racial</group> <group>Stealth</group>
+      <benefit>When you deal your extra curse damage on your turn, you become invisible until the end of your current turn.</benefit>
    </feat>
 
    <feat>
       <title>Fey Blades</title>
       <tier>Heroic</tier>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Weapon Proficiency</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Tempest Training</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Two-weapon Fighting</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="trait">Eladrin Weapon Proficiency</prereq>
+      <prereq type="class">Fighter</prereq>
+      <prereq type="feature">Tempest Training</prereq>
+      <group>Class</group> <group>Racial</group> <group>Two-weapon Fighting</group> <group>Weapon Specialization</group>
       <benefit>You can wield a longsword in your off-hand even though it does not have the Off-Hand trait.</benefit>
    </feat>
 
    <feat>
       <title>Fey Cantrip</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>origin</type>
-         <name>fey</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Fey Bond</name>
-      </prereq>
-      <group>Fey Nature</group>
-      <group>Power Repertoire</group>
+      <prereq type="origin" combine="or">fey</prereq>
+      <prereq type="feat">Fey Bond</prereq>
+      <group>Fey Nature</group> <group>Power Repertoire</group>
       <benefit>Choose one at-will power available as part of the Wizard class's Cantrips class feature. You gain that power.</benefit>
    </feat>
 
    <feat>
       <title>Fey Charge</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Barbarian</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <group>Charge</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you charge, you can expend your &lt;i&gt;fey step&lt;/i&gt; racial power to replace up to 5 squares of your movement during the charge with teleportation.</benefit>
-      <benefit>If this charge attack hits, you regain the use of your &lt;i&gt;fey step&lt;/i&gt; racial power at the start of your next turn.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial" combine=";">fey step</prereq>
+      <prereq type="class" combine="or">Barbarian</prereq>
+      <prereq type="class">Fighter</prereq>
+      <group>Charge</group> <group>Class</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you charge, you can expend your <i>fey step</i> racial power to replace up to 5 squares of your movement during the charge with teleportation.</benefit>
+      <benefit>If this charge attack hits, you regain the use of your <i>fey step</i> racial power at the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Fey Command</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlord</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>warlord's aura</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Tactical Presence</name>
-      </prereq>
-      <group>Action Point</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Teleportation</group>
-      <benefit>When an ally in your &lt;i&gt;warlord's aura&lt;/i&gt; spends an action point to take an extra action, that ally can teleport 1 square either before or after resolving that action.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">Warlord</prereq>
+      <prereq type="power" kind="class" combine=";">warlord's aura</prereq>
+      <prereq type="feature" combine="or">Tactical Presence</prereq>
+      <prereq type="feature">Skirmishing Presence</prereq>
+      <group>Action Point</group> <group>Class</group> <group>Racial</group> <group>Support</group> <group>Teleportation</group>
+      <benefit>When an ally in your <i>warlord's aura</i> spends an action point to take an extra action, that ally can teleport 1 square either before or after resolving that action.</benefit>
       <benefit>This teleportation increases to 2 squares at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Fey Death</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Kill Effect</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you reduce a non-minion enemy to 0 hit points or less, you can use your &lt;i&gt;fey step&lt;/i&gt; racial power as a free reaction.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Kill Effect</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you reduce a non-minion enemy to 0 hit points or less, you can use your <i>fey step</i> racial power as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Fey Duelist</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Combat Advantage</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>You can expend your &lt;i&gt;fey step&lt;/i&gt; racial power as a minor action.</benefit>
-      <benefit>If you do, you do not gain the normal effect. Instead, you perform rapid, short-range teleportations until the end of your next turn, gaining combat advantage against adjacent enemies.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>You can expend your <i>fey step</i> racial power as a minor action with the following effect:</benefit>
+      <benefit name="Effect">You perform rapid, short-range teleportations until the end of your next turn, gaining combat advantage against enemies adjacent to you.</benefit>
    </feat>
 
    <feat>
       <title>Fey Escape</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Condition Negation</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>You can use your &lt;i&gt;fey step&lt;/i&gt; racial power as an immediate reaction when grabbed, immobilized, or restrained. Doing so ends the condition in addition to the power's normal effects.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Condition Negation</group> <group>Power Enhancement</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>You can use your <i>fey step</i> racial power as an immediate reaction with the following trigger:</benefit>
+      <benefit name="Trigger">You are grabbed, immobilized, or restrained</benefit>
+      <benefit>When you do, you end the triggering condition in addition to the power's normal effects.</benefit>
    </feat>
 
    <feat>
       <title>Fey Familiar</title>
       <tier>Heroic</tier>
       <category>Familiar</category>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Arcane Familiar</name>
-      </prereq>
-      <group>Class</group>
-      <group>Familiar</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power and your familiar is within 10 squares of you, you can also teleport it 5 squares.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="feat">Arcane Familiar</prereq>
+      <group>Class</group> <group>Familiar</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power and your familiar is within 10 squares of you, you can also teleport it 5 squares.</benefit>
    </feat>
 
    <feat>
       <title>Fey Gambit</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power to teleport adjacent to an enemy, you gain combat advantage against that enemy until the end of your next turn.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial" combine=";">fey step</prereq>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="class" combine="or">Monk</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power to teleport adjacent to an enemy, you gain combat advantage against that enemy until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Fey Preserver</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Invoker</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>preserver's rebuke</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;preserver's rebuke&lt;/i&gt; Channel Divinity power, you can also teleport the ally that was hit by the triggering enemy. The teleport distance is 2 squares.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Invoker</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="power" kind="Channel Divinity">preserver's rebuke</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group> <group>Teleportation</group>
+      <benefit>When you use your <i>preserver's rebuke</i> Channel Divinity power, you can also teleport the ally that was hit by the triggering enemy. The teleport distance is 2 squares.</benefit>
       <benefit>The distance of the teleport increases to 3 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Fey Shift</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>origin</type>
-         <name>fey</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Fey Bond</name>
-      </prereq>
-      <group>Fey Nature</group>
-      <group>Power Repertoire</group>
-      <group>Teleportation</group>
-      <benefit>You gain the &lt;i&gt;fey shift&lt;/i&gt; feat power.</benefit>
+      <prereq type="origin" combine="or">fey</prereq>
+      <prereq type="feat">Fey Bond</prereq>
+      <group>Fey Nature</group> <group>Power Repertoire</group> <group>Teleportation</group>
+      <benefit>You gain the <i>fey shift</i> feat power.</benefit>
 
       <power>
          <title>Fey Shift</title>
@@ -714,281 +427,121 @@
    <feat>
       <title>Fey Step Trailblazer</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you can also teleport one adjacent willing creature that is your size or smaller.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Power Enhancement</group> <group>Racial</group> <group>Support</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power, you can also teleport one adjacent willing creature that is your size or smaller.</benefit>
       <benefit>The creature teleports with you at the same time. When you arrive at your destination, place the creature in any square adjacent to you.</benefit>
    </feat>
 
    <feat>
       <title>Fey Tactics</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlord</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>warlord's aura</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you can also teleport one ally that is in your &lt;i&gt;warlord's aura&lt;/i&gt; in your starting position. You can teleport the ally the same distance that you can teleport.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Warlord</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="power" kind="class">warlord's aura</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power, you can also teleport one ally that is in your <i>warlord's aura</i> in your starting position. You can teleport the ally the same distance that you can teleport.</benefit>
    </feat>
 
    <feat>
       <title>Fey Thievery</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Thievery</name>
-      </prereq>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <benefit>While your &lt;i&gt;fey step&lt;/i&gt; racial power is not expended, you can make Thievery checks at a range of 5 squares. If you do so, you take a -2 penalty to the check.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="skill">Thievery</prereq>
+      <group>Racial</group> <group>Skill Enhancement</group>
+      <benefit>While your <i>fey step</i> racial power is not expended, you can make Thievery checks at a range of 5 squares. If you do so, you take a -2 penalty to the check.</benefit>
    </feat>
 
    <feat>
       <title>Feyborn Charm</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Gnome</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Satyr</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Bard</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="race" combine="or">Gnome</prereq>
+      <prereq type="race" combine=";">Satyr</prereq>
+      <prereq type="class">Bard</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Skill Enhancement</group>
       <benefit>You gain a +2 feat bonus to Bluff checks and Diplomacy checks.</benefit>
-      <benefit>Also, when you use an arcane Charm power, you gain a +1 feat bonus to attack rolls and damage rolls.</benefit>
+      <benefit>Also, when you use an arcane <key>Charm</key> power, you gain a +1 feat bonus to attack rolls and damage rolls.</benefit>
       <benefit>The feat bonus to damage rolls increases to +2 at 11th level, and to +3 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Feyborn Companion</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Gnome</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>an animal companion</name>
-      </prereq>
-      <group>Animal Companion</group>
-      <group>Fey Nature</group>
-      <group>Racial</group>
+      <prereq type="race" combine="or">Eladrin</prereq>
+      <prereq type="race" combine=";">Gnome</prereq>
+      <prereq type="feature">an animal companion</prereq>
+      <group>Animal Companion</group> <group>Fey Nature</group> <group>Racial</group>
       <benefit>Your animal companion's origin changes to fey instead of natural.</benefit>
-      <benefit>If you are an eladrin, your companion also gains a +5 racial bonus to saving throws against Charm effects and when you use your &lt;i&gt;fey step&lt;/i&gt; racial power, your companion can teleport the same distance you teleport.</benefit>
-      <benefit>If you are a gnome, your companion also gains a +5 racial bonus to saving throws against Illusion effects and when you use your &lt;i&gt;fade away&lt;/i&gt; racial power, your companion is also invisible as long as you are.</benefit>
+      <benefit>If you are an eladrin, your companion also gains a +5 racial bonus to saving throws against <key>Charm</key> effects and when you use your <i>fey step</i> racial power, your companion can teleport the same distance you teleport.</benefit>
+      <benefit>If you are a gnome, your companion also gains a +5 racial bonus to saving throws against <key>Illusion</key> effects and when you use your <i>fade away</i> racial power, your companion is also invisible as long as you are.</benefit>
    </feat>
 
    <feat>
       <title>Feyborn Pursuer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Assassin's Shroud</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Vengeance</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you can teleport an additional 5 squares as long as you end the teleportation adjacent to your oath target or a creature that has your shrouds on it.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial" combine=";">fey step</prereq>
+      <prereq type="class" combine="with">Assassin</prereq>
+      <prereq type="feature" combine="or">Assassin's Shroud</prereq>
+      <prereq type="class" combine="with">Avenger</prereq>
+      <prereq type="feature">Oath of Vengeance</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power, you can teleport an additional 5 squares as long as you end the teleportation adjacent to your oath target or a creature that has your shrouds on it.</benefit>
    </feat>
 
    <feat>
       <title>Feymind Infusion</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Artificer</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Will</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Magical Infusion</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <benefit>When you use one of the powers granted by your Magical Infusion class feature, the target can make a saving throw against a single Charm or Fear effect that a save can end.</benefit>
-      <benefit>The target gains a power bonus to the save if the effect is a Charm effect. The bonus equals your Constitution modifier or Wisdom modifier.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Artificer</prereq>
+      <prereq type="trait">Eladrin Will</prereq>
+      <prereq type="feature">Magical Infusion</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Saving Throws</group> <group>Support</group>
+      <benefit>When you use one of the powers granted by your Magical Infusion class feature, the target can make a saving throw against a single <key>Charm</key> or <key>Fear</key> effect that a save can end.</benefit>
+      <benefit>The target gains a power bonus to the save if the effect is a <key>Charm</key> effect. The bonus equals your [Constitution or Wisdom] modifier.</benefit>
    </feat>
 
    <feat>
       <title>Feywild Advance</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Battlemind</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>blurred step</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Psionics</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>If you have at least 1 power point when you use your &lt;i&gt;blurred step&lt;/i&gt; class power, you can teleport a number of squares equal to your 1 + one-half your Intelligence modifier (minimum 1 square) instead of shifting.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">Battlemind</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <prereq type="power" kind="class">blurred step</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>If you have at least 1 power point when you use your <i>blurred step</i> class power, you can teleport a number of squares equal to your 1 + one-half your Intelligence modifier (minimum 1 square) instead of shifting.</benefit>
    </feat>
 
    <feat>
       <title>Feywild Flanker</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlord</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Warlord</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Racial</group> <group>Teleportation</group>
       <benefit>Whenever you teleport, one enemy that you teleport adjacent to grants combat advantage until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Feywild Protection</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you gain a +2 bonus to all defenses until the end of your next turn.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Defense</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>fey step</i> racial power, you gain a +2 bonus to all defenses until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Feywild Warrior</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>17</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <group>Triggered</group>
+      <prereq type="ability">Dexterity<value>17</value></prereq>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Class</group> <group>Racial</group> <group>Teleportation</group> <group>Triggered</group>
       <benefit>Whenever you hit a target with a martial daily attack power, you can teleport yourself and the target as a free reaction. You teleport 5 squares, and then teleport the target 5 squares closer where you teleported to. Determine where you teleport the target as if you pulled it.</benefit>
       <benefit>If your martial daily attack power targets more than one creature, you can choose whether to use this feat after you know which of the targets you hit. You can only teleport one target.</benefit>
    </feat>
@@ -996,27 +549,11 @@
    <feat>
       <title>Flawless Bladework</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Strength</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>17</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Weapon Proficiency</name>
-      </prereq>
-      <group>Miss Mitigation</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="ability">Strength<value>15</value></prereq>
+      <prereq type="ability">Dexterity<value>17</value></prereq>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="trait">Eladrin Weapon Proficiency</prereq>
+      <group>Miss Mitigation</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>When you roll a 1 on an attack roll with a longsword, you can reroll the attack roll and must use the second result. The rerolled attack cannot score a critical hit.</benefit>
    </feat>
 
@@ -1024,21 +561,12 @@
       <title>Foulborn Heritage</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>origin</type>
-         <name>natural</name>
-      </prereq>
-      <prereq>
-         <type>type</type>
-         <name>humanoid</name>
-      </prereq>
-      <group>Foulborn Heritage</group>
-      <group>Physical Change</group>
-      <group>Power Repertoire</group>
-      <group>Psychic Specialization</group>
+      <prereq type="origin">natural</prereq>
+      <prereq type="type">humanoid</prereq>
+      <group>Foulborn Heritage</group> <group>Physical Change</group> <group>Power Repertoire</group> <group>Psychic</group>
       <benefit>You are a foulborn.</benefit>
       <benefit>Your origin changes to aberrant instead of natural.</benefit>
-      <benefit>Also, you have the &lt;i&gt;unbalanced mind&lt;/i&gt; power.</benefit>
+      <benefit>Also, you have the <i>unbalanced mind</i> power.</benefit>
 
       <power>
          <title>Unbalanced Mind</title>
@@ -1055,7 +583,7 @@
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>Until the end of your next turn, you have an Aura 1 (Psionic, Psychic).</text>
+               <text>Until the end of your next turn, you have an Aura 1 (<key>Psionic</key>, <key>Psychic</key>).</text>
             </section>
             <section>
                <shade>true</shade>
@@ -1078,85 +606,41 @@
    <feat>
       <title>Gifted Death Dealer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlock</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>eldritch strike</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Eladrin Weapon Proficiency</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>Your &lt;i&gt;eldritch strike&lt;/i&gt; class power deals additional damage equal to your Intelligence modifier.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Warlock</prereq>
+      <prereq type="power" kind="attack">eldritch strike</prereq>
+      <prereq type="trait">Eladrin Weapon Proficiency</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>Your <i>eldritch strike</i> class power deals additional damage equal to your Intelligence modifier.</benefit>
    </feat>
 
    <feat>
       <title>Ice Walk</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Winterkin Heritage</name>
-      </prereq>
-      <group>Mobility</group>
-      <group>Racial</group>
-      <group>Winterkin Heritage</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="feat">Winterkin Heritage</prereq>
+      <group>Mobility</group> <group>Racial</group> <group>Winterkin Heritage</group>
       <benefit>You ignore difficult terrain created by ice or snow.</benefit>
    </feat>
 
    <feat>
       <title>Improved Fey Step</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>The maximum distance you can teleport with your &lt;i&gt;fey step&lt;/i&gt; racial power increases by 2 squares.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>The maximum distance you can teleport with your <i>fey step</i> racial power increases by 2 squares.</benefit>
    </feat>
 
    <feat>
       <title>Moon Fey Resilience</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Background</group>
-      <group>Bloodied</group>
-      <group>Healing</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>If you are bloodied and there are no allies within 5 squares of you when you use your &lt;i&gt;fey step&lt;/i&gt; racial power, the power gains the Healing keyword and you can spend a healing surge to regain hit points equal to your healing surge value. The healing happens during your teleportation.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Background</group> <group>Bloodied</group> <group>Healing</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>If you are bloodied and there are no allies within 5 squares of you when you use your <i>fey step</i> racial power, the power gains the <key>Healing</key> keyword and you can spend a healing surge to regain hit points equal to your healing surge value. The healing happens during your teleportation.</benefit>
       <special>You cannot select this feat if you have the Sun Fey Grace feat.</special>
    </feat>
 
@@ -1164,21 +648,10 @@
       <title>Planar Distortion</title>
       <category>Spellscar</category>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Forced Movement</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Spellscar</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, either before or after you teleport, you can slide one creature adjacent to you 1 square.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Forced Movement</group> <group>Power Enhancement</group> <group>Racial</group> <group>Spellscar</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power, either before or after you teleport, you can slide one creature adjacent to you 1 square.</benefit>
       <benefit>This slide increases to a maximum of 2 squares starting at 21st level.</benefit>
       <benefit>If you have the Student of the Plague feat, you can also teleport one creature adjacent to you 2 squares. If you slide a creature before teleporting, you teleport a creature after having teleported, and vice versa.</benefit>
       <benefit>This teleport increases to 3 squares starting at 21st level.</benefit>
@@ -1186,154 +659,205 @@
 
    <feat>
       <title>Primal Fey Step</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any primal</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <group>Triggered</group>
-      <benefit>The first time you are bloodied in an encounter, you can use your &lt;i&gt;fey step&lt;/i&gt; racial power as an immediate reaction without expending it or even if you have already expended it.</benefit>
+      <tier>Paragon</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">any primal</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Racial</group> <group>Teleportation</group> <group>Triggered</group>
+      <benefit>The first time you are bloodied in an encounter, you can use your <i>fey step</i> racial power as an immediate reaction without expending it or even if you have already expended it.</benefit>
    </feat>
 
    <feat>
       <title>Reactive Fey Step</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Condition Negation</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you are pushed, pulled, or slid, or subject to any other forced movement, you can use your &lt;i&gt;fey step&lt;/i&gt; racial power as an immediate interrupt. You negate the forced movement instead of teleporting.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Condition Negation</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>You can use your <i>fey step</i> racial power as an immediate interrupt with the following trigger and effect:</benefit>
+      <benefit name="Trigger">You are pushed, pulled, or slid</benefit>
+      <benefit name="Effect">You negate the triggering forced movement.</benefit>
    </feat>
 
    <feat>
       <title>Redistribute Minions</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Artificer</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Summoning</group>
-      <group>Teleportation</group>
-      <benefit>Whenever you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you can also teleport each creature summoned by your artificer powers. You can teleport the summoned creatures up to the same number of squares you teleport (minimum 1 square, even if you did not teleport).</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">Artificer</prereq>
+      <group>Class</group> <group>Racial</group> <group>Summoning</group> <group>Teleportation</group>
+      <benefit>Whenever you use your <i>fey step</i> racial power, you can also teleport each creature summoned by your artificer powers. You can teleport the summoned creatures up to the same number of squares you teleport (minimum 1 square, even if you did not teleport).</benefit>
    </feat>
 
    <feat>
       <title>Renewed by Blood</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlock</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Pact Boon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Kill Effect</group>
-      <group>Power Recovery</group>
-      <group>Racial</group>
-      <benefit>Once per encounter, when you reduce an enemy to 0 hit points or fewer, you can choose to regain your &lt;i&gt;fey step&lt;/i&gt; racial power instead of gaining the effect of your Pact Boon class feature.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">Warlock</prereq>
+      <prereq type="feature">Pact Boon</prereq>
+      <group>Class</group> <group>Kill Effect</group> <group>Power Recovery</group> <group>Racial</group>
+      <benefit>Once per encounter, when you reduce an enemy to 0 hit points or fewer, you can choose to regain your <i>fey step</i> racial power instead of gaining the effect of your Pact Boon class feature.</benefit>
    </feat>
 
+   <feat>
+      <title>Spirit's Fey Step</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">Shaman</prereq>
+      <prereq type="power" kind="class">call spirit companion</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power, you can also teleport your spirit companion the same maximum distance.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Starlight Duelist</title>
+      <tier>Heroic</tier>
+      <prereq type="ability">Dexterity<value>13</value></prereq>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>You gain the following benefits with martial at-will attacks:</benefit>
+      <benefit bullet="">If the attack allows you to move, you can expend your <i>fey step</i> racial power to teleport instead of moving. If the power requires you to move to a specific position, you must teleport similarly.</benefit>
+      <benefit bullet="">If the attack allows you to shift and your <i>fey step</i> racial power is not expended, you can instead teleport half the shift distance (minimum 1 square). If the power requires you to shift to a specific position, you must teleport similarly.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Starshine Mantle</title>
+      <tier>Heroic</tier>
+      <prereq type="origin" combine="or">fey</prereq>
+      <prereq type="feat" combine=";">Fey Bond</prereq>
+      <prereq type="class">Warden</prereq>
+      <group>Class</group> <group>Concealment</group> <group>Defense</group> <group>Fey Nature</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you gain concealment until the start of your next turn or until you make an attack, whichever comes first.</benefit>
+   </feat>
+   
    <feat>
       <title>Stealthy Step</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Stealth</name>
-      </prereq>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Stealth</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you can make a Stealth check to hide if you have cover or concealment in your destination space. You do not take the -5 penalty for moving more than 2 squares even if you teleported a longer distance.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="skill">Stealth</prereq>
+      <group>Power Enhancement</group> <group>Racial</group> <group>Stealth</group>
+      <benefit>When you use your <i>fey step</i> racial power, you can make a Stealth check to hide if you have cover or concealment in your destination space. You do not take the -5 penalty for moving more than 2 squares even if you teleported a longer distance.</benefit>
    </feat>
-
+   
+   <feat>
+      <title>Sun Fey Grace</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Background</group> <group>Defense</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>If you are not bloodied when you use your <i>fey step</i> racial power, you gain a +2 power bonus to all defenses until the end of your next turn.</benefit>
+      <special>You cannot select this feat if you have the Moon Fey Resilience feat.</special>
+   </feat>
+   
+   <feat>
+      <title>Swirling Snow</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="feat">Winterkin Heritage</prereq>
+      <group>Concealment</group> <group>Power Enhancement</group> <group>Racial</group> <group>Winterkin Heritage</group>
+      <benefit>When you use your <i>winter's shroud</i> heritage power, you activate an Aura 1 (<key>Arcane</key>, <key>Cold</key>) until the start of your next turn. The aura also covers your space.</benefit>
+      <benefit>Squares in the aura are lightly obscured.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Tactical Inspiration</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Warlord</prereq>
+      <prereq type="power" kind="class">draw inspiration</prereq>
+      <group>Class</group> <group>Healing</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>A character using your <i>draw inspiration</i> class power regains additional hit points equal to your Intelligence modifier. This also applies to your <i>inspire the fallen</i> class power.</benefit>
+   </feat>
+   
    <feat>
       <title>Threshhold Navigator</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Arcana</name>
-      </prereq>
-      <group>Racial</group>
-      <group>Teleportation</group>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="skill">Arcana</prereq>
+      <group>Racial</group> <group>Teleportation</group>
       <benefit>Whenever you teleport, you increase the maximum distance by 1 square.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Twilight Phantom Step</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="power" kind="class">assassin's shroud</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>You increase the maximum distance you can teleport with your <i>fey step</i> racial power by 5 squares if your destination space is adjacent to a target that has your shrouds on it.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Twist the Arcane Fabric</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">any arcane</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group> <group>Teleportation</group>
+      <benefit>You can use your <i>fey step</i> racial power as a free interrupt with the following trigger, target and effect:</benefit>
+      <benefit name="Trigger">You use an arcane area or arcane close power that targets your ally</benefit>
+      <benefit name="Target"><type>Special</type><target>the triggering ally</target></benefit>
+      <benefit name="Effect">You teleport the triggering ally up to a number of squares equal to 1 + one-half the distance you can teleport with your <i>fey step</i> racial power.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Ubiquitous Fey Step</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Power Recovery</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>When you first drop to 0 power points during an encounter, you regain the use of your <i>fey step</i> racial power.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Vanishing Concoction</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">Artificer</prereq>
+      <prereq type="feature">Magical Infusion</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>An ally benefiting from your <i>resistive formula</i> or <i>shielding elixir</i> class power can use the following action:</benefit>
+      <benefit name="Free Action">The ally teleports up to a number of squares equal to 2 + one-half your Dexterity modifier and the power ends.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Winter's Heart</title>
+      <tier>Paragon</tier>
+      <category>Bloodline</category>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="feat">Winterkin Heritage</prereq>
+      <group>Mobility Hindrance</group> <group>Racial</group> <group>Triggered</group> <group>Winterkin Heritage</group>
+      <benefit>While you are not bloodied, any enemy that hits you with a melee attack is slowed until the end of its next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Winter's Reach</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="feat">Winterkin Heritage</prereq>
+      <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group> <group>Winterkin Heritage</group>
+      <benefit>Increase the maximum distance you can teleport with your <i>winter's shroud</i> heritage power by your [Dexterity or Intelligence] modifier.</benefit>
    </feat>
 
    <feat>
       <title>Winterkin Heritage</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <group>Damage Resistance</group>
-      <group>Power Repertoire</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <group>Winterkin Heritage</group>
+      <prereq type="race">Eladrin</prereq>
+      <group>Damage Resistance</group> <group>Power Repertoire</group> <group>Racial</group> <group>Teleportation</group> <group>Winterkin Heritage</group>
       <benefit>You gain resist cold equal to 5 + one-half your level.</benefit>
-      <benefit>Also, you gain the &lt;i&gt;winter's shroud&lt;/i&gt; heritage power.</benefit>
+      <benefit>Also, you gain the <i>winter's shroud</i> heritage power.</benefit>
 
       <power>
          <title>Winter's Shroud</title>
@@ -1344,7 +868,7 @@
             <action>Immediate</action> <subaction>Reaction</subaction>
             <section>
                <name>Trigger:</name> <name-style>bold</name-style>
-               <text>An enemy damage you with an attack</text>
+               <text>An enemy damages you with an attack</text>
             </section>
          <section personal="" />
             <section>
@@ -1355,24 +879,15 @@
 
       </power>
    </feat>
-
+   
    <feat>
       <title>Wood Elf Kin</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you can use a free interrupt to reroll one attack roll for the first attack you make before the end of your current turn.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Attack Bonus</group> <group>Power Enhancement</group> <group>Racial</group> <group>Skill Enhancement</group>
+      <benefit>When you use your <i>fey step</i> racial power, you can use the following action once before the end of your current turn:</benefit>
+      <benefit name="Free Interrupt"><trigger>You make an attack roll and dislike the result</trigger>You reroll the triggering attack roll and use the second result, even if it is lower.</benefit>
    </feat>
-
+   
    </catalog>

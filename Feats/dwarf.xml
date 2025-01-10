@@ -157,183 +157,83 @@
       <title>Ancestral Wrath</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>heritage</type>
-         <name>Forgeborn</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Charge</group>
-      <group>Forgeborn Heritage</group>
-      <group>Mobility</group>
-      <group>Racial</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="heritage">Forgeborn</prereq>
+      <group>Bloodied</group> <group>Charge</group> <group>Forgeborn Heritage</group> <group>Mobility</group> <group>Racial</group>
       <benefit>While you are bloodied, you gain a +1 bonus to speed. This increases to a +2 bonus when you charge.</benefit>
    </feat>
    <feat>
       <title>Bolstering Inspiration</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlord</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>warlord's aura</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <group>Triggered</group>
-      <benefit>If an ally is adjacent to you when they use the Draw Inspiration action of your &lt;i&gt;warlord's aura&lt;/i&gt; power, you can take a free interrupt to either increase the healing by your Wisdom modifier or to allow the ally to make a saving throw against one effect that a save can end.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Warlord</prereq>
+      <prereq type="power" kind="class">draw inspiration</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Saving Throws</group> <group>Support</group> <group>Triggered</group>
+      <benefit>If an ally is adjacent to you when he or she uses your <i>draw inspiration</i> class power, you can take a free interrupt to either increase the healing by your Wisdom modifier or to allow the ally to make a saving throw against one effect that a save can end.</benefit>
       <benefit>The increased healing becomes 4 + your Wisdom modifier at 11th level, and 8 + your Wisdom modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Cast Iron Font</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warden</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Font of Life</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Temporary Hit Points</group>
-      <benefit>When you succeed at a saving throw against a Poison effect at the start of your turn, you gain temporary hit points equal to your Constitution modifier.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Warden</prereq>
+      <prereq type="feature">Font of Life</prereq>
+      <group>Class</group> <group>Racial</group> <group>Saving Throws</group> <group>Temporary Hit Points</group>
+      <benefit>When you succeed at a saving throw against a <key>Poison</key> effect at the start of your turn, you gain temporary hit points equal to your Constitution modifier.</benefit>
       <benefit>These temporary hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Delzoun Trueborn</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Stand Your Ground</name>
-      </prereq>
-      <group>Background</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Stand Your Ground</prereq>
+      <group>Background</group> <group>Racial</group> <group>Saving Throws</group>
       <benefit>Whenever you use your Stand Your Ground racial trait to avoid falling prone, you roll twice on the saving throw and can use either result.</benefit>
-      <special>You are considered to be a member of the lost kingdom of Delzoun for the purposes of all magic effects, items, and treates that depend upon that distinction.</special>
+      <special>You are considered to be a member of the lost kingdom of Delzoun for the purposes of all magic effects, items, and treatises that depend upon that distinction.</special>
    </feat>
 
    <feat>
       <title>Devoted Enforcement</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>enforce challenge</name>
-         <qualifier>class</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Shieldbearer Training</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Mark Punishment</group>
-      <group>Shield</group>
-      <benefit>When you make a &lt;i&gt;melee basic attack&lt;/i&gt; as part of &lt;i&gt;enforce challenge&lt;/i&gt;, you deal additional damage equal to your Wisdom modifier. If you are not a dwarf, you must be wielding a shield to gain this benefit.</benefit>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="class">Fighter</prereq>
+      <prereq type="power" kind="class" combine=";">enforce challenge</prereq>
+      <prereq type="race" combine="or">Dwarf</prereq>
+      <prereq type="feature">Shieldbearer Training</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Mark Punishment</group> <group>Shield</group>
+      <benefit>When you make a <i>melee basic attack</i> as part of <i>enforce challenge</i>, you deal additional damage equal to your Wisdom modifier. If you are not a dwarf, you must be wielding a shield to gain this benefit.</benefit>
       <benefit>This additional damage increases to 3 + your Wisdom modifier at 11th level, and to 6 + your Wisdom modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Dodge Giants</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <group>Defense</group>
-      <group>Racial</group>
-      <group>Size-based</group>
+      <prereq type="race">Dwarf</prereq>
+      <group>Defense</group> <group>Racial</group> <group>Size-based</group>
       <benefit>You gain a +1 bonus to AC and Reflex against attacks of Large or larger foes.</benefit>
    </feat>
 
    <feat>
       <title>Dwarf Battle Priest</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>healing word</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Temporary Hit Points</group>
-      <benefit>When you use your &lt;i&gt;healing word&lt;/i&gt; class power on an ally, you gain temporary hit points equal to your Constitution modifier.</benefit>
+      <prereq type="ability">Constitution<value>13</value></prereq>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Cleric</prereq>
+      <prereq type="power" kind="class">healing word</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Temporary Hit Points</group>
+      <benefit>When you use your <i>healing word</i> class power on an ally, you gain temporary hit points equal to your Constitution modifier.</benefit>
       <benefit>These temporary hit points increase to 4 + your Constitution modifier at 11th level, and to 8 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Dwarf Stoneblood</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Battlerager Training</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing Surge</group>
-      <group>Racial</group>
-      <group>Temporary Hit Points</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Fighter</prereq>
+      <prereq type="feature">Battlerager Training</prereq>
+      <group>Class</group> <group>Healing Surge</group> <group>Racial</group> <group>Temporary Hit Points</group>
       <benefit>Your number of healing surges increases by one.</benefit>
       <benefit>Also, the number of temporary hit points you gain from Fighter powers increases by 2.</benefit>
       <benefit>These additional temporary hit points increase to 4 at 11th level, and to 6 at 21st level.</benefit>
@@ -342,36 +242,18 @@
    <feat>
       <title>Dwarf Trapsmith</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <group>Traps</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Racial</group> <group>Skill Enhancement</group> <group>Traps</group>
       <benefit>You gain a +4 feat bonus to Perception checks to find traps, and to Thievery checks to open locks and to disable traps.</benefit>
    </feat>
 
    <feat>
       <title>Dwarven Durability</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <group>Healing</group>
-      <group>Healing Surge</group>
-      <group>Racial</group>
+      <prereq type="ability">Constitution<value>13</value></prereq>
+      <prereq type="race">Dwarf</prereq>
+      <group>Healing</group> <group>Healing Surge</group> <group>Racial</group>
       <benefit>Your number of healing surges increases by two.</benefit>
       <benefit>Also, your healing surge value increases by your Constitution modifier.</benefit>
       <benefit>Starting at 21st level, your number of healing surges increases by three instead.</benefit>
@@ -380,96 +262,48 @@
    <feat>
       <title>Dwarven Recovery</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Second Wind</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt;, you gain a +5 bonus to saving throws until the end of your next turn.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Class</group> <group>Racial</group> <group>Saving Throws</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you gain a +5 bonus to saving throws until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Dwarven Rejuvenation</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Artificer</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Arcane Rejuvenation</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Triggered</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Artificer</prereq>
+      <prereq type="feature">Arcane Rejuvenation</prereq>
+      <group>Class</group> <group>Defense</group> <group>Racial</group> <group>Support</group> <group>Triggered</group>
       <benefit>When an ally gains temporary hit points due to your Arcane Rejuvenation class feature, that ally also gains a +2 bonus to all defenses until the start of his or her next turn.</benefit>
    </feat>
 
    <feat>
       <title>Dwarven Stalwart</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Stand Your Ground</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Racial</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Stand Your Ground</prereq>
+      <group>Attack Bonus</group> <group>Racial</group>
       <benefit>At the start of your turn, you gain a +1 feat bonus to attack rolls using Axes and Hammers. This bonus lasts until you move or are moved.</benefit>
    </feat>
 
    <feat>
       <title>Dwarven Weapon Training</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dwarven Weapon Proficiency</name>
-      </prereq>
-      <group>Damage Bonus</group>
-      <group>Proficiency Gain</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
-      <benefit>You gain proficiency with all axes and hammers.</benefit>
-      <benefit>Also, you gain a +2 feat bonus to Weapon damage rolls with axes and hammers.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Dwarven Weapon Proficiency</prereq>
+      <group>Damage Bonus</group> <group>Proficiency Gain</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with all Axes and Hammers.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to Weapon damage rolls with Axes and Hammers.</benefit>
       <benefit>This bonus to damage rolls increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Enduring Wallop</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <group>Class</group>
-      <group>Ongoing Damage</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Fighter</prereq>
+      <group>Class</group> <group>Ongoing Damage</group> <group>Power Enhancement</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>When you wield an axe, a hammer, a mace, or a pick and hit an enemy with a Fighter daily attack power, that enemy takes ongoing damage equal to your Constitution modifier (save ends).</benefit>
       <benefit>This ongoing damage increases to 5 + your Constitution modifier at 21st level.</benefit>
       <benefit>If the daily attack power already deals ongoing damage that has no damage type, you instead increase that ongoing damage by an amount equal to your Constitution modifier.</benefit>
@@ -479,24 +313,11 @@
       <title>Forgeborn Heritage</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <group>Acid Specialization</group>
-      <group>Cold Specialization</group>
-      <group>Damage Bonus</group>
-      <group>Damage Resistance</group>
-      <group>Fire Specialization</group>
-      <group>Forgeborn Heritage</group>
-      <group>Lightning Specialization</group>
-      <group>Power Repertoire</group>
-      <group>Racial</group>
-      <group>Thunder Specialization</group>
-      <group>Triggered</group>
+      <prereq type="race">Dwarf</prereq>
+      <group>Acid</group> <group>Cold</group> <group>Damage Bonus</group> <group>Damage Resistance</group> <group>Fire</group> <group>Forgeborn Heritage</group> <group>Lightning</group> <group>Power Repertoire</group> <group>Racial</group> <group>Thunder</group> <group>Triggered</group>
       <benefit>You gain resist 2 acid, resist 2 cold, resist 2 fire, resist 2 lightning, and resist 2 thunder.</benefit>
       <benefit>These resists increase to 4 at 11th level, and to 8 at 21st level.</benefit>
-      <benefit>Also, you gain the &lt;i&gt;elemental legacy&lt;/i&gt; bloodline power.</benefit>
+      <benefit>Also, you gain the <i>elemental legacy</i> bloodline power.</benefit>
 
       <power>
          <title>Elemental Legacy</title>
@@ -533,21 +354,12 @@
       <title>Foulborn Heritage</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>origin</type>
-         <name>natural</name>
-      </prereq>
-      <prereq>
-         <type>type</type>
-         <name>humanoid</name>
-      </prereq>
-      <group>Foulborn Heritage</group>
-      <group>Physical Change</group>
-      <group>Power Repertoire</group>
-      <group>Psychic Specialization</group>
+      <prereq type="origin">natural</prereq>
+      <prereq type="type">humanoid</prereq>
+      <group>Foulborn Heritage</group> <group>Physical Change</group> <group>Power Repertoire</group> <group>Psychic</group>
       <benefit>You are a foulborn.</benefit>
       <benefit>Your origin changes to aberrant instead of natural.</benefit>
-      <benefit>Also, you have the &lt;i&gt;unbalanced mind&lt;/i&gt; power.</benefit>
+      <benefit>Also, you have the <i>unbalanced mind</i> power.</benefit>
 
       <power>
          <title>Unbalanced Mind</title>
@@ -564,7 +376,7 @@
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>Until the end of your next turn, you have an Aura 1 (Psionic, Psychic).</text>
+               <text>Until the end of your next turn, you have an Aura 1 (<key>Psionic</key>, <key>Psychic</key>).</text>
             </section>
             <section>
                <shade>true</shade>
@@ -587,62 +399,31 @@
    <feat>
       <title>Gold Dwarf Pride</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Defense</group>
-      <group>Dying</group>
-      <group>Racial</group>
+      <prereq type="race">Dwarf</prereq>
+      <group>Attack Bonus</group> <group>Defense</group> <group>Dying</group> <group>Racial</group>
       <benefit>If you are reduced to 0 hit points or fewer and return to consciousness in the same encounter, you gain a cumulative +1 bonus to AC and attack rolls until the end of the encounter.</benefit>
    </feat>
 
    <feat>
       <title>Grudge Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>15</value>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Reactive Strikes</group>
-      <group>Triggered</group>
+      <prereq type="class" combine=";">any martial</prereq>
+      <prereq type="ability" combine="or">Wisdom<value>15</value></prereq>
+      <prereq type="race">Dwarf</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Damage Bonus</group> <group>Reactive Strikes</group> <group>Triggered</group>
       <benefit>When an enemy damages you, you gain the following benefits until the end of your next turn:</benefit>
-      <benefit>&#9658; Your melee martial at-will attacks deal additional damage against that enemy equal to one-half your Wisdom modifier (minimum +1 bonus).</benefit>
-      <benefit>&#9658; Your triggered attacks against that enemy, including &lt;i&gt;reactive strikes&lt;/i&gt;, deal additional damage equal to your Wisdom modifier (minimum +2).</benefit>
+      <benefit><bullet />Your melee martial at-will attacks deal additional damage against that enemy equal to one-half your Wisdom modifier (minimum +1 bonus).</benefit>
+      <benefit><bullet />Your triggered attacks against that enemy, including <i>reactive strikes</i>, deal additional damage equal to your Wisdom modifier (minimum +2).</benefit>
    </feat>
 
    <feat>
       <title>Improved Legacy</title>
       <tier>Paragon</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Forgeborn Heritage</name>
-      </prereq>
-      <group>Damage Bonus</group>
-      <group>Forgeborn Heritage</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>The extra damage dealt by your &lt;i&gt;elemental legacy&lt;/i&gt; bloodline power increases by 4.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="feat">Forgeborn Heritage</prereq>
+      <group>Damage Bonus</group> <group>Forgeborn Heritage</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>The extra damage dealt by your <i>elemental legacy</i> bloodline power increases by 4.</benefit>
       <benefit>Starting at 21st level, the extra damage increases by 6 instead.</benefit>
    </feat>
 
@@ -650,17 +431,9 @@
       <title>Iron Hide Resilience</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Forgeborn Heritage</name>
-      </prereq>
-      <group>Damage Resistance</group>
-      <group>Forgeborn Heritage</group>
-      <group>Racial</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="feat">Forgeborn Heritage</prereq>
+      <group>Damage Resistance</group> <group>Forgeborn Heritage</group> <group>Racial</group>
       <benefit>You increase the resists you gain from Forgeborn Heritage to 5.</benefit>
       <benefit>This resistance increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
@@ -669,162 +442,70 @@
       <title>Keen Hatred</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Forgeborn Heritage</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Forgeborn Heritage</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;elemental legacy&lt;/i&gt; bloodline power, you also gain a +2 bonus to the first attack roll you make before the end of your next turn.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="feat">Forgeborn Heritage</prereq>
+      <group>Attack Bonus</group> <group>Forgeborn Heritage</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>elemental legacy</i> bloodline power, you also gain a +2 bonus to the first attack roll you make before the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Knock Back</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Stand Your Ground</name>
-      </prereq>
-      <group>Condition Infliction</group>
-      <group>Racial</group>
-      <group>Triggered</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Stand Your Ground</prereq>
+      <group>Condition Infliction</group> <group>Racial</group> <group>Triggered</group>
       <benefit>When you succeed on a saving throw to avoid being knocked prone, you can use a free reaction to knock prone one enemy of size Medium or smaller that is adjacent to you.</benefit>
       <benefit>Starting at 11th level, you can knock prone a creature of size Large or smaller.</benefit>&gt;
    </feat>
 
    <feat>
-      <title>Lethal Hammer Training</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dwarven Weapon Proficiency</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
-      <benefit>You can use a warhammer or a throwing hammer with your Sneak Attack class feature or with any rogue power that normally requires a Light Blade.</benefit>
-   </feat>
-
-   <feat>
       <title>Obsidian Cave Recovery</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dwarven Resilience</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Infused Form</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Recovery</group>
-      <group>Racial</group>
-      <group>Second Wind</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt; on your turn, you regain the use of the power you gained from your Infused Form class feature if you have already used it during this encounter.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Dwarven Resilience</prereq>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="feature">Infused Form</prereq>
+      <group>Class</group> <group>Power Recovery</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i> on your turn, you regain the use of the power you gained from your Infused Form class feature if you have already used it during this encounter.</benefit>
    </feat>
 
    <feat>
       <title>Poison Plague Feast</title>
       <category>Spellscar</category>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Spellscar</group>
-      <group>Temporary Hit Points</group>
-      <benefit>Whenever you successfully save against a Poison, you gain temporary hit points equal to 1 + one-half your level.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <group>Racial</group> <group>Saving Throws</group> <group>Spellscar</group> <group>Temporary Hit Points</group>
+      <benefit>Whenever you successfully save against a <key>Poison</key> effect, you gain temporary hit points equal to 1 + one-half your level.</benefit>
       <benefit>If you have the Student of the Plague feat, you also gain a +2 bonus to saving throws until the end of your next turn in addition to the temporary hit points.</benefit>
    </feat>
 
    <feat>
       <title>Resilience of Stone</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dwarven Resilience</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Second Wind</group>
-      <group>Triggered</group>
-      <benefit>You can use your &lt;i&gt;second wind&lt;/i&gt; as an immediate interrupt triggered by you taking damage from an attack.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Dwarven Resilience</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Class</group> <group>Racial</group> <group>Second Wind</group> <group>Triggered</group>
+      <benefit>You can use your <i>second wind</i> as an immediate interrupt with the following trigger:</benefit>
+      <benefit name="Trigger">You take damage.</benefit>
    </feat>
 
    <feat>
       <title>Rune-scribed Soul</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dwarven Resilience</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Second Wind</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt;, you gain a bonus to damage rolls with arcane attack powers equal to your Constitution modifier until the end of your current turn.</benefit>
+      <prereq type="ability">Constitution<value>15</value></prereq>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Dwarven Resilience</prereq>
+      <prereq type="class">any arcane</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you gain a bonus to damage rolls with arcane attack powers equal to your Constitution modifier until the end of your current turn.</benefit>
    </feat>
 
    <feat>
       <title>Shield the Fallen</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <group>Defense</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
+      <prereq type="race">Dwarf</prereq>
+      <group>Defense</group> <group>Racial</group> <group>Saving Throws</group> <group>Support</group>
       <benefit>When you are adjacent to a bloodied, unconscious, or helpless ally, that ally gains a +1 bonus to saving throws and all defenses. This bonus does not stack if the ally is adjacent to more than one character with this feat.</benefit>
       <benefit>This increases to a +2 bonus if you are using a shield you have proficiency with.</benefit>
    </feat>
@@ -832,63 +513,139 @@
    <feat>
       <title>Shifting Stone</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Stand Your Ground</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Racial</group>
-      <group>Triggered</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Stand Your Ground</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Racial</group> <group>Triggered</group>
       <benefit>When you succeed in a saving throw to avoid being knocked prone, you can shift a number of squares equal to your Wisdom modifier as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Solid Footing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Encumbered Speed</name>
-      </prereq>
-      <group>Mobility</group>
-      <group>Racial</group>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Encumbered Speed</prereq>
+      <group>Mobility</group> <group>Racial</group>
       <benefit>You gain the Earth Walk ability, allowing you to ignore difficult terrain that is the result of rubble, uneven stone, or earthen construction such as stairs.</benefit>
    </feat>
 
    <feat>
+      <title>Spirits of Stone</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">any primal</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you gain a +2 bonus to the first attack roll you make with a primal attack before the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Steadfast Inspiration</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Stand Your Ground</prereq>
+      <prereq type="class">Warlord</prereq>
+      <prereq type="power" kind="class">draw inspiration</prereq>
+      <group>Class</group> <group>Forced Movement</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When an ally uses your <i>draw inspiration</i> class power, that character can reduce any pull, push, or slide against him or her by 1 square until the end of the encounter. A dwarven ally with the Standard Your Ground racial trait increases the reduction from that trait by 1 square instead.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Stone Cunning</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine="or">Dwarf</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Perception</group> <group>Skill Enhancement</group>
+      <benefit>You gain a +2 feat bonus to Dungeoneering checks.</benefit>
+      <benefit>Also, you gain a +2 bonus to any checks to detect a trap, a hazard, or a secret door.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Stone Step Spirits</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Encumbered Speed</prereq>
+      <prereq type="class">any primal</prereq>
+      <group>Charge</group> <group>Class</group> <group>Mobility</group> <group>Racial</group>
+      <benefit>While you're not wearing heavy armor, you can ignore the first square of difficult terrain when you move, or all difficult terrain when you move as part of a charge.</benefit>
+      <benefit>This increases to ignore the first 2 squares of difficult terrain when you move at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Stonefoot Reprisal</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait" combine=";">Stand Your Ground</prereq>
+      <prereq type="class" combine="or">Barbarian</prereq>
+      <prereq type="class">Fighter</prereq>
+      <group>Class</group> <group>Extra Attack</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>Enemies that push or slide you trigger <i>reactive strikes</i> from you. If your attack hits, you can choose to negate the triggering forced movement.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Stoneheart Warrior</title>
+      <tier>Epic</tier>
+      <prereq type="ability">Constitution<value>19</value></prereq>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Dwarven Resilience</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Class</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>You can use your <i>second wind</i> as a free action.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Stubborn Spirit</title>
+      <tier>Heroic</tier>
+      <prereq type="ability">Constitution<value>15</value></prereq>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Stand Your Ground</prereq>
+      <prereq type="class">Shaman</prereq>
+      <prereq type="feature">Spirit Companion</prereq>
+      <group>Class</group> <group>Defense</group> <group>Support</group>
+      <benefit>You can use the following action at-will:</benefit>
+      <benefit name="Immediate Interrupt"><trigger>An ally adjacent to your spirit companion is pushed, pulled, or slid</trigger>You reduce the forced movement by a number equal to one-half your Constitution modifier.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Thundertusk Companion</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="feature">Beast Mastery</prereq>
+      <prereq type="companion">boar</prereq>
+      <group>Animal Companion</group> <group>Class</group> <group>Hit Points</group> <group>Racial</group>
+      <benefit>Your beast companion gains additional hit points equal to 5 or your level, whichever is higher.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Tunnel Stalker</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="trait">Dwarven Weapon Proficiency</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>You can use any one-handed Axe, one-handed Hammer, or one-handed Pick with rogue powers that require a Light Blade.</benefit>
+      <benefit>Also, you can deal Sneak Attack damage with any one-handed Axe, one-handed Hammer, or one-handed Pick. When you do, you deal +1 damage.</benefit>
+      <benefit>This damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unstoppable Drive</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine=";">Dwarf</prereq>
+      <prereq type="role" combine="or">Defender</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you can shift 1 square as a free reaction. You must end this movement in a space adjacent to at least one enemy.</benefit>
+      <benefit>This increases to shift up to 2 squares at 21st level.</benefit>
+   </feat>
+   
+   <feat>
       <title>Wrath of Ages Past</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Invoker</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>armor of wrath</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Size-based</group>
-      <benefit>When you use your &lt;i&gt;armor of wrath&lt;/i&gt; Channel Divinity power against an enemy larger than you, add your Wisdom modifier to the damage dealt by the power.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="class">Invoker</prereq>
+      <prereq type="power" kind="Channel Divinity">armor of wrath</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Size-based</group>
+      <benefit>When you use your <i>armor of wrath</i> Channel Divinity power against an enemy larger than you, add your Wisdom modifier to the damage dealt by the power.</benefit>
       <benefit>This additional damage increases to 3 + your Wisdom modifier at 11th level, and to 6 + your Wisdom modifier at 21st level.</benefit>
    </feat>
 
@@ -896,38 +653,20 @@
       <title>Wrathful Legacy</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Forgeborn Heritage</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Forgeborn Heritage</group>
-      <group>Power Recovery</group>
-      <group>Racial</group>
-      <benefit>The first time in an encounter that you are bloodied, you regain the use of your &lt;i&gt;elemental legacy&lt;/i&gt; power.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="feat">Forgeborn Heritage</prereq>
+      <group>Bloodied</group> <group>Forgeborn Heritage</group> <group>Power Recovery</group> <group>Racial</group>
+      <benefit>The first time in an encounter that you are bloodied, you regain the use of your <i>elemental legacy</i> power.</benefit>
    </feat>
 
    <feat>
       <title>Wrathful Resurgence</title>
       <tier>Paragon</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Dwarf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Forgeborn Heritage</name>
-      </prereq>
-      <group>Forgeborn Heritage</group>
-      <group>Racial</group>
-      <group>Second Wind</group>
-      <group>Temporary Hit Points</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt;, you also gain temporary hit points equal to one-half your healing surge value.</benefit>
+      <prereq type="race">Dwarf</prereq>
+      <prereq type="feat">Forgeborn Heritage</prereq>
+      <group>Forgeborn Heritage</group> <group>Racial</group> <group>Second Wind</group> <group>Temporary Hit Points</group>
+      <benefit>When you use your <i>second wind</i>, you also gain temporary hit points equal to one-half your healing surge value.</benefit>
    </feat>
 
    </catalog>

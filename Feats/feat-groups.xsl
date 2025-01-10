@@ -696,4 +696,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 </xsl:template>
 
+<xsl:template match="text()">
+   <xsl:value-of select="." disable-output-escaping="yes" />
+</xsl:template>
+
+<xsl:template match="b">
+   <b><xsl:apply-templates /></b>
+</xsl:template>
+
+<xsl:template match="i">
+   <i><xsl:apply-templates /></i>
+</xsl:template>
+
+<xsl:template match="br">
+   <br />
+</xsl:template>
+
 </xsl:stylesheet>

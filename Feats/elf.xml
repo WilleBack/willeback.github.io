@@ -156,42 +156,20 @@
    <feat>
       <title>Aerenal Arcanist</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-      </prereq>
-      <prereq>
-         <type>background</type>
-         <name>Aerenal</name>
-      </prereq>
-      <group>Arcane</group>
-      <group>Background</group>
-      <group>Power Repertoire</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">any arcane</prereq>
+      <prereq type="background">Aerenal</prereq>
+      <group>Arcane</group> <group>Background</group> <group>Power Repertoire</group> <group>Racial</group>
       <benefit>Choose an additional power for each level of utility power you know from an arcane class. Each time you learn a new level of utility powers for an arcane class, choose an additional one of the same level.</benefit>
-      <benefit>After an extended reach, choose which arcane utility power of each level you can use for that day. This feat does not change the number of arcane utility powers you can use each day.</benefit>
+      <benefit>After an extended rest, choose which arcane utility power of each level you can use for that day. This feat does not change the number of arcane utility powers you can use each day.</benefit>
       <benefit>If you use a Spellbook, the additional utility power is in addition to any you gain from that feature.</benefit>
    </feat>
    <feat>
       <title>Aerenal Half-life</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>background</type>
-         <name>Aerenal</name>
-      </prereq>
-      <group>Action Point</group>
-      <group>Attack Bonus</group>
-      <group>Background</group>
-      <group>Necrotic Specialization</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="background">Aerenal</prereq>
+      <group>Action Point</group> <group>Attack Bonus</group> <group>Background</group> <group>Necrotic</group> <group>Racial</group>
       <benefit>You gain a +2 feat bonus to damage rolls with necrotic powers.</benefit>
       <benefit>This bonus increases to +3 at 11th level, and +4 at 21st level.</benefit>
       <benefit>In addition, you also gain the bonus to attack rolls with necrotic powers you make during any extra action you gain by spending an action point.</benefit>
@@ -199,164 +177,78 @@
    <feat>
       <title>Ancestral Battle Accuracy</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>Elven Accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>background</type>
-         <name>Aerenal</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Background</group>
-      <group>Racial</group>
-      <benefit>You can use your &lt;i&gt;elven accuracy&lt;/i&gt; to reroll attack rolls of a single close or area Weapon attack power against every target you choose while wielding a scimitar, double scimitar, falchion, shortbow, or spear.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="background">Aerenal</prereq>
+      <group>Attack Bonus</group> <group>Background</group> <group>Racial</group>
+      <benefit>You can use your <i>elven accuracy</i> to reroll attack rolls of a single close or area Weapon attack power against every target you choose while wielding the scimitar, double scimitar, falchion, shortbow, or spear.</benefit>
    </feat>
+   <feat>
+      <title>Aquatic Blood</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine="or">Elf</prereq>
+      <prereq type="race">Half-elf</prereq>
+      <group>Background</group> <group>Mobility</group> <group>Racial</group>
+      <benefit>You gain a swim speed of 5.</benefit>
+      <benefit>In addition, you gain the <key>Aquatic</key> keyword. In aquatic combat, you gain a +2 bonus to attack rolls against non-aquatic creatures.</benefit>
+   </feat>
+   
    <feat>
       <title>Archery Enforcement</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Elven Weapon Proficiency</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>enforce challenge</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mark Punishment</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
-      <benefit>You can trigger your &lt;i&gt;enforce challenge&lt;/i&gt; class power against enemies adjacent to you and marked by you when you wield a Bow, even though you do not threaten an area.</benefit>
-      <benefit>When you do, you can make a &lt;i&gt;ranged basic attack&lt;/i&gt; with the bow instead of a &lt;i&gt;melee basic attack&lt;/i&gt;, and this attack does not provoke &lt;i&gt;reactive strikes&lt;/i&gt;.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="trait">Elven Weapon Proficiency</prereq>
+      <prereq type="class">Fighter</prereq>
+      <prereq type="power" kind="class">enforce challenge</prereq>
+      <group>Class</group> <group>Mark Punishment</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>You can trigger your <i>enforce challenge</i> class power against enemies adjacent to you and marked by you when you wield a Bow, even though you do not threaten an area.</benefit>
+      <benefit>When you do, you can make a <i>ranged basic attack</i> with the bow instead of a <i>melee basic attack</i>, and this attack does not provoke <i>reactive strikes</i>.</benefit>
    </feat>
 
    <feat>
       <title>Blessing of Corellon</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Triggered</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power and the triggering attack roll hits, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Support</group> <group>Triggered</group> <group>Worship</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power and the triggering attack roll hits, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Bow Caster</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-      </prereq>
-      <group>Class</group>
-      <group>Implement Specialization</group>
-      <group>Proficiency Gain</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">any arcane</prereq>
+      <group>Class</group> <group>Implement Specialization</group> <group>Proficiency Gain</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>You gain proficiency in bows as an implement.</benefit>
    </feat>
 
    <feat>
       <title>Brutal Accuracy</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Hunter's Quarry</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>If the rerolled attack granted by your &lt;i&gt;elven accuracy&lt;/i&gt; racial power hits your quarry, the attack deals extra damage equal to 1d6 + your Wisdom modifier.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Ranger</prereq>
+      <prereq type="feature">Hunter's Quarry</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>If the rerolled attack granted by your <i>elven accuracy</i> racial power hits your quarry, the attack deals extra damage equal to 1d6 + your Wisdom modifier.</benefit>
       <benefit>This extra damage increases to 2d6 + your Wisdom modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Corellon's Wrath Style</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Intelligence</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Defense</group>
-      <group>Demon-hunting</group>
-      <group>Drow-hunting</group>
-      <group>Flanking</group>
-      <group>Orc-hunting</group>
-      <group>Spider-hunting</group>
-      <group>Support</group>
+      <prereq type="ability">Intelligence<value>15</value></prereq>
+      <prereq type="race" combine="or">Eladrin</prereq>
+      <prereq type="race" combine=";">Elf</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Damage Bonus</group> <group>Defense</group> <group>Demon-hunting</group> <group>Drow-hunting</group> <group>Flanking</group> <group>Orc-hunting</group> <group>Spider-hunting</group> <group>Support</group>
       <benefit>You gain the following benefits with at-will melee Weapon attacks against demons, drow, orcs and spiders:</benefit>
-      <benefit>&#9658; You deal an additional +2 damage.</benefit>
-      <benefit>&#9658; You add one-half your Intelligence modifier (minimum +1) on attack rolls when flanking.</benefit>
-      <benefit>Also, you add your Intelligence modifier (minimum +2) as a bonus to to AC against &lt;i&gt;reactive strikes&lt;/i&gt; by demons, drow, orcs and spiders.</benefit>
+      <benefit><bullet />You deal an additional +2 damage.</benefit>
+      <benefit><bullet />You add one-half your Intelligence modifier (minimum +1) on attack rolls when flanking.</benefit>
+      <benefit>Also, you add your Intelligence modifier (minimum +2) as a bonus to to AC against <i>reactive strikes</i> by demons, drow, orcs and spiders.</benefit>
       <benefit>In addition, if you grant an ally a melee attack against a demon, drow, orc, or spider, he or she deals +2 additional damage.</benefit>
       <benefit>Both additional damages increase to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
@@ -364,39 +256,19 @@
    <feat>
       <title>Dawn Hunter Training</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>You can use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll a damage roll instead of an attack roll. If you do so, you must reroll all the dice, and use the higher of the two totals.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>You can use your <i>elven accuracy</i> racial power to reroll a damage roll instead of an attack roll. If you do so, you must reroll all the dice, and use the higher of the two totals.</benefit>
    </feat>
 
    <feat>
       <title>Dusk Elf Heritage</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <group>Dusk Elf Heritage</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <group>Stealth</group>
-      <group>Support</group>
+      <prereq type="race">Elf</prereq>
+      <group>Dusk Elf Heritage</group> <group>Racial</group> <group>Skill Enhancement</group> <group>Stealth</group> <group>Support</group>
       <benefit>All allies within 6 squares of you gain a +2 racial bonus to Stealth checks.</benefit>
    </feat>
 
@@ -404,19 +276,9 @@
       <title>Dusk Elf Weapon Training</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Dusk Elf Heritage</name>
-      </prereq>
-      <group>Damage Bonus</group>
-      <group>Dusk Elf Heritage</group>
-      <group>Proficiency Gain</group>
-      <group>Racial</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="feat">Dusk Elf Heritage</prereq>
+      <group>Damage Bonus</group> <group>Dusk Elf Heritage</group> <group>Proficiency Gain</group> <group>Racial</group> <group>Weapon Specialization</group>
       <benefit>You gain proficiency with simple light blades and military light blades.</benefit>
       <benefit>Also, you gain a +2 feat bonus to damage rolls with these weapons.</benefit>
       <benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
@@ -425,150 +287,70 @@
    <feat>
       <title>Elven Arcane Precision</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll an attack roll for an arcane attack, you can reroll all attack rolls for that power that you wish.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">any arcane</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Racial</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power to reroll an attack roll for an arcane attack, you can reroll all attack rolls for that power that you wish.</benefit>
    </feat>
 
    <feat>
       <title>Elven Beast Mastery</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Wild Step</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Beast Mastery</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Animal Companion</group>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Ranger</prereq>
+      <prereq type="trait">Wild Step</prereq>
+      <prereq type="feature">Beast Mastery</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Animal Companion</group> <group>Attack Bonus</group> <group>Class</group> <group>Mobility</group> <group>Racial</group>
       <benefit>Your beast companion ignores difficult terrain when it shifts.</benefit>
-      <benefit>Also, you can trigger your &lt;i&gt;elven accuracy&lt;/i&gt; racial power when you make an attack roll for your beast companion and dislike the result. If you do, you apply the normal benefits of that power to your beast companion instead of yourself.</benefit>
+      <benefit>Also, you can trigger your <i>elven accuracy</i> racial power when you make an attack roll for your beast companion and dislike the result. If you do, you apply the normal benefits of that power to your beast companion instead of yourself.</benefit>
    </feat>
 
    <feat>
       <title>Elven Guardian</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warden</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power while you are in a Guardian Form, you gain a +3 feat bonus to the new attack roll.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Warden</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Racial</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power while you are in a Guardian Form, you gain a +3 feat bonus to the new attack roll.</benefit>
       <benefit>If you have the Elven Precision feat, this bonus increases to a +5 feat bonus.</benefit>
    </feat>
 
    <feat>
       <title>Elven Precision</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power, you gain a +2 feat bonus to the new attack roll.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Attack Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power, you gain a +2 feat bonus to the new attack roll.</benefit>
    </feat>
 
    <feat>
       <title>Elven Resilience</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Defense</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power and hit, you gain a +2 bonus to Will and to saving throws. These bonuses last until the start of your next turn.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Defense</group> <group>Power Enhancement</group> <group>Racial</group> <group>Saving Throws</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power and hit, you gain a +2 bonus to Will and to saving throws. These bonuses last until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Elven Sidestep</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Mobility</group>
-      <group>Racial</group>
-      <benefit>When you move, the first square of your movement does not provoke &lt;i&gt;reactive strikes&lt;/i&gt; from enemies marked by you.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Fighter</prereq>
+      <group>Class</group> <group>Defense</group> <group>Mobility</group> <group>Racial</group>
+      <benefit>When you move, the first square of your movement does not provoke <i>reactive strikes</i> from enemies marked by you.</benefit>
    </feat>
 
    <feat>
       <title>Elven Slayer</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group>
       <benefit>While none of your allies are closer to your target than you are, you gain a +2 bonus to damage rolls for ranged attacks against that target. When determining if an ally is closer to the target, ignore allies that are helpless, stunned, dominated, unconscious or petrified.</benefit>
       <benefit>This bonus to damage rolls increases to +3 at 21st level.</benefit>
    </feat>
@@ -576,109 +358,52 @@
    <feat>
       <title>Eyes of the Spirits</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Group Awareness</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any primal</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Support</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="trait">Group Awareness</prereq>
+      <prereq type="class">any primal</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Racial</group> <group>Support</group>
       <benefit>Each ally affected by your Group Awareness racial trait does not take the -2 penalty for attacking an enemy that has concealment. This does not affect total concealment.</benefit>
    </feat>
 
    <feat>
       <title>Feral Advance</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Battlemind</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>speed of though</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;speed of thought&lt;/i&gt; class power, you can use your Dexterity modifier in place of your Charisma modifier to determine how far you can move.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Battlemind</prereq>
+      <prereq type="power" kind="class">speed of thought</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>speed of thought</i> class power, you can use your Dexterity modifier in place of your Charisma modifier to determine how far you can move.</benefit>
       <benefit>If you have the Wild Step racial trait, you ignore difficult terrain during the move.</benefit>
    </feat>
 
    <feat>
       <title>Fey Cantrip</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>origin</type>
-         <name>fey</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Fey Bond</name>
-      </prereq>
-      <group>Fey Nature</group>
-      <group>Power Repertoire</group>
+      <prereq type="origin" combine="or">fey</prereq>
+      <prereq type="feat">Fey Bond</prereq>
+      <group>Fey Nature</group> <group>Power Repertoire</group>
       <benefit>Choose one at-will power available as part of the Wizard class's Cantrips class feature. You gain that power.</benefit>
    </feat>
 
    <feat>
       <title>Fey Fate</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll an attack roll against your oath target, you gain a +2 bonus to damage rolls against that target until the end of your next turn.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power">elven accuracy</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power to reroll an attack roll against your oath target, you gain a +2 bonus to damage rolls against that target until the end of your next turn.</benefit>
       <benefit>This damage bonus increases to +4 at 11th level, and to +6 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Fey Shift</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>origin</type>
-         <name>fey</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Fey Bond</name>
-      </prereq>
-      <group>Fey Nature</group>
-      <group>Power Repertoire</group>
-      <group>Teleportation</group>
-      <benefit>You gain the &lt;i&gt;fey shift&lt;/i&gt; feat power.</benefit>
+      <prereq type="origin" combine="or">fey</prereq>
+      <prereq type="feat">Fey Bond</prereq>
+      <group>Fey Nature</group> <group>Power Repertoire</group> <group>Teleportation</group>
+      <benefit>You gain the <i>fey shift</i> feat power.</benefit>
 
       <power>
          <title>Fey Shift</title>
@@ -699,21 +424,12 @@
       <title>Foulborn Heritage</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>origin</type>
-         <name>natural</name>
-      </prereq>
-      <prereq>
-         <type>type</type>
-         <name>humanoid</name>
-      </prereq>
-      <group>Foulborn Heritage</group>
-      <group>Physical Change</group>
-      <group>Power Repertoire</group>
-      <group>Psychic Specialization</group>
+      <prereq type="origin">natural</prereq>
+      <prereq type="type">humanoid</prereq>
+      <group>Foulborn Heritage</group> <group>Physical Change</group> <group>Power Repertoire</group> <group>Psychic</group>
       <benefit>You are a foulborn.</benefit>
       <benefit>Your origin changes to aberrant instead of natural.</benefit>
-      <benefit>Also, you have the &lt;i&gt;unbalanced mind&lt;/i&gt; power.</benefit>
+      <benefit>Also, you have the <i>unbalanced mind</i> power.</benefit>
 
       <power>
          <title>Unbalanced Mind</title>
@@ -730,7 +446,7 @@
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>Until the end of your next turn, you have an Aura 1 (Psionic, Psychic).</text>
+               <text>Until the end of your next turn, you have an Aura 1 (<key>Psionic</key>, <key>Psychic</key>).</text>
             </section>
             <section>
                <shade>true</shade>
@@ -754,38 +470,19 @@
       <title>Gathering Night</title>
       <tier>Paragon</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Dusk Elf Heritage</name>
-      </prereq>
-      <group>Concealment</group>
-      <group>Dusk Elf Heritage</group>
-      <group>Racial</group>
-      <group>Stealth</group>
-      <group>Triggered</group>
-      <benefit>Whenever you take the &lt;i&gt;total defense&lt;/i&gt; action while you have concealment, you become invisible until the start of your next turn.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="feat">Dusk Elf Heritage</prereq>
+      <group>Concealment</group> <group>Dusk Elf Heritage</group> <group>Racial</group> <group>Stealth</group> <group>Triggered</group>
+      <benefit>Whenever you take the <i>total defense</i> action while you have concealment, you become invisible until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Gloaming Ward</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Dusk Elf Heritage</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Concealment</group>
-      <group>Dusk Elf Heritage</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="feat">Dusk Elf Heritage</prereq>
+      <group>Bloodied</group> <group>Concealment</group> <group>Dusk Elf Heritage</group> <group>Racial</group>
       <benefit>The first time you are bloodied in an encounter, you gain concealment until the end of your next turn.</benefit>
       <benefit>Starting at 11th level, you gain concealment each time you are bloodied.</benefit>
    </feat>
@@ -793,18 +490,9 @@
    <feat>
       <title>Guiding Step</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlord</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Racial</group>
-      <group>Support</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Warlord</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Racial</group> <group>Support</group>
       <benefit>Whenever you use a power that lets your allies shift, they ignore the first square of difficult terrain during the shift.</benefit>
       <benefit>The number of difficult terrain ignored increases to 2 squares at 11th level, and to 3 squares at 21st level.</benefit>
    </feat>
@@ -812,113 +500,62 @@
    <feat>
       <title>Hawkeye Warrior</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>19</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power, you gain a +1 bonus to attack rolls against the target of the triggering attack, including on the triggering attack. This bonus lasts until the end of the encounter.</benefit>
+      <prereq type="ability">Wisdom<value>19</value></prereq>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">any martial</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power, you gain a +1 bonus to attack rolls against the target of the triggering attack, including on the triggering attack. This bonus lasts until the end of the encounter.</benefit>
    </feat>
 
    <feat>
       <title>High Elf Kin</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <group>Teleportation</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Power Enhancement</group> <group>Racial</group> <group>Skill Enhancement</group> <group>Teleportation</group>
       <benefit>You gain a +2 feat bonus to Arcana checks.</benefit>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power, you can use a free reaction to teleport 2 squares.</benefit>
+      <benefit>When you use your <i>elven accuracy</i> racial power, you can use a free reaction to teleport 2 squares.</benefit>
    </feat>
 
    <feat>
       <title>Hunter's Advantage</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Hunter's Quarry</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Ranger</prereq>
+      <prereq type="feature">Hunter's Quarry</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group> <group>Racial</group>
       <benefit>Your Hunter's Quarry additional damage increases by 2 when you have combat advantage against your quarry.</benefit>
       <benefit>The damage increases by 4 starting at 21st level.</benefit>
    </feat>
 
    <feat>
+      <title>Inspiration of the Ancients</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Warlord</prereq>
+      <prereq type="power" kind="class">draw inspiration</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group> <group>Temporary Hit Points</group>
+      <benefit>If an ally is adjacent to an enemy or has made a ranged attack against an enemy in the same turn when he or she uses your <i>draw inspiration</i> class power, you can use a free interrupt to grant that ally temporary hit points equal to 2 + your Intelligence modifier.</benefit>
+      <benefit>These temporary hit points increase to 6 + your Intelligence modifier at 11th level, and to 10 + your Intelligence modifier at 21st level.</benefit>
+   </feat>
+
+   <feat>
       <title>Leading Shot</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Elven Weapon Proficiency</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlord</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Weapon Specialization</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="trait">Elven Weapon Proficiency</prereq>
+      <prereq type="class">Warlord</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Racial</group> <group>Support</group> <group>Weapon Specialization</group>
       <benefit>When you hit an enemy with an attack using a Bow that you have proficiency with, each ally within 10 squares of you who can see and hear you gains a +1 bonus to ranged attack rolls against the target until the start of of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Light Step</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Wild Step</name>
-      </prereq>
-      <group>Exploration</group>
-      <group>Mobility</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <group>Support</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="trait">Wild Step</prereq>
+      <group>Exploration</group> <group>Mobility</group> <group>Racial</group> <group>Skill Enhancement</group> <group>Support</group>
       <benefit>You gain a +1 feat bonus to Acrobatics checks and to Stealth checks.</benefit>
       <benefit>Also, allies traveling with you gain a +1 bonus to their exploration speed.</benefit>
       <benefit>In addition, the DC to find or follow your tracks increases by +5. You can share this benefit with up to five allies traveling with you.</benefit>
@@ -927,21 +564,10 @@
    <feat>
       <title>Light-footed Warrior</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Wild Step</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <prereq type="trait">Wild Step</prereq>
+      <prereq type="class">Fighter</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Racial</group>
       <benefit>When you use a fighter attack power that allows you to move, you ignore the first square of difficult terrain during that movement.</benefit>
       <benefit>You ignore the first 2 squares of difficult terrain starting at 11th level, and all difficult terrain starting at 21st level.</benefit>
    </feat>
@@ -949,166 +575,74 @@
    <feat>
       <title>Martial Accuracy</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll the attack roll of a martial attack, you can roll twice and use either result.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power to reroll the attack roll of a martial attack, you can roll twice and use either result.</benefit>
    </feat>
 
    <feat>
       <title>Opportunistic Accuracy</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Fighter</name>
-      </prereq>
-      <group>Class</group>
-      <group>Miss Mitigation</group>
-      <group>Reactive Strikes</group>
-      <group>Power Recovery</group>
-      <group>Racial</group>
-      <benefit>If you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll the attack roll for a &lt;i&gt;reactive strike&lt;/i&gt; and still miss, you do not expend the power.</benefit>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="class">Fighter</prereq>
+      <group>Class</group> <group>Miss Mitigation</group> <group>Power Recovery</group> <group>Racial</group> <group>Reactive Strikes</group>
+      <benefit>If you use your <i>elven accuracy</i> racial power to reroll the attack roll for a <i>reactive strike</i> and still miss, you do not expend the power.</benefit>
    </feat>
 
    <feat>
       <title>Otherworldly Accuracy</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Shaman</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Spirit Companion</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll an attack roll for a shaman Spirit attack and that attack hits, each ally adjacent to your spirit companion gains a +2 power bonus to attack rolls against the target until the start of your next turn.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="class">Shaman</prereq>
+      <prereq type="feature">Spirit Companion</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power to reroll an attack roll for a shaman Spirit attack and that attack hits, each ally adjacent to your spirit companion gains a +2 power bonus to attack rolls against the target until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Plaguescorch Accuracy</title>
       <category>Spellscar</category>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Fire Specialization</group>
-      <group>Necrotic Specialization</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Spellscar</group>
-      <benefit>Your &lt;i&gt;elven accuracy&lt;/i&gt; racial power gains the Fire and Necrotic keywords. Whenever you use the power, you ignore cover and concealment on the rerolled attack roll, and the attack deals fire and necrotic damage in addition to its normal damage type or types, gaining those keywords.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <group>Fire</group> <group>Necrotic</group> <group>Power Enhancement</group> <group>Racial</group> <group>Spellscar</group>
+      <benefit>Your <i>elven accuracy</i> racial power gains the <key>Fire</key> and <key>Necrotic</key> keywords. Whenever you use the power, you ignore cover and concealment on the rerolled attack roll, and the attack deals fire and necrotic damage in addition to its normal damage type or types, gaining those keywords.</benefit>
       <benefit>If you have the Student of the Plague feat, and you hit with the triggering attack, creatures adjacent to the target take fire and necrotic damage equal to one-half your level.</benefit>
    </feat>
 
    <feat>
       <title>Psionic Accuracy</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any psionic</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Psionic Augmentation</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Power Enhancement</group>
-      <group>Psionics</group>
-      <group>Racial</group>
-      <benefit>Your &lt;i&gt;elven accuracy&lt;/i&gt; racial power gains the Augmentable keyword with the following augment:</benefit>
-      <benefit>&lt;span style="font-variant:small-caps;"&gt;&lt;b&gt;Augment 1:&lt;/b&gt;&lt;/span&gt; You gain combat advantage against the target of the triggering attack roll until the end of your next turn.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="class">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Psionics</group> <group>Racial</group>
+      <benefit>Your <i>elven accuracy</i> racial power gains the <key>Augmentable</key> keyword with the following augment:</benefit>
+      <benefit><aug>Augment 1:</aug> You gain combat advantage against the target of the triggering attack roll until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Roar of the Ancestors</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Barbarian</name>
-      </prereq>
-      <prereq>
-         <type>skill</type>
-         <name>Intimidate</name>
-      </prereq>
-      <group>Class</group>
-      <group>Fear</group>
-      <group>Forced Movement</group>
-      <group>Racial</group>
-      <benefit>When you hit an enemy with a barbarian Fear attack power, you can push the target 1 square in addition to any other effects of the attack. If the attack already pushes, you instead increase the maximum distance by 1 square.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Barbarian</prereq>
+      <prereq type="skill">Intimidate</prereq>
+      <group>Class</group> <group>Fear</group> <group>Forced Movement</group> <group>Racial</group>
+      <benefit>When you hit an enemy with a barbarian <key>Fear</key> attack power, you can push the target 1 square in addition to any other effects of the attack. If the attack already pushes, you instead increase the maximum distance by 1 square.</benefit>
       <benefit>The push or increase to push increases to 2 squares at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Running Shot</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <group>Mobility</group>
-      <group>Racial</group>
+      <prereq type="race">Elf</prereq>
+      <group>Mobility</group> <group>Racial</group>
       <benefit>You don't take any attack penalty to ranged attacks for running.</benefit>
    </feat>
 
@@ -1116,23 +650,10 @@
       <title>Sehanine's Boon</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Dusk Elf Heritage</name>
-      </prereq>
-      <group>Concealment</group>
-      <group>Dusk Elf Heritage</group>
-      <group>Healing</group>
-      <group>Racial</group>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="race">Elf</prereq>
+      <prereq type="feat">Dusk Elf Heritage</prereq>
+      <group>Concealment</group> <group>Dusk Elf Heritage</group> <group>Healing</group> <group>Racial</group>
       <benefit>Whenever you spend a healing surge to regain hit points and you have total concealment, you regain additional hit points equal to your Wisdom modifier.</benefit>
       <benefit>These additional hit points increase to 2 + your Wisdom modifier at 11th level, and to 4 + your Wisdom modifier at 21st level.</benefit>
    </feat>
@@ -1140,29 +661,155 @@
    <feat>
       <title>Sneaky Accuracy</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Sneak Attack</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Miss Mitigation</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>If you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll an attack against an enemy granting you combat advantage and miss, you regain your &lt;i&gt;elven accuracy&lt;/i&gt; power at the start of your next turn.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="class">Rogue</prereq>
+      <prereq type="feature">Sneak Attack</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Miss Mitigation</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>If you use your <i>elven accuracy</i> racial power to reroll an attack against an enemy granting you combat advantage and miss, you regain your <i>elven accuracy</i> power at the start of your next turn.</benefit>
    </feat>
 
+   <feat>
+      <title>Starshine Mantle</title>
+      <tier>Heroic</tier>
+      <prereq type="origin" combine="or">fey</prereq>
+      <prereq type="feat" combine=";">Fey Bond</prereq>
+      <prereq type="class">Warden</prereq>
+      <group>Class</group> <group>Concealment</group> <group>Defense</group> <group>Fey Nature</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you gain concealment until the start of your next turn or until you make an attack, whichever comes first.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Swift Rider</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="feat">Mounted Combat</prereq>
+      <group>Mobility</group> <group>Mounted Combat</group> <group>Racial</group>
+      <benefit>You gain a +1 feat bonus to speed.</benefit>
+      <benefit>Also, while you are mounted, the mount gains a +2 feat bonus to speed.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Sylvan Fury</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Warden</prereq>
+      <prereq type="feature">Nature's Wrath</prereq>
+      <group>Class</group> <group>Marking</group> <group>Mobility</group> <group>Racial</group>
+      <benefit>When you mark enemies with Nature's Wrath, you can swap positions with one enemy adjacent to you that you marked or that was already marked by you. This counts as a shift for you, and a slide for the enemy.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Treetop Sniper</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="trait">Elven Weapon Proficiency</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>You can use any Bow with rogue powers that require a Crossbow.</benefit>
+      <benefit>Also, you can deal Sneak Attack damage with any Bow. When you do, you deal +1 damage.</benefit>
+      <benefit>This damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Umbral Wind</title>
+      <tier>Heroic</tier>
+      <category>Bloodline</category>
+      <prereq type="race">Elf</prereq>
+      <prereq type="feat">Dusk Elf Heritage</prereq>
+      <group>Concealment</group> <group>Dusk Elf Heritage</group> <group>Racial</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you can choose to gain concealment instead of the normal bonus to defenses. If you already have concealment, you gain total concealment instead.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Valenar Dervish Stalwart</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Fighter</prereq>
+      <prereq type="feat">Valenar Dervish Student</prereq>
+      <group>Background</group> <group>Class</group> <group>Forced Movement</group> <group>Mobility</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>When you make a Weapon attack with the scimitar or the double scimitar and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit bullet="">After resolving a martial encounter attack, you can shift up to 2 squares, and then slide one target you hit with the attack up to 2 squares to a space adjacent to you.</benefit>
+      <benefit bullet="">When you hit an enemy with a fighter encounter attack that pushes, you can slide the enemy the same distance instead.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Valenar Dervish Student</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine=";">Elf</prereq>
+      <prereq type="class" combine="or">Fighter</prereq>
+      <prereq type="class" combine=";">Ranger</prereq>
+      <prereq type="proficiency" combine="or">the scimitar</prereq>
+      <prereq type="proficiency">the double scimitar</prereq>
+      <group>Background</group> <group>Class</group> <group>Mobility</group> <group>Racial</group> <group>Skill Enhancement</group> <group>Weapon Specialization</group>
+      <benefit>You gain a +2 feat bonus to Acrobatics checks.</benefit>
+      <benefit>Also, after you make a martial at-will attack using the scimitar or the double scimitar, you can shift 1 square as a minor action until the end of your current turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Valenar Dervish Whirlwind</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="clss">Ranger</prereq>
+      <prereq type="feat">Valenar Dervish Student</prereq>
+      <group>Background</group> <group>Class</group> <group>Forced Movement</group> <group>Mobility</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>When you make a Weapon attack with the scimitar or the double scimitar and you have proficiency with that weapon, you gain the following benefits:</benefit>
+      <benefit bullet="">When you hit an enemy with a martial encounter attack, you can shift 1 square to a space adjacent to the that enemy as part of the hit effect, and then push that enemy up to 1 square after the attack has been resolved.</benefit>
+      <benefit>The shift increases to up to 2 squares at 21st level.</benefit>
+      <benefit bullet="">When you make a ranger encounter attack that allows you to push or slide the target, you can choose to instead shift the same distance.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Valenar Rider Training</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <group>Background</group> <group>Damage Bonus</group> <group>Mounted Combat</group> <group>Proficiency Gain</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with all simple Spears and military Spears.</benefit>
+      <benefit>Also, while you are mounted, you gain a +2 feat bonus to damage rolls with the shortbow and all Spears.</benefit>
+      <benefit>This bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+      <benefit>In addition, if you have the <i>elven accuracy</i> racial power, you can trigger it on attack rolls made by your mount.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Valenar Swordmage Warding</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Swordmage</prereq>
+      <prereq type="feature">Swordmage Warding</prereq>
+      <group>Background</group> <group>Class</group> <group>Defense</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>When you wield the double scimitar or the falchion, the bonus to AC granted by your Swordmage Warding increases to +2.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Valenar Weapon Training</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <group>Background</group> <group>Damage Bonus</group> <group>Proficiency Gain</group> <group>Racial</group> <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with the scimitar, the double scimitar, and the falchion.</benefit>
+      <benefit>Also, you gain a +2 feat bonus to damage rolls with these weapons.</benefit>
+      <benefit>The bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Valenar Wild Grasp</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Warden</prereq>
+      <prereq type="power" kind="class">warden's grasp</prereq>
+      <group>Background</group> <group>Class</group> <group>Forced Movement</group> <group>Mark Punishment</group> <group>Racial</group>
+      <benefit>When you use your <i>warden's grasp</i> class power, you can pull the target 3 squares instead of sliding it.</benefit>
+   </feat>
+
+   <feat>
+      <title>Wild Wrath</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Elf</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="class">Invoker</prereq>
+      <prereq type="feature">Covenant of Wrath</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>elven accuracy</i> power to reroll the attack roll for an invoker encounter attack or invoker daily attack power, you deal +4 additional damage to any target you hit with the reroll.</benefit>
+      <benefit>This additional damage increases to +6 at 11th level, and to +8 at 21st level.</benefit>
+   </feat>
+   
    </catalog>

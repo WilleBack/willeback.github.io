@@ -162,57 +162,22 @@
    <feat>
       <title>Admixture Breath</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Adaptable Breath</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Radiant Breath</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt;, you can choose for it to deal two types of damage and gain both keywords. Both damage types must be ones you are capable of delivering with your &lt;i&gt;dragon breath&lt;/i&gt;.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="power" kind="racial" combine=";">dragon breath</prereq>
+      <prereq type="feat" combine="or">Adaptable Breath</prereq>
+      <prereq type="feat">Radiant Breath</prereq>
+      <prereq type="hidden">any divine</prereq>
+      <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>dragon breath</i>, you can choose for it to deal two types of damage and gain both keywords. Both damage types must be ones you are capable of delivering with your <i>dragon breath</i>.</benefit>
    </feat>
    <feat>
       <title>Agile Stand</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="class" combine="or">Ranger</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Mobility</group>
       <benefit>Once per turn when you stand up from prone, you can also shift 1 square.</benefit>
       <benefit>This increases to up to 2 squares at 21st level.</benefit>
    </feat>
@@ -220,155 +185,75 @@
    <feat>
       <title>Arbiter of Justice</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Triggered</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Bloodied Enemy</group> <group>Class</group> <group>Damage Bonus</group> <group>Triggered</group>
       <benefit>You deal +2 damage against bloodied targets.</benefit>
-      <benefit>Additionally, whenever an ally bloodies or reduces your &lt;i&gt;oath of enmity&lt;/i&gt; target to 0 hit points, you may act as though you had bloodied or reduced the target to 0 hit points, as appropriate.</benefit>
+      <benefit>Additionally, whenever an ally bloodies or reduces your oath target to 0 hit points, you may act as though you had bloodied or reduced the target to 0 hit points, as appropriate.</benefit>
    </feat>
    <feat>
       <title>Armored by Faith</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Temporary Hit Points</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Temporary Hit Points</group>
       <benefit>When you use a Channel Divinity power, you gain temporary hit points equal to 3 + your Wisdom modifier.</benefit>
       <benefit>These temporary hit points increase to 6 + your Wisdom modifier at 21st level.</benefit>
    </feat>
    <feat>
       <title>Astral Enmity</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>memory of a thousand lifetimes</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>If you use your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power to increase an attack roll against your &lt;i&gt;oath of enmity&lt;/i&gt; target, you deal extra damage equal to the bonus gained from the racial power.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="racial">memory of a thousand lifetimes</prereq>
+      <prereq type="power">swear enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>If you use your <i>memory of a thousand lifetimes</i> racial power to increase an attack roll against your oath target, you deal extra damage equal to the bonus gained from the racial power.</benefit>
       <benefit>This extra damage increases to twice the bonus to attack at 11th level, and to three times the bonus to attack at 21st level.</benefit>
    </feat>
    <feat>
       <title>Avandra's Boon</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Avandra</name>
-      </prereq>
-      <group>Class</group>
-      <group>Miss Mitigation</group>
-      <group>Saving Throws</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Class</group> <group>Miss Mitigation</group> <group>Saving Throws</group> <group>Worship</group>
       <benefit>When you roll a natural 1 on an attack roll or saving throw, you gain a +2 bonus to your next roll of the same type you make before the end of your next turn.</benefit>
    </feat>
    <feat>
       <title>Avenger's Fortunes</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Githzerai</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing Surge</group>
-      <group>Mobility</group>
-      <group>Racial</group>
+      <prereq type="race">Githzerai</prereq>
+      <prereq type="class">Avenger</prereq>
+      <group>Class</group> <group>Healing Surge</group> <group>Mobility</group> <group>Racial</group>
       <benefit>Whenever you spend a healing surge, you can shift 1 square as a free reaction.</benefit>
-      <benefit>If you have an &lt;i&gt;oath of enmity&lt;/i&gt; target, this shift must take you closer to or into a square adjacent to that target.</benefit>
+      <benefit>If you have an oath target, this shift must take you closer to or into a soace adjacent to that target.</benefit>
    </feat>
 
    <feat>
       <title>Avenging Allure</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Unity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Forced Movement</group>
-      <group>Power Enhancement</group>
-      <benefit>When you use your &lt;i&gt;bond of censure&lt;/i&gt; power, add 2 to the number of squares you can pull the target.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Unity</prereq>
+      <group>Class</group> <group>Forced Movement</group> <group>Power Enhancement</group>
+      <benefit>When you use your <i>bond of censure</i> power, add 2 to the number of squares you can pull the target.</benefit>
    </feat>
 
    <feat>
       <title>Avenging Opportunist</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Human</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Kill Effect</group>
-      <group>Racial</group>
+      <prereq type="race">Human</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Kill Effect</group> <group>Racial</group>
       <benefit>The first time in an encounter when you reduce your oath target to 0 hit points or less, you gain an extra move action that you must be used before the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Avenging Resolution</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group>
       <benefit>When you attack your oath target with a Weapon attack, treat all rolls of 1 or 2 on the damage dice as though the result were a 3 on the die.</benefit>
       <benefit>If your weapon's damage is 1d4 or 2d4, treat rolls of 1 as though the result were a 2 on the die instead.</benefit>
    </feat>
@@ -376,22 +261,10 @@
    <feat>
       <title>Avenging Surge</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Unity</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Teamwork</group>
-      <group>Temporary Hit Points</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Unity</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Teamwork</group> <group>Temporary Hit Points</group>
       <benefit>When an ally hits your oath target, you gain temporary hit points equal to 3 + 3 per ally adjacent to the that target.</benefit>
       <benefit>These temporary hit points increase to 4 + 4 per ally adjacent at 21st level.</benefit>
    </feat>
@@ -399,45 +272,20 @@
    <feat>
       <title>Bitter Cold</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-         <combine>or both</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Cold Specialization</group>
-      <group>Defense Penalty</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">any arcane</prereq>
+      <prereq type="class" combine="that">any divine</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Cold</group> <group>Defense Penalty</group> <group>Worship</group>
       <benefit>When you hit a creature with a Cold power from any class that allows you to qualify for this feat, that creature takes a -2 penalty to Fortitude defense until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Black Mantle</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Worship</group>
       <benefit>While wearing cloth armor or no armor and not using a shield, you gain resist 5 cold and resist 5 necrotic against attacks from your oath target.</benefit>
       <benefit>These resistances increase to resist 10 at 21st level.</benefit>
       <benefit>If you already have permanent resist cold or resist necrotic, your resistance instead increases by 5.</benefit>
@@ -446,207 +294,86 @@
    <feat>
       <title>Blade of the Raven Queen</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shadar-kai</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-      </prereq>
-      <group>Class</group>
-      <group>Necrotic Specialization</group>
-      <group>Racial</group>
-      <benefit>Your arcane powers (if you are a Swordmage) or divine power (if you are an Avenger) that deal cold damage gain the Necrotic keyword and deal cold and necrotic damage instead.</benefit>
+      <prereq type="race" combine=";">Shadar-kai</prereq>
+      <prereq type="class" combine="or">Avenger</prereq>
+      <prereq type="class">Swordmage</prereq>
+      <group>Class</group> <group>Necrotic</group> <group>Racial</group>
+      <benefit>Your arcane powers (if you are a Swordmage) or divine power (if you are an Avenger) that deal cold damage gain the <key>Necrotic</key> keyword and deal cold and necrotic damage instead.</benefit>
    </feat>
 
    <feat>
       <title>Blessed Scoundrel</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>second chance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>When you use your &lt;i&gt;second chance&lt;/i&gt; racial power and the enemy misses with the triggering attack, you can spend a healing surge to regain a number of hit points equal to your healing surge value.</benefit>
+      <prereq type="race">Halfling</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">second chance</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>When you use your <i>second chance</i> racial power and the enemy misses with the triggering attack, you can spend a healing surge to regain a number of hit points equal to your healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Blessing of Avandra</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>second chance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Avandra</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Triggered</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;second chance&lt;/i&gt; racial power and the triggering attack misses, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
+      <prereq type="race">Halfling</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">second chance</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Support</group> <group>Triggered</group> <group>Worship</group>
+      <benefit>When you use your <i>second chance</i> racial power and the triggering attack misses, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Blessing of Corellon</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Triggered</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power and the triggering attack roll hits, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">elven accuracy</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Support</group> <group>Triggered</group> <group>Worship</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power and the triggering attack roll hits, one ally within 5 squares of you can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
    </feat>
 
    <feat>
-      <title>Bolstering Step</title>
+      <title>Bolstering Fey Step</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Temporary Hit Points</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, choose one ally adjacent to either your original space or your destination space. The chosen ally gains temporary hit points equal to your Intelligence modifier, and can then shift 1 square as a free reaction.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">fey step</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group> <group>Temporary Hit Points</group> <group>Support</group>
+      <benefit>When you use your <i>fey step</i> racial power, choose one ally adjacent to either your original space or your destination space. The chosen ally gains temporary hit points equal to your Intelligence modifier, and can then shift 1 square as a free reaction.</benefit>
       <benefit>These temporary hit points increase to 4 + your Intelligence modifier at 11th level, and to 8 + your Intelligence modifier at 21st level, and the shift inreases to 2 squares at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Brilliant Darkfire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>darkfire</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Radiant Specialization</group>
-      <benefit>When you hit a target with your &lt;i&gt;darkfire&lt;/i&gt; racial power, the target gains vulnerability to radiant damage equal to your Charisma modifier until the end of your next turn.</benefit>
+      <prereq type="race">Drow</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">darkfire</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group> <group>Radiant</group>
+      <benefit>When you hit a target with your <i>darkfire</i> racial power, the target gains vulnerability to radiant damage equal to your Charisma modifier until the end of your next turn.</benefit>
       <benefit>This vulnerability increases to 2 + your Charisma modifier at 11th level, and to 4 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Burning Wrath of Phlegethos</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Tiefling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>infernal wrath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Fire Specialization</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>If you use your &lt;i&gt;infernal wrath&lt;/i&gt; racial power against your oath target, your melee attacks against that target deal additioal fire damage equal to your Intelligence modifier until the end of your next turn.</benefit>
+      <prereq type="race">Tiefling</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="racial">infernal wrath</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Fire</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>If you use your <i>infernal wrath</i> racial power against your oath target, your melee attacks against that target deal additioal fire damage equal to your Intelligence modifier until the end of your next turn.</benefit>
       <benefit>The additional damage increases to 2 + your Intelligence modifier at 11th level, and to 4 + your Intelligence modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Censure's Grip</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>Oath of Enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Pursuit</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Movement Hindrance</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <prereq type="feature">Censure of Pursuit</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Movement Hindrance</group>
       <benefit>When you have combat advantage against your oath target and hit it with an Avenger power, the target cannot shift away from you until the end of your next turn.</benefit>
       <benefit>Starting at 21st level, each square of movement away from you the target takes costs an additional square of movement.</benefit>
    </feat>
@@ -654,67 +381,30 @@
    <feat>
       <title>Chilling Oath</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shadar-kai</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;oath of enmity&lt;/i&gt; class power, the target is also slowed until the end of your next turn. </benefit>
+      <prereq type="race">Shadar-kai</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Condition Infliction</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>swear enmity</i> class power, the target is also slowed until the end of your next turn. </benefit>
    </feat>
 
    <feat>
       <title>Clarity of Spirit</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Kalashtar</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>bastion of mental clarity</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Healing Surge</group>
-      <group>Power Enhancement</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;bastion of mental clarity&lt;/i&gt; racial power, you or one ally in the burst can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
+      <prereq type="race">Kalashtar</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">bastion of mental clarity</prereq>
+      <group>Class</group> <group>Healing</group> <group>Healing Surge</group> <group>Power Enhancement</group> <group>Support</group>
+      <benefit>When you use your <i>bastion of mental clarity</i> racial power, you or one ally in the burst can spend a healing surge to regain hit points equal to his or her healing surge value.</benefit>
    </feat>
 
    <feat>
       <title>Cleanse the Mind</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Condition Negation</group>
-      <group>Power Repertoire</group>
-      <group>Support</group>
-      <benefit>You gain the &lt;i&gt;cleanse the mind&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Condition Negation</group> <group>Power Repertoire</group> <group>Support</group>
+      <benefit>You gain the <i>cleanse the mind</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Cleanse the Mind</title>
@@ -731,15 +421,15 @@
          </section>
          <section indent="1">
             <name style="italic">Level 11:</name>
-            <text>&lt;i&gt;Close&lt;/i&gt; burst 4</text>
+            <text><i>Close</i> burst 4</text>
          </section>
          <section indent="1">
             <name style="italic">Level 21:</name>
-            <text>&lt;i&gt;Close&lt;/i&gt; burst 5</text>
+            <text><i>Close</i> burst 5</text>
          </section>
          <section shade="">
             <name>Effect:</name>
-            <text>Each target can make a saving throw against a Charm effect, Fear effect, or Psychic effect.</text>
+            <text>Each target can make a saving throw against a <key>Charm</key> effect, <key>Fear</key> effect, or <key>Psychic</key> effect.</text>
          </section>
          <section shade="">
             <text>A target that succeeds at the saving throw gains temporary hit points equal to your Charisma modifier.</text>
@@ -758,15 +448,9 @@
    <feat>
       <title>Clinging Radiance</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Illumination</group>
-      <group>Radiant Specialization</group>
-      <group>Support</group>
-      <benefit>When you hit a target with a divine attack power that has the Radiant keyword, the target loses any concealment or total concealment it has and cannot gain concealment or total concealment until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Illumination</group> <group>Radiant</group> <group>Support</group>
+      <benefit>When you hit a target with a divine attack power that has the <key>Radiant</key> keyword, the target loses any concealment or total concealment it has and cannot gain concealment or total concealment until the end of your next turn.</benefit>
       <benefit>Also, the target's space is dimly lit until the end of your next turn.</benefit>
       <benefit>On a critical hit, this increases to brightly lit, and spaces adjacent to the target being dimly lit.</benefit>
    </feat>
@@ -774,45 +458,21 @@
    <feat>
       <title>Closing Pledge</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Pursuit</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Triggered</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Pursuit</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Triggered</group>
       <benefit>When you hit your oath target with a ranged attack, you can shift a number of squares equal to your Dexterity modifier as a free reaction. You must end this shift closer to the target than you started it.</benefit>
    </feat>
 
    <feat>
       <title>Command Undead</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <prereq>
-         <name>Channel Divinity power that targets undead</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
-      <benefit>You gain the &lt;i&gt;command undead&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <prereq>Channel Divinity power that targets undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Repertoire</group> <group>Undead-hunting</group> <group>Worship</group>
+      <benefit>You gain the <i>command undead</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Command Undead</title>
@@ -830,20 +490,20 @@
          <section>
             <indent>1</indent>
             <name>Level 21:</name> <name-style>italic</name-style>
-            <text>&lt;b&gt;Close&lt;/b&gt; burst 10</text>
+            <text><b>Close</b> burst 10</text>
          </section>
             <section>
                <shade>true</shade>
                <name>Hit:</name> <name-style>bold</name-style>
-               <text>You slide the target up to a number of squares equal to 2 + your Wisdom modifier or your Charisma modifier, and the target is immobilized until the end of your next turn.</text>
+               <text>You slide the target up to a number of squares equal to 2 + your [Wisdom or Charisma] modifier, and the target is immobilized until the end of your next turn.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>The target makes a &lt;i&gt;melee basic attack&lt;/i&gt; against one target of your choice.</text>
+               <text>The target makes a <i>melee basic attack</i> against one target of your choice.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>Until the end of your next turn, any enemies that ends its turn adjacent to the target takes damage equal to 5 + your implement's enhancement bonus. If the target's &lt;i&gt;melee basic attack&lt;/i&gt; has a damage type, this damage is of the same type or types.</text>
+               <text>Until the end of your next turn, any enemies that ends its turn adjacent to the target takes damage equal to 5 + your implement's enhancement bonus. If the target's <i>melee basic attack</i> has a damage type, this damage is of the same type or types.</text>
             </section>
             <section>
                <shade>true</shade> <indent>1</indent>
@@ -866,81 +526,28 @@
    <feat>
       <title>Consuming the Weak</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Sorcerer</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Dragon Magic</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Warlock</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Infernal Pact</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Wizard</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Evocation Specialization</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>that</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with either the Destruction or Fire domain</name>
-      </prereq>
-      <group>Class</group>
-      <group>Fire Specialization</group>
-      <group>Ongoing Damage</group>
-      <group>Triggered</group>
-      <benefit>Whenever you hit a target vulnerable to or another weakness to fire with a Fire attack power from a qualifying class, the target takes ongoing 5 fire damage (save ends) in addition to the attack's normal effects. If the attack already causes ongoing fire damage, increase it by 5 instead.</benefit>
+      <prereq type="class" combine="with">Sorcerer</prereq>
+      <prereq type="feature">Dragon Magic</prereq>
+      <prereq type="class" combine="with">Warlock</prereq>
+      <prereq type="feature">Infernal Pact</prereq>
+      <prereq type="class" combine="with">Wizard</prereq>
+      <prereq type="feature" combine="or">Evocation Specialization</prereq>
+      <prereq type="class" combine="that">any divine</prereq>
+      <prereq type="deity">a deity with either the Destruction or Fire domain</prereq>
+      <group>Class</group> <group>Fire</group> <group>Ongoing Damage</group> <group>Triggered</group>
+      <benefit>Whenever you hit a target vulnerable to or another weakness to fire with a <key>Fire</key> attack power from a qualifying class, the target takes ongoing 5 fire damage (save ends) in addition to the attack's normal effects. If the attack already causes ongoing fire damage, increase it by 5 instead.</benefit>
       <benefit>This ongoing damage increases to 10 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Corellon's Blessing of Carrying Winds</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Cleric</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Paladin</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>longsword</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Weapon Specialization</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class" combine="or">Cleric</prereq>
+      <prereq type="class" combine=";">Paladin</prereq>
+      <prereq type="proficiency">the longsword</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Weapon Specialization</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Athletics checks.</benefit>
       <benefit>Also, once per turn when you hit an enemy with an attack power associated with this feat while using a longsword, you can move 2 squares as a free reaction.</benefit>
       <benefit>If you are immobilized or restrained, you can instead use a move action to move 2 squares, despite those conditions.</benefit>
@@ -950,29 +557,11 @@
    <feat>
       <title>Corellon's Blessing of Effortless Steps</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>longsword</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Weapon Specialization</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">Avenger</prereq>
+      <prereq type="class" combine=";">Swordmage</prereq>
+      <prereq type="proficiency">the longsword</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Weapon Specialization</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Acrobatics checks.</benefit>
       <benefit>Also, when you hit an enemy with an attack power associated with this feat while using a longsword, you can ignore difficult terrain while shifting until the end of current turn.</benefit>
       <associated>luring strike (swordmage at-will)</associated> <associated>overwhelming strike</associated>
@@ -981,29 +570,11 @@
    <feat>
       <title>Corellon's Blessing of Forest Running</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>longsword</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Weapon Specialization</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">Avenger</prereq>
+      <prereq type="class" combine=";">Swordmage</prereq>
+      <prereq type="proficiency">the longsword</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Weapon Specialization</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Athletics</benefit>
       <benefit>Also, when you hit an enemy with an attack power associated with this feat while using a longsword, you gain a climb speed until the end of your current turn. The climb speed equals your speed -2.</benefit>
       <benefit>If you moved more than 2 squares away from where you started your turn before making the attack, the climb speed lasts until the end of your next turn instead.</benefit>
@@ -1013,30 +584,11 @@
    <feat>
       <title>Corellon's Blessing of Fury Enduring</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Swordmage</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>longsword</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Temporary Hit Points</group>
-      <group>Weapon Specialization</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">Avenger</prereq>
+      <prereq type="class" combine=";">Swordmage</prereq>
+      <prereq type="proficiency">the longsword</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Temporary Hit Points</group> <group>Weapon Specialization</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Endurance checks.</benefit>
       <benefit>Also, once per turn, when you hit an enemy with an attack power associated with this feat while using a longsword, you gain 5 temporary hit points.</benefit>
       <benefit>These temporary hit points increase to 10 at 11th level, and to 15 at 21st level.</benefit>
@@ -1047,35 +599,19 @@
    <feat>
       <title>Corrupting Presence</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Necrotic Specialization</group>
-      <group>Support</group>
-      <group>Worship</group>
-      <benefit>When you use a divine encounter or daily attack power that has the Necrotic keyword, you also create a zone of corruption in a close burst 1. The zone lasts until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Necrotic</group> <group>Support</group> <group>Worship</group>
+      <benefit>When you use a divine encounter or daily attack power that has the <key>Necrotic</key> keyword, you also create a zone of corruption in a close burst 1. The zone lasts until the end of your next turn.</benefit>
       <benefit>Bright light in the zone is reduced to dim light.</benefit>
-      <benefit>Allies in the zone gain a +1 power bons to attack rolls with Necrotic powers.</benefit>
+      <benefit>Allies in the zone gain a +1 power bons to attack rolls with <key>Necrotic</key> powers.</benefit>
    </feat>
 
    <feat>
       <title>Cull the Weak</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Bonus</group>
+      <prereq type="role">Striker</prereq>
+      <group>Bloodied Enemy</group> <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group>
       <benefit>When you have combat advantage against a bloodied or weakened enemy, you gain a +2 bonus to melee damage rolls against that enemy.</benefit>
       <benefit>This bonus increases to +4 at 21st level.</benefit>
    </feat>
@@ -1083,76 +619,32 @@
    <feat>
       <title>Darkfire Reaper</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>darkfire</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Class</group>
-      <group>Kill Effect</group>
-      <group>Power Recovery</group>
-      <group>Racial</group>
-      <benefit>When you reduce the target of your &lt;i&gt;darkfire&lt;/i&gt; racial power to 0 hit points or less with a melee or ranged attack, you regain the use of &lt;i&gt;darkfire&lt;/i&gt;.</benefit>
+      <prereq type="race">Drow</prereq>
+      <prereq type="power" kind="racial" combine=";">darkfire</prereq>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Kill Effect</group> <group>Power Recovery</group> <group>Racial</group>
+      <benefit>When you reduce the target of your <i>darkfire</i> racial power to 0 hit points or less with a melee or ranged attack, you regain the use of <i>darkfire</i>.</benefit>
    </feat>
 
    <feat>
       <title>Darkfire Vitality</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>darkfire</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Teamwork</group>
-      <group>Temporary Hit Points</group>
-      <benefit>Whenever an ally hits an enemy that is under the effect of your &lt;i&gt;darkfire&lt;/i&gt; racial power, he or she gains temporary hit points equal to your Charisma modifier.</benefit>
+      <prereq type="ability">Charisma<value>15</value></prereq>
+      <prereq type="race">Drow</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">darkfire</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Teamwork</group> <group>Temporary Hit Points</group>
+      <benefit>Whenever an ally hits an enemy that is under the effect of your <i>darkfire</i> racial power, he or she gains temporary hit points equal to your Charisma modifier.</benefit>
       <benefit>These temporary hit points increase to 4 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Death Ward</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Support</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Resistance</group> <group>Support</group>
       <benefit>When you use a Channel Divinity power on your turn, you and each ally within 5 squares of you gain resist necrotic equal to 5 + your Wisdom modifier until the start of your next turn.</benefit>
       <benefit>Starting at 21st level, you and each ally within 10 squares gains the benefit.</benefit>
       <benefit>The resistance increases to 8 + your Wisdom modifier at 21st level.</benefit>
@@ -1161,38 +653,19 @@
    <feat>
       <title>Deific Instrument</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>assassin's shroud</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Damage Bonus</group>
-      <benefit>If you use your &lt;i&gt;assassin's shroud&lt;/i&gt; class power on the same turn as your &lt;i&gt;oath of enmity&lt;/i&gt; class power, you place two shrouds on the oath target instead of one.</benefit>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">assassin's shroud</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class Combination</group> <group>Damage Bonus</group>
+      <benefit>If you use your <i>assassin's shroud</i> class power on the same turn as your <i>swear enmity</i> class power, you place two shrouds on the oath target instead of one.</benefit>
    </feat>
 
    <feat>
       <title>Demonbane</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Demon-hunting</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Demon-hunting</group>
       <benefit>When you use a divine power that normally targets undead, you can also target creatures of the elemental origin.</benefit>
       <benefit>Also, if a divine power you use has special effects against undead creatures, you can also apply those against demons.</benefit>
    </feat>
@@ -1200,23 +673,11 @@
    <feat>
       <title>Destructive Power</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>level</type>
-         <name>6th</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Controller</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Repertoire</group>
-      <benefit>You can exchange any 6th-level or higher utility power you know for &lt;i&gt;destructive power&lt;/i&gt;.</benefit>
+      <prereq type="level">6th</prereq>
+      <prereq type="role" combine="or">Controller</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Repertoire</group>
+      <benefit>You can exchange any 6th-level or higher utility power you know for <i>destructive power</i>.</benefit>
 
       <power>
          <title>Destructive Power</title>
@@ -1241,12 +702,8 @@
    <feat>
       <title>Devilbane</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Devil-hunting</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Devil-hunting</group>
       <benefit>When you use a divine power that normally targets undead, you can also target creatures of the immortal origin.</benefit>
       <benefit>Also, if a divine power you use has special effects against undead creatures, you can also apply those against devils.</benefit>
    </feat>
@@ -1254,22 +711,10 @@
    <feat>
       <title>Divine Approval</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Human</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
+      <prereq type="race">Human</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Racial</group> <group>Saving Throws</group>
       <benefit>When you use a Channel Divinity power, you can also make a saving throw against an effect that a save can end before resolving that power.</benefit>
       <benefit>Starting at 21st level, if you are not affected by an effect that a save can end, you can make a saving throw to end any one condition on you, even if that condition cannot normally be ended by a save.</benefit>
    </feat>
@@ -1277,76 +722,32 @@
    <feat>
       <title>Divine Assault</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-orc</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>furious assault</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Paladin</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;furious assault&lt;/i&gt; racial power, one ally within 5 squares of you gains a bonus equal to your Strength modifier to his or her melee damage rolls against the target until the start of your next turn.</benefit>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="power" kind="racial" combine=";">furious assault</prereq>
+      <prereq type="class" combine="or">Avenger</prereq>
+      <prereq type="class">Paladin</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>When you use your <i>furious assault</i> racial power, one ally within 5 squares of you gains a bonus equal to your Strength modifier to his or her melee damage rolls against the target until the start of your next turn.</benefit>
       <benefit>The bonus increases to 2 + your Strength modifier at 11th level, and to 5 + your Strength modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Divine Connection</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>memory of a thousand lifetimes</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <benefit>When you use your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power to enhance a Religion check, or to enhance an attack roll of a divine power, you add +1 to the result.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="power" kind="racial">memory of a thousand lifetimes</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Skill Enhancement</group>
+      <benefit>When you use your <i>memory of a thousand lifetimes</i> racial power to enhance a Religion check, or to enhance an attack roll of a divine power, you add +1 to the result.</benefit>
    </feat>
 
    <feat>
       <title>Divine Distraction</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Unity</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Support</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Unity</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Support</group>
       <benefit>When you are adjacent to your oath target, your allies gain a +1 bonus to damage rolls against that target.</benefit>
       <benefit>This damage bonus increases to +2 at 11th level, and to +3 at 21st level.</benefit>
    </feat>
@@ -1354,26 +755,11 @@
    <feat>
       <title>Divine Fate</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Skill Enhancement</group>
-      <group>Support</group>
-      <benefit>You gain the &lt;i&gt;divine fate&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="race">Revenant</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Repertoire</group> <group>Racial</group> <group>Saving Throws</group> <group>Skill Enhancement</group> <group>Support</group>
+      <benefit>You gain the <i>divine fate</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Divine Fate</title>
@@ -1405,12 +791,8 @@
    <feat>
       <title>Divine Health</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group>
       <benefit>You gain resist poison equal to one-half your level + your Wisdom modifier.</benefit>
       <benefit>Also, you can't become infected by any disease of level 30 or lower.</benefit>
    </feat>
@@ -1418,52 +800,27 @@
    <feat>
       <title>Divine Mastery</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Action Point</group>
-      <group>Class</group>
-      <group>Power Recovery</group>
+      <prereq type="class">any divine</prereq>
+      <group>Action Point</group> <group>Class</group> <group>Power Recovery</group>
       <benefit>When you spend an action point, in addition to other effects of that action point, you also regain the use of a divine encounter power you have used during this encounter.</benefit>
    </feat>
 
    <feat>
       <title>Divine Passion</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine guidance</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Radiant Specialization</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;divine guidance&lt;/i&gt; Channel Divinity power and the triggering ally hits its target, the ally deals an additional 5 radiant damage.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="Channel Divinity">divine guidance</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Radiant</group> <group>Support</group>
+      <benefit>When you use your <i>divine guidance</i> Channel Divinity power and the triggering ally hits its target, the ally deals an additional 5 radiant damage.</benefit>
       <benefit>This additional damage increases to 10 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Divine Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class Combination</group> <group>Healing Surge</group>
       <benefit>Once per encounter, when you hit at least one enemy with a divine encounter attack, you gain a healing surge.</benefit>
       <benefit>Once per encounter, when you use a divine power that allows a target to spend a healing surge to regain hit points, the target can choose to instead spend a healing surge to allow you to regain a healing surge.</benefit>
       <benefit>Also, you lose the vulnerable radiant granted by your Child of the Night class feature, and you do not take damage from direct sunlight.</benefit>
@@ -1472,71 +829,31 @@
    <feat>
       <title>Dodgy Charge</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-orc</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Charge</group>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Racial</group>
-      <benefit>When you charge a target under you oath, your movement during the charge does not provoke &lt;i&gt;reactive strikes&lt;/i&gt;.</benefit>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Charge</group> <group>Class</group> <group>Defense</group> <group>Racial</group>
+      <benefit>When you charge a target under you oath, your movement during the charge does not provoke <i>reactive strikes</i>.</benefit>
    </feat>
 
    <feat>
       <title>Draconic Enmity</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Racial</group>
-      <benefit>If target of your oath is the only target of your &lt;i&gt;dragon breath&lt;/i&gt; racial power, you gain the benefit of your oath, allowing you to make two attack rolls and use either result.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="racial">dragon breath</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Racial</group>
+      <benefit>If target of your oath is the only target of your <i>dragon breath</i> racial power, you gain the benefit of your oath, allowing you to make two attack rolls and use either result.</benefit>
    </feat>
 
    <feat>
       <title>Draconic Majesty</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Defense Penalty</group>
-      <group>Racial</group>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Bloodied Enemy</group> <group>Channel Divinity</group> <group>Class</group> <group>Defense Penalty</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power, after the power has been resolved, bloodied enemies within 5 squares of you take a -2 penalty to all defenses until the end of your next turn.</benefit>
       <benefit>Starting at 21st level,  you can choose whether to apply the penalty before or after resolving your Channel Divinity power.</benefit>
    </feat>
@@ -1544,12 +861,8 @@
    <feat>
       <title>Dragonbane</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Dragon-hunting</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Dragon-hunting</group>
       <benefit>When you use a divine power that normally targets undead, you can also target dragons.</benefit>
       <benefit>Also, if a divine power you use has special effects against undead creatures, you can also apply those against dragons.</benefit>
    </feat>
@@ -1557,76 +870,38 @@
    <feat>
       <title>Eager for Vengeance</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Initiative</group>
+      <prereq type="class">Avenger</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Initiative</group>
       <benefit>During the first round of combat, your avenger Weapon attacks deal an additional +1[W] damage.</benefit>
    </feat>
 
    <feat>
       <title>Echo of Letherna</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Necrotic Specialization</group>
-      <group>Worship</group>
-      <benefit>Your divine powers that deal radiant damage instead deal necrotic and radiant damage, and gain the Necrotic keyword.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Necrotic</group> <group>Worship</group>
+      <benefit>Your divine powers that deal radiant damage instead deal necrotic and radiant damage, and gain the <key>Necrotic</key> keyword.</benefit>
    </feat>
 
    <feat>
       <title>Elemental Blessing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Genasi</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Elemental Manifestation</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <group>Temporary Hit Points</group>
-      <group>Triggered</group>
-      <benefit>When you use the racial power granted by your Elemental Manifestation racial trait, you or one ally within 5 squares of you gains temporary hit points equal to your Strength modifier or your Constitution modifier.</benefit>
-      <benefit>These temporary hit points increase to 4 + your Strength modifier or your Constitution modifier at 11th level, and to 8 + your Strength modifier or your Constitution modifier at 21st level.</benefit>
+      <prereq type="race">Genasi</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="trait">Elemental Manifestation</prereq>
+      <group>Class</group> <group>Racial</group> <group>Support</group> <group>Temporary Hit Points</group> <group>Triggered</group>
+      <benefit>When you use the racial power granted by your Elemental Manifestation racial trait, you or one ally within 5 squares of you gains temporary hit points equal to your [Strength or Constitution] modifier.</benefit>
+      <benefit>These temporary hit points increase to 4 + your [Strength or Constitution] modifier at 11th level, and to 8 + your [Strength or Constitution] modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Emboldening Critical</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Unity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Damage Bonus</group>
-      <group>Support</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="feature">Censure of Unity</prereq>
+      <group>Class</group> <group>Critical</group> <group>Damage Bonus</group> <group>Support</group>
       <benefit>When you score a critical hit against your oath target, allies adjacent to the target gain a +2 bonus to damage rolls against the target until the start of your next turn.</benefit>
       <benefit>The bonus to damage increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
@@ -1634,68 +909,30 @@
    <feat>
       <title>Empowering Guidance</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>divine guidance</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Support</group>
-      <benefit>The target of your &lt;i&gt;divine guidance&lt;/i&gt; Channel Divinity power deals additional damage with the triggering attack. The additional damage equals your [Dexterity or Intelligence] modifier.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="Channel Divinity">divine guidance</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Support</group>
+      <benefit>The target of your <i>divine guidance</i> Channel Divinity power deals additional damage with the triggering attack. The additional damage equals your [Dexterity or Intelligence] modifier.</benefit>
       <benefit>The additional damage increases to 2 + your [Dexterity or Intelligence] modifier at 11th level, and to 5 + your [Dexterity or Intelligence] modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Enmity Shared</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Power Enhancement</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;oath of enmity&lt;/i&gt; class power, the target also grants combat advantage to all your allies until the end of your next turn.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Support</group>
+      <benefit>When you use your <i>swear enmity</i> class power, the target also grants combat advantage to all your allies until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Enmity's Dark Vigor</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>Shadar-kai</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Temporary Hit Points</group>
-      <group>Triggered</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class" combine=";">swear enmity</prereq>
+      <prereq type="race" combine="or">Revenant</prereq>
+      <prereq type="race">Shadar-kai</prereq>
+      <group>Class</group> <group>Racial</group> <group>Temporary Hit Points</group> <group>Triggered</group>
       <benefit>When the target under your oath hits you, you gain temporary hit points equal to 4 + your Wisdom modifier.</benefit>
    </feat>
 
@@ -1703,26 +940,11 @@
       <title>Enmity's Eye</title>
       <tier>Heroic</tier>
       <category>Bloodline</category>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Vistani Heritage</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Radiant Specialization</group>
-      <group>Vistani Heritage</group>
-      <benefit>When you use your &lt;i&gt;evil eye of the vistani&lt;/i&gt; bloodline power against the target under your oath, you do not provoke &lt;i&gt;reactive strikes&lt;/i&gt; from that target.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <prereq type="feat">Vistani Heritage</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Radiant</group> <group>Vistani Heritage</group>
+      <benefit>When you use your <i>evil eye of the vistani</i> bloodline power against the target under your oath, you do not provoke <i>reactive strikes</i> from that target.</benefit>
       <benefit>Also, if no other enemy is adjacent to you when you do so, you can make two attack rolls and use either result, and you deal 1d6 radiant damage on a hit in addition to the power's normal hit results.</benefit>
       <benefit>This radiant damage increases to 2d6 at 21st level.</benefit>
    </feat>
@@ -1730,238 +952,92 @@
    <feat>
       <title>Evade and Strike</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>second chance</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Assassin's Shroud</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Hunter's Quarry</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
+      <prereq type="race">Halfling</prereq>
+      <prereq type="power" kind="racial" combine=";">second chance</prereq>
+      <prereq type="class" combine="with">Assassin</prereq>
+      <prereq type="feature" combine="or">Assassin's Shroud</prereq>
+      <prereq type="class" combine="with">Avenger</prereq>
+      <prereq type="power" kind="class" combine="or">swear enmity</prereq>
+      <prereq type="class" combine="with">Ranger</prereq>
+      <prereq type="feature">Hunter's Quarry</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
       <benefit>You gain a benefit against a creature depending on your class: a creature under at least two of your shrouds if you're an Assassin, your oath target if you're an Avenger, or your quarry if you're a Ranger.</benefit>
-      <benefit>When such a creature misses you on an attack you forced it to reroll using your &lt;i&gt;second chance&lt;/i&gt; racial power, you gain a +2 bonus to damage rolls against against it until the start of its next turn.</benefit>
+      <benefit>When such a creature misses you on an attack you forced it to reroll using your <i>second chance</i> racial power, you gain a +2 bonus to damage rolls against it until the start of its next turn.</benefit>
       <benefit>The bonus to damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Exposing Oath</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Necrotic Specialization</group>
-      <group>Radiant Specialization</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Necrotic</group> <group>Radiant</group>
       <benefit>Your attacks ignore any resist necrotic or resist radiant that the creature under your oath might have.</benefit>
    </feat>
 
    <feat>
       <title>Eye of Judgement</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Skill Enhancement</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Skill Enhancement</group>
       <benefit>Whenever you make an Insight check, you can roll twice and use either result.</benefit>
    </feat>
 
    <feat>
       <title>Fearless Seeker</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Goliath</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>stone's endurance</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Hunter's Quarry</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>When the creature under your oath or that is your quarry hits you with a melee attack, you can use your &lt;i&gt;stone's endurance&lt;/i&gt; racial power as an immediate interrupt.</benefit>
+      <prereq type="race">Goliath</prereq>
+      <prereq type="power" kind="racial" combine=";">stone's endurance</prereq>
+      <prereq type="class" combine="with">Avenger</prereq>
+      <prereq type="feature" combine="or">Oath of Enmity</prereq>
+      <prereq type="class" combine="with">Ranger</prereq>
+      <prereq type="feature">Hunter's Quarry</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Power Enhancement</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>When the creature under your oath or that is your quarry hits you with a melee attack, you can use your <i>stone's endurance</i> racial power as an immediate interrupt.</benefit>
    </feat>
 
    <feat>
       <title>Fearsome Fury</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-orc</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>furious assault</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Attack Penalty</group>
-      <group>Class</group>
-      <group>Fear</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;furious assault&lt;/i&gt; racial power against your oath target, the target takes a -2 penalty to attack rolls until the end of your next turn. This is a Fear effect.</benefit>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="racial">furious assault</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Attack Penalty</group> <group>Class</group> <group>Fear</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>furious assault</i> racial power against your oath target, the target takes a -2 penalty to attack rolls until the end of your next turn. This is a <key>Fear</key> effect.</benefit>
    </feat>
 
    <feat>
       <title>Fey Fate</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>elven accuracy</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>When you use your &lt;i&gt;elven accuracy&lt;/i&gt; racial power to reroll an attack roll against your oath target, you gain a +2 bonus to damage rolls against that target until the end of your next turn.</benefit>
+      <prereq type="race">Elf</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power">elven accuracy</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>When you use your <i>elven accuracy</i> racial power to reroll an attack roll against your oath target, you gain a +2 bonus to damage rolls against that target until the end of your next turn.</benefit>
       <benefit>This damage bonus increases to +4 at 11th level, and to +6 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Feyborn Pursuer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Eladrin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fey step</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Assassin's Shroud</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Vengeance</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you use your &lt;i&gt;fey step&lt;/i&gt; racial power, you can teleport an additional 5 squares as long as you end the teleportation adjacent to your oath target or a creature that has your shrouds on it.</benefit>
+      <prereq type="race">Eladrin</prereq>
+      <prereq type="power" kind="racial" combine=";">fey step</prereq>
+      <prereq type="class" combine="with">Assassin</prereq>
+      <prereq type="feature" combine="or">Assassin's Shroud</prereq>
+      <prereq type="class" combine="with">Avenger</prereq>
+      <prereq type="feature">Oath of Vengeance</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you use your <i>fey step</i> racial power, you can teleport an additional 5 squares as long as you end the teleportation adjacent to your oath target or a creature that has your shrouds on it.</benefit>
    </feat>
 
    <feat>
       <title>Fickle Servant</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Changeling</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>race</type>
-         <name>doppelganger</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
+      <prereq type="race">Changeling</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Racial</group> <group>Skill Enhancement</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, you can select feats for any domain, not just those for domains associated with your deity.</benefit>
    </feat>
@@ -1969,110 +1045,47 @@
    <feat>
       <title>Fires of Heaven</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Fire Specialization</group>
-      <group>Ongoing Damage</group>
-      <group>Radiant Specialization</group>
-      <benefit>Whenever one of your divine attack powers deals ongoing radiant damage, the ongoing damage increases by 5 and becomes fire and radiant. The power gains the Fire keyword.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Fire</group> <group>Ongoing Damage</group> <group>Radiant</group>
+      <benefit>Whenever one of your divine attack powers deals ongoing radiant damage, the ongoing damage increases by 5 and becomes fire and radiant. The power gains the <key>Fire</key> keyword.</benefit>
    </feat>
 
    <feat>
       <title>Fist of Heaven</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Saving Throw Penalty</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Saving Throw Penalty</group>
       <benefit>Your oath target takes a -2 penalty to saving throws against your Avenger powers.</benefit>
    </feat>
 
    <feat>
       <title>Furious Charge</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-orc</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>furious assault</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Barbarian</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Rageblood Vigor</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-         <combine>with</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Hunter's Quarry</name>
-      </prereq>
-      <group>Charge</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Miss Mitigation</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>You can use this feat depending on your class:
-         &lt;br/&gt;Avenger: When you charge your oath target.
-         &lt;br/&gt;Barbarian: When you charge and are bloodied.
-         &lt;br/&gt;Ranger: When you charge your quarry.</benefit>
-      <benefit>When you miss on a charge attack, you can use this feat to expend your &lt;i&gt;furious assault&lt;/i&gt; racial power to reroll the attack roll. If the attack hits, you deal +1[W] extra damage to your quarry.</benefit>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="power" kind="racial" combine=";">furious assault</prereq>
+      <prereq type="class" combine="with">Avenger</prereq>
+      <prereq type="feature" combine="or">Oath of Enmity</prereq>
+      <prereq type="class" combine="with">Barbarian</prereq>
+      <prereq type="feature" combine="or">Rageblood Vigor</prereq>
+      <prereq type="class" combine="with">Ranger</prereq>
+      <prereq type="feature">Hunter's Quarry</prereq>
+      <group>Charge</group> <group>Class</group> <group>Damage Bonus</group> <group>Miss Mitigation</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>You can use this feat depending on your class:</benefit>
+      <benefit name="Avenger">When you charge your oath target.</benefit>
+      <benefit name="Barbarian">When you charge and are bloodied.</benefit>
+      <benefit name="Ranger">When you charge your quarry.</benefit>
+      <benefit>When you miss on a qualifying charge attack, you can use this feat to expend your <i>furious assault</i> racial power to reroll the attack roll. If the attack hits, you deal +1[W] extra damage to your quarry.</benefit>
       <benefit>This extra damage increases to +2[W] at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Furious Devotion</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-orc</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Triggered</group>
-      <group>Racial</group>
+      <prereq type="race">Half-orc</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Triggered</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power, you gain a +2 bonus to damage rolls with divine attack powers until the end of your next turn.</benefit>
       <benefit>This bonus to damage rolls increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
@@ -2080,35 +1093,18 @@
    <feat>
       <title>Glorious Channeler</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group>
       <benefit>You can use two Channel Divinity powers in an encounter, though you cannot use the same power twice.</benefit>
    </feat>
 
    <feat>
       <title>Godsworn Alacrity</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Avandra</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Class</group> <group>Critical</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, whenever you score a critical hit, you gain a +2 feat bonus to speed until the end of your next turn.</benefit>
    </feat>
@@ -2116,19 +1112,9 @@
    <feat>
       <title>Godsworn Assault</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Erathis</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Erathis</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Critical</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, whenever you score a critical hit, you gain a +1 bonus to attack rolls until the end of your next turn.</benefit>
    </feat>
@@ -2136,39 +1122,19 @@
    <feat>
       <title>Godsworn Avalanche</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Kord</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Forced Movement</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Kord</prereq>
+      <group>Class</group> <group>Critical</group> <group>Forced Movement</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
-      <benefit>Also, whenever you score a critical hit, you can also push the target a number of squares equal to 1 + one-half your Dexterity modifier or your Intelligence modifier as part of that hit.</benefit>
+      <benefit>Also, whenever you score a critical hit, you can also push the target a number of squares equal to 1 + one-half your [Dexterity or Intelligence] modifier as part of that hit.</benefit>
    </feat>
 
    <feat>
       <title>Godsworn Bulwark</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Moradin</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Defense</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Class</group> <group>Critical</group> <group>Defense</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, whenever you score a critical hit, you gain a +2 bonus to all defenses until the end of your next turn.</benefit>
    </feat>
@@ -2176,20 +1142,9 @@
    <feat>
       <title>Godsworn Defender</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Bahamut</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Defense</group>
-      <group>Skill Enhancement</group>
-      <group>Support</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Bahamut</prereq>
+      <group>Class</group> <group>Critical</group> <group>Defense</group> <group>Skill Enhancement</group> <group>Support</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, whenever you score a critical hit, one ally you can see gains a +2 bonus to all defenses until the end of your next turn. Only one ally can benefit from this bonus; if you score another critical hit while a bonus has this bonus, you can choose to transfer it to another ally or keep it on the same ally.</benefit>
    </feat>
@@ -2197,64 +1152,31 @@
    <feat>
       <title>Godsworn Fatalist</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Cold Specialization</group>
-      <group>Critical</group>
-      <group>Damage Bonus</group>
-      <group>Necrotic Specialization</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Cold</group> <group>Critical</group> <group>Damage Bonus</group> <group>Necrotic</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
-      <benefit>Also, whenever you score a critical hit, the target takes your choice of extra cold damage or extra necrotic damage. The extra damage equals your Dexterity modifier or your Intelligence modifier.</benefit>
-      <benefit>This extra critical damage increases by +4 at 11th level, and by +8 at 21st level.</benefit>
+      <benefit>Also, whenever you score a critical hit, the target takes your choice of extra cold damage or extra necrotic damage. The extra damage equals your [Dexterity or Intelligence] modifier.</benefit>
+      <benefit>This extra critical damage increases to 4 + your [Dexterity or Intelligence] modifier at 11th level, and to 8 + your [Dexterity or Intelligence] modifier at 21st level</benefit>
    </feat>
 
    <feat>
       <title>Godsworn Mentalist</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Ioun</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Damage Bonus</group>
-      <group>Psychic Specialization</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Ioun</prereq>
+      <group>Class</group> <group>Critical</group> <group>Damage Bonus</group> <group>Psychic</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
-      <benefit>Also, whenever you score a critical hit, the target takes extra psychic damage equal to your Dexterity modifier or your Intelligence modifier.</benefit>
-      <benefit>This extra critical damage increases by +4 at 11th level, and by +8 at 21st level.</benefit>
+      <benefit>Also, whenever you score a critical hit, the target takes extra psychic damage equal to your [Dexterity or Intelligence] modifier.</benefit>
+      <benefit>This extra critical damage increases to 4 + your [Dexterity or Intelligence] modifier at 11th level, and to 8 + your [Dexterity or Intelligence] modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Godsworn Mystic</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Sehanine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Concealment</group>
-      <group>Critical</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Sehanine</prereq>
+      <group>Class</group> <group>Concealment</group> <group>Critical</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, whenever you score a critical hit, you gain concealment until the end of your next turn.</benefit>
    </feat>
@@ -2262,45 +1184,21 @@
    <feat>
       <title>Godsworn Radiant</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Pelor</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Damage Bonus</group>
-      <group>Radiant Specialization</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Pelor</prereq>
+      <group>Class</group> <group>Critical</group> <group>Damage Bonus</group> <group>Radiant</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
-      <benefit>Also, whenever you score a critical hit, the target takes extra radiant damage equal to your Dexterity modifier or your Intelligence modifier.</benefit>
-      <benefit>This extra critical damage increases by +4 at 11th level, and by +8 at 21st level.</benefit>
+      <benefit>Also, whenever you score a critical hit, the target takes extra radiant damage equal to your [Dexterity or Intelligence] modifier.</benefit>
+      <benefit>This extra critical damage increases to 4 + your [Dexterity or Intelligence] modifier at 11th level, and to 8 + your [Dexterity or Intelligence] modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Godsworn Sidestep</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Corellon</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Skill Enhancement</group>
-      <group>Teleportation</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="deity">Corellon</prereq>
+      <group>Class</group> <group>Critical</group> <group>Skill Enhancement</group> <group>Teleportation</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
       <benefit>Also, whenever you score a critical hit, you can teleport up to 4 squares to a space adjacent to your oath target as a free reaction.</benefit>
       <benefit>This teleportation increases to 5 squares at 11th level, and to 6 squares at 21st level.</benefit>
@@ -2309,68 +1207,31 @@
    <feat>
       <title>Godsworn Tidedancer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Melora</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Mobility</group>
-      <group>Skill Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="deity">Melora</prereq>
+      <group>Class</group> <group>Critical</group> <group>Mobility</group> <group>Skill Enhancement</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Religion checks.</benefit>
-      <benefit>Also, whenever you score a critical hit, you can shift a number of squares equal to your Dexterity modifier or your Intelligence modifier as a free reaction.</benefit>
+      <benefit>Also, whenever you score a critical hit, you can shift a number of squares equal to your [Dexterity or Intelligence] modifier as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Guaranteed Retribution</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Retribution</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Triggered</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Retribution</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Triggered</group>
       <benefit>When an enemy other than your oath target hits you, you gain a cumulative +1 bonus to attack rolls against your oath target until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Guileful Shift</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Halfling</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Avandra</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <group>Worship</group>
+      <prereq type="race">Halfling</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Racial</group> <group>Triggered</group> <group>Worship</group>
       <benefit>When your oath target misses you with an attack, you can use a free reaction to shift 1 square to a space closer to or adjacent to the target.</benefit>
       <benefit>This increases to 2 squares at 21st level.</benefit>
    </feat>
@@ -2378,330 +1239,166 @@
    <feat>
       <title>Halo of Isolation</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility Hindrance</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Mobility Hindrance</group>
       <benefit>While you are adjacent to your oath target, all other enemies treat squares adjacent to you as difficult terrain.</benefit>
    </feat>
 
    <feat>
       <title>Halo of Tethering</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Triggered</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Triggered</group>
       <benefit>When your oath target is adjacent to you and shifts, you can shift 1 square to a square it vacated as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Halo of Warding</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Extra Attack</group>
-      <group>Reactive Strikes</group>
-      <benefit>While you are adjacent to your oath target, other enemies trigger &lt;i&gt;reactive strikes&lt;/i&gt; from you when they enter a square adjacent to you, not just when they leave.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Extra Attack</group> <group>Reactive Strikes</group>
+      <benefit>While you are adjacent to your oath target, other enemies trigger <i>reactive strikes</i> from you when they enter a square adjacent to you, not just when they leave.</benefit>
    </feat>
 
    <feat>
       <title>Hand of Divine Guidance</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Critical</group>
       <benefit>When you make an attack against your oath target, you can score a critical hit on a natural roll of 19 or 20.</benefit>
    </feat>
 
    <feat>
       <title>Harvester of Sorrows</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Kill Effect</group>
-      <group>Worship</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Kill Effect</group> <group>Worship</group>
       <benefit>When you reduce your oath target to 0 hit points or fewer, any enemy you can see within 10 squares of you grants combat advantage to you until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Hasten the Rot</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Mobility Hindrance</group>
-      <group>Necrotic Specialization</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <group>Class</group> <group>Condition Infliction</group> <group>Mobility Hindrance</group> <group>Necrotic</group> <group>Undead-hunting</group> <group>Worship</group>
       <benefit>When you hit an undead enemy with a Necrotic divine encounter attack or a Necrotic divine daily attack, that undead becomes slowed until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Heavenly Torrent</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Support</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Critical</group> <group>Support</group>
       <benefit>The first time in an encounter that you score a critical hit against your oath target, the first time each of your allies makes an attack against your oath target before the end of your next turn, he or she can roll twice and use either result.</benefit>
    </feat>
 
    <feat>
       <title>Hidden Channeling</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Gnome</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Concealment</group>
-      <group>Racial</group>
+      <prereq type="race">Gnome</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Concealment</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power, you gain concealment until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Holy Dilettante</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-elf</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dilettante</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Radiant Specialization</group>
-      <benefit>Once per encounter, when you use the power you gained through your Dilettante racial trait, you can choose to deal radiant damage with that power instead of its normal damage type. If you do, the power gains the Radiant keyword and loses any damage type keywords it normally has.</benefit>
+      <prereq type="race">Half-elf</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="trait">Dilettante</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Radiant</group>
+      <benefit>Once per encounter, when you use the power you gained through your Dilettante racial trait, you can choose to deal radiant damage with that power instead of its normal damage type. If you do, the power gains the <key>Radiant</key> keyword and loses any damage type keywords it normally has.</benefit>
    </feat>
 
    <feat>
       <title>Holy Savagery</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shifter</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Bloodied</group>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Racial</group>
+      <prereq type="race">Shifter</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Attack Bonus</group> <group>Bloodied</group> <group>Channel Divinity</group> <group>Class</group> <group>Racial</group>
       <benefit>When you use a Channel Divinity power while you are bloodied, you gain a +1 bonus to melee attack rolls until the end of your next turn. If the Channel Divinity power you use has melee attack rolls, you gain the bonus on that power as well.</benefit>
    </feat>
 
    <feat>
       <title>Holy Speech</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>language</type>
-         <name>Supernal</name>
-      </prereq>
-      <group>Class</group>
-      <group>Languages</group>
-      <group>Skill Enhancement</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="language">Supernal</prereq>
+      <group>Class</group> <group>Languages</group> <group>Skill Enhancement</group>
       <benefit>The first time during a skill challenge that you succeed in a Bluff check, a Diplomacy check, or an Intimidate check, you gain an extra success towards completing the skill challenge.</benefit>
    </feat>
 
    <feat>
       <title>Icon of Hope</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Class</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
+      <prereq type="class">any divine</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Saving Throws</group> <group>Support</group>
       <benefit>Bloodied allies within 10 squares of you gain a +1 bonus to saving throws.</benefit>
    </feat>
 
    <feat>
       <title>Icon of Purity</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group>
       <benefit>You resist necrotic equal to your Wisdom modifier + one-half your level.</benefit>
    </feat>
 
    <feat>
       <title>Improved Armor of Faith</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Armor of Faith</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Armor of Faith</prereq>
+      <group>Class</group> <group>Defense</group>
       <benefit>While you are wearing cloth armor or no armor and aren't using a shield, you gain a +1 bonus to AC.</benefit>
    </feat>
 
    <feat>
       <title>Inexorable Pursuit</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Pursuit</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Charge</group>
-      <group>Class</group>
-      <group>Mobility</group>
-      <benefit>When you charge your oath target, you can ignore difficult terrain and move through spaces occupied by enemies during the movement as part of the charge. You still trigger &lt;i&gt;reactive strikes&lt;/i&gt; normally.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Pursuit</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Charge</group> <group>Class</group> <group>Mobility</group>
+      <benefit>When you charge your oath target, you can ignore difficult terrain and move through spaces occupied by enemies during the movement as part of the charge. You still trigger <i>reactive strikes</i> normally.</benefit>
    </feat>
 
    <feat>
       <title>Infernal Blessing</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Tiefling</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>infernal wrath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;infernal wrath&lt;/i&gt; racial power, one ally adjacent to you regains hit points equal to your Charisma modifier and gains a +1 power bonus to his or her first attack roll against the target of the power before the end of his or her next turn. This is a Divine, Healing effect.</benefit>
+      <prereq type="race">Tiefling</prereq>
+      <prereq type="power" kind="racial">infernal wrath</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Healing</group> <group>Racial</group> <group>Support</group>
+      <benefit>When you use your <i>infernal wrath</i> racial power, one ally adjacent to you regains hit points equal to your Charisma modifier and gains a +1 power bonus to his or her first attack roll against the target of the power before the end of his or her next turn. This is a <key>Divine</key>, <key>Healing</key> effect.</benefit>
       <benefit>The number of hit points regained increases to 3 + your Charisma modifier at 11th level, and to 6 + your Charisma modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Inspiring Oath</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Support</group>
-      <benefit>When you use your &lt;i&gt;oath of enmity&lt;/i&gt; class power, one ally that can see you can shift 2 squares towards the target of your oath as a free reaction.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Support</group>
+      <benefit>When you use your <i>swear enmity</i> class power, one ally that can see you can shift 2 squares towards your oath target as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Invigorating Critical</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Healing</group>
-      <group>Support</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Critical</group> <group>Healing</group> <group>Support</group>
       <benefit>The first in an encounter that you score a critical hit with a divine attack power, an ally adjacent to either you or the target regains hit points equal to 5 + your Wisdom modifier.</benefit>
       <benefit>This hit points regained increase to 10 + your Wisdom modifier at 21st level.</benefit>
    </feat>
@@ -2709,22 +1406,10 @@
    <feat>
       <title>Invigorating Pursuit</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Pursuit</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Charge</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Defense</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Pursuit</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Charge</group> <group>Class</group> <group>Damage Bonus</group> <group>Defense</group>
       <benefit>When you hit your oath target with a charge attack, you gain a +2 bonus to AC and a +2 bonus to damage rolls until the end of your next turn.</benefit>
       <benefit>The bonus to damage rolls increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
@@ -2732,81 +1417,39 @@
    <feat>
       <title>Iron-Clad Oath</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Githzerai</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>iron mind</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Bonus</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;iron mind&lt;/i&gt; racial power, you gain combat advantage and a bonus to damage rolls against your oath target until the end of your next turn. The bonus equals your Dexterity modifier or your Intelligence modifier if the triggering attacker was your oath target, or one-half this amount if the attacker was another creature.</benefit>
+      <prereq type="race">Githzerai</prereq>
+      <prereq type="power" kind="racial">iron mind</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>iron mind</i> racial power, you gain combat advantage and a bonus to damage rolls against your oath target until the end of your next turn. The bonus equals your [Dexterity or Intelligence] modifier if the triggering attacker was your oath target, or one-half this amount if the attacker was another creature.</benefit>
    </feat>
 
    <feat>
       <title>Justice Hammer</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Condition Infliction</group>
-      <group>Critical</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Condition Infliction</group> <group>Critical</group>
       <benefit>When you score a critical hit with a divine at-will attack, the target is dazed until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Kord's Resilience</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Goliath</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>stone's endurance</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>While your &lt;i&gt;stone's endurance&lt;/i&gt; racial power is active, allies adjacent to you have the same resistance that the power grants you.</benefit>
+      <prereq type="race">Goliath</prereq>
+      <prereq type="power" kind="racial">stone's endurance</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>While your <i>stone's endurance</i> racial power is active, allies adjacent to you have the same resistance that the power grants you.</benefit>
    </feat>
 
    <feat>
       <title>Light of Conviction</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Illumination</group>
-      <group>Power Repertoire</group>
-      <group>Radiant Specialization</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Illumination</group> <group>Power Repertoire</group> <group>Radiant</group>
       <benefit>As a minor action, you can shed bright light out to 4 squares, and dim light out to 4 squares further. The light ends 24 hours after you die, or if you end it as a free action on your turn.</benefit>
-      <benefit>Also, you gain the &lt;i&gt;punitive radiance&lt;/i&gt; attack power. This power counts as a power of your divine class.</benefit>
+      <benefit>Also, you gain the <i>punitive radiance</i> attack power. This power counts as a power of your divine class.</benefit>
 
       <power>
          <title>Punitive Radiance</title>
@@ -2845,22 +1488,10 @@
    <feat>
       <title>Majestic Presence</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Astral Resistance</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Resistance</group>
-      <group>Racial</group>
-      <group>Support</group>
+      <prereq type="race">Deva</prereq>
+      <prereq type="trait">Astral Resistance</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Resistance</group> <group>Racial</group> <group>Support</group>
       <benefit>Allies adjacent to you gain resist 3 necrotic, 3 radiant.</benefit>
       <benefit>These resists increase to 5 at 11th level, and to 10 at 21st level.</benefit>
    </feat>
@@ -2868,105 +1499,49 @@
    <feat>
       <title>Master of Secrets</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Vecna</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Vecna</prereq>
+      <group>Class</group> <group>Power Repertoire</group> <group>Worship</group>
       <benefit>You can learn skill powers associated with Arcana, Dungeoneering, History, Nature, and Religion as if you were trained in those skills.</benefit>
    </feat>
 
    <feat>
       <title>Memory of Death</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Power Enhancement</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
-      <benefit>When you target an undead creature with your &lt;i&gt;oath of enmity&lt;/i&gt; class power, the target grants combat advantage to you until the end of your next turn.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Undead-hunting</group> <group>Worship</group>
+      <benefit>When you target an undead creature with your <i>swear enmity</i> class power, the target grants combat advantage to you until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Mighty Crusader Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>holy symbols</name>
-      </prereq>
-      <group>Defense</group>
-      <group>Implement Specialization</group>
-      <group>Weapon Specialization</group>
-      <benefit>While you wield a two-handed melee weapon that you have proficiency with, you gain a +4 bonus to all defenses against &lt;i&gt;reactive strikes&lt;/i&gt; triggered for making a ranged or area attack using a holy symbol you have proficiency with.</benefit>
+      <prereq type="hidden">any divine</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="proficiency">holy symbols</prereq>
+      <group>Defense</group> <group>Implement Specialization</group> <group>Weapon Specialization</group>
+      <benefit>While you wield a two-handed melee weapon that you have proficiency with, you gain a +4 bonus to all defenses against <i>reactive strikes</i> triggered for making a ranged or area attack using a holy symbol you have proficiency with.</benefit>
    </feat>
 
    <feat>
       <title>Mighty Enmity</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <benefit>The first time in an encounter that you use your &lt;i&gt;oath of enmity&lt;/i&gt; class power, you can target two enemies instead of one.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Power Enhancement</group>
+      <benefit>The first time in an encounter that you use your <i>swear enmity</i> class power, you can target two enemies instead of one.</benefit>
       <benefit>This allows you to have two oath targets until both targets stop being your oath targets, or until you change your oath target, whichever comes first.</benefit>
    </feat>
 
    <feat>
       <title>Moonbow Dedicate</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Sehanine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Implement Specialization</group>
-      <group>Proficiency Gain</group>
-      <group>Weapon Specialization</group>
+      <prereq type="class" combine="or">any arcane</prereq>
+      <prereq type="class" combine=";">any divine</prereq>
+      <prereq type="deity">Sehanine</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Implement Specialization</group> <group>Proficiency Gain</group> <group>Weapon Specialization</group>
       <benefit>You gain proficiency with the shortbow as both a weapon and an implement.</benefit>
       <benefit>Also, you gain a +1 feat bonus to Weapon damage rolls and Implement damage rolls you make while wielding a shortbow.</benefit>
       <benefit>This bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
@@ -2975,63 +1550,30 @@
    <feat>
       <title>Moonbow Prelate</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Sehanine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Implement Specialization</group>
-      <group>Power Enhancement</group>
-      <group>Worship</group>
+      <prereq type="class" combine="or">any arcane</prereq>
+      <prereq type="class" combine=";">any divine</prereq>
+      <prereq type="deity">Sehanine</prereq>
+      <group>Class</group> <group>Implement Specialization</group> <group>Power Enhancement</group> <group>Worship</group>
       <benefit>When you use a shortbow as an implement for a ranged divine power, area divine power, ranged arcane power, or area arcane power, you can extend the power's range by 5 squares.</benefit>
    </feat>
 
    <feat>
       <title>Nimbus of Light</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Radiant Specialization</group>
-      <group>Support</group>
-      <benefit>When you use a divine encounter power or a divine daily power with the Radiant keyword, you can choose to create a zone of  light in a close burst 1 until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Radiant</group> <group>Support</group>
+      <benefit>When you use a divine encounter power or a divine daily power with the <key>Radiant</key> keyword, you can choose to create a zone of light in a close burst 1 until the end of your next turn.</benefit>
       <benefit>The zone is brightly lit, and squares adjacent to it are dimly lit. Allies in the zone gain a +1 power bonus to attack rolls with Radiant powers.</benefit>
    </feat>
 
    <feat>
       <title>Oath of Urgency</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Recovery</group>
-      <group>Power Repertoire</group>
-      <benefit>You gain the &lt;i&gt;oath of urgency&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Recovery</group> <group>Power Repertoire</group>
+      <benefit>You gain the <i>oath of urgency</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Oath of Urgency</title>
@@ -3045,11 +1587,11 @@
             <section>
                <shade>true</shade>
                <name>Effect:</name> <name-style>bold</name-style>
-               <text>The current target of your Oath of Enmity is no longer the target.</text>
+               <text>Your current oath target is no longer your oath target.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>You regain your &lt;i&gt;oath of enmity&lt;/i&gt; class power and must use it as a free reaction.</text>
+               <text>You regain your <i>swear enmity</i> class power and must immediately use it as a free reaction.</text>
             </section>
 
       </power>
@@ -3058,112 +1600,76 @@
    <feat>
       <title>Oath's Strike</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Marking</group>
-      <group>Power Enhancement</group>
-      <benefit>When you use your &lt;i&gt;oath of enmity&lt;/i&gt; class power, you can choose to mark the target until the end of your next turn.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Marking</group> <group>Power Enhancement</group>
+      <benefit>When you use your <i>swear enmity</i> class power, you can choose to mark the target until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Oathbound Stalker</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>shadow step</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Teleportation</group>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="power" kind="class">shadow step</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class Combination</group> <group>Teleportation</group>
       <benefit>When you teleport, you can add 2 squares to the teleport distance as long as you teleport adjacent to your oath target.</benefit>
    </feat>
 
    <feat>
       <title>Onslaught of Enmity</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <benefit>When you use your &lt;i&gt;oath of enmity&lt;/i&gt; class power, you can shift 2 squares closer to the target as a free reaction.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Power Enhancement</group>
+      <benefit>When you use your <i>swear enmity</i> class power, you can shift 2 squares closer to the target as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Painful Oath</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group>
       <benefit>The first time on each of your turns that you hit your oath target, you deal extra radiant and necrotic damage. The damage equals one-half your Wisdom modifier.</benefit>
    </feat>
 
    <feat>
       <title>Pervasive Light</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Damage Bonus</group>
       <benefit>When you hit a target that has vulnerable radiant with a divine attack that does not deal radiant damage, you still trigger that vulnerability.</benefit>
+   </feat>
+
+   <feat>
+      <title>Piercing Decay</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Necrotic</group>
+      <benefit>Your divine Necrotic powers ignore an amount of resist necrotic. The amount equals one-half the ability modifier of the ability you use to make the attack.</benefit>
+      <benefit>The amount you ignore increases by 5 at 11th level, and by 10 at 21st level.</benefit>
+      <benefit>In addition, you treat a creature that is immune to necrotic as instead having resist necrotic equal to 15 + one-half its level.</benefit>
+   </feat>
+
+   <feat>
+      <title>Piercing Radiance</title>
+      <tier>Paragon</tier>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Radiant</group>
+      <benefit>Your divine Radiant powers ignore an amount of resist radiant. The amount equals one-half the ability modifier of the ability you use to make the attack.</benefit>
+      <benefit>The amount you ignore increases by 5 at 11th level, and by 10 at 21st level.</benefit>
+      <benefit>In addition, you treat a creature that is immune to radiant as instead having resist radiant equal to 15 + one-half its level.</benefit>
    </feat>
 
    <feat>
       <title>Pledge of Retribution</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Retribution</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>oath of enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Miss Mitigation</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Retribution</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Miss Mitigation</group>
       <benefit>If you miss your oath target with an attack, you gain a +2 bonus to the next attack roll you make against it.</benefit>
       <benefit>If you do not make an attack against your oath target before the end of your next turn, the bonus is lost. If you miss with your next attack roll, increase the bonus by +1 each time you miss and the bonus remains until the end of your following turn.</benefit>
    </feat>
@@ -3171,177 +1677,78 @@
    <feat>
       <title>Protected Isolation</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Retribution</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Retribution</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Defense</group>
       <benefit>While you are adjacent to your oath target, you gain a +1 bonus to AC.</benefit>
    </feat>
 
    <feat>
       <title>Protector's Atonement</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with the Protection domain</name>
-      </prereq>
-      <group>Class</group>
-      <group>Support</group>
-      <group>Worship</group>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">a deity with the Protection domain</prereq>
+      <group>Class</group> <group>Support</group> <group>Worship</group>
       <benefit>Whenever an attack you make would damage an ally, you can choose to take the damage instead. You have resist 5 all against damage taken this way, though your other resists or immunities do not apply. You can choose to take the damage even when you are dominated.</benefit>
       <benefit>The resist against this damage increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
 
    <feat>
-      <title>Psionic Vampire</title>
-      <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
-      <group>Psionics</group>
-      <benefit>Once per encounter, when you hit at least one enemy with an augmented psionic attack, you gain a healing surge.</benefit>
-      <benefit>Once per encounter, you can use a minor action to spend a healing surge to gain 2 power points. These power points expire at the end of your current turn.</benefit>
-   </feat>
-
-   <feat>
       <title>Psychic Retaliation</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Kalashtar</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>bastion of mental clarity</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;bastion of mental clarity&lt;/i&gt; racial power, you can change the triggering enemy to be your oath target.</benefit>
+      <prereq type="race">Kalashtar</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="power" kind="racial">bastion of mental clarity</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>bastion of mental clarity</i> racial power, you can change the triggering enemy to be your oath target.</benefit>
    </feat>
 
    <feat>
       <title>Punishing Radiance</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Critical</group>
-      <group>Damage Bonus</group>
-      <group>Radiant Specialization</group>
-      <benefit>Whenever you score a critical hit with a divine power that has the Radiant keyword, the target and each enemy within 5 squares of it gain vulnerable 5 radiant. If a creature already has vulnerable radiant, the value instead increases by 5. This lasts until the end of your next turn.</benefit>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Critical</group> <group>Damage Bonus</group> <group>Radiant</group>
+      <benefit>Whenever you score a critical hit with a divine power that has the <key>Radiant</key> keyword, the target and each enemy within 5 squares of it gain vulnerable 5 radiant. If a creature already has vulnerable radiant, the value instead increases by 5. This lasts until the end of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Pupil of the All-Father</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Moradin</name>
-      </prereq>
-      <group>Class</group>
-      <group>Equipment</group>
-      <group>Rituals</group>
-      <group>Worship</group>
-      <benefit>You have mastered the &lt;i&gt;enchant magic item&lt;/i&gt; and &lt;i&gt;make whole&lt;/i&gt; rituals, and can perform them without a ritual book.</benefit>
-      <benefit>Also, when using the &lt;i&gt;enchant magic item&lt;/i&gt; ritual to enchant weapons or armor, you count as being three levels higher than you are.</benefit>
-      <benefit>In addition, once per day, you can perform the &lt;i&gt;make whole&lt;/i&gt; ritual without expending components as long as the component cost would have been 100 gp or fewer.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Class</group> <group>Equipment</group> <group>Rituals</group> <group>Worship</group>
+      <benefit>You have mastered the <i>enchant magic item</i> and <i>make whole</i> rituals, and can perform them without a ritual book.</benefit>
+      <benefit>Also, when using the <i>enchant magic item</i> ritual to enchant weapons or armor, you count as being three levels higher than you are.</benefit>
+      <benefit>In addition, once per day, you can perform the <i>make whole</i> ritual without expending components as long as the component cost would have been 100 gp or fewer.</benefit>
    </feat>
 
    <feat>
       <title>Purifying Light</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Radiant Specialization</group>
-      <group>Undead-hunting</group>
-      <benefit>You gain a +1 bonus to attack rolls against undead with Radiant powers.</benefit>
+      <prereq type="ability">Charisma<value>15</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Radiant</group> <group>Undead-hunting</group>
+      <benefit>You gain a +1 bonus to attack rolls against undead with <key>Radiant</key> powers.</benefit>
    </feat>
 
    <feat>
       <title>Radiant Breath</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Radiant Specialization</group>
-      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt; racial power, you can choose to deal radiant damage rather than the normal damage dealt by the power, and replace the damage type keyword with the Radiant keyword.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="power" kind="racial">dragon breath</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Radiant</group>
+      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to deal radiant damage rather than the normal damage dealt by the power, and replace the damage type keyword with the <key>Radiant</key> keyword.</benefit>
    </feat>
 
    <feat>
       <title>Radiant Rage</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Barbarian</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Damage Bonus</group>
-      <group>Healing Surge</group>
-      <group>Radiant Specialization</group>
+      <prereq type="class">Barbarian</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class Combination</group> <group>Damage Bonus</group> <group>Healing Surge</group> <group>Radiant</group>
       <benefit>When you spend a healing surge while you are raging, you can choose to deal additional radiant damage with first melee attack you make before the end of your next turn. The additional radiant damage equals your Charisma modifier.</benefit>
       <benefit>The additional radiant damage increases to 2 + your Charisma modifier at 11th level, and to 5 + your Charisma modifier at 21st level.</benefit>
    </feat>
@@ -3349,150 +1756,78 @@
    <feat>
       <title>Raven Queen Devotee</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>15</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Resistance</group>
-      <group>Power Enhancement</group>
-      <group>Skill Enhancement</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
+      <prereq type="ability">Wisdom<value>15</value></prereq>
+      <prereq type="ability">Charisma<value>15</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Resistance</group> <group>Power Enhancement</group> <group>Skill Enhancement</group> <group>Undead-hunting</group> <group>Worship</group>
       <benefit>You gain a +2 feat bonus to Intimidate checks.</benefit>
       <benefit>Also, you gain the following benefits with divine at-will attacks:</benefit>
-      <benefit>&#9658; When you target an undead creature and would make the target takes a penalty to attack rolls, you can choose to instead make the target grant combat advantage for the same duration. If the penalty is only for one attack roll, the target only grants combat advantage for the first attack roll against it.</benefit>
-      <benefit>&#9658; When you would grant an ally a bonus to AC, you can choose to instead grant that ally resist necrotic for the same duration. The resist equals one-half your level + one-half the higher of your Wisdom modifier or Charisma modifier.</benefit>
+      <benefit><bullet />When you target an undead creature and would make the target takes a penalty to attack rolls, you can choose to instead make the target grant combat advantage for the same duration. If the penalty is only for one attack roll, the target only grants combat advantage for the first attack roll against it.</benefit>
+      <benefit><bullet />When you would grant an ally a bonus to AC, you can choose to instead grant that ally resist necrotic for the same duration. The resist equals one-half your level + one-half your [Wisdom or Charisma] modifier.</benefit>
    </feat>
 
    <feat>
       <title>Raven Queen's Scorn</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>the Raven Queen</name>
-      </prereq>
-      <group>Class</group>
-      <group>Teleportation</group>
-      <group>Undead-hunting</group>
-      <group>Worship</group>
-      <benefit>If your oath target is an undead creature, you can use a minor action once per turn to teleport to any space you can see and have line of effect to that is adjacent to the target. This action has the Divine and Teleportation keywords.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="deity">the Raven Queen</prereq>
+      <group>Class</group> <group>Power Repertoire</group> <group>Teleportation</group> <group>Undead-hunting</group> <group>Worship</group>
+      <benefit>You gain the <i>approaching scorn</i> power as an avenger class power.</benefit>
+      
+      <power>
+         <title>Approaching Scorn</title>
+         <class>Avenger</class> <category>Utility</category>
+         <frequency>At-Will</frequency>
+         <action>Minor</action> <subaction />
+         <fluff>The Raven Queen's scorn for the undead flows through you, allowing you to step across a great distance</fluff>
+         <keyword>Divine</keyword> <keyword>Teleportation</keyword>
+         <section><name>Requirement:</name>Your oath target must be undead.</section>
+         <section personal="" />
+         <section shade=""><name>Effect:</name>You teleport to a space adjacent to your oath target. You must be able to see the space and have line of effect to it.</section>
+      </power>
    </feat>
 
    <feat>
       <title>Reaping Vengeance</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dark reaping</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Necrotic Specialization</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>If the triggering creature for your &lt;i&gt;dark reaping&lt;/i&gt; racial power is your oath target, the power deals an additional +1d8 necrotic damage.</benefit>
+      <prereq type="race">Revenant</prereq>
+      <prereq type="power" kind="racial">dark reaping</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Necrotic</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>If the triggering creature for your <i>dark reaping</i> racial power is your oath target, the power deals an additional +1d8 necrotic damage.</benefit>
    </feat>
 
    <feat>
       <title>Religious Dabbler</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Half-elf</name>
-      </prereq>
-      <prereq>
-         <type>trait</type>
-         <name>Dilettante</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <group>Racial</group>
+      <prereq type="race">Half-elf</prereq>
+      <prereq type="trait">Dilettante</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Power Repertoire</group> <group>Racial</group>
       <benefit>Choose a 1st-level at-will attack power from a divine class other than your own. You can use the chosen power as an encounter power instead of using the power you gained from your Dilettante racial trait.</benefit>
    </feat>
 
    <feat>
       <title>Righteous Focus</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Censure of Unity</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>Oath of Enmity</name>
-         <qualifier>class</qualifier>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Support</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Censure of Unity</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Support</group>
       <benefit>While you are adjacent to your oath target, your allies gain a +1 bonus to attack rolls against it.</benefit>
    </feat>
 
    <feat>
       <title>Righteous Rage</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>a deity with the Strength or War domain</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Repertoire</group>
-      <benefit>You gain the &lt;i&gt;righteous rage&lt;/i&gt; Channel Divinity power.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <prereq type="deity">a deity with the Strength or War domain</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Power Repertoire</group>
+      <benefit>You gain the <i>righteous rage</i> Channel Divinity power.</benefit>
 
       <power>
          <title>Righteous Rage</title>
@@ -3519,44 +1854,20 @@
    <feat>
       <title>Risky Shift</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <group>Class</group>
-      <group>Mobility</group>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class">Ranger</prereq>
+      <prereq type="class" combine="or">Rogue</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group>
       <benefit>Whenever you shift, you can choose to increase the maximum distance by 1 square. If you do, you grant combat advantage until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Saving Grace</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <group>Triggered</group>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Saving Throws</group> <group>Support</group> <group>Triggered</group>
       <benefit>When you succeed on a saving throw, you can choose to not end the effect you saved against.</benefit>
       <benefit>If you do, choose an ally within 5 squares of you. The chosen ally can make a saving throw against an effec that a save can end, and gains a bonus to the saving throw equal to your Wisdom modifier.</benefit>
    </feat>
@@ -3564,24 +1875,11 @@
    <feat>
       <title>Seeking Power</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>level</type>
-         <name>6th</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Controller</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <benefit>You can exchange any 6th-level or higher utility power you know for &lt;i&gt;seeking power&lt;/i&gt;.</benefit>
+      <prereq type="level" combine=";">6th</prereq>
+      <prereq type="role" combine="or">Controller</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Repertoire</group>
+      <benefit>You can exchange any 6th-level or higher utility power you know for <i>seeking power</i>.</benefit>
 
       <power>
          <title>Seeking Power</title>
@@ -3603,116 +1901,244 @@
    <feat>
       <title>Sequestering Jaunt</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Shadar-kai</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>shadow jaunt</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Oath of Enmity</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>When you are adjacent to your oath target and use your &lt;i&gt;shadow jaunt&lt;/i&gt; racial power, you can also teleport your oath target the same distance. Your oath target must end the teleportation adjacent to where you teleport to.</benefit>
+      <prereq type="race">Shadar-kai</prereq>
+      <prereq type="power" kind="racial">shadow jaunt</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>When you are adjacent to your oath target and use your <i>shadow jaunt</i> racial power, you can also teleport your oath target the same distance. Your oath target must end the teleportation adjacent to where you teleport to.</benefit>
    </feat>
 
    <feat>
       <title>Shared Channeling</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Channel Divinity</name>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Support</group>
-      <benefit>You can choose to use your personal Channel Divinity powers as &lt;i&gt;Close&lt;/i&gt; burst 5 powers instead, targeting you or an ally in the burst. If such a power has a trigger dependent on your, it can now be triggered by an ally within 5 squares of you, but the triggering ally must also be the target.</benefit>
-      <benefit>Your DM might allow this feat to extend some effects from a non-personal power to al ally in a &lt;i&gt;Close&lt;/i&gt; burst 5.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
+      <benefit>You can choose to use your personal Channel Divinity powers as <i>Close</i> burst 5 powers instead, targeting you or an ally in the burst. If such a power has a trigger dependent on you, it can now be triggered by an ally within 5 squares of you, but the triggering ally must also be the target.</benefit>
+      <benefit>Your DM might allow this feat to extend some effects from a non-personal power to an ally in a <i>Close</i> burst 5.</benefit>
    </feat>
 
    <feat>
       <title>Shared Vitality</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>deity</type>
-         <name>Moradin</name>
-      </prereq>
-      <group>Class</group>
-      <group>Healing</group>
-      <group>Second Wind</group>
-      <group>Support</group>
-      <group>Worship</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt;, you can choose an ally within 5 squares of you. The chosen ally regains the hit points instead of you.</benefit>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Class</group> <group>Healing</group> <group>Second Wind</group> <group>Support</group> <group>Worship</group>
+      <benefit>When you use your <i>second wind</i>, you can choose an ally within 5 squares of you. The chosen ally regains the hit points instead of you.</benefit>
    </feat>
 
    <feat>
+      <title>Speedy Response</title>
+      <tier>Heroic</tier>
+      <prereq type="ability" combine=";">Dexterity<value>15</value></prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="class" combine="or">Rogue</prereq>
+      <prereq type="class">Monk</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Triggered</group>
+      <benefit>If you are hit by an attack while moving, you gain a +1 bonus to speed for that movement. This bonus is cumulative if you are hit multiple times.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Spellcharged Channel</title>
+      <tier>Heroic</tier>
+      <category>Spellscar</category>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Damage Bonus</group> <group>Defense Penalty</group> <group>Fire</group> <group>Necrotic</group> <group>Spellscar</group>
+      <benefit>When you use a Channel Divinity power, choose one of the following two effects:</benefit>
+      <benefit bullet="">One enemy adjacnet to you takes a -2 penalty to all defenses until the end of your next turn.</benefit>
+      <benefit bullet="">One ally adjacent to you deals 4 extra fire and necrotic damage with all attacks until the end of your next turn, or half this extra damage for multiattacks.</benefit>
+      <benefit>The extra damage increases to 6 at 11th level, and to 8 at 21st level.</benefit>
+      <benefit>If you have the Student of the Plague feat, you gain both effects.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Staff of Knowledge</title>
+      <tier>Heroic</tier>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="class">any divine</prereq>
+      <group>class</group> <group>Combat Advantage</group> <group>Weapon Specialization</group>
+      <benefit>You gain combat advantage on the first divine Weapon attack you make during an encounter using a Staff you have proficiency with.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Storm's Vengeance</title>
+      <tier>Heroic</tier>
+      <prereq type="class" combine="or">any primal</prereq>
+      <prereq type="class" combine="and">any divine</prereq>
+      <prereq type="deity" combine="or">a deity of the Storm domain</prereq>
+      <prereq type="class" combine="with">Sorcerer</prereq>
+      <prereq type="feature">Storm Magic</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Dying</group> <group>Thunder</group>
+      <benefit>When an enemy reduces you to 0 hit points or fewer, it takes 10 thunder damage after the attack has been resolved.</benefit>
+      <benefit>This thunder damage increases to 20 at 11th level, and to 30 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Sword of Civilization</title>
+      <tier>Heroic</tier>
+      <prereq type="role">Striker</prereq>
+      <prereq type="deity">Erathis</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group> <group>Support</group> <group>Worship</group>
+      <benefit>When you have combat advantage against an enemy, allies adjacent to you have a +2 bonus to damage rolls against that enemy.</benefit>
+      <benefit>This bonus to damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Symbol of the Soul Forger</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any divine</prereq>
+      <prereq type="deity">Moradin</prereq>
+      <group>Class</group> <group>Implement Specialization</group> <group>Proficiency Gain</group> <group>Weapon Specialization</group>
+      <benefit>You gain proficiency with all simple and military Hammers, Axes, and Picks.</benefit>
+      <benefit>Also, you gain proficiency as an implement with all Hammers, Axes, and Picks you have proficiency with.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Taunting Visage</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Changeling</prereq>
+      <prereq type="power" kind="racial">changeling disguise</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>Once per encounter, if you use your <i>changeling disguise</i> racial power to assume the appearance of your oath target, you gain combat advantage against it until the end of your next turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Undead Hunter</title>
+      <tier>Heroic</tier>
+      <prereq type="ability">Constitution<value>13</value></prereq>
+      <prereq type="ability">Wisdom<value>13</value></prereq>
+      <prereq type="skill" combine=";">Religion</prereq>
+      <prereq type="class" combine="or">any divine</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Healing Surges</group> <group>Temporary Hit Points</group> <group>Undead-hunting</group>
+      <benefit>Your number of healing surges increases by one.</benefit>
+      <benefit>Also, you gain the following benefits with martial and divine at-will melee and at-will ranged attacks against undead:</benefit>
+      <benefit bullet="">You deal an additional +2 damage.</benefit>
+      <benefit bullet="">If the attack grants temporary hit points, you increase the number of temporary hit points by your Wisdom modifier.</benefit>
+      <benefit bullet="">If the attack doesn't deal damage on a miss, you deal damage equal to one-half your Constitution modifier + the enhancement bonus of the weapon or implement you used to make the attack.</benefit>
+      <benefit>In addition, if you grant an ally a melee attack against an undead, he or she deals +2 additional damage.</benefit>
+      <benefit>Both additional damage increase to +3 at 11th level, and to +4 at 21st level.</benefit>
+      <benefit>The damage on a miss increases to your Constitution modifier + the enhancement bonus at 11th level, and to 2 + your Constitution modifier + the enhancement bonus at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unleash the Beast</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine=";">Shifter</prereq>
+      <prereq type="power" kind="racial" combine="or">longtooth shifting</prereq>
+      <prereq type="power" kind="racial" combine=";">razorclaw shifting</prereq>
+      <prereq type="class" combine="with">Avenger</prereq>
+      <prereq type="feature" combine="or">Oath of Enmity</prereq>
+      <prereq type="class" combine="with">Ranger</prereq>
+      <prereq type="feature">Hunter's Quarry</prereq>
+      <group>Bloodied</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>You can use your shifter racial power as an immediate reaction with a trigger depending on your class:</benefit>
+      <benefit name="Avenger">You are bloodied and your oath target hits you, or you are bloodied by an attack made by your oath target</benefit>
+      <benefit name="Ranger">You are bloodied and your quarry hits you, or you are bloodied by an attack made by your quarry</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unstoppable Drive</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine=";">Dwarf</prereq>
+      <prereq type="role" combine="or">Defender</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you can shift 1 square as a free reaction. You must end this movement in a space adjacent to at least one enemy.</benefit>
+      <benefit>This increases to shift up to 2 squares at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unyielding Pursuit</title>
+      <tier>Heroic</tier>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Mobility</group>
+      <benefit>If you end a <i>run</i> action adjacent to your oath target, you do not take the penalty to attack rolls from that that action against your oath target.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Vengeance Recalled</title>
+      <tier>Epic</tier>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Miss Mitigation</group>
+      <benefit>When you miss your oath target with an avenger attack or <i>basic attack</i> on your turn, you gain a +5 bonus to damage rolls against that target until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Vengeance's Reward</title>
+      <tier>Heroic</tier>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <prereq type="deity">Avandra</prereq>
+      <group>Class</group> <group>Kill Effect</group> <group>Saving Throws</group> <group>Support</group>
+      <benefit>When you reduce your oath target to 0 hit points or fewer, you and each ally adjacent to you gain a +2 bonus to saving throws until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Vengeful Declaration</title>
+      <tier>Epic</tier>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="class">swear enmity</prereq>
+      <group>Class</group> <group>Power Enhancement</group>
+      <benefit>You can use your <i>swear enmity</i> class power as a free action.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Vengeful Shade</title>
+      <tier>Heroic</tier>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="feature">Assassin's Shrounds</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class Combination</group> <group>Radiant</group>
+      <benefit>When you invoke your shrouds when making a divine attack, you can choose to additional damage be radiant damage.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Versatile Channeler</title>
+      <tier>Heroic</tier>
+      <prereq type="class">any divine</prereq>
+      <prereq type="feature">Channel Divinity</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Power Repertoire</group>
+      <benefit>Choose a Channel Divinity power available to a divine class other than your own. You gain the chosen Channel Divinity power.</benefit>
+   </feat>
+
+   <feat>
+      <title>Vicious Darkfire</title>
+      <tier>Heroic</tier>
+      <prereq type="race">Drow</prereq>
+      <prereq type="power" kind="racial">darkfire</prereq>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="feature">Oath of Enmity</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you hit your oath target with your <i>darkfire</i> racial power, it gains vulnerable all until the start of your next turn. The vulnerable equals 1 + one-half your Dexterity modifier.</benefit>
+      <benefit>This increases to equal to your Dexterity modifier at 21st level.</benefit>
+   </feat>
+   
+   <feat>
       <title>Warforged Faith</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Warforged</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>warforged resolve</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Saving Throws</group>
-      <group>Support</group>
-      <group>Temporary Hit Points</group>
-      <benefit>When you use your &lt;i&gt;warforged resolve&lt;/i&gt; racial power, one ally adjacent to you gains temporary hit points equal to your Constitution modifier (minimum 0) and can make a saving throw against one effect that deals ongoing damage.</benefit>
+      <prereq type="race">Warforged</prereq>
+      <prereq type="power" kind="racial">warforged resolve</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Saving Throws</group> <group>Support</group> <group>Temporary Hit Points</group>
+      <benefit>When you use your <i>warforged resolve</i> racial power, one ally adjacent to you gains temporary hit points equal to your Constitution modifier (minimum 0) and can make a saving throw against one effect that deals ongoing damage.</benefit>
       <benefit>The temporary hit points increase to 3 + your Constitution modifier at 11th level, and to 6 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Wrenching Abjuration</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Avenger</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>abjure undead</name>
-         <qualifier>Channel Divinity</qualifier>
-      </prereq>
-      <group>Channel Divinity</group>
-      <group>Class</group>
-      <group>Forced Movement</group>
-      <group>Power Enhancement</group>
-      <benefit>When you hit with your &lt;i&gt;abjure undead&lt;/i&gt; Channel Divinity power, you can slide the target instead of pulling it, but the target must end the forced movement closes to you than where it began.</benefit>
+      <prereq type="class">Avenger</prereq>
+      <prereq type="power" kind="Channel Divinity">abjure undead</prereq>
+      <group>Channel Divinity</group> <group>Class</group> <group>Forced Movement</group> <group>Power Enhancement</group>
+      <benefit>When you hit with your <i>abjure undead</i> Channel Divinity power, you can slide the target instead of pulling it, but the target must end the forced movement closes to you than where it began.</benefit>
    </feat>
 
    </catalog>

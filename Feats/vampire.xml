@@ -162,33 +162,18 @@
    <feat>
       <title>Arcane Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any arcane</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Damage Bonus</group>
-      <group>Healing Surge</group>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class">any arcane</prereq>
+      <group>Class Combination</group> <group>Damage Bonus</group> <group>Healing Surge</group>
       <benefit>Once per encounter, when you hit at least one enemy with an arcane encounter attack, you gain a healing surge.</benefit>
-      <benefit>As a nonaction interrupt before rolling damage for an arcane encounter attack power, you can lose a healing surge to gain a bonus to the triggering power's damage roll equal to your Charisma modifier.</benefit>
+      <benefit>Also, before rolling damage for an arcane encounter attack power, you can lose a healing surge to gain a bonus to the triggering power's damage roll equal to your Charisma modifier.</benefit>
       <benefit>This bonus damage increases to 3 + your Charisma modifier at 11th level, and 6 + your Charisma modifier at 21st level.</benefit>
    </feat>
    <feat>
       <title>Cull the Weak</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Class</group>
-      <group>Combat Advantage</group>
-      <group>Damage Bonus</group>
+      <prereq type="role">Striker</prereq>
+      <group>Bloodied Enemy</group> <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group>
       <benefit>When you have combat advantage against a bloodied or weakened enemy, you gain a +2 bonus to melee damage rolls against that enemy.</benefit>
       <benefit>This bonus increases to +4 at 21st level.</benefit>
    </feat>
@@ -196,76 +181,32 @@
    <feat>
       <title>Darkest Memories</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Deva</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>memory of a thousand lifetimes</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Skill Enhancement</group>
-      <benefit>When you use your &lt;i&gt;memory of a thousand lifetimes&lt;/i&gt; racial power to enhance a Stealth check, or to enhance an attack roll of a shadow power, you add +1 to the result.</benefit>
+      <prereq type="race">Deva</prereq>
+      <prereq type="power" kind="racial">memory of a thousand lifetimes</prereq>
+      <prereq type="class">any shadow</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Skill Enhancement</group>
+      <benefit>When you use your <i>memory of a thousand lifetimes</i> racial power to enhance a Stealth check, or to enhance an attack roll of a shadow power, you add +1 to the result.</benefit>
    </feat>
 
    <feat>
       <title>Darkfire Reaper</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>darkfire</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Class</group>
-      <group>Kill Effect</group>
-      <group>Power Recovery</group>
-      <group>Racial</group>
-      <benefit>When you reduce the target of your &lt;i&gt;darkfire&lt;/i&gt; racial power to 0 hit points or less with a melee or ranged attack, you regain the use of &lt;i&gt;darkfire&lt;/i&gt;.</benefit>
+      <prereq type="race">Drow</prereq>
+      <prereq type="power" kind="racial" combine=";">darkfire</prereq>
+      <prereq type="class" combine="or">any martial</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Kill Effect</group> <group>Power Recovery</group> <group>Racial</group>
+      <benefit>When you reduce the target of your <i>darkfire</i> racial power to 0 hit points or less with a melee or ranged attack, you regain the use of <i>darkfire</i>.</benefit>
    </feat>
 
    <feat>
       <title>Destructive Power</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>level</type>
-         <name>6th</name>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Controller</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Power Repertoire</group>
-      <benefit>You can exchange any 6th-level or higher utility power you know for &lt;i&gt;destructive power&lt;/i&gt;.</benefit>
+      <prereq type="level">6th</prereq>
+      <prereq type="role" combine="or">Controller</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Power Repertoire</group>
+      <benefit>You can exchange any 6th-level or higher utility power you know for <i>destructive power</i>.</benefit>
 
       <power>
          <title>Destructive Power</title>
@@ -290,31 +231,18 @@
    <feat>
       <title>Disciple of Darkness</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Second Wind</group>
-      <group>Stealth</group>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Second Wind</group> <group>Stealth</group>
       <benefit>You gain a +5 feat bonus to Stealth checks made to hide while you are in darkness.</benefit>
-      <benefit>Also, if you are in an area of dim light or darkness when you use your &lt;i&gt;second wind&lt;/i&gt;, you become invisible until after you make an attack or until the end of your next turn, whichever comes first.</benefit>
+      <benefit>Also, if you are in an area of dim light or darkness when you use your <i>second wind</i>, you become invisible until after you make an attack or until the end of your next turn, whichever comes first.</benefit>
    </feat>
 
    <feat>
       <title>Divine Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class">any divine</prereq>
+      <group>Class Combination</group> <group>Healing Surge</group>
       <benefit>Once per encounter, when you hit at least one enemy with a divine encounter attack, you gain a healing surge.</benefit>
       <benefit>Once per encounter, when you use a divine power that allows a target to spend a healing surge to regain hit points, the target can choose to instead spend a healing surge to allow you to regain a healing surge.</benefit>
       <benefit>Also, you lose the vulnerable radiant granted by your Child of the Night class feature, and you do not take damage from direct sunlight.</benefit>
@@ -323,124 +251,62 @@
    <feat>
       <title>Drawn Shadows</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Concealment</group>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Concealment</group>
       <benefit>You have concealment while you are within 2 squares of a square containing dim light or darkness.</benefit>
    </feat>
 
    <feat>
       <title>Elusive Movement</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Ranger</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-      </prereq>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Mobility</group>
+      <prereq type="class">any shadow</prereq>
+      <prereq type="class">Monk</prereq>
+      <prereq type="class" combine="or">Ranger</prereq>
+      <prereq type="class">Rogue</prereq>
+      <group>Class</group> <group>Defense</group> <group>Mobility</group>
       <benefit>Whenever you end your turn at least 3 squares away from where you began your turn, you gain a +1 bonus to AC and Reflex until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Emerald Scale Concealment</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Dragonborn</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragon breath</name>
-         <qualifier>racial</qualifier>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dragonfear</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Stealth</group>
-      <benefit>When you use your &lt;i&gt;dragon breath&lt;/i&gt; racial power or &lt;i&gt;dragonfear&lt;/i&gt; racial power, you become invisible to all creatures you hit with that attack. This invisibility lasts until the end of your current turn.</benefit>
+      <prereq type="race">Dragonborn</prereq>
+      <prereq type="class" combine=";">any shadow</prereq>
+      <prereq type="power" kind="racial" combine="or">dragon breath</prereq>
+      <prereq type="power" kind="racial">dragonfear</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Stealth</group>
+      <benefit>When you use your <i>dragon breath</i> racial power or <i>dragonfear</i> racial power, you become invisible to all creatures you hit with that attack. This invisibility lasts until the end of your current turn.</benefit>
+   </feat>
+
+   <feat>
+      <title>Expert Sneak</title>
+      <tier>Paragon</tier>
+      <prereq type="class">Assassin</prereq>
+      <prereq type="class" combine="or">Rogue</prereq>
+      <prereq type="class">Vampire</prereq>
+      <group>Class</group> <group>Combat Advantage</group>
+      <benefit>You gain combat advantage against enemies that are deafened, immobilized, slowed, or weakened.</benefit>
    </feat>
 
    <feat>
       <title>Far Shadow</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>cloud of darkness</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>You can choose to use your &lt;i&gt;cloud of darkness&lt;/i&gt; racial power as an area burst 1 within 10 squares instead of a close burst 1.</benefit>
-      <benefit>If you have the Clutch of Darkness feat, you can also choose to use your &lt;i&gt;cloud of darkness&lt;/i&gt; racial power as an area burst 2 within 10 squares.</benefit>
+      <prereq type="race">Drow</prereq>
+      <prereq type="class">any shadow</prereq>
+      <prereq type="power" kind="racial">cloud of darkness</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>You can choose to use your <i>cloud of darkness</i> racial power as an area burst 1 within 10 squares instead of a close burst 1.</benefit>
+      <benefit>If you have the Clutch of Darkness feat, you can also choose to use your <i>cloud of darkness</i> racial power as an area burst 2 within 10 squares.</benefit>
    </feat>
 
    <feat>
       <title>Frozen Soul</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>13</value>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>origin</type>
-         <name>shadow</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Background</group>
-      <group>Damage Resistance</group>
-      <group>Defense</group>
-      <group>Shadow Nature</group>
+      <prereq type="ability" combine="or">Constitution<value>13</value></prereq>
+      <prereq type="ability" combine=";">Wisdom<value>13</value></prereq>
+      <prereq type="origin" combine="or">shadow</prereq>
+      <prereq type="class">any shadow</prereq>
+      <group>Background</group> <group>Damage Resistance</group> <group>Defense</group> <group>Shadow Nature</group>
       <benefit>You gain resist 5 cold, and a +1 bonus to Will. If you already have resist cold, increase it by +5 instead.</benefit>
       <benefit>The resist cold increases to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
@@ -448,91 +314,36 @@
    <feat>
       <title>Holy Symbol Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Paladin</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>13</value>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>13</value>
-      </prereq>
-      <group>Defense</group>
-      <group>Implement Specialization</group>
+      <prereq type="hidden">Cleric</prereq>
+      <prereq type="hidden">Paladin</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="ability" combine="or">Wisdom<value>13</value></prereq>
+      <prereq type="ability">Charisma<value>13</value></prereq>
+      <group>Defense</group> <group>Implement Specialization</group>
       <benefit>When you make an Implement attack using a holy symbol you have proficiency with, the enemies you target with that attack cannot gain combat advantage against you until the start of your next turn.</benefit>
    </feat>
 
    <feat>
       <title>Holy Symbol Mastery</title>
       <tier>Epic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>Cleric</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Paladin</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Wisdom</name>
-         <value>19</value>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Charisma</name>
-         <value>19</value>
-      </prereq>
-      <group>Critical</group>
-      <group>Implement Specialization</group>
+      <prereq type="hidden">Cleric</prereq>
+      <prereq type="hidden">Paladin</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="ability">Wisdom<value>19</value></prereq>
+      <prereq type="ability">Charisma<value>19</value></prereq>
+      <group>Critical</group> <group>Implement Specialization</group>
       <benefit>When you make an Implement attack using a holy symbol you have proficiency with, you can score a critical hit on a natural roll of 19 or 20.</benefit>
    </feat>
 
    <feat>
       <title>Jump Through Darkness</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>race</type>
-         <name>Drow</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>cloud of darkness</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Rogue</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Teleportation</group>
-      <benefit>On the same turn that you use your &lt;i&gt;cloud of darkness&lt;/i&gt; racial power, you can use a free action to teleport to any unoccupied space within the cloud.</benefit>
+      <prereq type="race">Drow</prereq>
+      <prereq type="power" kind="racial" combine=";">cloud of darkness</prereq>
+      <prereq type="class" combine="or">Rogue</prereq>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Teleportation</group>
+      <benefit>On the same turn that you use your <i>cloud of darkness</i> racial power, you can use a free action to teleport to any unoccupied space within the cloud.</benefit>
       <benefit>If you have the Darkness Reign feat, you can use the free action to teleport each time you sustain the power as well.</benefit>
       <benefit>If you have the Instinctive Darkness feat, you can instead use a free reaction to teleport after the attack triggering that feat has been resolved.</benefit>
    </feat>
@@ -540,26 +351,11 @@
    <feat>
       <title>Ki Focus Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>Assassin</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>ability</type>
-         <name>Dexterity</name>
-         <value>13</value>
-      </prereq>
-      <group>Bloodied Enemy</group>
-      <group>Damage Bonus</group>
-      <group>Implement Specialization</group>
+      <prereq type="hidden">Assassin</prereq>
+      <prereq type="hidden">Monk</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="ability">Dexterity<value>13</value></prereq>
+      <group>Bloodied Enemy</group> <group>Damage Bonus</group> <group>Implement Specialization</group>
       <benefit>You gain a +1 bonus to damage rolls against bloodied enemies with attacks you make using a ki focus.</benefit>
       <benefit>The bonus to damage increases to +2 at 11th level, and to +3 at 21st level.</benefit>
    </feat>
@@ -567,47 +363,20 @@
    <feat>
       <title>Legioncaller of Moil</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Wizard</name>
-         <combine>with either</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Necromancy Specialization</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feature</type>
-         <name>Nethermancy Specialization</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Defense</group>
-      <group>Summoning</group>
-      <benefit>Any creature that you summon with a Shadow, Necromancy, or Nethermancy Summoning power gains a +1 feat bonus to attack rolls and a +1 feat bonus to all defenses.</benefit>
+      <prereq type="class" combine="or">any shadow</prereq>
+      <prereq type="class" combine="with either">Wizard</prereq>
+      <prereq type="feature" combine="or">Necromancy Specialization</prereq>
+      <prereq type="feature">Nethermancy Specialization</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Defense</group> <group>Summoning</group>
+      <benefit>Any creature that you summon with a <key>Shadow</key>, <key>Necromancy</key>, or <key>Nethermancy</key> power gains a +1 feat bonus to attack rolls and a +1 feat bonus to all defenses.</benefit>
    </feat>
 
    <feat>
       <title>Martial Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any martial</name>
-      </prereq>
-      <group>Bloodied</group>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class">any martial</prereq>
+      <group>Bloodied</group> <group>Class Combination</group> <group>Healing Surge</group>
       <benefit>Once per encounter, when you hit at least one enemy with a martial attack power, you gain a healing surge.</benefit>
       <benefit>Also, the first time you are bloodied in an encounter, you gain a healing surge. If you do not spend this healing surge before the end of the encounter, you lose it.</benefit>
    </feat>
@@ -615,75 +384,37 @@
    <feat>
       <title>Mighty Crusader Expertise</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>hidden</type>
-         <name>any divine</name>
-      </prereq>
-      <prereq>
-         <type>hidden</type>
-         <name>Vampire</name>
-      </prereq>
-      <prereq>
-         <type>proficiency</type>
-         <name>holy symbols</name>
-      </prereq>
-      <group>Defense</group>
-      <group>Implement Specialization</group>
-      <group>Weapon Specialization</group>
-      <benefit>While you wield a two-handed melee weapon that you have proficiency with, you gain a +4 bonus to all defenses against &lt;i&gt;reactive strikes&lt;/i&gt; triggered for making a ranged or area attack using a holy symbol you have proficiency with.</benefit>
+      <prereq type="hidden">any divine</prereq>
+      <prereq type="hidden">Vampire</prereq>
+      <prereq type="proficiency">holy symbols</prereq>
+      <group>Defense</group> <group>Implement Specialization</group> <group>Weapon Specialization</group>
+      <benefit>While you wield a two-handed melee weapon that you have proficiency with, you gain a +4 bonus to all defenses against <i>reactive strikes</i> triggered for making a ranged or area attack using a holy symbol you have proficiency with.</benefit>
    </feat>
 
    <feat>
       <title>Minion of the Dark</title>
       <tier>Paragon</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Perception</group>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Perception</group>
       <benefit>You gain darkvision.</benefit>
    </feat>
 
    <feat>
       <title>Mist Walker Illusion</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Gnome</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>fade away</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <group>Triggered</group>
-      <benefit>When you hit with a shadow power, you can use your &lt;i&gt;fade away&lt;/i&gt; racial power as a free reaction.</benefit>
+      <prereq type="race">Gnome</prereq>
+      <prereq type="power" kind="racial">fade away</prereq>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Triggered</group>
+      <benefit>When you hit with a shadow power, you can use your <i>fade away</i> racial power as a free reaction.</benefit>
    </feat>
 
    <feat>
       <title>Monastic Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Monk</name>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Defense</group>
-      <group>Healing Surge</group>
-      <group>Mobility</group>
-      <group>Triggered</group>
+      <prereq type="class">Monk</prereq>
+      <prereq type="class">Vampire</prereq>
+      <group>Class Combination</group> <group>Defense</group> <group>Healing Surge</group> <group>Mobility</group> <group>Triggered</group>
       <benefit>Once per encounter, when you hit at least one enemy with a monk encounter attack, you gain a healing surge.</benefit>
       <benefit>Also, when you spend a healing surge, you become invigorated until the end of your next turn. While invigorated, you gain a +2 bonus to speed and a +4 bonus to all defenses against attacks triggered by your movement.</benefit>
    </feat>
@@ -691,31 +422,18 @@
    <feat>
       <title>Nightmare Killer</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Fear</group>
-      <benefit>You gain a +2 feat bonus to damage rolls with Fear powers.</benefit>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Fear</group>
+      <benefit>You gain a +2 feat bonus to damage rolls with <key>Fear</key> powers.</benefit>
       <benefit>This bonus increases to +3 at 11th level, and to +4 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Primal Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any primal</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class">any primal</prereq>
+      <group>Class Combination</group> <group>Healing Surge</group>
       <benefit>Once per encounter, when you hit at least one enemy with a primal encounter attack power, you gain a healing surge.</benefit>
       <benefit>Also, your number of healing surges increases by two.</benefit>
    </feat>
@@ -723,18 +441,10 @@
    <feat>
       <title>Psionic Vampire</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-         <combine>and</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any divine</name>
-      </prereq>
-      <group>Class Combination</group>
-      <group>Healing Surge</group>
-      <group>Psionics</group>
+      <prereq type="class" combine="and">Vampire</prereq>
+      <prereq type="class" combine=";">any psionic</prereq>
+      <prereq type="feature">Psionic Augmentation</prereq>
+      <group>Class Combination</group> <group>Healing Surge</group> <group>Psionics</group>
       <benefit>Once per encounter, when you hit at least one enemy with an augmented psionic attack, you gain a healing surge.</benefit>
       <benefit>Once per encounter, you can use a minor action to spend a healing surge to gain 2 power points. These power points expire at the end of your current turn.</benefit>
    </feat>
@@ -742,57 +452,23 @@
    <feat>
       <title>Reaping Shadows</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Revenant</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>dark reaping</name>
-         <qualifier>racial</qualifier>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Assassin</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>Vampire</name>
-      </prereq>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Implement Specialization</group>
-      <group>Miss Mitigation</group>
-      <group>Necrotic Specialization</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;dark reaping&lt;/i&gt; racial power, the first time you miss with an Implement attack using a ki focus or a Weapon enhanced by a ki focus before the end of the encounter, the target takes necrotic damage equal to twice the ki focus' enhancement bonus (minimum 1 damage).</benefit>
+      <prereq type="race">Revenant</prereq>
+      <prereq type="power" kind="racial" combine=";">dark reaping</prereq>
+      <prereq type="class" combine="or">Assassin</prereq>
+      <prereq type="class">Vampire</prereq>
+      <group>Class</group> <group>Damage Bonus</group> <group>Implement Specialization</group> <group>Miss Mitigation</group> <group>Necrotic</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>dark reaping</i> racial power, the first time you miss with an Implement attack using a ki focus or a Weapon enhanced by a ki focus before the end of the encounter, the target takes necrotic damage equal to twice the ki focus' enhancement bonus (minimum 1 damage).</benefit>
       <benefit>This necrotic damage increases to 2 + twice the ki focus' enhancement bonus (minimum 3 damage) at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Seeking Power</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>level</type>
-         <name>6th</name>
-         <combine>;</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Controller</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>role</type>
-         <name>Striker</name>
-      </prereq>
-      <group>Attack Bonus</group>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <benefit>You can exchange any 6th-level or higher utility power you know for &lt;i&gt;seeking power&lt;/i&gt;.</benefit>
+      <prereq type="level" combine=";">6th</prereq>
+      <prereq type="role" combine="or">Controller</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Attack Bonus</group> <group>Class</group> <group>Power Repertoire</group>
+      <benefit>You can exchange any 6th-level or higher utility power you know for <i>seeking power</i>.</benefit>
 
       <power>
          <title>Seeking Power</title>
@@ -814,32 +490,19 @@
    <feat>
       <title>Shadow Blood</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-         <combine>or</combine>
-      </prereq>
-      <prereq>
-         <type>feat</type>
-         <name>Born of Shadow</name>
-      </prereq>
-      <group>Healing</group>
-      <group>Second Wind</group>
-      <group>Shadow Nature</group>
-      <benefit>When you use your &lt;i&gt;second wind&lt;/i&gt; and are in an area of dim light or darkness, you regain 5 additional hit points.</benefit>
+      <prereq type="class" combine="or">any shadow</prereq>
+      <prereq type="feat">Born of Shadow</prereq>
+      <group>Healing</group> <group>Second Wind</group> <group>Shadow Nature</group>
+      <benefit>When you use your <i>second wind</i> and are in an area of dim light or darkness, you regain 5 additional hit points.</benefit>
       <benefit>These additional hit points increase to 10 at 11th level, and to 15 at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Shadow Coffin</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Power Repertoire</group>
-      <benefit>You gain the &lt;i&gt;shadow coffin&lt;/i&gt; utility power.</benefit>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Power Repertoire</group>
+      <benefit>You gain the <i>shadow coffin</i> utility power.</benefit>
       <benefit>This power counts as a power from your shadow class. If you have more than one shadow class, you choose which class gains this power when you gain this feat.</benefit>
 
       <power>
@@ -877,59 +540,94 @@
    <feat>
       <title>Shadow Overflow</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>ability</type>
-         <name>Constitution</name>
-         <value>13</value>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Basic Attack</group>
-      <group>Class</group>
-      <group>Damage Bonus</group>
-      <group>Kill Effect</group>
-      <group>Necrotic Specialization</group>
-      <benefit>Whenever you reduce an enemy to 0 hit points or fewer with a &lt;i&gt;basic attack&lt;/i&gt;, one enemy within 2 squares of you takes necrotic damage equal to your Constitution modifier. The damage is halved if you reduced a minion to 0 hit points or fewer, and doubled if you reduced an elite or solo enemy to 0 hit points or fewer.</benefit>
+      <prereq type="ability">Constitution<value>13</value></prereq>
+      <prereq type="class">any shadow</prereq>
+      <group>Basic Attack</group> <group>Class</group> <group>Damage Bonus</group> <group>Kill Effect</group> <group>Necrotic</group>
+      <benefit>Whenever you reduce an enemy to 0 hit points or fewer with a <i>basic attack</i>, one enemy within 2 squares of you takes necrotic damage equal to your Constitution modifier. The damage is halved if you reduced a minion to 0 hit points or fewer, and doubled if you reduced an elite or solo enemy to 0 hit points or fewer.</benefit>
       <benefit>This necrotic damage increases to 4 + your Constitution modifier at 11th level, and to 8 + your Constitution modifier at 21st level.</benefit>
    </feat>
 
    <feat>
       <title>Shadow Veil</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <benefit>When you hit an adjacent creature with an encounter attack or a daily attack, and the attack has the Illusion keyword, you can shift 1 square as a free reaction.</benefit>
+      <prereq type="class">any shadow</prereq>
+      <group>Mobility</group> <group>Power Enhancement</group>
+      <benefit>When you hit an adjacent creature with an encounter attack or a daily attack, and the attack has the <key>Illusion</key> keyword, you can shift 1 square as a free reaction.</benefit>
       <benefit>Starting at 21st level, this increases to shift up to 2 squares.</benefit>
    </feat>
 
    <feat>
       <title>Shadowcreeper Goblin</title>
       <tier>Heroic</tier>
-      <prereq>
-         <type>race</type>
-         <name>Goblin</name>
-      </prereq>
-      <prereq>
-         <type>power</type>
-         <name>goblin tactics</name>
-         <qualifier>racial</qualifier>
-      </prereq>
-      <prereq>
-         <type>class</type>
-         <name>any shadow</name>
-      </prereq>
-      <group>Class</group>
-      <group>Concealment</group>
-      <group>Mobility</group>
-      <group>Power Enhancement</group>
-      <group>Racial</group>
-      <benefit>When you use your &lt;i&gt;goblin tactics&lt;/i&gt; racial power, you can shift 1 extra square, and you gain concealment until the end of your next turn.</benefit>
+      <prereq type="race">Goblin</prereq>
+      <prereq type="power" kind="racial">goblin tactics</prereq>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Concealment</group> <group>Mobility</group> <group>Power Enhancement</group> <group>Racial</group>
+      <benefit>When you use your <i>goblin tactics</i> racial power, you can shift 1 extra square, and you gain concealment until the end of your next turn.</benefit>
    </feat>
 
+   <feat>
+      <title>Soulstealer of Moil</title>
+      <tier>Heroic</tier>
+      <prereq type="class" combine="or">any shadow</prereq>
+      <prere type="class" combine="with either">Wizard</prere>
+      <prereq type="feature" combine="or">Necromancy Specialization</prereq>
+      <prereq type="feature">Nethermancy Specializaation</prereq>
+      <group>Class</group> <group>Summoning</group> <group>Temporary Hit Points</group>
+      <benefit>When you use a <key>Shadow</key>, <key>Necromancy</key>, or <key>Nethermancy</key> power with the <key>Summoning</key> keyword, you gain 5 temporary hit points.</benefit>
+      <benefit>These temporary hit points increase to 10 at 11th level, and to 15 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Spectral Action</title>
+      <tier>Heroic</tier>
+      <prereq type="class" combine="or">any shadow</prereq>
+      <prereq type="origin">shadow</prereq>
+      <group>Action Point</group> <group>Damage Resistance</group> <group>Shadow Nature</group>
+      <benefit>When you spend an action point, you also become insubstantial until the end of your current turn.</benefit>
+      <benefit>If you spend an action point when it is not your turn, you instead become insubstantial until the end of your next turn.</benefit>
+      <benefit>You take full damage from radiant damage.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Swallowed by Shadow</title>
+      <tier>Paragon</tier>
+      <prereq type="race">Revenant</prereq>
+      <prereq type="power" kind="racial">dark reaping</prereq>
+      <prereq type="class">any shadow</prereq>
+      <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Stealth</group>
+      <benefit>When you use your <i>dark reaping</i> racial power, you become invisible until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Sword of Civilization</title>
+      <tier>Heroic</tier>
+      <prereq type="role">Striker</prereq>
+      <prereq type="deity">Erathis</prereq>
+      <group>Class</group> <group>Combat Advantage</group> <group>Damage Bonus</group> <group>Support</group> <group>Worship</group>
+      <benefit>When you have combat advantage against an enemy, allies adjacent to you have a +2 bonus to damage rolls against that enemy.</benefit>
+      <benefit>This bonus to damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Tainted Wounds</title>
+      <tier>Heroic</tier>
+      <prereq type="class">Warlock</prereq>
+      <prereq type="class" combine="or">any shadow</prereq>
+      <prereq type="origin">shadow</prereq>
+      <group>Condition Infliction</group> <group>Shadow Nature</group>
+      <benefit>When you hit an enemy with a melee attack, that enemy cannot regain hit points until the end of your next turn.</benefit>
+   </feat>
+   
+   <feat>
+      <title>Unstoppable Drive</title>
+      <tier>Heroic</tier>
+      <prereq type="race" combine=";">Dwarf</prereq>
+      <prereq type="role" combine="or">Defender</prereq>
+      <prereq type="role">Striker</prereq>
+      <group>Class</group> <group>Mobility</group> <group>Second Wind</group>
+      <benefit>When you use your <i>second wind</i>, you can shift 1 square as a free reaction. You must end this movement in a space adjacent to at least one enemy.</benefit>
+      <benefit>This increases to shift up to 2 squares at 21st level.</benefit>
+   </feat>
+   
    </catalog>
