@@ -221,10 +221,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			      		<span class="titletext" style="font-variant: small-caps; font-weight:bold; letter-spacing:1px;"><i>
 								<xsl:choose>
 									<xsl:when test="name/@attack">
-										<xsl:value-of select="../title"/><xsl:text> Attack Technique</xsl:text>
+										<!-- <xsl:value-of select="../title"/>--><xsl:text> Attack Technique</xsl:text>
 									</xsl:when>
 									<xsl:when test="name/@movement">
-										<xsl:value-of select="../title"/><xsl:text> Movement Technique</xsl:text>
+										<!-- <xsl:value-of select="../title"/>--><xsl:text> Movement Technique</xsl:text>
 									</xsl:when>
 									<xsl:otherwise>
 										<xsl:value-of select="name"/><xsl:value-of select="part-name"/>
@@ -241,7 +241,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						   		&#x25C6;
 								</xsl:if>
 							</xsl:if>
-						   <b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" />
+						   <b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text>
+							<xsl:choose>
+								<xsl:when test="subaction=''">
+									<xsl:text>Action</xsl:text>
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="subaction" />
+								</xsl:otherwise>
+							</xsl:choose>
 					   </div>
 				   </xsl:if>
 					<xsl:if test="fluff">
@@ -329,11 +337,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					      		<span class="titletext" style="font-variant: small-caps; font-weight:bold; letter-spacing:1px;"><i><xsl:value-of select="name"/><xsl:value-of select="part-name"/></i></span>
 								</div>
 						   </xsl:if>
-						   <xsl:if test="frequency">
+						   <xsl:if test="frequency or action">
 						   	<div class="freqact" style="width:calc(100% - 0.09em); font-size:1.05em; margin:0.2em; margin-top:0em; float:left;">
 								   <b><xsl:value-of select="frequency" /> </b>
 								   &#x25C6;
-								   <b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text><xsl:value-of select="subaction" />
+								   <b> <xsl:value-of select="action" /></b><xsl:text> </xsl:text>
+									<xsl:choose>
+										<xsl:when test="subaction=''">
+											<xsl:text>Action</xsl:text>
+										</xsl:when>
+										<xsl:otherwise>
+											<xsl:value-of select="subaction" />
+										</xsl:otherwise>
+									</xsl:choose>
 							   </div>
 						   </xsl:if>
 							<xsl:if test="fluff">
@@ -543,6 +559,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:if test="@auto='no-opportunity'">
 							<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i>
 						</xsl:if>
+						<xsl:if test="@auto='no-opportunity-target'">
+							<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i><xsl:text> from the target</xsl:text>
+						</xsl:if>
 						<xsl:if test="@auto='charge-effect'">
 							<b>Effect:&#160;</b>
 							<xsl:text>You charge and use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. If an effect allows you to charge, you can use this power.</xsl:text>
@@ -615,6 +634,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				  	<xsl:if test="@auto='no-opportunity'">
 				  		<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i>
 				  	</xsl:if>
+					<xsl:if test="@auto='no-opportunity-target'">
+						<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i><xsl:text> from the target</xsl:text>
+					</xsl:if>
 				  	<xsl:if test="@auto='charge-effect'">
 				  		<b>Effect:&#160;</b>
 				  		<xsl:text>You charge and use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. If an effect allows you to charge, you can use this power.</xsl:text>

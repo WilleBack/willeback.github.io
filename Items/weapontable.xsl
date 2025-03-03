@@ -471,7 +471,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:text>This weapon is light enough that it can be held and attacked with effectively while also holding a weapon in the main hand. You can't attack with both weapons in the same turn unless a power allows you to do so, but you can attack with either weapon without penalty.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Reach'">
-				<xsl:text disable-output-escaping="yes">This weapon can be used to attack targets further away. When using a reach weapon, you can attack enemies that are 2 squares away from you as well as adjacent enemies. You can still flank only enemies adjacent to you, and you can usually only make <![CDATA[<i>opportunity attacks</i>]]> against adjacent enemies.</xsl:text>
+				<xsl:text disable-output-escaping="yes">This weapon can be used to attack targets further away. When using a reach weapon, you can attack enemies that are 2 squares away from you as well as adjacent enemies. You can still flank only enemies adjacent to you, and you can usually only make <i>reactive strikes</i> against adjacent enemies.</xsl:text>
 			</xsl:when>
 			<xsl:when test=".='Returning'">
 				<xsl:text>This weapon returns to the wielder when thrown. After you have resolved a ranged attack with a returning weapon, it immediately returns to your hand.</xsl:text>

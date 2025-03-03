@@ -503,7 +503,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
-               <![CDATA[<i>Error</i>]]>
+               <i>Error</i>
             </xsl:otherwise>
          </xsl:choose>
       </div>
