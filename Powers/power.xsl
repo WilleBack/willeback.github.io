@@ -548,73 +548,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:choose>
 	  		 	<xsl:when test="name or bullet or @bullet or @auto or @special or @personal or keyword or type">
 		  			<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
-						<xsl:if test="bullet or name/@style='bullet' or @bullet">
-							&#9658;<xsl:text> </xsl:text>
-						</xsl:if>
-
-						<xsl:if test="@auto='channeldivinity'">
-							<b>Channel Divinity:&#160;</b>
-							<xsl:text>One Channel Divinity power per encounter.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='no-opportunity'">
-							<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i>
-						</xsl:if>
-						<xsl:if test="@auto='no-opportunity-target'">
-							<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i><xsl:text> from the target</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='charge-effect'">
-							<b>Effect:&#160;</b>
-							<xsl:text>You charge and use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. If an effect allows you to charge, you can use this power.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='charge-special'">
-							<b>Special:&#160;</b>
-							<xsl:text>When charging, you can use this power in place of a </xsl:text><i>melee basic attack</i><xsl:text>.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='req-twomelee'">
-							<b>Requirement:&#160;</b>
-							<xsl:text>You must be wielding two melee weapons.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='req-ranger'">
-							<b>Requirement:&#160;</b>
-							<xsl:text>You must be wielding two melee weapons, or a ranged weapon.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='prereq-wildshape'">
-							<b>Prerequisite:&#160;</b>
-							<xsl:text>You must have the </xsl:text><i>wild shape</i><xsl:text> class power.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='powerstrike'">
-							<b>Special:&#160;</b>
-							<i>Power strike</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>power strike</i><xsl:text> per triggering attack.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='dreadsmite'">
-							<b>Special:&#160;</b>
-							<i>Dread smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>dread smite</i><xsl:text> per triggering attack.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='holysmite'">
-							<b>Special:&#160;</b>
-							<i>Holy smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>holy smite</i><xsl:text> per triggering attack.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='weapon-implement'">
-							<b>Special:&#160;</b>
-							<xsl:text>You make this attack as either a melee Weapon attack or a ranged Implement attack.</xsl:text>
-						</xsl:if>
-						<xsl:if test="@auto='personal' or @personal">
-							<b>Personal</b>
-						</xsl:if>
-						<xsl:if test="@auto='special' or @special">
-							<b>Special</b>
-						</xsl:if>
-
-						<xsl:apply-templates />
+              <xsl:call-template name="section-content"/>
 		  		 	</div>
 		  		</xsl:when>
 		  		<xsl:otherwise>
 		  			<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
-						<xsl:if test="bullet or @style='bullet' or @bullet">
-							&#9658;<xsl:text> </xsl:text>
-						</xsl:if>
-
-						<xsl:apply-templates />
+              <xsl:call-template name="section-content"/>
 		  		 	</div>
 		  		</xsl:otherwise>
 		  	</xsl:choose>
@@ -623,78 +562,106 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:choose>
 	   		<xsl:when test="name or bullet or @bullet or @auto or @special or @personal or keyword or type">
 	   		  <div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; padding-left:{$leftindent};">
-					  <xsl:if test="bullet or @style='bullet' or @bullet">
-						  &#9658;<xsl:text> </xsl:text>
-					  </xsl:if>
-
-					  <xsl:if test="@auto='channeldivinity'">
-				  		<b>Channel Divinity:&#160;</b>
-				  		<xsl:text>One Channel Divinity power per encounter.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='no-opportunity'">
-				  		<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i>
-				  	</xsl:if>
-					<xsl:if test="@auto='no-opportunity-target'">
-						<xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i><xsl:text> from the target</xsl:text>
-					</xsl:if>
-				  	<xsl:if test="@auto='charge-effect'">
-				  		<b>Effect:&#160;</b>
-				  		<xsl:text>You charge and use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. If an effect allows you to charge, you can use this power.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='charge-special'">
-				  		<b>Special:&#160;</b>
-				  		<xsl:text>When charging, you can use this power in place of a </xsl:text><i>melee basic attack</i><xsl:text>.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='req-twomelee'">
-				  		<b>Requirement:&#160;</b>
-				  		<xsl:text>You must be wielding two melee weapons.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='req-ranger'">
-				  		<b>Requirement:&#160;</b>
-				  		<xsl:text>You must be wielding two melee weapons, or a ranged weapon.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='prereq-wildshape'">
-				  		<b>Prerequisite:&#160;</b>
-				  		<xsl:text>You must have the </xsl:text><i>wild shape</i><xsl:text> class power.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='powerstrike'">
-				  		<b>Special:&#160;</b>
-				  		<i>Power strike</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>power strike</i><xsl:text> per triggering attack.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='dreadsmite'">
-				  		<b>Special:&#160;</b>
-				  		<i>Dread smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>dread smite</i><xsl:text> per triggering attack.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='holysmite'">
-				  		<b>Special:&#160;</b>
-				  		<i>Holy smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>holy smite</i><xsl:text> per triggering attack.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='weapon-implement'">
-				  		<b>Special:&#160;</b>
-				  		<xsl:text>You make this attack as either a melee Weapon attack or a ranged Implement attack.</xsl:text>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='personal' or @personal">
-				  		<b>Personal</b>
-				  	</xsl:if>
-				  	<xsl:if test="@auto='special' or @special">
-				  		<b>Special</b>
-				  	</xsl:if>
-
-					  <xsl:apply-templates />
+					  <xsl:call-template name="section-content"/>
 	   		  </div>
 	   	  </xsl:when>
 	   	  <xsl:otherwise>
 	   		  <div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; padding-left:{$leftindent};">
-					  <xsl:if test="bullet or @style='bullet' or @bullet">
-						  &#9658;<xsl:text> </xsl:text>
-					  </xsl:if>
-
-					  <xsl:apply-templates />
+					  <xsl:call-template name="section-content"/>
 	   		  </div>
 	   	  </xsl:otherwise>
 	     </xsl:choose>
 		</xsl:otherwise>
 	</xsl:choose>
+</xsl:template>
+
+<xsl:template name="section-content">
+  <xsl:if test="bullet or @style='bullet' or @bullet">
+    &#9658;<xsl:text> </xsl:text>
+  </xsl:if>
+
+  <xsl:if test="@auto='channeldivinity'">
+    <b>Channel Divinity:&#160;</b>
+    <xsl:text>One Channel Divinity power per encounter.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='no-opportunity'">
+    <xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i>
+  </xsl:if>
+  <xsl:if test="@auto='no-opportunity-target'">
+    <xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i><xsl:text> from the target</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='basic-melee'">
+    <b>Special:&#160;</b>
+    <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='basic-ranged'">
+    <b>Special:&#160;</b>
+    <xsl:text>You can use this attack in place of a </xsl:text><i>ranged basic attack</i><xsl:text>. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='basic-both'">
+    <b>Special:&#160;</b>
+    <xsl:text>You can use this attack in place of a </xsl:text><i>basic attack</i><xsl:text>. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='basic-melee-counts'">
+    <b>Special:&#160;</b>
+    <xsl:text>This power counts as a </xsl:text><i>melee basic attack</i><xsl:text>. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='basic-ranged-counts'">
+    <b>Special:&#160;</b>
+    <xsl:text>This power counts as a </xsl:text><i>melee basic attack</i><xsl:text>. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='basic-both-counts'">
+    <b>Special:&#160;</b>
+    <xsl:text>This power counts as a </xsl:text><i>basic attack</i><xsl:text>. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='basic-melee-opportunity'">
+    <b>Special:&#160;</b>
+    <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text> when making a </xsl:text><i>reactive strike</i><xsl:text>. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='charge-effect'">
+    <b>Effect:&#160;</b>
+    <xsl:text>You charge and use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. If an effect allows you to charge, you can use this power. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='charge-special'">
+    <b>Special:&#160;</b>
+    <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text> when charging. </xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='req-twomelee'">
+    <b>Requirement:&#160;</b>
+    <xsl:text>You must be wielding two melee weapons.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='req-ranger'">
+    <b>Requirement:&#160;</b>
+    <xsl:text>You must be wielding two melee weapons, or a ranged weapon.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='prereq-wildshape'">
+    <b>Prerequisite:&#160;</b>
+    <xsl:text>You must have the </xsl:text><i>wild shape</i><xsl:text> class power.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='powerstrike'">
+    <b>Special:&#160;</b>
+    <i>Power strike</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>power strike</i><xsl:text> per triggering attack.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='dreadsmite'">
+    <b>Special:&#160;</b>
+    <i>Dread smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>dread smite</i><xsl:text> per triggering attack.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='holysmite'">
+    <b>Special:&#160;</b>
+    <i>Holy smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>holy smite</i><xsl:text> per triggering attack.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='weapon-implement'">
+    <b>Special:&#160;</b>
+    <xsl:text>You make this attack as either a melee </xsl:text><b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;">Weapon</span></b><xsl:text> attack or a ranged </xsl:text><b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;">Implement</span></b><xsl:text> attack.</xsl:text>
+  </xsl:if>
+  <xsl:if test="@auto='personal' or @personal">
+    <b>Personal</b>
+  </xsl:if>
+  <xsl:if test="@auto='special' or @special">
+    <b>Special</b>
+  </xsl:if>
+
+  <xsl:apply-templates />
 </xsl:template>
 
 <xsl:template match="name">
@@ -813,7 +780,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template match="text()">
-   <xsl:value-of select="." disable-output-escaping="yes" />
+  <xsl:choose>
+    <xsl:when test="not(normalize-space(.))"/>
+    <xsl:otherwise>
+      <xsl:value-of select="." disable-output-escaping="yes" />
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="b">

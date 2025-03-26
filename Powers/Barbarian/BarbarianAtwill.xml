@@ -11,7 +11,7 @@
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction/>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -32,7 +32,7 @@
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<text>If you can already reroll the damage die, roll twice and take the higher result.</text>
+				<text>If you can already reroll the damage die, roll twice and take the higher result for that die.</text>
 			</section>
 			<section>
 				<name>Effect:</name><text>Until the start of your next turn, attacks against you gain a +2 bonus to the attack roll.</text>
@@ -47,7 +47,7 @@
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction/>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -70,8 +70,8 @@
 				<name>Level 21:</name><text>3d8 or 5d8 additional damage.</text>
 			</section>
 			<section>
-				<name>Raging Effect:</name>
-				<text>While you are raging, if you reduced a minion enemy to 0 hit points, you can immediately move one-half your speed, but must end this move adjacent to an enemy.</text>
+				<name>Effect (Raging):</name>
+				<text>While you are raging, if you reduced a minion enemy to 0 hit points, you can immediately move up to one-half your speed, but must end this move adjacent to an enemy.</text>
 			</section>
 			<section>
 				<text>If you reduced a non-minion enemy to 0 hit points or less, you can immediately move up to your speed, but must end this move adjacent to an enemy.</text>
@@ -86,7 +86,7 @@
 			<keyword>Primal, Weapon</keyword>
 			<action>Standard</action> <subaction/>
 			<section>
-				<name>Primary Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Primary Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -98,7 +98,7 @@
 				<name>Level 21:</name><text>2[W] + Strength modifier damage.</text>
 			</section>
 			<section>
-				<name>Effect:</name><text>You make the Howl Attack. You must include the primary target in the howl attack's area.</text>
+				<name>Effect:</name><text>You make the Howl Attack. You must include the primary target in the Howl Attack's area.</text>
 			</section>
 		<part>
 			<name>Howl Attack</name>
@@ -107,6 +107,10 @@
 			<action>Nonaction</action>
 			<section>
 				<name>Howl Target:</name><type>Close</type><range>blast 3</range><target>each enemy in the blast, other than the primary target</target>
+			</section>
+			<section>
+				<indent>1</indent>
+				<name>Raging:</name><text>While you are raging, the primary target is also a howl target</text>
 			</section>
 			<section shade="">
 				<name>Effect:</name><text>Each target takes thunder damage equal to 1 + your Constitution modifier, or half this amount if the primary attack was a miss.</text>
@@ -118,10 +122,6 @@
 			<section>
 				<shade>true</shade> <indent>1</indent>
 				<name>Level 21:</name><text>8 + your Constitution modifier thunder damage.</text>
-			</section>
-			<section shade="">
-				<indent>1</indent>
-				<name>Raging:</name><text>While you are raging, the primary target is also a howl target</text>
 			</section>
 		</part>
 	</power>
@@ -137,7 +137,7 @@
 				<name>Requirement:</name><text>You must be wielding a melee weapon in two hands</text>
 			</section>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -216,7 +216,7 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name><text>1[W] + Strength modifier damage, and you push the target 1 square.</text>
+				<name>Hit:</name><text>1[W] + Strength modifier damage, and you can push the target 1 square.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
@@ -224,7 +224,7 @@
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Level 21:</name><text>2[W] + Strength modifier + 2d6 damage.</text>
+				<name>Level 21:</name><text>2[W] + Strength modifier + 2d6 damage, and push up to 2 squares.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
@@ -244,7 +244,7 @@
 				<text>You must be wielding a melee weapon in two hands</text>
 			</section>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -253,19 +253,19 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>If this attack reduces a non-minion enemy to 0 hit points or less, the power gains the <key>Healing</key> keyword and you regain hit points instead of gaining temporary hit points.</text>
+				<text>If this attack reduces a non-minion enemy to 0 hit points or less, you can give the power the <key>Healing</key> keyword. If you do, you regain the same amount of hit points instead of gaining temporary hit points.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Level 11:</name><text>1[W] + Strength modifier + 1d6 damage, and 3 + your Constitution modifier temporary hit points or healing.</text>
+				<name>Level 11:</name><text>1[W] + Strength modifier + 1d6 damage, and 3 + your Constitution modifier temporary hit points.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Level 21:</name><text>2[W] + Strength modifier + 2d6 damage, and 6 + your Constitution modifier temporary hit points or healing.</text>
+				<name>Level 21:</name><text>2[W] + Strength modifier + 2d6 damage, and 6 + your Constitution modifier temporary hit points.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Raging:</name><text>While you are raging, you gain an additional +5 temporary hit points or healing.</text>
+				<name>Raging:</name><text>While you are raging, you gain an additional +5 temporary hit points.</text>
 			</section>
 	</power>
 
@@ -309,16 +309,16 @@
 				<name>Requirement:</name><text>You must be wielding a two-handed reach weapon</text>
 			</section>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section auto="">
-				<indent>1</indent>
+				<indent>1</indent><name/>
 				<text>+2 to attack if the target is not adjacent to you</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name><text>1[W] + Strength modifier damage, and you slide the target 1 square. If the target is adjacent to you, you can push it 2 squares instead.</text>
+				<name>Hit:</name><text>1[W] + Strength modifier damage, and you can slide the target 1 square. If the target is adjacent to you, you can choose to push it up to 2 squares instead.</text>
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
@@ -345,7 +345,7 @@
 			<name>Requirement:</name><text>You must be wielding two melee weapons</text>
 		</section>
 		<section>
-			<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+			<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 			<text>Strength vs. AC (main hand)</text>
 		</section>
 		<section>
