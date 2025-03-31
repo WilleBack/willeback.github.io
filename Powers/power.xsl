@@ -608,7 +608,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   </xsl:if>
   <xsl:if test="@auto='basic-ranged-counts'">
     <b>Special:&#160;</b>
-    <xsl:text>This power counts as a </xsl:text><i>melee basic attack</i><xsl:text>. </xsl:text>
+    <xsl:text>This power counts as a </xsl:text><i>ranged basic attack</i><xsl:text>. </xsl:text>
   </xsl:if>
   <xsl:if test="@auto='basic-both-counts'">
     <b>Special:&#160;</b>
@@ -678,13 +678,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="@vestige">
 			<b><i>Eyes of the Vestige</i> Augment:</b>&#160;
 		</xsl:when>
-      <xsl:when test="contains(., 'Miss (Level')">
-			<b><xsl:apply-templates />&#160;</b>
-		</xsl:when>
-		<xsl:when test="contains(., 'Effect (Level')">
-			<b><xsl:apply-templates />&#160;</b>
-		</xsl:when>
-		<xsl:when test="contains(., 'Special (Level')">
+      <xsl:when test="contains(., '(Level')">
 			<b><xsl:apply-templates />&#160;</b>
 		</xsl:when>
 		<xsl:when test="contains(., 'Aftereffect')">
