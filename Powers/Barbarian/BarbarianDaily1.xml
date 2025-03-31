@@ -20,7 +20,7 @@
 				<name>Alternative:</name><text>You shift one-half your speed.</text>
 			</section>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -30,6 +30,7 @@
 			<section>
 				<name>Miss:</name><text>Half damage.</text>
 			</section>
+      <section shade="" auto="charge-special">When you do, you can shift up to one-half your speed instead of moving your speed as part of the charge. If you chose the alternative benefit, you can shift up to your speed.</section>
 		<aspect>
 			<name>Always Falling Rage</name>
 			<section>
@@ -38,7 +39,7 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>Additionally, on your turn you gain a +2 bonus to attack rolls against adjacent targets that were not adjacent to you at the start of your turn, and you knock such targets prone on a critical hit.</text>
+				<text>Additionally, on your turn you gain a +2 bonus to attack rolls against targets that were further away from you at the start of your turn than when you make the attack, and you knock such targets prone on a critical hit.</text>
 			</section>
 		</aspect>
 	</power>
@@ -59,7 +60,7 @@
 				<name>Alternative:</name><text>If you or the target is bloodied, you reroll any 1s on your damage roll for this power until the result is something other than a 1.</text>
 			</section>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -105,8 +106,8 @@
 				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
-			<section auto="">
-				<indent>1</indent>
+			<section>
+				<indent>1</indent> <name/>
 				<text>You gain a +2 bonus to attack if the target is bloodied</text>
 			</section>
 			<section>
@@ -145,7 +146,7 @@
 				<name>Alternative:</name><text>The target takes 5 + your Strength modifier damage at the start of its turn if it is still grabbed by you.</text>
 			</section>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -192,7 +193,7 @@
 				<name>Alternative:</name><text>You give each enemy adjacent to you a -2 penalty to attack rolls against you until the start of your next turn.</text>
 			</section>
 			<section>
-				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
+				<name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>
 				<text>Strength vs. AC</text>
 			</section>
 			<section>
@@ -437,23 +438,24 @@
 			<name>Skulltaker Spirit Rage</name>
 			<section>
 				<shade>true</shade>
-				<text>Until the rage ends or you change to a different rage, you take damage equal to your level at the start of each of your turns. This damage cannot be resisted or negated. </text>
+				<text>Until the rage ends or you change to a different rage, you take damage equal to your level at the start of each of your turns. This damage cannot be resisted or negated.</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>If you start your turn suffering from a condition or effect that prevents you from taking actions or from making an attack against any creatures, you take damage equal to your level and end any such effects on you. You are also immune to being marked.</text>
+				<text>You are immune to being marked. If you start your turn suffering from a condition or effect that prevents you from taking actions or from making an attack against any creatures, you take damage equal to your level and end any such effects on you.</text>
 			</section>
 			<section>
 				<shade>true</shade>
 				<text>In addition, you gain a +2 bonus to all attack and damage rolls. You also ignore cover and concealment, including total concealment but not total cover, when using barbarian attack powers.</text>
 			</section>
+      <section shade="">If you hit a creature with a barbarian attack, until the end of your next turn, that creature can not gain combat advantage against you for hiding or flanking, or for being invisible.</section>
 		</aspect>
 	</power>
 
 	<power>
 		<title>Stampeding Hooves Rage</title>
 		<class>Barbarian</class> <category>Attack</category> <level>1</level>
-		<fluff>You hammer your enemy with a heavy blow, and the spirits of stampeding beasts fill you with their strength</fluff>
+		<fluff>You hammer your enemy with a heavy blow as the spirits of stampeding beasts fill you with their strength</fluff>
 			<frequency>Daily</frequency>
 			<keyword>Primal, Rage, Weapon</keyword>
 			<action>Standard</action> <subaction/>
@@ -463,7 +465,7 @@
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Alternative:</name><text>You move one-half your speed, including through enemies' spaces. You gain a +4 bonus to attack rolls until the end of your turn against enemies whose space you moved through. If you used this attack when charging, you instead gain a +2 bonus to speed for the charge.</text>
+				<name>Alternative:</name><text>You move one-half your speed, including through enemies' spaces. You gain a +4 bonus to attack rolls until the end of your turn against enemies whose space you moved through. If you used this attack when charging, you gain a +2 bonus to speed for the charge instead of moving one-half your speed.</text>
 			</section>
 			<section>
 				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
@@ -476,13 +478,12 @@
 			<section>
 				<name>Miss:</name><text>Half damage.</text>
 			</section>
-			<section shade="" auto="charge-special"/>
-			<section shade="">When you charge the target, you can choose to move through its space as part of the charge, even though this does not bring you closer to the target.</section>
+			<section shade="" auto="charge-special">When you do, you can choose to move through the target's space as part of the charge even though this does not bring you closer to the target.</section>
 		<aspect>
 			<name>Stampeding Hooves Rage</name>
 			<section>
 				<shade>true</shade>
-				<text>Until the rage ends or you change to a different rage, you can move through your enemies' spaces, though the movement provokes <i>reactive strikes</i> normally.</text>
+				<text>Until the rage ends or you change to a different rage, you can move through your enemies' spaces, though the movement provokes <i>reactive strikes</i> normally. If you charge, you can choose to move through the target's space as part of the charge even though this does not bring you closer to the target.</text>
 			</section>
 			<section>
 				<shade>true</shade>
@@ -508,7 +509,7 @@
 				<name>Alternative:</name><text>You shift 4 squares instead of 2 squares.</text>
 			</section>
 			<section>
-				<name>Effect:</name><text>You shift 2 squares.</text>
+				<name>Effect:</name><text>You shift up to 2 squares.</text>
 			</section>
 			<section>
 				<name>Attack:</name><type>Melee</type> <range>weapon</range><target>one creature</target>
@@ -525,11 +526,11 @@
 			<name>Swift Panther Rage</name>
 			<section>
 				<shade>true</shade>
-				<text>Until the rage ends or you change to a different rage, you gain a +2 bonus to speed and can shift 2 squares as a move action.</text>
+				<text>Until the rage ends or you change to a different rage, you gain a +2 bonus to speed and can shift up to 2 squares as a move action.</text>
 			</section>
 			<section>
 				<shade>true</shade>
-				<text>In addition, when a barbarian power allows you to move or shift you can move or shift 1 additional square. This stacks with the bonus to speed when a power allows you to move your speed. </text>
+				<text>In addition, when a barbarian power allows you to move or shift, you can move or shift 1 additional square. This stacks with the bonus to speed when a power allows you to move or shift your speed. </text>
 			</section>
 		</aspect>
 	</power>
