@@ -59,18 +59,15 @@
       <trait>General</trait> <trait>Skill</trait>
       <prereq>Cat Fall; trained in Acrobatics</prereq>
 
-      <line>You land with quick rolls that help you keep your momentum. If you fall and don't take damage (usually due to treating the fall as s shorter distance), you can use your reaction to immediately enter a short roll when you land and Step.</line>
+      <line>You land with quick rolls that help you keep your momentum. If you fall and don't take damage (usually due to treating the fall as a shorter distance), you can use your reaction to immediately enter a short roll when you land and Step.</line>
       <line>If you are an expert in Acrobatics, you can use your reaction to Step, or to Stride up to half your Speed. If you're a master in Acrobatics, you can use your reaction to Step, or to Stride your full speed. If you're legendary in Acrobatics, you don't trigger reactions triggered by movement when you Stride this way.</line>
    </rule>
 
    <rule>
-      <title>Steady Balance</title>
-      <type>Feat</type> <level>1</level>
-      <trait>General</trait> <trait>Skill</trait>
-      <prereq>trained in Acrobatics</prereq>
+      <title>Falling</title>
 
-      <line>You can keep your balance easily, even in adverse conditions. Whenever you roll a success using the Balance action, you get a critical success instead. You're not flat-footed while attempting to Balance on a narrow surface and uneven ground.</line>
-      <line>Thanks to your incredible balance, you can attempt an Acrobatics check instead of a Reflex save to Grab and Edge.</line>
+      <line>When you fall more than 5 feet, you take bludgeoning damage equal to half the distance you fell when you land. Treat falls longer than 1,500 feet as though they were 1,500 feet (750 damage). If you take any damage from a fall, you land prone. You fall about 500 feet in the first round of falling and about 1,500 feet each round thereafter.</line>
+      <line>You can Grab an Edge as a reaction to reduce the damage from some falls. In addition, if you fall into water, snow, or another relatively soft substance, you can treat the fall as though it were 20 feet shorter, or 30 feet shorter if you intentionally dove in. The effective reduction can't be greater than the depth (so when falling into 10-foot-deep water, you treat the fall as 10 feet shorter).</line>
    </rule>
 
    <rule>
@@ -88,11 +85,43 @@
    </rule>
 
    <rule>
+      <title>Steady Balance</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Acrobatics</prereq>
+
+      <line>You can keep your balance easily, even in adverse conditions. Whenever you roll a success using the Balance action, you get a critical success instead. You're not flat-footed while attempting to Balance on a narrow surface and uneven ground.</line>
+      <line>Thanks to your incredible balance, you can attempt an Acrobatics check instead of a Reflex save to Grab and Edge.</line>
+   </rule>
+
+   <rule>
       <title>Incredible Initiative</title>
       <type>Feat</type> <level>1</level>
       <trait>General</trait>
 
       <line>You react more quickly than others can. You gain a +2 circumstance bonus to initiative rolls.</line>
+   </rule>
+
+   <rule>
+      <title>Slippery Prey</title>
+      <type>Feat</type> <level>2</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>trained in Acrobatics or Athletics</prereq>
+
+      <line>You're able to escape bonds more easily than others. When you attempt to Escape using Acrobatics or Athletics, you reduce the multiple attack penalty for repeated attempts to -4 and -8 if you're trained in the skill. The penalty becomes -3 and -6 if you're a master in the appropriate skill.</line>
+      <line>If you're legendary in the skill, you don't take penalties for multiple Escape attempts in the same turn. Your attempts still have the <u>attack</u> trait and incur a multiple attack penalty for other actions.</line>
+   </rule>
+
+   <rule>
+      <title>Escape</title>
+      <trait>Attack</trait>
+
+      <line>You attempt to escape from being grabbed, immobilized, or restrained. Choose one creature, object, spell effect, hazard, or other impediment imposing any of those conditions on you. Attempt a check using your unarmed attack modifier against the DC of the effect. This is typically the Athletics DC of a creature grabbing you, the Thievery DC of a creature who tied you up, the spell DC of a spell effect, or the listed Escape DC of an object, hazard, or other impediment. You can attempt an Acrobatics or Athletics check instead of using your attack modifier if you choose.</line>
+      <line results="">
+         <critsuccess>You get free and remove the grabbed, immobilized, or restrained condition imposed by your chosen target. You can then Stride up to 5 feet.</critsuccess>
+         <success>You get free and remove the grabbed, immobilized, or restrained conditions imposed by your chosen target.</success>
+         <critfail>You don't get free, and you can't attempt to Escape again until your next turn.</critfail>
+      </line>
    </rule>
 
    <rule>

@@ -589,7 +589,7 @@
                      <b><xsl:value-of select="@list" /></b>
                   </div>
                </xsl:if>
-               <div id="list" class="line" style="float: left; padding-left: 2.2em;">
+               <div id="list" class="line" style="float: left; padding-left: 1.7em;">
                   <xsl:for-each select="entry">
                      <div id="listentry" clas="line" style="float: left; width:100%;">
                         &#9658;<xsl:text> </xsl:text>
@@ -646,7 +646,14 @@
             </xsl:if>
             <xsl:apply-templates />
             <xsl:if test="position()!=last()">
-               <xsl:text>; </xsl:text>
+               <xsl:choose>
+                  <xsl:when test="following-sibling::*[1]/name">
+                     <xsl:text>; </xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                     <br/>&#160;
+                  </xsl:otherwise>
+               </xsl:choose>
             </xsl:if>
          </xsl:for-each>
       </div>
@@ -736,6 +743,17 @@
             <xsl:text>Activate—</xsl:text>
          </xsl:if>
          <xsl:apply-templates /><xsl:text> </xsl:text></b>
+   </xsl:template>
+
+   <xsl:template match="bulk">
+      <xsl:choose>
+         <xsl:when test=".=''">
+            <xsl:text>—</xsl:text>
+         </xsl:when>
+         <xsl:otherwise>
+            <xsl:apply-templates/>
+         </xsl:otherwise>
+      </xsl:choose>
    </xsl:template>
 
    <xsl:template match="text()">

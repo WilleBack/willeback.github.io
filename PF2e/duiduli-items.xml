@@ -45,7 +45,7 @@
 
       <variant>
          <rune italic="">+1 potency</rune> <level>5</level>
-         <trait>Magical</trait>
+         <trait>Invested</trait> <trait>Magical</trait>
          <price>160 gp</price>
          <usage>etched onto the armor</usage>
 
@@ -127,6 +127,59 @@
    </rule>
 
    <rule>
+      <title>Ring of Discretion</title>
+      <type>Item</type> <level>1</level>
+      <trait>Illusion</trait> <trait>Invested</trait> <trait>Magical</trait> <trait>Visual</trait>
+      <price>15 gp</price>
+      <usage>worn</usage>
+
+      <line>A <i>ring of discretion</i> magically conceals any armor and sheathed weapons you're wearing by either turning them invisible or creating the illusion of ordinary clothes. The ring doesn't change your appearance beyond concealing weapons and armor.</line>
+      <line>As soon as you wield a weapon affected by the ring, the weapon becomes obvious to onlookers and is no longer affected until you sheathe the weapon for at least 1 minute. A creature can use the Seek action to examine you and disbelieve this illusion (DC 15), and it can attempt to do so without using an action each time it hits you with an attack.</line>
+   </rule>
+
+   <rule>
+      <title>Cloak of Illusions</title>
+      <type>Item</type> <level>7+</level>
+      <trait>Invested</trait> <trait>Magical</trait>
+      <usage>worn cloak</usage> <bulk>L</bulk>
+
+      <line>This cloak flows, covering and concealing the wearer's body. The cloak allows you to cast <i>figment</i> as an occult innate cantrip. Although naturally a dull gray, while invested the cloak picks up colors and patterns from its surroundings, granting an item bonus to Stealth checks.</line>
+      <block>
+         <name activate="">Draw Hood</name><action>2</action><type>(manipulate)</type>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Effect</name>You draw the hood up and gain the effects the <i>invisibility</i> spell, with the spell's normal duration or until you pull the hood back down, whichever comes first.</part>
+      </block>
+
+      <variant>
+         <type>Regular</type> <level>7</level>
+         <price>360 gp</price>
+
+         <line>+1 item bonus to Stealth.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Figment</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Illusion</trait> <trait>Manipulate</trait> <trait>Subtle</trait>
+      <tradition>arcane</tradition> <tradition>occult</tradition>
+      <range>30 feet</range>
+      <duration>sustained</duration>
+
+      <line>You create a simple illusory sound or vision. A sound adds the <u>auditory</u> trait to the spell and the sound can't include intelligible words or elaborate music. A vision adds the <u>visual</u> trait and can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet.</line>
+      <line>When you Cast or Sustain the Spell, you can attempt to Create a Diversion with the illusion, gaining a +2 circumstance bonus to your Deception check. If the attempt fails against a creature, that creature disbelieves the figment.</line>
+   </rule>
+
+   <rule>
+      <title>Invisibility</title>
+      <type>Spell</type> <level>2</level>
+      <trait>Illusion</trait> <trait>Subtle</trait>
+      <duration>10 minutes</duration>
+
+      <line>Illusions bend light around the target, rendering it Invisible. This makes it Undetected to all creatures, though the creatures can attempt to find the target, making it Hidden to them instead. If the target uses a hostile action, the spell ends after that hostile action is completed.</line>
+   </rule>
+
+   <rule>
       <title>Adventurer's Pack</title>
       <price>1 gp, 5 sp</price>
       <bulk>1 in the backpack</bulk>
@@ -140,17 +193,6 @@
 
          <line>A backpack holds up to 4 Bulk of items, and the first 2 Bulk of these items don't count against your Bulk limits. If you're carrying or stowing the pack rather than wearing it, its Bulk is light instead of negligible and the Bulk reduction does not apply.</line>
       </variant>
-   </rule>
-
-   <rule>
-      <title>Ring of Discretion</title>
-      <type>Item</type> <level>1</level>
-      <trait>Illusion</trait> <trait>Invested</trait> <trait>Magical</trait> <trait>Visual</trait>
-      <price>15 gp</price>
-      <usage>worn</usage>
-
-      <line>A <i>ring of discretion</i> magically conceals any armor and sheathed weapons you're wearing by either turning them invisible or creating the illusion of ordinary clothes. The ring doesn't change your appearance beyond concealing weapons and armor.</line>
-      <line>As soon as you wield a weapon affected by the ring, the weapon becomes obvious to onlookers and is no longer affected until you sheathe the weapon for at least 1 minute. A creature can use the Seek action to examine you and disbelieve this illusion (DC 15), and it can attempt to do so without using an action each time it hits you with an attack.</line>
    </rule>
 
    <rule>

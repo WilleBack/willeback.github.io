@@ -74,6 +74,53 @@
    </rule>
 
    <rule>
+      <title>Leap</title>
+      <action>1</action>
+      <trait>Move</trait>
+
+      <line>You take a careful, short jump. You can Leap up to 10 feet horizontally if your Speed is at least 15 feet, or up to 15 feet horizontally if your Speed is at least 30 feet. You land in the space when your Leap ends (meaning you can typically clear a 5-foot gap, or a 10-foot gap if your Speed is 30 feet or more).</line>
+      <line>If you Leap vertically, you can move up to 3 feet vertically and 5 feet horizontally onto an elevated surface.</line>
+      <line>Jumping a greater distance requires using the Athletics skill, either the High Jump or Long Jump action.</line>
+   </rule>
+
+   <rule>
+      <title>High Jump</title>
+      <action>2</action>
+      <type>Athletics</type>
+
+      <line>You Stride, then make a vertical Leap and attempt a DC 30 Athletics check to increase the height of your jump. If you didn't Stride at least 10 feet, you atomatically fail your check. This DC might be increased or decreased due to the situation, or as determined by the GM.</line>
+      <line results="">
+         <critsuccess>You Leap up to 8 feet vertically and 10 feet horizontally.</critsuccess>
+         <success>You Leap up to 5 feet vertically and 5 feet horizontally.</success>
+         <fail>You Leap normally.</fail>
+         <critfail>You fall prone in your space.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Long Jump</title>
+      <action>2</action>
+      <type>Athletics</type>
+
+      <line>You Stride, then attempt a DC 15 Athletics check to make a long jump in the direction were Striding. If you didn't Stride at least 10 feet, you automatically fail your check. The GM might increase or decrease this DC depending on the situation.</line>
+      <line results="">
+         <success>You Leap up to a distance equal to your check result rounded down to the nearest 5 feet. You can't jump further than your land Speed.</success>
+         <fail>You make a normal horizontal Leap.</fail>
+         <critfail>You make a normal horizontal Leap, then fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Wall Jump</title>
+      <type>Feat</type> <level>7</level>
+      <trait>General</trait> <trait>Skill</trait>
+      <prereq>master in Athletics</prereq>
+
+      <line>You can use your momentum from a jump to proper yourself off a wall. If you're adjacent to a wall at the end of jump (whether High Jump, Long Jump, or Leap), you don't fall as long as your next action is another jump. Your previous jump gives you moment, letting you use High Jump or Long Jump as a single action, but you don't get to Stride as part of the activity.</line>
+      <line>You can use Wall Jump only once in a turn, unless you're legendary in Athletics, in which case you can use it as many times as you can use consecutive jump actions in that turn.</line>
+   </rule>
+
+   <rule>
       <title>Impressive Performance</title>
       <type>Feat</type>
       <level>1</level>
@@ -99,6 +146,20 @@
    </rule>
 
    <rule>
+      <title>Demoralize</title>
+      <action>1</action>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
+
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
+   </rule>
+
+   <rule>
       <title>Coerce</title>
       <type>Intimidation</type>
       <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Exploration</trait> <trait>Linguistic</trait> <trait>Mental</trait>
@@ -111,20 +172,6 @@
          <critfail>The target refuses to comply, becomes hostile if they weren't already, and can't be Coerced by you for at least 1 week.</critfail>
       </line>
       <line>With greater proficiency, you can strong-arm people even when you don't have them isolated. You can compare your Intimidate check result against the Will DCs of two creatures without penalty if you're an expert, five creatures if you're a master, and 10 if you're legendary. It is possible to get a different degree of success for each target.</line>
-   </rule>
-
-   <rule>
-      <title>Demoralize</title>
-      <action>1</action>
-      <type>Intimidation</type>
-      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
-
-      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
-      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
-      <line results="">
-         <critsuccess>The target becomes frightened 2.</critsuccess>
-         <success>The target becomes frightened 1.</success>
-      </line>
    </rule>
 
    <rule>
@@ -190,6 +237,11 @@
    <rule>
       <title>Weapon Specialization, Brawling</title>
       <line>The target must succeed at a Fortitude save against your class DC or be slowed 1 until the end of your next turn.</line>
+   </rule>
+
+   <rule>
+      <title>Weapon Specialization, Hammer</title>
+      <line>The target is knocked prone unless they succeed at a Fortitude save against your class DC.</line>
    </rule>
 
    <rule>
@@ -327,6 +379,16 @@
 
       <line>You make a wide, arcing swing. Make single melee Strike and compare the attack roll result to the ACs of up to two foes, each of whom must be within your melee reach and adjacent to the other. Roll damage only once and apply it to each creature you hit. A Swipe counts as two attacks for your multiple attack penalty.</line>
       <line>If you're using a weapon with the <u>sweep</u> trait, its modifier applies to all your Swipe attacks.</line>
+   </rule>
+
+   <rule>
+      <title>Dragon's Rage Breath</title> <action>2</action>
+      <type>Feat</type> <level>6</level>
+      <trait>Arcane</trait> <trait>Barbarian</trait> <trait>Cold</trait> <trait>Concentrate</trait> <trait>Rage</trait>
+      <frequency>once per 10 minutes</frequency>
+
+      <line>You breathe deeply and exhale powerful energy in a 30-foot cone, dealing 1d6 damage per level to each creature in the area with a basic Reflex save against your class DC.</line>
+      <line name="Draconic Rage (White Dragon)">Your breath deals cold damage, and this action has the <u>arcane</u> trait.</line>
    </rule>
 
    <rule>

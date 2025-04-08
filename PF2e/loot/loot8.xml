@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Shining Symbol</title>
+      <type>Item</type> <level>3+</level>
+      <trait>Divine</trait> <trait>Invested</trait> <trait>Light</trait>
+      <usage>worn</usage> <bulk/>
+
+      <line>If you worship a deity, this golden amulet transforms into your deity's religious symbol when you invest it. You gain an item bonus to Religion. The symbol casts dim light in a 20-foot emanation. </line>
+
+      <block>
+         <name activate="">Spiritual Light</name><action>2</action><type>(concentrate, light, revelation)</type>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Effect</name>The light cast by the symbol becomes bright light for 10 minutes and shines through bodies to reveal hints of the spirits within. Creatures within the light receive a status penalty to Deception and Stealth checks.</part>
+         <part>You can Dismiss this activation.</part>
+      </block>
+
+      <variant>
+         <type>regular</type> <level>3</level>
+         <price>55 gp</price>
+
+         <line>The item bonus to Religion is +1, and the status penalty from Spiritual Light is -1.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Lifting Belt</title>
+      <type>Item</type> <level>4</level>
+      <trait>Invested</trait> <trait>Magical</trait>
+      <price>80 gp</price>
+      <usage>worn belt</usage> <bulk>L</bulk>
+
+      <line>This wide leather belt grants you a +1 item bonus to Athletics checks and increases the amount you can easily carry. You can carry Bulk equal to 6 + your Strength modifier before becoming encumbered, and you can hoold and carry a total Bulk up to 11 + your Strength modifier.</line>
+
+      <block>
+         <name activate="">Assisted Lift</name><type>(manipulate)</type>
+         <part><name>Effect</name> You lift an object of up to 8 Bulk as though it were weightless. This requires two hands, and if the object is locked or otherwise held in place, you can attempt to Force it Open using Athletics as part of this activation.</part>
+         <part>The object still has its full weight and Bulk for all other purposes—you just ignore that weight. The effect lasts until the end of your next turn.</part>
+      </block>
+   </rule>
+
+   <rule>
+      <title>Guise of the Smirking Devil</title>
+      <type>Item</type> <level>9+</level>
+      <trait>Auditory</trait> <trait>Invested</trait> <trait>Magical</trait> <trait>Void</trait>
+      <usage>worn mask</usage> <bulk/>
+
+      <line>This ice-blue half-mask is adorned with a wicked silver grin that covers only the wearer's mouth. You gain an item bonus to Intimidation checks.</line>
+      <block>
+         <name activate="">Hideous Wail</name><type>(concentrate, manipulate)</type> <action>2</action>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Effect</name>The mask emits a soul-chilling scream that deals 6d10 void damage to each living creature in a 20-foot emanation (DC 25 basic Fortitude save).</part>
+      </block>
+      <variant>
+         <type>regular</type> <level>9</level>
+         <price>700 gp</price>
+
+         <line>+2 item bonus.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Basilisk Eye</title>
+      <type>Item</type> <level>9</level>
+      <trait>Consumable</trait> <trait>Magical</trait> <trait>Talisman</trait> <trait>Visual</trait>
+      <price>150 gp</price>
+      <usage>affixed to a shield</usage>
+      <bulk/>
+      <activate><action>F</action><type>(concentrate)</type><trigger>You Shield Block a melee attack with the affixed shield</trigger></activate>
+
+      <line>This slimy green stone glows whenever the shield it adorns blocks a melee attack. When the eye is activated, the attacker must succeed at a DC 25 Fortitude save or become slowed 1 for 1 minute as its body slowly stiffens in partial petrification.</line>
+   </rule>
+
+   <rule>
+      <title>Longsword</title>
+      <trait>Versatile P</trait>
+      <price>1 gp</price> <damage>1d8 S</damage> <bulk>1</bulk>
+      <hands>1</hands>
+      <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Sword</weapgroup>
+
+      <line>Longswords can be one-edged or two-edged swords. Their blades are heavy and they're between 3 and 4 feet in length.</line>
+
+      <traittext><name>Versatile P</name>A versatile weapon can be used to deal a different type of damage than that listed in the Damage entry. You choose the damage type each time you make an attack.</traittext>
+
+      <variant>
+         <rune italic="">+1 Potency</rune> <level>2</level>
+         <trait>Magical</trait>
+         <usage>etched onto the weapon</usage>
+         <price>35 gp</price>
+
+         <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +1 item bonus, and the weapon can be etched with one property rune.</line>
+      </variant>
+      <variant>
+         <rune italic="">Striking</rune> <level>4</level>
+         <trait>Magical</trait>
+         <usage>etched onto the weapon</usage>
+         <price>65 gp</price>
+
+         <line>A <i>striking</i> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one.</line>
+      </variant>
+      <variant>
+         <rune italic="">Dragon Bane</rune> <level>4</level>
+         <uncommon/> <trait>Magical</trait>
+         <price>100 gp</price>
+         <usage>etched onto a weapon</usage> <bulk/>
+
+         <line>A <i>dragon bane</i> rune allows you to deal more damage to dragons. The weapon deals 1d6 additional damage of the weapon's damage type a creature with the <u>dragon</u> trait. On a critical hit, the creature also takes 1d6 persistent bleed damage.</line>
+         <line>The benefit doesn't apply against dragons disguised as other creature types, and it's up to the GM whether a <i>dragon bane</i> rune applies against a creature disguised as a dragon.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Adamantine Shield</title>
+      <type>Item</type> <level>8+</level>
+      <uncommon/> <trait>Precious</trait>
+      <usage>held in 1 hand</usage> <bulk>1</bulk>
+      <base item="Shield">Steel Shield</base>
+
+      <line>Adamantine shields are particularly sturdy, and when used for a shield bash, they're adamantine weapons.</line>
+
+      <variant>
+         <grade>standard</grade> <level>8</level>
+         <price>440</price>
+
+         <line>A standard-grade adamantine shield has Hardness 10, HP 40, and BT 20.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Breastplate</title>
+      <price>8 gp</price>
+      <ac>+4</ac> <dexcap>+1</dexcap> <checkpenalty>-2</checkpenalty> <spdpenalty>-5 ft.</spdpenalty>
+      <strreq>+3</strreq> <bulk>2</bulk>
+      <armorcat>Medium</armorcat> <armorgroup>Plate</armorgroup>
+
+      <line>Though referred to as a breastplate, this type of armor consists of several pieces of plate or half-plate armor that protect the torso, chest, neck, and sometimes the hips and lower legs. It strategically grants some of the protection of plate while allowing greater flexibility and speed.</line>
+
+      <variant>
+         <rune italic="">+1 potency</rune> <level>5</level>
+         <trait>Invested</trait> <trait>Magical</trait>
+         <price>160 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
+      </variant>
+      <variant>
+         <rune italic="">resilient</rune> <level>8</level>
+         <trait>Magical</trait>
+         <price>340 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line><i>Resilient</i> runes imbue armor with additional protective magic. This grants the wearer a +1 item bonus to saving throws.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Thunderblast Slippers</title>
+      <type>Item</type> <level>9+</level>
+      <trait>Air</trait> <trait>Invested</trait> <trait>Magical</trait> <trait>Sonic</trait>
+      <usage>worn footwear</usage> <bulk>L</bulk>
+
+      <line>Unassuming in appearance, these slippers indicate their nature only with a signature strip of yellow stitching. You gain a +2 item bonus to Acrobatics checks.</line>
+      <block>
+         <name activate="">Like the Wind</name><action>2</action><type>(concentrate)</type>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Effect</name>You move like the wind, with precision and speed. You Stride up to distance tepending on the item's type; this movement doesn't trigger reactions.</part>
+         <part>When you stop, if you've moved at least 30 feet from where you started, you release a thunderous 5-foot emanation that deals bludgeoning damage and sonic damage with a basic Fortitude save. A creature that critically fails its save is knocked prone.</part>
+      </block>
+      <variant>
+         <type>regular</type> <level>9</level>
+         <price>650 gp</price>
+
+         <line>Stride up to 60 feet. 2d6 damage of each type, and the Fortitude DC is 25.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Trident of Lightning</title>
+      <type>Item</type> <level>9</level>
+      <trait>Consumable</trait> <trait>Electricity</trait> <trait>Magical</trait>
+      <price>110 gp</price>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+      <activate><action>2</action><type>(concentrate, manipulate)</type></activate>
+
+      <line>This item looks like a normal trident carved with Gozren motifs. If thrown without being activated, it wobbles in the air and fails to strike true. When you Activate the trident, the carvings crackle with electricity. You then hurl the trident. It shatters immediately after leaving your hand and unleashes its magic as a 4th-rank <i>lightning bolt</i> originating from your space. The bolt deals 5d12 electricity damage to all creatures in a 120-foot line with a DC 25 basic Reflex save.</line>
+   </rule>
+
+   <rule>
+      <title>Curled Cure Gel</title>
+      <type>Item</type> <level>7</level>
+      <trait>Alchemical</trait> <trait>Consumable</trait>
+      <price>60 gp</price>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+      <activate><type>Treat Wounds</type></activate>
+
+      <line>Curled cure secretes a gel that gently warms the skin and stimulates healing. You can Activate the item as part of the same activity you use to Treat Wounds. If you successfully Treat Wounds, you can also reduce the value of one of the targets' clumsy, enfeebled, or stupefied conditions by 1.</line>
+      <line>The target of your Treat Wounds is then temporarily immune to <i>curled cure gel</i> for 24 hours, whether or not your attempt to Treat Wounds was successful.</line>
+   </rule>
+
+   <rule>
+      <title>Murderer's Knot</title>
+      <type>Item</type> <level>7</level>
+      <trait>Consumable</trait> <trait>Magical</trait> <trait>Talisman</trait>
+      <price>66 gp</price>
+      <usage>affixed to a weapon</usage> <bulk/>
+      <activate><action>F</action><type>(concentrate)</type><trigger>You damage an off-guard creature with a Strike using the affixed weapon</trigger></activate>
+
+      <line>This black strand of leather is tied to look like a peace knot when the weapon is worn, but it doesn't hamper drawing the weapon. When you Activate the knot, the creature you damaged takes 1d6 persistent bleed damage and is off-guard until the bleed ends.</line>
+      <line>If you have the Twist the Knife feat, the talisman instead deals persistent bleed damage equal to your sneak attack damage.</line>
+   </rule>
+
+   <rule>
+      <title>Bottled Catharsis</title>
+      <type>Item</type> <level>2+</level>
+      <trait>Alchemical</trait> <trait>Consumable</trait> <trait>Elixir</trait> <trait>Healing</trait>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+      <activate><action>1</action><type>(manipulate)</type></activate>
+
+      <line>This drink unlocks a flood of emotions that helps reset your mental state. When you drink this elixir, the elixir attempts to counteract each effect on you that has the emotion trait or is inflicting the stupefied condition on you, using the listed counteract rank and modifier.</line>
+
+      <variant>
+         <type>moderate</type> <level>8</level>
+         <price>75 gp</price>
+
+         <line>The elixir counteracts at 4th-rank and has a +14 counteract modifier.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Quenching Potion</title>
+      <type>Item</type> <level>8</level>
+      <trait>Consumable</trait> <trait>Magical</trait> <trait>Necromancy</trait> <trait>Potion</trait>
+      <price>85 gp</price>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+      <activate><action>1</action><type>(manipulate)</type></activate>
+
+      <line><i>Quenching potion</i> is a clear liquid that tastes like fresh, cool spring water. Drinking this potion or pouring it over yourself completely hydrates you and cleanses your system. Immediately attempt a flat check to end any persistent acid, fire, poison or void damage affecting you, and attempt a new saving throw against any <u>poison</u> affecting you. The <u>poison</u> can't progress to a worse stage due to this saving throw. The potion counts as a particularly appropriate type of help against persistent acid, fire, poison or void damage.</line>
+   </rule>
+
+</catalog>

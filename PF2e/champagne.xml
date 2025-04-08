@@ -101,6 +101,30 @@
    </rule>
 
    <rule>
+      <title>Defensive Advance</title> <action>2</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Champion</trait> <trait>Flourish</trait>
+
+      <line>With the protection of your shield, you dive into battle! You Raise your Shield and Stride. If you end your movement within melee reach of at least one enemy, you can make a melee Strike against that enemy.</line>
+      <line>You can use Defensive Advance while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.</line>
+   </rule>
+
+   <rule>
+      <title>Trick Magic Item</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Manipulate</trait> <trait>Skill</trait>
+
+      <line>You examine a magic you normally couldn't use in an effort to fool it and activate it temporarily. For example, this might allow a fighter to cast a spell from a wand or allow a wizard to cast a spell that's no on the arcane list using a scroll. You most know what activating the item does, or you can't attempt to trick it.</line>
+      <line>Attempt a check using the skill matching the item's magic tradition, or matching a tradition that has the spell on its list, if you're trying to Cast a Spell from the item. The relevant skills are Arcana for <u>arcane</u>, Nature for <u>primal</u>, Occultism for <u>occult</u>, Religion for <u>divine</u>, or any of the four forn an item that has the <u>magical</u> trait and not a tradition trait. The GM determines the DC based on the item's level (possibly adjusted depending on the item or situatio).</line>
+      <line results="">
+         <success>For the rest of the current turn, you can spend actions to activate the item as if you could normally use it.</success>
+         <fail>You can't use the item or try to trick it again this turn, but you can try again on subsequent turns.</fail>
+         <critfail>You can't use the item, and you can't try to trick it again until your next daily preparations.</critfail>
+      </line>
+      <line>If you activate an item that requires a spell attack modifier or spell DC and you don't have proficiency in the relevant statistic, use your level as your proficiency bonus and the highest of your Intelligence, Wisdom, or Charisma modifiers. If you're a master in the appropriate skill for the item's tradition, you instead use the trained proficiency; if you're legendary, you instead use the expert proficiency bonus.</line>
+   </rule>
+
+   <rule>
       <title>Sarenrae, the Dawnflower</title>
 
       <line>Sarenrae is one of the most popular deities on Golarion by virtue of her association with the life-giving sun and her perpetual offer to help anyone be their best, even when they have made mistakes. Most people thank her for her kind work to channel the sun’s power for everyone’s safety and livelihood, and thank her clergy for granting her healing power to all who need it. Mortals look to the Dawnflower as an example of boundless love, exquisite kindness, and true patience. They pray to her to heal the sick, lift up the downtrodden, and illuminate darkness of circumstance as well as darkness of spirit.</line>
@@ -283,6 +307,19 @@
    </rule>
 
    <rule>
+      <title>Vitality Lash</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Manipulate</trait> <trait>Vitality</trait>
+      <range>30 feet</range> <targets>1 creature that is undead or otherwise has void healing</targets>
+      <save>basic Fortitude</save>
+
+      <line>You demolish the target's corrupt essence with energy from Creation's Forge. You deal 2d6 vitality damage with a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 until the start of your next turn.</line>
+
+      <heighten value="+1">The damage increases by 1d6.</heighten>
+      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate divine spell.</special>
+   </rule>
+
+   <rule>
       <title>Lay on Hands</title> <action>1</action>
       <type>Focus</type> <level>1</level>
       <uncommon/> <trait>Champion</trait> <trait>Divine</trait> <trait>Focus</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Vitality</trait>
@@ -316,25 +353,14 @@
    </rule>
 
    <rule>
-      <title>Light of Revelation</title> <action>2</action>
-      <type>Focus</type> <level>2</level>
-      <uncommon/> <trait>Champion</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Focus</trait> <trait>Light</trait> <trait>Manipulate</trait> <trait>Revelation</trait>
-      <area>30-foot emanation</area>
-      <duration>5 minutes</duration>
+      <title>Flame Barrier</title> <action>R</action>
+      <type>Focus</type> <level>4</level>
+      <uncommon/> <trait>Champion</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Focus</trait>
+      <range>30 feet</range> <target>the creature that would take fire damage</target>
+      <trigger>An effect would deal fire damage to either you or an ally within range</trigger>
 
-      <line>You shed a luminous aura, illuminating a 30-foot radius with bright light. You and allies in this light gain a +1 satus bonus to Perception checks to detect hidden or undetected creatures, as weall as hidden objects, doors, and other feature.</line>
-   </rule>
+      <line>You swiftly deflect incoming flames. The target gains fire resistance 15 against the triggering effect.</line>
 
-   <rule>
-      <title>Vitality Lash</title> <action>2</action>
-      <type>Cantrip</type> <level>1</level>
-      <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Manipulate</trait> <trait>Vitality</trait>
-      <range>30 feet</range> <targets>1 creature that is undead or otherwise has void healing</targets>
-      <save>basic Fortitude</save>
-
-      <line>You demolish the target's corrupt essence with energy from Creation's Forge. You deal 2d6 vitality damage with a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 until the start of your next turn.</line>
-
-      <heighten value="+1">The damage increases by 1d6.</heighten>
-      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate divine spell.</special>
+      <heighten value="+2">The resistance increases by 5.</heighten>
    </rule>
 </catalog>
