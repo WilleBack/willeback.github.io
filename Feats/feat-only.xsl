@@ -4,7 +4,12 @@
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:import href="../Powers/power.xsl" />
 
+	<xsl:template match="/">
+	  <xsl:apply-templates select="/catalog"/>
+	</xsl:template>
+
 <xsl:template match="/catalog">
+
 	<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -52,6 +57,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				width:100%;
 				font-size:1.2em;
 				font-weight:bold;
+			}
+
+			.groupname::first-letter {
+				text-transform: uppercase;
 			}
 
 			.title {
@@ -156,9 +165,93 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</head>
 	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
 
+		<!--xsl:call-template name="create-lists"/-->
+
+		<xsl:call-template name="create-content"/>
+
+	</body>
+	</html>
+</xsl:template>
+
+<xsl:template name="create-lists">
+	<div class="listcontainer">
+		<div class="groupholder">
+			<div class="grouptitle">Feat Groups</div>
+			<xsl:for-each select="list">
+				<xsl:call-template name="listgroup">
+					<xsl:with-param name="tier">Heroic</xsl:with-param>
+				</xsl:call-template>
+				<xsl:call-template name="listgroup">
+					<xsl:with-param name="tier">Paragon</xsl:with-param>
+				</xsl:call-template>
+				<xsl:call-template name="listgroup">
+					<xsl:with-param name="tier">Epic</xsl:with-param>
+				</xsl:call-template>
+			</xsl:for-each>
+		</div>
+
+		<xsl:if test="count(//catalog/feat/category)>0">
+			<div class="groupholder">
+				<div class="grouptitle">Special Feat Categories</div>
+				<xsl:for-each select="category">
+					<xsl:call-template name="listcategory">
+						<xsl:with-param name="tier">Heroic</xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="listcategory">
+						<xsl:with-param name="tier">Paragon</xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="listcategory">
+						<xsl:with-param name="tier">Epic</xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+			</div>
+		</xsl:if>
+
+		<xsl:if test="count(//catalog/feat[group='Class'])>0">
+			<div class="groupholder">
+				<div class="grouptitle">Class Feats</div>
+
+				<xsl:for-each select="class">
+					<xsl:call-template name="listprereq">
+						<xsl:with-param name="tier">Heroic</xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="listprereq">
+						<xsl:with-param name="tier">Paragon</xsl:with-param>
+					</xsl:call-template>
+					<xsl:call-template name="listprereq">
+						<xsl:with-param name="tier">Epic</xsl:with-param>
+					</xsl:call-template>
+				</xsl:for-each>
+
+		</div>
+	</xsl:if>
+
+		<xsl:if test="count(//catalog/feat[group='Racial'])>0">
+			<div class="groupholder">
+			<div class="grouptitle">Racial Feats</div>
+
+			<xsl:for-each select="race">
+				<xsl:call-template name="listprereq">
+					<xsl:with-param name="tier">Heroic</xsl:with-param>
+				</xsl:call-template>
+				<xsl:call-template name="listprereq">
+					<xsl:with-param name="tier">Paragon</xsl:with-param>
+				</xsl:call-template>
+				<xsl:call-template name="listprereq">
+					<xsl:with-param name="tier">Epic</xsl:with-param>
+				</xsl:call-template>
+			</xsl:for-each>
+		</div>
+	</xsl:if>
+
+	</div>
+</xsl:template>
+
+<xsl:template name="create-content">
 	<div id="headstuff" style="width:calc(100% - 1em); float:left; padding-left:1pt;">
 		<div class="grouptitle">Feat descriptions</div>
-		<xsl:text>Total number of feats: </xsl:text> <xsl:value-of select="count(feat)" /> <xsl:text> (</xsl:text><xsl:value-of select="count(feat[tier='Heroic'])" /> <xsl:text> heroic, </xsl:text> <xsl:value-of select="count(feat[tier='Paragon'])" /> <xsl:text> paragon, </xsl:text> <xsl:value-of select="count(feat[tier='Epic'])" /> <xsl:text> epic)</xsl:text>
+		<xsl:text>Total number of feats: </xsl:text> <xsl:value-of select="count(feat)" />
+		<xsl:text> (</xsl:text><xsl:value-of select="count(feat[tier='Heroic'])" /> <xsl:text> heroic, </xsl:text> <xsl:value-of select="count(feat[tier='Paragon'])" /> <xsl:text> paragon, </xsl:text> <xsl:value-of select="count(feat[tier='Epic'])" /> <xsl:text> epic)</xsl:text>
 	</div>
 
 	<div class="container">
@@ -166,8 +259,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:apply-templates select="feat" />
 
 	</div>
-	</body>
-	</html>
 </xsl:template>
 
 <xsl:template match="feat">
@@ -258,7 +349,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<xsl:value-of select="text()"/> <xsl:text> </xsl:text> <xsl:value-of select="@type"/>
 							</xsl:otherwise>
 						</xsl:choose>
-                  
+
                   <xsl:if test="@extra">
                      <xsl:text> </xsl:text><xsl:value-of select="@extra"/>
                   </xsl:if>
@@ -293,18 +384,18 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                            <xsl:text> skill.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skill-class">
-                           <xsl:text>You gain training in  one skill from the </xsl:text>
+                           <xsl:text>You gain training in one skill from the </xsl:text>
                            <xsl:value-of select="@skill-class" disable-output-escaping="yes"/>
                            <xsl:text>'s class skill list.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skills">
                            <xsl:text>You gain training in the </xsl:text>
                            <xsl:value-of select="@skills" disable-output-escaping="yes"/>
-                           <xsl:text> skill.</xsl:text>
+                           <xsl:text> skills.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skills-either">
                            <xsl:text>You gain training in either the </xsl:text>
-                           <xsl:value-of select="benefit[1]/@skills-either" disable-output-escaping="yes"/>
+                           <xsl:value-of select="@skills-either" disable-output-escaping="yes"/>
                            <xsl:text> skill.</xsl:text>
                         </xsl:when>
                         <xsl:otherwise>
@@ -328,8 +419,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         <xsl:when test="@vestige">
                            <b><i>Eyes of the Vestige</i> Augment: </b>
                         </xsl:when>
-                        <xsl:otherwise>
-                        </xsl:otherwise>
+                        <xsl:otherwise/>
                      </xsl:choose>
                      <xsl:apply-templates />
                   </div>
@@ -345,14 +435,20 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                         </xsl:when>
                         <xsl:when test="@skill-class">
                            <xsl:value-of select="." disable-output-escaping="yes"/>
-                           <xsl:text>, you gain training in  one skill from the </xsl:text>
-                           <xsl:value-of select="@skill-class" disable-output-escaping="yes"/>
+                           <xsl:text>, you gain training in one skill from the </xsl:text>
+                           <xsl:value-of select="@skill" disable-output-escaping="yes"/>
                            <xsl:text>'s class skill list.</xsl:text>
                         </xsl:when>
                         <xsl:when test="@skills">
                            <xsl:value-of select="." disable-output-escaping="yes"/>
                            <xsl:text>, you gain training in the </xsl:text>
                            <xsl:value-of select="@skills" disable-output-escaping="yes"/>
+                           <xsl:text> skills.</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="@skills-either">
+                           <xsl:value-of select="." disable-output-escaping="yes"/>
+                           <xsl:text>, you gain training in either the </xsl:text>
+                           <xsl:value-of select="benefit[1]/@skills-either" disable-output-escaping="yes"/>
                            <xsl:text> skill.</xsl:text>
                         </xsl:when>
                         <xsl:otherwise>
@@ -430,7 +526,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:if test="count(//catalog/feat[group=current()/@selection and tier=$tier])>0">
 		<div class="list">
-			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - </xsl:text><xsl:value-of select="$tier"/></div>
+			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - </xsl:text> <xsl:value-of select="$tier"/></div>
 			<xsl:for-each select="//catalog/feat[group=current()/@selection and tier=$tier]">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
@@ -500,7 +596,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:otherwise>
          <xsl:if test="count(//catalog/feat[prereq=current()/@selection and tier=$tier])>0">
             <div class="list">
-               <div class="groupname"> <xsl:value-of select="@selection" /> <xsl:if test="@selection='Defender' or @selection='Controller' or @selection='Striker' or @selection='Leader'"> <xsl:text> role</xsl:text> </xsl:if> <xsl:text> - </xsl:text><xsl:value-of select="$tier"/></div>
+               <div class="groupname">
+						<xsl:value-of select="@selection" />
+						<xsl:if test="@selection='Defender' or @selection='Controller' or @selection='Striker' or @selection='Leader'">
+							<xsl:text> role</xsl:text>
+						</xsl:if>
+						<xsl:if test="@selection='any arcane' or @selection='any divine' or @selection='any martial' or @selection='any primal' or @selection='any psionic' or @selection='any shadow'">
+							<xsl:text> class</xsl:text>
+						</xsl:if>
+						 <xsl:text> - </xsl:text><xsl:value-of select="$tier"/></div>
                <xsl:for-each select="//catalog/feat[prereq=current()/@selection and tier=$tier]">
                   <xsl:call-template name="line" />
                </xsl:for-each>
