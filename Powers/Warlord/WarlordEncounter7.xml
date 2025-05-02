@@ -11,16 +11,16 @@
          <keyword>Martial, Weapon</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Trigger:</name><text>On your turn, you hit an enemy with a melee attack</text>
+            <name>Trigger:</name>On your turn, you hit an enemy with a melee attack
          </section>
          <section auto="special"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The triggering attack deals +1[W] additional damage (+1d8 if it is not a Weapon attack), and you choose one ally in your <i>warlord's aura</i>.</text>
+            <name>Effect:</name>The triggering attack deals +1[W] additional damage (+1d8 if it is not a <key>Weapon</key> attack), and you choose one ally in your <i>warlord's aura</i>.
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of your next turn, the triggering enemy provokes an <i>opportunity attack</i> from the chosen ally when it makes a melee attack against you or that ally.</text>
+            Until the end of your next turn, the triggering enemy provokes a <i>reactive strike</i> from the chosen ally when it makes a melee attack against you or that ally. The triggering enemy is not aware of this effect until a <i>reactive strike</i> has been made against it.
          </section>
    </power>
 
@@ -32,46 +32,47 @@
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Reaction</subaction>
          <section>
-            <name>Tactical Presence:</name><text>You can use this power as an immediate interrupt.</text>
+            <name>Tactical Presence:</name>You can use this power as an immediate interrupt.
          </section>
          <section>
-            <name>Trigger:</name><text>An enemy within your <i>warlord's aura</i> hits your ally with an attack</text>
+            <name>Trigger:</name>An enemy within your <i>warlord's aura</i> hits your ally with an attack
          </section>
          <section auto="personal"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>You shift a number of squares equal to your [Intelligence or Wisdom] modifier, then make a <i>melee basic attack</i> against the triggering enemy. On a miss, you deal damage equal to your [Intelligence or Wisdom] modifier + your weapon's enhancement bonus.</text>
+            <name>Effect:</name>You shift a number of squares equal to your [Intelligence or Wisdom] modifier, then make a <i>melee basic attack</i> against the triggering enemy. On a miss, you deal damage equal to your [Intelligence or Wisdom] modifier + your weapon's enhancement bonus.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>The triggering ally gains temporary hit points equal to 5 + your Charisma modifier.</text>
+            <name>Inspiring Presence:</name>The triggering ally gains temporary hit points equal to 5 + your Charisma modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <text>If the triggering attack bloodied the ally or reduced him or her to 0 hit points or less, your attack deals additional damage equal to your Charisma modifier, and you can use your Charisma modifier when determining the damage on a miss.</text>
+            If the triggering attack bloodied the ally or reduced him or her to 0 hit points or less, your attack deals additional damage equal to your Charisma modifier, and you can use your Charisma modifier when determining the damage on a miss.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>If you did not shift the full distance, the triggering ally can shift the remaining distance as a free reaction.</text>
+            <name>Skirmishing Presence:</name>If you did not shift the full distance, the triggering ally can shift the remaining distance as a free reaction.
          </section>
    </power>
 
    <power>
       <title>Friendly Fire</title>
       <class>Warlord</class> <category>Attack</category> <level>7</level>
-      <fluff>Such is your presence that you panic an enemy into accidentally hitting one of its allies</fluff>
+      <fluff>Such is your presence that you panic an enemy into accidentally attacking one of its allies</fluff>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
+         <section auto="no-opportunity"/>
          <section>
-            <name>Trigger:</name><text>An enemy in your <i>warlord's aura</i> misses you or an ally with a melee or ranged attack</text>
+            <name>Trigger:</name>An enemy in your <i>warlord's aura</i> misses you or an ally with a melee or ranged attack
          </section>
          <section>
-            <name>Target:</name><type>Close</type><range>special</range><target>the triggering enemy</target>
+            <name>Target:</name><type>Ranged</type><range>special</range><target>the triggering enemy</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The target rerolls the triggering attack against a creature you choose. The chosen creature must be within 2 squares of the original target of the triggering attack, and must be a valid target for the attack.</text>
+            <name>Effect:</name>The target rerolls the triggering attack against a creature you choose. The chosen creature must be within 2 squares of the original target of the triggering attack, and must be a valid target for the attack.
          </section>
    </power>
 
@@ -85,15 +86,15 @@
          <section auto="personal"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>You gain a +1 cumulative bonus to the first attack roll you make this turn for each bloodied ally in your <i>warlord's aura</i>. In addition, until the end of your next turn, you can use the following action at-will:</text>
+            <name>Effect:</name>You gain a +1 cumulative bonus to the first attack roll you make this turn for each bloodied ally in your <i>warlord's aura</i>. In addition, until the end of your next turn, you can use the following action at-will:
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Free Interrupt:</name><text><i>Trigger:</i> An ally in your <i>warlord's aura</i> would spend a a healing surge; You expend a healing surge on the triggering ally's behalf.</text>
+            <name>Free Interrupt:</name><i>Trigger:</i> An ally in your <i>warlord's aura</i> would spend a a healing surge; You expend a healing surge on the triggering ally's behalf.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <text>Each time you use this action, you gain a +2 cumulative bonus to the first damage roll you make before the end of your next turn.</text>
+            Each time you use this action, you gain a +2 cumulative bonus to the first damage roll you make before the end of your next turn.
          </section>
    </power>
 
@@ -105,32 +106,32 @@
          <keyword>Martial</keyword>
          <action>Immediate</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Trigger:</name><text>An ally makes a close or an area attack</text>
+            <name>Trigger:</name>An ally makes a close or an area attack
          </section>
          <section auto="personal"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>You make a <i>melee basic attack</i> against a creature that is not a target of the triggering attack.</text>
+            <name>Effect:</name>You make a <i>melee basic attack</i> against a creature that is not a target of the triggering attack.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>You can shift a number of squares equal to your Intelligence modifier before making the attack.</text>
+            <name>Skirmishing Presence:</name>You can shift a number of squares equal to your Intelligence modifier before making the attack.
          </section>
          <section>
             <shade>true</shade>
-            <text>On a hit, you slide the creature a number of squares equal to your [Intelligence or Wisdom] modifier. The creature must end the slide inside the triggering attack's area of effect, or closer to it than it started.</text>
+            On a hit, you slide the creature a number of squares equal to your [Intelligence or Wisdom] modifier. The creature must end the slide inside the triggering attack's area of effect, or closer to it than it started.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>If the creature ends the slide inside the triggering attack's area of effect, the triggering ally gains temporary hit points equal to 5 + your Charisma modifier.</text>
+            <name>Inspiring Presence:</name>If the creature ends the slide inside the triggering attack's area of effect, the triggering ally gains temporary hit points equal to 5 + your Charisma modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>The triggering ally gains a bonus to the triggering attack's attack roll against the creature you attacked. The bonus equals 1 + one-half your Wisdom modifier (minimum +2 bonus).</text>
+            <name>Resourceful Presence:</name>The triggering ally gains a bonus to the triggering attack's attack roll against the creature you attacked. The bonus equals 1 + one-half your Wisdom modifier (minimum +2 bonus).
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>The triggering ally gains a bonus to the triggering attack's damage roll against the creature you attacked. The bonus equals your Intelligence modifier.</text>
+            <name>Tactical Presence:</name>The triggering ally gains a bonus to the triggering attack's damage roll against the creature you attacked. The bonus equals your Intelligence modifier.
          </section>
    </power>
 
@@ -146,27 +147,27 @@
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>You gain a +2 bonus to attack rolls with the first melee attack you make during your current turn, and that attack deals +1[W] damage (or +1d8 damage if it is not a <key>Weapon</key> attack).</text>
+            <name>Effect:</name>You gain a +2 bonus to attack rolls with the first melee attack you make during your current turn, and that attack deals +1[W] damage (or +1d8 damage if it is not a <key>Weapon</key> attack).
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>You also gain a bonus to all defenses against attacks triggered by your movement until the end of your current turn. The bonus equals your Intelligence modifier.</text>
+            <name>Skirmishing Presence:</name>You also gain a bonus to all defenses against attacks triggered by your movement until the end of your current turn. The bonus equals your Intelligence modifier.
          </section>
          <section>
             <shade>true</shade>
-            <text>Either you or a target ally can spend a healing surge to regain hit points equal to his or her healing surge value.</text>
+            Either you or a target ally can spend a healing surge to regain hit points equal to his or her healing surge value.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>If an ally spends the healing surge, he or she regains additional hit points equal to 2 + your Charisma modifier.</text>
+            <name>Inspiring Presence:</name>If an ally spends the healing surge, he or she regains additional hit points equal to 2 + your Charisma modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>The character spending the healing surge gains a bonus to all defenses until the end of your next turn. The bonus equals one-half your Wisdom modifier.</text>
+            <name>Resourceful Presence:</name>The character spending the healing surge gains a bonus to all defenses until the end of your next turn. The bonus equals one-half your Wisdom modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>The character spending the healing surge gains a bonus to the first damage roll he or she makes before the end of your next turn.</text>
+            <name>Tactical Presence:</name>The character spending the healing surge gains a bonus to the first damage roll he or she makes before the end of your next turn.
          </section>
    </power>
 
@@ -178,35 +179,35 @@
          <keyword>Martial</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Requirement:</name><text>You must be using a shield.</text>
+            <name>Requirement:</name>You must be using a shield.
          </section>
          <section>
-            <name>Trigger:</name><text>You hit with a melee attack on your own turn</text>
+            <name>Trigger:</name>You hit with a melee attack on your own turn
          </section>
          <section auto="special"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The triggering attack deals +2d6 damage.</text>
+            <name>Effect:</name>The triggering attack deals +2d6 damage.
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of your next turn, allies in your <i>warlord's aura</i> have a +1 power bonus to AC and Reflex. This increases to a +2 power bonus if the ally is either adjacent to you or adjacent to another ally using a shield.</text>
+            Until the end of your next turn, allies in your <i>warlord's aura</i> have a +1 power bonus to AC and Reflex. This increases to a +2 power bonus if the ally is either adjacent to you or adjacent to another ally using a shield.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>A bloodied ally increases the bonus he or she has by +1.</text>
+            <name>Inspiring Presence:</name>A bloodied ally increases the bonus he or she has by +1.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>Allies in the aura also have a +1 power bonus to attack rolls when adjacent to an ally.</text>
+            <name>Resourceful Presence:</name>Allies in the aura also have a +1 power bonus to attack rolls when adjacent to an ally.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>Allies using a shield in the aura do not provoke <i>reactive strikes</i> for movement while this bonus remains.</text>
+            <name>Skirmishing Presence:</name>Allies using a shield in the aura do not provoke <i>reactive strikes</i> for movement while this bonus remains.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>An ally using a shield in the aura also gains a bonus to melee damage rolls. The bonus equals one-half your Intelligence modifier.</text>
+            <name>Tactical Presence:</name>An ally using a shield in the aura also gains a bonus to melee damage rolls. The bonus equals one-half your Intelligence modifier.
          </section>
    </power>
 
@@ -216,38 +217,38 @@
       <fluff>You goad the enemy into pressing too far, setting it up for a counterstike</fluff>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
-         <action>Move</action> <subaction/>
+         <action>Standard</action> <subaction/>
          <section>
             <name>Target:</name><type>Close</type><range>special</range><target>an enemy in your <i>warlord's aura</i>, and either you or an ally in the aura</target>
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The target enemy makes a <i>basic attack</i> against you as an opportunity interrupt. If the enemy makes a <i>meleee basic attack</i>, it can choose to treat it as an <i>opportunity attack</i>. If the enemy makes a <i>ranged basic attack</i>, it does not provoke <i>opportunity attacks</i> from your allies. If the enemy is unable to make the attack, the power fails and you immediately regain the use of this power.</text>
+            <name>Effect:</name>The target enemy makes a <i>basic attack</i> against you as an opportunity interrupt. If the enemy makes a <i>meleee basic attack</i>, it can choose to treat it as a <i>reactive strike</i>. If the enemy makes a <i>ranged basic attack</i>, it does not provoke <i>reactive strikes</i> from your allies. If the enemy is unable to make the attack, the power fails and you immediately regain the use of this power.
          </section>
          <section>
             <shade>true</shade>
-            <text>After the enemy's attack has been resolved, either you or the target ally can make a <i>basic attack</i> against the target enemy as free reaction, and deals +1[W] damage on the attack (or +1d8 if it is not a <key>Weapon</key> attack).</text>
+            After the enemy's attack has been resolved, either you or the target ally can make a <i>basic attack</i> against the target enemy as free reaction, and deals +2[W] damage on the attack (or +2d8 if it is not a <key>Weapon</key> attack).
          </section>
          <section indent="1"><bullet/>
             <shade>true</shade>
-            <text>If the enemy's attack missed you and you make the attack, your attack deals +2[W] damage (or +2d8 damage if it is not a <key>Weapon</key> attack) instead.</text>
+            If the enemy's attack missed you and you make the attack, your attack deals +1[W] damage (or +1d8 damage if it is not a <key>Weapon</key> attack) instead.
          </section>
          <section indent="1" shade=""><bullet/>If the enemy's attack hit you and an ally makes the attack, his or her attack deals +2[W] damage (or +2d8 damage if it is not a <key>Weapon</key> attack) instead.</section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>The character that makes the attack gains temporary hit points equal to 5 + your Charisma modifier.</text>
+            <name>Inspiring Presence:</name>The character that makes the attack gains temporary hit points equal to 5 + your Charisma modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>You or the ally can use any at-will melee or ranged attack, not just a <i>basic attack</i>.</text>
+            <name>Resourceful Presence:</name>You or the ally can use any at-will melee or ranged attack, not just a <i>basic attack</i>.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>The character making the attack can shift as the first effect of the attack. The maximum shift is up to a number of squares equal to your Intelligence modifier.</text>
+            <name>Skirmishing Presence:</name>The character making the attack can shift as the first effect of the attack. The maximum shift is up to a number of squares equal to your Intelligence modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>The character making the attack gains a bonus to the damage. The bonus equals your Intelligence modifier.</text>
+            <name>Tactical Presence:</name>The character making the attack gains a bonus to the damage. The bonus equals your Intelligence modifier.
          </section>
    </power>
 
@@ -261,38 +262,38 @@
          <section auto="personal"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>You take a -2 penalty to AC and Reflex until the end of your next turn.</text>
+            <name>Effect:</name>You take a -2 penalty to AC and Reflex until the end of your next turn.
          </section>
          <section>
             <shade>true</shade>
-            <text>If an enemy makes an attack against you while you have this penalty, allies in your <i>warlord's aura</i> gain a bonus to attack rolls against the target equal to one-half your [Intelligence or Wisdom] modifier. The bonus lasts until the start of that enemy's next turn.</text>
+            If an enemy makes an attack against you while you have this penalty, allies in your <i>warlord's aura</i> gain a bonus to attack rolls against the target equal to one-half your [Intelligence or Wisdom] modifier and a bonus to the first damage roll they make against it equal to your [Wisdom or Charisma] modifier. Thee bonuses lasts until the start of that enemy's next turn.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>If you are hit by a melee attack while you have this penalty, choose one defense. While you have the penalty, allies in your <i>warlord's aura</i> gain a bonus to the chosen defense equal to your Charisma modifier.</text>
+            <name>Inspiring Presence:</name>If you are hit by a melee attack while you have this penalty, choose one defense. While you have the penalty, allies in your <i>warlord's aura</i> gain a bonus to the chosen defense equal to your Charisma modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <text>If you are hit by a melee attack more than once, you can choose to change which defense has the bonus, but the bonus can only be applied to one defense at a time.</text>
+            If you are hit by a melee attack more than once, you can choose to change which defense has the bonus, but the bonus can only be applied to one defense at a time.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>If you are hit by a melee attack while you have this penalty, allies in your <i>warlord's aura</i> gain a bonus to all defenses equal to one-half your Wisdom modifier. The bonus lasts while you have the penalty.</text>
+            <name>Resourceful Presence:</name>If you are hit by a melee attack while you have this penalty, allies in your <i>warlord's aura</i> gain a bonus to all defenses equal to one-half your Wisdom modifier. The bonus lasts while you have the penalty.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>If you are hit by a melee attack while you have this penalty, allies in your <i>warlord's aura</i> can shift a number of squares equal to one-half your Intelligence modifier (minimum 1 square) as a free reaction.</text>
+            <name>Skirmishing Presence:</name>If you are hit by a melee attack while you have this penalty, allies in your <i>warlord's aura</i> can shift a number of squares equal to one-half your Intelligence modifier (minimum 1 square) as a free reaction.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>If you are hit by a melee attack while you have this penalty, each ally in your <i>warlord's aura</i> gain a bonus to his or her first damage roll against the enemy that hit you. The bonus is lost if the ally does not roll damage against the enemy before the end of his or her next turn.</text>
+            <name>Tactical Presence:</name>If you are hit by a melee attack while you have this penalty, each ally in your <i>warlord's aura</i> gain a bonus to his or her first damage roll against the enemy that hit you. The bonus is lost if the ally does not roll damage against the enemy before the end of his or her next turn.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <text>If multiple enemies hit you with a melee attack, allies gain the bonus against each.</text>
+            If multiple enemies hit you with a melee attack, allies gain the bonus against each.
          </section>
          <section shade="" indent="1">
-            <name>Sustain Minor:</name><text>The effect persists until the end of your next turn.</text>
+            <name>Sustain Minor:</name>The effect persists until the end of your next turn.
          </section>
    </power>
 
@@ -304,16 +305,16 @@
          <keyword>Martial, Weapon</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Trigger:</name><text>On your turn, you hit an enemy with an attack</text>
+            <name>Trigger:</name>On your turn, you hit an enemy with an attack
          </section>
          <section auto="special"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The triggering attack deals +1[W] damage (or +1d8 if it is not a <key>Weapon</key> attack) damage to the triggering enemy.</text>
+            <name>Effect:</name>The triggering attack deals +1[W] damage (or +1d8 if it is not a <key>Weapon</key> attack) damage to the triggering enemy.
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of your next turn, each ally that begins his or her turn in your <i>warlord's aura</i> can take an additional move action during that turn.</text>
+            Until the end of your next turn, each ally that begins his or her turn in your <i>warlord's aura</i> can take an additional move action during that turn.
          </section>
    </power>
 
@@ -323,32 +324,28 @@
       <fluff>You probe the defenses of your foe until you can land a blow that momentarily leaves it susceptible to other attacks</fluff>
          <frequency>Encounter</frequency>
          <keyword>Martial, Weapon</keyword>
-         <action>Minor</action> <subaction/>
+         <action>Standard</action> <subaction/>
+         <section personal=""/>
          <section>
-            <name>Requirement:</name><text>You must have made a melee attack this turn.</text>
+            <shade>true</shade>
+            <name>Effect:</name>You make a <i>melee basic attack</i>.</section>
+         <section shade="">Until the end of your next turn, allies in your <i>warlord's aura</i> can score a critical hit against the target of your attack on a natural roll of 18 to 20.
          </section>
          <section>
-            <name>Target:</name><type>Melee</type><range>weapon</range><target>one creature you have attacked this turn</target>
+            <shade>true</shade> <indent>1</indent>
+            <name>Resourceful Presence:</name>Allies also gain a bonus to attack rolls on <i>reactive strikes</i> against the target. The bonus equals one-half your Wisdom modifier.
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>Until the end of your next turn, allies in your <i>warlord's aura</i> can score a critical hit against the target on a natural roll of 18 to 20.</text>
+            Also, the first melee attack that hits the target before the end of your next turn deals +2d8 additional damage.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>Allies also gain a bonus to attack rolls on <i>opportunity attacks</i> against the target. The bonus equals one-half your Wisdom modifier.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>Also, the first melee attack that hits the target before the end of your next turn deals +1[W] damage (+1d8 if it is not a Weapon attack).</text>
+            <name>Inspiring Presence:</name>The first ally that hits the target gains temporary hit points equal to 5 + your Charisma modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>The first ally that hits the target gains temporary hit points equal to 5 + your Charisma modifier.</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>The first attack that hits the target deals additional damage equal to Intelligence modifier.</text>
+            <name>Tactical Presence:</name>The first attack that hits the target deals additional damage equal to Intelligence modifier.
          </section>
    </power>
 
@@ -358,28 +355,24 @@
       <fluff>Your attack causes an ally's follow-up strike to cement his or her tactical advantage</fluff>
          <frequency>Encounter</frequency>
          <keyword>Martial</keyword>
-         <action>Minor</action> <subaction/>
-         <section>
-            <name>Requirement:</name><text>You must have made an attack during this turn</text>
-         </section>
-         <section>
-            <name>Target:</name><type>Special</type><target>one creature you have attacked this turn</target>
-         </section>
+         <action>Standard</action> <subaction/>
+         <section personal=""/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The first time an ally in your <i>warlord's aura</i> hits the target before the end of your next turn, the target takes +2[W] additional damage (or +2d8 damage if the attack is not a <key>Weapon</key> attack), and the ally gains your choice of one of the following benefits. The benefit lasts until the end of the ally's next turn.</text>
+            <name>Effect:</name>You make a <i>basic attack</i>. Your attack deals an additional +1[W] damage (or +1d8 damage if it is not a <key>Weapon</key> attack).</section>
+         <section shade="">The first time an ally in your <i>warlord's aura</i> hits the target of your attack before the end of your next turn, the target takes +1[W] additional damage (or +1d8 damage if the attack is not a <key>Weapon</key> attack), and the ally gains your choice of one of the following benefits. The benefit lasts until the end of the ally's next turn.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <text>A power bonus to all defenses equal to one-half your [Wisdom or Charisma] modifier.</text>
+            A power bonus to all defenses equal to one-half your [Wisdom or Charisma] modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <text>+1 bonus to attack rolls.</text>
+            +1 bonus to attack rolls.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <text>A power bonus to damage rolls equal to your [Intelligence or Wisdom] modifier.</text>
+            A power bonus to damage rolls equal to your [Intelligence or Wisdom] modifier.
          </section>
    </power>
 
@@ -390,18 +383,16 @@
          <frequency>Encounter</frequency>
          <keyword>Fear, Martial</keyword>
          <action>Minor</action> <subaction/>
-         <section>
-            <name>Prerequisite:</name><text>You must have training in Intimidate.</text>
-         </section>
+         <section auto="prereq-skill" skill="Intimidate"/>
          <section auto="personal"/>
          <section shade="">
-            <name>Effect:</name><text>Until the end of your current turn, each target that you make a melee attack or ranged attack against is taken aback by your presence until the end of your next turn.</text>
+            <name>Effect:</name>Until the end of your current turn, each target that you make a melee attack or ranged attack against is taken aback by your presence until the end of your next turn.
          </section>
          <section shade="">
-            <text>While taken aback, the target cannot mark your allies and cannot gain combat advantage against your allies.</text>
+            While taken aback, the target cannot mark your allies and cannot gain combat advantage against your allies.
          </section>
          <section shade="">
-            <text>Also, during your current turn, the first time that you hit an enemy with a melee attack or ranged attack, your attack deals +1[W] additional damage (or +1d8 if it is not a <key>Weapon</key> attack). If that enemy is currently marking at least one of your allies, the damage increases to +2[W] (or +2d8).</text>
+            Also, during your current turn, the first time that you hit an enemy with a melee attack or ranged attack, your attack deals +2[W] additional damage (or +2d8 if it is not a <key>Weapon</key> attack). If that enemy is currently marking at least one of your allies, the damage increases to +3[W] (or +3d8).
          </section>
    </power>
 
@@ -413,32 +404,32 @@
          <keyword>Martial</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Trigger:</name><text>On your turn, you hit an enemy with an attack</text>
+            <name>Trigger:</name>On your turn, you hit an enemy with an attack
          </section>
          <section special=""/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The triggering attack deals +1[W] additional damage (or +1d8 additional damage if it is not a <key>Weapon</key> attack).</text>
+            <name>Effect:</name>The triggering attack deals +1[W] additional damage (or +1d8 additional damage if it is not a <key>Weapon</key> attack).
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of your next turn, you and allies in your <i>warlord's aura</i> gain a +2 bonus to attack rolls against the triggering enemy. Each time an ally hits the triggering enemy, the bonus increases by +1.</text>
+            Until the end of your next turn, you and allies in your <i>warlord's aura</i> gain a +2 bonus to attack rolls against the triggering enemy. Each time an ally hits the triggering enemy, the bonus increases by +1.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>Choose one defense. You and allies in your <i>warlord's aura</i> gain a bonus to the chosen defense against attacks by the triggering enemy. The bonus equals the bonus to attack rolls.</text>
+            <name>Inspiring Presence:</name>Choose one defense. You and allies in your <i>warlord's aura</i> gain a bonus to the chosen defense against attacks by the triggering enemy. The bonus equals the bonus to attack rolls.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>You and allies in your <i>warlord's aura</i> gain a bonus to all defenses against attacks by the triggering enemy. The bonus equals one-half the bonus to attack rolls.</text>
+            <name>Resourceful Presence:</name>You and allies in your <i>warlord's aura</i> gain a bonus to all defenses against attacks by the triggering enemy. The bonus equals one-half the bonus to attack rolls.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>You and allies in your <i>warlord's aura</i> can use a move action shift a number of squares equal to the bonus to attack rolls.</text>
+            <name>Skirmishing Presence:</name>You and allies in your <i>warlord's aura</i> can use a move action shift a number of squares equal to the bonus to attack rolls.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>The bonus also applies to your allies' damage rolls against the target.</text>
+            <name>Tactical Presence:</name>The bonus also applies to your allies' damage rolls against the target.
          </section>
    </power>
 
@@ -452,27 +443,27 @@
          <section auto="personal"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>Until the end of your next turn, you and allies in your <i>warlord's aura</i> have the following benefits:</text>
+            <name>Effect:</name>Until the end of your next turn, you and allies in your <i>warlord's aura</i> have the following benefits:
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <text>+2 power bonus to attack rolls with at-will attacks, including <i>basic attacks</i>.</text>
+            +2 power bonus to attack rolls with at-will attacks, including <i>basic attacks</i>.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <text>A bonus to damage rolls with at-will attacks, including <i>basic attacks</i>. The bonus equals one-half your [Intelligence or Wisdom] modifier (minimum +1 bonus).</text>
+            A bonus to damage rolls with at-will attacks, including <i>basic attacks</i>. The bonus equals one-half your [Intelligence or Wisdom] modifier (minimum +1 bonus).
          </section>
          <section>
             <shade>true</shade> <indent>2</indent>
-            <name>Tactical Presence:</name><text>The bonus equals your Intelligence modifier.</text>
+            <name>Tactical Presence:</name>The bonus equals your Intelligence modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <name>Inspiring Presence:</name><text>If an ally in your <i>warlord's aura</i> hits with an at-will attack, he or she can make a saving throw against one effect on him or her, even if that effect does not normally allow a saving throw. If the effect does allow a save, the ally gains a bonus to his or her save equal to your Charisma modifier.</text>
+            <name>Inspiring Presence:</name>If an ally in your <i>warlord's aura</i> hits with an at-will attack, he or she can make a saving throw against one effect on him or her, even if that effect does not normally allow a saving throw. If the effect does allow a save, the ally gains a bonus to his or her save equal to your Charisma modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent> <bullet/>
-            <name>Skirmishing Presence:</name><text>You and allies in <i>warlord's aura</i> gain a +1 bonus to speed, and if an at-will attack allows an ally to move or shift, he or she can move or shift 1 additional square.</text>
+            <name>Skirmishing Presence:</name>You and allies in <i>warlord's aura</i> gain a +1 bonus to speed, and if an at-will attack allows an ally to move or shift, he or she can move or shift 1 additional square.
          </section>
    </power>
 
@@ -484,36 +475,36 @@
          <keyword>Martial, Weapon</keyword>
          <action>Nonaction</action> <subaction>Interrupt</subaction>
          <section>
-            <name>Trigger:</name><text>On your turn, you hit an enemy with an attack</text>
+            <name>Trigger:</name>On your turn, you hit an enemy with an attack
          </section>
          <section auto="special"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name><text>The triggering attack deals +1[W] additional damage (or +1d8 additional damage if it is not a <key>Weapon</key> attack), and the triggering enemy takes a -2 penalty to attack rolls until the end of your next turn.</text>
+            <name>Effect:</name>The triggering attack deals +1[W] additional damage (or +1d8 additional damage if it is not a <key>Weapon</key> attack), and the triggering enemy takes a -2 penalty to attack rolls until the end of your next turn.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Inspiring Presence:</name><text>The penalty equals 1 + one-half your Charisma modifier (minimum -3 penalty).</text>
+            <name>Inspiring Presence:</name>The penalty equals 2 + one-half your Charisma modifier (minimum -3 penalty).
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Skirmishing Presence:</name><text>The triggering enemy takes a penalty to speed equal to one-half the penalty to attack rolls (to a minimum speed of 2). If the enemy's speed is reduced to 2, it counds as being slowed.</text>
+            <name>Skirmishing Presence:</name>The triggering enemy takes a penalty to speed equal to one-half the penalty to attack rolls (to a minimum speed of 2). If the enemy's speed is reduced to 2, it counds as being slowed.
          </section>
          <section>
             <shade>true</shade>
-            <text>Each time an ally hits the triggering enemy, the penalty increases by a cumulative -1</text>
+            Each time an ally hits the triggering enemy, the penalty increases by a cumulative -1
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tactical Presence:</name><text>The first ally that hits the triggering enemy before the end of your next turn deals additional damage equal to your Intelligence modifier.</text>
+            <name>Tactical Presence:</name>The first ally that hits the triggering enemy before the end of your next turn deals additional damage equal to your Intelligence modifier.
          </section>
          <section>
             <shade>true</shade>
-            <text>You can choose to give this attack the <key>Fear</key> keyword. If you do, the triggering enemy also takes one-half the penalty to its Will.</text>
+            You can choose to give this attack the <key>Fear</key> keyword. If you do, the triggering enemy also takes one-half the penalty to its Will.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Resourceful Presence:</name><text>When you give this attack the <key>Fear</key> keyword, you can choose to apply the penalty to Fortitude or Reflex instead of Will.</text>
+            <name>Resourceful Presence:</name>When you give this attack the <key>Fear</key> keyword, you can choose to apply the penalty to Fortitude or Reflex instead of Will.
          </section>
    </power>
 </catalog>

@@ -757,7 +757,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="name[../@auto]"/>
 
 <xsl:template match="name">
-  <span style="margin-right:0.3em;">
+  <span style="margin-right:0.2em;">
     <xsl:choose>
       <xsl:when test="../name-style='italic' or @style='italic'">
         <i><xsl:apply-templates /><xsl:text> </xsl:text></i>
@@ -816,7 +816,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template match="target">
-	<xsl:text>&#160;(</xsl:text><xsl:apply-templates/><xsl:text>)</xsl:text>
+	<xsl:text> (</xsl:text><xsl:apply-templates/><xsl:text>)</xsl:text>
 	<xsl:if test="not(../target2 or ../type2='Personal')">
 		<br />
 	</xsl:if>
