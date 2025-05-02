@@ -1,45 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
-   <collection>Fighter Lvl 5 Daily Attack Exploits</collection>
+  <collection>Fighter Lvl 5 Daily Attack Exploits</collection>
 
-   <power>
-      <title>Agonizing Assault</title>
-      <class>Fighter</class> <category>Attack</category> <level>5</level>
-      <fluff>Your attack hits your adversary in a sensitive area, causing it to reel in pain</fluff>
-         <frequency>Daily</frequency>
-         <keyword>Martial, Weapon</keyword>
-         <action>Standard</action> <subaction/>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>weapon</range>
-            <target>one creature</target>
-            <text>Strength vs. AC</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage, and the target is in pain (save ends).</text>
-         </section>
-         <section>
-            <shade>true</shade> <indent>1</indent>
-            <name>Flail:</name> <name-style>bold</name-style>
-            <text>The target is also knocked prone.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>While it is in pain, the target is both dazed and immobilized.</text>
-         </section>
-         <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
-         </section>
-         <section>
-            <indent>1</indent>
-            <name>Flail:</name> <name-style>bold</name-style>
-            <text>The target is slowed until the end of its next turn.</text>
-         </section>
-   </power>
+  <power>
+    <title>Agonizing Assault</title>
+    <class>Fighter</class> <category>Attack</category> <level>5</level>
+    <fluff>Your attack hits your adversary in a sensitive area, causing it to reel in pain</fluff>
+      <frequency>Daily</frequency>
+      <keyword>Martial, Weapon</keyword>
+      <action>Standard</action> <subaction/>
+      <section>
+        <name>Attack:</name>
+        <type>Melee</type> <range>weapon</range>
+        <target>one creature</target>
+        Strength vs. AC
+      </section>
+      <section>
+        <shade>true</shade>
+        <name>Hit:</name>
+        2[W] + Strength modifier damage, and the target is in pain (save ends).
+      </section>
+      <section>
+        <shade>true</shade> <indent>1</indent>
+        <name>Flail:</name>
+        The target is also knocked prone.
+      </section>
+      <section shade="" indent="1"><name>Hammer, Mace:</name>Additional damage equal to your Constitution modifier.</section>
+      <section>
+        <shade>true</shade>
+        While it is in pain, the target is both dazed and immobilized.
+      </section>
+      <section shade="" indent="1"><name>Heavy Blade, Light Blade:</name>While in pain, the target also takes ongoing damage equal to 1 + one-half your Dexterity modifier.</section>
+      <section>
+        <name>Miss:</name>
+        Half damage.
+      </section>
+      <section>
+        <indent>1</indent>
+        <name>Flail:</name>
+        The target is slowed until the end of its next turn.
+      </section>
+  </power>
 
    <power>
       <title>Bare-Knuckled Rebuke</title>
@@ -51,36 +53,34 @@
          <section><name>Personal</name></section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You assume the Bare-Knuckled Rebuke stance.</text>
+            <name>Effect:</name>
+            You assume the Bare-Knuckled Rebuke stance.
          </section>
          <section>
             <shade>true</shade>
-            <text>While in the stance, you can use the Rebuke Punch attack at-will.</text>
+            While in the stance, you can use the Rebuking Punch attack at-will.
          </section>
       <part>
-         <part-name>Rebuke Punch</part-name>
+         <part-name>Rebuking Punch</part-name>
          <frequency>At-Will</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Opportunity</action> <subaction>Reaction</subaction>
+         <section auto="req-freehand"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must have a hand free.</text>
+            <name>Trigger:</name>
+            An enemy within your unarmed reach misses you with a melee attack
          </section>
+         <section>Your DM might allow you to trigger this attack on other attacks where it makes sense.</section>
          <section>
-            <name>Trigger:</name> <name-style>bold</name-style>
-            <text>An enemy within your unarmed reach misses you with a melee attack</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>the triggering enemy</target>
-            <text>Strength vs. AC (unarmed)</text>
+            Strength vs. AC (unarmed)
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] (unarmed) + Strength modifier damage, and the target grants combat advantage to you until the start of its next turn.</text>
+            <name>Hit:</name>
+            1[W] (unarmed) + Strength modifier damage, and the target grants combat advantage to you until the start of its next turn.
          </section>
       </part>
    </power>
@@ -95,142 +95,145 @@
          <section><name>Personal</name></section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until you take a long rest, you gain a +1 bonus to damage rolls with all <i>basic attacks</i> and Fighter attacks.</text>
+            <name>Effect:</name>
+            Until you take a long rest, you gain a +1 bonus to damage rolls with all <i>basic attacks</i> and Fighter attacks.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Arena Training:</name> <name-style>bold</name-style>
-            <text>While you are not wearing heavy armor, you also gain a +1 bonus to Will.</text>
+            <name>Arena Training:</name>
+            While you are not wearing heavy armor, you also gain a +1 bonus to Will.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Battlerager Training:</name> <name-style>bold</name-style>
-            <text>Your number of healing surges also increases by 1.</text>
+            <name>Battlerager Training:</name>
+            Your number of healing surges also increases by 1.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Brawler Training:</name> <name-style>bold</name-style>
-            <text>While you wield a weapon in your primary hand and your off hand is either free or grabbing a creature, you also gain a +1 bonus to Reflex.</text>
+            <name>Brawler Training:</name>
+            While you wield a weapon in your primary hand and your off hand is either free or grabbing a creature, you also gain a +1 bonus to Reflex.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Duelist Training:</name> <name-style>bold</name-style>
-            <text>You also gain a +1 bonus to speed when you are not wearing heavy armor. This does not stack with your regular benefit from Duelist Training if a Fighter attack allows you to move or shift your speed.</text>
+            <name>Duelist Training:</name>
+            You also gain a +1 bonus to speed when you are not wearing heavy armor.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Reaver Training:</name> <name-style>bold</name-style>
-            <text>You gain a +2 bonus to damage rolls instead.</text>
+            <name>Reaver Training:</name>
+            You gain a +2 bonus to damage rolls instead.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Shieldbearer Training:</name> <name-style>bold</name-style>
-            <text>While you are wielding a shield, you also gain a +1 bonus to Will.</text>
+            <name>Shieldbearer Training:</name>
+            While you are using a shield, you also gain a +1 bonus to Will.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Tempest Training:</name> <name-style>bold</name-style>
-            <text>Whenever you make an attack with both weapons during the same turn, you can shift 1 square as a free reaction.</text>
+            <name>Tempest Training:</name>
+            Whenever you make an attack with both weapons during the same turn, you can shift 1 square as a free reaction.
          </section>
    </power>
 
-   <power>
-      <title>Bedeviling Assault</title>
-      <class>Fighter</class> <category>Attack</category> <level>5</level>
-      <fluff>While your ally distracts your opponent, you attempt to land yet another blow</fluff>
-         <frequency>Daily</frequency>
-         <keyword>Martial, Weapon</keyword>
-         <action>Standard</action> <subaction/>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>weapon</range>
-            <target>one creature</target>
-            <text>Strength vs. AC</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage.</text>
-         </section>
-         <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>You gain a +4 bonus to the first triggered attack roll you make against the target before the end of the encounter.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of the encounter, once per round when an ally hits the target with a melee attack, you can make a <i>melee basic attack</i> with combat advantage against the target as a free reaction.</text>
-         </section>
-   </power>
+  <power>
+    <title>Bedeviling Assault</title>
+    <class>Fighter</class> <category>Attack</category> <level>5</level>
+    <fluff>While your ally distracts your opponent, you attempt to land yet another blow</fluff>
+    <frequency>Daily</frequency>
+    <keyword>Martial, Weapon</keyword>
+    <action>Standard</action> <subaction/>
+    <section>
+      <name>Primary Attack:</name>
+      <type>Melee</type> <range>weapon</range>
+      <target>one creature</target>
+      Strength vs. AC
+    </section>
+    <section>
+      <shade>true</shade>
+      <name>Hit:</name>
+      2[W] + Strength modifier damage.
+    </section>
+    <section>
+      <name>Miss:</name>
+      You gain a +4 bonus to the first triggered attack roll you make against the target before the end of the encounter.
+    </section>
+    <section>
+      <shade>true</shade>
+      <name>Effect:</name>
+      Until the end of the encounter, you can use the Insult to Injury attack once per round.
+    </section>
+    <part>
+      <name>Insult to Injury</name>
+      <frequency>At-Will</frequency>
+      <action>Free</action> <subaction>Reaction</subaction>
+      <keyword>Martial</keyword> <keyword>Weapon</keyword>
+      <section><name>Trigger:</name>An ally hits the primary target with a melee attack</section>
+      <section personal=""/>
+      <section shade=""><name>Effect:</name>You make a <i>melee basic attack</i> against the primary target.</section>
+    </part>
+  </power>
+
+  <power>
+    <title>Brazen Assault</title>
+    <class>Fighter</class> <category>Attack</category> <level>5</level>
+    <fluff>Relying on your own resilience, you put yourself in danger, knowing that you can maneuver for a better attack</fluff>
+    <frequency>Daily</frequency>
+    <keyword>Martial, Weapon</keyword>
+    <action>Standard</action> <subaction/>
+    <section auto="prereq-skill" skill="Endurance"/>
+    <section>
+      <name>Attack:</name>
+      <type>Melee</type> <range>weapon</range>
+      <target>one creature</target>
+      Strength vs. AC
+    </section>
+    <section>
+      <shade>true</shade>
+      <name>Hit:</name>
+      3[W] + Strength modifier + Constitution modifier damage, and you push the target up to 2 squares.
+    </section>
+    <section>
+      <name>Miss:</name>
+      Half damage, push half the distance.
+    </section>
+    <section>
+      <shade>true</shade>
+      <name>Effect:</name>
+      You gain resist all equal to 2 + one-half the number of healing surges you have expended, and grant combat advantage to all attacks. This lasts until the end of the encounter. You can end this effect as a free action during your turn, but not on the same turn that you activated it.
+    </section>
+  </power>
 
    <power>
-      <title>Brazen Assault</title>
-      <class>Fighter</class> <category>Attack</category> <level>5</level>
-      <fluff>Relying on your own resilience, you put yourself in danger, knowing that you can maneuver for a better attack</fluff>
-         <frequency>Daily</frequency>
-         <keyword>Martial, Weapon</keyword>
-         <action>Standard</action> <subaction/>
-         <section>
-            <name>Prerequisite:</name> <name-style>bold</name-style>
-            <text>You must have training in Endurance.</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
-            <type>Melee</type> <range>weapon</range>
-            <target>one creature</target>
-            <text>Strength vs. AC</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>3[W] + Strength modifier + Constitution modifier damage, and the target is pushed 2 squares.</text>
-         </section>
-         <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You gain resist to all damage equal to 5 + one-half the number of healing surges you have expended, but grant combat advantage to all attacks. This lasts until the end of the encounter. You can end this effect as a free action during your turn, but not on the same turn that you activated it.</text>
-         </section>
-   </power>
-
-   <power>
-      <title>Brutal Advance</title>
+      <title>Brutal Pushback</title>
       <class>Fighter</class> <category>Attack</category> <level>5</level>
       <fluff>After throwing your enemy back, you charge to deliver the killing blow</fluff>
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
+         <section auto="req-twohand"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be wielding a two-handed weapon.</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. AC</text>
+            Strength vs. AC
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] + Strength modifier damage.</text>
+            <name>Hit:</name>
+            2[W] + Strength modifier damage. This does not count as a multiattack.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You push the target 3 squares, and then charge it.</text>
+            <name>Miss:</name>
+            Half damage.
          </section>
          <section>
             <shade>true</shade>
-            <text>If this charge attack hits, the target falls prone.</text>
+            <name>Effect:</name>
+            You push the target up to 3 squares, and then charge it.
+         </section>
+         <section>
+            <shade>true</shade>
+            If this charge attack hits, the target falls prone.
          </section>
    </power>
 
@@ -241,40 +244,37 @@
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
-         <section>
-            <name>Prerequisite:</name> <name-style>bold</name-style>
-            <text>You must have training in Athletics.</text>
-         </section>
+         <section auto="prereq-skill" skill="Athletics"/>
          <section shade="" auto="charge-effect"/>
          <section shade="">
-            <text>During the charge movement, you must make an Athletics check to long jump. You are considered to have a running start for this jump.</text>
+            During the charge movement, you must make an Athletics check to long jump. You are considered to have a running start for this jump.
          </section>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. AC</text>
+            Strength vs. AC
          </section>
-         <section>
+         <section auto="">
             <indent>1</indent>
-            <text>If you end the jump in reach of the target, you can score a critical hit on a natural roll of 19 or 20</text>
+            If you end the jump in reach of the target, you can score a critical hit on a natural roll of 19 or 20
          </section>
-         <section>
+         <section auto="">
             <indent>1</indent>
-            <text>For each square beyond 2 you cleared with the long jump, you gain a +1 bonus to the attack roll</text>
+            For each square beyond 2 you cleared with the long jump, you gain a +1 bonus to the attack roll
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>4[W] + Strength modifier damage.</text>
+            <name>Hit:</name>
+            4[W] + Strength modifier damage.
          </section>
          <section>
             <shade>true</shade>
-            <text>If you jumped down from higher elevation during the charge, the attack deals an additional +1[W] damage.</text>
+            If you jumped down from higher elevation during the charge, the attack deals an additional +1[W] damage.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
+            <name>Miss:</name>
+            Half damage.
          </section>
    </power>
 
@@ -286,23 +286,23 @@
          <keyword>Martial, Reliable, Weapon</keyword>
          <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. Fortitude</text>
+            Strength vs. Fortitude
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage, and the target is painfully bleeding (save ends).</text>
+            <name>Hit:</name>
+            2[W] + Strength modifier damage, and the target is painfully bleeding (save ends).
          </section>
          <section>
             <shade>true</shade>
-            <text>While it is bleeding, the target takes ongoing 5 damage and a -2 penalty to AC and Reflex.</text>
+            While it is bleeding, the target takes ongoing 5 damage and a -2 penalty to AC and Reflex. You can also trigger your <i>enforce challenge</i> class power on the target on it even if it is not marked by you.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>The target has a -2 penalty to AC against the first attack targeting AC made against it before the end of your next turn, and you regain the use of this power at the start of your next turn.</text>
+            <name>Miss:</name>
+            The target has a -2 penalty to AC against the first attack targeting AC made against it before the end of your next turn, and you regain the use of this power at the start of your next turn.
          </section>
    </power>
 
@@ -314,33 +314,33 @@
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. Fortitude</text>
+            Strength vs. Fortitude
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>3[W] + Strength modifier damage, and you push the target 3 squares and knock it prone.</text>
+            <name>Hit:</name>
+            3[W] + Strength modifier damage, and you push the target up to 3 squares and knock it prone.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Critical:</name> <name-style>bold</name-style>
-            <text>Push 4 squares.</text>
+            <name>Critical:</name>
+            Push 4 squares.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage, and you push the target 1 square.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Each enemy adjacent to the target takes damage equal to your Strength modifier + your weapon's enhancement bonus.</text>
+            <name>Miss:</name>
+            Half damage, and you push the target half the distance.
          </section>
          <section>
             <shade>true</shade>
-            <text>You push each enemy adjacent to the target 1 square, or 2 squares if the attack was a critical hit.</text>
+            <name>Effect:</name>
+            If the forced movement was not negated, each enemy adjacent to the target takes damage equal to your Strength modifier + your weapon's enhancement bonus.
+         </section>
+         <section>
+            <shade>true</shade>
+            You push each enemy adjacent to the target up to 1 square, or up to 2 squares if the attack was a critical hit.
          </section>
    </power>
 
@@ -352,32 +352,33 @@
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs Fortitude</text>
+            Strength vs Fortitude
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>3[W] + Strength modifier damage.</text>
+            <name>Hit:</name>
+            3[W] + Strength modifier damage.
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of the encounter, the target cannot move on its turn if it started that turn grabbed by you.</text>
-         </section>
+            Until the end of the encounter, the target has the following effects:</section>
+         <section shade="" indent="1"><bullet/>The target cannot move on its turn if it started that turn grabbed by you.</section>
+         <section shade="" indent="1"><bullet/>The target cannot stand up while grabbed by you.</section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You knock the target prone.</text>
+            <name>Miss:</name>
+            Half damage.
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of the encounter, the target has -4 penalty to escape checks when it is prone.</text>
+            <name>Effect:</name>
+            You knock the target prone.
+         </section>
+         <section>
+            <shade>true</shade>
+            Until the end of the encounter, the target has -4 penalty to escape checks when it is prone.
          </section>
    </power>
 
@@ -388,28 +389,25 @@
          <frequency>Daily</frequency>
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction/>
+         <section auto="req-twomelee"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be wielding two melee weapons.</text>
-         </section>
-         <section>
-            <text>You can remain in the stance if you stop wielding two melee weapons, but you cannot gain any benefit from it until you are again wielding two melee weapons.</text>
+            You can remain in the stance if you stop wielding two melee weapons, but you cannot gain any benefit from it until you are again wielding two melee weapons.
          </section>
          <section auto="personal"/>
          <section shade="">
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You assume the Dancing Defense stance.</text>
+            <name>Effect:</name>
+            You assume the Dancing Defense stance.
          </section>
          <section shade="">
-            <text>While in the stance, once per round when you hit with an attack using your main weapon, you can choose one of the following two benefits. The effect is considered to be part of resolving the hit of the triggering attack.</text>
+            While in the stance, once per round when you hit with an attack using your main weapon, you can choose one of the following two benefits. The effect is considered to be part of resolving the hit of the triggering attack.
          </section>
          <section shade="" bullet="">
             <indent>1</indent>
-            <text>You make a <i>melee basic attack</i> with your off-hand weapon against a different target.</text>
+            You make a <i>melee basic attack</i> with your off-hand weapon against a different target. This counts as a multiattack.
          </section>
          <section shade="" bullet="">
             <indent>1</indent>
-            <text>You gain a +2 power bonus to AC and Reflex until the start of your next turn, and shift 1 square.</text>
+            You gain a +2 power bonus to AC and Reflex until the start of your next turn, and shift up to 1 square.
          </section>
    </power>
 
@@ -421,20 +419,17 @@
          <keyword>Martial, Stance</keyword>
          <action>Minor</action> <subaction/>
          <type>Personal</type>
+         <section auto="req-twomelee"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be wielding two melee weapons.</text>
-         </section>
-         <section>
-            <text>You can remain in the stance if you stop wielding two melee weapons, but you cannot gain any benefit from it until you are again wielding two melee weapons.</text>
+            You can remain in the stance if you stop wielding two melee weapons, but you cannot gain any benefit from it until you are again wielding two melee weapons.
          </section>
          <section auto="personal"/>
          <section shade="">
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You assume the Dervish's Challenge stance.</text>
+            <name>Effect:</name>
+            You assume the Dervish's Challenge stance.
          </section>
          <section shade="">
-            <text>While in the stance, whenever you make a <i>melee basic attack</i> with your main weapon as an immediate action or an opportunity action, you can make a <i>melee basic attack</i> with your off-hand weapon against the same creature as a free reaction.</text>
+            While in the stance, whenever you make a <i>melee basic attack</i> with your main weapon as an immediate action or an opportunity action, you can make a <i>melee basic attack</i> with your off-hand weapon against the same creature as a free reaction. This counts as a multiattack.
          </section>
    </power>
 
@@ -446,26 +441,26 @@
          <keyword>Martial, Reliable, Weapon</keyword>
          <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. AC</text>
+            Strength vs. AC
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage, and the target is dizzied (save ends).</text>
+            <name>Hit:</name>
+            2[W] + Strength modifier damage, and the target is dizzied (save ends).
          </section>
          <section>
             <shade>true</shade>
-            <text>While dizzied, the target is slowed, takes a -2 penalty to all attack rolls and cannot score critical hits. It also treats all creatures as enemies and must take any triggered actions whenever it gets the chance.</text>
+            While dizzied, the target is slowed, takes a -2 penalty to all attack rolls, and cannot score critical hits. It also treats all creatures as enemies and must take any triggered actions whenever it gets the chance.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>The target takes a -2 penalty to all attack rolls until the end of its next turn.</text>
+            <name>Miss:</name>
+            The target takes a -2 penalty to all attack rolls until the end of its next turn.
          </section>
          <section>
-            <text>You regain the use of this power at the start of your next turn.</text>
+            You regain the use of this power at the start of your next turn.
          </section>
    </power>
 
@@ -476,51 +471,50 @@
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
+         <section auto="req-reach"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be wielding a reach weapon.</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. Fortitude</text>
+            Strength vs. Fortitude
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>3[W] + Strength modifier damage, and you push the target 1 square.</text>
+            <name>Hit:</name>
+            3[W] + Strength modifier damage, and you push the target up to 1 square.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Polearm:</name> <name-style>bold</name-style>
-            <text>You deal additional damage equal to your Wisdom modifier.</text>
+            <name>Polearm:</name>
+            You deal additional damage equal to your Wisdom modifier.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Spear:</name> <name-style>bold</name-style>
-            <text>You deal additional damage equal to your Dexterity modifier.</text>
+            <name>Flail, Spear:</name>
+            You deal additional damage equal to your Dexterity modifier.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
+            <name>Miss:</name>
+            Half damage.
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of the encounter, you gain the following benefits:</text>
+            <name>Effect:</name>
+            Until the end of the encounter, you gain the following benefits:
          </section>
          <section bullet="">
             <shade>true</shade> <indent>1</indent>
-            <text>The target triggers your <i>enforce challenge</i> even if it isn't marked by you or is 1 square outside your reach.</text>
+            The target counts as being marked by you for triggering your <i>enforce challenge</i>.</section>
+          <section shade="" bullet="" indent="1">
+            You can trigger your <i>enforce challenge</i> against the target when it is 1 square outside your reach.
          </section>
          <section bullet="">
             <shade>true</shade> <indent>1</indent>
-            <text>When you use <i>enforce challenge</i> against the target, you can shift 1 square before making the attack.</text>
+            When you use <i>enforce challenge</i> against the target, you can shift 1 square before making the attack.
          </section>
          <section bullet="">
             <shade>true</shade> <indent>1</indent>
-            <text>Each time the target either shifts or makes an attack that doesn't target you and is more than 1 square outside your reach, you can use an opportunity reaction to shift 1 square.</text>
+            Each time the target would trigger your <i>enforce challenge</i> but is more than 1 square outside your reach, you can use an opportunity reaction to shift 1 square. You cannot then use <i>enforce challange</i> on the same trigger, even if this movement would bring it within 1 square of your reach.
          </section>
    </power>
 
@@ -532,24 +526,24 @@
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Close</type> <range>weapon burst</range>
             <target>each enemy in the burst you can see</target>
-            <text>Strength vs. Reflex</text>
+            Strength vs. Reflex
          </section>
          <section>
             <indent>1</indent>
-            <name>Light Blade, Heavy Blade, or Spear:</name> <name-style>bold</name-style>
-            <text>You gain a bonus to the attack roll equal to one-half your Dexterity modifier</text>
+            <name>Light Blade, Heavy Blade, or Spear:</name>
+            You gain a bonus to the attack roll equal to one-half your Dexterity modifier
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage.</text>
+            <name>Hit:</name>
+            2[W] + Strength modifier damage.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
+            <name>Miss:</name>
+            Half damage.
          </section>
    </power>
 
@@ -560,36 +554,34 @@
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
+         <section auto="prereq-skill" skill="Endurance"/>
          <section>
-            <name>Prerequisite:</name> <name-style>bold</name-style>
-            <text>You must have training in Endurance.</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>1</range>
             <target>one creature adjacent to you</target>
-            <text>Strength vs. AC</text>
+            Strength vs. AC
+         </section>
+         <section indent="1"><name>Shield:</name>If you are using a shield, you can make the attack against Fortitude instead</section>
+         <section>
+            <shade>true</shade>
+            <name>Hit:</name>
+            2[W] + Strength modifier + the number of healing surges you have expended damage.
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier + the number of healing surges you have expended damage.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <text>The target is immoblized until the end of your next turn, or until you are not adjacent to it, whichever lasts longer.</text>
+            The target is immoblized until you are not adjacent to it or until the end of your next turn, whichever lasts longer.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Critical:</name> <name-style>bold</name-style>
-            <text>You knock the target prone. It must succeed on a saving throw to stand from prone while it remains immobilized.</text>
+            <name>Critical:</name>
+            You knock the target prone. It must succeed on a saving throw to stand from prone while it remains immobilized.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
+            <name>Miss:</name>
+            Half damage.
          </section>
          <section>
-            <text>The target is immobilized until the end of your next turn, or until you are not adjacent to it, whichever comes first.</text>
+            The target is immobilized until the end of your next turn or until you are not adjacent to it, whichever comes first.
          </section>
    </power>
 
@@ -603,12 +595,12 @@
          <section auto="personal"/>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You assume the Rain of Steel stance.</text>
+            <name>Effect:</name>
+            You assume the Rain of Steel stance.
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the stance ends, as long as you are able to take opportunity actions, any enemy that starts its turn adjacent to you takes 1[W] damage.</text>
+            Until the stance ends, as long as you are able to take opportunity actions, any enemy that starts its turn adjacent to you takes 1[W] damage. This counts as a multiattack.
          </section>
    </power>
 
@@ -619,33 +611,30 @@
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
+         <section auto="req-shield"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be using a shield.</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>touch</range>
             <target>one creature</target>
-            <text>Strength vs. AC</text>
+            Strength vs. AC
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage.</text>
+            <name>Hit:</name>
+            2[W] + Strength modifier damage.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage.</text>
-         </section>
-         <section>
-            <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>Until the end of your next turn, the only attacks the target can make are <i>basic attacks</i>.</text>
+            <name>Miss:</name>
+            Half damage.
          </section>
          <section>
             <shade>true</shade>
-            <text>Until the end of the encounter, whenever you make an attack against the target, the only attacks it can make until the end of your following turn are <i>basic attacks</i>.</text>
+            <name>Effect:</name>
+            Until the end of your next turn, the only attacks the target can make are <i>basic attacks</i>.
+         </section>
+         <section>
+            <shade>true</shade>
+            Until the end of the encounter, whenever you make a Fighter attack or <i>basic attack</i> against the target, the only attacks it can make until the end of your following turn are <i>basic attacks</i>.
          </section>
    </power>
 
@@ -656,50 +645,47 @@
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
+         <section auto="req-twomelee"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be wielding two melee weapons.</text>
-         </section>
-         <section>
-            <name>Primary Attack:</name> <name-style>bold</name-style>
+            <name>Primary Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. AC (main weapon)</text>
+            Strength vs. AC (main weapon)
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] (main) + Strength modifier + Dexterity modifier damage.</text>
+            <name>Hit:</name>
+            1[W] (main) + Strength modifier + Dexterity modifier damage.
          </section>
          <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You shift 1 square, or 2 squares if the primary attack was a miss.</text>
+            <name>Effect:</name>
+            You shift 1 square, or 2 squares if the primary attack was a miss.
          </section>
          <section>
-            <name>Secondary Attack:</name> <name-style>bold</name-style>
+            <name>Secondary Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature other than the primary target</target>
-            <text>Strength +1 vs. AC (off-hand weapon)</text>
+            Strength +1 vs. AC (off-hand weapon)
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] (off-hand) + Dexterity modifier damage.</text>
+            <name>Hit:</name>
+            1[W] (off-hand) + Dexterity modifier damage.
          </section>
          <section>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You shift 1 square, or 2 squares if the secondary attack was a miss.</text>
+            <name>Effect:</name>
+            You shift 1 square, or 2 squares if the secondary attack was a miss.
          </section>
          <section>
-            <name>Tertiary Attack:</name> <name-style>bold</name-style>
+            <name>Tertiary Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature other than the primary or secondary targets</target>
-            <text>Strength vs. AC, two attacks (main weapon and off-hand weapon)</text>
+            Strength vs. AC, two attacks (main weapon and off-hand weapon)
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>1[W] + Strength modifier damage.</text>
+            <name>Hit:</name>
+            1[W] + Strength modifier damage.
          </section>
    </power>
 
@@ -710,41 +696,38 @@
          <frequency>Daily</frequency>
          <keyword>Martial, Weapon</keyword>
          <action>Standard</action> <subaction/>
-         <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be wielding a Light Blade.</text>
-         </section>
+         <section auto="req-weapgroup"><group>Light Blade</group></section>
          <section shade="">
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You can shift 1 square.</text>
+            <name>Effect:</name>
+            You can shift up to 1 square.
          </section>
          <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
             <target>one creature</target>
-            <text>Strength vs. AC</text>
+            Strength vs. AC
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>2[W] + Strength modifier damage, and the target is painfully bleeding (save ends).</text>
+            <name>Hit:</name>
+            2[W] + Strength modifier damage, and the target is painfully bleeding (save ends).
          </section>
          <section>
             <shade>true</shade>
-            <text>While bleeding, the target is slowed and takes ongoing damage equal to your Dexterity modifier + your weapon's enhancement bonus.</text>
+            While bleeding, the target is slowed and takes ongoing damage equal to your Dexterity modifier + your weapon's enhancement bonus.
          </section>
          <section>
             <shade>true</shade>
-            <text>If the attack was a critical hit or bloodied the target, the target takes a -3 penalty to the first saving throw it makes to end this effect.</text>
+            If the attack was a critical hit or bloodied the target, the target takes a -3 penalty to the first saving throw it makes to end this effect.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage, and half the ongoing damage (save ends).</text>
+            <name>Miss:</name>
+            Half damage, and half the ongoing damage (save ends).
          </section>
          <section>
             <shade>true</shade>
-            <name>Effect:</name> <name-style>bold</name-style>
-            <text>You can shift 1 square.</text>
+            <name>Effect:</name>
+            You can shift up to 1 square.
          </section>
    </power>
 
@@ -755,39 +738,36 @@
          <frequency>Daily</frequency>
          <keyword>Fear, Martial</keyword>
          <action>Standard</action> <subaction/>
+         <section auto="req-shield"/>
          <section>
-            <name>Requirement:</name> <name-style>bold</name-style>
-            <text>You must be using a shield.</text>
-         </section>
-         <section>
-            <name>Attack:</name> <name-style>bold</name-style>
+            <name>Attack:</name>
             <type>Melee</type> <range>touch</range>
             <target>one creature</target>
-            <text>Strength +3 vs. Reflex</text>
+            Strength +3 vs. Reflex
          </section>
          <section>
             <indent>1</indent>
-            <name>Level 11:</name> <name-style>italic</name-style>
-            <text>Strength +6</text>
+            <name>Level 11:</name>
+            Strength +6
          </section>
          <section>
             <shade>true</shade>
-            <name>Hit:</name> <name-style>bold</name-style>
-            <text>3d10 + Strength modifier + Wisdom modifier damage, and you mark each enemy within 6 squares of you who can see you until the end of your next turn.</text>
+            <name>Hit:</name>
+            3d10 + Strength modifier + Wisdom modifier damage, and you mark each enemy within 6 squares of you who can see you. The mark lasts until the end of your next turn.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
-            <name>Critical:</name> <name-style>bold</name-style>
-            <text>Additional +2d10 damage.</text>
+            <name>Critical:</name>
+            +2d10 critical damage.
          </section>
          <section>
             <shade>true</shade> <indent>2</indent>
-            <name>Level 11:</name> <name-style>italic</name-style>
-            <text>Additional +3d10 damage.</text>
+            <name>Level 11:</name>
+            +3d10 critical damage.
          </section>
          <section>
-            <name>Miss:</name> <name-style>bold</name-style>
-            <text>Half damage, and you mark each enemy within 3 squares of you who can see you until the end of your next turn.</text>
+            <name>Miss:</name>
+            Half damage, and you mark each enemy within 3 squares of you who can see you. The mark lasts until the end of your next turn.
          </section>
    </power>
 

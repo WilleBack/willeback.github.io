@@ -12,36 +12,20 @@
 		<action>Standard</action><subaction/>
 		<section>
 			<name>Attack:</name><type>Ranged</type><range>10/20</range><target>one creature, or two creatures within 5 squares of each other</target><text>Intelligence vs. Reflex</text>
-		</section>
+      </section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>1d6 + Intelligence modifier lightning damage.</text>
+			<name>Hit:</name>1d6 + Intelligence modifier lightning damage.
 		</section>
 		<section>
 			<shade>true</shade>
 			<indent>1</indent>
 			<name>Level 21:</name><text>2d6 + Intelligence modifier lightning damage.  </text>
 		</section>
-		<section shade="">If you targeted two creatures, lightning bounces between the targets until the end of your next turn. While the lightning bounces, creatures always see which squares the targets occupy.</section>
-		<section>
-			<shade>true</shade> <indent>1</indent>
-			<name>Sustain Standard:</name><text>The effect persists until the end of your next turn.</text>
 		</section>
-		<section bullet="">
-			<shade>true</shade> <indent>2</indent>
-			<text>If the targets are within 5 squares of each other, each takes 1d6 + Intelligence modifier + Constitution modifier lightning damage.</text>
-		</section>
-		<section>
-			<shade>true</shade>
-			<indent>3</indent>
-			<name-style>italic</name-style>
-			<name>Level 21:</name>
-			<text>2d6 + Intelligence modifier + Constitution modifier lightning damage.</text>
-		</section>
-		<section bullet="">
-			<shade>true</shade> <indent>2</indent>
-			<text>If the targets are more than 5 squares away from each other, you pull them towards towards each other a total number of squares equal to your Constitution modifier (minimum 2). You pull one target half the distance, and the other target the rest of the distance.</text>
-		</section>
+    <section><name>Effect:</name>If you targeted two creatures and they are within 5 squares of each other at the end of your next turn, each takes lightning damage equal to 2 + your Constitution modifier + your implement's enhancement bonus.</section>
+    <section indent="1"><name>Level 11:</name>5 + your Constitution modifier + your implement's enhancement bonus lightning damage.</section>
+    <section indent="1"><name>Level 21:</name>8 + your Constitution modifier + your implement's enhancement bonus lightning damage.</section>
 	</power>
 
 	<power>
@@ -52,24 +36,24 @@
 		<keyword>Arcane, Charm, Enchantment, Implement, Psychic</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><type>Close</type><range>blast 5</range><target>each enemy in the blast</target><text>Intelligence vs. Will</text>
+			<name>Attack:</name><type>Close</type><range>blast 5</range><target>each enemy in the blast</target>Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>Intelligence modifier + your implement's enhancement bonus psychic damage, and you push the target a number of squares equal to your Charisma modifier.</text>
+			<name>Hit:</name>
+			Intelligence modifier + your implement's enhancement bonus psychic damage, and you push the target up to a number of squares equal to your Charisma modifier.
 		</section>
 		<section>
 			<shade>true</shade>
 			<indent>1</indent>
-			<name>Critical:</name><text>Increase the push by 1 square.</text>
+			<name>Critical:</name>Increase the push by 1 square.
 		</section>
 		<section>
 			<shade>true</shade>
 			<indent>1</indent>
 			<name>Level 21:</name><text>2 + Intelligence modifier + your implement's enhancement bonus psychic damage.</text>
-		</section>
 		<section>
-			<name>Miss:</name><text>You push the target half the distance.</text>
+			<name>Miss:</name>You push the target half the distance.
 		</section>
 	</power>
 
@@ -79,14 +63,14 @@
 		<category>Attack</category><level>1</level>
 		<fluff>At your whisper, the chill night wind answers, a forceful gust that heeds your will</fluff>
 		<frequency>At-Will</frequency>
-		<keyword>Arcane, Cold, Evocation, Implement</keyword>
+		<keyword>Arcane, Aura, Cold, Evocation, Implement</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><type>Close</type><range>burst 1</range><target>each creature in the burst</target><text>Intelligence vs. Fortitude</text>
+			<name>Attack:</name><type>Close</type><range>burst 1</range><target>each creature in the burst</target>Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>1d6 + Intelligence modifier cold damage, and you push the target a number of squares equal to your Constitution modifier.</text>
+			<name>Hit:</name>1d6 + Intelligence modifier cold damage, and you push the target up to a number of squares equal to your Constitution modifier.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
@@ -97,12 +81,8 @@
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Effect:</name><text>Until the end of your next turn, squares adjacent to you are difficult terrain for creatures other than you.</text>
-		</section>
-		<section>
-			<shade>true</shade>
-			<text>Additionally, a flying creature must succeed in a saving throw to enter one of these squares.</text>
-		</section>
+			<name>Effect:</name><text>You activate an Aura 1 (<key>Arcane</key>, <key>Cold</key>) until the end of your next turn.</section>
+      <section shade="">Squares in the aura are difficult terrain for creatures other than you, and flying creatures must succeed in a saving throw to enter any of these squares.</section>
 	</power>
 
 	<power>
@@ -113,23 +93,26 @@
 		<keyword>Arcane, Implement, Psychic, Transmutation</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><type>Melee</type><range>touch</range><target>one creature</target><text>Intelligence vs. Fortitude</text>
+			<name>Attack:</name><type>Melee</type><range>touch</range><target>one creature</target>Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>1d8 + Intelligence modifier psychic damage. You knock the target prone and slide it a number of squares equal to your Constitution modifier.</text>
+			<name>Hit:</name>1d6 + Intelligence modifier psychic damage. You knock the target prone and slide it a number of squares equal to your Constitution modifier.
 		</section>
 		<section>
 			<shade>true</shade>
 			<indent>1</indent>
-			<name>Level 21:</name><text>2d8 + Intelligence modifier psychic damage.</text>
+			<name>Level 21:</name>
+			2d6 + Intelligence modifier psychic damage.
 		</section>
 		<section>
-			<name>Miss:</name><text>You slide the target half the distance.</text>
+			<name>Miss:</name>
+			You slide the target half the distance.
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Effect:</name><text>The target cannot take opportunity actions or immediate actions before the end of your next turn.</text>
+			<name>Effect:</name>
+			The target cannot take opportunity actions or immediate actions before the end of your next turn.
 		</section>
 	</power>
 
@@ -141,21 +124,28 @@
 		<keyword>Arcane, Cold, Evocation, Implement, Zone</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><type>Area</type><range>burst 1 within 10 squares</range><target>each enemy in the burst</target><text>Intelligence vs. Fortitude</text>
+			<name>Attack:</name>
+			<type>Area</type><range>burst 1 within 10 squares</range>
+			<target>each enemy in the burst</target>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>Intelligence modifier + your implement's enhancement bonus cold damage.</text>
+			<name>Hit:</name>
+			Intelligence modifier + your implement's enhancement bonus cold damage.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
-			<name>Level 21:</name><text>1d6 + Intelligence modifier cold damage.</text>
+			<name>Level 11:</name>
+			2 + Intelligence modifier + your implement's enhancement bonus cold damage.
+		</section>
+    <section shade="" indent="1"><name>Level 21:</name>5 + Intelligence modifier + your implement's enhancement bonus cold damage.</section>
+		<section>
+			<name>Effect:</name>
+			The area creates a zone of lingering ice crystals until the end of your next turn.
 		</section>
 		<section>
-			<name>Effect:</name><text>The burst creates a zone of lingering ice crystals until the end of your next turn.</text>
-		</section>
-		<section>
-			<text>An enemy in the zone takes a -2 penalty to attack rolls.</text>
+			An enemy in the zone takes a -2 penalty to attack rolls.
 		</section>
 	</power>
 
@@ -167,29 +157,37 @@
 		<keyword>Arcane, Evocation, Force, Implement, Zone</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><type>Area</type><range>burst 1 within 10 squares</range><target>one creature in the center square</target><text>Intelligence vs. Reflex</text>
+			<name>Attack:</name>
+			<type>Area</type><range>burst 1 within 10 squares</range>
+			<target>all creatures in the center square</target>
+			Intelligence vs. Reflex
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>1d4 + Intelligence modifier force damage.</text>
+			<name>Hit:</name>
+			1d4 + Intelligence modifier force damage.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
-			<name>Level 21:</name><text>2d4 + Intelligence modifier force damage.</text>
+			<name>Level 21:</name>
+			2d4 + Intelligence modifier force damage.
 		</section>
 		<section>
-			<name>Effect:</name><text>The area creates a zone of whirling force daggers until the end of your next turn.</text>
+			<name>Effect:</name>
+			The area creates a zone of whirling force daggers until the end of your next turn.
 		</section>
 		<section>
-			<text>The zone is difficult terrain, and a creature that ends its turn in the zone takes force damage equal to your Constitution modifier + your implement's enhancement bonus.</text>
+			The zone is difficult terrain, and a creature that ends its turn in the zone takes force damage equal to your Constitution modifier + your implement's enhancement bonus.
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 11:</name><text>3 + Constitution modifier + your implement's enhancement bonus force damage.</text>
+			<name>Level 11:</name>
+			3 + Constitution modifier + your implement's enhancement bonus force damage.
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 21:</name><text>6 + Constitution modifier + your implement's enhancement bonus force damage.</text>
+			<name>Level 21:</name>
+			6 + Constitution modifier + your implement's enhancement bonus force damage.
 		</section>
 	</power>
 
@@ -201,56 +199,68 @@
 		<keyword>Arcane, Evocation, Fire, Implement</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><type>Ranged</type><range>10</range><target>one creature</target><text>Intelligence vs. Fortitude</text>
+			<name>Attack:</name>
+			<type>Ranged</type><range>10</range>
+			<target>one creature</target>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>1d8 + Intelligence modifier fire damage.</text>
+			<name>Hit:</name>
+			1d8 + Intelligence modifier fire damage.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
-			<name>Level 21:</name><text>2d8 + Intelligence modifier fire damage.</text>
+			<name>Level 21:</name>
+			2d8 + Intelligence modifier fire damage.
 		</section>
 		<section>
-			<name>Effect:</name><text>Until the start of your next turn, any creature that ends its turn next to the target takes fire damage equal to your Constitution modifier + your implement's enhancement bonus.</text>
-		</section>
-		<section>
-			<text>The target can end the effect as a minor action by succeeding in a Heal or Arcana check against a DC of 10 + your attack bonus with this power, not counting temporary bonuses.</text>
-		</section>
-		<section>
-			<indent>1</indent>
-			<name>Level 11:</name><text>3 + Constitution modifier + your implement's enhancement bonus fire damage.</text>
+			<name>Effect:</name>
+			Until the start of your next turn, any creature that ends its turn next to the target takes fire damage equal to your Constitution modifier + your implement's enhancement bonus.
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 21:</name><text>6 + Constitution modifier + your implement's enhancement bonus fire damage.</text>
+			<name>Level 11:</name>
+			3 + Constitution modifier + your implement's enhancement bonus fire damage.
+		</section>
+		<section>
+			<indent>1</indent>
+			<name>Level 21:</name>
+			6 + Constitution modifier + your implement's enhancement bonus fire damage.
+		</section>
+		<section>
+			The target can end the effect as a minor action by succeeding in a Heal or Arcana check against a DC of 10 + your attack bonus with this power, not counting temporary bonuses.
 		</section>
 	</power>
 
 	<power>
-		<title>Force Projectile</title>
+		<title>Force Barrage</title>
 		<class>Wizard</class><category>Attack</category><level>1</level>
 		<fluff>You concentrate arcane force into crude projectiles and send them streaking at your enemies</fluff>
 		<frequency>At-Will</frequency>
 		<keyword>Arcane, Evocation, Force, Implement</keyword>
 		<action>Standard</action><subaction/>
-		<section>
-			<name>Attack:</name><type>Ranged</type><range>10/20</range><target>one, two or three creatures, no more than 5 squares away from each other</target><text>Intelligence vs. Reflex</text>
+			<name>Attack:</name>
+			<type>Ranged</type><range>10/20</range>
+			<target>one, two or three creatures, no more than 5 squares away from each other</target>
+			Intelligence vs. Reflex
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 21:</name><text>One, two, three, or four creatures, no more than 10 squares away from each other</text>
+			<name>Level 21:</name>
+			One, two, three, or four creatures, no more than 10 squares away from each other
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><text>1d4 + Intelligence modifier force damage, or 2d4 + Intelligence modifier force damage if you only target one creature.</text>
+			<name>Hit:</name>
+			1d4 + Intelligence modifier force damage, or 2d4 + Intelligence modifier force damage if you only target one creature.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
-			<name>Level 21:</name><text>2d4 + Intelligence modifier force damage, or 4d4 + Intelligence modifier force damage if you only target one creature.</text>
+			<name>Level 21:</name>
+			2d4 + Intelligence modifier force damage, or 4d4 + Intelligence modifier force damage if you only target one creature.
 		</section>
-		<section>
-			<name>Special:</name><text>This power counts as a <i>ranged basic attack</i>. If an effect tells you to make one against a specific creature, you can only target that creature.</text>
+		<section auto="basic-ranged">If an effect tells you to make one against a specific creature, you can only target that creature.
 		</section>
 	</power>
 
@@ -262,25 +272,26 @@
 		<keyword>Arcane, Cold, Evocation, Implement</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><name-style>bold</name-style>
+			<name>Attack:</name>
 			<type>Area</type><range>burst 1 within 10 squares</range>
 			<target>each creature in the burst</target>
-			<text>Intelligence vs. Reflex</text>
+			Intelligence vs. Reflex
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier cold damage.</text>
+			<name>Hit:</name>
+			1d6 + Intelligence modifier cold damage.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
-			<name>Level 21:</name><name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier cold damage.</text>
+			<name>Level 21:</name>
+			2d6 + Intelligence modifier cold damage.
 		</section>
 		<section>
-			<name>Effect:</name><name-style>bold</name-style>
-			<text>You slide the target 1 square.</text>
+			<name>Effect:</name>
+			You slide the target up to 1 square.
 		</section>
+    <section indent="1"><name>Level 21:</name>Slide up to 2 squares.</section>
 	</power>
 
 	<power>
@@ -291,24 +302,25 @@
 		<keyword>Arcane, Evocation, Implement</keyword>
 		<action>Standard</action><subaction/>
 		<section>
-			<name>Attack:</name><name-style>bold</name-style>
+			<name>Attack:</name>
 			<type>Area</type><range>wall 6 within 10 squares</range>
 			<target>each creature in the wall</target>
-			<text>Intelligence vs. Fortitude</text>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><name-style>bold</name-style>
-			<text>You slide the target up to 2 squares, and it is slowed until the end of your next turn.</text>
+			<name>Hit:</name>
+			You slide the target up to 2 squares, and it is slowed until the end of your next turn.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
-			<name>Critical:</name><name-style>bold</name-style>
-			<text>Up to 3 squares.</text>
+			<name>Critical:</name>
+			Up to 3 squares.
+      <section shade="" indent="1"><name>Level 21:</name>Slide up to 3 squares, or 4 squares on a critical.</section>
 		</section>
 		<section>
-			<name>Miss:</name><name-style>bold</name-style>
-			<text>You slide the target 1 square.</text>
+			<name>Miss:</name>
+			You slide the target half the distance.
 		</section>
 	</power>
 
@@ -321,24 +333,24 @@
 		<action>Standard</action><subaction/>
 		<section>
 			<shade>true</shade>
-			<name>Effect:</name><name-style>bold</name-style>
-			<text>Before resolving the attack, you slide the target 3 squares. You can finish resolving the attack against the target, even if you slide it outside of the attack's range.</text>
+			<name>Effect:</name>
+			Before resolving the attack, you slide the target 3 squares. You can finish resolving the attack against the target even if you slide it outside of the attack's range.
 		</section>
 		<section>
-			<name>Attack:</name><name-style>bold</name-style>
+			<name>Attack:</name>
 			<type>Ranged</type><range>5</range>
 			<target>one creature that can see and hear you</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name><name-style>bold</name-style>
-			<text>The target makes a <i>melee basic attack</i> against a creature of your choice as a free action. It has a +4 bonus to the attack roll.</text>
+			<name>Hit:</name>
+			The target makes a <i>melee basic attack</i> against a creature of your choice as a free action. It has a +4 bonus to the attack roll.
 		</section>
 		<section>
 			<shade>true</shade><indent>1</indent>
-			<name>Critical:</name><name-style>bold</name-style>
-			<text>+6 bonus to the attack roll.</text>
+			<name>Critical:</name>
+			+6 bonus to the attack roll.
 		</section>
 	</power>
 
@@ -350,29 +362,29 @@
 		<keyword>Arcane, Illusion, Implement, Psychic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier psychic damage.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier psychic damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Critical:</name> <name-style>bold</name-style>
-			<text>The attack penalty from this power's effect increases to -4 on triggered attack rolls.</text>
+			<name>Critical:</name> 
+			The attack penalty from this power's effect increases to -4 on triggered attack rolls.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier psychic damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier psychic damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The target takes a -2 penalty to attack rolls until the end of your next turn.</text>
+			<name>Effect:</name> 
+			The target takes a -2 penalty to attack rolls until the end of your next turn.
 		</section>
 	</power>
 
@@ -384,29 +396,26 @@
 		<keyword>Arcane, Evocation, Force, Implement</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Target:</name> <name-style>bold</name-style>
+			<name>Target:</name> 
 			<type>Ranged</type> <range>20</range>
 			<target>one creature</target>
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>2 + Intelligence modifier + your implement's enhancement bonus force damage.</text>
+			<name>Effect:</name> 
+			2 + Intelligence modifier + your implement's enhancement bonus force damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 11:</name> <name-style>italic</name-style>
-			<text>3 + Intelligence modifier + your implement's enhancement bonus force damage.</text>
+			<name>Level 11:</name> 
+			3 + Intelligence modifier + your implement's enhancement bonus force damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>5 + Intelligence modifier + your implement's enhancement bonus force damage.</text>
+			<name>Level 21:</name> 
+			5 + Intelligence modifier + your implement's enhancement bonus force damage.
 		</section>
-		<section>
-			<name>Special:</name> <name-style>bold</name-style>
-			<text>This power counts as a <i>ranged basic attack</i>.</text>
-		</section>
+		<section auto="basic-ranged"/>
 	</power>
 
 	<power>
@@ -417,19 +426,19 @@
 		<keyword>Arcane, Illusion, Implement, Psychic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Primary Attack:</name> <name-style>bold</name-style>
+			<name>Primary Attack:</name> 
 			<type>Ranged</type> <range>10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>Intelligence modifier + your implement's enhancement bonus psychic damage, and the target is immobilized until the end of your next turn. Make a secondary attack.</text>
+			<name>Hit:</name> 
+			Intelligence modifier + your implement's enhancement bonus psychic damage, and the target is immobilized until the end of your next turn. Make the secondary attack.
 		</section>
 		<section>
-			<name>Miss:</name> <name-style>bold</name-style>
-			<text>The target is slowed until the end of your next turn. Make a secondary attack.</text>
+			<name>Miss:</name> 
+			The target is slowed until the end of your next turn. Make the secondary attack.
 		</section>
 		<part>
 		<part-name>Secondary Attack</part-name>
@@ -437,22 +446,22 @@
 		<keyword>Arcane, Fear, Illusion</keyword>
 		<action>Nonaction</action>
 		<section>
-			<name>Secondary Target:</name> <name-style>bold</name-style>
+			<name>Secondary Target:</name> 
 			<type>Area</type> <range>burst 1 centered on the primary target</range>
 			<target>enemies in the burst other than the primary target</target>
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>You push each target 1 square from the primary target.</text>
+			<name>Effect:</name> 
+			You push each target up to 1 square from the primary target.
 		</section>
 		<section shade="" indent="1">
 			<name style="italic">Level 21:</name>
-			<text>Push 2 squares.</text>
+			Push up to 2 squares.
 		</section>
 		<section>
 			<shade>true</shade>
-			<text>If the primary attack was a critical hit, this secondary attack gains the <key>Psychic</key> and <key>Implement</key> keywords, and each target also takes psychic damage equal to your Charisma modifier + your implement's enhancement bonus.</text>
+			If the primary attack was a critical hit, this secondary attack gains the <key>Psychic</key> and <key>Implement</key> keywords, and each target also takes psychic damage equal to your Charisma modifier + your implement's enhancement bonus.
 		</section>
 		</part>
 	</power>
@@ -465,29 +474,29 @@
 		<keyword>Arcane, Illusion, Implement, Psychic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d8 + Intelligence modifier psychic damage, and the target grants combat advantage until the end of your next turn.</text>
+			<name>Hit:</name> 
+			1d8 + Intelligence modifier psychic damage, and the target grants combat advantage until the end of your next turn.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d8 + Intelligence modifier psychic damage.</text>
+			<name>Level 21:</name> 
+			2d8 + Intelligence modifier psychic damage.
 		</section>
 		<section>
-			<name>Miss:</name> <name-style>bold</name-style>
-			<text>The target grants combat advantage to the first attack against it before the end of your next turn.</text>
+			<name>Miss:</name> 
+			The target grants combat advantage to the first attack against it before the end of your next turn.
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The target cannot make <i>reactive strikes</i> before the end of your next turn.</text>
+			<name>Effect:</name> 
+			The target cannot make <i>reactive strikes</i> before the end of your next turn.
 		</section>
 	</power>
 
@@ -499,29 +508,29 @@
 		<keyword>Arcane, Illusion, Implement, Psychic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d8 + Intelligence modifier psychic damage.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier psychic damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d8 + Intelligence modifier psychic damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier psychic damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>You slide the target 1 square.</text>
+			<name>Effect:</name> 
+			You slide the target up to 2 squares.
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>Slide 2 squares.</text>
+			<name>Level 21:</name> 
+			Slide up to 3 squares.
 		</section>
 	</power>
 
@@ -533,34 +542,34 @@
 		<keyword>Arcane, Illusion, Implement, Psychic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 psychic damage.</text>
+			<name>Hit:</name> 
+			1d6 psychic damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 psychic damage.</text>
+			<name>Level 21:</name> 
+			2d6 psychic damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>If the target moves before the end of your next turn, it takes psychic damage equal to your 3 + your Charisma modifier + your implement's enhancement bonus.</text>
-		</section>
-		<section>
-			<indent>1</indent>
-			<name>Level 11:</name> <name-style>italic</name-style>
-			<text>6 + your Charisma modifier + your implement's enhancement bonus psychic damage.</text>
+			<name>Effect:</name> 
+			If the target moves before the end of your next turn, it takes psychic damage equal to your 3 + your Charisma modifier + your implement's enhancement bonus.
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>9 + your Charisma modifier + your implement's enhancement bonus psychic damage.</text>
+			<name>Level 11:</name> 
+			6 + your Charisma modifier + your implement's enhancement bonus psychic damage.
+		</section>
+		<section>
+			<indent>1</indent>
+			<name>Level 21:</name> 
+			9 + your Charisma modifier + your implement's enhancement bonus psychic damage.
 		</section>
 	</power>
 
@@ -572,24 +581,24 @@
 		<keyword>Arcane, Cold, Evocation, Implement</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>5/10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Fortitude</text>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d8 + Intelligence modifier cold damage.</text>
+			<name>Hit:</name> 
+			1d8 + Intelligence modifier cold damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d8 + Intelligence modifier cold damage.</text>
+			<name>Level 21:</name> 
+			2d8 + Intelligence modifier cold damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The target is slowed until the end of your next turn.</text>
+			<name>Effect:</name> 
+			The target is slowed until the end of your next turn.
 		</section>
 	</power>
 
@@ -601,32 +610,32 @@
 		<keyword>Arcane, Implement, Necromancy, Zone</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Reflex</text>
+			Intelligence vs. Reflex
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier damage.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Critical:</name> <name-style>bold</name-style>
-			<text>The target is slowed until the end of your next turn.</text>
+			<name>Critical:</name> 
+			The target is slowed until the end of your next turn.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>Until the end of your next turn, the target's space and all adjacent squares become a zone of grasping claws.</text>
+			<name>Effect:</name> 
+			Until the end of your next turn, the target's space and all adjacent squares become a zone of grasping claws.
 		</section>
 		<section>
-			<text>The ground in the zone is difficult terrain to your enemies.</text>
+			The ground in the zone is difficult terrain to your enemies.
 		</section>
 	</power>
 
@@ -638,37 +647,37 @@
 		<keyword>Arcane, Implement, Necromancy, Necrotic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Fortitude</text>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d8 + Intelligence modifier necrotic damage.</text>
+			<name>Hit:</name> 
+			1d8 + Intelligence modifier necrotic damage.
 		</section>
 		<section shade="" indent="1">
-			<name style="italic">Level 21:</name>
-			<text>2d8 + Intelligence modifier necrotic damage.</text>
+			<name>Level 21:</name>
+			2d8 + Intelligence modifier necrotic damage.
 		</section>
 		<section>
 			<shade>true</shade>
-			<text>If the target is undead, it also gains vulnerable 5 to all damage until the end of your next turn.</text>
+			If the target is undead, it also gains vulnerable 5 to all damage until the end of your next turn.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 11:</name> <name-style>italic</name-style>
-			<text>Vulnerable 10.</text>
+			<name>Level 11:</name> 
+			Vulnerable 10.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>Vulnerable 15.</text>
+			<name>Level 21:</name> 
+			Vulnerable 15.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The target cannot regain hit points until the end of your next turn.</text>
+			<name>Effect:</name> 
+			The target cannot regain hit points until the end of your next turn.
 		</section>
 	</power>
 
@@ -680,29 +689,29 @@
 		<keyword>Arcane, Fear, Implement, Nethermancy, Psychic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Close</type> <range>blast 3</range>
 			<target>each creature in the blast</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier psychic damage.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier psychic damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier psychic damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier psychic damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Critical:</name> <name-style>bold</name-style>
-			<text>The target takes a -2 penalty to attack rolls against you until the end of your next turn.</text>
+			<name>Critical:</name> 
+			The target takes a -2 penalty to attack rolls against you until the end of your next turn.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The target cannot make <i>reactive strikes</i> against you until the end of your next turn.</text>
+			<name>Effect:</name> 
+			The target cannot make <i>reactive strikes</i> against you until the end of your next turn.
 		</section>
 	</power>
 
@@ -714,37 +723,37 @@
 		<keyword>Arcane, Evocation, Fire, Implement, Zone</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Area</type> <range>burst 1 within 10 squares</range>
 			<target>each creature in the burst</target>
-			<text>Intelligence vs. Reflex</text>
+			Intelligence vs. Reflex
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier fire damage.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier fire damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier fire damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier fire damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The area becomes a zone of flames until the start of your next turn.</text>
+			<name>Effect:</name> 
+			The area becomes a zone of flames until the start of your next turn.
 		</section>
 		<section>
-			<text>A creature that ends its turn in the zone takes fire damage equal to your Constitution modifier + your implement's enhancement bonus.</text>
-		</section>
-		<section>
-			<indent>1</indent>
-			<name>Level 11:</name> <name-style>italic</name-style>
-			<text>3 + your Constitution modifier + your implement's enhancement bonus fire damage.</text>
+			A creature that ends its turn in the zone takes fire damage equal to your Constitution modifier + your implement's enhancement bonus.
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>6 + your Constitution modifier + your implement's enhancement bonus fire damage.</text>
+			<name>Level 11:</name> 
+			3 + your Constitution modifier + your implement's enhancement bonus fire damage.
+		</section>
+		<section>
+			<indent>1</indent>
+			<name>Level 21:</name> 
+			6 + your Constitution modifier + your implement's enhancement bonus fire damage.
 		</section>
 	</power>
 
@@ -756,24 +765,24 @@
 			<keyword>Arcane, Evocation, Implement, Lightning</keyword>
 			<action>Standard</action> <subaction/>
 			<section>
-				<name>Attack:</name> <name-style>bold</name-style>
+				<name>Attack:</name> 
 				<type>Melee</type> <range>touch</range>
 				<target>one creature</target>
-				<text>Intelligence vs. Fortitude</text>
+				Intelligence vs. Fortitude
 			</section>
 			<section>
 				<shade>true</shade>
-				<name>Hit:</name> <name-style>bold</name-style>
-				<text>1d10 + Intelligence modifier lightning damage, and the target takes a penalty to all attack rolls equal to your Constitution modifier until the end of your next turn.</text>
+				<name>Hit:</name> 
+				1d10 + Intelligence modifier lightning damage, and the target takes a penalty to all attack rolls equal to your Constitution modifier until the end of your next turn.
 			</section>
 			<section>
 				<shade>true</shade> <indent>1</indent>
-				<name>Level 21:</name> <name-style>italic</name-style>
-				<text>2d10 + Intelligence modifier lightning damage.</text>
+				<name>Level 21:</name> 
+				2d10 + Intelligence modifier lightning damage.
 			</section>
 			<section>
-				<name>Miss:</name> <name-style>bold</name-style>
-				<text>Intelligence modifier + your implement's enhancement bonus lightning damage, and the target takes a penalty to triggered attack rolls equal to your Constitution modifier until the end of your next turn.</text>
+				<name>Miss:</name> 
+				Intelligence modifier + your implement's enhancement bonus lightning damage, and the target takes a penalty to triggered attack rolls equal to your Constitution modifier until the end of your next turn.
 			</section>
 	</power>
 
@@ -785,38 +794,38 @@
 		<keyword>Arcane, Implement, Transmutation</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Area</type> <range>burst 1 within 10 squares</range>
 			<target>each creature in the burst</target>
-			<text>Intelligence vs. Fortitude</text>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<indent>1</indent>
-			<text>+2 to the attack roll if the target is bloodied</text>
+			+2 to the attack roll if the target is bloodied
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier damage.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>If the target moves more than 2 squares with a single action before the end of your next turn, it takes damage equal to your Constitution modifier + your implement's enhancement bonus.</text>
-		</section>
-		<section>
-			<indent>1</indent>
-			<name>Level 11:</name> <name-style>italic</name-style>
-			<text>2 + your Constitution modifier + your implement's enhancement bonus damage.</text>
+			<name>Effect:</name> 
+			If the target moves more than 2 squares with a single action before the end of your next turn, it takes damage equal to your Constitution modifier + your implement's enhancement bonus.
 		</section>
 		<section>
 			<indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>4 + your Constitution modifier + your implement's enhancement bonus damage.</text>
+			<name>Level 11:</name> 
+			2 + your Constitution modifier + your implement's enhancement bonus damage.
+		</section>
+		<section>
+			<indent>1</indent>
+			<name>Level 21:</name> 
+			4 + your Constitution modifier + your implement's enhancement bonus damage.
 		</section>
 	</power>
 
@@ -825,83 +834,25 @@
 		<class>Wizard</class> <category>Attack</category> <level>1</level>
 		<fluff>A crackling column of lightning appears amid your enemies, lashing out at any who move near it</fluff>
 		<frequency>At-Will</frequency>
-		<keyword>Arcane, Conjuration, Lightning</keyword>
+		<keyword>Arcane</keyword><keyword>Conjuration</keyword><keyword>Implement</keyword><keyword>Lightning</keyword>
 		<action>Standard</action> <subaction/>
       <section><type>Ranged</type> <range>10</range></section>
 		<section>
 			<shade>true</shade>
 			<name>Effect:</name>
-			<text>You conjure a pillar of crackling energy in an unoccupied square within range.</text>
+			You conjure a pillar of crackling energy in an unoccupied square within range.
 		</section>
 		<section>
 			<shade>true</shade>
-			<text> The pillar occupies 1 square, and lasts until the end of your next turn. While it exists, you can use the following two secondary actions:</text>
+			 The pillar occupies 1 square, and lasts until the end of your next turn. While it exists, you can use the following two secondary actions:
 		</section>
-		<part>
-		<part-name>Release Static</part-name>
-		<frequency>At-Will</frequency>
-		<keyword>Arcane, Implement, Lightning</keyword>
-		<action>Opportunity</action> <subaction>Interrupt</subaction>
-		<section>
-			<name>Trigger:</name> <name-style>bold</name-style>
-			<text>A creature enters a square adjacent to the pillar</text>
-		</section>
-		<section>
-			<name>Target:</name> <name-style>bold</name-style>
-			<type>Melee</type> <range>1 from the pillar's space</range>
-			<target>the triggering creature</target>
-		</section>
-		<section>
-			<shade>true</shade>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The target takes lightning damage equal to your Constitution modifier + your implement's enhancement bonus.</text>
-		</section>
-		<section>
-			<shade>true</shade> <indent>1</indent>
-			<name>Level 11:</name> <name-style>italic</name-style>
-			<text>2 + your Constitution modifier + your implement's enhancement bonus lightning damage.</text>
-		</section>
-		<section>
-			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>4 + your Constitution modifier + your implement's enhancement bonus lightning damage.</text>
-		</section>
-		</part>
-		<part>
-		<part-name>Discharge</part-name>
-		<frequency>Special</frequency>
-		<keyword>Arcane, Implement, Lightning</keyword>
-		<action>Immediate</action> <subaction>Reaction</subaction>
-		<section>
-			<name>Trigger:</name> <name-style>bold</name-style>
-			<text>A creature ends its turn adjacent to the pillar</text>
-		</section>
-		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
-			<type>Melee</type> <range>1 from the pillar's space</range>
-			<target>the triggering creature</target>
-			<text>Intelligence vs. Reflex</text>
-		</section>
-		<section>
-			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier lightning damage.</text>
-		</section>
-		<section>
-			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier lightning damage.</text>
-		</section>
-		<section>
-			<name>Miss:</name> <name-style>bold</name-style>
-			<text>Half damage.</text>
-		</section>
-		<section>
-			<shade>true</shade>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The pillar disappears.</text>
-		</section>
-		</part>
+    <section shade="" indent="1"><name>Opportunity Interrupt:</name><name style="italic">Trigger:</name>A creature enters a square adjacent to the pillar; The triggering creature takes lightning damage equal to your Constitution modifier + your implement's enhancement bonus.</section>
+    <section shade="" indent="2"><name>Level 11:</name>2 + Constitution modifier + your implement's enhancement bonus lightning damage.</section>
+    <section shade="" indent="2"><name>Level 21:</name>5 + Constitution modifier + your implement's enhancement bonus lightning damage.</section>
+    <section shade="" indent="1"><name>Immediate Reaction:</name><name style="italic">Trigger:</name>A creature ends its turn adjacent to the pillar</section>
+    <section shade="" indent="2"><name>Attack:</name><type>Close</type><range>blast 1</range><target>the triggering creature</target>Intelligence vs. Reflex</section>
+    <section shade="" indent="2"><name>Hit:</name>The creature takes 1d6 + Intelligence modifier lightning damage, and the pillar disappears.</section>
+    <section shade="" indent="3"><name>Level 21:</name>2d6 + Intelligence modifier lightning damage.</section>
 	</power>
 
 	<power>
@@ -912,24 +863,24 @@
 		<keyword>Arcane, Evocation, Implement, Thunder</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Close</type> <range>blast 3</range>
 			<target>each creature in the blast</target>
-			<text>Intelligence vs. Fortitude</text>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier thunder damage, and you push the target a number of squares equal to your Constitution modifier.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier thunder damage, and you push the target a number of squares equal to your Constitution modifier.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier thunder damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier thunder damage.
 		</section>
 		<section>
-			<name>Miss:</name> <name-style>bold</name-style>
-			<text>You push the target half the distance.</text>
+			<name>Miss:</name> 
+			You push the target half the distance.
 		</section>
 	</power>
 
@@ -941,37 +892,32 @@
 		<keyword>Arcane, Implement, Nethermancy</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>7/15</range>
 			<target>one or two creatures</target>
-			<text>Intelligence vs. Fortitude</text>
+			Intelligence vs. Fortitude
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d4 + Intelligence modifier damage.</text>
+			<name>Hit:</name> 
+			1d4 + Intelligence modifier damage.
 		</section>
 		<section shade="" indent="1">
-			<name style="italic">Level 21:</name>
-			<text>2d4 + Intelligence modifier damage.</text>
+			<name>Level 21:</name>
+			2d4 + Intelligence modifier damage.
 		</section>
 		<section>
 			<shade>true</shade>
-			<text>If the target has a vulnerability or weakness to any damage types, this power deals damage of those types and gains the corresponding keywords.</text>
+			If the target has a vulnerability or weakness to any damage types, this power deals damage of those types and gains the corresponding keywords.
 		</section>
 		<section>
 			<shade>true</shade>
-			<text>If the target has no vulnerabilities or weaknesses, this power deals additional damage equal to one-half your Wisdom modifier.</text>
+			If the target has no vulnerabilities or weaknesses, this power deals additional damage equal to one-half your Wisdom modifier.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 11:</name> <name-style>italic</name-style>
-			<text>Additional damage equal to your Wisdom modifier.</text>
-		</section>
-		<section>
-			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>Additional damage equal to 4 + your Wisdom modifier.</text>
+			<name>Level 21:</name> 
+			Additional damage equal to your Wisdom modifier.
 		</section>
 	</power>
 
@@ -983,24 +929,24 @@
 		<keyword>Arcane, Illusion, Implement, Psychic</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Area</type> <range>burst 1 within 10 squares</range>
 			<target>each enemy in the burst</target>
-			<text>Intelligence vs. Will</text>
+			Intelligence vs. Will
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 psychic damage, and the target cannot take immediate actions until the end of your next turn.</text>
+			<name>Hit:</name> 
+			1d6 psychic damage, and the target cannot take immediate actions until the end of your next turn.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 psychic damage.</text>
+			<name>Level 21:</name> 
+			2d6 psychic damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>The target cannot take opportunity actions until the end of your next turn.</text>
+			<name>Effect:</name> 
+			The target cannot take opportunity actions until the end of your next turn.
 		</section>
 	</power>
 
@@ -1012,38 +958,38 @@
 		<keyword>Arcane, Evocation, Implement, Lightning</keyword>
 		<action>Standard</action> <subaction/>
 		<section>
-			<name>Attack:</name> <name-style>bold</name-style>
+			<name>Attack:</name> 
 			<type>Ranged</type> <range>5/10</range>
 			<target>one creature</target>
-			<text>Intelligence vs. Reflex</text>
+			Intelligence vs. Reflex
 		</section>
 		<section>
 			<shade>true</shade>
-			<name>Hit:</name> <name-style>bold</name-style>
-			<text>1d6 + Intelligence modifier lightning damage.</text>
+			<name>Hit:</name> 
+			1d6 + Intelligence modifier lightning damage.
 		</section>
 		<section>
 			<shade>true</shade> <indent>1</indent>
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d6 + Intelligence modifier lightning damage.</text>
+			<name>Level 21:</name> 
+			2d6 + Intelligence modifier lightning damage.
 		</section>
 		<section>
-			<name>Effect:</name> <name-style>bold</name-style>
-			<text>You create a line of lightning between you and the target until the end of your next turn. If the target is out of range at any point or there is no line of effect, the line immediately disappears.</text>
+			<name>Effect:</name> 
+			You create a line of lightning between you and the target until the end of your next turn. If the target is out of range at any point or there is no line of effect, the line immediately disappears.
 		</section>
 		<section>
-			<text>While the line exists, the target cannot become hidden and you and your allies know the space if occupies.</text>
+			While the line exists, the target cannot become hidden and you and your allies know the space if occupies.
 		</section>
 		<section indent="1">
-			<name>Sustain Standard:</name> <name-style>bold</name-style>
-			<text>The line persists until the end of your next turn. You cannot sustain this power if the line has disappeared.</text>
+			<name>Sustain Standard:</name> 
+			The line persists until the end of your next turn. You cannot sustain this power if the line has disappeared.
 		</section>
 		<section indent="1">
-			<text>If the target is within 5 squares when you sustain this power, it takes 1d10 + Intelligence modifier lightning damage.</text>
+			If the target is within 5 squares when you sustain this power, it takes 1d10 + Intelligence modifier lightning damage.
 		</section>
 		<section indent="2">
-			<name>Level 21:</name> <name-style>italic</name-style>
-			<text>2d10 + Intelligence modifier lightning damage.</text>
+			<name>Level 21:</name> 
+			2d10 + Intelligence modifier lightning damage.
 		</section>
 	</power>
 </catalog>
