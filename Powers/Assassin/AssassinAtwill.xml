@@ -5,6 +5,20 @@
    <collection>Assassin Lvl 1 At-Will Attack Hexes</collection>
 
    <power>
+      <title>Blackwarp Shot</title>
+      <class>Assassin</class> <category>Attack</category> <level>1</level>
+      <fluff>When your projectile infused with shadow magic hits its target, you warp darkness surrounding both of you to slightly change your positions</fluff>
+      <frequency>At-Will</frequency>
+      <action>Standard</action> <subaction/>
+      <keyword>Shadow</keyword> <keyword>Teleportation</keyword> <keyword>Weapon</keyword>
+      <section><name>Attack:</name><type>Ranged</type><range>weapon</range><target>one creature</target>Dexterity vs. AC</section>
+      <section shade=""><name>Hit:</name>1[W] + Dexterity modifier damage, and you teleport the target up to a number of squares equal to the number of your shrouds on it.</section>
+      <section shade="" indent="1"><name>Level 21:</name>2[W] + Dexterity modifier damage, and teleport up to 1 + your number of shrouds.</section>
+      <section><name>Effect:</name>You teleport up to 1 square, or up to 2 squares if the target has at least two of your shrouds on it.</section>
+      <section indent="1"><name>Level 21:</name>Teleport up to 2 square or 3 squares, respectively.</section>
+   </power>
+
+   <power>
       <title>Blade in the Back</title>
       <class>Assassin</class> <category>Attack</category> <level>1</level>
       <fluff>You step into your foe's shadow and instantly appear behind it, giving it no time to readjust</fluff>
@@ -13,42 +27,60 @@
          <action>Standard</action> <subaction/>
          <section>
             <name>Prerequisite:</name>
-            <text>You must have the <i>shadow step</i> Assassin class power.</text>
+            You must have the <i>shadow step</i> Assassin class power.
          </section>
          <section>
             <shade>true</shade>
             <name>Effect:</name>
-            <text>Before resolving the attack, you teleport up to 3 squares to another space adjacent to the target.</text>
+            Before resolving the attack, you teleport up to 3 squares to another space adjacent to the target.
          </section>
+         <section shade="" indent="1"><name>Level 21:</name>Teleport up to 4 squares.</section>
          <section>
             <shade>true</shade>
-            <text>You count as also being in the space you occupied, possibly allowing you to flank the target with yourself for this attack.</text>
+            You count as also being in the space you occupied, possibly allowing you to flank the target with yourself for this attack.
          </section>
          <section>
             <name>Attack:</name>
             <type>melee</type> <range>weapon</range>
             <target>one creature adjacent to you</target>
-            <text>Dexterity vs. AC</text>
+            Dexterity vs. AC
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>1[W] + Dexterity modifier damage, plus additional damage equal to your number of shrouds on the target if you have combat advantage against it.</text>
+            1[W] + Dexterity modifier damage, plus additional damage equal to your number of shrouds on the target if you have combat advantage against it.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>2[W] + Dexterity modifier damage, plus additional damage equal to twice your number of shrounds on the target if you have combat advantage against it.</text>
+            2[W] + Dexterity modifier damage, plus additional damage equal to twice your number of shrounds on the target if you have combat advantage against it.
          </section>
          <section>
             <name>Miss:</name>
-            <text>If you flank the target, it takes damage equal to your Dexterity modifier + your weapon's enhancement bonus.</text>
+            If you flank the target, it takes damage equal to your Dexterity modifier + your weapon's enhancement bonus.
          </section>
          <section>
             <indent>1</indent>
             <name>Level 21:</name>
-            <text>Equal to 2 + your Dexterity modifier + your weapon's enhancement bonus.</text>
+            Equal to 2 + your Dexterity modifier + your weapon's enhancement bonus.
          </section>
+   </power>
+
+   <power>
+      <title>Caress of Black Flame</title>
+      <class>Assassin</class> <category>Attack</category> <level>1</level>
+      <frequency>At-Will</frequency>
+      <action>Standard</action> <subaction/>
+      <fluff>You carve your foe with black fire that is intensified by your pain</fluff>
+      <keyword>Fire</keyword> <keyword>Necrotic</keyword> <keyword>Weapon</keyword> <keyword>Shadow</keyword>
+      <section><name>Attack:</name><type>Melee</type><range>weapon</range><target>one creature</target>Dexterity vs. Fortitude</section>
+      <section shade=""><name>Hit:</name>1[W] + Dexterity modifier fire and necrotic damage.</section>
+      <section shade="" indent="1"><name>Level 21:</name>2[W] + Dexterity modifier fire and necrotic damage.</section>
+      <section shade="">If you are bloodied, you deal additional fire and necrotic damage equal to twice your number of shrouds on the target.</section>
+      <section shade="" indent="1"><name>Level 11:</name>Equal to three times your number of shrouds.</section>
+      <section shade="" indent="1"><name>Level 21:</name>Equal to four times your number of shrouds.</section>
+      <section><name>Miss:</name>Your Dexterity modifier + your weapon's enhancement bonus fire and necrotic damage if you are bloodied.</section>
+      <section indent="1"><name>Level 21:</name>2 + your Dexterity modifier + your weapon's enhancement bonus fire and necrotic damage.</section>
    </power>
 
    <power>
@@ -62,30 +94,30 @@
             <name>Attack:</name>
             <type>Ranged</type> <range>5/10</range>
             <target>one creature</target>
-            <text>Dexterity vs. Fortitude</text>
+            Dexterity vs. Fortitude
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>1d6 + Dexterity modifier force damage, and you pull the target a number of squares equal to your number of shrouds on it.</text>
+            1d6 + Dexterity modifier force damage, and you pull the target a number of squares equal to your number of shrouds on it.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>2d6 + Dexterity modifier force damage.</text>
+            2d6 + Dexterity modifier force damage, and pull up to 1 + your number of shrouds.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Critical:</name>
-            <text>You can knock the target prone. The target can attempt a saving throw to avoid being knocked prone.</text>
+            You can knock the target prone. The target can attempt a saving throw to avoid being knocked prone.
          </section>
          <section>
             <shade>true</shade>
-            <text>The target is slowed until the end of your next turn.</text>
+            The target is slowed until the end of your next turn.
          </section>
          <section>
             <name>Miss:</name>
-            <text>You pull the target half the distance.</text>
+            You pull the target half the distance.
          </section>
    </power>
 
@@ -100,30 +132,30 @@
             <name>Attack:</name>
             <type>Ranged</type> <range>5</range>
             <target>one creature</target>
-            <text>Dexterity vs. Will</text>
+            Dexterity vs. Will
          </section>
          <section>
             <indent>1</indent>
-            <text>If you have concealment from the target or it is unaware of your presence, you gain a bonus to the attack roll equal to your number of shrouds on it</text>
+            If you have concealment from the target or it is unaware of your presence, you gain a bonus to the attack roll equal to your number of shrouds on it
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>1d8 + Dexterity modifier psychic damage, and the target takes a penalty to triggered attack rolls until the end of your next turn. The penalty equals 2 + one-half your number of shrouds on it.</text>
+            1d8 + Dexterity modifier psychic damage, and the target takes a penalty to triggered attack rolls until the end of your next turn. The penalty equals 2 + one-half your number of shrouds on it.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>2d8 + Dexterity modidifer psychic damage.</text>
+            2d8 + Dexterity modidifer psychic damage.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Critical:</name>
-            <text>The target also takes the penalty to all attack rolls for the first non-triggered attack it makes before the end of your next turn.</text>
+            The target also takes the penalty to all attack rolls for the first non-triggered attack it makes before the end of your next turn.
          </section>
          <section>
             <name>Miss:</name>
-            <text>If you have concealment from the target or it is unaware of your presence, it takes one-half the penalty to triggered attack rolls.</text>
+            If you have concealment from the target or it is unaware of your presence, it takes one-half the penalty to triggered attack rolls.
          </section>
    </power>
 
@@ -138,29 +170,27 @@
             <name>Attack:</name>
             <type>Melee</type> <range>weapon +1 reach</range>
             <target>one creature</target>
-            <text>Dexterity vs. AC</text>
+            Dexterity vs. AC
          </section>
          <section>
             <indent>1</indent>
-            <text>If the target has at least two of your shrouds on it, you increase the reach by an additional +1, or by an additional +2 if the target has four of your shrouds on it</text>
+            If the target has at least two of your shrouds on it, you increase the reach by an additional +1, or by an additional +2 if the target has four of your shrouds on it
          </section>
          <section>
             <indent>1</indent>
-            <text>This attack ignores cover and superior cover</text>
+            This attack ignores cover and superior cover
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>1[W] damage.</text>
+            1[W] damage.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>2[W] damage.</text>
+            2[W] damage.
          </section>
-         <section>
-            <name>Special:</name>
-            <text>You can use this power in place of a <i>melee basic attack</i> when making a <i>reactive strike</i>. This does not allow you to trigger <i>reactive strikes</i> against creatures that aren't adjacent to you unless you normally could do so.</text>
+         <section auto="basic-melee-opportunity">This does not allow you to trigger <i>reactive strikes</i> against creatures that aren't adjacent to you unless you normally could do so.
          </section>
    </power>
 
@@ -172,36 +202,36 @@
          <keyword>Implement, Necrotic, Shadow</keyword>
          <action>Standard</action> <subaction/>
          <section auto="">
-            <text>Using this power provokes <i>reactive strikes</i> as if you had used a ranged attack</text>
+            Using this power provokes <i>reactive strikes</i> as if you had used a ranged attack
          </section>
          <section>
             <name>Attack:</name>
             <type>Melee</type> <range>2, using the creature your shrouds are on as the point of origin</range>
             <target>one creature</target>
-            <text>Dexterity vs. Reflex</text>
+            Dexterity vs. Reflex
          </section>
          <section>
             <indent>1</indent>
-            <text>If you have at least 3 of your shrouds on the creature used as the point of origin, you can target two creatures</text>
+            If you have at least 3 of your shrouds on the creature used as the point of origin, you can target two creatures
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus + your number of shrouds on the creature used as the point of origin.</text>
+            Necrotic damage equal to your Dexterity modifier + your implement's enhancement bonus + your number of shrouds on the creature used as the point of origin.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 11:</name>
-            <text>Equal to 2 + your Dexterity modifier + your implement's enhancement bonus + your number of shrouds.</text>
+            Equal to 2 + your Dexterity modifier + your implement's enhancement bonus + your number of shrouds.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>Equal to 2 + your Dexterity modifier + your implement's enhancement bonus + twice your number of shrouds on the creature used as the point of origin.</text>
+            Equal to 2 + your Dexterity modifier + your implement's enhancement bonus + twice your number of shrouds on the creature used as the point of origin.
          </section>
          <section>
             <name>Miss:</name>
-            <text>Half damage.</text>
+            Half damage.
          </section>
    </power>
 
@@ -217,26 +247,23 @@
             <type>Melee</type> <range>touch</range>
             <type2>Ranged</type2> <range2>3/6</range2>
             <target>one creature</target>
-            <text>Dexterity vs. Reflex</text>
+            Dexterity vs. Reflex
          </section>
          <section>
             <indent>1</indent>
-            <text>You gain a bonus to the attack roll equal to your number of shrouds on the target</text>
+            You gain a bonus to the attack roll equal to your number of shrouds on the target
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>1d4 + Dexterity modifier damage, plus 1 damage for each creature adjacent to the target.</text>
+            1d4 + Dexterity modifier damage, plus 1 damage for each creature adjacent to the target.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>2d4 + Dexterity modifier damage, plus 2 damage for each creature adjacent to the target.</text>
+            2d4 + Dexterity modifier damage, plus 2 damage for each creature adjacent to the target.
          </section>
-         <section>
-            <name>Special:</name>
-            <text>This power counts as a <i>basic attack</i>.</text>
-         </section>
+         <section auto="basic-counts-both"/>
    </power>
 
    <power>
@@ -248,29 +275,45 @@
          <action>Standard</action> <subaction/>
          <section>
             <name>Requirement:</name>
-            <text>You must be wielding a melee weapon.</text>
+            You must be wielding a melee weapon.
          </section>
          <section>
             <name>Attack:</name>
             <type>Ranged</type> <range>4/8</range>
             <type2>Ranged</type2> <range2>weapon +2/+4 if your weapon can be thrown</range2>
             <target>one creature you have your shrouds on</target>
-            <text>Dexterity vs. AC</text>
+            Dexterity vs. AC
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>1[W] + Dexterity modifier force damage.</text>
+            1[W] + Dexterity modifier force damage.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>2[W] + Dexterity modifier force damage.</text>
+            2[W] + Dexterity modifier force damage.
          </section>
          <section>
             <name>Miss:</name>
-            <text>You can use this power as a <i>ranged basic attack</i>.</text>
+            You can use this power as a <i>ranged basic attack</i>.
          </section>
+   </power>
+
+   <power>
+      <title>Sinister Pursuit</title>
+      <class>Assassin</class> <category>Attack</category> <level>1</level>
+      <frequency>At-Will</frequency>
+      <action>Standard</action> <subaction/>
+      <fluff>The shadow of your projectile hounds your foe, gnawing at them a second time if they don't run far enough</fluff>
+      <keyword>Shadow</keyword> <keyword>Weapon</keyword>
+      <section shade=""><name>Effect:</name>You can choose to give this power the <key>Fear</key> and <key>Psychic</key> keywords. If you do, the damage the target takes if it doesn't move far enough is psychic damage.</section>
+      <section><name>Attack:</name><type>Ranged</type><range>weapon</range><target>one creature</target>Dexterity vs. AC</section>
+      <section shade=""><name>Hit:</name>1[W] + Dexterity modifier damage.</section>
+      <section shade="" indent="1"><name>Level 21:</name>2[W] + Dexterity modifier damage.</section>
+      <section><name>Effect:</name>If the target doesn't end its turn a number of squares away from where it was when you made this attack, it takes damage equal to your Dexterity modifier + your weapon's enhancement bonus. The number of squares equals 2 + your number of shrouds on it.</section>
+      <section indent="1"><name>Level 11:</name>3 + your Dexterity modifier + your weapon's enhancement bonus damage.</section>
+      <section indent="1"><name>Level 21:</name>6 + your Dexterity modifier + your weapon's enhancement bonus damage, and a number of squares equal to 3 + your number of shrouds.</section>
    </power>
 
    <power>
@@ -283,32 +326,52 @@
          <section>
             <name>Attack:</name>
             <type>Melee</type> <range>weapon</range>
+            <type2>Ranged</type2> <range2>weapon</range2>
             <target>one creature</target>
-            <text>Dexterity vs. AC</text>
+            Dexterity vs. AC
          </section>
          <section>
             <shade>true</shade>
             <name>Hit:</name>
-            <text>1[W] + Dexterity modifier damage.</text>
+            1[W] + Dexterity modifier damage.
          </section>
          <section>
             <shade>true</shade>
-            <text>If you didn't invoke your shrouds on the target, it takes additional damage equal to your number of shrouds on it.</text>
+            If you didn't invoke your shrouds on the target, it takes additional damage equal to your number of shrouds on it.
          </section>
          <section>
             <shade>true</shade> <indent>1</indent>
             <name>Level 21:</name>
-            <text>2[W] + Dexterity modifier damage, additional damage equals twice your number of shrouds.</text>
+            2[W] + Dexterity modifier damage, additional damage equals twice your number of shrouds.
          </section>
          <section>
             <name>Miss:</name>
-            <text>If your shrouds are on the target and you didn't invoke them, you deal damage to the target equal to your number of shrouds on it + your weapon's enhancement bonus.</text>
+            If your shrouds are on the target and you didn't invoke them, you deal damage to the target equal to your number of shrouds on it + your weapon's enhancement bonus.
          </section>
          <section>
             <indent>1</indent>
             <name>Level 21:</name>
-            <text>Equal to twice your number of shrouds + your weapon's enhancement bonus.</text>
+            Equal to twice your number of shrouds + your weapon's enhancement bonus.
          </section>
+   </power>
+
+   <power>
+      <title>Umbral Weapon</title>
+      <class>Assassin</class> <category>Attack</category> <level>1</level>
+      <frequency>At-Will</frequency>
+      <action>Standard</action> <subaction/>
+      <fluff>You weave a piece of your own shadow around your weapon before delivering a deadly strike</fluff>
+      <keyword>Shadow</keyword> <keyword>Shadow</keyword>
+      <section shade=""><name>Effect:</name>You can take damage equal to your Constitution modifier.</section>
+      <section shade="" indent="1"><name>Level 11:</name>Equal to twice your Constitution modifier.</section>
+      <section shade="" indent="1"><name>Level 21:</name>Equal to three times your Constitution modifier.</section>
+      <section><name>Attack:</name><type>Melee</type><range>weapon</range><type2>Ranged</type2><range2>weapon</range2><target>one creature</target>Dexterity vs. AC.</section>
+      <section shade=""><name>Hit:</name>1[W] + Dexterity modifier damage.</section>
+      <section shade="" indent="1"><name>Level 21:</name>2[W] + Dexterity modifier damage.</section>
+      <section shade="">If you took the damage, you deal additional damage equal to your number of shrouds on the target + twice the damage you took.</section>
+      <section shade="" indent="1"><name>Level 21:</name>Twice your number of shrouds + twice the damage you took.</section>
+      <section><name>Miss:</name>If you took the damage, you deal damage equal to your Constitution modifier + your weapon's enhancement bonus + the number of your shrouds on the target.</section>
+      <section indent="1"><name>Level 21:</name>Equal to 2 + your Constitution modifier + your weapon's enhancement bonus + twice the number of your shrouds.</section>
    </power>
 
 </catalog>
