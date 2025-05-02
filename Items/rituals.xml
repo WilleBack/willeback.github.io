@@ -11,7 +11,7 @@
    <list selection="8" />
    <list selection="9" />
    <list selection="10" />
-   <list selection="11" />
+   <!--list selection="11" />
    <list selection="12" />
    <list selection="13" />
    <list selection="14" />
@@ -30,7 +30,7 @@
    <list selection="27" />
    <list selection="28" />
    <list selection="29" />
-   <list selection="30" />
+   <list selection="30" /-->
 
    <ritual>
       <title>Aberrant Totemic Link</title>
@@ -47,12 +47,13 @@
       <line>When you master this ritual, you choose a single type of aberrant creature, such as chaos beast or mind flayer. This choice remains fixed through your adventuring career. If you are able to create ritual scrolls, any scrolls you create also reflect this choice. This ritual can only be mastered once.</line>
       <line>For the ritual's duration, you are able to determine the presence or absence of creatures of the chosen type within 10 miles, but with no specific direction or distance information. If there are any within range, you can connect to the mind of a random creature of that type and try to gain information from it. You must expend a healing surge to make this connection (and to conceal it from the aberrant creature).</line>
       <line>Your Dungeoneering check result determines how many questions you can try to find the answers to. Once you have asked all the questions allowed by the ritual, the ritual ends.</line>
-      <line indent="1"><b>Dungeoneering Check Result</b></line>
-      <line indent="2"><i>9 or lower:</i> One question</line>
-      <line indent="2"><i>10 - 19:</i> Two questions</line>
-      <line indent="2"><i>20 - 29:</i> Three questions</line>
-      <line indent="2"><i>30 - 39:</i> Four questions</line>
-      <line indent="2"><i>40 or higher:</i> Five questions</line>
+      <line table="Dungeoneering Check Result">
+         <row name="9 or lower:">One question</row>
+         <row name="10 - 19:">Two questions</row>
+         <row name="20 - 29:">Three questions</row>
+         <row name="30 - 39:">Four questions</row>
+         <row name="40 or higher:">Five questions</row>
+      </line>
       <line>Your questions can be as specific or as general as you wish, but the answers you receive back are cryptic and rarely longer than a phrase, a short sentence, or a single image. In particular, aberrant creatures often have different conceptions of time, so questions regarding future events or plans are more likely to result in answers that are incomprehensible. The answers are also limited to what the individual creature knows, and its information could be incorrect if it has been misled by others.</line>
       <line>If a particual creature does not know the information you seek, you can try to find another individual who does know it. If there is another creature of the chosen type, you can expend a healing surge to connect (and conceal) to that creature, and re-ask any questions for which you received no answer.</line>
       <line><b>Special:</b> Members of the Morphic Web can master and perform this ritual even if they cannot normally master rituals. They also do not expend a healing surge to make the first connection.</line>
@@ -73,13 +74,14 @@
       <line>You command an immortal creature whose level does not exceed yours. The subject of this ritual must be able to see and hear you and must remain within 5 squares of you for the entire time necessary to perform the ritual. Because most creatures do not willingly submit to this ritual, you must usually make the creature helpless or restrain the creature by means of a <i>magic circle</i> ritual. Unless it is prevented from doing so, the creature can leave at any time. Finally, you must be able to communicate with the creature, or the ritual automatically fails.</line>
       <line>To determine the extent of your authority over the subject, you engage in a special skill challenge during the time it takes to perform the ritual. The DC for all checks is a Moderate DC of the subject's level, and the primary skill is Religion; each time you or an ally succeeds on a Religion check in the challenge, you or an ally can use Diplomacy, History, Arcana, or Intimidate for the next attempted check. Attempting an Intimidate check increases the DC of Diplomacy checks by +5 for the rest of the skill challenge.</line>
       <line>Once you have amassed 3 failures or achieved 10 successes, the skill challenge ends. Consult the following values and apply the effect for the number of successes you achieved:</line>
-      <line indent="1"><b>Number of Successes</b></line>
-      <line indent="2"><i>0 or 1:</i> The creature has authority over you and can issue one command that you must obey, a task that requires up to a day of effort.</line>
-      <line indent="2"><i>2 or 3:</i> You have immediate authority over the creature and can command it to perform one task that takes no more than 5 minutes.</line>
-      <line indent="2"><i>4 or 5:</i> You have moderate authority over the creature and can command it to perform a task that requires up to a day of effort.</line>
-      <line indent="2"><i>6 or 7:</i> You have significant authority over the creature and can command it to perform a task that requires up to a week of effort.</line>
-      <line indent="2"><i>8 or 9:</i> You have great authority over the creature and can command it to perform a task that requires up to a month of effort.</line>
-      <line indent="2"><i>10:</i> You have ultimate authority over the creature and can command it to perform a task that requires up to a year an a day of effort.</line>
+      <line table="Number of Successes">
+         <row name="0 or 1:">The creature has authority over you and can issue one command that you must obey, a task that requires up to a day of effort.</row>
+         <row name="2 or 3:">You have immediate authority over the creature and can command it to perform one task that takes no more than 5 minutes.</row>
+         <row name="4 or 5:">You have moderate authority over the creature and can command it to perform a task that requires up to a day of effort.</row>
+         <row name="6 or 7:">You have significant authority over the creature and can command it to perform a task that requires up to a week of effort.</row>
+         <row name="8 or 9:">You have great authority over the creature and can command it to perform a task that requires up to a month of effort.</row>
+         <row name="10:">You have ultimate authority over the creature and can command it to perform a task that requires up to a year and a day of effort.</row>
+      </line>
       <line>When the specified task is completed, the ritual is discharged, and the creature (or you) is released from service.</line>
       <line>The requested task can be any kind that does not compel the subject to obey multiple commands, force the subject to engage in combat, or ensure the subject's death (the subject can engage in combat to achieve a task if it wishes, but combat cannot be required). If the task is impossible, such as commanding a creature that cannot fly to soar into the sky, the creature can ignore the command.</line>
    </ritual>
@@ -117,8 +119,10 @@
       <line>You ward an area up to 10 squares by 10 squares, and designate a spoken password that allows a creature to enter the warded area without triggering an alarm. This alarm can send a mental signal to you or make an audible ringing sound.</line>
       <line>If a Tiny or larger creature enters the warded area without speaking the password, the alarm you set triggers, and the ritual is discharged. However, an insubstantial creature or any creature that succeeds on a Stealth check against your passive Arcana does not trigger the alarm.</line>
       <line>The result of triggering the alarm depends on the type of alarm:</line>
-      <line indent="1">When an audible alarm triggers, all creatures in the warded area that are capable of hearing can hear the ringing. If they are sleeping, the noise awakens them.</line>
-      <line indent="1">When a mental alarm triggers, a mental ping alerts you to the intrusion and awakens you from sleep.</line>
+      <line table="">
+         <row name="Audible">When triggered, all creatures in the warded area that are capable of hearing can hear the ringing. If they are sleeping, the noise awakens them.</row>
+         <row name="Mental">When triggered, a mental ping alerts you to the intrusion and awakens you from sleep.</row>
+      </line>
       <line>In either case, the alarm informs you where the warded area was breached.</line>
       <line><b>Focus:</b> A tiny bell (5 gp), and a fine silver wire (5 gp); you hold the bell and use the wire to scribe runes on the warded area's perimeter.</line>
    </ritual>
@@ -156,10 +160,11 @@
       <line>If you learn the origin and type of the last creature to use the portal, you also learn any keywords associated with that creature.</line>
       <line>The ritual can also reveal the identity of the creature that created the portal. If the portal was not created by a creature, you learn of the event that formed it.</line>
       <line>The information you learn depends on your Arcana check result. You learn all the information for your result and lower.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>29 or lower:</i> The name of the portal's destination.</line>
-      <line indent="2"><i>30 or higher:</i> The origin and type of the creature to use the portal last.</line>
-      <line indent="2"><i>30 + one-half the creator's level:</i> Identity of the creature that created the portal, if any.</line>
+      <line table="Arcana Check Result">
+         <row name="29 or lower:">The name of the portal's destination.</row>
+         <row name="30 or higher:">The origin and type of the creature to use the portal last.</row>
+         <row name="30 + one-half creator level:">Identity of the creature that created the portal, if any.</row>
+      </line>
       <line><b>Special:</b> You can expend a healing surge to perform this ritual in 10 minutes instead of 1 hour.</line>
    </ritual>
 
@@ -193,19 +198,22 @@
       <duration>Varies</duration>
 
       <line>You target a nonhostile Tiny natural beast, such as a cat, a fox, a fish, a mouse, or a sparrow. The animal must remain within 5 squares of you for the time necessary to perform the ritual.</line>
-      <line>Once the ritual is complete, the animal regards you as friend and performs simple tasks on your behalf. The tasks are limited ot the options below,  and assigning a task requires standard action.</line>
-      <line><i>Fetch:</i> The animal retrieves a Tiny ofject of 10 pounds or less that you and it can see. If the animal is unable to carry the object due to the item's size or weight, the animal enlists the aid of other creatures of its kind to fulfill the task.</line>
-      <line><i>Perform:</i> The animal performs a simple trick, such as rollin over or playing dead.</line>
-      <line><i>Seek:</i> The animal scouts ahead and examines an area for anything that's alive or animate. The animal can travel up to 20 squares away, and uses your Passive Perception value to determine if it notices hidden creatures in the area. When the animal returns, you learn whether a creature occupies the area. The animal cannot communicate any other information aside from the presence or absence of creatures.</line>
-      <line><i>Watch:</i>The animal remains in its current location and watches the area. When you assing the animal the task, you designate creatures that are allowed to enter the location. If a creature that you have not designated enters the location, the watching animal informs you by coming to you and making a noise. If you move more than 20 squares away from the area, the animal leaves its post and rejoins you.</line>
+      <line>Once the ritual is complete, the animal regards you as friend and performs simple tasks on your behalf. The tasks are limited to the options below,  and assigning a task requires standard action.</line>
+      <line table="Tasks">
+         <row name="Fetch:">The animal retrieves a Tiny object of 10 pounds or less that you and it can see. If the animal is unable to carry the object due to the item's size or weight, the animal enlists the aid of other creatures of its kind to fulfill the task.</row>
+         <row name="Perform:">The animal performs a simple trick, such as rolling over or playing dead.</row>
+         <row name="Seek:">The animal scouts ahead and examines an area for anything that's alive or animate. The animal can travel up to 20 squares away, and uses your Passive Perception value to determine if it notices hidden creatures in the area. When the animal returns, you learn whether a creature occupies the area. The animal cannot communicate any other information aside from the presence or absence of creatures.</row>
+         <row name="Watch:">The animal remains in its current location and watches the area. When you assign the animal the task, you designate creatures that are allowed to enter the location. If a creature that you have not designated enters the location, the watching animal informs you by coming to you and making a noise. If you move more than 20 squares away from the area, the animal leaves its post and rejoins you.</row>
+      </line>
       <line>Unless otherwise commanded, the animal accompanies you for the duration of the ritual, perching on your shoulder, hiding in your pocket, or walking alongside you.</line>
       <line>The animal has AC 14, Fortitude 12, Reflex 12, and Will 12. It is a minion with 3 hit points.</line>
       <line>Your Nature check check determines the length of time the animal remains in your servitude, but you can release an animal from your service as a minor action.</line>
-      <line indent="1"><b>Nature Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> 1 hour</line>
-      <line indent="2"><i>20 - 29:</i> 8 hours</line>
-      <line indent="2"><i>30 - 39:</i> 1 day</line>
-      <line indent="2"><i>40 or higher:</i> 1 week</line>
+      <line table="Nature Check Result">
+         <row name="19 or lower:">1 hour</row>
+         <row name="20 - 29:">8 hours</row>
+         <row name="30 - 39:">1 day</row>
+         <row name="40 or higher:">1 week</row>
+      </line>
       <line>You can have one animal at a time bound to your service using this ritual. Starting at 11th level, you can have two animals bound, and starting at 21st level, you can have three animals bound. You must complete a separate ritual for each animal you bind.</line>
    </ritual>
 
@@ -218,17 +226,18 @@
       <price>30 gp</price>
       <skill>Nature</skill>
       <component>1 healing surge or 10 gp</component>
-      <time>10 minutes</time>
+      <time>1 minute</time>
       <duration>Varies</duration>
 
       <line>You target a nonhostile Tiny animal, such as a sparrow, a raven, a fox, or a carp. The animal must remain within 5 squares of you for the time necessary to perform the ritual.</line>
       <line>Once the ritual is complete, you whisper a message of up to 25 words to the animal and name a recipient and a location. The animal bounds off towards the location, in search of the recipient. The animal avoids danger along its path. Upon finding the recipient, the animal approaches until it is adjacent to the recipient, and your whisper issues from the animal's mouth, conveying the message.</line>
       <line>When the animal delivers its message or the ritual's duration ends, your influence ends and the animal reverts to its natural behavior. Your Nature check determines how long the animal is affected by the ritual:</line>
-      <line indent="1"><b>Nature Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> 6 hours</line>
-      <line indent="2"><i>20 - 29:</i> 12 hours</line>
-      <line indent="2"><i>30 - 39:</i> 18 hours</line>
-      <line indent="2"><i>40 or higher:</i> 24 hours</line>
+      <line table="Nature Check Result">
+         <row name="19 or lower:">6 hours</row>
+         <row name="20 - 29:">12 hours</row>
+         <row name="30 - 39:">18 hours</row>
+         <row name="40 or higher:">24 hours</row>
+      </line>
    </ritual>
 
    <ritual>
@@ -267,11 +276,12 @@
       <line>When you perform this anthem to a crowd of ordinary people -peasants, commoners, artisans, and the like- you unite them behind a single cause. Only creatures whose leve is at least 2 lower than yours are affected by this ritual.</line>
       <line>The crowd must not be hostile to you and must be able to see and hear you for the entire performance. At the end of the ritual, you can request a single service from the crowd, to which the members of the audience respond as if you were a trusted friend: you can request anything that doesn't involve violence, put the listener at inordinate risk or imperil their friends or family, or place them in financial ruin. For example, you might ask the listeners to help you put out a fire raging in the city, hide you and your allies from searching guards, or provide you with shelter or food.</line>
       <line>Your Diplomacy check determines the scope of help you can request.</line>
-      <line indent="1"><b>Diplomacy Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> The listeners perform an action that lasts up to 1 hour and that benefits them in at least some small way.</line>
-      <line indent="2"><i>20 - 29:</i> The listeners perform a task that lasts up to 1 hour and that poses no risk or reward to them.</line>
-      <line indent="2"><i>30 - 39:</i> The listeners perform a task that lasts up to 6 hours and that poses a mild risk but at least some benefit to them.</line>
-      <line indent="2"><i>40 or higher:</i> The listeners perform a task that lasts up to 1 dau and that poses a mild risk without any benefit to them.</line>
+      <line table="Diplomacy Check Result">
+         <row name="19 or lower:">The listeners perform an action that lasts up to 1 hour and that benefits them in at least some small way.</row>
+         <row name="20 - 29:">The listeners perform a task that lasts up to 1 hour and that poses no risk or reward to them.</row>
+         <row name="30 - 39:">The listeners perform a task that lasts up to 6 hours and that poses a mild risk but at least some benefit to them.</row>
+         <row name="40 or higher:">The listeners perform a task that lasts up to 1 day and that poses a mild risk without any benefit to them.</row>
+      </line>
       <line>The number of individuals affected depends extends to anyone who witnesses the entire performance, so the larger the venue, the more people you can affect.</line>
       <line><b>Focus:</b> A musical instrument or similar item worth at least 600 gp.</line>
       <line><b>Special:</b> You can expend a healing surge to perform this ritual in 1 minute.</line>
@@ -291,31 +301,35 @@
 
       <line>You create a magical barrier that is up to 2 squares long and tall, typically large enough to block a doorway or the entrance of a hallway. The obstruction is imperceptible from more than 10 squares away, but is readily apparent as a translucent, shimmering, paper-thin wall from closer than that.</line>
       <line>When you perform the ritual, you can allow for certain other creatures or types of creatures to pass through the barrier normally, ignoring the ward's effect. You can choose any or all (or none) of the following options:</line>
-      <line indent="1"><i>Password:</i> You can set a verbal password. If uttered within 5 squares of the barrier, the speaker can ignore the ward for one minute.</line>
-      <line indent="1"><i>Individuals:</i> You can designate up to ten other specific individuals who can ignore the ward at all times. You can cast the ritual again on the same barrier to add further individuals each time.</line>
-      <line indent="1"><i>Descriptions:</i> You can describe one or more categories of creatures who can ignore the ward at all times, using specific, observable characteristics such as species, type, size, or equipment carried or worn.</line>
+      <line table="">
+         <row name="Password">You can set a verbal password. If uttered within 5 squares of the barrier, the speaker can ignore the ward for one minute.</row>
+         <row name="Individuals">You can designate up to ten other specific individuals who can ignore the ward at all times. You can cast the ritual again on the same barrier to add further individuals each time.</row>
+         <row name="Descriptions">You can describe one or more categories of creatures who can ignore the ward at all times, using specific, observable characteristics such as species, type, size, or equipment carried or worn.</row>
+      </line>
       <line><b>Special:</b> You can expend a healing surge to cast this ritual as a standard action. If you do, the duration is reduced to 10 minutes, the component cost is reduced to 200 gp, and you do not gain the +5 bonus to the DC to open the barrier. You can cast the ritual normally when adding additional individuals to a permanent barrier.</line>
       <line>If you spend 4 hours and four times the component costs to perform this ritual, the duration increases to permanent. A ritual caster who uses <i>knock</i> or a similar ritual to open a permanent barrier can choose to bring it down temporarily, in which case it seals again after 5 minutes, or to destroy the barrier.</line>
    </ritual>
-   
+
    <ritual>
       <title>Arcane Lock</title>
       <category>Warding</category>
       <level>4</level>
       <fluff>You bind a door so that intruders can't easily pass - the door is limned with amber light which fades to a soft glow, marking it as impassible to anyone other than you amd your companions</fluff>
-      
+
       <price>140 gp</price>
       <skill>Arcana (no check)</skill>
       <component>20 gp</component>
       <time>10 minutes</time>
       <duration>Permanent</duration>
-      
+
       <line>You lock a door, a window, a gate, a portcullis, or some other means of ingress. You can open the target normally, but those who don't have your permission find it locked.</line>
       <line>Your passive Arcana check result, with a +5 power bonus, sets the DC for Thievery checks or Strength checks made to open the target.</line>
       <line>When you perform the ritual, you can allow for certain other creatures or types of creatures to pass through the door normally, ignoring the ward's effect. You can choose any or all (or none) of the following options:</line>
-      <line indent="1"><i>Password:</i> You can set a verbal password. If uttered within 5 squares of the target, the speaker can ignore the ward for one minute.</line>
-      <line indent="1"><i>Individuals:</i> You can designate up to ten other specific individuals who can ignore the ward at all times. You can cast the ritual again on the same target to add further individuals each time.</line>
-      <line indent="1"><i>Descriptions:</i> You can describe one or more categories of creatures who can ignore the ward at all times, using specific, observable characteristics such as species, type, size, or equipment carried or worn.</line>
+      <line table="">
+         <row name="Password:">You can set a verbal password. If uttered within 5 squares of the target, the speaker can ignore the ward for one minute.</row>
+         <row name="Individuals:">You can designate up to ten other specific individuals who can ignore the ward at all times. You can cast the ritual again on the same target to add further individuals each time.</row>
+         <row name="Descriptions:">You can describe one or more categories of creatures who can ignore the ward at all times, using specific, observable characteristics such as species, type, size, or equipment carried or worn.</row>
+      </line>
       <line>The ward remains until you dismiss it as a standard action, the ingress is destroyed, or the ward is defeated, such as with the <i>knock</i> ritual, or a successful Strength check or Thievery check. Wherever you are, you instantly know if your <i>arcane lock</i> is defeated.</line>
    </ritual>
 
@@ -350,11 +364,12 @@
 
       <line>When you finish performing this ritual, each ally who heard it can make an Arcana check, a Dungeoneering check, a History check, a Nature check, or a Religion check to uncover a clue or recall a bit of useful information. The ally must be trained in the skill.</line>
       <line>Your Arcana check result determines the power bonus that the allies gain to their check.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> +5 power bonus</line>
-      <line indent="2"><i>20 - 29:</i> +7 power bonus</line>
-      <line indent="2"><i>30 - 39:</i> +10 power bonus</line>
-      <line indent="2"><i>40 or higher:</i> +12 power bonus</line>
+      <line table="Arcana Check Result">
+         <row name="19 or lower:">+5 power bonus</row>
+         <row name="20 - 29:">+7 power bonus</row>
+         <row name="30 - 39:">+10 power bonus</row>
+         <row name="40 or higher:">+12 power bonus</row>
+      </line>
       <line>The information learned is equivalent to a successful knowledge check or monster knowledge check, as usual.</line>
       <line><b>Focus:</b> A musical instrument worth at least 400 gp, which you play as part of performing the ritual.</line>
       <line><b>Special:</b> You can expend a healing surge to perform this ritual as your minor action, move action, and standard action during a single turn. If you do, the component cost and the power bonus are halved.</line>
@@ -377,11 +392,12 @@
       <line>As part of this ritual, you name a specific, fixed destination in the Astral Sea. The most common use of this ritual is to lead its user to a particular astral dominion. However, the astral guide could also lead you to the exit of a labyrinth, the entrance to a dungeon, or to a specific site within an astral dominion. The guide cannot lead you to a general location, such as "a room with astral diamonds" or to an unknown place, like "the place where the death knight Malachi is hiding." If the named location does exist within the Astral Sea, the guide leads you there by the shortest (though not always the safest) route.</line>
       <line>The guide hovers in the air and moves at your speed. It remains within 12 quares of you. The guide remains until you reach your destination, the ritual's duration expires, or you take an extended rest.</line>
       <line>Your Religion check result determines the duration of the ritual.</line>
-      <line indent="1"><b>Religion Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> 30 minutes</line>
-      <line indent="2"><i>20 - 29:</i> 1 hour</line>
-      <line indent="2"><i>30 - 39:</i> 4 hours</line>
-      <line indent="2"><i>40 or higher:</i> 16 hours</line>
+      <line table="Religion Check Result">
+         <row name="19 or lower:">30 minutes</row>
+         <row name="20 - 29:">1 hour</row>
+         <row name="30 - 39:">4 hours</row>
+         <row name="40 or higher:">16 hours</row>
+      </line>
    </ritual>
 
    <ritual>
@@ -402,11 +418,12 @@
       <line>If you or one of your affected allies leaves the Astral Sea, such as by stepping through a portal to another place, then the ritual ends and all participants return to the location from which they departed the world. At the end of the ritual's duration, or upon the death of the ritual caster, the participants also return to the location from which they departed the world.</line>
       <line>The ritual caster can choose to end the ritual at any time. This requires 10 minutes, has no cost or skill check, and instantly returns all participants to the world. A participant always returns to the same location from which he or se departed the world.</line>
       <line>Your Religion check result determines how long the ritual's participants can remain in the Astral Sea</line>
-      <line indent="1"><b>Religion Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> 3 days</line>
-      <line indent="2"><i>20 - 29:</i> 7 days</line>
-      <line indent="2"><i>30 - 39:</i> 21 days</line>
-      <line indent="2"><i>40 or higher:</i> 1 year</line>
+      <line table="Religion Check Result">
+         <row name="19 or lower:">3 days</row>
+         <row name="20 - 29:">7 days</row>
+         <row name="30 - 39:">21 days</row>
+         <row name="40 or higher:">1 year</row>
+      </line>
       <line><b>Special:</b> Travellers in addition to the ritual caster can expend a healing surge to halve the increased component cost from him or her.</line>
       <line>The ritual caster can expend a healing surge to end the ritual in 1 minute instead of 10 minutes.</line>
    </ritual>
@@ -474,11 +491,12 @@
       <duration>Special</duration>
 
       <line>You ward a single zone, up to burst 5, to be unpleasant to all kinds of unwanted rodents and insects of size Tiny or smaller, even if they are part of a swarm. Any vermin that are in the burst must leave by the most expedient means possible, and none enter the affected area for a period determined by your Nature check result:</line>
-      <line indent="1"><b>Nature Check</b></line>
-      <line indent="2"><i>9 or lower:</i> 3 days</line>
-      <line indent="2"><i>10 - 19:</i> 1 week</line>
-      <line indent="2"><i>20 - 29:</i> 2 weeks</line>
-      <line indent="2"><i>30 or higher:</i> 1 month</line>
+      <line table="Nature Check">
+         <row name="9 or lower:">3 days</row>
+         <row name="10 - 19:">1 week</row>
+         <row name="20 - 29:">2 weeks</row>
+         <row name="30 or higher:">1 month</row>
+      </line>
    </ritual>
 
    <ritual>
@@ -532,35 +550,35 @@
       <line>Alternatively, the ritual causes crops and fruit-bearing plants within 20 squares of you to yield food. The plants produce enough food to feed five people for a week.</line>
       <line><b>Special:</b> You can expend a healing surge to reduce the component cost to 5 gp.</line>
    </ritual>
-   
+
    <ritual>
    <title>Bolster Object</title>
       <category>Warding</category>
       <level>6</level>
       <fluff>Though it looks no different, the iron portcullis has become harder than steel thanks to this ritual</fluff>
-      
+
       <price>250 gp</price>
       <skill>Arcana or Nature</skill>
       <component>100 gp</component>
       <time>10 minutes</time>
       <duration>Instantaneous</duration>
-      
+
       <line>You target an object you must touch during the casting of this ritual. An object can only benefit from one casting of this ritual, keeping the best result.</line>
       <line>The target's current and maximum hit points increase by 10% for each 5 points of your check result. For example, if your check result is 23, the hit points increase by 40%</line>
    </ritual>
-   
+
    <ritual>
       <title>Breach Disguise</title>
       <category>Divination</category>
       <level>5</level>
       <fluff>The recipient of this ritual can feel their their intuition grow, especially as it comes to people pretending to be what they are not</fluff>
-      
+
       <price>220 gp</price>
       <skill>Arcana (no check)</skill>
       <component>20 gp</component>
       <time>1 minute</time>
       <duration>1 hour</duration>
-      
+
       <line>You grant either yourself or an ally present during the casting of the ritual the ability to discern when a creature appears as something other than what it truly is.</line>
       <line>The target gains a +3 power bonus to checks to discern disguises or alternative form, and can use his or her Arcana check modifier in place of his or her Insight check modifier.</line>
    </ritual>
@@ -580,106 +598,109 @@
       <line>You create a common potion, elixir, or similar common item of your level or lower. The ritual's component cost is equal to the price of the item you create.</line>
       <line>You can create uncommon, rare, or unique potions, elixirs, and similar items if your DM allows it. In some cases, this might require you to discover how to create a specific item, or acquire special components.</line>
    </ritual>
-   
+
    <ritual>
       <title>Call Wilderness Guide</title>
       <category>Exploration</category>
       <level>6</level>
       <fluff>The spirit of an animal native to the local wilderness answers you call, approaching you and then turning away and looking over its shoulder to make sure you're following</fluff>
-      
+
       <price>250 gp</price>
       <skill>Nature</skill>
       <component>50 gp</component>
       <time>30 minutes</time>
       <duration>Varies</duration>
-      
+
       <line>You call a nature spirit into your service to act as a guide. The guide takes the form of a Medium or smaller natural beast, and is treated as a minion of your level with defenses equal to yours at the time of performing this ritual. It has a speed or fly speed, as appropriate to its form, of 8, though it measures its pace to so your group can keep up.</line>
       <line>The guide leads you to a location you name as you perform the ritual. The destination must be a specific place, such as a unique natural formation or specific city. The guide cannot lead you to a general location, such as "a cave full of treasure", or to an unknown place, such as the secret lair of a dragon. For the duration of the ritual, the guide leads you to the destination by the shortest (although not necessarily the safest) route.</line>
       <line>Your Nature check result determines how long the guide serves you. If you can't reach the destination within the allotted time, the guide leads you as far as it can along the way and then disappears.</line>
-      <line indent="1"><b>Nature Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> 1 hour</line>
-      <line indent="2"><i>20 - 29:</i> 4 hours</line>
-      <line indent="2"><i>30 - 39:</i> 8 hours</line>
-      <line indent="2"><i>40 or higher:</i> 16 hours</line>
+      <line table="Nature Check Result">
+         <row name="19 or lower:">1 hour</row>
+         <row name="20 - 29:">4 hours</row>
+         <row name="30 - 39:">8 hours</row>
+         <row name="40 or higher:">16 hours</row>
+      </line>
    </ritual>
-   
+
    <ritual>
       <title>Call of Friendship</title>
       <category>Exploration</category>
       <level>4</level>
       <fluff>Your song calls to a person's heart, filling it with feelings of kinship, affection, and perhaps even love</fluff>
-      
+
       <price>150 gp</price>
       <skill>Arcana (no check)</skill>
       <component>a focus, plus 10 gp</component>
       <time>10 minutes</time>
       <duration>Varies</duration>
       <bard />
-      
+
       <line>You target one nonhostile natural humanoid creature that is at least 2 level lower than you. The target must remain within 10 squares of you and hear the entire performance.</line>
       <line>Once you finish casting the ritual, make a Diplomacy check to determine the effect it has on the target. Once the ritual's duration ends, the target's attitude returns to normal. The ritual does not affect the target's memory in any way.</line>
-      <line indent="1"><b>Diplomacy Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> The target acts as a friend for 1 hour, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 5 gp</line>
-      <line indent="2"><i>20 - 29:</i> The target acts as a friend for 1 hour, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 25 gp</line>
-      <line indent="2"><i>30 - 39:</i> The target acts as a friend for 6 hours, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 50 gp</line>
-      <line indent="2"><i>40 or higher:</i> The target acts as a friend for 1 day, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 500 gp</line>
+      <line table="Diplomacy Check Result">
+         <row name="19 or lower:">The target acts as a friend for 1 hour, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 5 gp</row>
+         <row name="20 - 29:">The target acts as a friend for 1 hour, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 25 gp</row>
+         <row name="30 - 39:">The target acts as a friend for 6 hours, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 50 gp</row>
+         <row name="40 or higher:">The target acts as a friend for 1 day, assisting you as he or she can, but takes no actions that put him or her in danger or that requires an expense of more than 500 gp</row>
+      </line>
       <line><b>Focus:</b> A musical instrument worth at least 50 gp you play as part of performing the ritual.</line>
       <line indent="1"><b>Special:</b> You can expend a healing surge to ignore the focus.</line>
    </ritual>
-   
+
    <ritual>
       <title>Calm Emotions</title>
       <category>Deception</category>
       <level>3</level>
       <fluff>You weave this ritual among your speech, giving magical weight to your words</fluff>
-      
+
       <price>120 gp</price>
       <skill>Arcana or Religion (no check)</skill>
       <component>2 healing surges</component>
       <time>1 minute</time>
       <duration>1 hour</duration>
       <bardAffinity />
-      
+
       <line>When you complete this ritual, nonhostile humanoid creatures within 10 squares of you become calm and reasonable, though you can exclude any creatures from the ritual's effects as you wish.</line>
       <line>For the ritual's duration, Bluff checks, Diplomacy checks, and other similar checks to influence the affected creatures gain a +2 power bonus. The effect immediately ends on a creature if takes part on combat.</line>
    </ritual>
-   
+
    <ritual>
       <title>Chamber of Vulnerability</title>
       <category>Warding</category>
       <level>20</level>
       <fluff>You slowly exhale, watching as the destructive energy of your breath weapon swirls about before sinking into the world, as if absorbed by the world</fluff>
-      
+
       <price>20,000 gp</price>
       <skill>Arcana</skill>
       <component>3,500 gp</component>
       <time>30 minutes</time>
       <duration>24 hours (see optional focus)</duration>
       <requirement>You must possess an innate breath weapon</requirement>
-      
+
       <line>You ward an area so that creatures in it gain vulnerable to the damage type you deal with your breath weapon, such as fire damage if you are a red dragon. If you deal multiple types of damage or can choose between different types of damage, you choose one of them when performing this ritual.</line>
       <line>Your Arcana check result determines both the size of the warded area, and the vulnerable that affected creatures gain.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> burst 3, vulnerable 5</line>
-      <line indent="2"><i>20 - 29:</i> burst 5, vulnerable 5</line>
-      <line indent="2"><i>30 - 39:</i> burst 8, vulnerable 10</line>
-      <line indent="2"><i>40 or higher:</i> burst 12, vulnerable 10</line>
+      <line table="Arcana Check Result">
+         <row name="19 or lower:">burst 3, vulnerable 5</row>
+         <row name="20 - 29:">burst 5, vulnerable 5</row>
+         <row name="30 - 39:">burst 8, vulnerable 10</row>
+         <row name="40 or higher:">burst 12, vulnerable 10</row>
+      </line>
       <line>You are not affected by your own <i>chamber of vulnerability</i>. In addition, you can designate any number of ritual participants as not being affected. When performing the ritual, you can also designate one or more categories of creatures that are not affected by the ritual. You can designate these categories by obvious physical characteristics (such as height, weight, or body shape), creature type or subtype (such as humanoid, magical beast, kobold, or dragon), creature race (such as red dragon), or obvious equipment (such as creatures wearing a specific signet ring).</line>
       <line><b>Optional Focus:</b> You can extend the duration of this ritual indefinitely by keeping a focus in the vicinity. This ritual focus is a small fanged mouth carved of ivory and silver, worth 2,000 gp. The ritual lasts as long as the focus remains within the warded area. You can hide or protect the ritual focus in any way you like, as long as it remains within the area.</line>
    </ritual>
-   
+
    <ritual>
       <title>Chameleon's Cloak</title>
       <category>Deception</category>
       <level>10</level>
       <fluff>No one can notice you or your friends thanks to the concealing cloak of magic you have conjured</fluff>
-      
+
       <price>800 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <component>150 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>You conceal yourself and up to 8 allies within 5 squares of you, using a combination of camouflage and distraction to ensure that no one notices any of you while you stay in place.</line>
       <line>The Perception DC to notice a creature concealed by this ritual is equal to 10 + your Arcana check modifier or your Nature check modifier, with a +5 power bonus. A concealed creature that leaves the space it occupies at the completion of the ritual or that attacks a creature loses all benefit from the ritual.</line>
       <line><b>Special:</b> You can expend a healing surge to cast this ritual as a standard action. If you do, the duration is reduced to 1 hour, and the component cost is reduced to 30 gp.</line>
@@ -737,37 +758,37 @@
       <line>You conceal a dragonmark on either yourself or on an adjacent willing creature. Creatures that examine the area where the mark is hidden are entitled to a Perception check against your Arcana check result to notice the deception.</line>
       <line>When the affected creature uses any powers or effects related to the dragonmark, this ritual's effect is broken and it ends.</line>
    </ritual>
-   
+
    <ritual>
       <title>Continual Light</title>
       <category>Creation</category>
       <level>2</level>
       <fluff>At your touch, light springs forth from a normal object</fluff>
-      
+
       <price>80 gp</price>
       <skill>Arcana, Religion, or Nature (no check)</skill>
       <component>1 healing surge, or 15 gp</component>
       <time>1 minute</time>
       <duration>24 hours or until dismissed</duration>
-      
+
       <line>One Medium or smaller object you touch sheds bright light in a 20-square radius and dim light for a further 10 squares for the ritual's duration. You, or a creature you hand the object to, can use a minor action to dismiss the ritual.</line>
       <line><b>Nature:</b> When cast as a Nature ritual, the target must be a natural object but can be Large or smaller.</line>
       <line><b>Special:</b>You can expend a healing surge to cast this ritual as a standard action. If you do, the target sheds bright light in a 5-square radius and dim light for a further 5 squares.</line>
       <line><b>Ritual Scroll:</b> When you perform this ritual from a ritual scroll, you can do so as a standard action, as if you had expended a healing surge to do so.</line>
    </ritual>
-   
+
    <ritual>
       <title>Corpse Light</title>
       <category>Divination</category>
       <level>2</level>
       <fluff>A sickly green flame springs forth, washing the area in nauseating light that reveals, beyond a shadow of a doubt, those who walk in undeath</fluff>
-      
+
       <price>80 gp</price>
       <skill>Arcana or Religion</skill>
       <component>1 healing surge and 5 gp</component>
       <time>10 minutes</time>
       <duration>4 hours</duration>
-      
+
       <line>You create a pale green flame that sheds light as a lantern (bright light in a 10-square radius, and dim light for a further 5 squares), but produces no heat. The light emanates from an object you designate during the ritual.</line>
       <line>Any undead creature that enters the illuminated area or is within it, and that is of a level equal to or lower than your Arcana check or Religion check - 10, is wreathed in a green, flaming aura that harmlessly flickers around the creature. This aura appears even if the undead is disguised by a polymorph or illusion effect. Invisible undead are surrounded by visible green radiance that reveals the square in which the undead is located, but does not negate the total concealment granted by invisibility.</line>
    </ritual>
@@ -805,19 +826,19 @@
       <line>Aside from its effect on undead and demons, holy water act as normal pure water in all ways. It can be distinguished from normal water with examination and a successful DC 15 Religion or Arcana check.</line>
       <line>Holy water created with this ritual deals +1 damage per damage die.</line>
    </ritual>
-   
+
    <ritual>
       <title>Create Primal Element</title>
       <category>Creation</category>
       <level>2</level>
       <fluff>The primal spirits infuse the element before you, making it harmful to unnatural creatures</fluff>
-      
+
       <price>80 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <component>At least 25 gp</component>
       <time>10 minutes</time>
       <duration>Permanent (consumed)</duration>
-      
+
       <line>You infuse primal energy to a small container of earth, air, or other element. The ritual's component cost is equal to the cost of the primal element you create. You cannot create primal element of a higher level than your own.</line>
       <line>Primal element created with this ritual deals +1 damage per die.</line>
    </ritual>
@@ -838,104 +859,105 @@
       <line>Each light has a flight speed of 10. Whever you use a move action to move, you can move all the lights as part of that action. You can also use a minor action to move all your lights up to their speed. You must have line of effect to a light to move it. Any light goes out of it is more than 20 squares from you at the end of your turn.</line>
       <line><b>Special:</b> You can expend a healing surge to ignore the component cost.</line>
    </ritual>
-   
+
    <ritual>
       <title>Dark Light</title>
       <category>Exploration</category>
       <level>4</level>
       <fluff>An opaque ball of darkness forms in your hands, and pirple light shines forth from it, throwing everything around you into a sharp relief</fluff>
-      
+
       <price>150 gp</price>
       <skill>Arcana (no check)</skill>
       <component>20 gp</component>
       <time>1 minute</time>
       <duration>24 hours</duration>
-      
+
       <line>You create a source of dim light that allows you and those around you to see without being seen because of your light source. The ritual conjures a ball of shadow that floats with you as you move. The ball sheds dim light in its square and for 6 squares around it.</line>
       <line>Only creatures within the light's radius can see the ball of shadow or the dim light it creates. Vision within the light is black-and-white, and color variations appear in shades of gray.</line>
    </ritual>
-   
+
    <ritual>
       <title>Deep Pockets</title>
       <category>Creation</category>
       <level>5</level>
       <fluff>As you perform the incantation, bottoms from the the pockets of the prepared garment disappear from view</fluff>
-      
+
       <price>220 gp</price>
       <skill>Arcana (check)</skill>
       <component>a focus, plus 5 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>You cause the pockets of the garment used as the focus to hold far more than they normally. When you complete the ritual, up to five pockets or pouches sewn into the focus can each hold up to 50 pounds in weight or 5 cubic feet in volume. Items in the affected pockets do not change the focus garment's form or weight.</line>
       <line>The garment's wearer can draw an item from an affected pocket as a minor action. When the ritual ends, items in the affected pockets appear in a pile at the garment-wearer's feet. If you start performing the ritual on the same garment focus before the previous ritual expires, the items remain in the pockets.</line>
       <line>You can hide the pockets as part of casting this ritual. Make a DC 20 Thievery check. On a success, it requires a Perception check with a DC equal to 10 + your Thievery check modifier to find the pockets.</line>
       <line><b>Focus:</b> A fine cloth garment worth at least 50 gp.</line>
    </ritual>
-   
+
    <ritual>
       <title>Delay Affliction</title>
       <category>Restoration</category>
       <level>4</level>
       <fluff>With effort and focus, you prevent an ally from continuing to suffer from his ailment... for now</fluff>
-      
+
       <price>150 gp</price>
       <skill>Heal</skill>
       <component>30 gp</component>
       <time>30 minutes</time>
       <duration>Varies</duration>
-      
+
       <line>This ritual puts a single enduring effect (any of those affected by the <i>remove affliction</i> ritual) on hold for the ritual's duration. Your Heal check result determines the duration, and you have a penalty on the check equal one-half the level of the effect you are trying to delay (or the level of the creature that caused it, if the level is not known). You take an additional -5 penalty if the effect is higher level than you are.</line>
-      <line indent="1"><b>Heal Check Result</b></line>
-      <line indent="2"><i>9 or lower:</i> 1 day</line>
-      <line indent="2"><i>10 - 19:</i> 3 days</line>
-      <line indent="2"><i>20 - 29:</i> 1 week</line>
-      <line indent="2"><i>30 or higher:</i> 2 weeks</line>
+      <line table="Heal Check Result">
+         <row name="9 or lower:">1 day</row>
+         <row name="10 - 19:">3 days</row>
+         <row name="20 - 29:">1 week</row>
+         <row name="30 or higher:">2 weeks</row>
+      </line>
       <line>Until the duration is over, the target acts in all ways as though he or she were not affected by the affliction.</line>
    </ritual>
-   
+
    <ritual>
       <title>Delver's Fire</title>
       <category>Exploration</category>
       <level>2</level>
       <fluff>This campfire burns anywhere but underwater</fluff>
-      
+
       <price>80 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <component>10 gp</component>
       <time>1 minute</time>
       <duration>12 hours</duration>
-      
+
       <line>You create a campfire that burns on any horizontal surface, and it needs no fuel beyond the ritual components used when casting this ritual. The fire burns for the duration of the ritual or until doused as any normal fire can be doused.</line>
    </ritual>
-   
+
    <ritual>
       <title>Detect Secret Doors</title>
       <category>Divination</category>
       <level>3</level>
       <fluff>To your eyes, the outline of a secret door seems to shimmer, making its location clear as day</fluff>
-      
+
       <price>100 gp</price>
       <skill>Arcana</skill>
       <component>20 gp</component>
       <time>10 minutes</time>
       <duration>1 hour</duration>
-      
+
       <line>For the duration of the ritual, you can use your Arcana check modifier in place of your Perception check modifier for the purposes of detecting secret doors, with a +5 item bonus. When you search an area, make one roll and check the result with your normal Perception modifier (for finding things other than secret doors) and this enhanced modifier (for finding secret doors).</line>
    </ritual>
-   
+
    <ritual>
       <title>Detect Tracks</title>
       <category>Divination</category>
       <level>5</level>
       <fluff>You use your supernatural sight to detect the spiritual emanations left by creature's passing through the area</fluff>
-      
+
       <price>200 gp</price>
       <skill>Arcana, Nature, or Religion</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>After performing this ritual, you can replace your Perception check modifier when making a Perception check to track. Use the skill check modifier for the skill that you used for the casting this ritual.</line>
       <line>To gain this benefit, you must be able to visualize or specifically name the target, such as "the orcs that attacked Nenlast". If you have a material link to your quarry, such as a lock of hair, you gain a +2 bonus to the checks.</line>
    </ritual>
@@ -955,71 +977,71 @@
       <line>You transform a stick or other natural object into dowsing rod. When you do so, name a natural feature of the environment, such as mountains, rivers, forests, or caves. The dowsing rod points the way to the nearest place that fits the description.</line>
       <line>You can't name a specific place, such as Mount Baneflame or a cave used as a bandit hideout, and the rod can't find magically concealed locations. When you reach the destination, the ritual is discharged.</line>
    </ritual>
-   
+
    <ritual>
       <title>Eavesdropper's Foil</title>
       <category>Warding</category>
       <level>4</level>
       <fluff>You broach the sensitive topic with confidence, for you are certain that no one will overhear you</fluff>
-      
+
       <price>140 gp</price>
       <skill>Arcana (no check)</skill>
       <component>25 gp</component>
       <time>10 minutes</time>
       <duration>6 hours</duration>
       <bardAffinity />
-      
+
       <line>You ward an area no more than a burst 3 against eavesdropping. The warded area moves with you for the duration.</line>
       <line>Each creature outside of the warded area that attempts to listen to communication within the area takes a -10 penalty to Perception checks and passive Perception to do so.</line>
    </ritual>
-   
+
    <ritual>
       <title>Enchant Magic Item</title>
       <category>Creation</category>
       <level>4</level>
       <fluff>Magic drawn from teh warp and weft of the universi infuses the item you hold in your hands</fluff>
-      
+
       <price>150 gp</price>
       <skill>Arcana (no check)</skill>
       <component>Varies</component>
       <time>1 hour</time>
       <duration>Instantaneous</duration>
-      
+
       <line>You handle an item during the casting of this ritual and turn it into a magic item of your level or lower. You can always create common magic items, and uncommon magic items at your DM's discretion, perhaps requiring a specific rare material or finding the instructions for doing so. You cannot usually create rare or unique magic items. The component cost is equal to the price of the magic item you create.</line>
       <line>Alternatively, you can use this ritual to upgrade an existing common, uncommon, or rare item to a more powerful version of the item. The new version must be of your level or lower, and the component cost is the difference in price between the old version and the new. Whether you can upgrade a unique item depends on the item and is decided by your DM.</line>
       <line>You can also use this ritual to resize magic armor (for example, shrink a fire giant's magic armor to fit a halfling) or alter the look of a magic item (this can't be used to hide the item's nature, only to change its aesthetic, such as adding or removing an inscribtion or making a dwarven-made armor look elven-made). There is no component cost for this use of the ritual.</line>
       <line>You cannot use this ritual to create alchemical items or potions. And while listed as items, divine boons, fey gifts of magic, rune syllables or special trainings do not count as items for this ritual.</line>
    </ritual>
-   
+
    <ritual>
       <title>Endure Elements</title>
       <category>Exploration</category>
       <level>2</level>
       <fluff>Neither the biting cold nor the searing heat troubles your group, making a travel in arctic or desert wastes as comfortable as in temperate climes</fluff>
-      
+
       <price>80 gp</price>
       <skill>Arcana, Nature or Religion (no check)</skill>
       <component>At least 5 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>This ritual lets you target up to five ritual participants, including yourself. The component costs of this ritual is equal to 5 gp, plus a 3 gp increase for each affected creature (thus a minimum of 8 gp if you only affect one creature that doesn't expend a healing surge).</line>
       <line>Target creatures ignore penalties associated with extremes of nonmagical weather and suffers no ill effects from extreme ambient temperatures. A target's equipment is likewise protected from the ravages of these temperatures and of precipitation.</line>
       <line><b>Special:</b> A creature affected by this ritual can expend a healing surge to negate the component cost increase for him or her.</line>
    </ritual>
-   
+
    <ritual>
       <title>Erudite Conversion</title>
       <category>Restoration</category>
       <level>1</level>
       <fluff>Taking a moment to breathe and concentrate intently on your powers, you convert arcane energy into restorative one</fluff>
-      
+
       <price>80 gp</price>
       <skill>Arcana (no check)</skill>
       <component>At least 5 gp</component>
       <time>1 minute</time>
       <duration>Instantaneous</duration>
-      
+
       <line>Favored by ritual casters accustomed to long battles and constant warfare, this ritual allows an individual to convert powerful spells into healing reserves.</line>
       <line>The component cost for this ritual is equal to 5 gp, plus a number of gp equal to one-half your level.</line>
       <line>After performing this ritual, you sacrifice any number of your unused daily arcane powers, and regain an equal number of expended healing surges. This does not allow you to exceed your normal daily maximum number of healing surges.</line>
@@ -1041,581 +1063,612 @@
       <line>You alter one fire of bonfire size or smaller within 5 squares of you. Light cast by the fire cannot be seen from more than 5 squares from the fire, regardless of how much light it casts.</line>
       <line>The fire's light is unchanged, and the ritual does not diminish or contain the fire's heat or sounds. Putting out the fire ends the ritual.</line>
    </ritual>
-   
+
    <ritual>
       <title>Explosive Runes</title>
       <category>Warding</category>
       <level>2</level>
       <fluff>You enchant innocuos-looking runes that pack a punch</fluff>
-      
+
       <price>60 gp</price>
       <skill>Arcana (no check)</skill>
       <component>1 healing surge and 4 gp</component>
       <time>1 minute</time>
       <duration>Until discharged</duration>
-      
+
       <line>You scribe magical runes on an object such as a book, a scroll, a map, or a similar item that weighs no more than 10 pounds. The runes look like normal writing, but function as the Explosive Runes trap.</line>
       <line>As you inscribe them, you can create a password that allows a creature to read the runes without triggering the trap. This ritual is discharged when the trip is either triggered or disabled.</line>
    </ritual>
-   
+
    <ritual>
       <title>Eye of Alarm</title>
       <category>Warding</category>
       <level>2</level>
       <fluff>You conjure forth a phantasmal sentry, a 6-feet-tall slender pillar topped with a floating, unblinking eye that watches over your camp as you sleep</fluff>
-      
+
       <price>60 gp</price>
       <skill>Arcana</skill>
       <component>5 gp</component>
       <time>20 minutes</time>
       <duration>24 hours or until discharged (see optional focus)</duration>
-      
+
       <line>This ritual creates watchful eyes that you place in any square within 10 squares of where you cast this ritual. Each eye is locacated in a particular square, but is intangible and can't be interacted with physically. They eyes are nearly invisible, and Stealth check result of 20 + your level to avoid detection.</line>
       <line>Your Arcana check result determines how many eyes you can place and what type of vision or sensory ability they possess.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> one eye, normal vision</line>
-      <line indent="2"><i>20 - 29:</i> three eyes, darkvision</line>
-      <line indent="2"><i>30 or higher:</i> five eyes, darkvision and tremorsense 12 squares</line>
+      <line table="Arcana Check Result">
+         <row name="19 or lower:">one eye, normal vision</row>
+         <row name="20 - 29:">three eyes, darkvision</row>
+         <row name="30 or higher:">five eyes, darkvision and tremorsense 12 squares</row>
+      </line>
       <line>The eyes do not hear, but they see well. Each uses your Perception score, with a +5 bonus.</line>
       <line>If an eye sees an intruder, it emits a loud warning sound defined by you during the ritual. This sound could be anything from a stentorian "Enemies approach!" to an owl's screech to a fanfare of trumpets. The DC to hear this sound is 0, modifier by distance as normal.</line>
       <line>The eyes never consider you an intruder. In addition, you can designate any number of other creatures present during the casting of the ritual as nonintruders. When you cast the ritual, you can also designate one or more categories of creatures as nonintruders. You can define these categories by obvious physical characteristics (such as height, weight, or body shape), creature type (such as humanoid), creature race (such as hill giant), or obvious equipment (such as a creature carrying a shield with a flame emblazoned on it).</line>
       <line>The ritual is discharged if you move at least 20 squares away from all of the eyes, unless you used the optional focus.</line>
       <line><b>Optional Focus:</b> You can extend the duration of this ritual indefinitely by using a focus a small, jeweled eye made of silver and ruby, worth 100gp. The ritual's effects last as long as the focus remains within 20 squares of at least one eye. You can hide or protect the focus in any way you like, as long as it remains within 20 squares.</line>
    </ritual>
-   
+
    <ritual>
       <title>Fastidiousness</title>
       <category>Warding</category>
       <level>1</level>
       <fluff>You are clean, and you would like to remain so, even while digging through grime for lost treasures</fluff>
-      
+
       <price>30 gp</price>
       <skill>Arcana, Nature or Religion (no check)</skill>
       <component>2 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>You or a creature within 2 squares of you is warded against becoming dirty.</line>
       <line>No matter what the target does, touches, walks through, or experiences, the target's person, clothes, and carried possessions are not soiled. If the target is in any way soiled when the ritual is completed, that filth is immediately shed.</line>
       <line>Attacks or other effects that involve dirtying the character work as normal, but leave no lasting waste or residue.</line>
    </ritual>
-   
+
    <ritual>
       <title>Feat of Strength</title>
       <category>Exploration</category>
       <level>4</level>
       <fluff>Your subject undergrous a transformation, bulking up as its body gains a layer of thick muscle</fluff>
-      
+
       <price>130 gp</price>
       <skill>Nature or Religion (see text)</skill>
       <component>15 gp</component>
       <time>1 minute</time>
       <duration>1 minute or until discharged</duration>
-      
+
       <line>Choose a target that is present while you cast this ritual. The target gains a boost to strength, enabling it to make a single Strength check or an Athletics check to jump with a bonus. The bonus is determined by your Nature check:</line>
-      <line indent="1"><b>Nature Check Result</b></line>
-      <line indent="2"><i>9 or lower:</i> +1 bonus</line>
-      <line indent="2"><i>10 - 19:</i> +2 bonus</line>
-      <line indent="2"><i>20 - 29:</i> +4 bonus</line>
-      <line indent="2"><i>30 - 39:</i> +6 bonus</line>
-      <line indent="2"><i>40 or higher:</i> +10 bonus</line>
+      <line table="Nature Check Result">
+         <row name="9 or lower:">+1 bonus</row>
+         <row name="10 - 19:">+2 bonus</row>
+         <row name="20 - 29:">+4 bonus</row>
+         <row name="30 - 39:">+6 bonus</row>
+         <row name="40 or higher:">+10 bonus</row>
+      </line>
       <line>The boost does not affect any other aspect of the character aside from making the Strength check or the Athletics check to jump. Your DM might allow you to apply the bonus to another check where raw physical strength is the main determining factor.</line>
       <line>Making the check discharges the ritual, but the target can choose to expend a healing surge as a free interrupt to prevent the ritual from discharging. This does not allow the ritual's duration to extend beyond its normal maximum.</line>
       <line><b>Religion:</b> A ritual caster of a divine class who worships a deity with the Strength domain can learn this ritual as a Religion ritual instead of Nature ritual.</line>
    </ritual>
-   
+
    <ritual>
       <title>Fluid Funds</title>
       <category>Creation</category>
       <level>2</level>
       <fluff>You can always make change</fluff>
-      
+
       <price>50 gp</price>
       <skill>Arcana (no check)</skill>
       <component>a focus</component>
       <time>1 minute</time>
       <duration>Instantaneous</duration>
-      
+
       <line>You drop coins, gemstones, or other valuables into a specially prepared coffer (the focus) and close the lid. When you open the lid, a quantity of coins appears in the box equal to the value of the items deposited inside.</line>
       <line>With this ritual, you can exchange a number of silver coins for a smaller number of gold coins of equivalent value, exchange a gemstone for its worth in gold, or exchange an art object for coins. Magic items or mundane equipment are not affected by this ritual.</line>
       <line><b>Focus:</b> A coffer worth 100 gp.</line>
    </ritual>
-   
+
    <ritual>
       <title>Fool's Gold</title>
       <category>Deception</category>
       <level>3</level>
       <fluff>You turn a pile of lesser coins into a mound of gold</fluff>
-      
+
       <price>120 gp</price>
       <skill>Arcana</skill>
       <component>Varies</component>
       <time>1 minute</time>
       <duration>Varies</duration>
-      
+
       <line>You create an amount of illusory gold that vanishes after a certain amount of time. The gold looks, feels, and smells like real gold and weighs as much as real gold.</line>
       <line>The amount of false gold you create is a multiple of the component cost you pay for the ritual. Your Arcana check determines the multiplier as well as the duration of the ritual.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>9 or lower:</i> 1 hour, &#215;2 multiplier</line>
-      <line indent="2"><i>10 - 19:</i> 2 hours, &#215;5 multiplier</line>
-      <line indent="2"><i>20 - 29:</i> 4 hours, &#215;10 multiplier</line>
-      <line indent="2"><i>30 - 39:</i> 8 hours, &#215;20 multiplier</line>
-      <line indent="2"><i>40 or higher:</i> 24 hours, &#215;100 multiplier</line>
+      <line table="Arcana Check Result">
+         <row name="9 or lower:">1 hour, ×2 multiplier</row>
+         <row name="10 - 19:">2 hours, ×5 multiplier</row>
+         <row name="20 - 29:">4 hours, ×10 multiplier</row>
+         <row name="30 - 39:">8 hours, ×20 multiplier</row>
+         <row name="40 or higher:">24 hours, ×100 multiplier</row>
+      </line>
    </ritual>
-   
+
    <ritual>
       <title>Fortify Beast</title>
       <category>Exploration</category>
       <level>5</level>
       <fluff>Your ritual ensures that your mount will carry you through difficult situations</fluff>
-      
+
       <price>200 gp</price>
       <skill>Nature (no check)</skill>
       <component>1 healing surge</component>
       <time>10 minutes</time>
       <duration>Until discharged</duration>
-      
+
       <line>You target up to six natural beasts with the Mount keyword, who must be present while you perform this ritual that prepares them for hardships.</line>
       <line>Each target gains temporary hit points equal to your healing surge value until this ritual is discharged. The ritual is discharged when you take an extended rest.</line>
    </ritual>
-   
+
    <ritual>
       <title>Gentle Repose</title>
       <category>Restoration</category>
       <level>1</level>
       <fluff>Your practiced hands perform the ritual fast enough to preserve the body for a later restoration</fluff>
-      
+
       <price>50 gp</price>
       <skill>Heal (no check)</skill>
       <component>1 healing surge, and 2 gp</component>
       <time>1 hour</time>
       <duration>Special</duration>
-      
+
       <line>You perform this ritual on an adjacent corpse.</line>
       <line>The ritual quintuples the time the target corpse can lie dead and still be affected by <i>raise dead</i> or a similar ritual.</line>
       <line>The target corpse is also protected from being raised as an undead creature for 150 days.</line>
    </ritual>
-   
+
    <ritual>
       <title>Glib Limerick</title>
       <category>Deception</category>
       <level>1</level>
       <fluff>You recite a short rhyme and feel your tongue loosen so the lies can flow freely</fluff>
-      
+
       <price>30 gp</price>
       <skill>Arcana (no check)</skill>
       <component>a focus, and 5 gp</component>
       <time>1 minute</time>
       <duration>10 minutes</duration>
       <bard />
-      
+
       <line>For the ritual's duration, whenever you make a Bluff check, you can roll twice and use either result. The ritual's effect immediately ends when you roll Initiative.</line>
       <line><b>Focus:</b> A musical instrument, worth at least 5 gp, that you play as part of performing the ritual.</line>
    </ritual>
-   
+
    <ritual>
       <title>Hallucinatory Item</title>
       <category>Deception</category>
       <level>5</level>
       <fluff>At your command, a phantasm of the item you've pictured in your mind shimmers into being before you, wavering once, twice, and then taking on solid form</fluff>
-      
+
       <price>220 gp</price>
       <skill>Arcana</skill>
       <component>15 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>You create the illusion of a single inanimate object within 10 squares of you. The object appears, to all intents and purposes, to be real. You can use this ritual to create an illusory wall, door, weapon, or other object. Once you create the illusion, you cannot move it, and it cannot include moving parts.</line>
       <line>Your Arcana check result determines the illusion's maximum size.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> Small of smaller</line>
-      <line indent="2"><i>20 - 29:</i> Medium or smaller</line>
-      <line indent="2"><i>30 - 39:</i> Large or smaller</line>
-      <line indent="2"><i>40 or higher:</i> Huge or smaller</line>
+      <line table="Arcana Check Result">
+         <row name="19 or lower:">Small or smaller</row>
+         <row name="20 - 29:">Medium or smaller</row>
+         <row name="30 - 39:">Large or smaller</row>
+         <row name="40 or higher:">Huge or smaller</row>
+      </line>
       <line>Creatures that examine or interact with the illusion are entitled to Insight checks to detect that it is false. The check's DC is equal to 10 + your Arcana skill check modifier. A creature is allowed a check the first time it is actively wary and sees the illusion (even if it is not wary of the illusion itself), and each time it interacts with it. A creature that touches an illusion automatically determines that the image is fake.</line>
       <line><b>Special:</b> You can expend a healing surge to perform this ritual as a standard action, but the duration is reduced to 1 hour.</line>
    </ritual>
-   
+
    <ritual>
       <title>Hold Portal</title>
       <category>Warding</category>
       <level>1</level>
       <fluff>With a quick word and sigils drawn on a door, you seal it magically</fluff>
-      
+
       <price>40 gp</price>
       <skill>Arcana</skill>
       <component>1 healing surge</component>
       <time>1 standard action</time>
       <duration>10 minutes or until discharged</duration>
-      
+
       <line>You magically hold shut one nonmagical door, gate, window, shutter, or similar device.</line>
       <line>Your Arcana check sets the DC for the Strength check or Thievery check needed to force the held portal open, which discharges the ritual.</line>
       <line>A creature with training in the Arcana skill can instead make an Arcana check against the same DC to discharge the spell.</line>
       <line><b>Special:</b> You can expend an additional healing surge to be able to affect a magical door, gate, or similar device.</line>
    </ritual>
-   
+
    <ritual>
       <title>Hunter's Curse</title>
       <category>Binding</category>
       <level>3</level>
       <fluff>You level your will against your pursuers or prey, hindering their progress</fluff>
-      
+
       <price>120 gp</price>
       <skill>Arcana, Nature, or Religion (no check)</skill>
       <component>1 healing surge, and 10 gp</component>
       <time>10 minutes</time>
       <duration>8 hours</duration>
-      
+
       <line>A creature or creatures you designate are hindered in overland travel.</line>
       <line>When you finish casting this ritual, you designate a creature or group you can visualize or name specifically. The crature or leader of the group must make either an Endurance check or a Nature check against a DC equal to 10 + the skill check modifier for your ritual skill. If the check fails, the overland speed of the creature or group is reduced by 2 for the ritual's duration.</line>
    </ritual>
-   
+
    <ritual>
       <title>Iron Vigil</title>
       <category>Exploration</category>
       <level>4</level>
       <fluff>Meditation and prayer are all the sustenance you need</fluff>
-      
+
       <price>140 gp</price>
       <skill>Religion (no check)</skill>
       <component>15 gp</component>
       <time>10 minutes</time>
       <duration>8 hours</duration>
-      
+
       <line>You invoke your dedication to your god and let it wash your fatigue and needs from you.</line>
       <line>For the duration of the ritual, you remain fully aware and alert while taking an extended rest.</line>
       <line>At the end of the duration, your body is refreshed. You count as eating and drinking enough to last you for the day.</line>
    </ritual>
-   
+
    <ritual>
       <title>Knock</title>
       <category>Exploration</category>
       <level>4</level>
       <fluff>A glowing key appears in front of the door and disappears into it, causing the door to glow for a moment and then unlock</fluff>
-      
+
       <price>150 gp</price>
       <skill>Arcana</skill>
       <component>1 healing surge, plus 10 gp</component>
       <time>1 minute</time>
       <duration>Instantaneous</duration>
-      
+
       <line>This ritual allows you to unlock a single locked door, chest, gate, or other object. It even works against portals sealed with the <i>arcane lock</i> ritual, as well as doors secured with bolts or bars that are on the far side, out of reach. The object you unlock does not open automatically; you still must open it yourself after it has been unlocked by the ritual.</line>
       <line>Make a Thievery check against each lock or closure on the object, using your Arcana check modifier with a +5 power bonus in place of your Thievery check modifier and the lock's normal DC. For bolts or bars you normally couldn't reach, the DC is higher of 20 or any other DC it might have.</line>
       <line>If you use this ritual successfully against a non-permanent <i>arcane barrier</i> or a point of ingress protected by the  <i>arcane lock</i> ritual, you end the effects of that ritual. If you use this ritual successfully against a permanent <i>arcane barrier</i>, you can choose to bring it down temporary instead of ending it.</line>
    </ritual>
-   
+
    <ritual>
       <title>Last Sight Vision</title>
       <category>Divination</category>
       <level>2</level>
       <fluff>As you finish the ritual, you see the final moments of the corpse's life play out</fluff>
-      
+
       <price>100 gp</price>
       <skill>Arcana, Religion, or Nature</skill>
       <component>5 gp</component>
       <time>5 minutes</time>
       <duration>Varies</duration>
-      
+
       <line>When you cast this ritual in the presence of a corpse or a skull, you witness an auditory and visual replay of the moments before the death of that creature, as seen from that creature's perspective.</line>
       <line>This ritual cannot target a headless corpse. Once you have cast this ritual, you must wait until you have gained a level before using it on the same corpse again.</line>
       <line>Your Arcana check, Religion check, or Nature check result determines the time prior to the target's death that you experience. This is also the ritual's duration, as the events play out in real time. During this, you are blind and deaf to what is happening around you.</line>
-      <line indent="1"><b>Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> One round</line>
-      <line indent="2"><i>20 - 29:</i> three rounds</line>
-      <line indent="2"><i>30 - 39:</i> five rounds</line>
-      <line indent="2"><i>40 or higher:</i> ten rounds</line>
+      <line table="Check Result">
+         <row name="19 or lower:">One round</row>
+         <row name="20 - 29:">three rounds</row>
+         <row name="30 - 39:">five rounds</row>
+         <row name="40 or higher:">ten rounds</row>
+      </line>
       <line><b>Nature:</b> When cast as a Nature ritual, the target corpse must be from natural creature or a plant, but you can choose to expend a healing surge instead of paying the usual component cost.</line>
    </ritual>
-   
+
    <ritual>
       <title>Leomund's Trap</title>
       <category>Deception</category>
       <level>3</level>
       <fluff>As you finish the ritual, an elaborate traps springs into existence and only you know it's only a figment</fluff>
-      
+
       <price>100 gp</price>
       <skill>Arcana (no check)</skill>
       <component>15 gp</component>
       <time>1 minute</time>
       <duration>Until discharged</duration>
-      
+
       <line>You lay the illusion of an elaborate trap over a lock or a similar mechanism, causing would-be thieves to give up before even trying.</line>
       <line>A creature can discern the ritual with Perception check with a DC equal to 10 + your Arcana check modifier. Unlocking the lock or using the mechanism discharged the ritual, unless all observing characters are you or immune to the illusion  .</line>
       <line>When you perform the ritual, you can designate one or more categories of creatures that are immune to this illusion. You can define these categories by obvious physical characteristics (such as height, weight, or body shape), creature type (such as humanoid), creature race (such as hill giant), or obvious equipment (such as a creature carrying a shield with a flame emblazoned on it).</line>
    </ritual>
-   
+
    <ritual>
       <title>Lesser Telepathy</title>
       <category>Divination</category>
       <level>5</level>
       <fluff>You focus your mind and become able to hear the thoughts of those who let you in</fluff>
-      
+
       <price>220 gp</price>
       <skill>Arcana (no check)</skill>
       <component>1 healing surge and 5 gp</component>
       <time>5 minutes</time>
       <duration>4 hours</duration>
-      
+
       <line>You gain telepathy 5, but can only use it to communicate with allies.</line>
       <line>A creature that has telepathy can communicate mentally with any creature that has a language, even if they don't share the language. The other creature must be within line of effect and within range. Telepathy allows for two-way communication.</line>
    </ritual>
-   
+
    <ritual>
       <title>Lower Water</title>
       <category>Exploration</category>
       <level>2</level>
       <fluff>The water vanishes into the ground as if it fears your presence and power</fluff>
-      
+
       <price>80 gp</price>
       <skill>Nature or Religion (see text)</skill>
       <component>1 healing surge or 5 gp</component>
       <time>10 minutes</time>
       <duration>1 hour</duration>
-      
+
       <line>You cause a body of water to reduce in depth. Your Nature check result determines how many squares the water lowers, while the space of water you can affect is determined by your level. The affected area of water is up to a number of squares on each side equal to your level. For example, if you are level 12, you can affect up to an area 12 squares on a side.</line>
       <line>If you lower the water to ground level or lower, the affected area becomes dry. In large bodies of water, the water outside of the area is unaffected. To an outside observer, the sides appear as walls of water. At the end of the duration, water rushes up to fill the volume it previously occupied.</line>
-      <line indent="1"><b>Nature Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> two squares</line>
-      <line indent="2"><i>20 - 29:</i> four squares</line>
-      <line indent="2"><i>30 - 39:</i> eight squares</line>
-      <line indent="2"><i>40 or higher:</i> sixteen squares</line>
+      <line table="Nature Check Result">
+         <row name="19 or lower:">two squares</row>
+         <row name="20 - 29:">four squares</row>
+         <row name="30 - 39:">eight squares</row>
+         <row name="40 or higher:">sixteen squares</row>
+      </line>
       <line><b>Religion:</b> A ritual caster of a divine class who worships a deity with the Wilderness domain can learn this ritual as a Religion ritual instead of Nature ritual.</line>
       <line><b>Special:</b> If you are lowering a larger volume of water than you can affect with a single casting, you can expend a healing surge when you finish casting the ritual.</line>
       <line>If you expend the healing surge and immediately begin another casting of this ritual, the affected volume remains magically lowered without counting against the previous casting's duration for the duration of the casting. You can keep expending healing surges to combine castings as long as you have healing surges remaining.</line>
    </ritual>
-   
+
    <ritual>
       <title>Lullaby</title>
       <category>Exploration</category>
       <level>3</level>
       <fluff>Your audience grows sleepy with your soothing performance</fluff>
-      
+
       <price>100 gp</price>
       <skill>Arcana</skill>
       <component>a focus, and 15 gp</component>
       <time>10 minutes</time>
       <duration>As long as you play, plus 10 minutes</duration>
       <bard />
-      
+
       <line>Your performance makes your audience drowsy, making it harder for them to react to anything.</line>
       <line>Your Arcana check result determines the penalty that each creature that can see and hear you (other than you and allies you designate when you begin performing the ritual) take on Insight checks and Perception checks.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> -2 penalty</line>
-      <line indent="2"><i>20 - 29:</i> -4 penalty</line>
-      <line indent="2"><i>30 - 39:</i> -6 penalty</line>
-      <line indent="2"><i>40 or higher:</i> -10 penalty</line>
+      <line table="Arcana Check Result">
+         <row name="19 or lower:">-2 penalty</row>
+         <row name="20 - 29:">-4 penalty</row>
+         <row name="30 - 39:">-6 penalty</row>
+         <row name="40 or higher:">-10 penalty</row>
+      </line>
       <line>Affected creatures are considered distracted, allowing your allies (and you, after you stop performing) to make Stealth checks to hide from them even without cover or concealment. Your DM might also allow other effects.</line>
    </ritual>
-   
+
    <ritual>
       <title>Magic Circle</title>
       <category>Binding</category>
       <level>5</level>
       <fluff>The circle of symbols scratched into the ground glows and sparks briefly when a target reaches the boundary</fluff>
-      
+
       <price>220 gp</price>
       <skill>Arcana, or Religion</skill>
       <component>25 gp</component>
       <time>1 hour</time>
       <duration>Until broken</duration>
-      
+
       <line>When you perform this ritual, choose aberrant, elemental, fey, immortal, natural, shadow, or all. You inscribe a circle on the ground, a circle emblazoned with symbols of protection. When drawn correctly, these symbols make it difficult for creatures of the chosen origin to enter or pass. The circle takes 1 minute to inscribe per square inside the circle (and it must be a circle) in addition to the time it takes to perform this ritual.</line>
       <line>Make a skill check using the key skill you used when performing the ritual, with a -5 penalty to the check if you chose to affect all origins. You can fully affect creatures of a level up to the level whose moderate DC you beat. A fully affected creature cannot pass through the circle, affect creatures through the circle's boundary, or affect the boundary in any way. Creatures of the chosen origin but a higher level can pass through the circle, but doing so causes force damage to the creature and breaks the circle. The force damage equals 1d8 + 1d8 per two levels you could affect.</line>
       <line>A creature that is not of the chosen origin is unaffected. An unaffected creature can take a standard action to obscure the inscription and break the circle.</line>
    </ritual>
-   
+
    <ritual>
       <title>Magic Mouth</title>
       <category>Exploration</category>
       <level>1</level>
       <fluff>The stone wall grinds as it reshapes into the semblance of dry, cracked lips framing teeth like canting tombstones</fluff>
-      
+
       <price>40 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <component>5 gp</component>
       <time>10 minutes</time>
       <duration>Until discharged</duration>
       <bardAffinity />
-      
+
       <line>You bind a message into a surface you touch. When conditions you set are met, the surface manifests a mouth and conveys your message, discharging the ritual.</line>
       <line>The mouth appears to be made out of the same material as the surface, but you otherwise decide the mouth's appearance.</line>
       <line><b>Special:</b> You can expend a healing surge to perform this ritual as a standard action or the time it takes for you to convey the message, whichever is longer. If the length of your message is 25 words or less, you do not pay the normal component cost.</line>
    </ritual>
-   
+
    <ritual>
       <title>Make Whole</title>
       <category>Exploration</category>
       <level>1</level>
       <fluff>As you finish the ritual, the oaken door stands whole and unblemished as if it had not just been burst through in a surprise attack</fluff>
-      
+
       <price>40 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <component>Varies</component>
       <time>10 minutes</time>
       <duration>Instantaneous</duration>
-      
+
       <line>A single object that can fit in a 10-foot cube is completely repaired. At the DM's discretion, you can restore a larger object by increasing the casting time by 10 minutes for each 10-foot cube.</line>
       <line>The component cost is one-fifth of the item's cost. In cases where you attempt to repair an item not on any price list, the DM determines the cost.</line>
       <line><b>Special:</b> You can expend a healing surge to ignore the component cost of this ritual. If you do, you must have all of the pieces of the item to be restored, and the ritual only lasts for 24 hours, after which the item returns to its broken state. Each time this ritual is used on the same item in this way, the number of healing surges increases by one unless the item has been fully repaired or restored.</line>
    </ritual>
-   
+
    <ritual>
       <title>Mindshape Drake</title>
       <category>Creation</category>
       <level>5</level>
       <fluff>Like the dragonborn beastmasters of old, you instantly tame a drake with a violent burst of psychic energy</fluff>
-      
+
       <price>250 gp</price>
       <skill>Arcana or Nature</skill>
       <component>100 gp</component>
       <time>1 hour</time>
       <duration>Permanent</duration>
-      
+
       <line>This ritual targets a single drake bound inside a <i>magic circle</i> drawn to bind natural creatures.</line>
       <line>When you finish casting the ritual, make an Arcana check or Nature check to determine the effects. The DC is equal to the moderate DC for the target's level or level 5, whichever is higher. Your DM can increase the DC for particularly powerful creatures, especially elites, and solos can never be targeted by this ritual.</line>
-      <line indent="1"><b>Check Result</b></line>
-      <line indent="2"><i>Under DC -10:</i> -4 Int; berserk</line>
-      <line indent="2"><i>DC -10 to DC -5:</i> -2 Int; still wild</line>
-      <line indent="2"><i>DC -4 to DC:</i> -1 Int; tame and trained</line>
-      <line indent="2"><i>Over DC:</i> Tame and trained</line>
-      <line indent="2"><i>Hard DC or higher:</i> Tame and trained; can speak</line>
+      <line table="Check Result">
+         <row name="Under DC -10:">-4 Int; berserk</row>
+         <row name="DC -10 to DC -5:">-2 Int; still wild</row>
+         <row name="DC -4 to DC:">-1 Int; tame and trained</row>
+         <row name="Over DC:">Tame and trained</row>
+         <row name="Hard DC or higher:">Tame and trained; can speak</row>
+      </line>
       <line>If the drake's Intelligence is lowered, it never recovers the lost ability, even if the ritual is later undone. A drake whose Intelligence is reduced to 0 dies.</line>
       <line>A berserk drake will attack the closest creature with no care for its own safety if released from the <i>magic circle</i>.</line>
       <line>A tame and trained drake is ready to accept a rider and riding gear, and it understands commands. It is loyal to either you, or one creature you designate when performing the ritual. Such a creature can be trained to accept other potential riders and masters.</line>
       <line>If the drake gains the ability to speak, it speaks in a broken form of a language you select from those you know when you complete the ritual.</line>
       <line>You can cast this ritual on the same drake multiple times, each time replacing the previous result with the new one. The Intelligence reduction from each casting stacks.</line>
    </ritual>
-   
+
+   <ritual>
+      <title>Object Reading</title>
+      <category>Divination</category>
+      <level>5</level>
+      <fluff>You touch the mysterious object and see images in your mind of its history</fluff>
+
+      <price>200 gp</price>
+      <skill>Arcana</skill>
+      <component>5 gp</component>
+      <time>10 minutes</time>
+      <duration>5 minutes</duration>
+
+      <line>You see images you wish to see related to an object you hold at the completion of the ritual. Your Arcana check result determines the number of images you see that are associated with the object's past. You might choose to see a sword's last owner, the creature that forged it, and the last creature it killed.</line>
+      <line table="Arcana Check Result">
+         <row name="9 or lower:">1 image</row>
+         <row name="10 - 19:">2 images</row>
+         <row name="20 - 29:">3 images</row>
+         <row name="30 or higher:">5 images</row>
+      </line>
+   </ritual>
+
    <ritual>
       <title>Pass without Trace</title>
       <category>Exploration</category>
       <level>1</level>
       <fluff>After the completion of this ritual, it is as if someone keeps erasing the marks you and your allies leave in your surroundings</fluff>
-      
+
       <price>35 gp</price>
       <skill>Nature (no check)</skill>
       <component>At least 4 gp</component>
       <time>1 minute</time>
       <duration>10 hours</duration>
-      
+
       <line>You and up to five allies present while you perform this ritual leave fewer tracks. The component costs of this ritual is equal to 4 gp, plus a 2 gp increase for each affected creature (thus a minimum of 6 gp if you only affect yourself and don't expend a healing surge).</line>
       <line>The DC to track those affected by the ritual increases by 5, as if you had taken the time to obscure the tracks.</line>
       <line><b>Special:</b> A creature affected by this ritual can expend a healing surge to negate the component cost increase for him or her.</line>
    </ritual>
-   
+
    <ritual>
       <title>Portend Weather</title>
       <category>Divination</category>
       <level>1</level>
       <fluff>You see what the weather will be in the near future</fluff>
-      
+
       <price>30 gp</price>
       <skill>Nature (no check)</skill>
       <component>2 gp</component>
       <time>1 minute</time>
       <duration>24 hours</duration>
-      
+
       <line>You determine what the weather will be like for the next 24 hours within a 50-mile radius of your current position.</line>
       <line>You and up to 8 allies present during the casting of this ritual gain a +5 bonus to Endurace checks to endure any extreme weather you foresee.</line>
    </ritual>
-   
+
    <ritual>
       <title>Preservation</title>
       <category>Warding</category>
       <level>2</level>
       <fluff>A wizard is likely to use this ritual to keep his tomes from mold and other dangers; her companions would appreciate the same help with trail rations</fluff>
-      
+
       <price>90 gp</price>
       <skill>Arcana or Nature</skill>
       <component>At least 3 gp</component>
       <time>10 minutes</time>
       <duration>Permanent</duration>
-      
+
       <line>You enchant a quantity of nonliving organic material so that it resists all natural deterioration. Rot, mold, consuming vermin, and the like all leave the enchanted material alone. Damage intentionally done can still harm the material.</line>
       <line>Your Arcana check or Nature check determines how much material you can affect with one ritual casting. This ritual's component cost depends on the maximum amount that can be affected (you can choose a lower result than you rolled).</line>
-      <line indent="1"><b>Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> up 10 pounds, 3 gp</line>
-      <line indent="2"><i>20 - 29:</i> up to 20 pounds, 5 gp</line>
-      <line indent="2"><i>30 - 39:</i> up 50 pounds, 10 gp</line>
-      <line indent="2"><i>40 - 49:</i> up to 100 pounds, 20 gp</line>
-      <line indent="2"><i>50 or higher:</i> up to 200 pounds, 40 gp</line>
+      <line table="Check Result">
+         <row name="19 or lower:">up 10 pounds, 3 gp</row>
+         <row name="20 - 29:">up to 20 pounds, 5 gp</row>
+         <row name="30 - 39:">up 50 pounds, 10 gp</row>
+         <row name="40 - 49:">up to 100 pounds, 20 gp</row>
+         <row name="50 or higher:">up to 200 pounds, 40 gp</row>
+      </line>
    </ritual>
-   
+
    <ritual>
       <title>Purify Water</title>
       <category>Exploration</category>
       <level>1</level>
       <fluff>The tainted water becomes crystal clear and refreshing to drink</fluff>
-      
+
       <price>30 gp</price>
       <skill>Arcana, Nature, or Religion</skill>
       <component>at least 10 gp</component>
       <time>10 minutes</time>
       <duration>Instantaneous</duration>
-      
+
       <line>You purify a volume of water. </line>
       <line>Your Arcana check, Nature check or Religion check determines the volume of water that you can purify.</line>
-      <line indent="1"><b>Check Result</b></line>
-      <line indent="2"><i>9 or lower:</i> a 5-foot cube</line>
-      <line indent="2"><i>10 - 19:</i> two 5-foot cubes</line>
-      <line indent="2"><i>20 - 29:</i> five 5-foot cubes</line>
-      <line indent="2"><i>30 - 39:</i> twenty 5-foot cubes</line>
-      <line indent="2"><i>40 or higher:</i> fifty 5-foot cubes</line>
+      <line table="Check Result">
+         <row name="9 or lower:">a 5-foot cube</row>
+         <row name="10 - 19:">two 5-foot cubes</row>
+         <row name="20 - 29:">five 5-foot cubes</row>
+         <row name="30 - 39:">twenty 5-foot cubes</row>
+         <row name="40 or higher:">fifty 5-foot cubes</row>
+      </line>
       <line>The component cost for the ritual is 10 gp for each 5-foot cube.</line>
-      <line>A 5-foot cube is roughly 935 gallons of liquid, or the contents of a sizable barrel.</line>
+      <line>A 5-foot cube is roughly 933 gallons of liquid, or the contents of a sizable barrel.</line>
       <line><b>Special:</b> If you are purifying a larger volume of water than you can affect with a single casting, you can expend a healing surge when you finish casting the ritual.</line>
       <line>If you expend the healing surge and immediately begin another casting of this ritual, the affected volume remains magically pure for the duration of the casting. You can keep expending healing surges to combine castings as long as you have healing surges remaining.</line>
    </ritual>
-   
+
    <ritual>
       <title>Pyrotechnics</title>
       <category>Creation</category>
       <level>1</level>
       <fluff>A flare soars into the night sky and explodes with brilliant color</fluff>
-      
+
       <price>30 gp</price>
       <skill>Arcana (no check)</skill>
       <component>2 gp</component>
       <time>1 minute</time>
       <duration>10 minutes</duration>
-      
+
       <line>You send a barrage of small, colorful explosions into the sky.</line>
       <line>The explosions blossom into whatever color or shape you choose for 1 minute. At the end of each 1 minute of the ritual's duration, you can choose a new color and shape.</line>
       <line>At night, the lights are visible in a 10-mile radius. During the day, the lights are visible within a 1-mile radius.</line>
    </ritual>
-   
+
    <ritual>
       <title>Raise Beast Companion</title>
       <category>Restoration</category>
       <level>1</level>
       <fluff>You call out to your beast companion and, though death separates you, the ties of faith and friendship between you can cross any gulf</fluff>
-      
+
       <price>none</price>
       <skill>Nature (no check)</skill>
       <component>at least 50 gp</component>
       <time>4 hours</time>
       <duration>Instantaneous</duration>
       <requirement>You must have an animal companion, a beast companion, or a similar feature</requirement>
-      
+
       <line>This ritual allows you to restore life to your slain companion. It functions as the <i>raise dead</i> ritual, with the following exceptions:</line>
       <line indent="1"><bullet />You can expend a healing surge to perform the ritual without having a part of your companion's corpse.</line>
       <line indent="1"><bullet />The death penalty fades after you finish three encounter without expending an action point.</line>
       <line indent="1"><bullet />The component cost for a paragon companion is 500 gp, and 5,000 gp for an epic companion.</line>
       <line><b>Special:</b> A character trained in Nature automatically masters this ritual without needing a ritual book if they have an animal companion, beast companion, or similar feature, even if they can't otherwise cast rituals.</line>
    </ritual>
-   
+
    <ritual>
       <title>Raise Dead</title>
       <category>Restoration</category>
       <level>8</level>
       <fluff>You bend over the body of your slain comrade, applying sacramental unguents until, finally, their eyes flutter open as life has been restored</fluff>
-      
+
       <price>600 gp</price>
       <skill>Heal (no check)</skill>
       <component>at least 400 gp</component>
       <time>8 hours</time>
       <duration>Instantaneous</duration>
-      
+
       <line>To perform this ritual, you must have a part of the corpse of a creature that died no more than 20 days ago.</line>
       <line>You apply mystic salves, then pray to the gods to restore the dead creature's life. The subject returns to life as if he or she had taken an extended rest. The subject is freed of any temporary conditions suffered at death, but permanent conditions remain.</line>
       <line>The subject returns with a death penalty: -1 to all attack rolls, skill checks, saving throws, and ability checks. This death penalty fades after the subject finishes four encounters without expending action points.</line>
@@ -1624,164 +1677,223 @@
       <line>In all cases, death is less inclined to return paragon and epic heroes; the component cost is 4,000 gp for returning a paragon tier character to life, and 40,000 for returning an epic tier character to life. Also, <i>raise dead</i> counts as a ritual of the target's level or level 8, whichever is higher, for abilities that let you cast rituals at reduced cost, for free, or with other modifications.</line>
       <line><b>Special:</b> You can extend the time that the subject has been dead by expending 2 healing surges for each 5-day extension.</line>
    </ritual>
-   
+
    <ritual>
       <title>Read Omens</title>
       <category>Divination</category>
       <level>2</level>
       <fluff>You cast your prepared tools, such as marked sticks or stones, and receive a glimpse of what will happen</fluff>
-      
+
       <price>80 gp</price>
       <skill>Arcana or Religion</skill>
       <component>1 healing surge and a focus</component>
       <time>5 minutes</time>
       <duration>Instantaneous</duration>
-      
+
       <line>You can ask one question regarding a particular action, framing the question so that the answer tells you whether the chosen action will benefit or harm you or an ally.</line>
       <line>This ritual can see only about half an hour into the future, and it deals only with the immediate effects of taking a specific action. The ritual cannot deduce long-term consequences or predict the outcome of long-term actions.</line>
       <line>Once you ask the question, the DM secretly rolls your Arcana check or Religion check for you against a DC. The DC is usually a moderate DC of any relevant challenge's level, or other DC determined by the DM. If you try again to predict the outcome of the same action, the ritual supplies the same check result.</line>
       <line>On a successful result, the DM provides you with one of the following four results:</line>
-      <line indent="1"><i>Weal</i> - A good result, such as when the reward outweights the risk.</line>
-      <line indent="1"><i>Woe</i> - A bad result, such as when the risk outweights the reward.</line>
-      <line indent="1"><i>Weal and Woe</i> - Both good and bad, such as when the reward is equal to the risk.</line>
-      <line indent="1"><i>Nothing</i> - Neither a good or bad result.</line>
+      <line table="">
+         <row name="Weal">A good result, such as when the reward outweighs the risk.</row>
+         <row name="Woe">A bad result, such as when the risk outweighs the reward.</row>
+         <row name="Weal and Woe">Both good and bad, such as when the reward is equal to the risk.</row>
+         <row name="Nothing">Neither a good nor bad result.</row>
+      </line>
       <line>On a failed check you gain the "Nothing" result from above. You can't tell if this nothing is due to a successful check or a failed check.</line>
       <line><b>Focus:</b> Specially prepared tools, such as marked sticks, stones or bones, special dice, or similar tokens worth 50 gp.</line>
    </ritual>
-   
+
+   <ritual>
+      <title>Seal Death's Door</title>
+      <category>Warding</category>
+      <level>5</level>
+      <fluff>With specially prepared herbs, you make sure that even if your ally goes down, they are not out for good</fluff>
+
+      <price>200 gp</price>
+      <skill>Heal (no check)</skill>
+      <component>5 gp and 1 healing surge</component>
+      <time>1 minute</time>
+      <duration>24 hours</duration>
+
+      <line>Choose yourself, or an ally who must be present while you perform the ritual. The chosen character gains a +2 power bonus to death saving throws.</line>
+   </ritual>
+
    <ritual>
       <title>Secret Page</title>
       <category>Warding</category>
       <level>1</level>
       <fluff>While your opponents might be able to find your journal, they'll never see what you wrote there</fluff>
-      
+
       <price>30 gp</price>
       <skill>Arcana</skill>
       <component>1 gp</component>
       <time>10 minutes</time>
       <duration>Permanent</duration>
-      
+
       <line>You ward writings so others cannot read them. Use this ritual to protect one page (maximum 250 words).</line>
       <line>You make the page appear not to exist, causing any other than you to ignore it; the page's presence is blocked from the a reader's mind. You can choose instead to obscure the page with false writings, which you produce before performing the ritual. Other readers see the false text rather than the real text.</line>
       <line>The DC for a Perception check to notice the concealed writing is equal to 15 + your Arcana check modifier. Readers use passive Perception unless they are specifically looking for concealed text.</line>
    </ritual>
-   
+
    <ritual>
       <title>Seek Rumor</title>
       <category>Divination</category>
       <level>2</level>
       <fluff>Noises fade away, replaced by whispers of alleyways and clamor of taverns that you shift through, finding a few phrases related to your purpose</fluff>
-      
+
       <price>65 gp</price>
       <skill>Arcana or Nature</skill>
       <component>10 gp</component>
       <time>1 hour</time>
       <duration>Instantaneous</duration>
-      
+
       <bardAffinity/>
-      
+
       <line>You sit in meditation and let rumor drift into your mind, blown in on the wind of the community consciusness.</line>
       <line>Your Arcana check result counts as a Streetwise check to gather information, though the DC counts as being 5 higher than it would otherwise be. You learn only information you could pick by normal use of the Streetwise skill.</line>
    </ritual>
-   
+
+   <ritual>
+      <title>Self-Holding Bag</title>
+      <category>Exploration</category>
+      <level>5</level>
+      <fluff>Tucking your bag of holding into itself, you make it disappear completely into an impossible space</fluff>
+
+      <price>180 gp</price>
+      <skill>Arcana (no check)</skill>
+      <component>a focus</component>
+      <time>10 minutes</time>
+      <duration>24 hours</duration>
+
+      <line>You fold the focus into itself and bind the resulting nothing to you. For the duration, you can pull the focus out of an extradimensional space or put it back in as a minor action.</line>
+      <line>When the duration ends, the focus appears at your feet.</line>
+      <line><b>Focus: </b> A <i>bag of holding</i>.</line>
+   </ritual>
+
    <ritual>
       <title>Shatter</title>
       <category>Exploration</category>
       <level>4</level>
       <fluff>Glass and crystal all around you explodes into countless pieces as you finish this ritual</fluff>
-      
+
       <price>130 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <component>1 healing surge</component>
       <time>1 minute</time>
       <duration>Instantaneous</duration>
-      
+
       <bardAffinity />
-      
+
       <line>You can shatter nonmagical objects composed of crystal, glass, ceramic, porcelain, and similar fragile materials. You can choose to affect either an area or a single target:</line>
       <line indent="1"><i>Area:</i> You shatter all objects of the proper composition in a close burst 3. An object heavier than 5 pounds, larger than Tiny, or more valuable than 25 gp is immune to the area version.</line>
       <line indent="1"><i>Target:</i> You shatter a single object of the proper composition within 10 squares of you. An object heavier than 50 pounds, larger than Medium, or more valuable than 250 gp is immune to the targeted version.</line>
       <line><b>Special:</b> You can perform this ritual as a standard action. If you do, each object is allowed a saving throw to be unaffected.</line>
    </ritual>
-   
+
    <ritual>
       <title>Silence</title>
       <category>Warding</category>
       <level>1</level>
       <fluff>You block away any inquisitive ears that might be after your secrets</fluff>
-      
+
       <price>25 gp</price>
       <skill>Arcana (no check)</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
       <bardAffinity />
-      
+
       <line>You ward a single room (or a burst 4 area) against eavesdropping. Creatures outside of the area attempting to liston to something in the area take a -10 penalty to their Perception checks and passive Perception to do so.</line>
    </ritual>
-   
+
    <ritual>
       <title>Silent Image</title>
       <category>Deception</category>
       <level>1</level>
       <fluff>The arcane words you mutter turn into colors that you trace on thin air with your fingers in intricate patterns, painting a life-like picture</fluff>
-      
+
       <price>30 gp</price>
       <skill>Arcana (no check)</skill>
       <component>2 gp</component>
       <time>1 minute</time>
       <duration>1 hour or until discharged</duration>
-      
+
       <line>You create an illusion of an object, a creature, or an effect such as fire. The illusion has only a visual aspect.</line>
       <line>A creature can use a minor action to make an Arcana check or a Perception check (DC 10 + your Arcana skill check modifier) when it sees the illusion. If the check succeeds, the creature discerns the illusory nature of the image.</line>
       <line>If a creature interacts with the image, the illusory nature is readily apparent, and the ritual is immediately discharged.</line>
       <line><b>Special:</b> You can expend a healing surge to perform this ritual as a standard action. If you do, the DC to discern the illusion is reduced by 5.</line>
       <line><b>Ritual Scroll:</b> When you perform this ritual from a ritual scroll, you can do so as a standard action, as if you had expended a healing surge to do so.</line>
    </ritual>
-   
+
+   <ritual>
+      <title>Speak with Nature</title>
+      <category>Divination</category>
+      <level>5</level>
+      <fluff>Animals and plants respond to your queries, revealing what they have seen and what they know</fluff>
+
+      <price>200 gp</price>
+      <skill>Nature</skill>
+      <component>20 gp</component>
+      <time>10 minutes</time>
+      <duration>1 hour or until discharged</duration>
+
+      <line>For the ritual's duration, you can communicate with natural beasts and mundane plants (but not plant creatures). The ritual does not make animals friendly, and the animals or plants are limited in their knowledge by their experiences and mobility. For example, a plant knows only about its immediate surroundings, and a fish can describe only what it has seen or experienced underwater.</line>
+      <line>Your Nature check result determines the number of questions you can ask. Once you have asked all the questions allowed by the ritual, the ritual ends.</line>
+      <line table="Nature Check Result">
+         <row name="9 or lower:">Zero questions</row>
+         <row name="10 - 19:">One question</row>
+         <row name="20 - 29:">Two questions</row>
+         <row name="30 - 39:">Five questions</row>
+         <row name="40 or higher:">Ten questions</row>
+      </line>
+   </ritual>
+
    <ritual>
       <title>Spirit Fetch</title>
       <category>Exploration</category>
       <level>2</level>
       <fluff>You call forth an insubstantial spirit -whether fey, primal, or shadow- to unpleasantly influence another to do your bidding</fluff>
-      
+
       <price> 80 gp</price>
       <skill>Arcana, Religion, or Nature</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>Varies</duration>
-      
+
       <line>When complete, this ritual calls forth a spiritual essence, or "fetch", of a shape you define. Typically these fetches are small, indistinct, and shaped like a small animal or person.</line>
       <line>You can send this spirit to a creature (or creatures) whose specific appearance you can visualize or whose name you provice, or to whom you have a material connection such as a vial of blood.</line>
       <line>You whisper a simple command of 10 words or less, such as "Come to me", "Bring me the ritual components", or "Burn down the fortress wall". The fetch then goes out at a rapid pace (speed 15) and seeks out the creature you specify. It cannot communicate, but the recipient senses its presence and receives your command.</line>
       <line>Unless the recipient does as you wish, the fetch remains as a constant reminder at the target's side.</line>
       <line>The fetch cannot be harmed, but abilities that destroy conjurations drive it away for a day.</line>
       <line>Your Arcana check, Religion check, or Nature check result determines how long the fetch persists in reminding the target. If the target is at least 5 levels higher than you, use a result one category worse. If it is at least 10 levels higher than you, use a result two categories worse.</line>
-      <line indent="1"><b>Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> 12 hours</line>
-      <line indent="2"><i>20 - 29:</i> 1 day</line>
-      <line indent="2"><i>30 - 39:</i> 1 week</line>
-      <line indent="2"><i>40 or higher:</i> 1 month</line>
+      <line table="Check Result">
+         <row name="19 or lower:">12 hours</row>
+         <row name="20 - 29:">1 day</row>
+         <row name="30 - 39:">1 week</row>
+         <row name="40 or higher:">1 month</row>
+      </line>
    </ritual>
-   
+
    <ritual>
       <title>Skull Watch</title>
       <category>Warding</category>
       <level>4</level>
       <fluff>As you complete the words of power, a light shines from the skull's sockets before fading again into blackness</fluff>
-      
+
       <price>140 gp</price>
       <skill>Arcana or Religion (no check)</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>This ritual enchants one or more skulls that you place in any square within 10 squares of where you cast this ritual. Each skull is physically placed in a particular spot, and can be interacted with physically. A skull can be moved from its original position as long as it remains within 1 mile of any other skulls (a single skull enchanted has no restrictions).</line>
       <line>Your Arcana check result determines how many skulls you can enchant and what type of vision they possess.</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> one skull, normal vision</line>
-      <line indent="2"><i>20 - 29:</i> three skulls, low-light vision</line>
-      <line indent="2"><i>30 or higher:</i> five skulls, darkvision</line>
+      <line table="Arcana Check Result">
+         <row name="19 or lower:">one skull, normal vision</row>
+         <row name="20 - 29:">three skulls, low-light vision</row>
+         <row name="30 or higher:">five skulls, darkvision</row>
+      </line>
       <line>The skulls do not hear, but they see well. Each uses your Perception score, with a +5 bonus.</line>
       <line>If a skull sees an intruder, it emits a mental warning that you receive if you are within 1 mile. You are magically aware of being outside of the 1 mile range while the ritual's duration lasts.</line>
       <line>The skulls never consider you an intruder. In addition, you can designate any number of other creatures present during the casting of the ritual as nonintruders. When you cast the ritual, you can also designate one or more categories of creatures as nonintruders. You can define these categories by obvious physical characteristics (such as height, weight, or body shape), creature type (such as humanoid), creature race (such as hill giant), or obvious equipment (such as a creature carrying a shield with a flame emblazoned on it).</line>
@@ -1789,234 +1901,236 @@
       <line>Destroying a skull ends the effect for that skull, and you are not made magically aware of the skull's destruction (though you might already be alerted about intruders).</line>
       <line><b>Optional Focus:</b> You can extend the duration of this ritual on a single skull indefinitely by using a focus: a small, jeweled eye made of silver and ruby, worth 150gp. The ritual's effects last as long as the focus remains within 20 squares of at the skull. You can hide or protect the focus in any way you like, as long as it remains within 20 squares.</line>
    </ritual>
-   
+
    <ritual>
       <title>Summon Winds</title>
       <category>Exploration</category>
       <level>3</level>
       <fluff>You send out a call, and a stirring breeze answers</fluff>
-      
+
       <price>120 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>8 hours</duration>
-      
+
       <line>You conjure a stiff breeze and direct it.</line>
       <line>You can increase a sailing vessel's speed by 2 miles per hour while you keep the winds in the vessel's sails.</line>
       <line>You can dismiss the winds as a free action on your turn.</line>
    </ritual>
-   
+
    <ritual>
       <title>Tenser's Floating Disk</title>
       <category>Exploration</category>
       <level>1</level>
       <fluff>A plane of force follows you everywhere, like a porter that never needs rest</fluff>
-      
+
       <price>10 gp</price>
       <skill>Arcana</skill>
       <component>2 gp</component>
       <time>10 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>You create a slightly concave, circular plane of force that floats a foot off the ground and can carry what you lay upon it. The disk is 3 feet in diameter and 1 inch deep at its center.</line>
       <line>The disk remains stationary unless you move more than 5 squares away from it, in which case it immediately moves with your base speed towards you once. If it cannot end this movement within 5 squares of you, it continues to move once at the end of your subsequent turns until it is within 5 squares of you. If you are more then 5 squares away from the disk at the end of your turn (after the disk has moved) for more than 2 consecutive turns, the disk disappears, dropping whatever it was carrying.</line>
       <line>As a move action, you can command the disk to move. If it is within 5 squares of you, it can move to any other position within 5 squares of you by the shortest possible path. If it is not within 5 squares of you, it moves at your base speed towards you. You cannot move the disk if you are on it.</line>
       <line>Your Arcana check result determines the maximum load the disk can carry:</line>
-      <line indent="1"><b>Arcana Check Result</b></line>
-      <line indent="2"><i>9 or lower:</i> 250 pounds</line>
-      <line indent="2"><i>10 - 19:</i> 500 pounds</line>
-      <line indent="2"><i>20 - 29:</i> 500 pounds, and the disk disappears after 3 consecutive rounds</line>
-      <line indent="2"><i>30 - 39:</i> 1000 pounds, and the disk disappears after 3 consecutive rounds</line>
-      <line indent="2"><i>40 or higher:</i> 2000 pounds, and the disk disappears after 4 consecutive rounds</line>
+      <line table="Arcana Check Result">
+         <row name="9 or lower:">250 pounds</row>
+         <row name="10 - 19:">500 pounds</row>
+         <row name="20 - 29:">500 pounds, and the disk disappears after 3 consecutive rounds</row>
+         <row name="30 - 39:">1000 pounds, and the disk disappears after 3 consecutive rounds</row>
+         <row name="40 or higher:">2000 pounds, and the disk disappears after 4 consecutive rounds</row>
+      </line>
       <line><b>Special:</b> When casting this ritual, you can expend a healing surge to increase the distance that the disk can exist away from you to 10 squares. You can use a minor action to change between the two distances.</line>
       <line>You can cast this ritual as part of your morning preparations, in which case you instead refresh the duration of a currently existing disk instead of creating a new one.</line>
    </ritual>
-   
+
    <ritual>
       <title>Transfer Enchantment</title>
       <category>Creation</category>
       <level>3</level>
       <fluff>With great care and concentration, you carefully strip magical power from one object to imbue it in another</fluff>
-      
+
       <price>110 gp</price>
       <skill>Arcana (no check)</skill>
       <component>15 gp</component>
       <time>1 hour</time>
       <duration>Instantaneous</duration>
-      
+
       <line>You transfer the magical qualities (properties, powers, and enhancement bonus) of an enchanted item into another object. You must maintain physical contact with both items while casting the ritual.</line>
       <line>The receiving item must occupy the same magic item slot (head, waist, armor, weapon, and so on) and be the same type (implement, weapon, and so on) as the original item. The enchantment to be moved must be valid for the receiving item, so that you cannot transfer a ranged weapon properties to melee weapons, cloth-only armor properties to chainmail, tome-only properties to a wand, and so on.</line>
       <line>You can transfer an enchantment to an item that already contains a lower-level enchantment, but the receiving item's previous magic is lost. For example, the enhancement bonus and power of a suit of <i>+1 barksink hide</i> (5th level) could be placed into a suit of <i>+1 curseforged scale</i> (3rd level), but the scale armor's existing power is lost in doing so. You cannot transfer an enchantment to an item that already has a higher-level enchantment.</line>
    </ritual>
-   
+
    <ritual>
       <title>Traveller's Camouflage</title>
       <category>Deception</category>
       <level>1</level>
       <fluff>You and your allies take on the textures and colors of the world around you</fluff>
-      
+
       <price>15 gp</price>
       <skill>Nature</skill>
       <component>at least 4 gp</component>
       <time>10 minutes</time>
       <duration>10 hours</duration>
-      
+
       <line>You cload yourself and up to eight allies present during the casting of this ritual in a camouflaging shroud. The component costs of this ritual is equal to 4 gp, plus a 2 gp increase for each affected creature (thus a minimum of 6 gp if you only affect yourself and don't expend a healing surge).</line>
       <line>The targets gain a power bonus to Stealth checks while traveling. The size of the power bonus depends on your Nature check result:</line>
-      <line indent="1"><b>Nature Check Result</b></line>
-      <line indent="2"><i>19 or lower:</i> +2 power bonus</line>
-      <line indent="2"><i>20 - 29:</i> +5 power bonus</line>
-      <line indent="2"><i>30 or higher:</i> +10 power bonus</line>
+      <line table="Nature Check Result">
+         <row name="19 or lower:">+2 power bonus</row>
+         <row name="20 - 29:">+5 power bonus</row>
+         <row name="30 or higher:">+10 power bonus</row>
+      </line>
    </ritual>
-   
+
    <ritual>
       <title>Traveller's Chant</title>
       <category>Exploration</category>
       <level>1</level>
       <fluff>Your chant lifts your allies steps, and helps take their mind off the drudgery of the journey</fluff>
-      
+
       <price>25 gp</price>
       <skill>Arcana (no check)</skill>
       <component>a focus, and 2 gp</component>
       <time>10 minutes</time>
       <duration>10 hours</duration>
       <bard />
-      
+
       <line>You target yourself and up to eight allies that hear the whole performance of the ritual. The targets gain a +2 power bonus to exploration speed.</line>
       <line><b>Focus:</b> A musical instrument you play as part of performing the ritual.</line>
    </ritual>
-   
+
    <ritual>
       <title>Travelers' Nourishment</title>
       <category>Creation</category>
       <level>4</level>
       <fluff>Food for your entire group materializes out of the air, enough to sustain you through a long day's march</fluff>
-      
+
       <price>150 gp</price>
       <skill>Religion or Nature (no check)</skill>
       <component>5 gp</component>
       <time>30 minutes</time>
       <duration>24 hours</duration>
-      
+
       <line>You create food and water to feed a number of creatures for 24 hours. The food is enough to feed five Medium or Small creatures, or two Large creatures. You designate the type of eaters when casting the ritual, and the ritual creates appropriate food (trail rations for people, grain for horses, and so on).</line>
       <line>Any food or water created but uneaten disappears at the end of the ritual's duration.</line>
    </ritual>
-   
+
    <ritual>
       <title>Tree Shape</title>
       <category>Exploration</category>
       <level>2</level>
       <fluff>You assume the form of a tree, blending into the forest around you</fluff>
-      
+
       <price>80 gp</price>
       <skill>Nature</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>8 hours</duration>
-      
+
       <line>You transform into a Large tree or shrub. While you are in this state, you perceive everything around you as normal. You retain all your statistics and can use your Nature check modifier in place of your Stealth check modifier while hiding in appropriate terrain, though you cannot use powers or perform rituals. All your clothing and gear transforms along with you.</line>
       <line>The ritual immediately ends and you revert to your original form if you take any damage or take an action, ootherwise you return to your original form at the end of the ritual's duration. You can take a short rest or long rest while transformed.</line>
    </ritual>
-   
+
    <ritual>
       <title>Undead Ward</title>
       <category>Warding</category>
       <level>3</level>
       <fluff>The line you etched in the floor shines like ivory in moonlight, and the skeletons stop advancing</fluff>
-      
+
       <price>120 gp</price>
       <skill>Arcana or Religion (no check)</skill>
       <component>Varies</component>
       <time>Varies</time>
       <duration>Until broken</duration>
-      
+
       <line>You create a barrier against undead creatures. This barrier can be either a closed circle or a line. The type determines the ritual's casting time: 1 minute for each square inside the closed circle, or 1 minute per 2 squares line length.</line>
       <line>Weaker undead cannot pass through the barrier, affect creatures through the barrier, or affect the barrier in any way. When you cast this ritual, you choose an effect level (no more than 1 higher than your own level and maximum of 30) that determines the component cost of the ritual and what level of undead that are considered weaker: the component cost is the price of a consumable magic item of the effect level; undead minions of up to one level higher than the effect level, regular undead of up to the effect level, and elite and solo undead up a level lower than the effect level are considered weaker undead.</line>
       <line>Any other undead creature can pass through the barrier. Doing so breaks the barrier and ends the effect, but deals radiant damage to that undead in the process. The radiant damage equals 2d10, and increases by +1d10 at effect levels 6, 11, 16, 21 and 26.</line>
    </ritual>
-   
+
    <ritual>
       <title>Unseen Servant</title>
       <category>Creation</category>
       <level>1</level>
       <fluff>Why bother with real servants when magical ones are so much more obedient?</fluff>
-      
+
       <price>25 gp</price>
       <skill>Arcana (no check)</skill>
       <component>a focus, and 5 gp</component>
       <time>10 minutes</time>
       <duration>24 hours or until dismissed</duration>
-      
+
       <line>You conjure a Medium unseen servant of invisible force. It cannot move more than 20 squares away from your space, though you do not need line of effect to it. Each unseen servant you currently control doubles the component cost of conjuring another one.</line>
       <line>An unseen servant never tires. It obeys your commands, moves at your speed, can lift up to 100 pounds, and performs basic functions and repetitive tasks, such as cleaning, making camp, and moving, holding, or carrying objects.</line>
       <line><b>Focus:</b> A ceramic hand. The same focus can be used to conjure multiple unseen servants.</line>
       <line>The person who holds this focus is empowered to command any unseen servant conjured with it as the focus. If the ceramic hand is broken or not in anyone's possession for 1 minute or longer, all unseen servants conjured using it as the focus disappear.</line>
    </ritual>
-   
+
    <ritual>
       <title>Ward Against Light</title>
       <category>Warding</category>
       <level>3</level>
       <fluff>All light dies out in an area you designate</fluff>
-      
+
       <price>100 gp</price>
       <skill>Arcana or Religion (no check)</skill>
       <component>1 healing surge or 10 gp</component>
       <time>1 minute</time>
       <duration>1 hour</duration>
-      
+
       <line>You ward an area, up to 5 squares by 5 squares, against light, shrouding it in darkness. This darkness blocks line of sight for all creatures, and any creature fully within the warded area is blinded until it leaves the darkness. A light source within the area is not extinguished but sheds no light.</line>
       <line>You can choose to perform this ritual as a standard action. If you do, the warded area dampens light and does not fully block line of sight. Bright light in the area is reduced to dim light, and dim light to darkness.</line>
       <line>You can end this ritual as a minor action.</line>
       <line><b>Ritual Scroll:</b> When you perform this ritual from a ritual scroll, it is always the standard action version.</line>
    </ritual>
-   
+
    <ritual>
       <title>Water Walk</title>
       <category>Exploration</category>
       <level>2</level>
       <fluff>You walk on top of water as if it were dry land</fluff>
-      
+
       <price>80 gp</price>
       <skill>Nature (no check)</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>1 hour</duration>
-      
+
       <line>Target yourself or another creature present during the casting of this ritual. The target can move on water as it if it were solid ground. Rapids or choppy seas are considered difficult terrain.</line>
       <line>The target of the ritual can end it as a free action. The target can also immerse itself in water or swim underwater if desired, without needing to end the ritual.</line>
    </ritual>
-   
+
    <ritual>
       <title>Wind Words</title>
       <category>Exploration</category>
       <level>3</level>
       <fluff>The winds carry your words to their destination</fluff>
-      
+
       <price>100 gp</price>
       <skill>Arcana or Nature (no check)</skill>
       <time>1 minute</time>
       <duration>3 hours or until discharged</duration>
       <bardAffinity />
-      
+
       <line>You whisper a message or sound, of up to 25 words, into the air. A breeze carries that message at a speed of up to 6 miles per hour to a location that you have visited and is on the same plane as you. If the breeze can't reach the destination while the duration lasts, the message dissipates without being conveyed.</line>
       <line>When the wind arrives, it audibly conveys your message or sound whether or not anyone is present to hear it. This discharges the ritual.</line>
       <line><b>Special:</b> You can expend one or more healing surge when casting this ritual. For each healing surge you expend, the speed of the breeze increases by 1 mile per hour, and the duration increases by 1 hour.</line>
    </ritual>
-   
+
    <ritual>
       <title>Wizard's Curtain</title>
       <category>Warding</category>
       <level>1</level>
       <fluff>Some activities call for privacy</fluff>
-      
+
       <price>20 gp</price>
       <skill>Arcana (no check)</skill>
       <component>10 gp</component>
       <time>10 minutes</time>
       <duration>24 hours or untill dismissed</duration>
-      
+
       <line>You draw a curtain or several curtains from nowhere to conceal a single room (or a burst 4 area) to ensure visual privacy. The curtain is nearly opaque and appears in any pattern or colors you desire. Creatures outside of the area attempting to see into the warded area take a -10 penalty to Perception checks and passive Perception to do so.</line>
       <line>You can dismiss the ritual by pulling the curtains back to nothingness.</line>
    </ritual>

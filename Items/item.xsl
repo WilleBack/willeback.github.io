@@ -51,6 +51,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 			}
 
+			.tableline {
+				width:98%;
+				box-sizing:border-box;
+				padding:0.2em 0.3em;
+				float:left;
+			}
+
 			.listcontainer {
 				box-sizing:border-box;
 				width:100%;
@@ -175,14 +182,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		</style>
 	</head>
 	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
-		<!-- <div class="listcontainer">
+		<div class="listcontainer">
 		   <div class="groupholder">
 		      <div class="grouptitle">Lists by level</div>
 		         <xsl:for-each select="list">
 		            <xsl:call-template name="listgroup" />
 		         </xsl:for-each>
 		   </div>
-		</div> -->
+		</div>
 
 		<div class="grouptitle">
 			Item Descriptions
@@ -224,9 +231,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<b><xsl:text>: </xsl:text></b>
 							<xsl:for-each select="subtype">
 								<xsl:apply-templates select="." />
-								<xsl:if test="position()!=last()">
-									<xsl:text>, </xsl:text>
-								</xsl:if>
+								<xsl:call-template name="if-not-last"/>
 							</xsl:for-each>
 						</xsl:if>
 					</div>
@@ -240,9 +245,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							<b><xsl:text>: </xsl:text></b>
 							<xsl:for-each select="subtype">
 								<xsl:apply-templates select="." />
-								<xsl:if test="position()!=last()">
-									<xsl:text>, </xsl:text>
-								</xsl:if>
+								<xsl:call-template name="if-not-last"/>
 							</xsl:for-each>
 						</xsl:if>
 					</div>
@@ -260,17 +263,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<b><xsl:apply-templates select="type" /></b>
 						<xsl:if test="subtype">
 							<b><xsl:text>: </xsl:text></b>
-							<xsl:for-each select="subtype">
-								<xsl:apply-templates select="." />
-								<xsl:if test="position()!=last()">
-									<xsl:text>, </xsl:text>
-								</xsl:if>
-							</xsl:for-each>
+							<xsl:apply-templates select="subtype"/>
 						</xsl:if>
 					</div>
-					<xsl:apply-templates select="headline[1]" />
-					<xsl:apply-templates select="headline[2]" />
-					<xsl:apply-templates select="headline[3]" />
+					<xsl:for-each select="headline[position() &lt;= 3]">
+  						<xsl:apply-templates select="."/>
+					</xsl:for-each>
 				</div>
 				<xsl:for-each select="headline[position()>3]">
 					<xsl:apply-templates select="."/>
@@ -297,9 +295,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 								<span class="keyword" style="font-variant: small-caps; width:calc(100% - 0.5em); margin:0.2em;">
 									<b><xsl:for-each select="keyword">
 										<xsl:apply-templates select="."/>
-										<xsl:if test="position()!=last()">
-											<xsl:text>, </xsl:text>
-										</xsl:if>
+										<xsl:call-template name="if-not-last"/>
 									</xsl:for-each></b>
 								</span>
 							</xsl:if>
@@ -328,9 +324,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<div class="keyword" style="font-variant: small-caps; float:left; width:calc(100% - 0.5em); margin:0.2em;">
 					<b><xsl:for-each select="keyword">
 						<xsl:value-of select="."/>
-						<xsl:if test="position()!=last()">
-							<xsl:text>, </xsl:text>
-						</xsl:if>
+						<xsl:call-template name="if-not-last"/>
 					</xsl:for-each></b>
 				</div>
 			</xsl:if>
@@ -338,14 +332,30 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				<xsl:when test="spellbook">
 					<div class="line">
 						<xsl:text>This tome contains two wizard daily </xsl:text>
-						<xsl:value-of select="spellbook"/>
-						<xsl:text> attack powers, chosen when it was created. Both powers must be of a level equal to or lower than that of the tome. If the tome's level is incresed, one or both powers can be exchanged for new ones.</xsl:text>
+						<xsl:for-each select="spellbook">
+							<xsl:if test="position() = last() and count(../spellbook) > 1">
+								<xsl:text> or </xsl:text>
+							</xsl:if>
+							<b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;"><xsl:value-of select="."/></span></b>
+							<xsl:if test="count(../spellbook) > 2">
+								<xsl:call-template name="if-not-last"/>
+							</xsl:if>
+						</xsl:for-each>
+						<xsl:text> attack powers, chosen when it was created. Both powers must be of a level equal to or lower than that of the tome. If the tome's level is increased, one or both powers can be exchanged for new ones.</xsl:text>
 					</div>
 					<xsl:if test="levels">
 						<div class="line" style="padding-left:2.3em;">
 							<i><xsl:text>Level </xsl:text><xsl:value-of select="levels"/>: </i>
 							<xsl:text>Three </xsl:text>
-							<xsl:value-of select="spellbook"/>
+							<xsl:for-each select="spellbook">
+								<xsl:if test="position() = last() and count(../spellbook) > 1">
+									<xsl:text> or </xsl:text>
+								</xsl:if>
+								<b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;"><xsl:value-of select="."/></span></b>
+								<xsl:if test="count(../spellbook) > 2">
+									<xsl:call-template name="if-not-last"/>
+								</xsl:if>
+							</xsl:for-each>
 							<xsl:text> attack powers, one of which can be an encounter power.</xsl:text>
 						</div>
 					</xsl:if>
@@ -357,13 +367,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<div class="line">
 						<xsl:text>This tome contains the </xsl:text>
 						<xsl:for-each select="spellbook-specific">
+							<xsl:if test="position()=last() and count(../spellbook-specific) > 1">
+								<xsl:text>and </xsl:text>
+							</xsl:if>
 							<i><xsl:value-of select="."/></i>
 							<xsl:if test="@level">
 								<xsl:text> level </xsl:text><xsl:value-of select="@level"/>
 							</xsl:if>
-							<xsl:if test="position()!=last()">
-								<xsl:text>, </xsl:text>
-							</xsl:if>
+							<xsl:call-template name="if-not-last"/>
 						</xsl:for-each>
 						<xsl:text> wizard </xsl:text>
 						<xsl:if test="limit">
@@ -380,13 +391,13 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 						<xsl:text>If you have the wizard class feature Arcane Spellbook, </xsl:text>
 						<xsl:choose>
 							<xsl:when test="count(spellbook-specific)>1">
-								<xsl:text>these spells</xsl:text>
+								<xsl:text>these spells count</xsl:text>
 							</xsl:when>
 							<xsl:otherwise>
-								<xsl:text>this spell</xsl:text>
+								<xsl:text>this spell counts</xsl:text>
 							</xsl:otherwise>
 						</xsl:choose>
-						<xsl:text> count as being in your spellbook.</xsl:text>
+						<xsl:text> as being in your spellbook.</xsl:text>
 					</div>
 				</xsl:when>
 				<xsl:when test="bookpower">
@@ -422,33 +433,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				</xsl:when>
 			</xsl:choose>
 			<xsl:for-each select="line">
-				<xsl:choose>
-					<xsl:when test="@indent='1'">
-						<div class="line" style="padding-left:2.3em;">
-							<xsl:apply-templates select="."/>
-						</div>
-					</xsl:when>
-					<xsl:when test="@indent='2'">
-						<div class="line" style="padding-left:3.3em;">
-							<xsl:apply-templates select="."/>
-						</div>
-					</xsl:when>
-					<xsl:when test="@indent='3'">
-						<div class="line" style="padding-left:4.3em;">
-							<xsl:apply-templates select="."/>
-						</div>
-					</xsl:when>
-					<xsl:when test="@indent='4'">
-						<div class="line" style="padding-left:5.3em;">
-							<xsl:apply-templates select="."/>
-						</div>
-					</xsl:when>
-					<xsl:otherwise>
-						<div class="line">
-							<xsl:apply-templates select="."/>
-						</div>
-					</xsl:otherwise>
-				</xsl:choose>
+  				<xsl:variable name="indent" select="number(@indent)" />
+  				<xsl:variable name="padding" select="1.3 + ($indent * 1.0)" />
+
+  				<div class="line">
+    				<xsl:attribute name="style">
+      				<xsl:text>padding-left:</xsl:text>
+      				<xsl:value-of select="$padding"/>
+      				<xsl:text>em;</xsl:text>
+    				</xsl:attribute>
+    				<xsl:apply-templates select="."/>
+  				</div>
 			</xsl:for-each>
 			<xsl:if test="poison-fooddrink">
 				<div class="line">
@@ -461,10 +456,14 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 </xsl:template>
 
-<xsl:template match="line">
-	<xsl:if test="@auto">
-		<xsl:apply-templates select="bullet" />
-	</xsl:if>
+<xsl:template name="if-not-last">
+  <xsl:if test="position() != last()">
+    <xsl:text>, </xsl:text>
+  </xsl:if>
+</xsl:template>
+
+<xsl:template match="line[@auto]">
+	<xsl:apply-templates select="bullet"/>
 
 	<xsl:choose>
 		<xsl:when test="@auto='bard'">
@@ -483,11 +482,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<xsl:apply-templates />
 		</xsl:when>
 		<xsl:when test="@auto='critweap'">
-			<xsl:text>When you score a critical hit with a Weapon attack using this weapon, </xsl:text>
+			<xsl:text>When you score a critical hit with a </xsl:text><b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;">Weapon</span></b><xsl:text> attack using this weapon, </xsl:text>
 			<xsl:apply-templates/>
 		</xsl:when>
 		<xsl:when test="@auto='critimpl'">
-			<xsl:text>When you score a critical hit with an Implement attack using this implement, </xsl:text>
+			<xsl:text>When you score a critical hit with an </xsl:text><b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;">Implement</span></b><xsl:text> attack using this implement, </xsl:text>
 			<xsl:apply-templates />
 		</xsl:when>
 		<xsl:when test="@auto='no-opportunity'">
@@ -522,7 +521,57 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	</xsl:choose>
 </xsl:template>
 
+<xsl:template match="line[@table]">
+   <div class="table-block" style="width:95%; float:left; margin-bottom:0.6em; padding-left:1em;">
+      <div class="table-title" style="font-weight:bold; margin-bottom:0.3em;">
+         <xsl:value-of select="@table"/>
+      </div>
+      <xsl:for-each select="row">
+         <div class="listline">
+            <xsl:attribute name="style">
+               <xsl:text>width: 90%; overflow: auto; margin-left: 0.8em; padding: 0.2em;</xsl:text>
+               <xsl:if test="position() mod 2 = 1">background:linear-gradient(to right, #dedede, #ececec);</xsl:if>
+            </xsl:attribute>
+            <div style="width:27%; float:left; text-align:right; padding-right:0.7em;">
+               <i><xsl:value-of select="@name"/></i>
+            </div>
+            <div style="width:calc(73% - 1em); float:left;">
+               <xsl:apply-templates/>
+            </div>
+         </div>
+       </xsl:for-each>
+  </div>
+</xsl:template>
+
 	<xsl:template match="headline">
+		<xsl:choose>
+			<xsl:when test="@itemdamage">
+				<div class="line">
+					<b>Item Bonus: </b>
+					<xsl:text>Damage rolls with </xsl:text>
+					<xsl:apply-templates select="text()" />
+					<xsl:text> powers</xsl:text>
+					<xsl:if test="@itemdamage!=''">
+						<xsl:text> using this </xsl:text>
+						<xsl:apply-templates select="@itemdamage" />
+					</xsl:if>
+				</div>
+			</xsl:when>
+			<xsl:when test="@itembonus">
+				<div class="line">
+					<b>Item Bonus: </b>
+					<xsl:apply-templates select="text()" />
+				</div>
+			</xsl:when>
+			<xsl:otherwise>
+				<div class="line">
+					<xsl:apply-templates />
+				</div>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="headline[@auto]">
 		<xsl:choose>
 			<xsl:when test="@auto='attached'">
 				<div class="line">
@@ -566,62 +615,55 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					<b>Enhancement Bonus: </b><xsl:text>Fortitude, Reflex, and Will</xsl:text>
 				</div>
 			</xsl:when>
-			<xsl:when test="@itemdamage">
-				<div class="line">
-					<b>Item Bonus: </b>
-					<xsl:text>Damage rolls with </xsl:text>
-					<xsl:apply-templates select="text()" />
-					<xsl:text> powers</xsl:text>
-					<xsl:if test="@itemdamage!=''">
-						<xsl:text> using this </xsl:text>
-						<xsl:apply-templates select="@itemdamage" />
-					</xsl:if>
-				</div>
-			</xsl:when>
-			<xsl:when test="@itembonus">
-				<div class="line">
-					<b>Item Bonus: </b>
-					<xsl:apply-templates select="text()" />
-				</div>
-			</xsl:when>
-			<xsl:when test="@crit">
-				<div class="line">
-					<b>Critical: </b><xsl:text>+1</xsl:text>
-					<xsl:apply-templates select="@crit"/>
-					<xsl:if test="text()">
-						<xsl:text> </xsl:text><xsl:apply-templates select="text()"/>
-					</xsl:if>
-					<xsl:text> damage per plus</xsl:text>
-					<xsl:if test="@limit">
-						<xsl:text> with the weapon from this </xsl:text>
-						<xsl:apply-templates select="@limit"/>
-						<xsl:text>'s property</xsl:text>
-					</xsl:if>
-					<xsl:if test="@power">
-						<xsl:text> with the attack from this </xsl:text>
-						<xsl:apply-templates select="@item"/>
-						<xsl:text>'s </xsl:text>
-						<xsl:value-of select="@power"/>
-						<xsl:text> attack power</xsl:text>
-					</xsl:if>
-					<xsl:if test="@alt">
-						<xsl:text>, or +1</xsl:text>
-						<xsl:apply-templates select="@alt"/><xsl:text> damage per plus </xsl:text>
-						<xsl:apply-templates select="@condition" />
-					</xsl:if>
-					<xsl:if test="@alt2">
-						<xsl:text>, or +1</xsl:text>
-						<xsl:apply-templates select="@alt2"/><xsl:text> damage per plus </xsl:text>
-						<xsl:apply-templates select="@condition2" />
-					</xsl:if>
-				</div>
-			</xsl:when>
 			<xsl:otherwise>
 				<div class="line">
-					<xsl:apply-templates />
+					<xsl:apply-templates/>
 				</div>
 			</xsl:otherwise>
 		</xsl:choose>
+	</xsl:template>
+
+	<xsl:template match="headline[@crit]">
+		<div class="line">
+			<b>Critical: </b><xsl:text>+1</xsl:text>
+			<xsl:apply-templates select="@crit"/>
+			<xsl:if test="text()">
+				<xsl:text> </xsl:text><xsl:apply-templates select="text()"/>
+			</xsl:if>
+			<xsl:text> damage per plus</xsl:text>
+			<xsl:if test="@limit">
+				<xsl:text> with the weapon from this </xsl:text>
+				<xsl:apply-templates select="@limit"/>
+				<xsl:text>'s property</xsl:text>
+			</xsl:if>
+			<xsl:if test="@power">
+				<xsl:text> with the attack from this </xsl:text>
+				<xsl:apply-templates select="@item"/>
+				<xsl:text>'s </xsl:text>
+				<xsl:value-of select="@power"/>
+				<xsl:text> attack power</xsl:text>
+			</xsl:if>
+			<xsl:if test="@alt">
+				<xsl:text>, or +1</xsl:text>
+				<xsl:apply-templates select="@alt"/><xsl:text> damage per plus </xsl:text>
+				<xsl:apply-templates select="@condition" />
+				<xsl:if test="@keyattacks">
+					<xsl:text>with </xsl:text>
+					<b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;"><xsl:apply-templates select="@keyattacks"/></span></b>
+					<xsl:text> attacks</xsl:text>
+				</xsl:if>
+			</xsl:if>
+			<xsl:if test="@alt2">
+				<xsl:text>, or +1</xsl:text>
+				<xsl:apply-templates select="@alt2"/><xsl:text> damage per plus </xsl:text>
+				<xsl:apply-templates select="@condition2" />
+				<xsl:if test="@keyattacks2">
+					<xsl:text>with </xsl:text>
+					<b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;"><xsl:apply-templates select="keyattacks2"/></span></b>
+					<xsl:text> attacks</xsl:text>
+				</xsl:if>
+			</xsl:if>
+		</div>
 	</xsl:template>
 
 <xsl:template name="createheader">
@@ -643,919 +685,66 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </xsl:template>
 
 <xsl:template name="listgroup">
+	<xsl:variable name="level" select="@selection" />
 
-	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Common'])>0">
-		<div class="list">
-			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </b><xsl:text> - Common</xsl:text></div>
-			<xsl:choose>
-				<xsl:when test="@selection='1'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">1</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='2'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">2</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='3'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">3</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='4'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">4</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='5'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">5</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='6'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">6</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='7'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">7</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='8'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">8</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='9'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">9</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='10'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">10</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='11'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">11</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='12'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">12</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='13'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">13</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='14'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">14</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='15'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">15</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='16'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">16</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='17'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">17</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='18'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">18</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='19'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">19</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='20'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">20</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='21'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">21</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='22'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">22</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='23'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">23</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='24'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">24</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='25'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">25</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='26'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">26</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='27'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">27</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='28'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">28</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='29'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">29</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='30'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Common']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">30</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:otherwise>
-					<i>Error</i>
-				</xsl:otherwise>
-			</xsl:choose>
-
-		</div>
+	<!-- Common Category -->
+	<xsl:variable name="commonItems" select="//catalog/item[level/value = $level and category = 'Common']" />
+	<xsl:if test="count($commonItems) > 0">
+	   <div class="list">
+	      <div class="groupname">
+	        	<b>Level <xsl:value-of select="$level"/></b> - Common
+	      </div>
+	      <xsl:for-each select="$commonItems">
+	        	<xsl:call-template name="listline">
+	          	<xsl:with-param name="levelvalue" select="$level"/>
+	        	</xsl:call-template>
+	      </xsl:for-each>
+	   </div>
 	</xsl:if>
 
-	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Uncommon'])>0">
-		<div class="list">
-			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </b><xsl:text> - Uncommon</xsl:text></div>
-			<xsl:choose>
-				<xsl:when test="@selection='1'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">1</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='2'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">2</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='3'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">3</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='4'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">4</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='5'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">5</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='6'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">6</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='7'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">7</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='8'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">8</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='9'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">9</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='10'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">10</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='11'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">11</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='12'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">12</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='13'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">13</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='14'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">14</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='15'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">15</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='16'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">16</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='17'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">17</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='18'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">18</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='19'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">19</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='20'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">20</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='21'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">21</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='22'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">22</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='23'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">23</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='24'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">24</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='25'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">25</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='26'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">26</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='27'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">27</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='28'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">28</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='29'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">29</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='30'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Uncommon']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">30</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:otherwise>
-					<i>Error</i>
-				</xsl:otherwise>
-			</xsl:choose>
-		</div>
+	<!-- Uncommon Category -->
+	<xsl:variable name="uncommonItems" select="//catalog/item[level/value = $level and category = 'Uncommon']" />
+	<xsl:if test="count($uncommonItems) > 0">
+	   <div class="list">
+	      <div class="groupname">
+	        	<b>Level <xsl:value-of select="$level"/></b> - Uncommon
+	      </div>
+	      <xsl:for-each select="$uncommonItems">
+	        	<xsl:call-template name="listline">
+	          	<xsl:with-param name="levelvalue" select="$level"/>
+	        	</xsl:call-template>
+	      </xsl:for-each>
+	   </div>
 	</xsl:if>
 
-	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Rare'])>0">
-		<div class="list">
-			<div class="groupname"> <b><xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> </b><xsl:text> - Rare</xsl:text></div>
-			<xsl:choose>
-				<xsl:when test="@selection='1'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">1</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='2'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">2</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='3'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">3</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='4'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">4</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='5'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">5</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='6'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">6</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='7'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">7</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='8'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">8</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='9'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">9</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='10'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">10</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='11'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">11</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='12'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">12</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='13'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">13</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='14'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">14</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='15'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">15</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='16'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">16</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='17'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">17</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='18'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">18</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='19'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">19</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='20'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">20</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='21'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">21</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='22'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">22</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='23'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">23</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='24'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">24</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='25'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">25</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='26'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">26</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='27'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">27</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='28'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">28</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='29'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">29</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='30'">
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Rare']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">30</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:otherwise>
-					<i>Error</i>
-				</xsl:otherwise>
-			</xsl:choose>
-		</div>
+	<!-- Rare Category -->
+	<xsl:variable name="rareItems" select="//catalog/item[level/value = $level and category = 'Rare']" />
+	<xsl:if test="count($rareItems) > 0">
+	   <div class="list">
+	      <div class="groupname">
+	        	<b>Level <xsl:value-of select="$level"/></b> - Rare
+	      </div>
+	      <xsl:for-each select="$rareItems">
+	        	<xsl:call-template name="listline">
+	          	<xsl:with-param name="levelvalue" select="$level"/>
+	        	</xsl:call-template>
+	      </xsl:for-each>
+	   </div>
 	</xsl:if>
 
-	<xsl:if test="count(//catalog/item[level/value=current()/@selection and category='Unique'])>0">
-		<div class="list">
-			<xsl:choose>
-				<xsl:when test="@selection='1'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">1</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='2'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">2</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='3'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">3</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='4'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">4</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='5'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">5</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='6'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">6</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='7'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">7</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='8'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">8</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='9'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">9</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='10'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">10</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='11'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">11</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='12'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">12</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='13'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">13</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='14'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">14</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='15'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">15</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='16'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">16</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='17'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">17</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='18'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">18</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='19'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">19</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='20'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">20</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='21'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">21</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='22'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">22</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='23'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">23</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='24'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">24</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='25'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">25</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='26'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">26</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='27'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">27</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='28'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">28</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='29'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">29</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:when test="@selection='30'">
-					<div class="groupname"> <xsl:text>Level </xsl:text><xsl:value-of select="@selection" /> <xsl:text> - Unique</xsl:text></div>
-					<xsl:for-each select="//catalog/item[level/value=current()/@selection and category='Unique']">
-						<xsl:call-template name="listline">
-							<xsl:with-param name="levelvalue">30</xsl:with-param>
-						</xsl:call-template>
-					</xsl:for-each>
-				</xsl:when>
-				<xsl:otherwise>
-					<i>Error</i>
-				</xsl:otherwise>
-			</xsl:choose>
-		</div>
+	<!-- Unique Category -->
+	<xsl:variable name="uniqueItems" select="//catalog/item[level/value = $level and category = 'Unique']" />
+	<xsl:if test="count($uniqueItems) > 0">
+	   <div class="list">
+	      <div class="groupname">
+	        	<b>Level <xsl:value-of select="$level"/></b> - Unique
+	      </div>
+	      <xsl:for-each select="$uniqueItems">
+	        	<xsl:call-template name="listline">
+	          	<xsl:with-param name="levelvalue" select="$level"/>
+	        	</xsl:call-template>
+	      </xsl:for-each>
+	   </div>
 	</xsl:if>
 
 </xsl:template>
@@ -1568,12 +757,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, LightGrey, LightGrey, Gainsboro); box-sizing:border-box; padding:0.2em;">
 				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
 				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
-					<i><xsl:for-each select="subtype">
-						<xsl:value-of select="."/>
-						<xsl:if test="position()!=last()">
-							<xsl:text>, </xsl:text>
-						</xsl:if>
-					</xsl:for-each></i>
+					<i><xsl:apply-templates select="subtype"/></i>
 					<xsl:if test="headline/@auto='attached'">
 						<xsl:if test="count(subtype)>0">
 							<br />
@@ -1590,12 +774,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			<div id="line" style="width:100%; float:left; background:linear-gradient(to right, WhiteSmoke, WhiteSmoke, Snow); box-sizing:border-box; padding:0.2em;">
 				<div class="title" style="width:calc(55% - 5em); float:left; padding:0.1em;"><xsl:value-of select="title"/>&#160;<xsl:value-of select="level[value=$levelvalue]/bonus" /></div>
 				<div class="subtype" style="width:calc(45% - 5em); float:left; padding:0.1em;">
-					<i><xsl:for-each select="subtype">
-						<xsl:value-of select="."/>
-						<xsl:if test="position()!=last()">
-							<xsl:text>, </xsl:text>
-						</xsl:if>
-					</xsl:for-each></i>
+					<i><xsl:apply-templates select="subtype"/></i>
 					<xsl:if test="headline/@auto='attached'">
 						<xsl:if test="count(subtype)>0">
 							<br />
@@ -1614,6 +793,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="bullet">
 	&#9658;<xsl:text> </xsl:text>
+</xsl:template>
+
+<xsl:template match="subtype">
+	<xsl:value-of select="."/>
+	<xsl:call-template name="if-not-last"/>
 </xsl:template>
 
 <xsl:template match="name">
@@ -1663,12 +847,10 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
    <xsl:value-of select="." disable-output-escaping="yes" />
 </xsl:template>
 
-<xsl:template match="b">
-   <b><xsl:apply-templates /></b>
-</xsl:template>
-
-<xsl:template match="i">
-   <i><xsl:apply-templates /></i>
+<xsl:template match="b|i">
+	<xsl:element name="{name()}">
+    <xsl:apply-templates />
+  </xsl:element>
 </xsl:template>
 
 <xsl:template match="br">
