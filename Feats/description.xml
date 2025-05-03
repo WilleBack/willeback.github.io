@@ -9783,7 +9783,7 @@
       <prereq type="class">Invoker</prereq>
       <prereq type="trait">Half-orc Resilience</prereq>
       <group>Bloodied</group> <group>Class</group> <group>Combat Advantage</group> <group>Racial</group>
-      <benefit>The first time that you are bloodied in an encounter, you gain combat advantage with Invoker close burst or close blast attack powers. The combat advantage lasts until until the end of your next turn or until you are no longer bloodied.</benefit>
+      <benefit>The first time that you are bloodied in an encounter, you gain combat advantage with Invoker close burst or close wave attack powers. The combat advantage lasts until until the end of your next turn or until you are no longer bloodied.</benefit>
    </feat>
 
    <feat>
@@ -9923,8 +9923,8 @@
       <tier>Heroic</tier>
       <prereq type="role">Controller</prereq>
       <group>Class</group> <group>Power Enhancement</group>
-      <benefit>When you use an at-will attack power or an encounter attack power from a class with the Controller role, you can choose to enlarge that power. You can only enlarge a power that has a blast or burst area of effect, and the power must roll dice for damage.</benefit>
-      <benefit>When enlarged, you increase the size of the power's blast by 2 squares or its burst by 1 square, but the power takes a -2 penalty to damage for each die of damage.</benefit>
+      <benefit>When you use an at-will attack power or an encounter attack power from a class with the Controller role, you can choose to enlarge that power. You can only enlarge a power that has a burst or wave area of effect, and the power must roll dice for damage.</benefit>
+      <benefit>When enlarged, you increase the size of the power's burst by 1 square or wave by 2 squares, and the power takes a -2 penalty to damage for each die of damage.</benefit>
    </feat>
 
    <feat>
@@ -9933,7 +9933,7 @@
       <prereq type="race">Dragonborn</prereq>
       <prereq type="power" kind="racial">dragon breath</prereq>
       <group>Power Enhancement</group> <group>Racial</group>
-      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to make it blast 5 instead of blast 3.</benefit>
+      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to make it close wave 5 instead of close wave 3.</benefit>
       <benefit>If you have the Hurl Breath feat, you can choose to make your <i>dragon breath</i> racial power an area burst 2 instead of area burst 1 when using that feat.</benefit>
    </feat>
 
@@ -10270,7 +10270,7 @@
       <tier>Paragon</tier>
       <prereq type="ability">Dexterity<value>13</value></prereq>
       <group>Attack Bonus</group> <group>Power Enhancement</group>
-      <benefit>Your close burst, close blast, and area burst attacks ignore cover, but not superior cover.</benefit>
+      <benefit>Your close burst, close wave, and area burst attacks ignore cover, but not superior cover.</benefit>
    </feat>
 
    <feat>
@@ -10377,17 +10377,17 @@
             <action>Free</action> <subaction>Interrupt</subaction>
             <section>
                <name>Trigger:</name>
-               <text>You use an attack power that is a close blast, close burst, or area burst</text>
+               <text>You use an attack power that is a burst or wave</text>
             </section>
          <section special=""/>
             <section>
                <shade>true</shade>
                <name>Effect:</name>
-               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer inside the blast or burst.</text>
+               <text>You must push each creature you hit with the triggering power 5 squares from the attack's point of origin. This forced movement ends when the target is no longer inside the wave or burst.</text>
             </section>
             <section>
                <shade>true</shade>
-               <text>You must also push each other creature in the burst or blast 1 square from the attack's point of origin. This forced movement ends when the target is no longer in the blast or burst.</text>
+               <text>You must also push each other creature in the burst or wave 1 square from the attack's point of origin. This forced movement ends when the target is no longer in the burst or wave.</text>
             </section>
             <section>
                <shade>true</shade>
@@ -11814,11 +11814,11 @@
       <prereq type="race">Dragonborn</prereq>
       <prereq type="power" kind="racial">dragon breath</prereq>
       <group>Damage Bonus</group> <group>Power Enhancement</group> <group>Racial</group>
-      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to make it a close blast 1 instead of close blast 3.</benefit>
+      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to make it a close wave 1 instead of close wave 3.</benefit>
       <benefit>If you do, you gain a +2 bonus to the damage roll.</benefit>
       <benefit>This bonus damage increases to +4 at 11th level, and to +6 at 21st level.</benefit>
       <benefit>If you have the Empowered Dragon Breath, you gain a +6 bonus to the damage roll instead of +4. This increases to +10 instead of +6 at 21st level.</benefit>
-      <benefit>If you have the Enlarged Dragon Breath feat, you can also choose to make your <i>dragon breath</i> racial power a close blast 2 to gain this benefit.</benefit>
+      <benefit>If you have the Enlarged Dragon Breath feat, you can also choose to make your <i>dragon breath</i> racial power a close wave 2 to gain this benefit.</benefit>
    </feat>
 
    <feat>
@@ -11862,7 +11862,7 @@
       <tier>Epic</tier>
       <prereq type="class">Wizard</prereq>
       <group>Attack Bonus</group> <group>Class</group>
-      <benefit>When you use an arcane attack power that is an area burst, close blast, or close burst and only one creature is within the area of effect, you gain a +2 bonus to the attack roll.</benefit>
+      <benefit>When you use an arcane attack power that is a burst or wave and only one creature is within the area of effect, you gain a +2 bonus to the attack roll.</benefit>
    </feat>
 
    <feat>
@@ -14618,8 +14618,8 @@
             </section>
             <section>
                <name>Attack:</name>
-               <type>Close</type> <range>blast 3</range>
-               <target>each creature in the blast</target>
+               <type>Close</type> <range>wave 3</range>
+               <target>each creature in the wave</target>
                <text>Ability +4 vs. Reflex</text>
             </section>
             <section>
@@ -14699,7 +14699,7 @@
       <prereq type="trait">Phalanx Soldier</prereq>
       <prereq type="class">any arcane</prereq>
       <group>Class</group> <group>Power Enhancement</group> <group>Racial</group> <group>Support</group>
-      <benefit>When you make an arcane <type>Close</type><range>blast</range> or arcane <type>Close</type><range>burst</range> attack, you can choose to omit one square adjacent to you from the area of effect.</benefit>
+      <benefit>When you make an arcane <type>Close</type><range>wave</range> or arcane <type>Close</type><range>burst</range> attack, you can choose to omit one square adjacent to you from the area of effect.</benefit>
    </feat>
 
    <feat>
@@ -15072,7 +15072,7 @@
       <prereq type="race">Dragonborn</prereq>
       <prereq type="power" kind="racial">dragon breath</prereq>
       <group>Power Enhancement</group> <group>Racial</group>
-      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to make it an area 1 within 10 squares instead of close blast 3.</benefit>
+      <benefit>When you use your <i>dragon breath</i> racial power, you can choose to make it an area 1 within 10 squares instead of close wave 3.</benefit>
    </feat>
 
    <feat>
@@ -16509,7 +16509,7 @@
       <tier>Epic</tier>
       <prereq type="class">Invoker</prereq>
       <group>Class</group> <group>Power Enhancement</group>
-      <benefit>You can increase the size of any blast or burst you create with an invoker power by 1 (from blast 4 to blast 4, or burst 2 to burst 3, for example).</benefit>
+      <benefit>You can increase the size of any burst or wave you create with an invoker power by 1 (from wave 4 to wave 5, or burst 2 to burst 3, for example).</benefit>
    </feat>
 
    <feat>
@@ -20051,7 +20051,7 @@
       <tier>Epic</tier>
       <group>Defense</group>
       <benefit>You gain a +2 feat bonus to Reflex.</benefit>
-      <benefit>Also, you gain a +2 bonus to AC and Reflex against burst and blast attacks when you are at least 2 squares away from the origin square.</benefit>
+      <benefit>Also, you gain a +2 bonus to AC and Reflex against burst and wave attacks when you are at least 2 squares away from the origin square.</benefit>
    </feat>
 
    <feat>
@@ -22728,7 +22728,7 @@
       <tier>Epic</tier>
       <prereq type="class">Invoker</prereq>
       <group>Class</group> <group>Power Enhancement</group>
-      <benefit>When you use a close burst or close blast invoker power, you can target one additional enemy adjacent to the burst or blast. The target's space does not count as being part of the area of effect for purposes such as creating a zone.</benefit>
+      <benefit>When you use a close burst or close wave invoker power, you can target one additional enemy adjacent to the burst or wave. The target's space does not count as being part of the area of effect for purposes such as creating a zone.</benefit>
    </feat>
 
    <feat>
@@ -22845,7 +22845,7 @@
       <prereq type="power" kind="racial">dark reaping</prereq>
       <group>Damage Bonus</group> <group>Necrotic</group> <group>Power Enhancement</group> <group>Racial</group>
       <benefit>When you use your <i>dark reaping</i> racial power, you can choose to gain the following effect instead of the power's normal effect:</benefit>
-      <benefit><b>Effect:</b> The first burst or blast attack you make before the end of your next turn deals additional damage equal to your Constitution modifier.</benefit>
+      <benefit><b>Effect:</b> The first burst or wave attack you make before the end of your next turn deals additional damage equal to your Constitution modifier.</benefit>
    </feat>
 
    <feat>
@@ -23332,7 +23332,7 @@
       <title>Resounding Thunder</title>
       <tier>Paragon</tier>
       <group>Power Enhancement</group> <group>Thunder</group>
-      <benefit>You can increase the size of any blast or burst that has the <key>Thunder</key> keyword by 1.</benefit>
+      <benefit>You can increase the size of any burst or wave that has the <key>Thunder</key> keyword by 1.</benefit>
    </feat>
 
    <feat>
@@ -29004,7 +29004,7 @@
       <tier>Paragon</tier>
       <prereq type="class">Invoker</prereq>
       <group>Class</group> <group>Combat Advantage</group>
-      <benefit>You gain combat advantage against adjacent enemies with clost blast invoker attacks.</benefit>
+      <benefit>You gain combat advantage against adjacent enemies with clost wave invoker attacks.</benefit>
    </feat>
 
    <feat>
