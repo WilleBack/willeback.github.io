@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="../power.xsl"?>
 <catalog>
-	<collection>Druid lvl 1 At-Will Attack Evocations</collection>
+	<collection>Invoker lvl 1 At-Will Attack Prayers</collection>
 
 	<power>
 		<title>Astral Wind</title>
@@ -12,7 +12,9 @@
       <section><name>Attack:</name><type>Close</type><range>wave 3</range><target>each creature in the wave</target>Wisdom vs. Fortitude</section>
       <section shade=""><name>Hit:</name>1d6 + Wisdom modifier damage, and you push the target 1 square.</section>
       <section shade="" indent="1"><name>Level 21:</name>2d6 + Wisdom modifier damage.</section>
-      <section><name>Effect:</name>If the target moves closer to you on its next turn, it takes damage equal to your Constitution modifier + your implement's enhancement bonus.</section>
+      <section><name>Effect:</name>If the target willingly moves closer to you before the start of your next turn, it takes damage equal to 2 + your Constitution modifier + your implement's enhancement bonus.</section>
+		<section indent="1"><name>Level 11:</name>Equal to 6 + your Constitution modifier + your implement's enhancement bonus.</section>
+		<section indent="1"><name>Level 21:</name>Equal to 10 + your Constitution modifier + your implement's enhancement bonus.</section>
    </power>
 
    <power>
@@ -37,6 +39,83 @@
       <section><name>Attack:</name><type>Ranged</type><range>7/15</range><target>one or two creatures</target>Wisdom vs. Reflex</section>
       <section shade=""><name>Hit:</name>1d6 + Wisdom modifier lightning damage.</section>
       <section shade="" indent="1"><name>Level 21:</name>2d6 + Wisdom modifier lightning damage.</section>
-      <section><name>Miss:</name>Your Wisdom modifier + your implement's enhancement bonus lightning damage if you only targeted one creature.</section>
+      <section><name>Effect:</name>The target takes a penalty to triggered attack rolls equal to your Constitution modifier.</section>
    </power>
+
+	<power>
+		<title>Grasping Shards</title>
+		<class>Invoker</class><category>Attack</category><level>1</level>
+		<frequency>At-Will</frequency><action>Standard</action><subaction/>
+		<fluff>You hurl a crystalline sphere of magic at your foes that splinters into hundreds of tiny, radiant blades which slide into your enemies and cover the ground</fluff>
+		<keyword>Divine</keyword><keyword>Implement</keyword><keyword>Radiant</keyword><keyword>Zone</keyword>
+		<section><name>Attack:</name><type>Area</type><range>burst 1 within 10</range><target>each creature in the burst</target>Wisdom vs. Fortitude</section>
+		<section shade=""><name>Hit:</name>Wisdom modifier + your implement's enhancement bonus radiant damage, and the target is slowed until the end of your next turn.</section>
+		<section shade="" indent="1"><name>Level 21:</name>2 + Wisdom modifier + your implements enhancement bonus radiant damage.</section>
+		<section><name>Effect:</name>The burst creates a zone of radiant splinters on the ground until the end of your next turn.</section>
+		<section>Squares in the zone are difficult terrain. A creature with immune radiant ignores this difficult terrain.</section>
+	</power>
+
+	<power>
+		<title>Hand of Radiance</title>
+		<class>Invoker</class><category>Attack</category><level>1</level>
+		<frequency>At-Will</frequency><action>Standard</action><subaction/>
+		<fluff>Tendrils of radiance streak from your fingertips across the battlefield to strike your enemies, raining sparks of light on impact</fluff>
+		<keyword>Divine</keyword><keyword>Implement</keyword><keyword>Radiant</keyword>
+		<section><name>Attack:</name><type>Ranged</type><range>10/20</range><target>one, two, or three creatures</target>Wisdom vs. Reflex</section>
+		<section indent="1"><name>Level 21:</name>one, two, three, or four creatures</section>
+		<section shade=""><name>Hit:</name>1d4 + Wisdom modifier radiant damage, or 2d4 + Wisdom modifier radiant damage if you only target one creature.</section>
+		<section shade="" indent="1"><name>Level 21:</name>2d4 + Wisdom modifier radiant damage or 4d4 + Wisdom modifier radiant damage, respectively.</section>
+		<section auto="basic-ranged">If an effect tells you to make one against a specific creature, you can only target that creature.</section>
+	</power>
+
+	<power>
+		<title>Mantle of the Infidel</title>
+		<class>Invoker</class><category>Attack</category><level>1</level>
+		<frequency>At-Will</frequency><action>Standard</action><subaction/>
+		<fluff>Holding your implement high, you conjure a radiant mantle that sears a foe and marks it as an enemy of the faith</fluff>
+		<keyword>Divine</keyword><keyword>Implement</keyword><keyword>Radiant</keyword>
+		<section><name>Attack:</name><type>Ranged</type><range>20</range><target>one creature</target>Wisdom vs. Will</section>
+		<section shade=""><name>Hit:</name>1d6 + Wisdom modifier radiant damage.</section>
+		<section shade="" indent="1"><name>Level 21:</name>2d6 + Wisdom modifier radiant damage.</section>
+		<section><name>Effect:</name>You can mark the target until the end of your next turn.</section>
+		<section>Until the end of your next turn, whether you marked it or not, the penalty that the target takes from being marked increases from -2 to -4.</section>
+	</power>
+
+	<power>
+		<title>Sun Strike</title>
+		<class>Invoker</class><category>Attack</category><level>1</level>
+		<frequency>At-Will</frequency><action>Standard</action><subaction/>
+		<fluff>A beam of radiant energy extends from your hands to bathe a foe in searing light, forcing it to move</fluff>
+		<keyword>Divine</keyword><keyword>Implement</keyword><keyword>Radiant</keyword>
+		<section><name>Attack:</name><type>Ranged</type><range>7/15</range><target>one creature</target>Wisdom vs. Reflex</section>
+		<section shade=""><name>Hit:</name>1d6 + Wisdom modifier radiant damage, and you slide the target up to 1 square.</section>
+		<section shade="" indent="1"><name>Level 21:</name>2d6 + Wisdom modifier radiant damage, and slide up to 2 squares.</section>
+		<section auto="basic-ranged"/>
+	</power>
+
+	<power>
+		<title>Vanguard's Lightning</title>
+		<class>Invoker</class><category>Attack</category><level>1</level>
+		<frequency>At-Will</frequency><action>Standard</action><subaction/>
+		<fluff>Bolts of divine lightning arc from your hands to scorch the area before you, then linger to avenge any attacks made by your foes</fluff>
+		<keyword>Divine</keyword><keyword>Implement</keyword><keyword>Lightning</keyword>
+		<section><name>Attack:</name><type>Area</type><range>burst 1 within 10</range><target>each creature in the burst</target>Wisdom vs. Reflex</section>
+		<section shade=""><name>Hit:</name>1d6 + Wisdom modifier lightning damage.</section>
+		<section shade="" indent="1"><name>Level 21:</name>2d6 + Wisdom modifier lightning damage.</section>
+		<section><name>Effect:</name>Until the end of your next turn, whenever the target makes a <i>reactive strike</i>, it takes lightning damage equal to your Constitution modifier + your implement's enhancement bonus.</section>
+		<section indent="1"><name>Level 11:</name>3 + your Constitution modifier + your implement's enhancement bonus lightning damage.</section>
+		<section indent="1"><name>Level 21:</name>6 + your Constitution modifier + your implement's enhancement bonus lightning damage.</section>
+	</power>
+
+	<power>
+		<title>Visions of Blood</title>
+		<class>Invoker</class><category>Attack</category><level>1</level>
+		<frequency>At-Will</frequency><action>Standard</action><subaction/>
+		<fluff>The images of carnage and death that you invoke sow doubt in your enemies</fluff>
+		<keyword>Divine</keyword><keyword>Fear</keyword><keyword>Implement</keyword><keyword>Psychic</keyword>
+		<section><name>Attack:</name><type>Close</type><range>wave 3</range><target>each creature in the wave</target>Wisdom vs. Will</section>
+		<section shade=""><name>Hit:</name>1d6 + Wisdom modifier psychic damage.</section>
+		<section shade="" indent="1"><name>Level 21:</name>2d6 + Wisdom modifier psychic damage.</section>
+		<section><name>Effect:</name>The target takes a -1 penalty to all defenses until the start of your next turn.</section>
+	</power>
 </catalog>

@@ -195,7 +195,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			</div>
 		</div>
 
-		<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.1em); box-sizing:border-box; padding:0.3em; float:left;">
+		<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.05em); box-sizing:border-box; padding:0.3em; float:left;">
 			<i><xsl:value-of select="fluff"/></i>
 		</div>
 		<xsl:if test="keyword">
@@ -253,7 +253,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 					   </div>
 				   </xsl:if>
 					<xsl:if test="fluff">
-						<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.1em); box-sizing:border-box; padding:0.3em; float:left;">
+						<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.05em); box-sizing:border-box; padding:0.3em; float:left;">
 							<i><xsl:value-of select="fluff"/></i>
 						</div>
 					</xsl:if>
@@ -358,7 +358,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							   </div>
 						   </xsl:if>
 							<xsl:if test="fluff">
-								<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.1em); box-sizing:border-box; padding:0.3em; float:left;">
+								<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.05em); box-sizing:border-box; padding:0.3em; float:left;">
 									<i><xsl:value-of select="fluff"/></i>
 								</div>
 							</xsl:if>
@@ -409,7 +409,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							   </div>
 						   </xsl:if>
 							<xsl:if test="fluff">
-								<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.1em); box-sizing:border-box; padding:0.3em; float:left;">
+								<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.05em); box-sizing:border-box; padding:0.3em; float:left;">
 									<i><xsl:value-of select="fluff"/></i>
 								</div>
 							</xsl:if>
@@ -460,7 +460,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 							   </div>
 						   </xsl:if>
 							<xsl:if test="fluff">
-								<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.1em); box-sizing:border-box; padding:0.3em; float:left;">
+								<div class="fluff" style="font-family:MentorSansStd-Light; background:linear-gradient(to right, #D6D6C2, #ebebe0); width:calc(100% - 0.05em); box-sizing:border-box; padding:0.3em; float:left;">
 									<i><xsl:value-of select="fluff"/></i>
 								</div>
 							</xsl:if>
@@ -552,12 +552,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:when test="shade or @shade ='true' or @shade or @temp">
 			<xsl:choose>
 	  		 	<xsl:when test="name or bullet or @bullet or @auto or @special or @personal or keyword or type">
-		  			<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
+		  			<div class="section" style="width:calc(100% - 0.05em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
               <xsl:call-template name="section-content"/>
 		  		 	</div>
 		  		</xsl:when>
 		  		<xsl:otherwise>
-		  			<div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
+		  			<div class="section" style="width:calc(100% - 0.05em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; background:linear-gradient(to right, #D6D6C2, #ebebe0); padding-left:{$leftindent};">
               <xsl:call-template name="section-content"/>
 		  		 	</div>
 		  		</xsl:otherwise>
@@ -566,12 +566,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 		<xsl:otherwise>
 			<xsl:choose>
 	   		<xsl:when test="name or bullet or @bullet or @auto or @special or @personal or keyword or type">
-	   		  <div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; padding-left:{$leftindent};">
+	   		  <div class="section" style="width:calc(100% - 0.05em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:-0.7em; float:left; padding-left:{$leftindent};">
 					  <xsl:call-template name="section-content"/>
 	   		  </div>
 	   	  </xsl:when>
 	   	  <xsl:otherwise>
-	   		  <div class="section" style="width:calc(100% - 0.1em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; padding-left:{$leftindent};">
+	   		  <div class="section" style="width:calc(100% - 0.05em); box-sizing:border-box; padding:0.2em 0.3em; text-indent:0.5em; float:left; padding-left:{$leftindent};">
 					  <xsl:call-template name="section-content"/>
 	   		  </div>
 	   	  </xsl:otherwise>
@@ -588,7 +588,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:if test="@auto or @personal or @special">
     <xsl:choose>
       <xsl:when test="@auto='channeldivinity'">
-        <span style="margin-right:0.3em;"><b>Channel Divinity: </b></span>
+        <span style="margin-right:0.2em;"><b>Channel Divinity: </b></span>
         <xsl:text>One Channel Divinity power per encounter.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='no-opportunity'">
@@ -598,66 +598,66 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:text>Using this power does not trigger </xsl:text><i>reactive strikes</i><xsl:text> from the target</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-melee'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-ranged'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>You can use this attack in place of a </xsl:text><i>ranged basic attack</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-both'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>You can use this attack in place of a </xsl:text><i>basic attack</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-melee-counts'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>This power counts as a </xsl:text><i>melee basic attack</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-ranged-counts'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>This power counts as a </xsl:text><i>ranged basic attack</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-both-counts'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>This power counts as a </xsl:text><i>basic attack</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-melee-opportunity'">
         <xsl:choose>
           <xsl:when test="name">
-            <span style="margin-right:0.3em;"><b><xsl:value-of select="name"/></b></span>
+            <span style="margin-right:0.2em;"><b><xsl:value-of select="name"/></b></span>
           </xsl:when>
           <xsl:otherwise>
-            <span style="margin-right:0.3em;"><b>Special: </b></span>
+            <span style="margin-right:0.2em;"><b>Special: </b></span>
           </xsl:otherwise>
         </xsl:choose>
         <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text> when making a </xsl:text><i>reactive strike</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-melee-enforce'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text> when using your </xsl:text><i>enforce challenge</i><xsl:text> class power. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='basic-melee-enforce-opp'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text> when using your </xsl:text><i>enforce challenge</i><xsl:text> class power or when making a </xsl:text><i>reactive strike</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-bloodied'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must be bloodied. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='charge-effect'">
-        <span style="margin-right:0.3em;"><b>Effect: </b></span>
+        <span style="margin-right:0.2em;"><b>Effect: </b></span>
         <xsl:text>You charge and use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text>. If an effect allows you to charge, you can use this power. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='charge-special'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>You can use this attack in place of a </xsl:text><i>melee basic attack</i><xsl:text> when charging. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-freehand'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must have a hand free.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-weapgroup'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must be wielding a </xsl:text>
         <xsl:choose>
           <xsl:when test="count(group) = 1">
@@ -683,7 +683,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-reach'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must be wielding a </xsl:text>
         <xsl:if test="@specific">
           <xsl:value-of select="@specific"/><xsl:text> </xsl:text>
@@ -691,61 +691,61 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
         <xsl:text>reach weapon.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-twomelee'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must be wielding two melee weapons.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-twohand'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must be wielding a melee weapon in two hands.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-shield'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must be using a shield.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='req-ranger'">
-        <span style="margin-right:0.3em;"><b>Requirement: </b></span>
+        <span style="margin-right:0.2em;"><b>Requirement: </b></span>
         <xsl:text>You must be wielding two melee weapons, or a ranged weapon.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='prereq-skill'">
-        <span style="margin-right:0.3em;"><b>Prerequisite: </b></span>
+        <span style="margin-right:0.2em;"><b>Prerequisite: </b></span>
         <xsl:text>You must have training in the </xsl:text><xsl:value-of select="@skill"/><xsl:text> skill.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='prereq-wildshape'">
-        <span style="margin-right:0.3em;"><b>Prerequisite: </b></span>
+        <span style="margin-right:0.2em;"><b>Prerequisite: </b></span>
         <xsl:text>You must have the </xsl:text><i>wild shape</i><xsl:text> class power.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='opportunity-counts'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>This attack counts as a </xsl:text><i>reactive strike</i><xsl:text>. </xsl:text>
       </xsl:when>
       <xsl:when test="@auto='powerstrike'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <i>Power strike</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>power strike</i><xsl:text> per triggering attack.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='dreadsmite'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <i>Dread smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>dread smite</i><xsl:text> per triggering attack.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='holysmite'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <i>Holy smite</i><xsl:text> can be chosen at all encounter attack levels, allowing you to use it more than once per encounter. You can only use one </xsl:text><i>holy smite</i><xsl:text> per triggering attack.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='smage-both'">
         <xsl:text>Make one attack roll and compare it to both</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='smage-throw'">
-        <span style="margin-right:0.3em;"><b>Requirement:</b></span>
+        <span style="margin-right:0.2em;"><b>Requirement:</b></span>
         <xsl:text>You must throw your bonded weapon as part of making this attack.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='weapon-implement'">
-        <span style="margin-right:0.3em;"><b>Special: </b></span>
+        <span style="margin-right:0.2em;"><b>Special: </b></span>
         <xsl:text>You make this attack as either a melee </xsl:text><b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;">Weapon</span></b><xsl:text> attack or a ranged </xsl:text><b><span class="keyword" style="float:none; font-variant: small-caps; font-size: 1.05em; width:calc(100% - 0.5em); margin:0.1em;">Implement</span></b><xsl:text> attack.</xsl:text>
       </xsl:when>
       <xsl:when test="@auto='personal' or @personal">
-        <span style="margin-right:0.3em;"><b>Personal</b></span>
+        <span style="margin-right:0.2em;"><b>Personal</b></span>
       </xsl:when>
       <xsl:when test="@auto='special' or @special">
-        <span style="margin-right:0.3em;"><b>Special</b></span>
+        <span style="margin-right:0.2em;"><b>Special</b></span>
       </xsl:when>
       <xsl:otherwise/>
     </xsl:choose>
