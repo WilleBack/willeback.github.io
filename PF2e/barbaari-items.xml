@@ -35,6 +35,53 @@
    </rule>
 
    <rule>
+      <title>Hide Armor</title>
+      <price>2 gp</price>
+      <ac>+3</ac> <dexcap>+2</dexcap> <checkpenalty>-2</checkpenalty> <spdpenalty>-5 ft.</spdpenalty>
+      <strreq>+2</strreq> <bulk>2</bulk>
+      <armorcat>Medium</armorcat> <armorgroup>Leather</armorgroup>
+
+      <line>A mix of furs, sturdy hide, and sometimes molded boiled leather, this armor provides protection due to its layers of leather, though its bulkiness slows the wearer down and decreases mobility.</line>
+
+      <variant>
+         <rune italic="">+1 potency</rune> <level>5</level>
+         <trait>Invested</trait> <trait>Magical</trait>
+         <price>160 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
+      </variant>
+      <variant>
+         <rune italic="">resilient</rune> <level>8</level>
+         <trait>Magical</trait>
+         <price>340 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line><i>Resilient</i> runes imbue armor with additional protective magic. This grants the wearer a +1 item bonus to saving throws.</line>
+      </variant>
+      <variant>
+         <rune italic="">quenching</rune> <level>6</level>
+         <trait>Magical</trait>
+         <price>250 gp</price>
+         <usage>etched onto an armor</usage>
+
+         <line>This rune counters burning and corrosive agents. Armor with this rune reduces the DC of the flat check to end persistent acid or fire damage affecting you from 15 to 12 (from 10 to 7 with particularly effective assistance).</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Trident</title>
+      <trait>Thrown 20 ft.</trait>
+      <price>1 gp</price> <damage>1d8 P</damage>
+      <hands>1</hands> <bulk>1</bulk>
+      <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Spear</weapgroup>
+
+      <line>This three-pronged, spear-like weapon typically has a 4-foot shaft. Like a spear, it can be wielded with one hand and thrown.</line>
+
+      <traittext><name>Thrown 20 ft.</name>You can throw this weapon as a ranged attack, and it is a ranged weapon when thrown. A thrown weapon adds your Strength modifier to damage, just like a melee weapon does.</traittext>
+   </rule>
+
+   <rule>
       <title>Greataxe</title>
       <trait>Sweep</trait>
       <price>2 gp</price> <damage>1d12 S</damage>
@@ -101,45 +148,6 @@
    </rule>
 
    <rule>
-      <title>Hide Armor</title>
-      <price>2 gp</price>
-      <ac>+3</ac> <dexcap>+2</dexcap> <checkpenalty>-2</checkpenalty> <spdpenalty>-5 ft.</spdpenalty>
-      <strreq>+2</strreq> <bulk>2</bulk>
-      <armorcat>Medium</armorcat> <armorgroup>Leather</armorgroup>
-
-      <line>A mix of furs, sturdy hide, and sometimes molded boiled leather, this armor provides protection due to its layers of leather, though its bulkiness slows the wearer down and decreases mobility.</line>
-
-      <variant>
-         <rune italic="">+1 potency</rune> <level>5</level>
-         <trait>Invested</trait> <trait>Magical</trait>
-         <price>160 gp</price>
-         <usage>etched onto the armor</usage>
-
-         <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
-      </variant>
-      <variant>
-         <rune italic="">quenching</rune> <level>6</level>
-         <trait>Magical</trait>
-         <price>250 gp</price>
-         <usage>etched onto an armor</usage>
-
-         <line>This rune counters burning and corrosive agents. Armor with this rune reduces the DC of the flat check to end persistent acid or fire damage affecting you from 15 to 12 (from 10 to 7 with particularly effective assistance).</line>
-      </variant>
-   </rule>
-
-   <rule>
-      <title>Trident</title>
-      <trait>Thrown 20 ft.</trait>
-      <price>1 gp</price> <damage>1d8 P</damage>
-      <hands>1</hands> <bulk>1</bulk>
-      <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Spear</weapgroup>
-
-      <line>This three-pronged, spear-like weapon typically has a 4-foot shaft. Like a spear, it can be wielded with one hand and thrown.</line>
-
-      <traittext><name>Thrown 20 ft.</name>You can throw this weapon as a ranged attack, and it is a ranged weapon when thrown. A thrown weapon adds your Strength modifier to damage, just like a melee weapon does.</traittext>
-   </rule>
-
-   <rule>
       <title>Piki's Dagger</title>
       <trait>Agile</trait> <trait>Finesse</trait> <trait>Thrown 10 ft.</trait> <trait>Versatile S</trait>
       <price>2 sp</price> <damage>1d4 P</damage>
@@ -159,6 +167,48 @@
 
          <line>This weapon has been plated in silver, making it more effective against some creatures.</line>
       </variant>
+   </rule>
+
+   <rule>
+      <title>Composite Longbow</title>
+      <type>Item</type><level>1</level>
+      <trait>Deadly d10</trait><trait>Propulsive</trait><trait>Volley 30ft.</trait>
+      <price>20 gp</price><damage>1d8 P</damage><bulk>2</bulk>
+      <hands>1+</hands><range>100 ft.</range><reload>0</reload>
+      <weaptype>Ranged</weaptype><weapcat>Martial</weapcat><weapgroup>Bow</weapgroup>
+      <ammunition>arrows</ammunition>
+
+      <line>This projectile weapon is made from horn, wood, and sinew laminated together to increase the power of its pull and the force of its projectile. Like all longbows, its great size also increases the bow's range and power. You must use two hands to fire it, and it cannot be used while mounted.</line>
+      <line>Any time an ability is specifically restricted to a longbow, such as Erastil's favored weapon, it also applies to composite longbows unless otherwise stated.</line>
+
+      <traittext><name>Deadly d10</name>On a critical hit, the weapon adds a weapon damage die of the listed size. Roll this after doubling the weapon’s damage. This increases to two dice if the weapon has a greater striking rune and three dice if the weapon has a major striking rune. An ability that changes the size of the weapon’s normal damage dice doesn’t change the size of its deadly die.</traittext>
+      <traittext><name>Propulsive</name>You add half your Strength modifier (if positive) to damage rolls with a propulsive ranged weapon. If you have a negative Strength modifier, you add your full Strength modifier instead.</traittext>
+      <traittext><name>Volley 30ft.</name>This ranged weapon is less effective at close distances. Your attacks against targets that are at a distance within the range listed take a –2 penalty.</traittext>
+
+      <variant>
+         <rune italic="">+1 Potency</rune> <level>2</level>
+         <trait>Magical</trait>
+         <usage>etched onto the weapon</usage>
+         <price>35 gp</price>
+
+         <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +1 item bonus, and the weapon can be etched with one property rune.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Lifting Belt</title>
+      <type>Item</type> <level>4</level>
+      <trait>Invested</trait> <trait>Magical</trait>
+      <price>80 gp</price>
+      <usage>worn belt</usage> <bulk>L</bulk>
+
+      <line>This wide leather belt grants you a +1 item bonus to Athletics checks and increases the amount you can easily carry. You can carry Bulk equal to 6 + your Strength modifier before becoming encumbered, and you can hoold and carry a total Bulk up to 11 + your Strength modifier.</line>
+
+      <block>
+         <name activate="">Assisted Lift</name><type>(manipulate)</type>
+         <part><name>Effect</name> You lift an object of up to 8 Bulk as though it were weightless. This requires two hands, and if the object is locked or otherwise held in place, you can attempt to Force it Open using Athletics as part of this activation.</part>
+         <part>The object still has its full weight and Bulk for all other purposes—you just ignore that weight. The effect lasts until the end of your next turn.</part>
+      </block>
    </rule>
 
    <rule>
