@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Arachnid Harness</title>
+      <type>Item</type><level>Level 7+</level>
+      <trait>Invested</trait><trait>Magical</trait>
+      <usage>worn armor</usage>
+      <bulk>1</bulk>
+      <base item="Armor">leather armor</base>
+
+      <line>This leather armor has four knobbed ribs that wrap around the torso. The armor grants you resistance to poison damage.</line>
+
+      <block>
+         <name activate="">Spread Legs</name><action>1</action><type>(concentrate)</type>
+         <part><name>Frequency</name>by type</part>
+         <part><name>Effect</name>The ribs from the armor spread into functional spider limbs. For 1 minute, you gain a climb Speed equal to half your land Speed and have your limbs free as you climb. If you use all your free limbs to help you Climb, your climb Speed equals your land Speed.</part>
+      </block>
+
+      <variant>
+         <type>greater</type>
+         <level>9</level>
+         <price>700 gp</price>
+         <craft>the initial raw materials must include four intact legs from a goliath spider</craft>
+
+         <line>The armor is <i>+1 resilient leather armor</i>, grants resistance 5 to poison, and can be activated once every 10 minutes.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Pendant of the Occult</title>
+      <type>Item</type><level>3+</level>
+      <trait>Invested</trait><trait>Occult</trait>
+      <usage>worn</usage><bulk/>
+
+      <line>This amulet is hollow and shaped in the form of an unblinking eye. Its cavity typically holds some fragment of occult text. While wearing the pendant, you gain an item bonus to Occultism checks, and you can cast the <i>guidance</i> cantrip as an occult innate spell.</line>
+
+      <variant>
+         <type>greater</type>
+         <level>9</level>
+         <price>650 gp</price>
+
+         <line>The pendant grants a +2 item bonus, and can be activated.</line>
+         <block>
+            <name activate="">Dream Message</name><type>(concentrate, manipulate)</type>
+            <part><name>Frequency</name>once per day</part>
+            <part><name>Effect</name>You cast a 4th-rank <i>dream message</i> spell.</part>
+         </block>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Dream Message</title>
+      <type>Spell</type><level>3</level>
+      <trait>Concentrate</trait><trait>Manipulate</trait><trait>Mental</trait><trait>Occult</trait>
+      <cast>10 minutes</cast>
+      <range>planetary</range><targets>1 creature you know by name and have met in person</targets>
+      <duration>until your next daily preparations</duration>
+
+      <line>You send a message to your target's dream. The message is one-way, up to 1 minute of speech (roughly 150 words). If the target is asleep, they receive the message instantly. If not, they receive it the next time they sleep. As soon as they receive it, the spell ends, and you know the message was sent.</line>
+
+      <heighten value="4th">You can target up to 10 creatures you know by name and have met in person. You must send the same message to all of them; the spell ends for each target individually.</heighten>
+   </rule>
+
+   <rule>
+      <title>Elven Absinthe</title>
+      <type>Item</type><level>5</level>
+      <trait>Alchemical</trait><trait>Consumable</trait><trait>Drug</trait><trait>Ingested</trait><trait>Poison</trait>
+      <price>25 gp</price>
+      <usage>held in 1 hand</usage><bulk/>
+      <activate><action>1</action><type>Interact</type></activate>
+
+      <line>Specialists in Kyonin, the country of elves, prepare this emerald-green beverage.</line>
+
+      <block>
+         <name>Saving Throw</name><type>DC 20 Fortitude</type>
+         <part><name>Onset</name>1 hour</part>
+         <part><name>Maximum Duration</name>1 day</part>
+         <part linebreak=""><name>Stage 1</name>+2 item bonus to Diplomacy and Performance checks (1 hour)</part>
+         <part><name>Stage 2</name>drained 2 (1 hour)</part>
+         <part><name>Stage 3</name>stupefied 4 (1 hour)</part>
+      </block>
+   </rule>
+
+   <rule>
+      <title>Wand of Splintered Sorrows</title>
+      <type>Item</type><level>6+</level>
+      <uncommon/><trait>Magical</trait><trait>Wand</trait><trait>Wood</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <craft>Supply a casting of <i>splinter volley</i> of the appropriate level</craft>
+
+      <line>This wooden wand is roughly cut, as if it had been crudely chopped from a tree and left forgotten. When held, the wand imparts feelings of deep sorrow.</line>
+
+      <block>
+         <name>Activate</name><type>Cast a Spell</type>
+         <part><name>Effect</name>You cast <i>splinter volley</i> of the indicated rank. Each splinter contains some of the despair felt by cruelly harvested trees, causing any creature damaged by this spell to become stupefied 2 for a number of rounds equal to the spell rank. On a critical success on the attack roll, the target also weeps, becoming slowed 1 for the same duration.</part>
+      </block>
+
+      <variant>
+         <rank>4th-rank</rank>
+         <level>10</level>
+         <price>1,000 gp</price>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Splinter Volley</title> <action or="3">2</action>
+      <type>Spell</type> <level>2</level>
+      <trait>Concentrate</trait> <trait>Manipulate</trait> <trait>Primal</trait> <trait>Wood</trait>
+      <tradition>arcane</tradition><tradition>primal</tradition>
+      <range>60 feet</range> <targets>1 or 2 creatures</targets>
+      <defense>AC</defense>
+
+      <line>You launch a volley of splinters at your foes. Make a ranged spell attack roll against a single creature's AC. On a hit, the splinters deal 4d6 piercing damage. On a critical hit, the splinters deal double damage and 1 persistent bleed damage.</line>
+      <line>You can spend a third action while casting this spell to fire splinters at two different targets instead of one. These attacks each increase your multiple attack penalty, but you don't increase your multiple attack penalty until after you make both spell attack rolls for <i>splinter volley</i>.</line>
+
+      <heighten value="+1">Increase the damage dealt to each target by 2d6. For every two ranks, also increase the persistent bleed damage on a critical hit by 1.</heighten>
+   </rule>
+
+   <rule>
+      <title>Weapon Potency Runestone</title>
+      <trait>Consumable</trait><trait>Magical</trait>
+      <price>3 gp</price>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+
+      <line>This flat piece of hard stone is specially etched with a <![CDATA[<i>+2 weapon potency</i>]]> rune. When the rune is transferred from the <![CDATA[<i>runestone</i> to a weapon, the <i>runestone</i>]]> cracks and is destroyed.</line>
+      <block>
+         <name>Etching a rune</name>
+         <part linebreak=""><name>Time</name>1 day</part>
+         <part><name>Requirement</name>You must be able to craft magical items</part>
+         <part><name>Check</name>Crafting DC 27, you transfer the rune on a success</part>
+      </block>
+
+      <variant>
+         <rune>+2 weapon potency</rune> <level>10</level>
+         <trait>Magical</trait>
+         <price>9350 gp</price>
+         <usage>etched onto a weapon</usage>
+
+         <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +2 item bonus, and the weapon can be etched with two property runes.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Potion of Resistance</title>
+      <type>Item</type><level>5+</level>
+      <trait>Consumable</trait><trait>Magical</trait><trait>Potion</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <duration>1 hour</duration>
+      <activate><action>1</action><type>Interact</type></activate>
+
+      <line>Drinking this thick, fortifying potion grants resistance against a single damage type for the duration.</line>
+
+      <variant>
+         <type>moderate electricity</type>
+         <level>10</level>
+         <price>180 gp</price>
+
+         <line>You gain resistance 10 to electricity.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Ruby Capacitor</title>
+      <type>Item</type><level>10+</level>
+      <trait>Consumable</trait><trait>Magical</trait><trait>Talisman</trait>
+      <usage>affixed to a magical staff</usage><bulk/>
+      <activate><action>F</action><type>(manipulate)</type><requirement>You prepared the staff</requirement></activate>
+
+      <line>This cluster of unworked ruby is bound to the top of a staff by silver wire. When activated, it adds a number of temporary charges to the staff depending on its type. Any spells cast from the staff before the end of the turn expend these charges first. Any unused temporary charges are lost at the end of your turn.</line>
+
+      <variant>
+         <type>standard</type>
+         <level>10</level>
+         <price>180 gp</price>
+
+         <line>The capacitor adds one temporary charge.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Blood Sight Elixir</title>
+      <type>Item</type><level>3+</level>
+      <uncommon/><trait>Alchemical</trait><trait>Consumable</trait><trait>Elixir</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <activate><action>1</action><type>Interact</type></activate>
+
+      <line>This thick, blood-red elixir sharpens your senses and makes you more acutely aware of blood. You gain blood sight with a duration and effects depending on type.</line>
+      <line>Blood sight has a range of 60 feet and allows you to detect living creatures who are taking persistent bleed damage or who have the dying or wounded conditions. You also detect free-standing puddles or droplets of recently spilled blood. At the GM's discretion, living creatures without blood can't be detected with your blood sight.</line>
+
+      <variant>
+         <type>greater</type>
+         <level>9</level>
+         <price>115 gp</price>
+         <duration>1 hour</duration>
+
+         <line>The blood sight is a precise sense.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Searing Suture</title>
+      <type>Item</type><level>1+</level>
+      <uncommon/><trait>Alchemical</trait><trait>Consumable</trait><trait>Fire</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <activate><action>1</action><type>Interact</type></activate>
+
+      <line>Activating this black powder–infused alchemical bandage cauterizes wounds. You can apply a searing suture to yourself or an adjacent willing creature as you activate it.</line>
+      <line>The target creature takes 1d6 fire damage and can immediately attempt a flat check to remove persistent bleed damage—the DC of this flat check depends on the type of searing suture applied. When applied against a bleed effect that is lower level than the searing suture, the flat check is automatically successful.</line>
+
+      <variant>
+         <type>greater</type>
+         <level>9</level>
+         <price>120 gp</price>
+
+         <line>The flat check DC is 5.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Roaring Potion</title>
+      <type>Item</type><level>8+</level>
+      <trait>Consumable</trait><trait>Magical</trait><trait>Potion</trait><trait>Sonic</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <duration>1 hour</duration>
+      <activate><action>1</action><type>Interact</type></activate>
+
+      <line>Ripples move constantly through a <i>roaring potion</i>, a cloudy liquid that growls when you open its container. Drinking it gives you access to two other activations for the duration.</line>
+
+      <block>
+         <name activate="">Bullhorn</name><type>(concentrate)</type>
+         <part><name>Effect</name>You amplify your voice, loud enough for you to be heard easily at a great distance. For the duration, your voice can be heard loudly and clearly by all listeners within a distance depending on the type, even if other ambient noise would otherwise block the sound. Despite the volume, this doesn't make your voice jarring or distracting. This doesn't increase the range or area of other <u>auditory</u> or <u>linguistic</u> effects, and physical barriers such as walls and doors still block or muffle your voice as normal.</part>
+         <part>Your loud voice makes it easier to Coerce others, and the acoustics assist in Performing at a large venue. You gain a +1 status bonus to checks to Coerce and auditory Performance checks to Perform at a large venue.</part>
+         <part>You can Dismiss the effect.</part>
+      </block>
+      <block>
+         <name activate="">Scream</name><type>(concentrate)</type>
+         <part><name>Frequency</name>once every 1d4 rounds</part>
+         <part><name>Effect</name>You emit a scream in a 15-foot cone that deals sonic damage depending on the type. Each creature in the area must attempt a Fortitude save. The frightened condition is a <u>fear</u> and <u>emotion</u> effect.
+            <line results="">
+               <critsuccess/>
+               <success>The creature takes half damage.</success>
+               <fail>The creature takes full damage and is frightened 1.</fail>
+               <critfail>The creature takes double damage and is frightened 2.</critfail>
+            </line>
+         </part>
+      </block>
+
+      <variant>
+         <type>lesser</type>
+         <level>8</level>
+         <price>90 gp</price>
+
+         <line>Your voice can be heard within 500 feet.</line>
+         <line>The scream deals 4d4 sonic damage with a DC 24 Fortitude save.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Gallows Tooth</title>
+      <type>Item</type><level>8</level>
+      <trait>Consumable</trait><trait>Magical</trait><trait>Talisman</trait>
+      <price>100 gp</price>
+      <usage>affixed to a weapon</usage><bulk/>
+      <activate><action>1</action><type>(manipulate)</type></activate>
+
+      <line>This grisly molar hangs from a cord threaded through a hole just above its dried, exposed root. When you activate this talisman, make a melee Strike against an adjacent creature. That creature is off-guard against the Strike and until the end of your turn.</line>
+   </rule>
+</catalog>

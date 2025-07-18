@@ -99,27 +99,19 @@
    </rule>
 
    <rule>
-      <title>Sturdy Shield</title>
-      <type>Item</type> <level>4+</level>
-      <trait>Magical</trait>
+      <title>Adamantine Shield</title>
+      <type>Item</type> <level>8+</level>
+      <uncommon/> <trait>Precious</trait>
       <usage>held in 1 hand</usage> <bulk>1</bulk>
       <base item="Shield">Steel Shield</base>
 
-      <line>With a superior design and excellent craftsmanship, this steel shield has higher Hardness than its non-magical counterparts, making it hard to break and destroy.</line>
+      <line>Adamantine shields are particularly sturdy, and when used for a shield bash, they're adamantine weapons.</line>
 
       <variant>
-         <type>Minor</type> <level>4</level>
-         <price>100 gp</price>
+         <grade>standard</grade> <level>8</level>
+         <price>440</price>
 
-         <line>This shield has Hardness 8, HP 64, and BT 32.</line>
-      </variant>
-      <variant>
-         <attachment>Shield Boss</attachment>
-         <price>5 sp</price> <damage>1d6 B</damage> <bulk>-</bulk>
-         <hands>1</hands>
-         <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Shield</weapgroup>
-
-         <line>Typically a round, convex, or conical piece of thick metal attached to the center of a shield, a shield boss increases the bludgeoning damage of a shield bash.</line>
+         <line>A standard-grade adamantine shield has Hardness 10, HP 40, and BT 20.</line>
       </variant>
    </rule>
 
@@ -127,7 +119,7 @@
       <title>Doubling Rings</title>
       <type>Item</type> <level>3</level>
       <trait>Invested</trait> <trait>Magical</trait>
-      <usage>worn</usage> <bulk>-</bulk>
+      <usage>worn</usage> <bulk/>
       <price>50</price>
 
       <line>This item consists of two magically linked rings: an intricate, gleaming golden ring with a square-cut ruby, and a thick, plain iron ring. When you wield a melee weapon in the hand wearing the golden ring, the weapon's fundamental runes (<![CDATA[<i>potency</i> and <i>striking</i>]]>) are replicated onto any melee weapon you wield in the hand wearing the iron ring. Any fundamental runes normally on the weapon in the hand wearing the iron ring are suppressed.</line>
@@ -186,6 +178,29 @@
       </variant>
    </rule>
 
+      <rule>
+         <title>Shining Symbol</title>
+         <type>Item</type> <level>3+</level>
+         <trait>Divine</trait> <trait>Invested</trait> <trait>Light</trait>
+         <usage>worn</usage> <bulk/>
+
+         <line>If you worship a deity, this golden amulet transforms into your deity's religious symbol when you invest it. You gain an item bonus to Religion. The symbol casts dim light in a 20-foot emanation. </line>
+
+         <block>
+            <name activate="">Spiritual Light</name><action>2</action><type>(concentrate, light, revelation)</type>
+            <part><name>Frequency</name>once per day</part>
+            <part><name>Effect</name>The light cast by the symbol becomes bright light for 10 minutes and shines through bodies to reveal hints of the spirits within. Creatures within the light receive a status penalty to Deception and Stealth checks.</part>
+            <part>You can Dismiss this activation.</part>
+         </block>
+
+         <variant>
+            <type>regular</type> <level>3</level>
+            <price>55 gp</price>
+
+            <line>The item bonus to Religion is +1, and the status penalty from Spiritual Light is -1.</line>
+         </variant>
+      </rule>
+
    <rule>
       <title>Everburning Torch</title>
       <type>Item</type> <level>1</level>
@@ -234,7 +249,7 @@
       <title>Crafter's Eyepiece</title>
       <type>Item</type> <level>3</level>
       <trait>Invested</trait> <trait>Magical</trait>
-      <usage>worn eyepiece</usage> <bulk>-</bulk>
+      <usage>worn eyepiece</usage> <bulk/>
       <price>60 gp</price>
 
       <line>This rugged metal eyepiece etched with sqare patterns is designed to be worn over a single eye. Twisting the lens reveals a faint three-dimensional outline of an item you plan to build or repair, with helpful labels on the component parts. You gain a +1 item bonus to Crafting checks.</line>

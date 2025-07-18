@@ -513,14 +513,14 @@
             <xsl:if test="activate">
                <div id="activate" class="line" style="float: left;">
                   <b>Activate </b>
-                  <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="activate/action" /></span>
+                  <span style="font-family: 'pfactions'; font-size: 125%; width:2em; text-align: center;"><xsl:value-of select="activate/action" /></span>
                   <xsl:if test="activate/action/@to">
                      <xsl:text> to </xsl:text>
-                     <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="activate/action/@to" /></span>
+                     <span style="font-family: 'pfactions'; font-size: 125%; width:2em; text-align: center;"><xsl:value-of select="activate/action/@to" /></span>
                   </xsl:if>
                   <xsl:if test="activate/action/@or">
                      <xsl:text> or </xsl:text>
-                     <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="activate/action/@or" /></span>
+                     <span style="font-family: 'pfactions'; font-size: 125%; width:2em; text-align: center;"><xsl:value-of select="activate/action/@or" /></span>
                   </xsl:if>
                   <xsl:text> </xsl:text> <xsl:apply-templates select="activate/type"/>
                   <xsl:if test="activate/trigger">
@@ -541,94 +541,7 @@
    </xsl:template>
 
    <xsl:template name="description">
-      <xsl:for-each select="line">
-         <xsl:choose>
-            <xsl:when test="@results">
-               <div id="resultblock" class="line" style="float: left, padding: 0.4em;">
-                  <xsl:if test="critsuccess">
-                     <div id="result" class="line" style="float: left;">
-                        <b>Critical Success: </b>
-                        <xsl:apply-templates select="critsuccess[1]"/>
-                        <xsl:for-each select="critsuccess[position()>1]">
-                           <br/> <xsl:apply-templates/>
-                        </xsl:for-each>
-                     </div>
-                  </xsl:if>
-                  <xsl:if test="success">
-                     <div id="result" class="line" style="float: left;">
-                        <b>Success: </b>
-                        <xsl:apply-templates select="success[1]"/>
-                        <xsl:for-each select="success[position()>1]">
-                           <br/> <xsl:apply-templates/>
-                        </xsl:for-each>
-                     </div>
-                  </xsl:if>
-                  <xsl:if test="fail">
-                     <div id="result" class="line" style="float: left;">
-                        <b>Failure: </b>
-                        <xsl:apply-templates select="fail[1]"/>
-                        <xsl:for-each select="fail[position()>1]">
-                           <br/> <xsl:apply-templates/>
-                        </xsl:for-each>
-                     </div>
-                  </xsl:if>
-                  <xsl:if test="critfail">
-                     <div id="result" class="line" style="float: left;">
-                        <b>Critical Failure: </b>
-                        <xsl:apply-templates select="critfail[1]"/>
-                        <xsl:for-each select="critfail[position()>1]">
-                           <br/><xsl:apply-templates/>
-                        </xsl:for-each>
-                     </div>
-                  </xsl:if>
-               </div>
-            </xsl:when>
-            <xsl:when test="@list">
-               <xsl:if test="@list!=''">
-                  <div id="listtitle" class="line" style="float: left; width:100%; margin-top: 0.3em;">
-                     <b><xsl:value-of select="@list" /></b>
-                  </div>
-               </xsl:if>
-               <div id="list" class="line" style="float: left; padding-left: 1.7em;">
-                  <xsl:for-each select="entry">
-                     <div id="listentry" clas="line" style="float: left; width:100%;">
-                        &#9658;<xsl:text> </xsl:text>
-                        <xsl:if test="@name">
-                           <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
-                        </xsl:if>
-                        <xsl:apply-templates/>
-                     </div>
-                  </xsl:for-each>
-               </div>
-            </xsl:when>
-            <xsl:when test="@action">
-               <div id="list" class="line" style="float: left; padding-left: 2em;">
-                  <xsl:if test="@name">
-                     <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
-                  </xsl:if>
-                  <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="@action" /></span>
-                  <xsl:text> </xsl:text>
-                  <xsl:if test="@traits">
-                     <b> (<xsl:value-of select="@traits" disable-output-escaping="yes" />) </b>
-                  </xsl:if>
-                  <xsl:apply-templates/>
-               </div>
-            </xsl:when>
-            <xsl:when test="@toolkit">
-               <div id="description" class="line" style="float: left;">
-                  <xsl:text>You can use a toolkit with 1 hand if you're wearing it, or 2 if you're holding it. You can wear up to 2 Bulk of tools.</xsl:text>
-               </div>
-            </xsl:when>
-            <xsl:otherwise>
-               <div id="description" class="line" style="float: left;">
-                  <xsl:if test="@name">
-                     <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
-                  </xsl:if>
-                  <xsl:apply-templates/>
-               </div>
-            </xsl:otherwise>
-         </xsl:choose>
-      </xsl:for-each>
+      <xsl:apply-templates select="line"/>
    </xsl:template>
 
    <xsl:template match="block">
@@ -640,6 +553,7 @@
          <xsl:if test="type">
             <xsl:text> </xsl:text><xsl:apply-templates select="type" /><xsl:text>; </xsl:text>
          </xsl:if>
+
          <xsl:for-each select="part">
             <xsl:if test="@linebreak">
                <br />
@@ -720,6 +634,7 @@
                <xsl:call-template name="topbox" />
 
                <xsl:call-template name="description" />
+               <xsl:apply-templates select="block"/>
 
             </div>
          </xsl:for-each>
@@ -752,6 +667,95 @@
          </xsl:when>
          <xsl:otherwise>
             <xsl:apply-templates/>
+         </xsl:otherwise>
+      </xsl:choose>
+   </xsl:template>
+
+   <xsl:template match="line">
+      <xsl:choose>
+         <xsl:when test="@results">
+            <div id="resultblock" class="line" style="float: left, padding: 0.4em;">
+               <xsl:if test="critsuccess">
+                  <div id="result" class="line" style="float: left;">
+                     <b>Critical Success: </b>
+                     <xsl:apply-templates select="critsuccess[1]"/>
+                     <xsl:for-each select="critsuccess[position()>1]">
+                        <br/> <xsl:apply-templates/>
+                     </xsl:for-each>
+                  </div>
+               </xsl:if>
+               <xsl:if test="success">
+                  <div id="result" class="line" style="float: left;">
+                     <b>Success: </b>
+                     <xsl:apply-templates select="success[1]"/>
+                     <xsl:for-each select="success[position()>1]">
+                        <br/> <xsl:apply-templates/>
+                     </xsl:for-each>
+                  </div>
+               </xsl:if>
+               <xsl:if test="fail">
+                  <div id="result" class="line" style="float: left;">
+                     <b>Failure: </b>
+                     <xsl:apply-templates select="fail[1]"/>
+                     <xsl:for-each select="fail[position()>1]">
+                        <br/> <xsl:apply-templates/>
+                     </xsl:for-each>
+                  </div>
+               </xsl:if>
+               <xsl:if test="critfail">
+                  <div id="result" class="line" style="float: left;">
+                     <b>Critical Failure: </b>
+                     <xsl:apply-templates select="critfail[1]"/>
+                     <xsl:for-each select="critfail[position()>1]">
+                        <br/><xsl:apply-templates/>
+                     </xsl:for-each>
+                  </div>
+               </xsl:if>
+            </div>
+         </xsl:when>
+         <xsl:when test="@list">
+            <xsl:if test="@list!=''">
+               <div id="listtitle" class="line" style="float: left; width:100%; margin-top: 0.3em;">
+                  <b><xsl:value-of select="@list" /></b>
+               </div>
+            </xsl:if>
+            <div id="list" class="line" style="float: left; padding-left: 1.7em;">
+               <xsl:for-each select="entry">
+                  <div id="listentry" clas="line" style="float: left; width:100%;">
+                     &#9658;<xsl:text> </xsl:text>
+                     <xsl:if test="@name">
+                        <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
+                     </xsl:if>
+                     <xsl:apply-templates/>
+                  </div>
+               </xsl:for-each>
+            </div>
+         </xsl:when>
+         <xsl:when test="@action">
+            <div id="list" class="line" style="float: left; padding-left: 2em;">
+               <xsl:if test="@name">
+                  <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
+               </xsl:if>
+               <span style="font-family: 'pfactions'; font-size: 150%; width:2em; text-align: center;"><xsl:value-of select="@action" /></span>
+               <xsl:text> </xsl:text>
+               <xsl:if test="@traits">
+                  <b> (<xsl:value-of select="@traits" disable-output-escaping="yes" />) </b>
+               </xsl:if>
+               <xsl:apply-templates/>
+            </div>
+         </xsl:when>
+         <xsl:when test="@toolkit">
+            <div id="description" class="line" style="float: left;">
+               <xsl:text>You can use a toolkit with 1 hand if you're wearing it, or 2 if you're holding it. You can wear up to 2 Bulk of tools.</xsl:text>
+            </div>
+         </xsl:when>
+         <xsl:otherwise>
+            <div id="description" class="line" style="float: left;">
+               <xsl:if test="@name">
+                  <b><xsl:value-of select="@name"/></b><xsl:text> </xsl:text>
+               </xsl:if>
+               <xsl:apply-templates/>
+            </div>
          </xsl:otherwise>
       </xsl:choose>
    </xsl:template>
