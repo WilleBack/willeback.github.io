@@ -258,11 +258,11 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </div>
             <xsl:for-each select="race/trait">
                <div style="width=100%;">
-                  <b><xsl:value-of select="name" />: </b> <xsl:value-of select="description[1]" disable-output-escaping="yes" />
+                  <b><xsl:value-of select="name" />: </b> <xsl:apply-templates select="description[1]"/>
                </div>
                <xsl:for-each select="description[position()>1]">
                   <div style="width:100%;">
-                     <xsl:value-of select="." disable-output-escaping="yes" />
+                     <xsl:apply-templates />
                   </div>
                </xsl:for-each>
             </xsl:for-each>
@@ -281,7 +281,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
             </div>
             <xsl:for-each select="benefit">
                <div class="text">
-                  <xsl:value-of select="." disable-output-escaping="yes" />
+                  <xsl:apply-templates/>
                </div>
             </xsl:for-each>
 
@@ -299,7 +299,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                   </xsl:if>
                   <xsl:for-each select="benefit">
                      <div class="text">
-                        <xsl:value-of select="." disable-output-escaping="yes" />
+                        <xsl:apply-templates/>
                      </div>
                   </xsl:for-each>
 

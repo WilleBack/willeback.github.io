@@ -60,6 +60,13 @@ output_doc = xslt_transformer(source_doc)
 print(str(output_doc))
 output_doc.write("cleric.html", pretty_print=True)
 
+# Deva
+source_doc = etree.parse("deva.xml")
+output_doc = xslt_transformer(source_doc)
+
+print(str(output_doc))
+output_doc.write("deva.html", pretty_print=True)
+
 # Dragonborn
 source_doc = etree.parse("dragonborn.xml")
 output_doc = xslt_transformer(source_doc)

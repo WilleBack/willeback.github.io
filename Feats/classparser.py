@@ -1,5 +1,8 @@
 import xml.etree.ElementTree as ET
 
+SMALL_RACES = {"Gnome", "Goblin", "Halfling", "Kobold", "Pixie", "Svirfneblin"}
+POWER_STRIKE_CLASSES = {"Fighter", "Ranger"}
+
 # Crude app for creating class feat lists from full feat list
 
 fullTree = ET.parse('description.xml')
@@ -20,12 +23,12 @@ def create_feat_file(targetClass, targetRole, targetSource):
         key = feat.findtext("title")
         data.append((key, feat))
 
-    if targetClass == 'Fighter' or targetClass == 'Ranger':
+    if targetClass in POWER_STRIKE_CLASSES:
         for feat in fullRoot.findall(".feat[prereq='power strike']"):
             key = feat.findtext("title")
             data.append((key, feat))
 
-    if targetClass == 'Gnome' or targetClass == 'Goblin' or targetClass == 'Halfling' or targetClass == 'Kobold' or targetClass == 'Pixie' or targetClass == 'Svirfneblin':
+    if targetClass in SMALL_RACES:
         for feat in fullRoot.findall(".feat[prereq='Small or smaller']"):
             key = feat.findtext("title")
             data.append((key, feat))
@@ -33,6 +36,41 @@ def create_feat_file(targetClass, targetRole, targetSource):
     data.sort()
 
     return remove_duplicates(data)
+
+def update_target_file(filename: str, targetName: str, roleName: str, sourceName: str, removeFeats=None):
+    """
+    Load an XML file, clear its existing feats, regenerate them, and save back.
+    """
+    tree = ET.parse(filename)
+    root = tree.getroot()
+
+    # Remove existing feats
+    for feat in list(root.findall('./feat')):
+        root.remove(feat)
+
+    # Regenerate feats
+    collate = create_feat_file(targetName, roleName, sourceName)
+
+    # Append fresh feats 
+    for item in collate:
+        root.append(item[-1])
+
+    # Optionally remove false feats by title
+    if removeFeats:
+        for title in removeFeats:
+            bad = root.find(".feat[title='" + title + "']")
+            if bad is not None:
+                root.remove(bad)
+                print(f"Removed false feat '{title}' from {filename}")
+
+    # Optionally remove bad feats for monk
+    if targetName == "Monk":
+        for bad in root.findall(".feat/prereq[name='Psionic Augmentation']..."):
+            root.remove(bad)
+
+    # Save back to the same file
+    tree.write(filename, encoding='utf-8', xml_declaration=True)
+    print(f"Updated {filename} feats.")
 
 def create_character_file(targetClass, targetRole, targetSource, targetRace, targetOrigin, targetType):
     data = []
@@ -215,572 +253,108 @@ epicTree.write("epicgen.xml")
 
 ## Ardent ##
 ############
-ardentTree = ET.parse('ardent.xml')
-ardentRoot = ardentTree.getroot()
-
-# Empty feats from Ardent file
-for feat in ardentTree.findall(".feat"):
-    ardentRoot.remove(feat)
-
-collate = create_feat_file("Ardent", "Leader", "any psionic")
-
-# Add feats to barbarian file
-for item in collate:
-    ardentRoot.append(item[-1])
-
-# Remove known false feat
-extra = ardentRoot.find(".feat[title='Devout Protector Expertise']")
-ardentRoot.remove(extra)
-
-# Save file
-ardentTree.write("ardent.xml")
+update_target_file("ardent.xml", "Ardent", "Leader", "any psionic", removeFeats=["Devout Protector Expertise"])
 
 ## Artificer ##
 ###############
-artificerTree = ET.parse('artificer.xml')
-artificerRoot = artificerTree.getroot()
-
-# Empty feats from Artificer file
-for feat in artificerTree.findall(".feat"):
-    artificerRoot.remove(feat)
-
-collate = create_feat_file("Artificer", "Leader", "any arcane")
-
-# Add feats to barbarian file
-for item in collate:
-    artificerRoot.append(item[-1])
-
-# Remove known false feat
-extra = artificerRoot.find(".feat[title='Devout Protector Expertise']")
-artificerRoot.remove(extra)
-
-# Save file
-artificerTree.write("artificer.xml")
+update_target_file("artificer.xml", "Artificer", "Leader", "any arcane", removeFeats=["Devout Protector Expertise"])
 
 ## Assassin ##
 ##############
-assassinTree = ET.parse('assassin.xml')
-assassinRoot = assassinTree.getroot()
-
-# Empty feats from Assassin file
-for feat in assassinTree.findall(".feat"):
-    assassinRoot.remove(feat)
-
-collate = create_feat_file("Assassin", "Striker", "any shadow")
-
-# Add feats to Assassin file
-for item in collate:
-    assassinRoot.append(item[-1])
-
-# Remove known false feat
-# extra = avengerRoot.find(".feat[title='Devout Protector Expertise']")
-# avengerRoot.remove(extra)
-
-# Save file
-assassinTree.write("assassin.xml")
+update_target_file("assassin.xml", "Assassin", "Striker", "any shadow")
 
 ## Avenger ##
 #############
-avengerTree = ET.parse('avenger.xml')
-avengerRoot = avengerTree.getroot()
-
-# Empty feats from Avenger file
-for feat in avengerTree.findall(".feat"):
-    avengerRoot.remove(feat)
-
-collate = create_feat_file("Avenger", "Striker", "any divine")
-
-# Add feats to Avenger file
-for item in collate:
-    avengerRoot.append(item[-1])
-
-# Remove known false feat
-extra = avengerRoot.find(".feat[title='Devout Protector Expertise']")
-avengerRoot.remove(extra)
-
-# Save file
-avengerTree.write("avenger.xml")
+update_target_file("avenger.xml", "Avenger", "Striker", "any divine", removeFeats=["Devout Protector Expertise"])
 
 ## Barbarian ##
 ###############
-barbarianTree = ET.parse('barbarian.xml')
-barbarianRoot = barbarianTree.getroot()
-
-# Empty feats from Barbarian file
-for feat in barbarianTree.findall(".feat"):
-    barbarianRoot.remove(feat)
-
-collate = create_feat_file("Barbarian", "Striker", "any primal")
-
-# Add feats to barbarian file
-for item in collate:
-    barbarianRoot.append(item[-1])
-
-# Remove known false feat
-# extra = fighterRoot.find(".feat[title='Devout Protector Expertise']")
-# fighterRoot.remove(extra)
-
-# Save file
-barbarianTree.write("barbarian.xml")
+update_target_file("barbarian.xml", "Barbarian", "Striker", "any primal")
 
 ## Bard ##
 ##########
-bardTree = ET.parse('bard.xml')
-bardRoot = bardTree.getroot()
-
-# Empty feats from Bard file
-for feat in bardTree.findall(".feat"):
-    bardRoot.remove(feat)
-
-collate = create_feat_file("Bard", "Leader", "any arcane")
-
-# Add feats to barbarian file
-for item in collate:
-    bardRoot.append(item[-1])
-
-# Remove known false feat
-extra = bardRoot.find(".feat[title='Devout Protector Expertise']")
-bardRoot.remove(extra)
-
-# Save file
-bardTree.write("bard.xml")
+update_target_file("bard.xml", "Bard", "Leader", "any arcane", removeFeats=["Devout Protector Expertise"])
 
 ## Battlemind
 ##############
-bmindTree = ET.parse('battlemind.xml')
-bmindRoot = bmindTree.getroot()
-
-# Empty feats from Bard file
-for feat in bmindTree.findall(".feat"):
-    bmindRoot.remove(feat)
-
-collate = create_feat_file("Battlemind", "Defender", "any psionic")
-
-# Add feats to barbarian file
-for item in collate:
-    bmindRoot.append(item[-1])
-
-# Remove known false feat
-extra = bmindRoot.find(".feat[title='Devout Protector Expertise']")
-bmindRoot.remove(extra)
-
-# Save file
-bmindTree.write("battlemind.xml")
+update_target_file("battlemind.xml", "Battlemind", "Defender", "any psionic", removeFeats=["Devout Protector Expertise"])
 
 ## Cleric ##
 ############
-clericTree = ET.parse('cleric.xml')
-clericRoot = clericTree.getroot()
-
-# Empty feats from Cleric file
-for feat in clericTree.findall(".feat"):
-    clericRoot.remove(feat)
-
-collate = create_feat_file("Cleric", "Leader", "any divine")
-
-# Add feats to cleric file
-for item in collate:
-    clericRoot.append(item[-1])
-
-# Remove known false feat
-# extra = artificerRoot.find(".feat[title='Devout Protector Expertise']")
-# artificerRoot.remove(extra)
-
-# Save file
-clericTree.write("cleric.xml")
+update_target_file("cleric.xml", "Cleric", "Leader", "any divine")
 
 ## Druid ##
 ###########
-druidTree = ET.parse('druid.xml')
-druidRoot = druidTree.getroot()
-
-# Empty feats from Cleric file
-for feat in druidTree.findall(".feat"):
-    druidRoot.remove(feat)
-
-collate = create_feat_file("Druid", "Controller", "any primal")
-
-# Add feats to cleric file
-for item in collate:
-    druidRoot.append(item[-1])
-
-# Remove known false feat
-# extra = artificerRoot.find(".feat[title='Devout Protector Expertise']")
-# artificerRoot.remove(extra)
-
-# Save file
-druidTree.write("druid.xml")
+update_target_file("druid.xml", "Druid", "Controller", "any primal", removeFeats=["Devout Protector Expertise"])
 
 # Fighter ##
 ############
-fighterTree = ET.parse('fighter.xml')
-fighterRoot = fighterTree.getroot()
-
-# Empty feats from Fighter file
-for feat in fighterRoot.findall(".feat"):
-    fighterRoot.remove(feat)
-
-collate = create_feat_file("Fighter", "Defender", "any martial")
-
-# Add feats to fighter file
-for item in collate:
-    fighterRoot.append(item[-1])
-
-# Remove known false feat
-extra = fighterRoot.find(".feat[title='Devout Protector Expertise']")
-fighterRoot.remove(extra)
-
-# Save file
-fighterTree.write("fighter.xml")
+update_target_file("fighter.xml", "Fighter", "Defender", "any martial", removeFeats=["Devout Protector Expertise"])
 
 # Monk ##
 #########
-monkTree = ET.parse('monk.xml')
-monkRoot = monkTree.getroot()
-
-# Empty feats from Monk file
-for feat in monkRoot.findall(".feat"):
-    monkRoot.remove(feat)
-
-collate = create_feat_file("Monk", "Striker", "any psionic")
-
-# Add feats to Monk file
-for item in collate:
-    monkRoot.append(item[-1])
-
-# Remove known false feats
-for feat in monkRoot.findall(".feat/prereq[name='Psionic Augmentation']..."):
-    monkRoot.remove(feat)
-
-# Save file
-monkTree.write("monk.xml")
+update_target_file("monk.xml", "Monk", "Striker", "any psionic")
 
 # Paladin ##
 ############
-paladinTree = ET.parse('paladin.xml')
-paladinRoot = paladinTree.getroot()
-
-# Empty feats from Paladin file
-for feat in paladinRoot.findall(".feat"):
-    paladinRoot.remove(feat)
-
-collate = create_feat_file("Paladin", "Defender", "any divine")
-
-# Add feats to Paladin file
-for item in collate:
-    paladinRoot.append(item[-1])
-
-# Remove known false feat
-# extra = fighterRoot.find(".feat[title='Devout Protector Expertise']")
-# fighterRoot.remove(extra)
-
-# Save file
-paladinTree.write("paladin.xml")
+update_target_file("paladin.xml", "Paladin", "Defender", "any divine")
 
 # Ranger
 #############
-rangerTree = ET.parse('ranger.xml')
-rangerRoot = rangerTree.getroot()
-
-# Empty feats from Swordmage file
-for feat in rangerRoot.findall(".feat"):
-    rangerRoot.remove(feat)
-
-collate = create_feat_file("Ranger", "Striker", "any martial")
-
-# Add feats to swordmage file
-for item in collate:
-    rangerRoot.append(item[-1])
-
-# Remove known false feat
-# extra = smageRoot.find(".feat[title='Devout Protector Expertise']")
-# smageRoot.remove(extra)
-
-# Save file
-rangerTree.write("ranger.xml")
+update_target_file("ranger.xml", "Ranger", "Striker", "any martial")
 
 # Swordmage
 #############
-smageTree = ET.parse('swordmage.xml')
-smageRoot = smageTree.getroot()
-
-# Empty feats from Swordmage file
-for feat in smageRoot.findall(".feat"):
-    smageRoot.remove(feat)
-
-collate = create_feat_file("Swordmage", "Defender", "any arcane")
-
-# Add feats to swordmage file
-for item in collate:
-    smageRoot.append(item[-1])
-
-# Remove known false feat
-extra = smageRoot.find(".feat[title='Devout Protector Expertise']")
-smageRoot.remove(extra)
-
-# Save file
-smageTree.write("swordmage.xml")
+update_target_file("swordmage.xml", "Swordmage", "Defender", "any arcane", removeFeats=["Devout Protector Expertise"])
 
 # Vampire
 ##############
-vampireTree = ET.parse('vampire.xml')
-vampireRoot = vampireTree.getroot()
-
-# Empty feats from vampire file
-for feat in vampireRoot.findall(".feat"):
-    vampireRoot.remove(feat)
-
-collate = create_feat_file("Vampire", "Striker", "any shadow")
-
-# Add feats to warlock file
-for item in collate:
-    vampireRoot.append(item[-1])
-
-# Remove known false feat
-# extra = smageRoot.find(".feat[title='Devout Protector Expertise']")
-# smageRoot.remove(extra)
-
-# Save file
-vampireTree.write("vampire.xml")
+update_target_file("vampire.xml", "Vampire", "Striker", "any shadow")
 
 # Warlock
 ##############
-warlockTree = ET.parse('warlock.xml')
-warlockRoot = warlockTree.getroot()
-
-# Empty feats from warlock file
-for feat in warlockRoot.findall(".feat"):
-    warlockRoot.remove(feat)
-
-collate = create_feat_file("Warlock", "Striker", "any arcane")
-
-# Add feats to warlock file
-for item in collate:
-    warlockRoot.append(item[-1])
-
-# Remove known false feat
-# extra = smageRoot.find(".feat[title='Devout Protector Expertise']")
-# smageRoot.remove(extra)
-
-# Save file
-warlockTree.write("warlock.xml")
+update_target_file("warlock.xml", "Warlock", "Striker", "any arcane")
 
 # Warlord
 ##############
-warlordTree = ET.parse('warlord.xml')
-warlordRoot = warlordTree.getroot()
-
-# Empty feats from Warlord file
-for feat in warlordRoot.findall(".feat"):
-   warlordRoot.remove(feat)
-
-collate = create_feat_file("Warlord", "Leader", "any martial")
-
-# Add feats to warlord file
-for item in collate:
-    warlordRoot.append(item[-1])
-
-# Remove known false feat
-extra = warlordRoot.find(".feat[title='Devout Protector Expertise']")
-warlordRoot.remove(extra)
-
-# Save file
-warlordTree.write("warlord.xml")
+update_target_file("warlord.xml", "Warlord", "Leader", "any martial", removeFeats=["Devout Protector Expertise"])
 
 # Wizard
 ##############
-wizardTree = ET.parse('wizard.xml')
-wizardRoot = wizardTree.getroot()
+update_target_file("wizard.xml", "Wizard", "Controller", "any arcane")
 
-# Empty feats from Wizard file
-for feat in wizardRoot.findall(".feat"):
-    wizardRoot.remove(feat)
-
-collate = create_feat_file("Wizard", "Controller", "any arcane")
-
-# Add feats to wizard file
-for item in collate:
-    wizardRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-wizardTree.write("wizard.xml")
+# Deva
+##############
+update_target_file("deva.xml", "Deva", "immortal", "humanoid")
 
 # Dragonborn
 ##############
-dragonbTree = ET.parse('dragonborn.xml')
-dragonbRoot = dragonbTree.getroot()
-
-# Empty feats from Wizard file
-for feat in dragonbRoot.findall(".feat"):
-    dragonbRoot.remove(feat)
-
-collate = create_feat_file("Dragonborn", "natural", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    dragonbRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-dragonbTree.write("dragonborn.xml")
+update_target_file("dragonborn.xml", "Dragonborn", "natural", "humanoid")
 
 # Dwarf
 ##############
-dwarfTree = ET.parse('dwarf.xml')
-dwarfRoot = dwarfTree.getroot()
-
-# Empty feats from Wizard file
-for feat in dwarfRoot.findall(".feat"):
-    dwarfRoot.remove(feat)
-
-collate = create_feat_file("Dwarf", "natural", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    dwarfRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-dwarfTree.write("dwarf.xml")
+update_target_file("dwarf.xml", "Dwarf", "natural", "humanoid")
 
 # Human
 ##############
-humanTree = ET.parse('human.xml')
-humanRoot = humanTree.getroot()
-
-# Empty feats from Wizard file
-for feat in humanRoot.findall(".feat"):
-    humanRoot.remove(feat)
-
-collate = create_feat_file("Human", "natural", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    humanRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-humanTree.write("human.xml")
+update_target_file("human.xml", "Human", "natural", "humanoid")
 
 # Eladrin
 ##############
-eladrinTree = ET.parse('eladrin.xml')
-eladrinRoot = eladrinTree.getroot()
-
-# Empty feats from Wizard file
-for feat in eladrinRoot.findall(".feat"):
-    eladrinRoot.remove(feat)
-
-collate = create_feat_file("Eladrin", "fey", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    eladrinRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-eladrinTree.write("eladrin.xml")
+update_target_file("eladrin.xml", "Eladrin", "fey", "humanoid")
 
 # Elf
 ##############
-elfTree = ET.parse('elf.xml')
-elfRoot = elfTree.getroot()
-
-# Empty feats from Wizard file
-for feat in elfRoot.findall(".feat"):
-    elfRoot.remove(feat)
-
-collate = create_feat_file("Elf", "fey", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    elfRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-elfTree.write("elf.xml")
+update_target_file("elf.xml", "Elf", "fey", "humanoid")
 
 # Halfling
 ##############
-halflingTree = ET.parse('halfling.xml')
-halflingRoot = halflingTree.getroot()
-
-# Empty feats from Wizard file
-for feat in halflingRoot.findall(".feat"):
-    halflingRoot.remove(feat)
-
-collate = create_feat_file("Halfling", "natural", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    halflingRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-halflingTree.write("halfling.xml")
+update_target_file("halfling.xml", "Halfling", "natural", "humanoid")
 
 # Tiefling
 ##############
-tieflingTree = ET.parse('tiefling.xml')
-tieflingRoot = tieflingTree.getroot()
-
-# Empty feats from Wizard file
-for feat in tieflingRoot.findall(".feat"):
-    tieflingRoot.remove(feat)
-
-collate = create_feat_file("Tiefling", "natural", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    tieflingRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-tieflingTree.write("tiefling.xml")
+update_target_file("tiefling.xml", "Tiefling", "natural", "humanoid")
 
 # Warforged
 ##############
-warforgedTree = ET.parse('warforged.xml')
-warforgedRoot = warforgedTree.getroot()
-
-# Empty feats from Wizard file
-for feat in warforgedRoot.findall(".feat"):
-    warforgedRoot.remove(feat)
-
-collate = create_feat_file("Warforged", "natural", "humanoid")
-
-# Add feats to wizard file
-for item in collate:
-    warforgedRoot.append(item[-1])
-
-# Remove known false feat
-# extra = wizardRoot.find(".feat[title='Devout Protector Expertise']")
-# wizardRoot.remove(extra)
-
-# Save file
-warforgedTree.write("warforged.xml")
+update_target_file("warforged.xml", "Warforged", "natural", "humanoid")
