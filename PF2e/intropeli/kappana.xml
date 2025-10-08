@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Darkvision</title>
+      <type>Sense</type>
+      <line>You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white.</line>
+   </rule>
+
+   <rule>
+      <title>Rock Dwarf</title>
+      <type>Heritage</type>
+      <line>Your ancestors lived and worked among the great ancient stones of the mountains or the depths of the earth. This makes you solid as a rock when you plant your feet. You gain a +2 circumstance bonus to your Fortitude or Reflex DC against attempts to Shove or Trip you. This bonus also applies to saving throws against spells or effects that attempt to knock you prone.</line>
+      <line>In addition, if any effect would force you to move 10 feet or more, you are moved only half the distance.</line>
+   </rule>
+
+   <rule>
+      <title>Unburdened Iron</title>
+      <type>Feat</type><level>1</level>
+      <trait>Dwarf</trait>
+
+      <line>You've learned techniques first devised by your ancestors during their ancient wars, allowing you to comfortably wear massive suits of armor. Ignore the reduction to your Speed from any armor you wear.</line>
+      <line>In addition, any time you're taking a penalty to your Speed for some other reason (such as from the encumbered condition or from a spell), deduct 5 feet from the penalty. For example, the encumbered condition normally gives a –10-foot penalty to Speed, but this feat would reduce it to a –5-foot penalty. If your Speed is taking multiple penalties, pick only one penalty to reduce.</line>
+   </rule>
+
+   <rule>
+      <title>Trick Magic Item</title><action>1</action>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait> <trait>Manipulate</trait> <trait>Skill</trait>
+
+      <line>You examine a magic you normally couldn't use in an effort to fool it and activate it temporarily. For example, this might allow a fighter to cast a spell from a wand or allow a wizard to cast a spell that's no on the arcane list using a scroll. You most know what activating the item does, or you can't attempt to trick it.</line>
+      <line>Attempt a check using the skill matching the item's magic tradition, or matching a tradition that has the spell on its list, if you're trying to Cast a Spell from the item. The relevant skills are Arcana for <u>arcane</u>, Nature for <u>primal</u>, Occultism for <u>occult</u>, Religion for <u>divine</u>, or any of the four forn an item that has the <u>magical</u> trait and not a tradition trait. The GM determines the DC based on the item's level (possibly adjusted depending on the item or situation).</line>
+      <line results="">
+         <success>For the rest of the current turn, you can spend actions to activate the item as if you could normally use it.</success>
+         <fail>You can't use the item or try to trick it again this turn, but you can try again on subsequent turns.</fail>
+         <critfail>You can't use the item, and you can't try to trick it again until your next daily preparations.</critfail>
+      </line>
+      <line>If you activate an item that requires a spell attack modifier or spell DC and you don't have proficiency in the relevant statistic, use your level as your proficiency bonus and the highest of your Intelligence, Wisdom, or Charisma modifiers. If you're a master in the appropriate skill for the item's tradition, you instead use the trained proficiency; if you're legendary, you instead use the expert proficiency bonus.</line>
+   </rule>
+
+   <rule>
+      <title>Demoralize</title>
+      <action>1</action>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
+
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Shove</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Attack</trait>
+      <requirement>You have at least one free hand. Your target isn't more than one size larger than you.</requirement>
+
+      <line>You push a creature away from you. Attempt an Athletics check against your target's Fortitude DC.</line>
+      <line results="">
+         <critsuccess>You push the target up to 10 feet away from you. You can Stride after it, but you must move the same distance and in the same direction.</critsuccess>
+         <success>You push the target back 5 feet. You can Stride after it, but you must move the same distance and in the same direction.</success>
+         <critfail>You lose your balance, and fall prone.</critfail>
+      </line>
+      <line name="Weapon">Because the maul has the <u>shove</u> trait, you can use this action even if you don't have a free hand. This uses the weapon's reach (if different from yours) and adds the weapon's item bonus to attack rolls to the Athletics check. If you critically fail a check to Shove using this weapon, you can drop the weapon to take the effects of a failure instead of a critical failure.</line>
+   </rule>
+
+   <rule>
+      <title>Hybrid Study</title>
+      <type>Class Feature</type>
+
+      <line>Your extensive physical training and carefully chosen magic combine to form a unique and dangerous fighting style that's more than the sum of its parts. Your hybrid study gives you a special ability, usually tied to Spellstrike or Arcane Cascade, and it determines your initial <u>conflux</u> spell.</line>
+      <line name="Inexorable Iron">Once you begin along a path, nothing can stop you from reaching its end. You transform the mass of an enormous weapon into an unstoppable force to augment your own striking power or keep you standing on the battlefield.</line>
+   </rule>
+
+   <rule>
+      <title>Arcane Cascade</title><action>1</action>
+      <type>Class Feature</type>
+      <trait>Concentrate</trait><trait>Magus</trait><trait>Stance</trait>
+      <requirement>You used your most recent action this turn to Cast a Spell or make a Spellstrike. You need to meet this requirement only to enter the stance, not to remain in it.</requirement>
+
+      <line>You divert a portion of the spell's magical power and keep it cycling through your body and weapon using specialized  forms, breathing, or footwork. While you're in the stance, your melee Strikes deal 1 extra force damage. Any Strike that benefits from this damage gains the <u>arcane</u> trait, making it magical.</line>
+      <line>If your most recent spell before entering the stance was one that can deal damage, the damage from the stance is instead the same type that spell could deal (or one type of your choice if the spell could deal multiple types of damage).</line>
+      <line name="Inexorable Iron">When you enter Arcane Cascade stance and at the start of each of your turns while you're in that stance, if you're wielding a melee weapon in two hands, you gain temporary Hit Points equal to half your level (minimum 1 temporary HP).</line>
+   </rule>
+
+   <rule>
+      <title>Spellstrike</title><action>2</action>
+      <type>Class Feature</type>
+      <trait>Magus</trait>
+      <frequency>until recharged (see below)</frequency>
+
+      <line>You channel a spell into a punch or sword thrust to deliver a combined attack. You Cast a Spell that takes 1 or 2 actions to cast and requires either a spell attack roll or a saving throw. You imbue its effects into an attack instead of executing the spell normally. Make a melee Strike with a weapon or unarmed attack. This counts as two attacks for your multiple attack penalty, but you don’t apply the penalty until after you’ve completed the Spellstrike. The infusion of spell energy grants your Strike the <u>arcane</u> trait, making it magical. If the spell required a spell attack roll, use your Strike’s results to determine the effects of both the Strike and the spell. If it required a save, the target of the Strike rolls its saving throw normally, though if your Strike was a critical failure, the target is unaffected.</line>
+      <line>After you use Spellstrike, you can’t do so again until you recharge your Spellstrike as a single action, which has the <u>concentrate</u> trait. You also recharge your Spellstrike when you cast a <u>conflux</u> spell that takes at least 1 action to cast.</line>
+   </rule>
+
+   <rule>
+      <title>Magus Spellcasting</title>
+
+      <line>You study spells so you can combine them with your attacks or solve problems that strength of arms alone can't handle. You are a spellcaster and can cast spells of the arcane tradition using the Cast a Spell activity. As a magus, your spellcasting incantations might be akin to military commands or a marching song, and your gestures likely involve tracing specific patterns with your weapon.</line>
+      <line>You can prepare spells and five cantrips each morning from the spells in your spellbook. Prepared spells remain available to you until you cast them or until you prepare your spells again. The number of spells you can prepare each day is called your spell slots.</line>
+      <line>Some of your spells require you to attempt a spell attack roll to see how effective they are, or have your enemies roll against your spell DC (typically by attempting a saving throw). Your spell attack rolls and spell DCs use your Intelligence modifier.</line>
+      <!--line name="Heighening Spells">You can fill spell slots of 2nd rank or higher with stronger versions of lower-rank spells. This increases the spell's rank, heightening it to match the spell slot. Many spells have specific improvements when they are heightened to certain ranks.</line-->
+      <line name="Cantrips">Some of your spells are cantrips. A cantrip is a special type of spell that doesnt use spell slots. You can cast a cantrip at will, any number of times per day. A cantrip is automatically heightened to half your level rounded up.</line>
+   </rule>
+
+   <rule>
+      <title>Spellbook</title>
+
+      <line>Every arcane spell has a written version, which you record in your personalized book of spells. You start with a spellbook worth 10 sp or less, which you receive for free and must study each day to prepare your spells. Your spellbook's form and name are up to you. It might be anything from a sturdy book with a secure latch entitled <i>Theses on the Stratagems of Supernatural Warfare</i> to a tattered collection of training pamphlets with your name scrawled on the cover.</line>
+      <line>The spellbook contains your choice of eight arcane cantrips and four 1st-rank arcane spells. You choose these from the common spells on the arcane spell list or from other arcane spells you gain access to.</line>
+      <!-- line>Each time you gain a level, you add two more arcane spells to your spellbook, of any level of spell you can cast. You can also use the Arcana skill to add other spells that you find in your adventures (see Learn a Spell). Though you lose some lower spell slots as you increase in level, you keep the spells in your spellbook and can prepare them in your higher-level slots as normal.</line-->
+   </rule>
+
+   <rule>
+      <title>Conflux Spells</title>
+
+      <line>Conflux spells are magus-specific spells created for combat and are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you have a focus pool of 1 Focus Point for each focus spell you have, to a maximum of 3 Focus Points. You refill your focus pool during your daily preparations, and you regain 1 Focus Point by spending 10 minutes using the Refocus activity to both study your spellbook and perform a physical regimen. Casting a conflux spell recharges your Spellstrike.</line>
+      <line name="Inexorable Iron">You gain the <i>thunderous strike</i> conflux spell.</line>
+   </rule>
+
+   <rule>
+      <title>Thunderous Strike</title><action>1</action>
+      <type>Focus</type><level>1</level>
+      <uncommon/><trait>Arcane</trait><trait>Concentrate</trait><trait>Focus</trait><trait>Magus</trait><trait>Sonic</trait>
+      <requirement>You're wielding a melee weapon in two hands</requirement>
+
+      <line>You swing your massive weapon, creating a wave of sonic vibrations that topples creatures. Make a melee Strike with your two-handed melee weapon. Each creature in a 15-foot cone from you must attempt a basic Fortitude save against your spell DC or take 2 sonic damage. On a critical failure, the creature is knocked prone. The target of your Strike must be within the cone or the effect fails.</line>
+   </rule>
+</catalog>

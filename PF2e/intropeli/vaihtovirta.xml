@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Changeling</title>
+      <type>Heritage</type>
+      <uncommon/><trait>Changeling</trait><trait>Versatile</trait>
+
+      <line>Your mother was a hag. Your eyes' heterochromia is the most obvious signifier of this parentage, but you likely also have a slighter build, paler skin, and darker hair than most members of your other parent’s ancestry.</line>
+      <line>You gain the <u>changeling</u> trait. You also gain low-light vision, or you gain darkvision if your ancestry already has low light vision. You can select from changeling feats and feats from your other parent's ancestry whenever you gain an ancestry feat.</line>
+   </rule>
+
+   <rule>
+      <title>Low-Light Vision</title>
+      <type>Sense</type>
+
+      <line>You can see in dim light as though it were bright light, so you ignore the concealed condition due to dim light.</line>
+   </rule>
+
+   <rule>
+      <title>Hag's Sight</title>
+      <type>Feat</type><level>1</level>
+      <trait>Changeling</trait>
+
+      <line>You've nurtured the supernatural abilities gifted by your hag mother, particularly your sight. You gain darkvision.</line>
+   </rule>
+
+   <rule>
+      <title>Darkvision</title>
+      <type>Sense</type>
+      <line>You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white.</line>
+   </rule>
+
+   <rule>
+      <title>Deceptive Worship</title>
+      <type>Feat</type><level>1</level>
+      <trait>General</trait><trait>Skill</trait>
+      <prereq>trained in Occultism</prereq>
+
+      <line>Members of your cult frequently pass themselves off as worshippers of other religions. You can use Occultism instead of Deception to Impersonate a typical worshipper of another faith or to Lie specifically to claim you are a member of the faith you are Impersonating. You still need to use the Deception skill to Impersonate a specific worshipper or to perform other deceptive actions, such as attempting to Lie about any other matter.</line>
+   </rule>
+
+   <rule>
+      <title>Lie</title>
+      <type>Deception</type>
+      <trait>Auditory</trait><trait>Concentrate</trait><trait>Linguistic</trait><trait>Mental</trait><trait>Secret</trait>
+
+      <line>You try to fool someone with an untruth. Doing so takes at least 1 round, or longer if the lie is elaborate. You roll a single secret Deception check and compare it against the Perception DC of every creature you are trying to fool. The GM might give them a circumstance bonus based on the situation and the nature of the lie you are trying to tell. Elaborate or highly unbelievable lies are much harder to get a creature to believe than simpler and more believable lies, and some lies are so big that it's impossible to get anyone to believe them.</line>
+      <line results="">
+         <success>The target believes your lie.</success>
+         <fail>The target doesn't believe your lie and gains a +4 circumstance bonus against your attempts to Lie for the duration of your conversation. The target is also more likely to be suspicious of you in the future.</fail>
+      </line>
+      <line>t the GM's discretion, if a creature initially believes your lie, it might attempt a Perception check later to Sense Motive against your Deception DC to realize it's a lie. This usually happens if the creature discovers enough evidence to counter your statements.</line>
+   </rule>
+
+   <rule>
+      <title>Impersonate</title>
+      <type>Deception</type>
+      <trait>Concentrate</trait><trait>Exploration</trait><trait>Manipulate</trait><trait>Secret</trait>
+
+      <line>You create a disguise to pass yourself off as someone or something you are not. Assembling a convincing disguise takes 10 minutes and requires a disguise kit, but a simpler, quicker disguise might do the job if you're not trying to imitate a specific individual, at the GM's discretion.</line>
+      <line>In most cases, creatures have a chance to detect your deception only if they use the Seek action to attempt Perception checks against your Deception DC. If you attempt to directly interact with someone while disguised, the GM rolls a secret Deception check for you against that creature's Perception DC instead.</line>
+      <line>If you're disguised as a specific individual, the GM might give creatures you interact with a circumstance bonus based on how well they know the person you're imitating, or the GM might roll a secret Deception check even if you aren't directly interacting with others.</line>
+      <line results="">
+         <success>You trick the creature into thinking you're the person you're disguised as. You might have to attempt a new check if your behavior changes.</success>
+         <fail>The creature can tell you're not who you claim to be.</fail>
+         <critfail>The creature can tell you're not who you claim to be, and it recognizes you if it would know you without a disguise.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Make an Impression</title>
+      <type>Diplomacy</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Exploration</trait> <trait>Linguistic</trait> <trait>Mental</trait>
+
+      <line>With at least 1 minute of conversation, during which you engage in charismatic overtures, flatter, and other acts of goodwill, you seek to make a good impression on someone to make them temporarily agreeable. At the end of the conversation, attempt a Diplomacy check against the Will DC of one target. You can instead choose up to five targets if you take a -2 penalty. The GM might add other bonuses or penalties based on the situation.</line>
+      <line results="">
+         <critsuccess>The target's attitude toward you improves by two steps (such as from indifferent to helpful).</critsuccess>
+         <success>The target's attitude toward you improves by one step (such as from indifferent to friendly).</success>
+         <critfail>The target's attitude toward you decreases by one step (such as from indifferent to unfriendly).</critfail>
+      </line>
+      <line>Any impression you make lasts for only the current social interaction unless the GM decides otherwise.</line>
+   </rule>
+
+   <rule>
+      <title>Demoralize</title>
+      <action>1</action>
+      <type>Intimidation</type>
+      <trait>Auditory</trait> <trait>Concentrate</trait> <trait>Emotion</trait> <trait>Fear</trait> <trait>Mental</trait>
+
+      <line>With a sudden shout, a well-timed taunt, or a cutting putdown, you can shake an enemy's resolve.</line>
+      <line>Choose a creature within 30 feet of you who you're aware of. Attempt an Intimidation check against that target's Will DC. If the target does not understand the language you are speaking, or you're not speaking a language, you take a -4 circumstance penalty to the check. Regardless of your result, the target is temporarily immune to your attempts to Demoralize it for 10 minutes.</line>
+      <line results="">
+         <critsuccess>The target becomes frightened 2.</critsuccess>
+         <success>The target becomes frightened 1.</success>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Esoteric Lore</title>
+      <type>Class Feature</type>
+
+      <line>Your experience with the unknown, as well as the tales you've exchanged with other thaumaturges, has taught you about strange phenomena of every kind. You become trained in Esoteric Lore, a special lore skill that can be used to Recall Knowledge regarding haunts, curses, and creatures of any type, but that can't be used to Recall Knowledge of other topics. Unlike a normal Lore skill, you use Charisma as your modifier on Esoteric Lore checks. You also gain the Dubious Knowledge skill feat.</line>
+   </rule>
+
+   <rule>
+      <title>Recall Knowledge</title>
+      <action>1</action>
+      <type>Varies</type>
+      <trait>Concentrate</trait> <trait>Secret</trait>
+
+      <line>You attempt a skill check to try to remember a bit of knowledge regarding a topic related to that skill. The GM determines the DCs for such checks and which skills apply.</line>
+      <line results="">
+         <critsuccess>You recall the knowledge accurately and gain additional information or context.</critsuccess>
+         <success>You recall the knowledge accurately or gain a useful clue about your current situation.</success>
+         <critfail>You recall incorrect information or gain an erroneous or misleading clue.</critfail>
+      </line>
+      <line>The following skills can be used to Recall Knowledge, getting information about the listed topics. In some cases, you can get the GM's permission to use a different related skill, usually against a higher DC than normal. Some topics might appear on multiple lists, but the skills could give different information. For example, Arcana might tell you about the magical defenses of a golem, whereas Crafting could tell you about its sturdy resistance to physical attacks.</line>
+      <line list="">
+         <entry><![CDATA[<b>Arcana: </b>]]>Arcane theories, magical traditions, creatures of arcane significance, and arcane planes.</entry>
+         <entry><![CDATA[<b>Lore: </b>]]>The subject of the Lore skill's subcategory. Narrow Lore skills will usually have a reduced DC compared to more generall skills. For example, using Undead Lore would have a lower DC to Recall Knowledge about a vampire than when using Religion.</entry>
+         <entry><![CDATA[<b>Nature: </b>]]> The environment, flora, geography, weather, creatures of natural origin, and natural plants.</entry>
+         <entry><![CDATA[<b>Occultism: </b>]]> Ancient mysteries, obscure philosophy, creatures of occult significance, and esoteric planes.</entry>
+         <entry><![CDATA[<b>Religion: </b>]]> Divine agents, divine planes, theology, obscure myths, and creatures of religious significance.</entry>
+         <entry><![CDATA[<b>Society: </b>]]> Local history, key personalities, legal institutions, societal structure, and humanoid culture.</entry>
+      </line>
+      <line>The GM might allow checks to Recall Knowledge using other skills. For example, you might assess the skill of an acrobat using Acrobatics. If you're using a physical skill (like in this example), the GM will most likely have you use a mental ability score -typically Intelligence- instead of the skill's normal physical ability score.</line>
+   </rule>
+
+   <rule>
+      <title>Lantern Implement</title>
+      <type>Class Feature</type>
+
+      <line>Your implement is a special object of symbolic importance: your badge as you treat with the supernatural and a powerful tool if things turn violent. While an implement is useful to you, it typically has no value if sold.</line>
+      <line>You begin play with a mundane lantern. If you acquire a new lantern, you can switch your implement to the new item by spending 1 day of downtime with the new item.</line>
+      <line>Lantern implements shine the light of revelation to part shadows and expose truth. You might use a common glass lantern, torch, paper lantern, or other similar light source. Lantern implements are associated with the harrow suit of stars and the astrological signs of the lantern bearer and the archer.</line>
+      <line>While you hold your lantern, its burning light leaves secrets no place to hide. You can light or extinguish your lantern as a free action once each turn with nothing but a thought, which has the <u>concentrate</u> trait. The lantern shines bright light out to 20 feet and dim light out 20 feet further; this has the <u>light</u> and <u>magical</u> traits (the counteract level against magical <u>darkness</u> is equal to half your level rounded up).</line>
+   </rule>
+
+   <rule>
+      <title>Esoterica</title>
+      <type>Class Feature</type>
+
+      <line>While your implements are your primary tools in your dealings with the supernatural, you know the value of always being prepared. You constantly collect and carry various smaller mystic objects, bits of materials with paranormal affinities, and items used in folk practices: your esoterica. These might include cold iron nails, scraps of scrolls and scriptures, fragments of bones purportedly from a saint, and other similar objects.</line>
+      <line>You keep your esoterica in easy-to-access places on your person and are well practiced in brandishing your implement and esoterica together, so you can draw and use esoterica with the same hand you're using to wield an implement.</line>
+   </rule>
+
+   <rule>
+      <trait>Esoterica</trait>
+
+      <line>The <u>esoterica</u> trait is present in many Thaumaturge feats and class features that incorporate the various talismans, supernatural trinkets, and other objects you carry with you. Abilities that have the <u>esoterica</u> trait require you to be in possession of your esoterica to use them. Normally, you're assumed to always have your esoterica with you, but in some rare circumstances, you might either not have them on hand or have your gear stripped from you.</line>
+   </rule>
+
+   <rule>
+      <title>Exploit Vulnerability</title> <action>1</action>
+      <trait>Esoterica</trait><trait>Manipulate</trait><trait>Thaumaturge</trait>
+      <frequency>once per round</frequency>
+      <requirement>You are holding your implement</requirement>
+
+      <line>You scour your experiences and learning to identify something that might repel your foe. You retrieve an object from your esoterica with the appropriate supernatural qualities, then use your implement to stoke the remnants of its power into a blaze. Select a creature you can see and attempt an Esoteric Lore check against a standard DC for its level, as you retrieve the right object from your esoterica and use your implement to empower it. You gain the following effects until you Exploit Vulnerabilities again.</line>
+      <line results="">
+         <critsuccess>You remember the creature's weaknesses, and as you empower your esoterica, you have a flash of insight that grants even more knowledge about the creature. You learn all of the creature's resistances, weaknesses, and immunities, including the amounts of the resistances and weaknesses and any unusual weaknesses or vulnerabilities. You can exploit either the creature's <i>mortal weakness</i> or <i>personal antithesis</i> (see below).</critsuccess>
+         <success>You recall an important fact about the creature, learning its highest weakness (or one of its highest weaknesses, if it has multiple with the same value) but not its other weaknesses, resistances, or immunities. You can exploit either the creature's <i>mortal weakness</i> or <i>personal antithesis</i>.</success>
+         <fail>Failing to recall a salient weakness about the creature, you instead attempt to exploit a more personal vulnerability. You can exploit only the creature's <i>personal antithesis</i>.</fail>
+         <critfail>You couldn't remember the right object to use and become distracted while you rummage through your esoterica. You become off-guard until the beginning of your next turn.</critfail>
+      </line>
+      <line>As long as you do not critically fail, your unarmed and weapon Strikes against the creature also become <u>magical</u> if they weren't already.</line>
+   </rule>
+
+   <rule>
+      <title>Exploit Vulnerability effects</title>
+
+      <line>You can attempt to Exploit Vulnerabilities in one of two ways: either by invoking properties that repel that type of creature, or by attempting a more improvisational, ad-hoc method with your esoterica that can impose a custom weakness on any creature, albeit one that usually isn't as dire as a creature's existing weakness.</line>
+      <line name="Mortal Weakness">After identifying a creature's weakness, you use a thematically resonant bit of esoterica to attune your attacks to your discovery. Your unarmed and weapon Strikes activate the highest weakness you discovered with Exploit Vulnerability, even though the damage type your weapon deals doesn't change. This damage affects the target of your Exploit Vulnerability, as well as any other creatures of the exact same type, but not other creatures with the same weakness. For example, when fighting a pack of werewolves you might use silver shavings or crushed moonstone to deal damage that applies their weakness to silver to your attacks against any of the werewolves, but you wouldn't apply this damage to any other monsters with a weakness to silver.</line>
+      <line name="Personal Antithesis">You improvise a custom weakness on a creature by forcefully presenting and empowering a piece of esoterica that repels it on an individual level; for instance, against a tyrant, you might procure a broken chain that once held a captive. This causes the target creature, and only the target creature, to gain a weakness against your unarmed and weapon Strikes equal to 2 + half your level.</line>
+   </rule>
+
+   <rule>
+      <title>Implement's Empowerment</title>
+      <type>Class Feature</type>
+
+      <line>The power of your implement can also be turned to the more common task of combat, its power adding to and amplifying the effects of runes and other magical empowerments. When you Strike, you can trace mystic patterns with an implement you're holding to empower the Strike, causing it to deal 2 additional damage per weapon damage die.</line>
+      <line>Channeling the power requires full use of your hands. You don't gain the benefit of implement's empowerment if you are holding anything in either hand other than a single one-handed weapon, other implements, or esoterica, and you must be holding at least one implement to gain the benefit.</line>
+   </rule>
+
+   <rule>
+      <title>Root to Life</title><action or="2">1</action>
+      <type>Feat</type><level>1</level>
+      <trait>Esoterica</trait><trait>Manipulate</trait><trait>Primal</trait><trait>Thaumaturge</trait>
+
+      <line>Marigold, spider lily, pennyroyal - many primal traditions connect flowers and plants with the boundary between life and death, and you can leverage this association to keep an ally on this side of the line. You place a small plant or similar symbol on an adjacent dying creature, immediately stabilizing them; the creature is no longer dying and is instead unconscious at 0 Hit Points.</line>
+      <line>If you spend 2 actions instead of 1, you empower the act further by uttering a quick folk blessing to chase away ongoing pain, adding the <u>auditory</u> trait to the action. When you do so, attempt flat checks to remove each source of persistent damage affecting the target; due to the particularly effective assistance, the DC is 10 instead of the usual 15.</line>
+   </rule>
+</catalog>

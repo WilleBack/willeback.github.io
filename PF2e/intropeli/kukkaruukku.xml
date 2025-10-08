@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Keen Eyes</title>
+      <type>Sense</type>
+      <line>Your eyes are sharp, allowing you to make out small details about concealed or even invisible creatures that others might miss. You gain a +2 circumstance bonus when using the Seek action to find hidden or undetected creatures within 30 feet of you. When you target an opponent that is concealed from you or hidden from you, reduce the DC of the flat check to 3 for a concealed target or 9 for a hidden one.</line>
+   </rule>
+
+   <rule>
+      <title>Hillock Halfling</title>
+      <type>Heritage</type>
+      <line>Accustomed to a calm life in the hills, your people find rest and relaxation especially replenishing, particularly when indulging in creature comforts. When you regain Hit Points overnight, add your level to the Hit Points regained. When anyone uses the Medicine skill to Treat your Wounds, you can eat a snack to add your level to the Hit Points you regain from their treatment.</line>
+   </rule>
+
+   <rule>
+      <title>Sure Feet</title>
+      <type>Feat</type><level>1</level>
+      <trait>Halfling</trait>
+
+      <line>Whether keeping your balance or climbing, your feet easily find purchase. If you roll a success on an Acrobatics check to Balance or an Athletics check to Climb, you get a critical success instead. You're not off-guard when you attempt to Balance or Climb.</line>
+   </rule>
+
+   <rule>
+      <title>Balance</title>
+      <action>1</action>
+      <type>Acrobatics</type>
+      <trait>Move</trait>
+      <requirement>You are in a square that contains a narrow surface, unever ground, or another similar feauture.</requirement>
+
+      <line>You move across a narrow surface or uneven ground, attempting an Acrobatics check against its Balance DC. You are flat-footed while on a narrow surface or uneven ground.</line>
+      <line results="">
+         <critsuccess>You move up to your Speed.</critsuccess>
+         <success>You move up to your Speed, treating it as difficult terrain (every 5 feet costs 10 feet of movement).</success>
+         <fail>You must remain stationary to keep your balance (wasting the action) or you fall. If you fall, your turn ends.</fail>
+         <critfail>You fall and your turn ends.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Climb</title>
+      <action>1</action>
+      <type>Athletics</type>
+      <trait>Move</trait>
+      <requirement>You have both hands free.</requirement>
+
+      <line>You move up, down, or across an incline. Unless it's particularly easy, you must attempt an Athletics check. The GM determines the DC based on the nature of the incline and environmental circumstances. You are flat-footed unless you have a climb Speed.</line>
+      <line results="">
+         <critsuccess>You move up, across, or safely down the incline for 5 feet plus 5 feet per 20 feet of your land Speed (a total of 10 feet for most PCs).</critsuccess>
+         <success>You move up, across, or safely down the inclide for 5 feet per 20 feet of your land Speed (a total of 5 feet for most PCs, minimum 5 feet if your speed is below 20 feet).</success>
+         <critfail>You fall. If you began the climb on stable ground, you fall and land prone.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Assurance</title>
+      <type>Feat</type><level>1</level>
+      <trait>Fortune</trait><trait>General</trait><trait>Skill</trait>
+      <prereq>trained in at least one skill</prereq>
+
+      <line>Even in the worst circumstances, you can perform basic tasks. Choose a skill you’re trained in. You can forgo rolling a skill check for that skill to instead receive a result of 10 + your proficiency bonus (do not apply any other bonuses, penalties, or modifiers).</line>
+      <line name="Athletics">You gained this skill feat for the Athletics skill from your background.</line>
+      <line name="Special">You can select this feat multiple times. Each time, choose a different skill and gain the benefits for that skill.</line>
+   </rule>
+
+   <rule>
+      <title>Administer First Aid</title>
+      <type>Medicine</type>
+      <action>2</action>
+      <trait>Manipulate</trait>
+      <requirement>You are holding healer's tools, or you are wearing them and have a hand free.</requirement>
+
+      <line>You perform first aid on an adjacent creature that is dying or bleeding. If a creature is both dying and bleeding, choose which ailment you're trying to treat before you roll. You can Administer First Aid again to attempt to remedy the other effect.</line>
+      <line list="">
+         <entry><![CDATA[<b>Stabilize </b>]]> Attempt a Medicine check on a creature that has 0 Hit Points and the dying condition. The DC is equal 5 + that creature's recovery roll DC (so typically 15 + the creature's dying value).</entry>
+         <entry><![CDATA[<b>Stop Bleeding </b>]]> Attempt a Medicine check on a creature that is taking persistent bleed damage, giving them a chance to make another flat check to remove the persistent damage. The DC is usually the DC of the effect that caused the bleed.</entry>
+      </line>
+      <line results="">
+         <success>If you're trying to stabilize, the creature loses the dying condition (but remains unconscious). If you're trying to stop bleeding, the creature attempts a flat check to end the bleeding.</success>
+         <critfail>If you were trying to stabilize, the creature's dying value increases by 1. If you were trying to stop bleeding, it immediately takes an amount of damage equal to its persistent bleed damage.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Treat Wounds</title>
+      <trait>Exploration</trait> <trait>Healing</trait> <trait>Manipulate</trait>
+      <requirement>You're wearing or holding a healer's toolkit</requirement>
+
+      <line>You spend 10 minutes treating one injured living creature (targeting yourself, if you so choose). The target is then temporarily immune to Treat Wounds actions for 1 hour, but this interval overlaps with the time you spent treating (so a patient can be treated once per hour, not once per 70 minutes).</line>
+      <line>The Medicine check DC is usually 15, though the GM might adjust it based on the circumstances, such as treating a patient outside in a storm, or treating magically cursed wounds. If you're an expert, master or legendary in Medicine, you can attempt the check with a higher DC to increase the healing (see list below). The damage dealt on a critical failure remains the same.</line>
+      <line list="Treat Wounds, healing by proficiency">
+         <entry>Trained Profiency (DC 15) - 2d8 / 4d8</entry>
+      </line>
+
+      <line>If you succeed at your check, you can continue treating the target to grant additional healing. If you treat them for a total of 1 hour, double the Hit Points they regain from Treat Wounds.</line>
+
+      <line results="">
+         <critsuccess>The target regains the second healing value, and its wounded condition is removed.</critsuccess>
+         <success>The target regains the first healing value, and its wounded condition is removed.</success>
+         <critfail>The target takes 1d8 damage.</critfail>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Kinetic Gate</title>
+
+      <line>As a kineticist, you've awakened or opened a kinetic gate, a supernatural conduit within your body that can channel elemental forces straight from the elemental planes.</line>
+      <line name="Dual Gate">Your kinetic gate is a harmonious conduit between two planes, allowing you to combine their elements to give you a versatile set of abilities.</line>
+      <line>You chose Air and Fire for your kinetic elements, and gained one 1st-level impulse feat for each element.</line>
+   </rule>
+
+   <rule>
+      <title>Kinetic Aura</title>
+
+      <line>Through your kinetic gate, elements flow from an elemental plane to orbit your person. The form and appearance of this kinetic aura are unique to you. Examples include a chaotic wind orbiting the body, fragments of floating gravel, colorful wicks of flame, stars of raw metal always changing shape, floating snowflakes, or splinters dancing in the air. If you can channel more than one element, pieces of all your kinetic elements appear in the aura.</line>
+      <line>You have the Channel Elements action, which lets you activate your kinetic aura</line>
+   </rule>
+
+   <rule>
+      <trait>Impulse</trait>
+
+      <line>The primary magical actions kineticists use are called impulses. You can use an impulse only if your kinetic aura is active and channeling that element, and only if you have a hand free to shape the elemental flow. The <u>impulse</u> trait means the action has the <u>concentrate</u> trait unless another ability changes it.</line>
+      <line>If an <u>impulse</u> allows you to choose an element, you can choose any element you're channeling, and the impulse gains that element's trait.</line>
+   </rule>
+
+   <rule>
+      <trait>Overflow</trait>
+
+      <line>Powerful impulses temporarily overdraw the energy of your kinetic gate. When you use an <u>impulse</u> that has the <u>overflow</u> trait, your kinetic aura deactivates until you revitalize it (typically with the Channel Element action). Extinguishing your element this severely is taxing, and consequentially, you can use only one <u>overflow impulse</u> per round, even if you reactivate your kinetic gate.</line>
+   </rule>
+
+   <rule>
+      <title>Channel Elements</title>
+      <action>1</action>
+      <trait>Air</trait> <trait>Aura</trait> <trait>Fire</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+      <requirement>Your kinetic gate isn't active</requirement>
+
+      <line>You tap into your kinetic gate to make elements flow around your. Your kinetic aura activates, and as part of this action, you can use a 1-action Elemental Blast or a 1-action <u>stance impulse</u>.</line>
+      <line>Your kinetic aura is a 10-foot emanation where pieces of your kinetic element (or all your kinetic elements, if you can channel more than one) flow around you. The kinetic aura can't damage anything or affect or affect the environment around you unless another ability allows it. Channel Elements has the traits of all your kinetic elements.</line>
+      <line>Your kinetic aura automatically deactivates if you're knocked out, you use an impulse with the overflow trait, or you Dismiss the aura. Though you can't use new impulses while your kinetic aura is deactivated, ones you already used remain, and you can still Sustain any that can be sustained. Stance impulses are linked to your kinetic aura and when the aura deactivates.</line>
+   </rule>
+
+   <rule>
+      <title>Impulses</title>
+
+      <line>An impulse is a special type of magical action available to kineticists, allowing them to wield or shape their element into diverse and powerful forms. To wield an element, you must have your kinetic aura active and have a free hand, as described in the impulse trait. You automatically gain the Elemental Blast and Base Kinesis impulses, and your kinetic gate selection gives you additional impulse feats. You can select more impulse feats with kineticist class feats, and at higher levels, you'll automatically get more with the Gate's Threshold class feature. You can select an impulse feat only if it matches one of your kinetic elements.</line>
+      <line>Impulses are magical, and though they aren't spells, some things that affect spells also affect impulses. Abilities that restrict you from casting spells (such as being polymorphed into a battle form) or protect against spells (such as a spell that protects against other spells or a creature's bonus to saves against spells) also apply to impulses.</line>
+      <line name="Impulse Levels"> Any impulse you use is the same level you are. For instance, if you're 5th level, your Elemental Blast would be 5th level (and its counteract rank would be 3rd rank), even though you gained the action at 1st level.</line>
+      <line>Similar to spells, many impulses get more powerful as you increase in level. In these cases, the impulse ends with one or more "Level" entries. This either lists the levels at which the impulse gets an upgrade or has an entry with a plus sign that describes a benefit that increases on a regular basis. For instance, a 1st-level impulse with a "Level (+4)" entry would get stronger at 5th, 9th, 13th, and 17th levels.</line>
+      <line name="Impulse Attacks and DCs"> An impulse that requires a saving throw uses your kineticist class DC. Some of your impulses require you to attempt an <i>impulse attack roll</i> to see how effective they are. Your impulse attack roll uses the same proficiency and attribute modifier as your kineticist class DC. Like a spell attack modifier, your impulse attack modifier uses the following formule: d20 roll + attribute modifier + proficiency bonus + other bonuses + penalties. This means your impulse attack roll is typically 10 lower than your class DC. The drained condition can reduce your impulse attack rolls and class DC. You can acquire a <i>gate attenuator</i> to gain a bonus to your impulse attack modifier.</line>
+   </rule>
+
+      <rule>
+         <title>Base Kinesis</title>
+         <type>Level</type> <level>1</level>
+         <action>2</action>
+         <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+         <range>30 feet</range>
+
+         <line>It's trivial for you to create some of your element or alter a portion of it that already exists. Choose one of your kinetic elements to affect. The Bulk of the target must be negligible or light. The GM determines what Bulk the element is. You can't affect an element that's magical, secured in place (like a stone mortared in a wall), or attended by a creature unwilling to let you.</line>
+         <line>Choose one  of the following options, though the GM might allow you to make similar small alterations. Base Kinesis can't deal damage or cause conditions unless otherwise noted.</line>
+         <line list="">
+            <entry name="Generate">You bring an ordinary, non-magical piece of the chosen element from its elemental plane. The element can be used for any of its normal uses. For example, air can be breathed by an air-breathing creature, and fire casts light and can ignite flammable substances.</entry>
+            <entry name="Move">Move an existing piece of the element up to 20 feet in any direction. If you bring it into your space, you can catch it in an open hand. You can Sustain the impulse to keep moving the element.</entry>
+            <entry name="Suppress">You destroy an existing piece of element, such as snuffing out a flame or evaporating water from a cup. This affects only natural forms of the element, not durable, crafted goods like a stone statue, metal lock, or a wooden door.</entry>
+         </line>
+
+         <!-- levels value="+4">The range increases by 15 feet, and the maximum Bulk increases by 1 (allowing Bulk 1 at 5th level).</levels-->
+      </rule>
+
+      <rule>
+         <title>Elemental Blast</title>
+         <type>Level</type> <level>1</level>
+         <action or="2">1</action>
+         <trait>Attack</trait> <trait>Impulse</trait> <trait>Kineticist</trait> <trait>Primal</trait>
+
+         <line>With a wave of your hand, you collect elemental matter from your aura and swing or hurl it. Choose one of your kinetic elements and a damage type listed for that element, then make a melee or ranged impulse attack against the AC of one creature. Add your Strength modifier to the damage roll for a melee Elemental Blast. If you make a 2-action Elemental Blast, you gain a status bonus to the damage roll equal to your Constitution modifier.</line>
+         <line results="">
+            <critsuccess>The target takes double damage.</critsuccess>
+            <success>The target takes full damage.</success>
+         </line>
+         <line>The element determines the damage die, damage type, and range (for a ranged blast). A damage type other than a physical damage type adds its trait to the blast.</line>
+         <line list="">
+            <!--entry name="Air">1d6 electricity or slashing, 60 feet</entry-->
+            <entry name="Earth">1d8 bludgeoning or piercing, 30 feet</entry>
+            <!--entry name="Fire">1d6 fire, 60 feet</entry-->
+            <entry name="Wood">1d8 bludgeoning or vitality, 30 feet</entry>
+         </line>
+
+         <!-- levels value="+4">The damage increases by one die.</levels-->
+      </rule>
+
+      <rule>
+         <title>Hardwood Armor</title><action>1</action>
+         <type>Feat</type> <level>1</level>
+         <trait>Impulse</trait><trait>Kineticist</trait><trait>Primal</trait><trait>Wood</trait>
+
+         <line>Wood and bark grow over your body like armor. This hardwood armor is medium armor but uses your highest armor proficiency. The wooden armor's statistics are: <b>AC Bonus</b> +3; <b>Dex Cap</b> +2; <b>Check Penalty</b> –2; <b>Speed Penalty</b> –5 feet; <b>Strength</b> +2; <b>Bulk</b> 1; <b>Group</b> wood. Any bonuses, runes, and magical abilities of your actual armor are suppressed, but any runes that could apply to the hardwood armor are replicated onto it.</line>
+         <line>When you use this impulse, you can also create a wooden shield in a free hand. You can Shield Block with this shield even if you don't have that feat. The hand wielding this shield counts as a free hand for using impulses. The shield decays in an instant if it becomes broken or leaves your grasp. The armor lasts for 10 minutes, and you can Dismiss this impulse. If you use this impulse again, any existing one ends.</line>
+      </rule>
+
+      <rule>
+         <title>Shield Block</title>
+         <action>R</action>
+         <type>Feat</type> <level>1</level>
+         <trait>General</trait>
+         <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+
+         <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
+      </rule>
+
+      <rule>
+         <title>Tremor</title><action>2</action>
+         <type>Feat</type><level>1</level>
+         <trait>Earth</trait><trait>Impulse</trait><trait>Kineticist</trait><trait>Overflow</trait><trait>Primal</trait>
+
+         <line>You unleash a small, localized tremor in a 10-foot burst within 30 feet. Each creature in the area takes 1d8 bludgeoning damage with a basic Fortitude save against your class DC. A creature that critically fails is knocked prone. Earth and stone in the area is difficult terrain until the start of your next turn.</line>
+      </rule>
+
+      <rule>
+         <title>Fresh Produce</title> <action>1</action>
+         <type>Feat</type> <level>1</level>
+         <trait>Healing</trait><trait>Impulse</trait><trait>Kineticist</trait><trait>Plant</trait><trait>Primal</trait><trait>Vitality</trait><trait>Wood</trait>
+
+         <line>You grow a nourishing nut, vegetable, seed, or fruit. Choose a creature in your kinetic aura. The produce grows in their open hand, or at their feet if they have no open hands. The produce has light Bulk.</line>
+         <line>A creature can eat it with an Interact action to regain 1d4 + 1 HP; this is a healing vitality effect. The creature feels full for 10 minutes, during which it has resistance 2 to void damage and can't eat another piece of produce. Produce not consumed by the start of your next turn withers away.</line>
+      </rule>
+</catalog>

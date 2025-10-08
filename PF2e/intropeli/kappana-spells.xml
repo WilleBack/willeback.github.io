@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Detect Magic</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Concentration</trait> <trait>Detection</trait> <trait>Manipulate</trait>
+      <area>30-foot emanation</area>
+
+      <line>You send out a pulse that registers the presence of magic. You receive no information beyond the rpesence or absence of magic. You can choose to ignore magic you're fully aware of, such as the magic items and ongoing spells of you and your allies.</line>
+      <line>You detect <u>illusion</u> magic only if that magic's effect has a lower rank than the rank of your <i>detect magic</i> spell. However, items that have an illusion aura but aren't deceptive in appearance (such as an <i>invisibility potion</i>) typically are detected normally.</line>
+
+      <!-- heighten value="3rd">You learn the rank or level of the most powerful magical effect within range that the spell detects, as determined by the GM.</heighten>
+      <heighten value="4th">As 3rd rank, but you also pinpoint the source of the highest-rank magic. Like for an imprecise sense, you don't learn the exact location, but you can narrow down the source to within a 5-foot cube (or the nearest if larger than that).</heighten-->
+   </rule>
+
+   <rule>
+      <title>Figment</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Illusion</trait> <trait>Manipulate</trait> <trait>Subtle</trait>
+      <range>30 feet</range>
+      <duration>sustained</duration>
+
+      <line>You create a simple illusory sound or vision. A sound adds the <u>auditory</u> trait to the spell and the sound can't include intelligible words or elaborate music. A vision adds the <u>visual</u> trait and can be no larger than a 5-foot cube, and is clearly crude and undetailed if viewed from within 15 feet.</line>
+      <line>When you Cast or Sustain the Spell, you can attempt to Create a Diversion with the illusion, gaining a +2 circumstance bonus to your Deception check. If the attempt fails against a creature, that creature disbelieves the figment.</line>
+   </rule>
+
+   <rule>
+      <title>Ignition</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Attack</trait> <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Fire</trait> <trait>Manipulate</trait>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <defense>AC</defense>
+
+      <line>You snap your fingers and point at a target, which begins to smolder. Make a ranged spell attack roll against your target's AC, dealing 2d4 fire damage on a hit. If the target is within your melee reach, you can choose to make a melee spell attack with the flame instead of a ranged spell attack, which increases all the spell's damage dice to d6s.</line>
+      <line results="">
+         <critsuccess>The target takes double damage, and 1d4 persistent fire damage.</critsuccess>
+         <success>The target takes full damage.</success>
+      </line>
+
+      <!--heighten value="+1">The initial damage increases by 1d4, and the persistent fire damage on a critical hit increases by 1d4.</heighten-->
+   </rule>
+
+   <rule>
+      <title>Prestidigitation</title> <action>2</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Manipulate</trait>
+      <range>10 feet</range> <targets>1 object (cook, lift, or tidy only)</targets>
+      <duration>sustained</duration>
+
+      <line>The simplest magic does your bidding. You can perform simple magical effects for as long as you Sustain the spell. Each time you Sustain the spell, you can choose one of four options.</line>
+      <line list="">
+         <entry name="Cook">Cool, warm, or flavor 1 pound of nonliving material.</entry>
+         <entry name="Lift">Slowly lift an unattended object of light Bulk or less 1 foot off the ground.</entry>
+         <entry name="Make">Create a temporary object of negligible Bulk, made of congealed magical substance. The object looks crude and artificial and is extremely fragile — it can't be used as a tool, weapon, or spell component.</entry>
+         <entry name="Tidy">Color, clean, or soil an object of light Bulk or less. You can affect an object of 1 Bulk with 10 rounds of concentration, and a larger object a 1 minute per Bulk.</entry>
+      </line>
+      <line><i>Prestidigitation</i> can't deal damage or cause adverse conditions. Any actual change to an object (beyond what is noted above) persists only as long as you Sustain the spell.</line>
+   </rule>
+
+   <rule>
+      <title>Shield</title> <action>1</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Force</trait>
+
+      <line>You raise a magical shield of force. This counts as using the Raise a Shield action, giving you a +1 circumstance bonus to AC until the start of your next turn, but it doesn't require a hand to use.</line>
+      <line>While the spell is in effect, you can use the Shield Block reaction with your magic shield. The shield has Hardness 5. You can use the spell's reaction to reduce damage from any spell or magical effect, even if it doesn't deal physical damage. After you use Shield Block, the spell ends and you can't cast it again for 10 minutes.</line>
+   </rule>
+
+   <rule>
+      <title>Shield Block</title>
+      <action>R</action>
+      <trait>General</trait>
+      <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
+
+      <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
+   </rule>
+
+   <rule>
+      <title>Breathe Fire</title> <action>2</action>
+      <type>Spell</type> <level>1</level>
+      <trait>Arcane</trait> <trait>Concentrate</trait> <trait>Fire</trait> <trait>Manipulate</trait>
+      <area>15-foot cone</area>
+      <save>basic Reflex</save>
+
+      <line>A gout of flame sprays from your mouth. You deal 2d6 fire damage to creatures in the area, with a basic Reflex save.</line>
+
+      <!--heighten value="+1">The damage increases by 2d6.</heighten-->
+   </rule>
+</catalog>
