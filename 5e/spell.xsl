@@ -81,7 +81,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="category" >
 
-	<div id="categoryname" style="width:100%; float:left; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001; text-decoration:underline;">
+	<div id="categoryname" style="width:100%; float:left; break-inside:avoid; font-size:1.4em; padding:0.5em 0.4em 0.2em; font-weight:bold; font-variant:small-caps; color:#321001; text-decoration:underline;">
 		<xsl:value-of select="catename" />	
 	</div>
 	
