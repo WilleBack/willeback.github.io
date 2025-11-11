@@ -610,7 +610,7 @@
             <xsl:text>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</xsl:text>
          </xsl:when>
          <xsl:when test="hp/@surge">
-            <b>HP </b><xsl:text>Your healing surge value; </xsl:text><b>Bloodied </b><xsl:text>one-half HP</xsl:text><br/>
+            <b>HP </b><xsl:text>Your recovery value; </xsl:text><b>Bloodied </b><xsl:text>one-half HP</xsl:text><br/>
             <xsl:text>Has no healing surges, but you can expend yours for effects that allow the summoned creature to expend one</xsl:text>
          </xsl:when>
          <xsl:when test="hp/@minion">
