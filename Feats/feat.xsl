@@ -541,7 +541,7 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:if test="count(//catalog/feat[category=current()/@selection and tier=$tier])>0">
 		<div class="list">
 			<div class="groupname"> <xsl:value-of select="@selection" /> <xsl:text> - </xsl:text> <xsl:value-of select="$tier"/></div>
-			<xsl:for-each select="//catalog/feat[category=current()/@selection and tier='Heroic']">
+			<xsl:for-each select="//catalog/feat[category=current()/@selection and tier=$tier]">
 				<xsl:call-template name="line" />
 			</xsl:for-each>
 		</div>
