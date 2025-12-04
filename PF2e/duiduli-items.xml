@@ -9,7 +9,7 @@
       <usage>held in 1 hand</usage> <bulk>L</bulk>
       <activate>
          <action>1</action>
-         <type>(manipulate)</type>
+         <type>Interact</type>
       </activate>
 
       <line>A <i>healing potion</i> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <i>healing potion</i>, you regain the listed number of Hit Points.</line>
@@ -51,6 +51,14 @@
 
          <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
       </variant>
+      <variant>
+         <rune italic="">resilient</rune> <level>8</level>
+         <trait>Magical</trait>
+         <price>340 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line><i>Resilient</i> runes imbue armor with additional protective magic. This grants the wearer a +1 item bonus to saving throws.</line>
+      </variant>
    </rule>
 
    <rule>
@@ -74,22 +82,6 @@
    </rule>
 
    <rule>
-      <title>Clawed Bracers</title>
-      <type>Item</type> <level>7</level>
-      <trait>Invested</trait> <trait>Magical</trait>
-      <usage>worn bracers</usage> <bulk>L</bulk>
-      <price>325 gp</price>
-
-      <line>Animal claws are woven into the thick leather of these bracers.</line>
-
-      <block>
-         <name activate="">Extend Claws</name> <action>1</action> <type>(manipulate, morph)</type>
-         <part><name>Frequency</name>once per hour</part>
-         <part><name>Effect</name>The bracers fuse temporarily with your forearms, with the claws extending to your fingertips. You gain a climb Speed of 20 feet and a claw unarmed attack with the Agile and Finesse traits that deals 1d6 damage and is in the Brawling group. This lasts for 10 minutes or until you Dismiss it.</part>
-      </block>
-   </rule>
-
-   <rule>
       <title>Magic Wand of Heal (rank 1)</title>
       <type>Item</type> <level>3</level>
       <trait>Healing</trait> <trait>Magical</trait> <trait>Vitality</trait> <trait>Wand</trait>
@@ -108,22 +100,71 @@
    </rule>
 
    <rule>
+      <title>Magic Wand of Revealing Light</title>
+      <type>Item</type> <level>5</level>
+      <trait>Concentrate</trait> <trait>Light</trait> <trait>Magical</trait> <trait>Manipulate</trait> <trait>Wand</trait>
+      <price>160 gp</price>
+      <usage>held in 1 hand</usage> <bulk>L</bulk>
+
+      <line>This baton is about a foot long and contains a 2nd-rank <i>revealing light</i> that can be cast once per day. The brass wand is capped by a multi-faceted crystal.</line>
+      <block>
+         <name>Activate</name>
+         <type>Cast a Spell</type>
+         <part><name>Requirement</name>You must have <i>revealing light</i> on your spell list</part>
+         <part><name>Effect</name>You Cast the Spell from the wand</part>
+         <part linebreak=""><name>Overcharge</name>If the spell has been cast from the wand for the day, you can cast it one more time by overcharging the wand at the risk of destroying it. After you Cast the Spell, make a DC 10 flat check. On a success, the wand is broken and can be repaired. On a failure, the wand is destroyed.</part>
+         <part>Activating a wand that has been overcharged for the day automatically destroys it, and no spell is cast.</part>
+      </block>
+   </rule>
+
+   <rule>
+      <title>Wand of Splintered Sorrows</title>
+      <type>Item</type><level>6+</level>
+      <uncommon/><trait>Magical</trait><trait>Wand</trait><trait>Wood</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <craft>Supply a casting of <i>splinter volley</i> of the appropriate level</craft>
+
+      <line>This wooden wand is roughly cut, as if it had been crudely chopped from a tree and left forgotten. When held, the wand imparts feelings of deep sorrow.</line>
+
+      <block>
+         <name>Activate</name><type>Cast a Spell</type>
+         <part><name>Effect</name>You cast <i>splinter volley</i> of the indicated rank. Each splinter contains some of the despair felt by cruelly harvested trees, causing any creature damaged by this spell to become stupefied 2 for a number of rounds equal to the spell's rank. On a critical success on the attack roll, the target also weeps, becoming slowed 1 for the same duration.</part>
+      </block>
+
+      <variant>
+         <rank>4th-rank</rank>
+         <level>10</level>
+         <price>1,000 gp</price>
+      </variant>
+   </rule>
+
+   <rule>
       <title>Staff of Elemental Power</title>
       <type>Item</type> <level>6</level>
       <trait>Magical</trait> <trait>Staff</trait>
       <price>230 gp</price>
       <usage>held in 1 hand</usage> <bulk>1</bulk>
 
-      <line>This staff is tapered at the base and carved into a gem-studded twist at the top. While wielding the staff, you gain a +2 circumstance bonus checks to identify elemental creatures.</line>
+      <line>This staff is tapered at the base and carved into a gem-studded twist at the top.
+         While wielding the staff, you gain a +2 circumstance bonus checks to identify elemental creatures.</line>
       <line list="Contained Spells">
          <entry name="Cantrip"><i>frostbite</i></entry>
          <entry name="1st"><i>breathe fire</i>, <i>pummeling rubble</i>, <i>thunderstike</i></entry>
          <entry name="2nd"><i>floating flame</i>, <i>resist energy</i></entry>
+         <entry name="3rd"><i>fireball</i>, <i>lightning bold</i></entry>
+         <entry name="4th"><i>resist energy</i>, <i>wall of fire</i></entry>
       </line>
       <block>
          <name>Activate</name> <type>Cast a Spell</type>
          <part><name>Effect</name>You expend a number of charges from the staff to cast a spell from its list.</part>
       </block>
+
+      <variant>
+         <type>greater</type> <level>10</level>
+         <price>900 gp</price>
+
+         <line>A <i>greater staff of elemental power</i> contains 3rd-rank and 4th-rank spells.</line>
+       </variant>
    </rule>
 
    <rule>
@@ -135,6 +176,24 @@
 
       <line>A <i>ring of discretion</i> magically conceals any armor and sheathed weapons you're wearing by either turning them invisible or creating the illusion of ordinary clothes. The ring doesn't change your appearance beyond concealing weapons and armor.</line>
       <line>As soon as you wield a weapon affected by the ring, the weapon becomes obvious to onlookers and is no longer affected until you sheathe the weapon for at least 1 minute. A creature can use the Seek action to examine you and disbelieve this illusion (DC 15), and it can attempt to do so without using an action each time it hits you with an attack.</line>
+   </rule>
+
+   <rule>
+      <title>Charm of Resistance</title>
+      <type>Item</type><level>6+</level>
+      <trait>Invested</trait><trait>Magical</trait>
+      <usage>worn</usage><bulk/>
+
+      <line>This charm, normally hung from the belt or worn around the neck, grants you resistance against one type of energy damage: acid, cold, electricity, fire, or sonic.
+         Each charm is crafted to protect against a particular type of energy damage, and its design usually embodies the type of energy it protects the wearer from in some way.
+         For instance, a charm of cold resistance could be carved in the shape of a yeti, whereas a charm of fire resistance would be made from volcanic glass.</line>
+
+      <variant>
+         <type>cold</type>
+         <price>245 gp</price>
+
+         <line>The charm grants resistance 5 to cold.</line>
+      </variant>
    </rule>
 
    <rule>
@@ -220,8 +279,17 @@
       <price>5 gp</price>
       <hands>2</hands> <bulk>1</bulk>
 
-      <line>This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds. If you wear your healer's tools, you can draw and replace them as part of the action that uses them.</line>
+      <line>This kit of bandages, herbs, and suturing tools is necessary for Medicine checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds.
+         If you wear your healer's tools, you can draw and replace them as part of the action that uses them.</line>
       <line toolkit=""/>
+
+      <variant>
+         <type>expanded</type>
+         <level>3</level>
+         <price>50 gp</price>
+
+         <line>You gain a +1 item bonus to checks to Administer First Aid, Treat Disease, Treat Poison, or Treat Wounds.</line>
+      </variant>
    </rule>
 
    <rule>

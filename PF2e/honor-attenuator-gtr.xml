@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+   <rule>
+      <title>Pressure Zone</title><action>3</action>
+      <type>Spell</type><level>5</level>
+      <trait>Air</trait><trait>Concentrate</trait><trait>Manipulate</trait><trait>Primal</trait>
+      <range>500 feet</range><area>20-foot burst</area>
+      <defense>Fortitude</defense><duration>1 minute</duration>
+
+      <line>Air pressure drops precipitously, causing pain and debilitation in creatures' inner ears and joints.
+         Each living creature in the area of the spell when you cast it or that enters the area during the spell's duration must attempt a Fortitude save.</line>
+      <line results="">
+         <critsuccess/>
+         <success>The creature is deafened and clumsy 1 until the end of its next turn, after which it is temporarily immune for 1 hour.</success>
+         <fail>The creature is deafened and clumsy 2.
+            At the end of each of its turns, it can attempt a new save if it's no longer in the pressure zone.
+            On a success, it ends the effects and is temporarily immune for 1 hour.</fail>
+         <critfail>The creature is deafened and clumsy 2 for the duration of the spell.</critfail>
+      </line>
+      <line>A creature deafened by this spell can attempt to end the condition by popping its ears.
+         It can use a single action to attempt a new Fortitude save, losing the deafened condition from this spell on a success.
+         Some creatures with anatomies that lack inner ears or joints might be immune to these effects, as determined by the GM.</line>
+   </rule>
+
+   <rule>
+      <title>Sand Form</title><action>2</action>
+      <type>Spell</type><level>3</level>
+      <trait>Concentrate</trait><trait>Earth</trait><trait>Manipulate</trait><trait>Primal</trait>
+      <range>touch</range><targets>1 willing creature</targets>
+      <duration>10 minutes</duration>
+
+      <line>You grant the target's body and gear aspects of sand.
+         The target gains resistance 5 to piercing and slashing damage, has no scent, and can't bleed.
+         In sandy terrain, even when out in the open, the target has enough concealment to attempt to Hide.
+         Each time the target takes damage to which sand form grants resistance, reduce the duration of the spell by 1 minute.</line>
+
+      <heighten value="5th">The resistance is 10.</heighten>
+      <heighten value="7th">The resistance is 15.</heighten>
+   </rule>
+
+   <rule>
+      <title>Flames of Ego</title><action>2</action>
+      <type>Spell</type><level>5</level>
+      <trait>Concentrate</trait><trait>Fire</trait><trait>Incapacitation</trait><trait>Light</trait><trait>Manipulate</trait><trait>Mental</trait><trait>Primal</trait>
+      <range>120 feet</range><targets>1 creature</targets>
+      <defense>Will</defense><duration>varies</duration>
+
+      <line>Elegant flames of incredible beauty coruscate across the target's body, creating overconfidence and carelessness.
+         The target attempts a Will save.</line>
+      <line results="">
+         <critsuccess/>
+         <success>The target is affected for 1 round.</success>
+         <fail>The target is affected for 1 minute, and can't act hostile toward a creature until that creature acts hostile toward the target.</fail>
+         <critfail>As failure, except the target must spend at least 2 actions on its turn on a taunting display.</critfail>
+      </line>
+      <line>While affected, the target sheds bright light in a 20-foot emanation (and dim light to the next 40 feet) and becomes fascinated with itself for 1 round.
+         It must spend at least 1 action on its turn on a taunting display of arrogance or overconfidence.
+         Using actions that include such a display —such as using Perform to show off— count toward this requirement.</line>
+   </rule>
+
+   <rule>
+      <title>Impaling Spike</title>
+      <type>Spell</type><level>5</level>
+      <trait>Concentrate</trait><trait>Manipulate</trait><trait>Metal</trait><trait>Primal</trait>
+      <range>30 feet</range><targets>1 creature</targets>
+      <defense>Reflex</defense><duration>1 minute</duration>
+
+      <line>You conjure a spike that thrusts up from the earth beneath a target creature, potentially impaling it.
+         The spike is made of cold iron and deals 8d6 piercing damage.
+         The target must attempt a Reflex save.</line>
+      <line results="">
+         <critsuccess>The target dodges the spike and is unaffected.</critsuccess>
+         <success>The target is struck by the spike and takes half damage.</success>
+         <fail>The target is impaled through a leg or another non-vital body part.
+            The creature takes full damage and, if it's standing on solid ground, becomes immobilized.
+            It can attempt to Escape (the DC is your spell DC).
+            While it remains impaled, it takes damage from any weakness to cold iron it has at the end of each turn.</fail>
+         <critfail>As failure, but the creature is impaled through a vital organ or its center of mass, taking double damage, and it is off-guard while it is impaled.</critfail>
+      </line>
+
+      <heighten value="+1">The damage increases by 2d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Freezing Rain</title><action>3</action>
+      <type>Spell</type><level>5</level>
+      <trait>Cold</trait><trait>Concentrate</trait><trait>Manipulate</trait><trait>Primal</trait><trait>Water</trait>
+      <range>120 feet</range><area>20-foot burst</area>
+      <defense>Reflex (see text)</defense><duration>sustained up to 10 minutes</duration>
+
+      <line>Intense cold rain comes from nowhere, a microcosm of a sudden downpour, and a magical tweak can turn the rain to freezing sleet. The driving rain and pooling water make the area difficult terrain and extinguish non-magical fires.</line>
+      <line>On subsequent rounds, the first time you Sustain the spell each round, you can move the area up to 20 feet and can also freeze the rain. If you freeze the rain, each creature in the area takes 4d6 cold damage with a basic Reflex save. A creature that fails its saving throw is also slowed 1 for 1 round (slowed 2 for 1 round on a critical failure).</line>
+
+      <heighten value="+1">The damage increases by 1d6.</heighten>
+   </rule>
+
+   <rule>
+      <title>Entwined Roots</title>
+      <type>Spell</type><level>5</level>
+      <trait>Concentrate</trait><trait>Manipulate</trait><trait>Wood</trait>
+      <cast>1 minute</cast>
+      <area>20-foot burst</area><targets>up to 5 willing creatures</targets>
+      <duration>10 minutes</duration>
+
+      <line>Slithering roots gird you and your allies in layers of flexible wooden protection.
+         Each affected creature gains resistance 5 to bludgeoning and piercing damage.
+         Whenever a creature protected by these roots is targeted by a ranged weapon attack but takes no damage (such as if the attack missed or the damage was reduced to 0 by resistance), the roots snatch up the ammunition or thrown weapon and hold it.
+         The protected creature can retrieve the thrown weapon or ammunition as an Interact action.</line>
+
+      <heighten value="7th">The resistances increase to 10.</heighten>
+      <heighten value="9th">The resistances increase to 15.</heighten>
+   </rule>
+</catalog>
