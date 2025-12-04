@@ -9,7 +9,7 @@
       <usage>held in 1 hand</usage> <bulk>L</bulk>
       <activate>
          <action>1</action>
-         <type>(manipulate)</type>
+         <type>Interact</type>
       </activate>
 
       <line>A <i>healing potion</i> is a vial of ruby-red liquid that imparts a tingling sensation as the drinker's wounds heal rapidly. When you drink a <i>healing potion</i>, you regain the listed number of Hit Points.</line>
@@ -70,22 +70,11 @@
    </rule>
 
    <rule>
-      <title>Trident</title>
-      <trait>Thrown 20 ft.</trait>
-      <price>1 gp</price> <damage>1d8 P</damage>
-      <hands>1</hands> <bulk>1</bulk>
-      <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Spear</weapgroup>
-
-      <line>This three-pronged, spear-like weapon typically has a 4-foot shaft. Like a spear, it can be wielded with one hand and thrown.</line>
-
-      <traittext><name>Thrown 20 ft.</name>You can throw this weapon as a ranged attack, and it is a ranged weapon when thrown. A thrown weapon adds your Strength modifier to damage, just like a melee weapon does.</traittext>
-   </rule>
-
-   <rule>
-      <title>Greataxe</title>
+      <title>Nidhraug</title>
       <trait>Sweep</trait>
       <price>2 gp</price> <damage>1d12 S</damage>
       <hands>2</hands> <bulk>2</bulk>
+      <base item="Weapon">Greataxe</base>
       <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Axe</weapgroup>
 
       <line>This large axe is too heavy to wield with one hand. Many greataxes incorporate two blades, and they are often "bearded", having a hook at the bottom to increase the strength of their chopping power.</line>
@@ -93,12 +82,12 @@
       <traittext><name>Sweep</name>This weapon makes wide sweeping or spinning attacks, maknig it easier to attack multiple enemies. When you attack with this weapon, you gain a +1 circumstance bonus to your attack roll if you already attempted to attack a different target this turn using this weapon.</traittext>
 
       <variant>
-         <rune italic="">+1 Potency</rune> <level>2</level>
+         <rune italic="">+2 Potency</rune> <level>2</level>
          <trait>Magical</trait>
          <usage>etched onto the weapon</usage>
-         <price>35 gp</price>
+         <price>935 gp</price>
 
-         <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +1 item bonus, and the weapon can be etched with one property rune.</line>
+         <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +2 item bonus, and the weapon can be etched with two property runes.</line>
       </variant>
       <variant>
          <rune italic="">Striking</rune> <level>4</level>
@@ -116,6 +105,36 @@
 
          <line>When you critically hit with this weapon, the target becomes frightened 1.</line>
       </variant>
+      <variant>
+         <rune italic="">Dragon Bane</rune> <level>4</level>
+         <uncommon/> <trait>Magical</trait>
+         <price>100 gp</price>
+         <usage>etched onto a weapon</usage> <bulk/>
+
+         <line>A <i>dragon bane</i> rune allows you to deal more damage to dragons. The weapon deals 1d8 additional damage of the weapon's damage type a creature with the <u>dragon</u> trait. On a critical hit, the creature also takes 2d6 persistent bleed damage.</line>
+         <line>The benefit doesn't apply against dragons disguised as other creature types, and it's up to the GM whether a <i>dragon bane</i> rune applies against a creature disguised as a dragon.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Trident</title>
+      <trait>Thrown 20 ft.</trait>
+      <price>1 gp</price> <damage>1d8 P</damage>
+      <hands>1</hands> <bulk>1</bulk>
+      <weaptype>Melee</weaptype> <weapcat>Martial</weapcat> <weapgroup>Spear</weapgroup>
+
+      <line>This three-pronged, spear-like weapon typically has a 4-foot shaft. Like a spear, it can be wielded with one hand and thrown.</line>
+
+      <variant>
+         <rune italic="">+1 Potency</rune> <level>2</level>
+         <trait>Magical</trait>
+         <usage>etched onto the weapon</usage>
+         <price>35 gp</price>
+
+         <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +1 item bonus, and the weapon can be etched with one property rune.</line>
+      </variant>
+
+      <traittext><name>Thrown 20 ft.</name>You can throw this weapon as a ranged attack, and it is a ranged weapon when thrown. A thrown weapon adds your Strength modifier to damage, just like a melee weapon does.</traittext>
    </rule>
 
    <rule>
@@ -220,22 +239,6 @@
 
       <line>The springy soles of these sturdy leather boots cushion your feet and make each step lighter. These boots give you a +5-foot item bonus to your Speed and a +2 item bonus to Athletics checks to High Jump and Long Jump.</line>
       <line>In addition, when you use the Leap action, you can move 5 feet further if jumping horizontally or 3 feet higher if jumping vertically.</line>
-   </rule>
-
-   <rule>
-      <title>Flask of Fellowship</title>
-      <type>Item</type> <level>2</level>
-      <trait>Magical</trait>
-      <price>25 gp</price>
-      <usage>held in 2 hands</usage> <bulk>L</bulk>
-
-      <line>This is a metal drinking flask, 4 inches in diameter and 10 inches tall. Its screw top is covered by four simple metal cups that nest together.</line>
-      <block>
-         <name>Activate</name>
-         <type>Make an Impression</type>
-         <part><name>Effect</name>If you share drinks from a flask of fellowship as part of your Make an Impression action, the drink that pours from the flask happens to be exactly what the target of your efforts would most like to have a dram or two of—wine, spirits, hot ginger tea, or ice cold water with lemon, for example. You gain a +1 item bonus on your Diplomacy check.</part>
-         <part>The GM can disallow the flask's use if it doesn't make sense in the moment for you to pull out a flask and start pouring, if drinks are inappropriate for the occasion, or if your target is absolutely not interested in sharing a drink with you. Drinks from the <![CDATA[<i>flask of fellowship</i>]]> are entirely social; they won't intoxicate anyone, nor alleviate serious thirst.</part>
-      </block>
    </rule>
 
    <rule>

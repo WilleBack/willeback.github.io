@@ -96,6 +96,14 @@
 
          <line>Magic wards deflect attacks. Increase the armor's item bonus to AC by 1. The armor can be etched with a property rune.</line>
       </variant>
+      <variant>
+         <rune italic="">resilient</rune> <level>8</level>
+         <trait>Magical</trait>
+         <price>340 gp</price>
+         <usage>etched onto the armor</usage>
+
+         <line><i>Resilient</i> runes imbue armor with additional protective magic. This grants the wearer a +1 item bonus to saving throws.</line>
+      </variant>
    </rule>
 
    <rule>
@@ -112,6 +120,15 @@
          <price>440</price>
 
          <line>A standard-grade adamantine shield has Hardness 10, HP 40, and BT 20.</line>
+      </variant>
+      <variant>
+         <rune italic="">lesser reinforcing</rune> <level>4</level>
+         <trait>Magical</trait>
+         <price>75 gp</price>
+         <usage>etched onto the shield</usage>
+
+         <line><i>Reinforcing runes</i> make a shield significantly more durable, allowing it to effectively block more powerful attacks.</line>
+         <line>A <i>lesser reinforcing rune</i> increases the shield's Hardness by 3, Hit Points by 52, and its BT by 26 (maximum 10 Hardness, 80 HP, 40 BT).</line>
       </variant>
    </rule>
 
@@ -163,12 +180,30 @@
    </rule>
 
    <rule>
+      <title>Charm of Resistance</title>
+      <type>Item</type><level>6+</level>
+      <trait>Invested</trait><trait>Magical</trait>
+      <usage>worn</usage><bulk/>
+
+      <line>This charm, normally hung from the belt or worn around the neck, grants you resistance against one type of energy damage: acid, cold, electricity, fire, or sonic.
+         Each charm is crafted to protect against a particular type of energy damage, and its design usually embodies the type of energy it protects the wearer from in some way.
+         For instance, a charm of cold resistance could be carved in the shape of a yeti, whereas a charm of fire resistance would be made from volcanic glass.</line>
+
+      <variant>
+         <type>cold</type>
+         <price>245 gp</price>
+
+         <line>The charm grants resistance 5 to cold.</line>
+      </variant>
+   </rule>
+
+   <rule>
       <title>Backfire Mantle</title>
       <type>Item</type> <level>3+</level>
       <trait>Invested</trait> <trait>Magical</trait>
       <usage>worn cloak</usage> <bulk>1</bulk>
 
-      <line>This vivid red cloak of sturdy fabric is favored by aggressive battle alchemists and mages, as well as those cautious warriors who need to advance into the fray ahead of the blast-happy back line. The mantle interposes to protect you from your own and allies' magic, granting you a circumstance bonus to Reflex saves against your own spell as well as those of your allies. You also gain resistance to splash damage from your own alchemical items and those of your allies.</line>
+      <line>This vivid red cloak of sturdy fabric is favored by aggressive battle alchemists and mages, as well as those cautious warriors who need to advance into the fray ahead of the blast-happy back line. The mantle interposes to protect you from your own and allies' magic, granting you a circumstance bonus to Reflex saves against your own spells as well as those of your allies. You also gain resistance to splash damage from your own alchemical items and those of your allies.</line>
 
       <variant>
          <type>Greater</type> <level>8</level>
@@ -178,28 +213,73 @@
       </variant>
    </rule>
 
-      <rule>
-         <title>Shining Symbol</title>
-         <type>Item</type> <level>3+</level>
-         <trait>Divine</trait> <trait>Invested</trait> <trait>Light</trait>
-         <usage>worn</usage> <bulk/>
+   <rule>
+      <title>Shining Symbol</title>
+      <type>Item</type> <level>3+</level>
+      <trait>Divine</trait> <trait>Invested</trait> <trait>Light</trait>
+      <usage>worn</usage> <bulk/>
 
-         <line>If you worship a deity, this golden amulet transforms into your deity's religious symbol when you invest it. You gain an item bonus to Religion. The symbol casts dim light in a 20-foot emanation. </line>
+      <line>If you worship a deity, this golden amulet transforms into your deity's religious symbol when you invest it. You gain an item bonus to Religion. The symbol casts dim light in a 20-foot emanation. </line>
 
+      <block>
+         <name activate="">Spiritual Light</name><action>2</action><type>(concentrate, light, revelation)</type>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Effect</name>The light cast by the symbol becomes bright light for 10 minutes and shines through bodies to reveal hints of the spirits within. Creatures within the light receive a status penalty to Deception and Stealth checks.</part>
+         <part>You can Dismiss this activation.</part>
+      </block>
+
+      <variant>
+         <type>regular</type> <level>3</level>
+         <price>55 gp</price>
+
+         <line>The item bonus to Religion is +1, and the status penalty from Spiritual Light is -1.</line>
+      </variant>
+   </rule>
+
+   <rule>
+      <title>Pendant of the Occult</title>
+      <type>Item</type><level>3+</level>
+      <trait>Invested</trait><trait>Occult</trait>
+      <usage>worn</usage><bulk/>
+
+      <line>This amulet is hollow and shaped in the form of an unblinking eye. Its cavity typically holds some fragment of occult text. While wearing the pendant, you gain an item bonus to Occultism checks, and you can cast the <i>guidance</i> cantrip as an occult innate spell.</line>
+
+      <variant>
+         <type>greater</type>
+         <level>9</level>
+         <price>650 gp</price>
+
+         <line>The pendant grants a +2 item bonus, and can be activated.</line>
          <block>
-            <name activate="">Spiritual Light</name><action>2</action><type>(concentrate, light, revelation)</type>
+            <name activate="">Dream Message</name><type>(concentrate, manipulate)</type>
             <part><name>Frequency</name>once per day</part>
-            <part><name>Effect</name>The light cast by the symbol becomes bright light for 10 minutes and shines through bodies to reveal hints of the spirits within. Creatures within the light receive a status penalty to Deception and Stealth checks.</part>
-            <part>You can Dismiss this activation.</part>
+            <part><name>Effect</name>You cast a 4th-rank <i>dream message</i> spell.</part>
          </block>
+      </variant>
+   </rule>
 
-         <variant>
-            <type>regular</type> <level>3</level>
-            <price>55 gp</price>
+   <rule>
+      <title>Guidance</title> <action>1</action>
+      <type>Cantrip</type> <level>1</level>
+      <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Occult</trait>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <duration>Until the start of your next turn</duration>
 
-            <line>The item bonus to Religion is +1, and the status penalty from Spiritual Light is -1.</line>
-         </variant>
-      </rule>
+      <line>You ask for the guidance of supernatural entities, granting the target a +1 status bonus to one attack roll, Perception check, saving throw, or skill check the target attempts before the duration ends. The target chooses which roll to use the bonus on before rolling. If the target uses the bonus, the spell ends. Either way, the target is then temporarily immune for 1 hour.</line>
+   </rule>
+
+   <rule>
+      <title>Dream Message</title>
+      <type>Spell</type><level>3</level>
+      <trait>Concentrate</trait><trait>Manipulate</trait><trait>Mental</trait><trait>Occult</trait>
+      <cast>10 minutes</cast>
+      <range>planetary</range><targets>1 creature you know by name and have met in person</targets>
+      <duration>until your next daily preparations</duration>
+
+      <line>You send a message to your target's dream. The message is one-way, up to 1 minute of speech (roughly 150 words). If the target is asleep, they receive the message instantly. If not, they receive it the next time they sleep. As soon as they receive it, the spell ends, and you know the message was sent.</line>
+
+      <heighten value="4th">You can target up to 10 creatures you know by name and have met in person. You must send the same message to all of them; the spell ends for each target individually.</heighten>
+   </rule>
 
    <rule>
       <title>Everburning Torch</title>
