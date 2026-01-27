@@ -3,51 +3,198 @@
 <catalog>
 
    <rule>
-      <title>Instinct Crown</title>
-      <type>Item</type><level>Level 10</level>
-      <trait>Invested</trait><trait>Magical</trait>
-      <usage>worn headwear</usage>
-      <bulk>L</bulk>
+      <title>Implacable</title>
+      <type>Item</type><level>11</level>
+      <uncommon/><trait>Magical</trait>
+      <price>1,200 gp</price>
+      <usage>etched onto medium or heavy armor</usage>
+      <bulk/>
 
-      <line>An <i>instinct crown</i> is a magical headpiece imbued with the essence of instincts that barbarians draw upon in combat.
-         Each crown is fashioned to represent the instinct it's tied to, such as a wolf's head for an animal instinct crown or a simple helmet with Jotun runes for a giant instinct crown.
-         When worn, the crown allows you to tap further into your instincts, granting you even greater benefits if the crown's essence matches your instinct.
-         You must be able to Rage to use the crown's activations.</line>
-
-      <block>
-         <name activate="">Empowered Temper</name><action>F</action><type>(concentrate)</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Trigger</name>You roll initiative</part>
-         <part><name>Requirements</name>You have Quick-Tempered and meet its requirements</part>
-         <part><name>Effect</name>You use Quick-Tempered and gain 10 additional temporary Hit Points from your Rage.</part>
-      </block>
-      <block>
-         <name activate="">Draconic Boon</name><action>1</action><type>(concentrate, rage)</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Requirements</name>You are raging, and have Dragon Instinct</part>
-         <part><name>Effect</name>You draw upone your instinct to gain a boon.
-            The might of dragons surrounds you in the form of dancing flames, poisonous wisps, or another appropriate manifestation.
-            Until the end of your rage, adjacent creatures that hit you with a melee attack, as well as creatures that touch you or hit you with an unarmed attack, take 2d6 damage each time they do.
-            The damage type is that of your instinct's dragon breath.</part>
-      </block>
+      <line>This substantial rune makes you difficult to hold back.
+         Whenever you are affected by an effect that lasts until you Escape (for instance, from the Grapple action or a <i>glue bomb</i>), you become quickened.
+         You can use the extra action each round only to Step or Escape.</line>
    </rule>
 
    <rule>
-      <title>Explorer's Yurt</title>
-      <type>Item</type><level>10</level>
-      <trait>Magical</trait><trait>Structure</trait>
-      <price>880 gp</price>
-      <bulk>1 (when not activated)</bulk>
+      <title>Bottled Lightning</title>
+      <type>Item</type><level>1+</level>
+      <trait>Alchemical</trait><trait>Bomb</trait><trait>Consumable</trait><trait>Electricity</trait><trait>Splash</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <activate><action>1</action><type>Strike</type></activate>
 
-      <line>Before activation, this item appears to be nothing more than a simple rolled-up tent, barely large enough to fit four Medium creatures.
-         Despite attempts to clean it, the tent is perpetually smudged with dirt in various places.</line>
+      <line>Bottled lightning is packed with volatile reagents that create a blast of electricity when they're exposed to air.
+         Bottled lightning deals the listed electricity damage and electricity splash damage.
+         On a hit, the target becomes off-guard until the start of your next turn.
+         Advanced types grant an item bonus to the attack roll using them.</line>
+      <line>A bomb is a martial thrown weapon with a range increment of 20 feet, with the following results when you Strike with it:</line>
+      <line results="">
+         <critsuccess>Double base damage. You deal the splash damage to the target and all adjacent creatures.</critsuccess>
+         <success>Base damage. You deal the splash damage to the target and all adjacent creatures.</success>
+         <fail>You deal the splash damage to the target.</fail>
+         <critfail>The bomb misses completely.</critfail>
+      </line>
 
-      <block>
-         <name activate="">Unroll</name><type>10 minutes (manipulate)</type>
-         <part><name>Frequency</name>once per day</part>
-         <part><name>Effect</name>The rolled-up tent expands into a spacious yurt complete with a fire pit, 10 bedrolls, various cooking utensils, and basic food and water.</part>
-         <part>The yurt can house and feed you and up to nine other Medium creatures that eat roughly as much as a human does; they need not attempt a Survival check to Subsist when you use the yurt.
-            Fires and light inside the yurt do not extend illumination into the area surrounding the yurt, making it harder to spot from a distance.</part>
-      </block>
-   </rule>
+         <variant>
+            <type>Greater</type> <level>11</level>
+            <price>250 gp</price>
+
+            <line>You gain a +2 item bonus to the attack roll.</line>
+            <line>The bomb deals 3d6 electricity damage and 3 electricity splash damage.</line>
+         </variant>
+      </rule>
+
+   <rule>
+      <title>Bottled Lightning</title>
+      <type>Item</type><level>1+</level>
+      <trait>Alchemical</trait><trait>Bomb</trait><trait>Consumable</trait><trait>Electricity</trait><trait>Splash</trait>
+      <usage>held in 1 hand</usage><bulk>L</bulk>
+      <activate><action>1</action><type>Strike</type></activate>
+
+      <line>Bottled lightning is packed with volatile reagents that create a blast of electricity when they're exposed to air.
+         Bottled lightning deals the listed electricity damage and electricity splash damage.
+         On a hit, the target becomes off-guard until the start of your next turn.
+         Advanced types grant an item bonus to the attack roll using them.</line>
+      <line>A bomb is a martial thrown weapon with a range increment of 20 feet, with the following results when you Strike with it:</line>
+      <line results="">
+         <critsuccess>Double base damage. You deal the splash damage to the target and all adjacent creatures.</critsuccess>
+         <success>Base damage. You deal the splash damage to the target and all adjacent creatures.</success>
+         <fail>You deal the splash damage to the target.</fail>
+         <critfail>The bomb misses completely.</critfail>
+      </line>
+
+         <variant>
+            <type>Greater</type> <level>11</level>
+            <price>250 gp</price>
+
+            <line>You gain a +2 item bonus to the attack roll.</line>
+            <line>The bomb deals 3d6 electricity damage and 3 electricity splash damage.</line>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Magic Scroll of Death Ward</title>
+         <type>Item</type><level>9</level>
+         <trait>Consumable</trait><trait>Magical</trait><trait>Scroll</trait>
+         <tradition>divine</tradition><tradition>occult</tradition><tradition>primal</tradition>
+         <range>touch</range><targets>1 living creature touched</targets>
+         <duration>10 minutes</duration>
+
+         <line>Reading the magical words off this scroll, you shield a creature from the ravages of void energy.
+            For the duration, the target gains a +4 status bonus to saves against <u>death</u> and <u>void</u> effects, gain void resistance 10, and suppresses the effects of the doomed condition.</line>
+
+         <block>
+            <name activate="">Cast a Spell</name><type>(concentrate, manipulate)</type><action>2</action>
+            <part><name>Requirement</name>You have <i>death ward</i> on your spell list</part>
+            <part><name>Effect</name>You Cast the Spell.</part>
+         </block>
+      </rule>
+
+      <rule>
+         <title>Fan of Soothing Winds</title>
+         <type>Item</type><level>11+</level>
+         <trait>Air</trait><trait>Magical</trait>
+         <usage>held in 1 hand</usage><bulk>1</bulk>
+
+         <line>This <i>fan of soothing winds</i> has six cloud-shaped glass beads on the bottom of the fan, one on each of the exposed ribs.
+            One side of the beads is white, and the other is a dark, stormy gray.
+            Once flipped, a bead stays on its newly exposed side for an entire day before resetting overnight.</line>
+
+         <block>
+            <name activate="">Healing Wind</name><type>(concentrate)</type><action>2</action>
+            <part><name>Frequency</name>once per day per bead</part>
+            <part><name>Effect</name>You open your fan and turn a bead of your choice.
+              The fan casts a 3-action <i>heal</i> spell with an area of 30-foot cone instead of an 30-foot emanation; the save DC for an undead creature is 28.</part>
+            <part>The rank of the spell depends on which bead you're turning.</part>
+         </block>
+
+         <variant>
+            <type>standard</type><level>11</level>
+            <price>1,400 gp</price>
+
+            <line>the first two beads cast 4th-rank <i>heal</i>, the center two cast 3rd-rank <i>heal</i>, and the last two cast 2nd-rank <i>heal</i>.</line>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Winterstep Elixir</title>
+         <type>Item</type><level>2+</level>
+         <uncommon/><trait>Alchemical</trait><trait>Consumable</trait><trait>Elixir</trait>
+         <usage>held in 1 hand</usage><bulk>L</bulk>
+         <activate><action>1</action><type>Interact</type></activate>
+
+         <line>This frigid white elixir widens your feet and lightens your steps, enabling you to walk across ice and snow without difficulty.
+            You ignore the uneven ground and difficult terrain caused by ice, and the difficult terrain caused by snow (reducing greater difficult terrain caused by ice or snow to ordinary difficult terrain).</line>
+
+         <variant>
+            <type>Moderate</type><level>10</level>
+            <price>160 gp</price>
+            <duration>10 minutes</duration>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Winterstep Elixir</title>
+         <type>Item</type><level>2+</level>
+         <uncommon/><trait>Alchemical</trait><trait>Consumable</trait><trait>Elixir</trait>
+         <usage>held in 1 hand</usage><bulk>L</bulk>
+         <activate><action>1</action><type>Interact</type></activate>
+
+         <line>This frigid white elixir widens your feet and lightens your steps, enabling you to walk across ice and snow without difficulty.
+            You ignore the uneven ground and difficult terrain caused by ice, and the difficult terrain caused by snow (reducing greater difficult terrain caused by ice or snow to ordinary difficult terrain).</line>
+
+         <variant>
+            <type>Moderate</type><level>10</level>
+            <price>160 gp</price>
+            <duration>10 minutes</duration>
+         </variant>
+      </rule>
+
+      <rule>
+         <title>Instinct Crown</title>
+         <type>Item</type><level>Level 10</level>
+         <trait>Invested</trait><trait>Magical</trait>
+         <usage>worn headwear</usage>
+         <bulk>L</bulk>
+
+         <line>An <i>instinct crown</i> is a magical headpiece imbued with the essence of instincts that barbarians draw upon in combat.
+            Each crown is fashioned to represent the instinct it's tied to, such as a wolf's head for an animal instinct crown or a simple helmet with Jotun runes for a giant instinct crown.
+            When worn, the crown allows you to tap further into your instincts, granting you even greater benefits if the crown's essence matches your instinct.
+            You must be able to Rage to use the crown's activations.</line>
+
+         <block>
+            <name activate="">Empowered Temper</name><action>F</action><type>(concentrate)</type>
+            <part><name>Frequency</name>once per day</part>
+            <part><name>Trigger</name>You roll initiative</part>
+            <part><name>Requirements</name>You have Quick-Tempered and meet its requirements</part>
+            <part><name>Effect</name>You use Quick-Tempered and gain 10 additional temporary Hit Points from your Rage.</part>
+         </block>
+         <block>
+            <name activate="">Draconic Boon</name><action>1</action><type>(concentrate, rage)</type>
+            <part><name>Frequency</name>once per day</part>
+            <part><name>Requirements</name>You are raging, and have Dragon Instinct</part>
+            <part><name>Effect</name>You draw upone your instinct to gain a boon.
+               The might of dragons surrounds you in the form of dancing flames, poisonous wisps, or another appropriate manifestation.
+               Until the end of your rage, adjacent creatures that hit you with a melee attack, as well as creatures that touch you or hit you with an unarmed attack, take 2d6 damage each time they do.
+               The damage type is that of your instinct's dragon breath.</part>
+         </block>
+      </rule>
+
+      <rule>
+         <title>Explorer's Yurt</title>
+         <type>Item</type><level>10</level>
+         <trait>Magical</trait><trait>Structure</trait>
+         <price>880 gp</price>
+         <bulk>1 (when not activated)</bulk>
+
+         <line>Before activation, this item appears to be nothing more than a simple rolled-up tent, barely large enough to fit four Medium creatures.
+            Despite attempts to clean it, the tent is perpetually smudged with dirt in various places.</line>
+
+         <block>
+            <name activate="">Unroll</name><type>10 minutes (manipulate)</type>
+            <part><name>Frequency</name>once per day</part>
+            <part><name>Effect</name>The rolled-up tent expands into a spacious yurt complete with a fire pit, 10 bedrolls, various cooking utensils, and basic food and water.</part>
+            <part>The yurt can house and feed you and up to nine other Medium creatures that eat roughly as much as a human does; they need not attempt a Survival check to Subsist when you use the yurt.
+               Fires and light inside the yurt do not extend illumination into the area surrounding the yurt, making it harder to spot from a distance.</part>
+         </block>
+      </rule>
 </catalog>
