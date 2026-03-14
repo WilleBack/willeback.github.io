@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -94,9 +94,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 			}
 
 
-		</style>
-	</head>
-	<body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9.5pt;margin:0cm; ">
+      </style>
+   </head>
+   <body style="font-family:MentorSansStd, Trebuchet, Verdana, Arial; font-size:9pt;margin:0cm; ">
 		<xsl:if test="collection">
 			<div id="collection-header" style="font-family:DnDLolth; width:100%; box-sizing:border-box; padding:0.2em; font-size:1.4em; font-variant:small-caps;">
 				<b><xsl:value-of select="collection" /></b>
