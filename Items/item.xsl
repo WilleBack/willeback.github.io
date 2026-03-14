@@ -70,12 +70,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 				float:left;
 			}
 
-			.grouptitle {
-				width:100%;
-				font-family:DnDLolth;
-				font-size:1.4em;
-				font-weight:bold;
-			}
+         .grouptitle {
+            width:100%;
+            font-family:DnDLolth;
+            font-size:1.4em;
+            font-weight:bold;
+         }
 
 			.groupname {
 				width:100%;
@@ -131,52 +131,52 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 			}
 
-			@media only screen and (min-width:600px) {
-				.container {
-					column-count: 2;
-					column-gap:.4em;
-				}
+         @media only screen and (min-width:600px) {
+            .container {
+               column-count: 2;
+               column-gap:.4em;
+            }
 
-			}
+         }
 
-			@media only screen and (min-width:1000px) {
-				.container {
-					column-count: 3;
-					column-gap:0.4em;
-				}
+         @media only screen and (min-width:1000px) {
+            .container {
+               column-count: 3;
+               column-gap:0.5em;
+            }
 
-				.listcontainer {
-					column-count: 2;
-					column-gap:0.4em;
-				}
-			}
+            .listcontainer {
+               column-count: 2;
+               column-gap:0.5em;
+            }
+         }
 
-			@media only screen and (min-width:1300px) {
-				.container {
-					column-count: 4;
-					column-gap:0.4em;
-				}
+         @media only screen and (min-width:1300px) {
+            .container {
+               column-count: 4;
+               column-gap:0.6em;
+            }
 
-			}
-			@page {
-				size: auto;
-				margin: 0.7cm 0.6cm 0.9cm;
-			}
+         }
+         @page {
+            size: auto;
+            margin: 0.85cm 0.7cm 1.1cm;
+         }
 
-			@media print {
-				.container {
-					column-count: 2;
-					column-gap:0.4em;
-					margin:0cm;
-				}
+         @media print {
+            .container {
+               column-count: 2;
+               column-gap:0.6em;
+               margin:0cm;
+            }
 
-				.listcontainer {
-					column-count: 2;
-					column-gap:0.5em;
-					margin:0cm;
-				}
+            .listcontainer {
+               column-count: 2;
+               column-gap:0.6em;
+               margin:0cm;
+            }
 
-			}
+         }
 
 
 		</style>
