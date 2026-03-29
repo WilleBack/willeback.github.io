@@ -90,12 +90,12 @@
          <line>Magical enhancements make this weapon strike true. Attack rolls with this weapon gain a +2 item bonus, and the weapon can be etched with two property runes.</line>
       </variant>
       <variant>
-         <rune italic="">Striking</rune> <level>4</level>
+         <rune italic="">Greater Striking</rune> <level>4</level>
          <trait>Magical</trait>
          <usage>etched onto the weapon</usage>
-         <price>65 gp</price>
+         <price>1065 gp</price>
 
-         <line>A <i>striking</i> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to two instead of one.</line>
+         <line>A <i>greater striking</i> rune stores destructive magic in the weapon, increasing the weapon damage dice it deals to three instead of one.</line>
       </variant>
       <variant>
          <rune italic="">Fearsome</rune> <level>5</level>
@@ -224,7 +224,7 @@
       <line>This wide leather belt grants you a +1 item bonus to Athletics checks and increases the amount you can easily carry. You can carry Bulk equal to 6 + your Strength modifier before becoming encumbered, and you can hoold and carry a total Bulk up to 11 + your Strength modifier.</line>
 
       <block>
-         <name activate="">Assisted Lift</name><type>(manipulate)</type>
+         <name activate="">Assisted Lift</name><action>2</action><type>(manipulate)</type>
          <part><name>Effect</name> You lift an object of up to 8 Bulk as though it were weightless. This requires two hands, and if the object is locked or otherwise held in place, you can attempt to Force it Open using Athletics as part of this activation.</part>
          <part>The object still has its full weight and Bulk for all other purposes—you just ignore that weight. The effect lasts until the end of your next turn.</part>
       </block>
@@ -239,6 +239,36 @@
 
       <line>The springy soles of these sturdy leather boots cushion your feet and make each step lighter. These boots give you a +5-foot item bonus to your Speed and a +2 item bonus to Athletics checks to High Jump and Long Jump.</line>
       <line>In addition, when you use the Leap action, you can move 5 feet further if jumping horizontally or 3 feet higher if jumping vertically.</line>
+   </rule>
+
+   <rule>
+      <title>Instinct Crown</title>
+      <type>Item</type><level>Level 10</level>
+      <trait>Invested</trait><trait>Magical</trait>
+      <usage>worn headwear</usage>
+      <bulk>L</bulk>
+
+      <line>An <i>instinct crown</i> is a magical headpiece imbued with the essence of instincts that barbarians draw upon in combat.
+         Each crown is fashioned to represent the instinct it's tied to, such as a wolf's head for an animal instinct crown or a simple helmet with Jotun runes for a giant instinct crown.
+         When worn, the crown allows you to tap further into your instincts, granting you even greater benefits if the crown's essence matches your instinct.
+         You must be able to Rage to use the crown's activations.</line>
+
+      <block>
+         <name activate="">Empowered Temper</name><action>F</action><type>(concentrate)</type>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Trigger</name>You roll initiative</part>
+         <part><name>Requirements</name>You have Quick-Tempered and meet its requirements</part>
+         <part><name>Effect</name>You use Quick-Tempered and gain 10 additional temporary Hit Points from your Rage.</part>
+      </block>
+      <block>
+         <name activate="">Draconic Boon</name><action>1</action><type>(concentrate, rage)</type>
+         <part><name>Frequency</name>once per day</part>
+         <part><name>Requirements</name>You are raging, and have Dragon Instinct</part>
+         <part><name>Effect</name>You draw upone your instinct to gain a boon.
+            The might of dragons surrounds you in the form of dancing flames, poisonous wisps, or another appropriate manifestation.
+            Until the end of your rage, adjacent creatures that hit you with a melee attack, as well as creatures that touch you or hit you with an unarmed attack, take 2d6 damage each time they do.
+            The damage type is that of your instinct's dragon breath.</part>
+      </block>
    </rule>
 
    <rule>
@@ -264,7 +294,7 @@
       <price>20 gp</price>
       <usage>worn backpack</usage> <bulk>1</bulk>
 
-      <line>Constructed of green material and decorated with a white Glyph of the Open Road, an <![CDATA[<i>everyneed pack</i>]]> has a dozen or more small pockets lning the inside. The pack is enchanted so that each pocket contains common, mundane gear, each item worth no more than 1 gp, such as chalk, flint and steel, and string. It doesn't contain any armor, shields, weapons, or items made of precious material.</line>
+      <line>Constructed of green material and decorated with a white Glyph of the Open Road, an <i>everyneed pack</i> has a dozen or more small pockets lning the inside. The pack is enchanted so that each pocket contains common, mundane gear, each item worth no more than 1 gp, such as chalk, flint and steel, and string. It doesn't contain any armor, shields, weapons, or items made of precious material.</line>
       <line>Keep track of the exact value of the gear you retrieve from the pack. The pack becomes a mundane backpack after items of your choice with a combined value of 8 gp have been removed from it.</line>
       <block>
          <name>Activate</name> <type>1 minute (Interact)</type>
