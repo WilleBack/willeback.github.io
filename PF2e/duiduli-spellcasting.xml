@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="rule.xsl"?>
+<catalog>
+
+   <rule>
+      <title>Casting Spells</title>
+
+      <line>Casting a spell requires the caster to make gestures and utter incantations, so being unable to speak prevents spellcasting for most casters.</line>
+      <line>Spellcasting creates obvious sensory manifestations, such as bright lights, crackling sounds, and sharp smells from the gathering magic. Nearly all spells manifest a spell signature —a colorful, glowing ring of magical runes that appears in midair, typically around your hands, though what kind of spellcaster you are can affect this— academic wizards typically have neat and ordered signatures, while a druid's might be more organic and a cleric's might be inspired by their deity.</line>
+      <line>Spells can vary in how many actions they take. as shown in the spell's stat block. You cast cantrips, spells from spell slots, and focus spells using the same process, but must expend the spell when casting a spell from a spell slot and must spend 1 Focus Point to cast a focus spell. Some rules will refer to the Cast a Spell activity, such as "if the next action you use it to Cast a Spell." Any spell qualifies as a Cast a Spell activity, and any characteristics of the spell use those of the specific spell you're casting.</line>
+      <line name="Costs and Loci">Some spells require you to pay a cost or provide a locus. If the spell lists a <b>cost</b>, you must have the listed money, valuable materials, or other resources to cast the spell (such as gems or magical reagents), and they're expended during the casting. A <b>locus</b> is an object that funnels or directs the magical energy of the spell but is not consumed in its casting. As part of Casting the Spell, you retrieve the locus (if necessary, and if you have a hand free), and you can put it away again if you so choose. Loci tend to be expensive, and you need to acquire them in advance to cast the spell, but they aren't expended like costs are.</line>
+      <line name="Long Casting Times"> Some spells take minutes or hours to cast. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
+      <line name="Disrupted and Lost Spells">Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot and spent the spell's costs and actions. If a spell is disrupted during a Sustain action, the spell immediately ends.</line>
+   </rule>
+
+   <rule>
+      <title>Order Spells</title>
+
+      <line>Order spells are a type of focus spell. It costs 1 Focus Point to cast a focus spell, and you have a focus pool of 1 Focus Point for each focus spell you have, to a maximum of 3 Focus Points. You refill your focus pool during your daily preparations, and you can regain 1 Focus Point by spending 10 minutes using the Refocus activity to commune with local nature spirits or otherwise tend to the wilderness in a way befitting your order.</line>
+      <line>Focus spells are automatically heightened to half your level rounded up, much like cantrips. Focus spells don't require spell slots to cast, and you can't cast them using spell slots. You gain the order spell for your druidic order, and certain feats give you more focus spells.</line>
+   </rule>
+
+   <rule>
+      <title>Refocus</title>
+      <trait>Concentrate</trait> <trait>Exploration</trait>
+      <requirement>You have a focus pool</requirement>
+
+      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a holy deity can usually Refocus while tending the wounds of their allies.</line>
+   </rule>
+
+   <rule>
+      <title>Reach Spell</title> <action>1</action>
+      <type>Feat</type> <level>1</level>
+      <trait>Concentrate</trait> <trait>Druid</trait> <trait>Spellshape</trait>
+
+      <line>You can extend the range of your spells. If the next action you use is to Cast a Spell that has a range, increase that spell's range by 30 feet. If the spell normally has a range of touch, you extend its range to 30 feet.</line>
+   </rule>
+
+   <rule>
+      <title>Widen Spell</title><action>1</action>
+      <trait>Druid</trait><trait>Manipulate</trait><trait>Spellshape</trait>
+
+      <line>You manipulate the energy of your spell, causing it to spread out and affect a wider area.
+         If the next action you use is to Cast a Spell that has an area of a burst, cone, or line and does not have a duration, increase the area of that spell.</line>
+      <line>Add 5 feet to the radius of a burst that normally has a radius of at least 10 feet (a burst with a smaller radius is not affected).
+         Add 5 feet to the length of a cone or line that is normally 15 feet long or smaller, and add 10 feet to the length of a larger cone or line.</line>
+   </rule>
+
+   <rule>
+      <title>Tempest Surge</title> <action>2</action>
+      <type>Focus</type> <level>1</level>
+      <uncommon /> <trait>Air</trait> <trait>Concentrate</trait> <trait>Druid</trait> <trait>Electricity</trait> <trait>Manipulate</trait> <trait>Primal</trait>
+      <range>30 feet</range> <targets>1 creature</targets>
+      <save>basic Reflex</save>
+
+      <line>You surround a foe in a swirling storm of violent winds, roiling clouds, and crackling lightning. The storm deals 1d12 electricity damage to the target with a basic Reflex save. On a failure, the target is also clumsy 2 for 1 round.</line>
+      <heighten value="+1">The damage increases by 1d12.</heighten>
+   </rule>
+
+   <rule>
+      <title>Storm Rertribution</title><action>R</action>
+      <type>Feat</type><level>6</level>
+      <trait>Druid</trait>
+      <prereq>storm order, <i>tempest surge</i> order spell</prereq>
+      <requirement>You have at least 1 Focus Point</requirement>
+      <trigger>An opponent adjacent to you critically hits you with a melee weapon or melee unarmed attack</trigger>
+
+      <line>You lash out, directing a burst of storming fury towards a creature that has harmed you. You cast <i>tempest surge</i> on the triggering creature, moving it 5 feet away if it fails its Reflex save, or 10 feet if it critically fails. This movement is forced movement.</line>
+   </rule>
+
+   <rule>
+      <title>Untamed Form</title> <action>2</action>
+      <type>Focus</type> <level>1</level>
+      <uncommon /> <trait>Concentrate</trait> <trait>Druid</trait> <trait>Focus</trait> <trait>Manipulate</trait> <trait>Polymorph</trait> <trait>Primal</trait>
+      <duration>varies</duration>
+
+      <line>You reach within for a different part of yourself, and you set it free, transforming your body into another form. You polymorph into any form listed in <i>pest form</i>, which lasts for 10 minutes. All other <i>untamed form</i> shapes last 1 minute.</line>
+      <line>You can add more forms to your <i>untamed form</i> list with druid feats; your feat might grant you some or all of the forms from a given <u>polymorph</u> spell. When you transform into a shape granted by a spell, you gain all the effects of the shape you chose from a version of the spell heightened to <i>untamed form</i>'s rank.</line>
+      <line><i>Untamed form</i> allows you to use your own shapeshifting training more easily than most <u>polymorph</u> spells. When you choose to use your own attack modifier while polymorphed instead of the form's default attack modifier, you gain a +2 status bonus to your attack rolls.</line>
+
+      <heighten value="2nd">You can transform into the shapes listed in <i>animal form</i>.</heighten>
+   </rule>
+
+   <rule>
+      <title>Pest Form shapes</title>
+      <type>Spell</type> <level>1</level>
+
+      <line>You transform into the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on your Size or statistics. While in this form, you gain the <u>animal</u> trait, and you can't make Strikes. You can Dismiss the spell.</line>
+      <line>You gain the following statistics and abilities:</line>
+      <line list="">
+         <entry>AC = 15 + your level. You ignore your armor's check penalty and Speed reduction.</entry>
+         <entry>Speed of 20 feet.</entry>
+         <entry>Weakness 5 to physical damage, meaning if you take physical damage in this form, you take 5 additional damage.</entry>
+         <entry>Low-light vision and imprecise scent 30 feet.</entry>
+         <entry>Acrobatics and Stealth modifiers of +10, unless your own modifier is higher; Atheletics modifier of -4.</entry>
+      </line>
+
+      <heighten value="4th">You can turn into a flying creature, such as a bird, which grants you a fly Speed of 20 feet in addition to the above statistics.</heighten>
+   </rule>
+
+   <rule>
+      <title>Animal Form</title>
+      <type>Spell</type> <level>2</level>
+
+      <line>You call upon primal energy to transform yourself into a Medium animal battle form. When you cast this spell, choose a listed battle form. You can decide the specific type of animal (such as lion or snow leopard for cat), but this has no effect on the form's Size or statistics. While in this form, you gain the <u>animal</u> trait. You can Dismiss the spell.</line>
+      <line>You gain the following statistics and abilities regardless of which battle form you choose:</line>
+      <line list="">
+         <entry>AC = 16 + your level. Ignore your armor check penalty and Speed reduction.</entry>
+         <entry>5 temporary hit points.</entry>
+         <entry>Low-light vision and imprecise scent 30 feet.</entry>
+         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them.<br/>
+         Your attack modifier is +9, and your damage bonus is +1. These attacks are Strength-based (for the purpose of the enfeebled condition, for example). If your unarmed attack bonus is higher, you can use it instead.</entry>
+         <entry>Athletics modifier of +9, unless your own modifier is higher.</entry>
+      </line>
+      <line>You also gain specific abilities based on the type of animal you choose:</line>
+
+      <heighten value="3rd">You instead gain 10 temporary HP, AC = 17 + your level, attack modifier +14, damage bonus +5, and Athletics +14.</heighten>
+      <heighten value="4th">You can choose to make your battle form Large and your attacks have 10-foot reach (20-foot reach for the frog's tongue Strike); You must have enough space to expand into or the spell is lost. You instead gain 15 temporary HP, AC = 18 + your level, attack modifier +16, damage bonus +9, and Athletics +16.</heighten>
+      <heighten value="5th">You can choose to make your battle form Huge and your attacks have 15-foot reach (30-foot reach for the frog's tongue Strike); You must have enough space to expand into or the spell is lost. You instead gain 20 temporary HP, AC = 18 + your level, attack modifier +18, damage bonus +7 and double the number of damage dice, and Athletics +20.</heighten>
+   </rule>
+
+   <rule>
+      <title>Animal Form shapes</title>
+
+      <line list="Player Core">
+         <entry name="Ape">Speed 25 feet, climb Speed 20 feet;<br/>
+         <b>Melee </b><act>1</act> fist, <b>Damage </b> 2d6 bludgeoning.</entry>
+         <entry name="Bear">Speed 30 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 piercing; <br/>
+         <b>Melee </b><act>1</act> claw (agile), <b>Damage </b> 1d8 slashing.</entry>
+         <entry name="Bull">Speed 30 feet; <br/>
+         <b>Melee </b><act>1</act> horn, <b>Damage </b>2d8 piercing.</entry>
+         <entry name="Canine">Speed 40 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 piercing.</entry>
+         <entry name="Cat">Speed 30 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 pierching; <br/>
+         <b>Melee </b><act>1</act> claw (agile), <b>Damage </b>2d4 slashing.</entry>
+         <entry name="Deer">Speed 50 feet; <br/>
+         <b>Melee </b><act>1</act> antler, <b>Damage </b> 2d4 piercing.</entry>
+         <entry name="Frog">Speed 25 feet, swim Speed 25 feet; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d6 bludgeoning; <br/>
+         <b>Melee </b><act>1</act> tongue (reach 15 feet), <b>Damage </b>2d4 bludgeoning.</entry>
+         <entry name="Shark">swim Speed 35 feet, breathe underwater but not in air; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b>2d8 piercing.</entry>
+         <entry name="Snake">Speed 20 feet, climb Speed 20 feet, swim Speed 20 feet; <br/>
+         <b>Melee </b><act>1</act> fangs, <b>Damage </b>2d4 piercing plus 1d6 poison.</entry>
+      </line>
+      <line list="Howl of the Wild">
+         <entry name="Crab">Speed 25 feet, swim Speed 15 feet; can breathe in water and air<br/>
+         <b>Melee </b><act>1</act> big claw, <b>Damage </b> 2d8 piercing; <br/>
+         <b>Melee </b><act>1</act> little claw (agile), <b>Damage </b> 2d4 piercing</entry>
+         <entry name="Crocodile">Speed 20 feet, swim Speed 30 feet; can hold your breath for the duration of the transformation; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b> 2d8 piercing; <br/>
+         <b>Melee </b><act>1</act> tail (agile), <b>Damage </b> 2d4 bludgeoning</entry>
+         <entry name="Orca">swim Speed 35 feet; can hold your breath for the duration of the transformation; <br/>
+         <b>Melee </b><act>1</act> jaws, <b>Damage </b> 2d8 piercing</entry>
+         <entry name="Seal">Speed 20 feet, swim Speed 25 feet; can hold your breath for the duration of the transformation; <br/>
+         <b>Melee </b><act>1</act> jaws (grapple), <b>Damage </b> 2d6 piercing</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Dinosaur Form</title>
+      <type>Spell</type> <level>4</level>
+
+      <line>You channel the primal forces of nature to transform into a Large animal battle form, specifically that of a powerful and terrifying dinosaur. When you Cast this Spell, choose a listed battle form. You can decide the specific type of animal, but this has no effect on the form's Size or statistics. While in this form, you gain the <u>animal</u> and <u>dinosaur</u> traits. You can Dismiss the spell.</line>
+      <line>You gain the following statistics and abilities regardless of which battle form you choose:</line>
+      <line list="">
+         <entry>AC = 18 + your level. Ignore your armor's check penalty and Speed reduction.</entry>
+         <entry>15 temporary Hit Points.</entry>
+         <entry>Low-light vision and imprecise scent 30 feet.</entry>
+         <entry>One or more unarmed melee attacks specific to the battle form you choose, which are the only attacks you can Strike with. You're trained with them.<br/>
+         Your attack modifier is +16, and your damage bonus is +9. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If your unarmed attack modifier is higher, you can use it instead.</entry>
+         <entry>Athletics modifier of +18, unless your own is higher.</entry>
+      </line>
+      <line>You also gain specific abilities based on the type of animal you choose:</line>
+      <heighten value="5th">You can choose to make your battle form Huge and your attacks have 10-foot reach, or 15-foot reach if they started with 10-foot reach or 20-foot reach if they started with 15-foot reach. You instead gain 20 temporary HP, an attack modifier of +18, a damage bonus of +6, double the damage dice, and Athletics +21.</heighten>
+      <heighten value="7th">You can choose to make your battle form Gargantuan and your attacks have 15-foot reach, or 20-foot reachg if they started with 10-foot reach or 25-foot reach if they started with 15-foot reach. You instead gain AC = 21 + your level, 25 temporary HP, an attack modifier of +25, a damage bonus of +15, double the damage dice, and Athletics +25.</heighten>
+   </rule>
+
+   <rule>
+      <title>Dinosaur Form shapes</title>
+
+      <line list="">
+         <entry name="Ankylosaurus">Speed 25 feet;<br/>
+            <b>Melee </b><act>1</act> tail (backswing, reach 10 feet), <b>Damage </b>2d6 bludgeoning;<br/>
+            <b>Melee </b><act>1</act> foot, <b>Damage </b>2d6 bludgeoning.</entry>
+         <entry name="Brontosaurus">Speed 25 feet; <br/>
+            <b>Melee </b><act>1</act> tail (reach 15 feet), <b>Damage </b>2d6 bludgeoning;<br/>
+            <b>Melee </b><act>1</act> foot, <b>Damage </b>2d8 bludgeoning.</entry>
+         <entry name="Deinonychus">Speed 40 feet;<br/>
+            <b>Melee </b><act>1</act> talon (agile), <b>Damage </b>2d4 piercing plus 1 persistent bleed;<br/>
+            <b>Melee </b><act>1</act> jaws, <b>Damage </b>1d10 piercing.</entry>
+         <entry name="Stegosaurus">Speed 30 feet;<br/>
+            <b>Melee </b><act>1</act> tail (reach 10 feet), <b>Damage </b>2d8 piercing.</entry>
+         <entry name="Triceratops">Speed 30 feet;<br/>
+            <b>Melee </b><act>1</act> horn, <b>Damage </b>2d8 piercing, plus 1d6 persistent bleed on a critical hit;<br/>
+            <b>Melee </b><act>1</act> foot, <b>Damage </b>2d6 bludgeoning.</entry>
+         <entry name="Tyrannosaurus">Speed 30 feet;<br/>
+            <b>Melee </b><act>1</act> jaws (deadly d12, reach 10 feet), <b>Damage </b>1d12 piercing;<br/>
+            <b>Melee </b><act>1</act> tail (reach 10 feet), <b>Damage </b>1d10 bludgeoning.</entry>
+      </line>
+   </rule>
+</catalog>

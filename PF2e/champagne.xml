@@ -101,6 +101,24 @@
    </rule>
 
    <rule>
+      <title>Break Curse</title>
+      <type>Feat</type><level>7</level>
+      <trait>Concentrate</trait><trait>Exploration</trait><trait>General</trait><trait>Healing</trait><trait>Skill</trait>
+      <prereq>master in Occultism or Religion</prereq>
+
+      <line>You spend 8 hours praying or performing occult rites over the target, weaking a curse's power over them. Attempt to counteract a curse, using Occultism or Religion for your counteract check and half your level rounded up for the counteract rank.</line>
+      <line>Break Curse only takes 10 minutes of prayer and rites if you are legendary in Occultism or Religion.</line>
+   </rule>
+
+   <rule>
+      <title>Diehard</title>
+      <type>Feat</type> <level>1</level>
+      <trait>General</trait>
+
+      <line>It takes more to kill you than most. You die from the dying condition at dying 5, rather than dying 4.</line>
+   </rule>
+
+   <rule>
       <title>Defensive Advance</title> <action>2</action>
       <type>Feat</type> <level>1</level>
       <trait>Champion</trait> <trait>Flourish</trait>
@@ -154,6 +172,25 @@
    </rule>
 
    <rule>
+      <title>Aura of Courage</title>
+      <type>Feat</type> <level>4</level>
+      <trait>Champion</trait>
+      <prerequisite>champion's aura, holy</prerequisite>
+
+      <line>You stand strong in the face of danager and inspire your allies to do the same. Whenever you become fightened, reduce the condition value by 1 (to a minimum of 0). At the end of your turn, each ally in your champion's aura reduces its frightened value by 1.</line>
+   </rule>
+
+   <rule>
+      <title>Oath of the Defender</title>
+      <type>Feat</type><level>2</level>
+      <trait>Champion</trait><trait>Oath</trait>
+
+      <line>During your daily preparations, you can swear an oath to defend against a certain kind of enemy during your deeds that day. Choose aberrations, celestials, dragons, fiends, or undead. You can't choose celestials if you're holy, nor can you choose fiends if you're unholy. You gain an edict to defend against creatures of that kind.</line>
+      <line>Allies in your champion's aura, not including you, get resistance 2 to damage dealt by creatures with the chosen trait. If such a creature deals more than one damage type at once, apply this resistance only to the highest amount of damage. The resistance increases to 3 at 7th level, 4 at 12th level, and 5 at 17th level.</line>
+      <line>If a creature of the chosen trait triggers your champion's reaction and your champion's reaction grants resistance against the triggering damage, the resistance increases by 5.</line>
+   </rule>
+
+   <rule>
       <title>Cause</title>
       <line>You devote yourself to a specific cause in your deity's name. Your cause adds to your edicts and anathema and grants you a special protective reaction called your champion's reaction.</line>
       <line name="Justice">You chose justice. In your deity's name you seek justice, following the law and punishing those who transgress it. You gain the Retributive Strike champion's reaction.</line>
@@ -171,6 +208,7 @@
 
       <line>You protect your ally and strike your enemy. The ally gains resistance to all damage against the triggering damage equal to 2 + your level. If the foe is within reach, make a melee Strike against it.</line>
       <line name="Relentless Reaction">If your Strike hits, the target takes persistent spirit damage equal to your Charisma modifier.</line>
+      <line name="Exalted Reaction">Each ally in your champion's aura with the target in their melee reach can spend a reaction <action>R</action> to Strike the target with a -5 penalty to the attack roll.</line>
    </rule>
 
    <rule>
@@ -181,15 +219,6 @@
       <trigger>While you have your shield raised, you would take damage from a physical attack</trigger>
 
       <line>You snap your shield in place to ward off a blow. Your shield prevents you from taking an amount of damage up to the shield's Hardness. You and the shield each take any remaining damage, possibly breaking or destroying the shield.</line>
-   </rule>
-
-   <rule>
-      <title>Aura of Courage</title>
-      <type>Feat</type> <level>4</level>
-      <trait>Champion</trait>
-      <prerequisite>champion's aura, holy</prerequisite>
-
-      <line>You stand strong in the face of danager and inspire your allies to do the same. Whenever you become fightened, reduce the condition value by 1 (to a minimum of 0). At the end of your turn, each ally in your champion's aura reduces its frightened value by 1.</line>
    </rule>
 
    <rule>
@@ -205,6 +234,11 @@
    <rule>
       <title>Sacred Body</title>
       <line>The power of your deity keeps your body safe from harm, as true an edifice of the faith as a great temple. When you roll a success on a Fortitude save, you get a critical success instead.</line>
+   </rule>
+
+   <rule>
+      <title>Divine Will</title>
+      <line>Your faith grants mastery of your will. When you roll a success on a Will save, you get a critical success instead.</line>
    </rule>
 
    <rule>
@@ -297,90 +331,5 @@
       <line>Focus spells are automatically heightened to half your level rounded up. You gain the <i>lay on hands</i> devotion spell from your paladin cause, and you are trained in spell attack rolls and spell DCs. Your spellcasting ability is Charisma.</line>
    </rule>
 
-   <rule>
-      <title>Refocus</title>
-      <trait>Concentrate</trait> <trait>Exploration</trait>
-      <requirement>You have a focus pool</requirement>
-
-      <line>You spend 10 minutes performing deeds to restore your magical connection. This restores 1 Focus Point to your focus pool. The deeds you need to perform are specified in the class or ability that gives you your focus spells. These deeds can usually overlap with other tasks that relate to the source of your focus spells. For instance, a cleric with focus spells from a holy deity can usually Refocus while tending the wounds of their allies.</line>
-   </rule>
-
-   <rule>
-      <title>Desperate Prayer</title> <action>F</action>
-      <type>Feat</type> <level>1</level>
-      <trait>Champion</trait>
-      <frequency>once per day</frequency>
-      <trigger>You begin your turn and have no Focus Points in your pool</trigger>
-
-      <line>You call out to your deity in a plea for their aid. You instantly recover 1 Focus Point.</line>
-   </rule>
-
-   <rule>
-      <title>Casting Spells</title>
-
-      <line>Casting a spell requires the caster to make gestures and utter incantations, so being unable to speak prevents spellcasting for most casters.</line>
-      <line>Spellcasting creates obvious sensory manifestations, such as bright lights, crackling sounds, and sharp smells from the gathering magic. Nearly all spells manifest a spell signature —a colorful, glowing ring of magical runes that appears in midair, typically around your hands, though what kind of spellcaster you are can affect this— academic wizards typically have neat and ordered signatures, while a druid's might be more organic and a cleric's might be inspired by their deity.</line>
-      <line>Spells can vary in how many actions they take. as shown in the spell's stat block. You cast cantrips, spells from spell slots, and focus spells using the same process, but must expend the spell when casting a spell from a spell slot and must spend 1 Focus Point to cast a focus spell. Some rules will refer to the Cast a Spell activity, such as "if the next action you use it to Cast a Spell." Any spell qualifies as a Cast a Spell activity, and any characteristics of the spell use those of the specific spell you're casting.</line>
-      <line name="Costs and Loci">Some spells require you to pay a cost or provide a locus. If the spell lists a <b>cost</b>, you must have the listed money, valuable materials, or other resources to cast the spell (such as gems or magical reagents), and they're expended during the casting. A <b>locus</b> is an object that funnels or directs the magical energy of the spell but is not consumed in its casting. As part of Casting the Spell, you retrieve the locus (if necessary, and if you have a hand free), and you can put it away again if you so choose. Loci tend to be expensive, and you need to acquire them in advance to cast the spell, but they aren't expended like costs are.</line>
-      <line name="Long Casting Times"> Some spells take minutes or hours to cast. You can't use other actions or reactions while casting such a spell, though at the GM's discretion, you might be able to speak a few sentences. As with other activities that take a long time, these spells have the exploration trait, and you can't cast them in an encounter. If combat breaks out while you're casting one, your spell is disrupted.</line>
-      <line name="Disrupted and Lost Spells">Some abilities and spells can disrupt a spell, causing it to have no effect and be lost. When you lose a spell, you've already expended the spell slot and spent the spell's costs and actions. If a spell is disrupted during a Sustain action, the spell immediately ends.</line>
-   </rule>
-
-   <rule>
-      <title>Vitality Lash</title> <action>2</action>
-      <type>Cantrip</type> <level>1</level>
-      <trait>Cantrip</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Manipulate</trait> <trait>Vitality</trait>
-      <range>30 feet</range> <targets>1 creature that is undead or otherwise has void healing</targets>
-      <save>basic Fortitude</save>
-
-      <line>You demolish the target's corrupt essence with energy from Creation's Forge. You deal 2d6 vitality damage with a basic Fortitude save. If the creature critically fails the save, it is also enfeebled 1 until the start of your next turn.</line>
-
-      <heighten value="+1">The damage increases by 1d6.</heighten>
-      <special>You gained this cantrip from your Scion of Slayers background. You use your Intelligence as your spellcasting ability for this innate divine spell.</special>
-   </rule>
-
-   <rule>
-      <title>Lay on Hands</title> <action>1</action>
-      <type>Focus</type> <level>1</level>
-      <uncommon/> <trait>Champion</trait> <trait>Divine</trait> <trait>Focus</trait> <trait>Healing</trait> <trait>Manipulate</trait> <trait>Vitality</trait>
-      <range>touch</range> <targets>1 willing living creature or 1 undead creature</targets>
-
-      <line>Your hands become infused with powerful vitality, capable of healing a living creature or damaging an undead creature with a touch.</line>
-      <line list="">
-         <entry name="Willing Living Creature">the target regains 6 Hit Points. If the target is someone other than yourself, it also gains a +2 status bonus to AC for 1 round.</entry>
-         <entry name="Undead Creature">the target takes 1d6 vitality damage with a basic Fortitude save; one a failure, the target also takes a -2 status penalty to AC for 1 round.</entry>
-      </line>
-
-      <heighten value="+1">The amount of healing increases by 6, and the damage to an undead target increases by 1d6.</heighten>
-   </rule>
-
-   <rule>
-      <title>Fire Ray</title> <action>2</action>
-      <type>Focus</type> <level>1</level>
-      <uncommon/> <trait>Attack</trait> <trait>Champion</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Fire</trait> <trait>Focus</trait> <trait>Manipulate</trait>
-      <range>60 feet</range> <targets>1 creature</targets>
-      <duration>until the end of the target's next turn</duration>
-      <defense>AC</defense>
-
-      <line>A blazing band of fire arcs through the air, lighting your opponent and the ground they stand upon on fire. Make a ranged spell attack roll against the target's AC. The ray deals 2d6 fire damage.</line>
-      <line results="">
-         <critsuccess>The target takes double damage.</critsuccess>
-         <success>The target takes full damage.</success>
-      </line>
-      <line>On any result other than a critical failure, the ground in the target's space catches fire, dealing 1d6 fire damage to each creature than ends its turn in one of the squares.</line>
-
-      <heighten value="+1">The ray's initial damage increases by 2d6, and the fire damage dealt by the burning space increases by 1d6.</heighten>
-   </rule>
-
-   <rule>
-      <title>Flame Barrier</title> <action>R</action>
-      <type>Focus</type> <level>4</level>
-      <uncommon/> <trait>Champion</trait> <trait>Concentrate</trait> <trait>Divine</trait> <trait>Focus</trait>
-      <range>30 feet</range> <target>the creature that would take fire damage</target>
-      <trigger>An effect would deal fire damage to either you or an ally within range</trigger>
-
-      <line>You swiftly deflect incoming flames. The target gains fire resistance 15 against the triggering effect.</line>
-
-      <heighten value="+2">The resistance increases by 5.</heighten>
-   </rule>
+   
 </catalog>

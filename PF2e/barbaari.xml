@@ -9,6 +9,44 @@
    </rule>
 
    <rule>
+      <title>Dragonblood</title>
+      <type>Heritage</type>
+      <uncommon/><trait>Dragonblood</trait><trait>Versatile</trait>
+
+      <line>You're descended in some way from a dragon. Your physical features might show this outwardly, with a pair of draconic horns, patches of scaly skin, or even a tail, or you might develop an internal reserve of draconic power. You gain the <u>dragonblood</u> trait, in addition to the traits from your ancestry.</line>
+      <line>When you roll a success on a saving throw against a <u>fear</u> effect, you get a critical success instead.</line>
+   </rule>
+
+   <rule>
+      <title>Draconic Aspect</title>
+      <type>Feat</type><level>1</level>
+      <trait>Dragonblood</trait>
+
+      <line>You have an obvious draconic feature, such as  a snout full of sharp teeth, that you can use offensively. You gain he following unarmed attack. The attack is in the brawling group and has the listed damage die and traits.</line>
+      <line list="">
+         <entry name="Jaws">1d6 piercing (forceful, unarmed)</entry>
+      </line>
+   </rule>
+
+   <rule>
+      <title>Tenacious Jaws</title>
+      <type>Feat</type><level>5</level>
+      <trait>Dragonblood</trait>
+      <prereq>Draconic Aspect, jaws unarmed attack</prereq>
+
+      <line>Your teeth are curved or hooked to hold on to your enemies. Your jaws unarmed attack gains the <u>grapple</u> trait.</line>
+      <line>When you use a draconic breath weapon, an opponent grabbed or restrained in your jaws uses the outcome one degree of success worse than the result of their saving throw.</line>
+   </rule>
+
+   <rule>
+      <title>Awakened Heritage</title>
+      <type>Feat</type><level>5</level>
+      <prereq>versatile heritage</prereq>
+
+      <line>You've awoken the power of your heritage. You gain all the mechanical benefits of your heritage, allowing you to take feats and gain any benefits the require that specific heritage.</line>
+   </rule>
+
+   <rule>
       <title>Arctic Elf</title>
 
       <line>You dwell deep in the frozen north and have gained incredible resilience against cold environments, granting you cold resistance equal to half your level (minimum 1).</line>
@@ -16,21 +54,14 @@
    </rule>
 
    <rule>
-      <title>Nimble ELf</title>
-      <type>Feat</type>
-      <level>1</level>
-      <trait>Elf</trait>
-
-      <line>Your muscles are tightly toned. Your Speed increases by 5 feet.</line>
-   </rule>
-
-   <rule>
-      <title>Elven Instincts</title>
-      <type>Feat</type> <level>5</level>
-      <trait>Elf</trait>
-
-      <line>Your senses let you react rapidly. You gain a +2 circumstance bonus to Perception checks made as initiative rolls.</line>
-      <line>Additionally, if your initiative roll result is tied with that of an opponent, you go first, regardless of whether you rolled Peception or not.</line>
+      <title>Fast Recovery</title>
+      <level>1</level> <type>Feat</type>
+      <trait>General</trait>
+      <prereq>Constitution +2</prereq>
+      
+      <line>Your body quickly bounces back from afflictions. You regain twice as many Hit Points from resting.</line>
+      <line>Each time you succeed at a Fortitude save against an ongoing disease or poison, you reduce its stage by 2, or by 1 against a virulent disease or poison. Each critical success you achieve against an ongoing disease or poison reduces its stage by 3, or by 2 against a virulent disease or poison.</line>
+      <line>In addition, you reduce the severity of your drained condition by 2 when you rest for a night instead of by 1.</line>
    </rule>
 
    <rule>
@@ -52,10 +83,22 @@
    </rule>
 
    <rule>
+      <title>Rolling Landing</title>
+      <level>2</level>
+      <type>Feat</type>
+      <trait>General</trait>
+      <trait>Skill</trait>
+      <prereq>Cat Fall</prereq>
+      <line>You land with quick rolls that help you keep your momentum. If you fall and don't take damage (usually due to treating the fall as a shorter distance), you can use your reaction to immediately enter a short roll when you land and Step.</line>
+      <line>If you are an expert in Acrobatics, you can use your reaction to Step or Stride up to half your Speed after you fall and don't take damage. If you're a master in Acrobatics, you can use this reaction to Step or Stride up to your full Speed. If you're legendary in Acrobatics, you don't trigger reactions triggered by movement when you Stride in this way.
+      </line>
+   </rule>
+
+   <rule>
       <title>Falling</title>
 
-      <line>When you fall more than 5 feet, you take bludgeoning damage equal to half the distance you fell when you land. Treat falls longer than 1,500 feet as though they were 1,500 feet (750 damage). If you take any damage from a fall, you land prone. You fall about 500 feet in the first round of falling and about 1,500 feet each round thereafter.</line>
-      <line>You can Grab an Edge as a reaction to reduce the damage from some falls. In addition, if you fall into water, snow, or another relatively soft substance, you can treat the fall as though it were 20 feet shorter, or 30 feet shorter if you intentionally dove in. The effective reduction can't be greater than the depth (so when falling into 10-foot-deep water, you treat the fall as 10 feet shorter).</line>
+      <line>When you fall more than 5 feet, you take bludgeoning damage equal to half the distance you fell when you land, up to 750 damage at 1,500 feet. If you take any damage from a fall, you land prone. You fall about 500 feet in the first round of falling and about 1,500 feet each round thereafter.</line>
+      <line>If you fall into water, snow, or another relatively soft substance, you can treat the fall as though it were 20 feet shorter, or 30 feet shorter if you intentionally dove in. The effective reduction can't be greater than the depth.</line>
    </rule>
 
    <rule>
@@ -67,8 +110,8 @@
 
       <line>When you fall off or past an edge or other handhold, you can try to grab it, potentially stopping your fall. You must succeed at a Reflex save, usually at the Climb DC. If you grab the edge or handhold, you can them Climb up using Athletics.</line>
       <line results="">
-         <critsuccess>You grab the edge or handhold, whether or not you have a hand free, typically by using a suitable held item to catch yourself (catching a battle axe on a ledge, for example). You still take damage from the distance fallen so far, but you treat the fall as though it were 30 feet shorter.</critsuccess>
-         <success>If you have at least one hand free, you grab the edge or handhold, stopping your fall. You still take damage from the distance fallen so far, but you treat the fall as though it were 20 feet shorter. If you have no hands free, you continue to fall as if you had failed the check.</success>
+         <critsuccess>You grab the edge or handhold, whether or not you have a hand free, typically by using a suitable held item to catch yourself. You still take damage from the distance fallen so far, but you treat the fall as though it were 30 feet shorter.</critsuccess>
+         <success>If you have at least one hand free, you grab the edge or handhold, stopping your fall. You still take damage from the distance fallen so far, but you treat the fall as though it were 20 feet shorter. If you have no hands free, you continue to fall.</success>
          <critfail>You continue to fall, and if you've fallen 20 feet or more before you use this reaction, you take 10 bludgeoning damage from the impact for every 20 feet fallen.</critfail>
       </line>
    </rule>
@@ -211,9 +254,9 @@
    </rule>
 
    <rule>
-      <title>Draconic Rage (White Dragon)</title>
+      <title>Draconic Rage (Stormcrown Dragon)</title>
 
-      <line>When you you Rage, you can increase the additional damage from 2 to 4 and change it to cold damage instead of the damage type of your weapon or unarmed attack. If you do this, your Rage action gains the <u>arcane</u> and <u>cold</u> traits.</line>
+      <line>When you you Rage, you can increase the additional damage from 2 to 4 and change it to electricity damage instead of the damage type of your weapon or unarmed attack. If you do this, your Rage action gains the <u>primal</u> and <u>electricity</u> traits.</line>
       <line name="Specialization Ability">When you use Draconic Rage, you increase the additional damage from Rage to 8. If you have greater weapon specialization, instead increase the damge from Rage to 16.</line>
    </rule>
 
@@ -221,7 +264,7 @@
       <title>Raging Resistance</title>
 
       <line>Repeated exposure and toughened skin allow you to fend off harm. While raging, you gain resistance equal to 3 + your Constitution modifier to damage types based on your instinct.</line>
-      <line name="Draconic Rage (White Dragon)">You resist piercing damage and cold damage.</line>
+      <line name="Draconic Rage (Stormcrown Dragon)">You resist piercing damage and electricity damage.</line>
    </rule>
 
    <rule>
@@ -231,6 +274,12 @@
       <requirements>You are not encumbered or wearing heavy armor</requirements>
 
       <line>So long as you are able to move freely, your fury is instinctive and instantaneous. You Rage.</line>
+   </rule>
+
+   <rule>
+      <title>Mighty Rage</title>
+
+      <line>When you use your Quick-Tempered, the first Strike you make during your first turn deals additional damage equal to your Rage damage.</line>
    </rule>
 
     <rule>
@@ -264,14 +313,6 @@
    <rule>
       <title>Weapon Specialization, Spear</title>
       <line>The weapon pierces the target, weakening its attacks. The target is clumsy 1 until the start of your next turn.</line>
-   </rule>
-
-   <rule>
-      <title>Elven Verve</title>
-      <type>Feat</type><level>1</level>
-      <trait>Elf</trait>
-
-      <line>While all elves are immune to the paralyzing touch of ghouls, you can shake off flesh-numbing magic of all kinds. You gain a +1 circumstance bonus to saves against effects that would impose the immobilized, paralyzed, or slowed conditions. When you would be immobilized, paralyzed, or slowed for at least 2 rounds, reduce that duration by 1 round.</line>
    </rule>
 
    <rule>
@@ -423,7 +464,7 @@
       <frequency>once per 10 minutes</frequency>
 
       <line>You breathe deeply and exhale powerful energy in a 30-foot cone, dealing 1d6 damage per level to each creature in the area with a basic Reflex save against your class DC.</line>
-      <line name="Draconic Rage (White Dragon)">Your breath deals cold damage, and this action has the <u>arcane</u> trait.</line>
+      <line name="Draconic Rage (Stormcrown Dragon)">Your breath deals electricity damage, and this action has the <u>primal</u> trait.</line>
    </rule>
 
    <rule>
@@ -434,5 +475,14 @@
 
       <line>You lash out at a foe that leaves an opening. Make a melee Strike against the triggering creature. If your attack is a critical hit and the trigger was a <u>manipulate</u> action, you disrupt that action.</line>
       <line>This Strike doesn't count toward your multiple attack penalty, and your multiple attack penalty doesn't apply to this Strike.</line>
+   </rule>
+
+   <rule>
+      <title>Corpse-Killer's Defiance</title><action>R</action>
+      <type>Feat</type><level>10</level>
+      <uncommon/><trait>Barbarian</trait>
+      <trigger>You destroy an undead foe</trigger>
+
+      <line>Allies that can see you gain a +1 status bonus to attack and damage rolls against undead for 1 round, or a +2 status bonus to attack rolls and damage rolls if the undead foe destroyed was a creature of your level or higher.</line>
    </rule>
 </catalog>
