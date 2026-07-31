@@ -125,6 +125,7 @@ CLASS_CONFIGS = [
         "target_class": "Monk",
         "target_role": "Striker",
         "target_source": "any psionic",
+        "exclude_prereq": ["Psionic Augmentation"],
     },
     {
         "slug": "paladin",
@@ -513,10 +514,10 @@ def is_multiclass_feat_for_class(feat: etree._Element, class_name: str) -> bool:
     )
 
 
-def character_exclude_sets(
+def config_exclude_sets(
     config: dict,
 ) -> tuple[frozenset[str], frozenset[str], frozenset[str]]:
-    """Return (exclude_categories, exclude_groups, exclude_prereqs) from a character config."""
+    """Return (exclude_categories, exclude_groups, exclude_prereqs) from a class/character config."""
     return (
         frozenset(config.get("exclude_category") or ()),
         frozenset(config.get("exclude_group") or ()),
@@ -531,7 +532,7 @@ def feat_is_excluded(
     exclude_groups: frozenset[str],
     exclude_prereqs: frozenset[str],
 ) -> bool:
-    """Return True if feat matches any exclude_* rule in a character config."""
+    """Return True if feat matches any exclude_* rule in a class/character config."""
     if exclude_categories and any(
         feat_has_category(feat, name) for name in exclude_categories
     ):
@@ -902,6 +903,14 @@ def generate_classes(catalog_tree: etree._ElementTree) -> None:
             target_role=config["target_role"],
             target_source=config["target_source"],
         )
+        exclude_categories, exclude_groups, exclude_prereqs = config_exclude_sets(config)
+        titles = filter_excluded_feats(
+            catalog_tree,
+            titles,
+            exclude_categories=exclude_categories,
+            exclude_groups=exclude_groups,
+            exclude_prereqs=exclude_prereqs,
+        )
         slug = config["slug"]
         legacy_path = CLASSES_DIR / f"{slug}.html"
         if legacy_path.exists():
@@ -958,9 +967,7 @@ def generate_characters(catalog_tree: etree._ElementTree) -> None:
             {title for title, _feat in collate},
             config["target_class"],
         )
-        exclude_categories, exclude_groups, exclude_prereqs = character_exclude_sets(
-            config
-        )
+        exclude_categories, exclude_groups, exclude_prereqs = config_exclude_sets(config)
         slug = config["slug"]
         legacy_path = CHARACTERS_DIR / f"{slug}.html"
         if legacy_path.exists():
